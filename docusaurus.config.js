@@ -6,6 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  noIndex: true, // TODO: delete before release
   title: 'DHTMLX Suite 7 Docs', //TODO: change it
   tagline: 'DHTMLX Suite 7 Docs', //TODO: change it
   url: 'https://docs.dhtmlx.com',
