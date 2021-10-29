@@ -12,27 +12,28 @@ Sets new locale to the JS Kanban widget
 
 ### Usage
 
-`setLocale: (data: object) => void;`
+```js
+setLocale: (locale: object) => void;
+```
 
 ### Parameters
 
-- `data: object` - the data object of the new locale (built in or custom)
+- `locale: object` - the data object of the new locale
 
-### Details
-
-Using this method, you can set a built-in locale as well as a custom one.
+:::info
+Using this method, you can set a built-in locale (en, ru, cn) as well as a custom one.
+:::
 
 ### Example
 
-```jsx
-const { Kanban, en, ru, cn } = app;
-const kanban = new Kanban("#root", {
+```jsx {7}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
 	columns,
-    cards
+	cards
 });
-
 // set ru locale
-kanban.setLocale(ru);
+board.setLocale(ru);
 ```
 
 ### Related article !!! [todo]

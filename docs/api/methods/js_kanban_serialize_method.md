@@ -12,7 +12,9 @@ Serializes JS Kanban data to JSON
 
 ### Usage
 
-`serialize: () => object;`
+```js
+serialize: () => object;
+```
 
 ### Returns
 
@@ -28,7 +30,12 @@ The method returns the object of JS Kanban data
 
 ### Example
 
-```jsx
+```jsx {7}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
 // get the object of the JS Kanban data
-kanban.serialize();
+board.serialize();
 ```

@@ -1,5 +1,5 @@
 ---
-sidebar_label: JavaScript Kanban Overview
+sidebar_label: JS Kanban Overview
 title: JS Kanban Overview
 slug: /
 description: You can have an overview of the JavaScript Kanban documentation. Browse developer guides and API reference and try out code examples and live demos.
@@ -26,8 +26,3 @@ JavaScript Kanban is an effective solution for the workflow visualization. The w
 ## What's Next
 
 Now you can get down to using JS Kanban in your application. Follow the directions of the [How to Start](./how_to_start) tutorial for guidance.
-
-To dive deeper into the specificity of JS Kanban, go into more profound manuals:
-
-- [API Overview](./api/api_overview)
-- [Developer Guide](./guides/dev_guide)

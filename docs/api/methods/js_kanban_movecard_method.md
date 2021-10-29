@@ -12,29 +12,41 @@ Moves the card to the specified column (and row)
 
 ### Usage
 
-`moveCard: ({
-	id: string,
-	colId: string,
-	rowId: string,
-	overCardId: string
-}) => void;`
+```js
+moveCard: ({
+	id: string | number,
+	columnId: string | number,
+	rowId?: string | number,
+	before?: string | number
+}) => void;
+```
 
 ### Parameters
 
-- `id: string` - the **ID** of the card that is moved
-- `colId: string` - the **ID** of the target column the card is placed
-- `rowId: string` - the **ID** of the target row the card is placed
-- `overCardId: string` - the **ID** of the card, before which the new card is placed  
+- `id: string | number` - the **ID** of the card that will be moved
+- `columnId: string | number` - the **ID** of the column the card will be placed
+- `rowId?: string | number` - the **ID** of the row the card will be placed
+- `before?: string | number` - the **ID** of the card, before which the new card will be placed
+
+:::info
+If you specified the **rowKey** property in the widget config, the **rowId** parameter of the **moveCard** method is *mandatory*!
+:::
 
 ### Example
 
-```jsx
-// move the card with an "1" ID
-// the item will be placed in the "inprogress" column and "feature" row,  before the card with "8" ID
-kanban.moveCard({
+```jsx {9-14}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
+// move the card with an 1 ID
+// the item will be placed into the "inprogress" column and the "feature" row,  
+// before the card with 8 ID
+board.moveCard({
 	id: 1,
-	colId: "inprogress",
+	columnId: "inprogress",
 	rowId: "feature",
-	overCardId: 8
+	before: 8
 });
 ```

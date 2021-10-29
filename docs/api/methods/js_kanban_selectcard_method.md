@@ -8,26 +8,33 @@ description: You can learn about the selectCard method in the documentation of t
 
 ### Description
 
-Selects the card by its ID
+Selects the card by the specified ID
 
 ### Usage
 
-`selectCard: ({ id: string, groupMode: boolean }) => void;`
+```js
+selectCard: ({ id: string | number, groupMode?: boolean }) => void;
+```
 
 ### Parameters
 
-- `id: string` - the **ID** of the selected card
-- `groupMode: boolean` - ???
+- `id: string | number` - the **ID** of the selected card
+- `groupMode?: boolean` - multiselecting (*false* by default)
 
-### Details
-
-...
+:::info
+If you set the **groupMode** parameter to *true*, the **selectCard** method will not reset selecting of the other elements
+:::
 
 ### Example
 
-```jsx
-// select the card by its ID
-kanban.selectCard({
+```jsx {7-10}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
+// select the card with the 1 ID
+board.selectCard({
 	id: 1,
 	groupMode: true
 });

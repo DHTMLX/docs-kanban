@@ -12,25 +12,32 @@ Updates the card data by its ID
 
 ### Usage
 
-`updateCard: (data: object) => void;`
+```js
+updateCard: (config: object) => void;
+```
 
 ### Parameters
 
-- `data: object` - the new data object of the current card
+- `config: object` - the new data object of the current card
 
-:::note
-Note, the ID of the card to be updated is required. Other card parameters you can find here (!!! Добавить ссылочку).
+:::info
+Note, the **ID** of the card to be updated is required. Other card parameters can be found [**here**](../config/js_kanban_cards_config.md).
 :::
 
 ### Example
 
-```jsx
-// update data of the card with the "1" ID
-kanban.updateCard({
-	id: "1",
+```jsx {7-13}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
+// update data of the card with the 1 ID
+board.updateCard({
+	id: 1,
 	label: "New Label",
-	lane: "task",
-	stage: "inprogress"
+	type: "feature",
+	stage: "inprogress",
 	/*other parameters*/
 });
 ```

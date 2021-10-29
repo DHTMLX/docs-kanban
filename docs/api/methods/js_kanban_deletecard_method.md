@@ -12,15 +12,22 @@ Removes the specified card from datastore of JS Kanban
 
 ### Usage
 
-`deleteCard: ({ id: string }) => void;`
+```js
+deleteCard: ({ id: string | number }) => void;
+```
 
 ### Parameters
 
-- `id: string` - the **ID** of the card to be deleted
+- `id: string | number` - the **ID** of the card to be deleted
 
 ### Example
 
-```jsx
+```jsx {7}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
 // remove card by its id
-kanban.deleteCard({ id: "1" });
+board.deleteCard({ id: 1 });
 ```

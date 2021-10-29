@@ -8,28 +8,35 @@ description: You can learn about the setConfig method in the documentation of th
 
 ### Description
 
-Sets the configuration parameters of the JS Kanban widget 
+Sets the configuration parameters of the JS Kanban widget
 
 ### Usage
 
-`setConfig: (config: object) => void;`
+```js
+setConfig: (config: object) => void;
+```
 
 ### Parameters
 
 - `config: object` - the object of the JS Kanban configuration
 
-### Details
-
-Using this method, you can set the configuration parameters of the JS Kanban widget as well as load data to it.
+:::tip
+Using this method, you can set the configuration parameters of the JS Kanban widget as well as load data to it. The method changes only the parameters you passed
+:::
 
 ### Example
 
-```jsx
-// set the configuration parameters of the JS Kanban widget
-kanban.setConfig({
+```jsx {7-14}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
+// set the configuration parameters of JS Kanban
+board.setConfig({
 	editorAutoSave: false,
-	stage: "stage",
-	lane: "type",
+	columnKey: "stage",
+	rowKey: "type",
 	cardShape,
 	editorShape,
 	/*other parameters*/

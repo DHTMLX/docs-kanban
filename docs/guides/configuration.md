@@ -5,9 +5,3 @@ description: You can study developer and user guides in the documentation of the
 ---
 
 # Configuration
-
-
-## Board
-
-
-## Editor

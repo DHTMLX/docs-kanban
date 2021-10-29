@@ -12,11 +12,13 @@ Gets the data object of the card with the specified ID
 
 ### Usage
 
-`getCard: (id: any) => object;`
+```js
+getCard: (id: string | number) => obj;
+```
 
 ### Parameters
 
-- `id: any` - the **ID** of the target card
+- `id: string | number` - the **ID** of the target card
 
 ### Returns
 
@@ -24,7 +26,12 @@ The method returns the data object of the card with the specified ID
 
 ### Example
 
-```jsx
-// get the data object of the card by its ID
-kanban.getCard("card_id");
+```jsx {7}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
+// get the data object of the card with the 1 ID
+board.getCard(1);
 ```

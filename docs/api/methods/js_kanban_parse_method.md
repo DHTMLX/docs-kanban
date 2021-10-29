@@ -12,40 +12,48 @@ Parses data into JS Kanban
 
 ### Usage
 
-`parse: ({
-	column: object,
-	row: object,
-	cards: object
-}) => void;`
+```js
+parse: ({
+	columns?: object,
+	rows?: object,
+	cards?: object
+}) => void;
+```
 
 ### Parameters
 
-- `column: object` - the object of the columns data
-- `row: object` - the object of the rows data
+- `columns: object` - the object of the columns data
+- `rows: object` - the object of the rows data
 - `cards: object` - the object of the cards data
 
 ### Details
 
 :::info
-To parse data via the **parse()** method, you need to reset initial data in the constructor of JS Kanban.
+To parse data via the **parse()** method, you need to reset initial data in the constructor of JS Kanban
 
 ```jsx
-const kanban = new Kanban("kanban_container", {
+new kanban.Kanban("#root", {
 	// resets initial data, to parse new ones
 	columns: [],
-	cards: [],
-	rows: []
+	rows: [],
+	cards: []
 });
 ```
 :::
 
 ### Example
 
-```jsx
+```jsx {8-12}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns: [],
+	cards: [],
+	rows: []
+});
 // parse data into JS Kanban
-kanban.parse({
+board.parse({
 	columns,
-	rows,
-	cards
+	cards,
+	rows
 });
 ```

@@ -8,20 +8,26 @@ description: You can learn about the getSelection method in the documentation of
 
 ### Description
 
-Gets an array of IDs of the selected cards
+Gets an array with ID(s) of the selected card(s)
 
 ### Usage
 
-`getSelection: () => array;`
-
+```js
+getSelection: () => array;
+```
 
 ### Returns
 
-The method returns an array of IDs of the selected cards
+The method returns an array with ID(s) of the selected card(s)
 
 ### Example
 
-```jsx
-// get an array of IDs of the selected cards
-kanban.getSelection();
+```jsx {7}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
+
+board.getSelection();
 ```

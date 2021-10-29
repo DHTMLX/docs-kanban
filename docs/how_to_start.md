@@ -47,8 +47,7 @@ and
 Now you are ready to add JS Kanban to the page. First, let's create a DIV container and then place JS Kanban into it. So, your steps will be:
 
 - to specify a DIV container in the **index.html** file
-- to get a `Kanban` constructor **???**
-- to initialize JS Kanban using the constructor
+- to initialize JS Kanban using the `Kanban` constructor
 
 As parameters, the constructor takes the HTML container where JS Kanban will be placed into and the configuration object of JS Kanban.
 
@@ -67,8 +66,7 @@ As parameters, the constructor takes the HTML container where JS Kanban will be 
  <div id="root"></div>
 
  <script>
-	const { Kanban } = app;
-	new Kanban("#root", {
+	new kanban.Kanban("#root", {
 		//config options
 	});
  </script>
@@ -84,7 +82,7 @@ To start working with JS Kanban, you need to provide initial data for **columns*
 There are several options you can use to adjust the look of JS Kanban to your needs. [Check the details](../guides/configuration).
 
 ~~~js
-new Kanban("#root", {
+new kanban.Kanban("#root", {
 	columns,
 	cards
 });
@@ -98,5 +96,4 @@ The configuration of JS Kanban is quite flexible, so you can change it at any ti
 That's all. Just four simple steps and you have a handy tool for visualizing and managing the workflow. Now you can start working with your tasks or keep exploring the inner world of JS Kanban.
 
 - [JS Kanban Overview](../)
-- [Guide Overview](../guides/dev_guide)
 - [API Overview](../api/api_overview)

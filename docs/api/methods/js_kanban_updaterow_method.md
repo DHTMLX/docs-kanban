@@ -12,21 +12,28 @@ Updates the row data by its ID
 
 ### Usage
 
-`updateRow: (data: object) => void;`
+```js
+updateRow: (config: object) => void;
+```
 
 ### Parameters
 
-- `data: object` - the new data object of the current row
+- `config: object` - the new data object of the current row
 
-:::note
-Note, the ID of the row to be updated is required. Besides ID you can specify only the row label.
+:::info
+Note, the ID of the row to be updated is required. Other card parameters can be found [**here**](../config/js_kanban_rows_config.md)
 :::
 
 ### Example
 
-```jsx
+```jsx {7-10}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
 // update a label of the row with the "feature" ID
-kanban.updateRow({
+board.updateRow({
 	id: "feature",
 	label: "New Row"
 });

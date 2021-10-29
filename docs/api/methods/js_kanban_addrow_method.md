@@ -12,11 +12,32 @@ Adds a new row into JS Kanban
 
 ### Usage
 
-`addRow: () => void;`
+```js
+addRow: ({
+	id?: string | number,
+	label?: string,
+	collapsed?: boolean
+}) => void;
+```
+
+### Parameters
+
+- `id?: string | number` -  the **ID** of the new row
+- `label?: string` - the **label** of the new row
+- `collapsed?: boolean` - the **state** of the new row
 
 ### Example
 
-```jsx
+```jsx {7-11}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
 // add new row
-kanban.addRow();
+board.addRow({
+	id: "extra_row",
+	label: "Extra row",
+	collapsed: false
+});
 ```

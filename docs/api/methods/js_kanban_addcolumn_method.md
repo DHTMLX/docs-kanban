@@ -12,11 +12,29 @@ Adds a new column into JS Kanban
 
 ### Usage
 
-`addColumn: () => void;`
+```js
+addColumn: ({
+	id?: string | number,
+	label?: string
+}) => void;
+```
+
+### Parameters
+
+- `id?: string | number` -  the **ID** of the new column
+- `label?: string` - the **label** of the new column
 
 ### Example
 
-```jsx
+```jsx {7-10}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
 // add new column
-kanban.addColumn();
+board.addColumn({
+	id: "extra_column",
+	label: "Extra column"
+});
 ```
