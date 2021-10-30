@@ -8,15 +8,33 @@ description: You can learn about the rows property in the documentation of the J
 
 ### Description
 
+Array of objects containing the **rows data**
 
 ### Usage
 
-
-### Parameters
-
+```jsx
+rows?: [
+	{
+		id: string, // a row ID
+		label?: string, // a row label
+		collapsed?: boolean  // a row state
+	}, ...
+]
+```
+:::info
+If you want to load the rows data via the **parse()** method, set the **rows** property to the empty array
+:::
 
 ### Example
 
-```jsx
+```jsx {8}
+const rows = [
+	{ label: "Feature", id: "feature", collapsed: false },
+	{ label: "Task", id: "task", collapsed: true }
+];
 
+new kanban.Kanban("#root", {
+	...,
+	rows
+});
 ```

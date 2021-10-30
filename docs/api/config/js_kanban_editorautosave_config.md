@@ -8,15 +8,23 @@ description: You can learn about the editorAutoSave property in the documentatio
 
 ### Description
 
+Enables/disables an **autosave mode** of JS Kanban
 
 ### Usage
 
+```js
+editorAutoSave?: boolean // (true by default)
+```
 
-### Parameters
-
+:::info
+Using this parameter, you can disable an autosave mode of JS Kanban. If you set the **editorAutoSave** property to *false*, the editor will display the "Save" button to save edited data
+:::
 
 ### Example
 
-```jsx
-
+```jsx {3}
+new kanban.Kanban("#root", {
+	...,
+	editorAutoSave: false // disable autosaving
+});
 ```

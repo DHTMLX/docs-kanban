@@ -62,21 +62,19 @@ module.exports = {
           collapsible: true,
           collapsed: true,
           items: [
-            // C
+						// C
 						"api/config/js_kanban_cards_config",
 						"api/config/js_kanban_cardshape_config",
 						"api/config/js_kanban_cardtemplate_config",
+						"api/config/js_kanban_columnkey_config",
 						"api/config/js_kanban_columns_config",
 						// E
 						"api/config/js_kanban_editorautosave_config",
 						"api/config/js_kanban_editorshape_config",
-						// L
-						"api/config/js_kanban_lane_config",
 						// R
 						"api/config/js_kanban_readonly_config",
-						"api/config/js_kanban_rows_config",
-						// S
-						"api/config/js_kanban_stage_config"
+						"api/config/js_kanban_rowkey_config",
+						"api/config/js_kanban_rows_config"
           ]
         },
 				// JS Kanban internal methods

@@ -47,7 +47,22 @@ Parameters:
 | [updateColumn()](../methods/js_kanban_updatecolumn_method)| updates the column data	by its ID	  												 |
 | [updateRow()](../methods/js_kanban_updaterow_method)      | updates the row data by its ID	  													 |
 
-## JS Kanban internal Methods
+## JS Kanban Properties
+
+| Name                                           		         | Description                                              |
+| -----------------------------------------------------------| ---------------------------------------------------------|
+| [cards](../config/js_kanban_cards_config) 				         | an array of objects containing the cards data 		  	    |
+| [cardShape](../config/js_kanban_cardshape_config)          | cards configs that manage the appearance of the board    |
+| [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the card      |
+| [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
+| [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
+| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of JS Kanban           |
+| [editorShape](../config/js_kanban_editorshape_config) 	   | editor configs that manage the appearance of the editor	|
+| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of JS Kanban          	  |
+| [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
+| [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
+
+## JS Kanban Internal Methods
 
 | Name                               																     | Description                               |
 | -----------------------------------------------------------------------| ----------------------------------------- |
@@ -58,18 +73,3 @@ Parameters:
 | [api.intercept()](../internal/js_kanban_intercept_method)   					 |      |
 | [api.on()](../internal/js_kanban_on_method)   											   |      |
 | [api.setNext()](../internal/js_kanban_setnext_method)     						 |      |
-
-## JS Kanban Properties
-
-| Name                                           		         | Description                                           |
-| -----------------------------------------------------------| ----------------------------------------------------- |
-| [cards](../config/js_kanban_cards_config) 				         |  				|
-| [cardShape](../config/js_kanban_cardshape_config)          |  				|
-| [cardTemplate](../config/js_kanban_cardtemplate)           |          |
-| [columns](../config/js_kanban_columns_config)              |          |
-| [editorAutoSave](../config/js_kanban_editorautosave_config)|          |
-| [editorShape](../config/js_kanban_editorshape_config) 	   |  				|
-| [lane](../config/js_kanban_lane_config)        	           |          |
-| [readonly](../config/js_kanban_readonly_config)            |      	  |
-| [rows](../config/js_kanban_rows_config)                    |          |
-| [stage](../config/js_kanban_stage_config)                  |          |
