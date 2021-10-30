@@ -62,14 +62,21 @@ Parameters:
 | [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
 | [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
 
-## JS Kanban Internal Methods
+## JS Kanban Internal API
 
-| Name                               																     | Description                               |
-| -----------------------------------------------------------------------| ----------------------------------------- |
-| [api.exec()](../internal/js_kanban_exec_method) 											 |      |
-| [api.getReactiveState()](../internal/js_kanban_getreactivestate_method)|      |
-| [api.getState()](../internal/js_kanban_getstate_method)    					   |      |
-| [api.getStores()](../internal/js_kanban_getstores_method)    				   |      |
-| [api.intercept()](../internal/js_kanban_intercept_method)   					 |      |
-| [api.on()](../internal/js_kanban_on_method)   											   |      |
-| [api.setNext()](../internal/js_kanban_setnext_method)     						 |      |
+### Event Bus Methods
+
+| Name                               																     | Description                                                  |
+| -----------------------------------------------------------------------| ------------------------------------------------------------ |
+| [api.exec()](../internal/js_kanban_exec_method) 											 | allows triggering the inner events                           |
+| [api.intercept()](../internal/js_kanban_intercept_method)   					 | allows intercepting and preventing the inner events          |
+| [api.on()](../internal/js_kanban_on_method)   												 | allows attaching a handler to the inner events               |
+| [api.setNext()](../internal/js_kanban_setnext_method)     						 | allows adding some action into the Event Bus order           |
+
+### State Methods
+
+| Name                               																     | Description                                                  |
+| -----------------------------------------------------------------------| ------------------------------------------------------------ |
+| [api.getReactiveState()](../internal/js_kanban_getreactivestate_method)| gets an object with the reactive properties of the StateStore|
+| [api.getState()](../internal/js_kanban_getstate_method)    					   | gets an object with the current properties of the StateStore |
+| [api.getStores()](../internal/js_kanban_getstores_method)    				   | gets an object with the StateStore and DataStore objects     |

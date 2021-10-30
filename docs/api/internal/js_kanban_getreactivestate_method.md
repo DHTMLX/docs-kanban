@@ -8,15 +8,47 @@ description: You can learn about the api.getReactiveState method in the document
 
 ### Description
 
+Gets an object with the reactive properties of the StateStore
 
 ### Usage
 
+```js
+api.getReactiveState() => object;
+```
 
-### Parameters
+### Returns
 
+The method returns an object with the following properties:
+
+```js
+{
+	dragItemId: {
+		subscribe: any,
+		update: any,
+		set: any
+	},
+	before: {...},
+	overAreaId: {...},
+	overAreaMeta: {...},
+	dropAreaItemsCoords: {...},
+	dropAreasCoords: {...},
+	dragItemsCoords: {...},
+	selected: {...}
+}
+```  
 
 ### Example
 
-```jsx
+```jsx {8-11}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	columns,
+	cards
+});
 
+// subscribe on the card selection
+board.api.getReactiveState().selected.subscribe((value) => {
+	console.log(value);
+	// other actions
+});
 ```

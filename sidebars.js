@@ -79,25 +79,36 @@ module.exports = {
         },
 				// JS Kanban internal methods
 				{
-          type: "category",
-          label: "JS Kanban Internal API",
-          collapsible: true,
-          collapsed: true,
-          items: [
-						// E
-            "api/internal/js_kanban_exec_method",
-						// G
-						"api/internal/js_kanban_getreactivestate_method",
-						"api/internal/js_kanban_getstate_method",
-						"api/internal/js_kanban_getstores_method",
-						// I
-						"api/internal/js_kanban_intercept_method",
-						// O
-						"api/internal/js_kanban_on_method",
-						// S
-						"api/internal/js_kanban_setnext_method"
-          ]
-        }
+					type: "category",
+					label: "JS Kanban Internal API",
+					collapsible: true,
+					collapsed: true,
+					items: [
+						{
+							type: "category",
+							label: "Event Bus Methods",
+							collapsible: true,
+							collapsed: true,
+							items: [
+								"api/internal/js_kanban_exec_method",
+								"api/internal/js_kanban_intercept_method",
+								"api/internal/js_kanban_on_method",
+								"api/internal/js_kanban_setnext_method"
+							]
+						},
+						{
+							type: "category",
+							label: "State Methods",
+							collapsible: true,
+							collapsed: true,
+							items: [
+								"api/internal/js_kanban_getreactivestate_method",
+								"api/internal/js_kanban_getstate_method",
+								"api/internal/js_kanban_getstores_method"
+							]
+						}
+					]
+				}
       ]
     },
     {
