@@ -8,7 +8,7 @@ description: You can have an overview of the JavaScript Kanban documentation. Br
 
 This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional JS Kanban on a page.
 
-!!! **the widget baner here**
+!!![TODO] **Здесь будет основной скриншот виджета с тулбаром и редактором**
 
 ## Step 1. Including source files
 
@@ -23,73 +23,72 @@ and
 
 - the link to the Google Fonts source file for the correct rendering of fonts.
 
-~~~html title="index.html"
+```html title="index.html"
 <!DOCTYPE html>
 <html>
-<head>
-  <title>How to Start with JS Kanban</title>
-  <script src="codebase/kanban.js"></script>   
+	<head>
+		<title>How to Start with JS Kanban</title>
+		<script src="codebase/kanban.js"></script>   
 
-  <link href="codebase/kanban.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
-  		rel="stylesheet">
-</head>
-<body>
-	<script>
-	  // your code will be here
-	</script>
-</body>
+		<link href="codebase/kanban.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+		rel="stylesheet">
+	</head>
+	<body>
+		<script>
+		// your code will be here
+		</script>
+	</body>
 </html>
-~~~
+```
 
 ## Step 2. Creating JS Kanban
 
 Now you are ready to add JS Kanban to the page. First, let's create a DIV container and then place JS Kanban into it. So, your steps will be:
 
-- to specify a DIV container in the **index.html** file
-- to initialize JS Kanban using the `Kanban` constructor
+- to specify a DIV container in the *index.html* file
+- to initialize JS Kanban using the constructor
 
 As parameters, the constructor takes the HTML container where JS Kanban will be placed into and the configuration object of JS Kanban.
 
-~~~html title="index.html"
+```html title="index.html"
 <!DOCTYPE html>
 <html>
-<head>
- <title>How to Start with JS Kanban</title>
- <script src="codebase/kanban.js"></script>   
+	<head>
+		<title>How to Start with JS Kanban</title>
+		<script src="codebase/kanban.js"></script>   
 
- <link href="codebase/kanban.css" rel="stylesheet">  
- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
-  	rel="stylesheet">
-</head>
-<body>
- <div id="root"></div>
+		<link href="codebase/kanban.css" rel="stylesheet">  
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+		rel="stylesheet">
+	</head>
+	<body>
+		<div id="root"></div>
 
- <script>
-	new kanban.Kanban("#root", {
-		//config options
-	});
- </script>
-</body>
+		<script>
+			new kanban.Kanban("#root", {
+			//config options
+			});
+		</script>
+	</body>
 </html>
-~~~
+```
 
 ## Step 3. Configuring JS Kanban
 
 Next you can specify additional configuration options you want the JS Kanban component to have when initialized besides the default ones.
 
 To start working with JS Kanban, you need to provide initial data for **columns** and **cards**.
-There are several options you can use to adjust the look of JS Kanban to your needs. [Check the details](../guides/configuration).
+There are several options you can use to adjust the appearance of JS Kanban to your needs. [Check the details](../guides/configuration).
 
-~~~js
+```js
 new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-~~~
+```
 
 The configuration of JS Kanban is quite flexible, so you can change it at any time. [Read the related guide](../guides/configuration) to go into the basics of configuring JS Kanban.
-
 
 ## What's next
 
