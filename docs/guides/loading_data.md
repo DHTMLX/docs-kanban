@@ -1,14 +1,23 @@
 ---
-sidebar_label: Data loading
-title: Loading data
+sidebar_label: Data Loading
+title: Loading Data
 description: You can study developer and user guides in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
 ---
 
-## Loading Data
+# Working with Data
 
-While loading inline data, you need to use the **parse()** method and pass an object with data to it as in the example below:
+## Initial Data Loading
 
-~~~js title="data.json"
+When initializing JS Kanban, you can provide the initial data for *columns*, *cards* and *rows*.
+
+:::info
+Note, that data for **columns** and **cards** are mandatory!
+:::
+
+~~~js title="data.json" {4,19,71,85-87}
+const start_date = new Date("01/05/2021");
+const end_date = new Date("01/15/2021");
+
 const columns = [
 	{
 		label: "Backlog",
@@ -21,38 +30,92 @@ const columns = [
 	{
 		label: "Testing",
 		id: "testing"
-	},
-	{
-		label: "Done",
-		id: "done"
-	}
-];
-const cards = [
-	{
-		label: "Task 1",
-		stage: "backlog"
-	},
-	{
-		label: "Task 2",
-		stage: "inprogress"
-	},
-	{
-		label: "Task 3",
-		stage: "testing"
-	},
-	{
-		label: "Task 4",
-		stage: "done"
 	}
 ];
 
-// initializing js kanban
-const { Kanban } = app;
-const kanban = new Kanban("#root", {
-	columns:[],
-	cards:[]
+const cards = [
+	{
+		id: 1,
+		label: "Integration with React",
+		status: 1,
+		cover: "#65D3B3",
+		description: "Some description...",
+
+		start_date,
+		end_date,
+
+		progress: 25,
+		users: [1, 2, 3, 4],
+		sprint: "1.0",
+		column: "backlog",
+		type: "feature"
+	},
+	{
+		id: 2,
+		label: "Archive the cards/boards ",
+		status: 2,
+		cover: "#FFC975",
+
+		start_date,
+		end_date,
+
+		sprint: "1.0",
+		column: "backlog",
+		type: "feature"
+	},
+	{
+		label: "Searching and filtering",
+		status: 1,
+		cover: "#65D3B3",
+
+		start_date,
+
+		sprint: "1.2",
+		column: "backlog",
+		type: "task"
+	},
+	{
+		label: "Set the tasks priorities",
+		status: 2,
+		cover: "#58C3FE",
+
+		sprint: "1.2",
+		column: "inprogress",
+		type: "feature"
+	}
+];
+
+const rows = [
+	{
+		label: "Feature",
+		id: "feature"
+	},
+	{
+		label: "Task",
+		id: "task",
+		collapsed: true
+	},
+];
+
+// initializing JS Kanban with the initial data for columns, cards and rows
+new kanban.Kanban("#root", {
+	columns, // mandatory!
+	cards, // mandatory!
+	rows // optional
+});
+~~~
+
+## Dynamic Data Loading
+
+To load data for columns, rows and cards dynamically, you can use the **parse()** method. It takes an object with the desired data as a parameter. Before parsing the data via this method, you need to set the *columns*, *cards* and *rows* parameters to an empty array in the JS Kanban configs.
+
+~~~js {2-4,8}
+const board = new kanban.Kanban("#root", {
+	columns: [],
+	cards: [],
+	rows: []
 });
 
 // loading data into js kanban
-kanban.parse({ columns, cards });
+board.parse({ columns, cards, rows });
 ~~~
