@@ -119,9 +119,8 @@ module.exports = {
       items: [
 				"guides/initialization",
 				"guides/configuration",
-				"guides/localization",
 				"guides/loading_data",
-				"guides/customization"
+				"guides/localization"
       ]
     }
   ]

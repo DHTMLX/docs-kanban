@@ -36,4 +36,6 @@ const board = new kanban.Kanban("#root", {
 board.setLocale(ru);
 ```
 
-### Related article !!! [todo]
+### Related article
+
+[Localization](guides/localization.md)

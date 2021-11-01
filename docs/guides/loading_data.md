@@ -1,17 +1,17 @@
 ---
 sidebar_label: Data Loading
-title: Loading Data
-description: You can study developer and user guides in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
+title:  Data Loading
+description: You can study the developer guide in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
 ---
 
-# Working with Data
+# Data Loading
 
 ## Initial Data Loading
 
 When initializing JS Kanban, you can provide the initial data for *columns*, *cards* and *rows*.
 
-:::info
-Note, that data for **columns** and **cards** are mandatory!
+:::note
+The data for **columns** and **cards** are mandatory
 :::
 
 ~~~js title="data.json" {4,19,71,85-87}

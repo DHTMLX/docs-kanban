@@ -79,7 +79,7 @@ As parameters, the constructor takes the HTML container where JS Kanban will be 
 Next you can specify additional configuration options you want the JS Kanban component to have when initialized besides the default ones.
 
 To start working with JS Kanban, you need to provide initial data for **columns** and **cards**.
-There are several options you can use to adjust the appearance of JS Kanban to your needs. [Check the details](../guides/configuration).
+Beside initial data, you cam configure the card and editor appearance. [Check the details](../guides/configuration).
 
 ```js
 new kanban.Kanban("#root", {
@@ -88,11 +88,6 @@ new kanban.Kanban("#root", {
 });
 ```
 
-The configuration of JS Kanban is quite flexible, so you can change it at any time. [Read the related guide](../guides/configuration) to go into the basics of configuring JS Kanban.
-
 ## What's next
 
-That's all. Just four simple steps and you have a handy tool for visualizing and managing the workflow. Now you can start working with your tasks or keep exploring the inner world of JS Kanban.
-
-- [JS Kanban Overview](../)
-- [API Overview](../api/api_overview)
+That's all. Just three simple steps and you have a handy tool for visualizing and managing the workflow. Now you can start working with your tasks or keep exploring the inner world of JS Kanban.

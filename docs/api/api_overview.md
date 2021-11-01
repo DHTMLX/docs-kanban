@@ -32,20 +32,20 @@ Parameters:
 | [deleteColumn()](../methods/js_kanban_deletecolumn_method)| removes a column from JS Kanban                      			 	 |
 | [deleteRow()](../methods/js_kanban_deleterow_method)      | removes a row from JS Kanban                        		   	 |
 | [destructor()](../methods/js_kanban_destructor_method)		| removes JS Kanban                   								   			 |
-| [getAreaCards()](../methods/js_kanban_getareacards_method)| gets an array of the data objects of all cards of the column |
+| [getAreaCards()](../methods/js_kanban_getareacards_method)| gets an array of the data objects of the cards               |
 | [getCard()](../methods/js_kanban_getcard_method)      		| gets the data object of the card with the specified ID 			 |
 | [getSelection()](../methods/js_kanban_getselection_method)| gets an array of IDs of the selected cards			 						 |
 | [moveCard()](../methods/js_kanban_movecard_method)      	| moves a card to the specified column (and row)			 				 |
 | [parse()](../methods/js_kanban_parse_method)      				| loads data into JS Kanban			 													  	 |
-| [selectCard()](../methods/js_kanban_selectcard_method)    | selects the card by its ID  														 		 |
+| [selectCard()](../methods/js_kanban_selectcard_method)    | selects the card by the specified ID  											 |
 | [serialize()](../methods/js_kanban_serialize_method)      | serializes the widget data to JSON  					          		 |
 | [setConfig()](../methods/js_kanban_setconfig_method)      | sets the configuration parameters 					          		   |
 | [setLocale()](../methods/js_kanban_setlocale_method)      | sets the new locale  			                        		       |
 | [setSearch()](../methods/js_kanban_setsearch_method)      | looks for the needed cards by the required parameters 			 |
-| [unselectCard()](../methods/js_kanban_unselectcard_method)| unselects card(s) by its ID			  													 |
-| [updateCard()](../methods/js_kanban_updatecard_method)    | updates the card data	by its ID	  													 |
-| [updateColumn()](../methods/js_kanban_updatecolumn_method)| updates the column data	by its ID	  												 |
-| [updateRow()](../methods/js_kanban_updaterow_method)      | updates the row data by its ID	  													 |
+| [unselectCard()](../methods/js_kanban_unselectcard_method)| unselects the card(s) by the specified ID			  						 |
+| [updateCard()](../methods/js_kanban_updatecard_method)    | updates the card data	by the specified ID	  								 |
+| [updateColumn()](../methods/js_kanban_updatecolumn_method)| updates the column data	by the specified ID	  							 |
+| [updateRow()](../methods/js_kanban_updaterow_method)      | updates the row data by the specified ID	  								 |
 
 ## JS Kanban Properties
 
