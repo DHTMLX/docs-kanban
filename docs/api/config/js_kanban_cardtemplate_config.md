@@ -13,41 +13,36 @@ Returns and applies a new HTML **template** of the card
 ### Usage
 
 ```js
-function cardTemplate({ data, selected, dragging, cardShape }) {
+function cardTemplate({ cardFields, selected, dragging, cardShape }){
 	return "HTML template of the card";
 }
 ```
 ### Parameters
 
-- `data: object` - gets the data object of the card
+- `cardFields: object` - gets the data object of the card
 - `selected: boolean` - gets the selecting state of the card
 - `dragging: boolean` - gets the dragging state of the card
 - `cardShape: object` - gets the configuration object of the card
 
 ### Example
 
-```jsx {26}
-function cardTemplate({ data, selected, dragging, cardShape }) {
-	const { label } = data;
-	const cover = cardShape?.cover?.values?.find(
-		color => color.id === data.cover
-	);
+```jsx {21}
+function cardTemplate({ cardFields, selected, dragging, cardShape }){
+	const { label, color } = cardFields;
 	if (selected) {
-		console.log(cardShape);
 		return `
 			<div class="custom-card" style="padding:20px">
-				<div class="status-color" style="background:${cover.color}"></div>
+				<div class="status-color" style="background:${color}"></div>
 				Selected:${label}
 			</div>
 		`;
-	}else{
-		return `
-			<div class="custom-card" style="padding:20px">
-				<div class="status-color" style="background:${cover.color}"></div>
-				${label}
-			</div>
-		`;
 	}
+	return `
+		<div class="custom-card" style="padding:20px">
+			<div class="status-color" style="background:${color}"></div>
+			${label}
+		</div>
+	`;
 }
 
 new kanban.Kanban("#root", {
