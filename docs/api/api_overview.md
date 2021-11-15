@@ -16,10 +16,25 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-Parameters:
+**Parameters**:
 
-- an HTML container (or the ID of an HTML container)
-- a hash of config options (check below)
+- an HTML container (the ID of the HTML container)
+- an object of the config parameters (check below)
+
+## JS Kanban Properties
+
+| Name                                           		         | Description                                              |
+| -----------------------------------------------------------| ---------------------------------------------------------|
+| [cards](../config/js_kanban_cards_config) 				         | an array of objects containing the cards data 		  	    |
+| [cardShape](../config/js_kanban_cardshape_config)          | card configs that manage the appearance of the board     |
+| [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the cards      |
+| [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
+| [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
+| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of JS Kanban           |
+| [editorShape](../config/js_kanban_editorshape_config) 	   | editor configs that manage the appearance of the editor	|
+| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of JS Kanban          	  |
+| [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
+| [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
 
 ## JS Kanban Methods
 
@@ -46,21 +61,6 @@ Parameters:
 | [updateCard()](../methods/js_kanban_updatecard_method)    | updates the card data	by the specified ID	  								 |
 | [updateColumn()](../methods/js_kanban_updatecolumn_method)| updates the column data	by the specified ID	  							 |
 | [updateRow()](../methods/js_kanban_updaterow_method)      | updates the row data by the specified ID	  								 |
-
-## JS Kanban Properties
-
-| Name                                           		         | Description                                              |
-| -----------------------------------------------------------| ---------------------------------------------------------|
-| [cards](../config/js_kanban_cards_config) 				         | an array of objects containing the cards data 		  	    |
-| [cardShape](../config/js_kanban_cardshape_config)          | cards configs that manage the appearance of the board    |
-| [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the card      |
-| [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
-| [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
-| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of JS Kanban           |
-| [editorShape](../config/js_kanban_editorshape_config) 	   | editor configs that manage the appearance of the editor	|
-| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of JS Kanban          	  |
-| [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
-| [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
 
 ## JS Kanban Internal API
 

@@ -19,6 +19,27 @@ module.exports = {
       collapsed: false,
       items: [
         "api/api_overview",
+				{
+          type: "category",
+          label: "JS Kanban Properties",
+          collapsible: true,
+          collapsed: true,
+          items: [
+						// C
+						"api/config/js_kanban_cards_config",
+						"api/config/js_kanban_cardshape_config",
+						"api/config/js_kanban_cardtemplate_config",
+						"api/config/js_kanban_columnkey_config",
+						"api/config/js_kanban_columns_config",
+						// E
+						"api/config/js_kanban_editorautosave_config",
+						"api/config/js_kanban_editorshape_config",
+						// R
+						"api/config/js_kanban_readonly_config",
+						"api/config/js_kanban_rowkey_config",
+						"api/config/js_kanban_rows_config"
+          ]
+        },
 				// JS Kanban methods
         {
           type: "category",
@@ -54,27 +75,6 @@ module.exports = {
 						"api/methods/js_kanban_updatecard_method",
 						"api/methods/js_kanban_updatecolumn_method",
 						"api/methods/js_kanban_updaterow_method"
-          ]
-        },
-        {
-          type: "category",
-          label: "JS Kanban Properties",
-          collapsible: true,
-          collapsed: true,
-          items: [
-						// C
-						"api/config/js_kanban_cards_config",
-						"api/config/js_kanban_cardshape_config",
-						"api/config/js_kanban_cardtemplate_config",
-						"api/config/js_kanban_columnkey_config",
-						"api/config/js_kanban_columns_config",
-						// E
-						"api/config/js_kanban_editorautosave_config",
-						"api/config/js_kanban_editorshape_config",
-						// R
-						"api/config/js_kanban_readonly_config",
-						"api/config/js_kanban_rowkey_config",
-						"api/config/js_kanban_rows_config"
           ]
         },
 				// JS Kanban internal methods
