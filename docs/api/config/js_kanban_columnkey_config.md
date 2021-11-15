@@ -16,9 +16,13 @@ Defines belonging the card to the **column**
 columnKey?: string
 ```
 
+:::info
+To distribute the cards into columns, you need to specify a **custom key** and set it to the ID of the desired column (in the card data object). The **columnKey** property needs to be set to this custom key in the widget config.
+:::
+
 ### Example
 
-```jsx {15}
+```jsx {4,8,15}
 const cards = [
 	{
 		label: "Backlog task",
@@ -31,7 +35,7 @@ const cards = [
 ];
 
 new kanban.Kanban("#root", {
-	...,
+	columns,
 	cards,
 	columnKey: "custom_key"
 });

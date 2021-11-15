@@ -15,11 +15,11 @@ Enables/disables ***editing***, ***adding***, ***selecting***, ***dragging***  o
 ```js
 readonly?: boolean // enables/disables readonly mode of JS Kanban (false by default)
 //or
-readonly?: { // true by default
-	edit?: boolean, // enables/disables editing of the cards (false by default)
-	add?: boolean, // enables/disables adding of the new cards (false by default)
-	select?: boolean, // enables/disables selecting of the cards (false by default)
-	dnd?: boolean // enables/disables dragging of the cards (false by default)
+readonly?: {
+	edit?: boolean, // enables/disables editing of the cards (true by default)
+	add?: boolean, // enables/disables adding of the new cards (true by default)
+	select?: boolean, // enables/disables selecting of the cards (true by default)
+	dnd?: boolean // enables/disables dragging of the cards (true by default)
 }
 ```
 ### Example

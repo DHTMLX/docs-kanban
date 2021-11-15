@@ -17,7 +17,7 @@ editorAutoSave?: boolean // (true by default)
 ```
 
 :::info
-Using this parameter, you can disable an autosave mode of JS Kanban. If you set the **editorAutoSave** property to *false*, the editor will display the "Save" button to save edited data
+Using this parameter, you can enable/disable an autosave mode of JS Kanban. If you set the **editorAutoSave** property to *false*, the editor will display the "Save" button to save edited data
 :::
 
 ### Example

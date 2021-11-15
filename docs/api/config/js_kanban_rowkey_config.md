@@ -22,7 +22,7 @@ To distribute the cards into rows, you need to specify a **custom key** and set 
 
 ### Example
 
-```jsx {15}
+```jsx {4,8,15}
 const cards = [
 	{
 		label: "Backlog task",
@@ -35,7 +35,7 @@ const cards = [
 ];
 
 new kanban.Kanban("#root", {
-	...,
+	columns,
 	cards,
 	rowKey: "custom_key"
 });
