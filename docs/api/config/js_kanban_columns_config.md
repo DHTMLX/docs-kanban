@@ -8,7 +8,7 @@ description: You can learn about the columns property in the documentation of th
 
 ### Description
 
-Array of objects containing the **columns data**. This parameter is mandatory
+Array of objects containing the **columns data**. This parameter is mandatory!
 
 ### Usage
 
@@ -17,7 +17,8 @@ columns: [
 	{
 		id: string, // a column ID
 		label?: string // a column label
-	}, ...
+	},
+	{...} // other columns data
 ]
 ```
 
@@ -27,7 +28,7 @@ If you want to load the columns data via the **parse()** method, set the **colum
 
 ### Example
 
-```jsx {8}
+```jsx {1-5,8}
 const columns = [
 	{ label: "Backlog", id: "backlog" },
 	{ label: "In progress", id: "inprogress" },
@@ -36,6 +37,6 @@ const columns = [
 
 new kanban.Kanban("#root", {
 	columns,
-	...
+	cards
 });
 ```

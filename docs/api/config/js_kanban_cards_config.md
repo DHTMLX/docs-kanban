@@ -8,7 +8,7 @@ description: You can learn about the cards property in the documentation of the 
 
 ### Description
 
-Array of objects containing the **cards data**. This parameter is mandatory
+Array of objects containing the **cards data**. This parameter is mandatory!
 
 ### Usage
 
@@ -22,8 +22,8 @@ cards: [
 		users?: array, // an array with the users IDs
 		start_date?: Date, // a value of the start date
 		end_date?: Date, // a value of the end date
-		cover?: string, // a valid HEX color code
-		status?: string | number, // a card status ID
+		color?: string, // a valid HEX color code
+		priority?: string | number, // a card priority ID
 		attached?: [ // an array with the data of the attached file
 			id: string | number,
 			url?: string, // a link to the file to be attached
@@ -35,7 +35,8 @@ cards: [
 			isCover?: boolean
 		],
 		[custom_key: string]?: any // a custom key of the card
-	}, ...
+	},
+	{...} // other cards data
 ]
 ```
 
@@ -45,7 +46,7 @@ If you want to load the cards data via the **parse()** method, set the **cards**
 
 ### Example
 
-```jsx {19}
+```jsx {1-16,20}
 const cards = [
 	{
 		id: 1,
@@ -56,10 +57,11 @@ const cards = [
 		users: [1, 2],
 		start_date: new Date("01/05/2021"),
 		end_date: new Date("01/15/2021"),
-		cover: "#65D3B3",
-		status: 1,
+		color: "#65D3B3",
+		priority: 1,
 		type: "feature", // custom field
-	}, ...
+	},
+	{...} // other cards data
 ];
 
 new kanban.Kanban("#root", {

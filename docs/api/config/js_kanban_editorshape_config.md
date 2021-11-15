@@ -15,8 +15,8 @@ The **editor configs** that manage the appearance of the JS Kanban editor
 ```js
 editorShape?: [
 	{
-		//available types:
-		//text, textarea, date, select, combo, multiselect, files, color, progress
+		// available types:
+		// text, textarea, date, select, combo, multiselect, files, color, progress
 		type: string, // an editor field type
 		key: string, // an editor field key
 		label?: string, // an editor field label

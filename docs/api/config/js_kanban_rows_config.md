@@ -18,7 +18,8 @@ rows?: [
 		id: string, // a row ID
 		label?: string, // a row label
 		collapsed?: boolean  // a row state
-	}, ...
+	},
+	{...} // other rows data
 ]
 ```
 :::info
@@ -27,14 +28,15 @@ If you want to load the rows data via the **parse()** method, set the **rows** p
 
 ### Example
 
-```jsx {8}
+```jsx {1-4,9}
 const rows = [
 	{ label: "Feature", id: "feature", collapsed: false },
 	{ label: "Task", id: "task", collapsed: true }
 ];
 
 new kanban.Kanban("#root", {
-	...,
+	columns,
+	cards,
 	rows
 });
 ```

@@ -28,7 +28,8 @@ cardShape?: {
 				id: string | number, // a user ID
 				path?: string, // a path to the user picture
 				label?: string // a user name
-			}, {...}
+			},
+			{...}
 		]
 	},
 	priority?: { // to show/hide a card priority
@@ -38,7 +39,8 @@ cardShape?: {
 				id: string | number, // a priority ID
 				color: string, // a valid HEX color code
 				label?: string // a priority name
-			}, {...}
+			},
+			{...}
 		]
 	},
 	color?: boolean | { show?: boolean }, // to show/hide a colored top line of a card
@@ -48,7 +50,8 @@ cardShape?: {
 			key: string, // a key of the custom field
 			//available types: text, textarea, date, select, multiselect, files
 			type: string, // a type of the custom field
-		}, {...}
+		},
+		{...}
 	]
 }
 ```
