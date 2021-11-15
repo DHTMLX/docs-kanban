@@ -4,23 +4,23 @@ title: JS Kanban cardShape property
 description: You can learn about the cardShape property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
-# cardShape / cardConfig?
+# cardShape
 
 ### Description
 
-The **cards configs** that manage the appearance of the JS Kanban board
+The **card configs** that manage the appearance of the JS Kanban board
 
 ### Usage
 
 ```js
 cardShape?: {
-	label: { show?: boolean }, // to show/hide a card label
-	description?: { show?: boolean }, // to show/hide a card description
-	progress?: { show?: boolean }, // to show/hide a card progress bar
-	start_date?: { show?: boolean }, // to show/hide the start date
-	end_date?: { show?: boolean }, // to show/hide the end date
-	menu?: { show?: boolean }, // to show/hide a card menu
-	attached?: { show?: boolean }, // to show/hide an attachment
+	label: boolean | { show?: boolean }, // to show/hide a card label
+	description?: boolean | { show?: boolean }, // to show/hide a card description
+	progress?: boolean | { show?: boolean }, // to show/hide a card progress bar
+	start_date?: boolean | { show?: boolean }, // to show/hide the start date
+	end_date?: boolean | { show?: boolean }, // to show/hide the end date
+	menu?: boolean | { show?: boolean }, // to show/hide a card menu
+	attached?: boolean | { show?: boolean }, // to show/hide an attachment
 	users?: { // to show/hide users data
 		show?: boolean,
 		values?: [
@@ -31,73 +31,91 @@ cardShape?: {
 			}, {...}
 		]
 	},
-	status?: { // to show/hide a card status
+	priority?: { // to show/hide a card priority
 		show?: boolean,
 		values?: [
 			{
-				id: string | number, // a status ID
+				id: string | number, // a priority ID
 				color: string, // a valid HEX color code
-				label?: string // a status name
+				label?: string // a priority name
 			}, {...}
 		]
 	},
-	cover?: { show?: boolean }, // to show/hide a card cover (top line)
-	customFields?: [ // an array of custom fields
+	color?: boolean | { show?: boolean }, // to show/hide a colored top line of a card
+	cover?: boolean | { show?: boolean }, // to show/hide a card image
+	headerFields?: [ // an array of custom fields
 		{
-			key: string, // a custom field key
+			key: string, // a key of the custom field
 			//available types: text, textarea, date, select, multiselect, files
-			type: string, // a custom field type
+			type: string, // a type of the custom field
 		}, {...}
 	]
 }
 ```
 
-### Default Config
+### Default config
 
 ```js
-defaultCardShape: {
-	label: { show: true },
-	description: { show: false },
-	progress: { show: true },
-	start_date: { show: false },
-	end_date: { show: false },
-	users: { show: false },
-	status: {
-		show: false,
-		values: defaultStatuses
-	},
-	cover: { show: false },
-	attached: { show: true },
-	menu: { show: true }
-}
-```
-
-### Example
-
-```jsx {29}
-const users = [
-	{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
-	{ id: 2, label: "Aaron Short" }
-];
-
-const defaultStatuses = [
+const defaultPriorities = [
 	{ id: 1, color: "#FF5252", label: "high" },
 	{ id: 2, color: "#FFC975", label: "medium" },
 	{ id: 3, color: "#0AB169", label: "low" }
 ];
 
-const cardShape = {
-	label: { show: true },
-	description: { show: true },
-	progress: {	show: true },
-	start_date: { show: true },
-	end_date: { show: true	},
-	menu: { show: true },
-	attached: { show: true },
-	status: { show: true, values: defaultStatuses },
-	users: { show: true, values: users },
-	customFields: [
-		{ key: "sprint", type: "text", label: "Custom field" }
+const defaultCardShape = {
+	label: true,
+	description: false,
+	progress: false,
+	start_date: false,
+	end_date: false,
+	users: false,
+	priority: {
+		show: false,
+		values: defaultPriorities
+	},
+	color: false,
+	cover: false,
+	attached: false,
+	menu: true
+};
+```
+
+### Example
+
+```jsx {39}
+const users = [ // user data
+	{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
+	{ id: 2, label: "Aaron Short" }
+];
+
+const  cardPriority = [ // card priority data
+	{ id: 1, color: "#FF5252", label: "high" },
+	{ id: 2, color: "#FFC975", label: "medium" },
+	{ id: 3, color: "#0AB169", label: "low" }
+];
+
+const cardShape = { // card configs
+	label: true,
+	description: true,
+	progress: true,
+	start_date: true,
+	end_date: true,
+	menu: true,
+	attached: true,
+	priority: {
+		show: true,
+		values: cardPriority
+	},
+	users: {
+		show: true,
+		values: users
+	},
+	headerFields: [
+		{
+			key: "sprint",
+			type: "text",
+			label: "Custom field"
+		}
 	]
 };
 
