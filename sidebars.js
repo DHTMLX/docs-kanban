@@ -106,6 +106,17 @@ module.exports = {
 								"api/internal/js_kanban_getstate_method",
 								"api/internal/js_kanban_getstores_method"
 							]
+						},
+						{
+							type: "category",
+							label: "Rest Methods",
+							collapsible: true,
+							collapsed: true,
+							items: [
+								"api/provider/js_kanban_getcards_method",
+								"api/provider/js_kanban_getcolumns_method",
+								"api/provider/js_kanban_getrows_method"
+							]
 						}
 					]
 				}

@@ -80,3 +80,11 @@ new kanban.Kanban("#root", {
 | [api.getReactiveState()](../internal/js_kanban_getreactivestate_method)| gets an object with the reactive properties of the StateStore|
 | [api.getState()](../internal/js_kanban_getstate_method)    					   | gets an object with the current properties of the StateStore |
 | [api.getStores()](../internal/js_kanban_getstores_method)    				   | gets an object with the StateStore and DataStore objects     |
+
+### RestDataProvider Methods
+
+| Name                               											| Description                             |
+| --------------------------------------------------------| ----------------------------------------|
+| [getCards()](../provider/js_kanban_getcards_method)		  | returns a promise with the cards data   |
+| [getColumns()](../provider/js_kanban_getcolumns_method) | returns a promise with the columns data |
+| [getRows()](../provider/js_kanban_getrows_method)    		| returns a promise with the rows data    |
