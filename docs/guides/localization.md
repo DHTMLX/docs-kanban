@@ -17,19 +17,19 @@ const en = {
 		__dates: {
 				days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
 				months: [
-		        "January",
-		        "February",
-		        "March",
-		        "April",
-		        "May",
-		        "June",
-		        "July",
-		        "August",
-		        "September",
-		        "October",
-		        "November",
-		        "December"
-		    ]
+					"January",
+					"February",
+					"March",
+					"April",
+					"May",
+					"June",
+					"July",
+					"August",
+					"September",
+					"October",
+					"November",
+					"December"
+				]
 		},
 		kanban: {
 				Save: "Save",
@@ -51,8 +51,8 @@ const en = {
 				Edit: "Edit",
 				Everywhere: "Everywhere",
 				Label: "Label",
-				Status: "Status",
-				Cover: "Cover",
+				Priority: "Priority",
+				Color: "Color",
 				Date: "Date",
 				Untitled: "Untitled"
 		}
@@ -86,7 +86,7 @@ const ru = {
 		lang: "ru",
 		__dates: {
 				months,
-				days,
+				days
 		},
 		kanban: {
 				Save: "Сохранить",
@@ -108,8 +108,8 @@ const ru = {
 				Edit: "Редактировать",
 				Everywhere: "Всюду",
 				Label: "Заголовок",
-				Status: "Статус",
-				Cover: "Обложка",
+				Priority: "Приоритет",
+				Color: "Цвет",
 				Date: "Дата",
 				Untitled: "Без названия"
 		}
@@ -140,7 +140,7 @@ const cn = {
 		lang: "cn",
 		__dates: {
 				months: months_cn,
-				days: days_cn,
+				days: days_cn
 		},
 		kanban: {
 				Save: "保存",
@@ -151,7 +151,6 @@ const cn = {
 				Type: "类型",
 				"Start Date": "开始日期",
 				"End Date": "结束日期",
-				// [todo] need translation verification
 				Result: "结果",
 				"No results": "没有结果",
 				Search: "搜索",
@@ -163,8 +162,8 @@ const cn = {
 				Edit: "编辑",
 				Everywhere: "无处不在",
 				Label: "标签",
-				Status: "状态",
-				Cover: "封面",
+				Priority: "状态",
+				Color: "封面",
 				Date: "日期",
 				Untitled: "无题"
 		}
@@ -172,15 +171,21 @@ const cn = {
 ~~~
 </details>
 
-
-
 ## Custom locale
 
-To apply a different locale you need to:
+To apply a custom locale you need to:
 
-- provide translation for all text labels in JS Kanban, e.g. the Russian locale (it can be any language you need)
-- apply the new locale by calling the **setLocale()** method, that takes an object with translation (custom locale) as a parameter
+- create the custom locale (or modify the existed one) and provide translation for all text labels in JS Kanban (it can be any language you need)
+- apply the new locale by calling the [**setLocale()**](api/methods/js_kanban_setlocale_method.md) method, that takes an object with translation (custom locale) as a parameter.
 
-!!![TODO] **Добавить ссылку на сниппет с локализацией**
+## Example
+
+In this snippet you can see how to switch through the *EN*, *RU* and *CN* locales:
+
+!!![TODO] **Добавить ссылку на сниппет с переключением локалей для Kanban и Toolbar**
 
 <iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+
+:::note
+To localize the **Toolbar** of JS Kanban, you need to call its **setLocale()** method with the required locale
+:::
