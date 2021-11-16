@@ -54,9 +54,9 @@ new kanban.Kanban("#root", {
 | [parse()](../methods/js_kanban_parse_method)      				| loads data into JS Kanban			 													  	 |
 | [selectCard()](../methods/js_kanban_selectcard_method)    | selects the card by the specified ID  											 |
 | [serialize()](../methods/js_kanban_serialize_method)      | serializes the widget data to JSON  					          		 |
-| [setConfig()](../methods/js_kanban_setconfig_method)      | sets the configuration parameters 					          		   |
-| [setLocale()](../methods/js_kanban_setlocale_method)      | sets the new locale  			                        		       |
-| [setSearch()](../methods/js_kanban_setsearch_method)      | looks for the needed cards by the required parameters 			 |
+| [setConfig()](../methods/js_kanban_setconfig_method)      | sets the config parameters 					                  		   |
+| [setLocale()](../methods/js_kanban_setlocale_method)      | sets a new locale  			                        		         |
+| [setSearch()](../methods/js_kanban_setsearch_method)      | looks for the needed cards by the specified parameters 			 |
 | [unselectCard()](../methods/js_kanban_unselectcard_method)| unselects the card(s) by the specified ID			  						 |
 | [updateCard()](../methods/js_kanban_updatecard_method)    | updates the card data	by the specified ID	  								 |
 | [updateColumn()](../methods/js_kanban_updatecolumn_method)| updates the column data	by the specified ID	  							 |

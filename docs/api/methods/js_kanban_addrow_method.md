@@ -8,7 +8,7 @@ description: You can learn about the addRow method in the documentation of the J
 
 ### Description
 
-Adds a new row into JS Kanban
+Adds a **new row** into JS Kanban
 
 ### Usage
 

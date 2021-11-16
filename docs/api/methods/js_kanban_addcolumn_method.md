@@ -8,7 +8,7 @@ description: You can learn about the addColumn method in the documentation of th
 
 ### Description
 
-Adds a new column into JS Kanban
+Adds a **new column** into JS Kanban
 
 ### Usage
 

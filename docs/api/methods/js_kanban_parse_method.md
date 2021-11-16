@@ -22,9 +22,9 @@ parse: ({
 
 ### Parameters
 
-- `columns: object` - the object of the columns data
-- `rows: object` - the object of the rows data
-- `cards: object` - the object of the cards data
+- `columns?: object` - the object of the columns data
+- `rows?: object` - the object of the rows data
+- `cards?: object` - the object of the cards data
 
 ### Details
 

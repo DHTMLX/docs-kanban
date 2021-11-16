@@ -32,6 +32,6 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// unselect the card whth the 1 ID
+// unselect the card with the 1 ID
 board.unselectCard({ id: 1 });
 ```

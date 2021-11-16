@@ -8,7 +8,7 @@ description: You can learn about the addCard method in the documentation of the 
 
 ### Description
 
-Adds a new card into JS Kanban
+Adds a **new card** into JS Kanban
 
 ### Usage
 

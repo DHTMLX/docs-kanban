@@ -8,12 +8,12 @@ description: You can learn about the getCard method in the documentation of the 
 
 ### Description
 
-Gets the data object of the card with the specified ID
+Gets a data object of the card with the specified ID
 
 ### Usage
 
 ```js
-getCard: (id: string | number) => obj;
+getCard: (id: string | number) => object;
 ```
 
 ### Parameters

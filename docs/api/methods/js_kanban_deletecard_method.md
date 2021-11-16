@@ -8,7 +8,7 @@ description: You can learn about the deleteCard method in the documentation of t
 
 ### Description
 
-Removes the specified card from datastore of JS Kanban
+Removes the specified **card** from datastore of JS Kanban
 
 ### Usage
 

@@ -32,8 +32,21 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// set ru locale
+// set ru locale to JS Kanban
 board.setLocale(ru);
+```
+
+:::info
+Toolbar of JS Kanban is a separate part of the interface. To change its locale, you need to call the **setLocal()** method for the Toolbar too.
+:::
+
+```jsx {7}
+// create Toolbar
+const toolbar = new kanban.Toolbar("#toolbar", {
+	api: board.api
+});
+// set ru locale to the Toolbar
+toolbar.setLocale(ru);
 ```
 
 ### Related article

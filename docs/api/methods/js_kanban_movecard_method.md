@@ -24,12 +24,12 @@ moveCard: ({
 ### Parameters
 
 - `id: string | number` - the **ID** of the card that will be moved
-- `columnId: string | number` - the **ID** of the column the card will be placed
-- `rowId?: string | number` - the **ID** of the row the card will be placed
+- `columnId: string | number` - the **ID** of the column the card will be placed into
+- `rowId?: string | number` - the **ID** of the row the card will be placed into
 - `before?: string | number` - the **ID** of the card, before which the new card will be placed
 
 :::info
-If you specified the **rowKey** property in the widget config, the **rowId** parameter of the **moveCard** method is *mandatory*!
+If you specify the **rowKey** property in the widget config, the **rowId** parameter of the **moveCard()** method is *mandatory*!
 :::
 
 ### Example

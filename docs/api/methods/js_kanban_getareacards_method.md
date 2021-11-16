@@ -8,7 +8,7 @@ description: You can learn about the getAreaCards method in the documentation of
 
 ### Description
 
-Gets an array with the data objects of all cards of the column
+Gets an array with the data objects of all cards of the column (and row)
 
 ### Usage
 

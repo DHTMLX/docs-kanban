@@ -8,7 +8,7 @@ description: You can learn about the deleteRow method in the documentation of th
 
 ### Description
 
-Removes the specified row from datastore of JS Kanban
+Removes the specified **row** from datastore of JS Kanban
 
 ### Usage
 

@@ -8,7 +8,7 @@ description: You can learn about the deleteColumn method in the documentation of
 
 ### Description
 
-Removes the specified column from datastore of JS Kanban
+Removes the specified **column** from datastore of JS Kanban
 
 ### Usage
 

@@ -22,7 +22,7 @@ selectCard: ({ id: string | number, groupMode?: boolean }) => void;
 - `groupMode?: boolean` - multiselecting (*false* by default)
 
 :::info
-If you set the **groupMode** parameter to *true*, the **selectCard** method will not reset selecting of the other elements
+If you set the **groupMode** parameter to *true*, the **selectCard()** method will not reset selecting of the other elements
 :::
 
 ### Example

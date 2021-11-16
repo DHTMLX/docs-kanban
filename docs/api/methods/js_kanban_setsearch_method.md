@@ -8,7 +8,7 @@ description: You can learn about the setSearch method in the documentation of th
 
 ### Description
 
-Looks for the needed cards by the required parameters
+Looks for the needed cards by the specified parameters
 
 ### Usage
 
@@ -17,7 +17,7 @@ setSearch: ({ value: string, by?: string }) => void;
 ```
 
 :::info
-Using this method, you can search for the needed cards by the required parameters. If you call the **setSearch()** method without parameters, it will clear the search bar and highlighting of the cards
+Using this method, you can search for the needed cards by the specified parameters. If you call the **setSearch()** method without parameters, it will clear the search bar and highlighting of the cards
 :::
 
 ### Parameters

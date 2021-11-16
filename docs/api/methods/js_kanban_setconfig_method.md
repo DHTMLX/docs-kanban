@@ -8,7 +8,7 @@ description: You can learn about the setConfig method in the documentation of th
 
 ### Description
 
-Sets the configuration parameters of the JS Kanban widget
+Sets the config parameters of the JS Kanban widget
 
 ### Usage
 
