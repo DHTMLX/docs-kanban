@@ -6,26 +6,139 @@ description: You can study the developer guide in the documentation of the JavaS
 
 # Configuration
 
-You can adjust the desired settings of JS Kanban to meet your needs. The available configuration options allow you to load data for *columns*, *rows* and *cards*, configure the card and editor settings.
+You can adjust the desired settings of JS Kanban to meet your needs. The available configuration properties allow you to [load data](./working_with_data.md) for *columns*, *rows* and *cards*, as well as configure the **Cards**, **Editor** and **Toolbar** appearance.
 
-## Toolbar
+## Cards
 
-The toolbar of JS Kanban consists of the search bar and the controls for adding columns and rows. To display the Toolbar you need to initialize it in a separate container using the `new kanban.Toolbar()` constructor.
+The board of JS Kanban consists of the cards distributed into *columns* and *rows*. You can configure the cards appearance using the [cardShape](api/config/js_kanban_cardshape_config.md) configuration property:
 
-!!![TODO] **Добавить ссылку на сниппет c тулбаром**
+```jsx {12-35,43}
+const users = [ // user data
+    { id: 1, label: "John Smith", path: "../assets/user.jpg" },
+    { id: 2, label: "Aaron Short" }
+];
 
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="450"></iframe>
+const  cardPriority = [ // card priority data
+    { id: 1, color: "#FF5252", label: "high" },
+    { id: 2, color: "#FFC975", label: "medium" },
+    { id: 3, color: "#0AB169", label: "low" }
+];
 
-## Board
+const cardShape = { // card configs
+    label: true,
+    description: true,
+    progress: true,
+    start_date: true,
+    end_date: true,
+    menu: true,
+    attached: true,
+    priority: {
+        show: true,
+        values: cardPriority
+    },
+    users: {
+        show: true,
+        values: users
+    },
+    headerFields: [
+        {
+            key: "sprint",
+            type: "text",
+            label: "Custom field"
+        }
+    ]
+};
 
-The board of JS Kanban consists of the cards separated with columns and rows. You can configure the cards appearance using the [cardShape](api/config/js_kanban_cardshape_config.md) configuration option and distribute the cards to the needed columns and rows.
-
-!!![TODO] **Добавить сниппет с максимальными настройками карт**
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+new kanban.Kanban("#root", {
+	// data
+	columns,
+	cards,
+	rows,
+	// cards settings
+	cardShape
+});
+```
+:::note
+Unless you specify the cards settings via the **cardShape** property, the widget will apply a [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) set of parameters!
+:::
 
 ## Editor
 
-Since the structure of JS Kanban Editor is flexible, you can configure the editing bar to get the desired look and feel of the component. Use the [editorShape](api/config/js_kanban_editorshape_config.md) configuration option to set the editing bar.
+The editor of JS Kanban consists of the fields to manage the cards data. You can configure the editor fields using the [editorShape](api/config/js_kanban_editorshape_config.md) configuration property:
 
-!!![TODO] **Добавить сниппет с максимальными настройками редактора**
+```jsx {6-14,22}
+const users = [ // user data
+	{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
+	{ id: 2, label: "Aaron Short" }
+];
+
+const editorShape = [ // editor configs
+	...kanban.defaultEditorShape, // include default configs
+	{ // add custom configs
+	    type: "multiselect",
+	    key: "users",
+	    label: "Users",
+	    options: users
+	}
+];
+
+new kanban.Kanban("#root", {
+	// data
+	columns,
+	cards,
+	rows,
+	// editor settings
+	editorShape
+});
+```
+
+:::note
+Unless you specify the editor settings via the **editorShape** property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters!
+:::
+
+## Toolbar
+
+The toolbar of JS Kanban consists of the search bar and controls for adding *columns* and *rows*. To display the toolbar, you need to initialize it in a separate container using the **kanban.Toolbar** constructor.
+
+```jsx {13}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {
+	// data
+	columns,
+	cards,
+	rows,
+	// cards settings
+	cardShape,
+	// editor settings
+	editorShape
+});
+
+new kanban.Toolbar("#toolbar", { api: board.api });
+```
+
+You can also manage (*hide/show*) the toolbar controls using the **items** array:
+
+```jsx {6-10}
+// create JS Kanban
+const board = new kanban.Kanban("#root", {...});
+
+new kanban.Toolbar("#toolbar", {
+	api: board.api,
+	items: [
+		"search", // search bar
+		"controls", // controls for adding new columns and rows
+		// custom elements
+	]
+});
+```
+
+:::tip
+To *hide* some of these controls, remove the corresponding string(s) from the **items** array
+:::
+
+## Example
+
+In this snippet you can see how to configure the **Cards**, **Editor** and **Toolbar** of JS Kanban:
+
+!!![TODO] **Добавить сниппет с настройками карт, редактора и тулбаром (не кастомным)**
 <iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
