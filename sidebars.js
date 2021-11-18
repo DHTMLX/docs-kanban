@@ -130,8 +130,10 @@ module.exports = {
       items: [
 				"guides/initialization",
 				"guides/configuration",
-				"guides/loading_data",
-				"guides/localization"
+				"guides/customization",
+				"guides/localization",
+				"guides/working_with_data",
+				"guides/working_with_server"
       ]
     }
   ]
