@@ -13,15 +13,30 @@ JavaScript Kanban is an effective solution for the workflow visualization. The w
 
 ### Toolbar
 
-!!![TODo] **Toolbar short description and screenshot**
+The **Toolbar** of JS Kanban is a separate part of the interface. It includes a ***search bar*** for searching the needed cards and ***special controls*** for adding new columns and rows. You can change the toolbar structure by adding custom elements or changing the order of the built-in controls. Read more in the [Configuration](./guides/configuration#toolbar) section.
+
+![JS Kanban Toolbar](assets/js_kanban_toolbar.png)
 
 ### Board
 
-!!![TODo] **Card board short description and screenshot**
+The **Board** is the main part of JS Kanban. It consist of the ***cards*** distributed into *columns* and *rows*. You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](./guides/configuration#cards) section.
+
+On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
+
+- add new cards by clicking on the plus icon
+- delete cards, columns and rows using the 3 dots icon
+- move cards by dragging them into desired place (row and column)
+- rename columns and rows by double clicking on the corresponding labels
+- display a card editor by clicking on the needed card
+- show/hide the rows by clicking on the triangle icon on the left of the row label
+
+![JS Kanban Toolbar](assets/js_kanban_board.png)
 
 ### Editor
 
-!!![TODo] **Editor short description and screenshot**
+The **Editor** is a modal panel that consist of the fields and controls for managing the selected card data. To display the editor, click on the card you want to change. You can flexibly configure the editor structure by adding new fields and controls. Read more in the [Configuration](./guides/configuration#editor) section.
+
+![JS Kanban Editor](assets/js_kanban_editor.png)
 
 ## What's Next
 
