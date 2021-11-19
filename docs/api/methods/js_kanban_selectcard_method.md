@@ -8,7 +8,7 @@ description: You can learn about the selectCard method in the documentation of t
 
 ### Description
 
-Selects the card by the specified ID
+Selects a card by the specified ID
 
 ### Usage
 

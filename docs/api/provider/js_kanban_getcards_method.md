@@ -8,7 +8,7 @@ description: You can learn about the getCards method in the documentation of the
 
 ### Description
 
-Returns a **promise** with the *cards data*
+Gets a **promise** with the *cards data*
 
 :::info
 The **getCards()** method is a part of the **RestDataProvider** service intended for working with server
@@ -22,7 +22,7 @@ getCards: () => promise;
 
 ### Returns
 
-The **getCards()** method sends a query to the server by the **GET** method and returns a **promise** with the cards data
+The **getCards()** method sends a request to the server by the **GET** method and returns a **promise** with the cards data
 
 ### Example
 
@@ -41,3 +41,5 @@ Promise.all([
 	board.api.setNext(restProvider);
 });
 ```
+
+**Related article:** [Working with Server](../../../guides/working_with_server)

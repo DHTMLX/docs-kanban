@@ -8,7 +8,7 @@ description: You can learn about the getColumns method in the documentation of t
 
 ### Description
 
-Returns a **promise** with the *columns data*
+Gets a **promise** with the *columns data*
 
 :::info
 The **getColumns()** method is a part of the **RestDataProvider** service intended for working with server
@@ -22,7 +22,7 @@ getColumns: () => promise;
 
 ### Returns
 
-The **getColumns()** method sends a query to the server by the **GET** method and returns a **promise** with the columns data
+The **getColumns()** method sends a request to the server by the **GET** method and returns a **promise** with the columns data
 
 ### Example
 
@@ -41,3 +41,5 @@ Promise.all([
 	board.api.setNext(restProvider);
 });
 ```
+
+**Related article:** [Working with Server](../../../guides/working_with_server)

@@ -37,7 +37,7 @@ cardShape?: {
 		values?: [
 			{
 				id: string | number, // a priority ID
-				color: string, // a valid HEX color code
+				color: string, // a valid HEX code
 				label?: string // a priority name
 			},
 			{...}
@@ -48,7 +48,8 @@ cardShape?: {
 	headerFields?: [ // an array of custom fields
 		{
 			key: string, // a key of the custom field
-			//available types: text, textarea, date, select, multiselect, files
+			// available types:
+			// text, textarea, date, select, combo, multiselect, files, color, progress
 			type: string, // a type of the custom field
 		},
 		{...}
@@ -127,3 +128,5 @@ new kanban.Kanban("#root", {
 	cardShape
 });
 ```
+
+**Related article:** [Configuration](../../../guides/configuration#cards)

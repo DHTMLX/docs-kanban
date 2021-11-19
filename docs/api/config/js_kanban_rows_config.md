@@ -8,7 +8,7 @@ description: You can learn about the rows property in the documentation of the J
 
 ### Description
 
-Array of objects containing the **rows data**
+An array of objects containing the **rows data**
 
 ### Usage
 
@@ -23,7 +23,7 @@ rows?: [
 ]
 ```
 :::info
-If you want to load the rows data via the **parse()** method, set the **rows** property to the empty array
+If you want to load the rows data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **rows** property to the empty array
 :::
 
 ### Example

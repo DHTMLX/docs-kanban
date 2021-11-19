@@ -8,7 +8,7 @@ description: You can learn about the getRows method in the documentation of the 
 
 ### Description
 
-Returns a **promise** with the *rows data*
+Gets a **promise** with the *rows data*
 
 :::info
 The **getRows()** method is a part of the **RestDataProvider** service intended for working with server
@@ -22,7 +22,7 @@ getRows: () => promise;
 
 ### Returns
 
-The **getRows()** method sends a query to the server by the **GET** method and returns a **promise** with the rows data
+The **getRows()** method sends a request to the server by the **GET** method and returns a **promise** with the rows data
 
 ### Example
 
@@ -44,3 +44,5 @@ Promise.all([
 	board.api.setNext(restProvider);
 });
 ```
+
+**Related article:** [Working with Server](../../../guides/working_with_server)

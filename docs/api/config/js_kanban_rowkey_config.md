@@ -17,7 +17,7 @@ rowKey?: string
 ```  
 
 :::info
-To distribute the cards into rows, you need to specify a **custom key** and set it to the ID of the desired row (in the card data object). The **rowKey** property needs to be set to this custom key in the widget config.
+To distribute the cards into rows, you need to specify a **custom key** and set it to the ID of the desired row (in the card data object). The **rowKey** property needs to be set to this custom key in the widget config
 :::
 
 ### Example
@@ -26,17 +26,17 @@ To distribute the cards into rows, you need to specify a **custom key** and set 
 const cards = [
 	{
 		label: "Backlog task",
-		custom_key: "feature"
+		row_custom_key: "feature"
 	},
 	{
 		label: "In progress task",
-		custom_key: "done"
+		row_custom_key: "done"
 	}
 ];
 
 new kanban.Kanban("#root", {
 	columns,
 	cards,
-	rowKey: "custom_key"
+	rowKey: "row_custom_key"
 });
 ```

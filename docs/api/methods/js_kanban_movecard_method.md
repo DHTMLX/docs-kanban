@@ -8,7 +8,7 @@ description: You can learn about the moveCard method in the documentation of the
 
 ### Description
 
-Moves the card to the specified column (and row)
+Moves a card to the specified column (and row)
 
 ### Usage
 

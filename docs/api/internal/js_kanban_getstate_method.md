@@ -8,7 +8,7 @@ description: You can learn about the api.getState method in the documentation of
 
 ### Description
 
-Gets an object with the current properties of the **StateStore**
+Gets an object with the current properties of the JS Kanban ***StateStore***
 
 ### Usage
 

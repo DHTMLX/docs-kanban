@@ -25,6 +25,7 @@ module.exports = {
           collapsible: true,
           collapsed: true,
           items: [
+						// JS Kanban
 						// C
 						"api/config/js_kanban_cards_config",
 						"api/config/js_kanban_cardshape_config",
@@ -37,7 +38,11 @@ module.exports = {
 						// R
 						"api/config/js_kanban_readonly_config",
 						"api/config/js_kanban_rowkey_config",
-						"api/config/js_kanban_rows_config"
+						"api/config/js_kanban_rows_config",
+
+						// Toolbar
+						"api/config/toolbar_api_config",
+						"api/config/toolbar_items_config"
           ]
         },
 				// JS Kanban methods

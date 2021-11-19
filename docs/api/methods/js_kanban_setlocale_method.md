@@ -49,6 +49,4 @@ const toolbar = new kanban.Toolbar("#toolbar", {
 toolbar.setLocale(ru);
 ```
 
-### Related article
-
-[Localization](guides/localization.md)
+**Related article:** [Localization](guides/localization.md)

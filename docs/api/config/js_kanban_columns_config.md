@@ -8,7 +8,7 @@ description: You can learn about the columns property in the documentation of th
 
 ### Description
 
-Array of objects containing the **columns data**. This parameter is mandatory!
+An array of objects containing the **columns data**. *This parameter is mandatory!*
 
 ### Usage
 
@@ -23,7 +23,7 @@ columns: [
 ```
 
 :::info
-If you want to load the columns data via the **parse()** method, set the **columns** property to the empty array
+If you want to load the columns data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **columns** property to the empty array
 :::
 
 ### Example

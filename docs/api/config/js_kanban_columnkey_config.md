@@ -17,7 +17,7 @@ columnKey?: string
 ```
 
 :::info
-To distribute the cards into columns, you need to specify a **custom key** and set it to the ID of the desired column (in the card data object). The **columnKey** property needs to be set to this custom key in the widget config.
+To distribute the cards into columns, you need to specify a **custom key** and set it to the ID of the desired column (in the card data object). The **columnKey** property needs to be set to this custom key in the widget config
 :::
 
 ### Example
@@ -26,17 +26,17 @@ To distribute the cards into columns, you need to specify a **custom key** and s
 const cards = [
 	{
 		label: "Backlog task",
-		custom_key: "backlog"
+		column_custom_key: "backlog"
 	},
 	{
 		label: "In progress task",
-		custom_key: "inprogress"
+		column_custom_key: "inprogress"
 	}
 ];
 
 new kanban.Kanban("#root", {
 	columns,
 	cards,
-	columnKey: "custom_key"
+	columnKey: "column_custom_key"
 });
 ```

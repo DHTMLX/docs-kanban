@@ -4,7 +4,7 @@ title: How to Start with JS Kanban
 description: You can have an overview of the JavaScript Kanban documentation. Browse developer guides and API reference and try out code examples and live demos.
 ---
 
-# How to Start!!!
+# How to Start
 
 This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional JS Kanban on a page.
 

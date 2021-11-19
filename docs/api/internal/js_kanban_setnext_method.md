@@ -22,25 +22,25 @@ api.setNext(next: any) => void;
 
 ### Example
 
-```jsx {12}
-// create JS Kanban
-const board = new kanban.Kanban("#root", {
-	cards: [],
-	columns: [],
-	rowKey: "type"
-});
-
-const url = "https://master--kanban-node--dev.webix.io";
-
+```jsx {15}
+const url = "https://master--kanban-go--dev.webix.io";
 const restProvider = new kanban.RestDataProvider(url);
-// add RestDataProvider into the Event Bus order
-board.api.setNext(restProvider);
-// load server data into JS Kanban
-restProvider.getData().then(data => {
-	board.parse(data);
+
+Promise.all([
+	restProvider.getCards(),
+	restProvider.getColumns(),
+	restProvider.getRows()
+]).then(([cards, columns, rows]) => {
+	const board = new kanban.Kanban("#root", {
+		cards,
+		columns,
+		rows,
+		rowKey: "row"
+	});
+	board.api.setNext(restProvider);
 });
 ```
 
 :::info
-We need to include ***RestDataProvider*** into the **Event Bus** order to perform saving and removing data on the server
+You need to include **RestDataProvider** into the **Event Bus** order to perform operations with data (*adding*, *deleting* etc) and send the corresponding requests to the server
 :::

@@ -8,7 +8,7 @@ description: You can learn about the cards property in the documentation of the 
 
 ### Description
 
-Array of objects containing the **cards data**. This parameter is mandatory!
+An array of objects containing the **cards data**. *This parameter is mandatory!*
 
 ### Usage
 
@@ -41,7 +41,7 @@ cards: [
 ```
 
 :::info
-If you want to load the cards data via the **parse()** method, set the **cards** property to the empty array
+If you want to load the cards data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **cards** property to the empty array
 :::
 
 ### Example

@@ -82,3 +82,5 @@ new kanban.Kanban("#root", {
 	editorShape
 });
 ```
+
+**Related article:** [Configuration](../../../guides/configuration#editor)

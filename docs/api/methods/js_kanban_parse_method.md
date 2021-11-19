@@ -57,3 +57,5 @@ board.parse({
 	rows
 });
 ```
+
+**Related article:** [Working with Data](../../../guides/working_with_data#loading-data-from-local-source)

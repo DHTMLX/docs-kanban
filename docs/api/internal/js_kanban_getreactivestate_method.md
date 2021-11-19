@@ -8,7 +8,7 @@ description: You can learn about the api.getReactiveState method in the document
 
 ### Description
 
-Gets an object with the reactive properties of the StateStore
+Gets an object with the reactive properties of the JS Kanban ***StateStore***
 
 ### Usage
 
