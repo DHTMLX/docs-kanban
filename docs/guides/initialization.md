@@ -14,9 +14,7 @@ This guide will give you detailed instructions on how to create JS Kanban on a p
 
 ## Including source files
 
-!!![TODO] **Заменить ссылку на скачивание JS Kanban**
-
-[Download the package](https://dhtmlx.com/docs) and unpack it into a folder of your project.
+[Download the package](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and unpack it into a folder of your project.
 
 To create JS Kanban, you need to include 2 source files on your page:
 
