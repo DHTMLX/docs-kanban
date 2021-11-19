@@ -9,7 +9,7 @@ description: You can have an overview of the JavaScript Kanban documentation. Br
 
 JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool can work with any number of cards. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page.
 
-## JS Kanban Structure
+## JS Kanban structure
 
 ### Toolbar
 
@@ -30,7 +30,7 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
 - display a card editor by clicking on the needed card
 - show/hide the rows by clicking on the triangle icon on the left of the row label
 
-![JS Kanban Toolbar](assets/js_kanban_board.png)
+![JS Kanban Board](assets/js_kanban_board.png)
 
 ### Editor
 
@@ -38,6 +38,6 @@ The **Editor** is a modal panel that consist of the fields and controls for mana
 
 ![JS Kanban Editor](assets/js_kanban_editor.png)
 
-## What's Next
+## What's next
 
 Now you can get down to using JS Kanban in your application. Follow the directions of the [How to Start](./how_to_start) tutorial for guidance.

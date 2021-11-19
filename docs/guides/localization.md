@@ -3,6 +3,7 @@ sidebar_label: Localization
 title: Localization
 description: You can study the developer guide in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
 ---
+
 # Localization
 
 You can localize labels in the interface of JavaScript Kanban and present it in any necessary language. You just need to provide localized strings for labels and apply your locale to the component.

@@ -4,6 +4,8 @@ title: Customization
 description: You can study the developer guide in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
 ---
 
+# Customization
+
 Besides the built-in settings you can specify a custom template for the cards, change the toolbar structure and functionality, and apply custom styles to JS Kanban.
 
 ## Custom cards
