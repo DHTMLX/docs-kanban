@@ -59,22 +59,24 @@ Initialize JS Kanban with the **kanban.Kanban** constructor. It takes two parame
 ```jsx title="index.html"
 // create JS Kanban
 new kanban.Kanban("#root", {
-    // config options
+    // configuration properties
 });
 ```
 
 If you want to create the widget together with its *Toolbar*, you need to initialize it separately using the **kanban.Toolbar** constructor. It also takes two parameters:
 
 - an HTML container (the ID of the HTML container)
-- an object with JS Kanban API.
+- an object with configuration properties.
 
-```jsx {6} title="index.html"
+```jsx {6-8} title="index.html"
 // create JS Kanban
 const board = new kanban.Kanban("#root", {
-    // config options
+	// configuration properties
 });
 
-new kanban.Toolbar("#toolbar", { api: board.api });
+new kanban.Toolbar("#toolbar", {
+	// configuration properties
+});
 ```
 
 :::info
@@ -83,18 +85,21 @@ To learn more about configuring the Toolbar of JS Kanban, read [**this**](./conf
 
 ### Configuration properties
 
-This is a list of [properties](api/api_overview.md/#js-kanban-properties) that you can specify in the JS Kanban configuration object:
+This is a list of properties that you can specify in the JS Kanban and Toolbar configuration objects:
 
-- **cards** - (*array*) an array of objects containing the cards data. ***This parameter is mandatory***
-- **cardShape** - (*object*) an object of the cards configs
-- **cardTemplate** - (*function*) returns and applies a new HTML template of the card
-- **columnKey** - (*string*) defines belonging the card to the column
-- **columns** - (*array*) an array of objects containing the columns data. ***This parameter is mandatory***
-- **editorAutoSave** - (*boolean*) enables/disables an autosave mode of the Editor
-- **editorShape** - (*object*) an object of the editor configs
-- **readonly** - (*string* or *object*) enables/disables ***editing***, ***adding***, ***selecting***, ***dragging*** of the cards
-- **rowKey** - (*string*) defines belonging the card to the row
-- **rows** - (*array*) an array of objects containing the rows data.
+- [cards](api/config/js_kanban_cards_config.md) - (*array*) an array of objects containing the cards data. ***This parameter is mandatory***
+- [cardShape](api/config/js_kanban_cardshape_config.md) - (*object*) an object of the cards configs
+- [cardTemplate](api/config/js_kanban_cardtemplate_config.md) - (*function*) returns and applies a new HTML template of the card
+- [columnKey](api/config/js_kanban_columnkey_config.md) - (*string*) defines belonging the card to the column
+- [columns](api/config/js_kanban_columns_config.md) - (*array*) an array of objects containing the columns data. ***This parameter is mandatory***
+- [editorAutoSave](api/config/js_kanban_editorautosave_config.md) - (*boolean*) enables/disables an autosave mode of the Editor
+- [editorShape](api/config/js_kanban_editorshape_config.md) - (*object*) an object of the editor configs
+- [readonly](api/config/js_kanban_readonly_config.md) - (*string* or *object*) enables/disables ***editing***, ***adding***, ***selecting***, ***dragging*** of the cards
+- [rowKey](api/config/js_kanban_rowkey_config.md) - (*string*) defines belonging the card to the row
+- [rows](api/config/js_kanban_rows_config.md) - (*array*) an array of objects containing the rows data
+
+- *(Toolbar)* [api](api/config/toolbar_api_config.md) - an object with the internal api of JS Kanban. It is used for Toolbar controls functionality
+- *(Toolbar)* [items](api/config/toolbar_items_config.md) - an array of controls located in the toolbar of JS Kanban.
 
 ## Example
 
