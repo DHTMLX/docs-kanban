@@ -4,11 +4,11 @@ title: How to Start with JS Kanban
 description: You can have an overview of the JavaScript Kanban documentation. Browse developer guides and API reference and try out code examples and live demos.
 ---
 
-# How to Start
+# How to Start!!!
 
 This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional JS Kanban on a page.
 
-!!![TODO] **Здесь будет основной скриншот виджета с тулбаром и редактором**
+![JS Kanban Main](assets/js_kanban_main.png)
 
 ## Step 1. Including source files
 
@@ -23,7 +23,7 @@ and
 
 - the link to the Google Fonts source file for the correct rendering of fonts.
 
-```html title="index.html"
+```html {5,7-9} title="index.html"
 <!DOCTYPE html>
 <html>
 	<head>
@@ -44,14 +44,18 @@ and
 
 ## Step 2. Creating JS Kanban
 
-Now you are ready to add JS Kanban to the page. First, let's create a DIV container and then place JS Kanban into it. So, your steps will be:
+Now you are ready to add JS Kanban to the page. First, let's create the DIV containers for JS Kanban and its Toolbar. So, take the following steps:
 
-- to specify a DIV container in the *index.html* file
-- to initialize JS Kanban using the constructor
+- specify two DIV containers in the *index.html* file
+- initialize JS Kanban and its Toolbar using the **kanban.Kanban** and **kanban.Toolbar** constructors
 
-As parameters, the constructor takes the HTML container where JS Kanban will be placed into and the configuration object of JS Kanban.
+:::info
+The Toolbar is an optional part of the JS Kanban interface. To create JS Kanban without Toolbar, you can specify only one DIV container and initialize the widget via the **kanban.Kanban** constructor  
+:::
 
-```html title="index.html"
+As parameters, the constructors take the HTML containers where the JS Kanban and Toolbar will be placed into and the corresponding configuration objects.
+
+```html {12-13,16,20} title="index.html"
 <!DOCTYPE html>
 <html>
 	<head>
@@ -63,11 +67,16 @@ As parameters, the constructor takes the HTML container where JS Kanban will be 
 		rel="stylesheet">
 	</head>
 	<body>
+		<div id="toolbar"></div>
 		<div id="root"></div>
 
 		<script>
-			new kanban.Kanban("#root", {
-			//config options
+			const board = new kanban.Kanban("#root", {
+				// configuration properties
+			});
+
+			new kanban.Toolbar("#toolbar",{
+				// configuration properties
 			});
 		</script>
 	</body>
@@ -76,15 +85,27 @@ As parameters, the constructor takes the HTML container where JS Kanban will be 
 
 ## Step 3. Configuring JS Kanban
 
-Next you can specify additional configuration options you want the JS Kanban component to have when initialized besides the default ones.
+Next you can specify configuration properties you want the JS Kanban component to have when initialized.
 
-To start working with JS Kanban, you need to provide initial data for **columns** and **cards**.
-Beside initial data, you cam configure the card and editor appearance. [Check the details](../guides/configuration).
+To start working with JS Kanban, first you need to provide the initial data for **cards** and **columns** (and *rows*).
+Beside the initial data, you can configure the [cards](../guides/configuration#cards), [editor](../guides/configuration#editor) and [toolbar](../guides/configuration#toolbar) appearance.
 
-```js
-new kanban.Kanban("#root", {
+```js {2-7,11-15}
+const board = new kanban.Kanban("#root", {
+	cards,
 	columns,
-	cards
+	rows,
+	rowKey: "row",
+	cardShape,
+	editorShape
+});
+
+new kanban.Toolbar("#toolbar", {
+	api: board.api,
+	items: [
+		"search",
+		"controls"
+	]
 });
 ```
 
