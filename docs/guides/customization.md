@@ -3,3 +3,29 @@ sidebar_label: Customization
 title: Customization
 description: You can study the developer guide in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
 ---
+
+Besides the built-in settings you can specify a custom template for the cards, change the toolbar structure and functionality, and apply custom styles to JS Kanban.
+
+## Custom cards
+
+To apply a custom template to the cards of JS Kanban, you need to specify the [cardTemplate](api/config/js_kanban_cardtemplate_config.md) property in the configuration object of JS Kanban. In this callback you can define the desired styles and logic. See the snippet below:   
+
+!!![TODO] **Добавить ссылку на сниппет с кастомными картами**
+
+<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+
+## Custom toolbar
+
+To change the toolbar structure and functionality, you need to specify the [items](api/config/toolbar_items_config.md) property in the toolbar configuration object. In the array of this property you can define the desired controls and place them in the order you need. See the snippet below:
+
+!!![TODO] **Добавить ссылку на сниппет с кастомным тулбаром**
+
+<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+
+## Custom styles
+
+In this snippet you can see how to apply custom styles to JS Kanban:
+
+!!![TODO] **Добавить ссылку на сниппет с кастомными стилями**
+
+<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>

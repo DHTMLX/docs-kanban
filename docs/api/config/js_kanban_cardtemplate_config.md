@@ -50,3 +50,5 @@ new kanban.Kanban("#root", {
 	cardTemplate
 });
 ```
+
+**Related article:** [Customization](../../../guides/customization#custom-cards)

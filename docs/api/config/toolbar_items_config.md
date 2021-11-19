@@ -38,4 +38,4 @@ new kanban.Toolbar("#toolbar", {
 });
 ```
 
-**Related article:** [Configuration](../../../guides/configuration#toolbar)
+**Related article:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)

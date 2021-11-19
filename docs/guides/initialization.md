@@ -28,10 +28,6 @@ Make sure that you set correct relative paths to these files:
 <link rel="stylesheet" href="codebase/kanban.css">
 ```
 
-The structure of the JS Kanban pack is the following:
-
-!!![TODO] **Добавить структуру файлов пакета с кратким описанием**
-
 ## Creating container
 
 Add a container for JS Kanban and give it an ID, for example *"root"*:
