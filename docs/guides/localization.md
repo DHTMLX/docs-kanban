@@ -263,9 +263,7 @@ To apply a custom locale you need to:
 
 In this snippet you can see how to switch through the *EN*, *RU* and *CN* locales:
 
-!!![TODO] **Добавить ссылку на сниппет с переключением локалей для Kanban и Toolbar**
-
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+<iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 :::note
 To localize the **Toolbar** of JS Kanban, you need to call its [**setLocale()**](api/methods/js_kanban_setlocale_method.md) method with the required locale

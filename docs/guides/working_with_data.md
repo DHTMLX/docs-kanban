@@ -117,6 +117,12 @@ const board = new kanban.Kanban("#root", {
 board.parse({ columns, cards, rows });
 ~~~
 
+## Sync JS Kanban data with Gantt and Scheduler
+
+In this snippet you can see how to sync JS Kanban data with other DHTMLX widgets, namely [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) and [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/):
+
+<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+
 ## Getting JS Kanban data
 
 To get JS Kanban data, you can use the following methods:
@@ -156,3 +162,13 @@ To remove the *cards*, *columns* and *rows*, you can use the following methods:
 - [deleteCard()](api/methods/js_kanban_deletecard_method.md) - removes a card from JS Kanban by the specified ID
 - [deleteColumn()](api/methods/js_kanban_deletecolumn_method.md) - removes a column from JS Kanban by the specified ID
 - [deleteRow()](api/methods/js_kanban_deleterow_method.md) - removes a row from JS Kanban by the specified ID
+
+## Moving cards
+
+To move the *card* to the desired *column* and *row*, you can use the [moveCard()](api/methods/js_kanban_movecard_method.md) method.
+
+## Example
+
+In this snippet you can see how to use JS Kanban API for working with data:
+
+<iframe src="https://snippet.dhtmlx.com/61crsls3?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

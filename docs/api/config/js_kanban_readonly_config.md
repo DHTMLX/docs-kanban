@@ -35,3 +35,4 @@ new kanban.Kanban("#root", {
 	}
 });
 ```
+**Related sample:** [Readonly mode](https://snippet.dhtmlx.com/b8x84yln)

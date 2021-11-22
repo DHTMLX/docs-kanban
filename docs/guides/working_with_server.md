@@ -73,6 +73,4 @@ You need to include **RestDataProvider** into the **Event Bus** order via the [*
 
 In this snippet you can see how to connect **RestDataProvider** to the **Go** backend and load server data dynamically:
 
-!!![TODO] **Добавить ссылку на сниппет с Go**
-
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+<iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

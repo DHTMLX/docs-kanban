@@ -133,12 +133,15 @@ new kanban.Toolbar("#toolbar", {
 ```
 
 :::tip
-To *hide* some of these controls, remove the corresponding string(s) from the **items** array
+To *hide* some of the toolbar controls, remove the "search" or/and "controls" string(s) from the **items** array
+:::
+
+:::info
+Unless you specify the [**rowKey**](api/config/js_kanban_rowkey_config.md) property, the toolbar will ***hide*** the  control for adding rows!
 :::
 
 ## Example
 
 In this snippet you can see how to configure the **Cards**, **Editor** and **Toolbar** of JS Kanban:
 
-!!![TODO] **Добавить сниппет с настройками карт, редактора и тулбаром (не кастомным)**
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+<iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

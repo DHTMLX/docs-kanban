@@ -9,7 +9,7 @@ description: You can learn What's New in the JavaScript Kanban library in the do
 Version 1.0
 ----------------
 
-Released on **Month Day**, 2021  !!![TODO] **Изменить дату релиза**
+Released on November 23, 2021
 
 ### Initial functionality
 

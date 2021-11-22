@@ -114,7 +114,7 @@ module.exports = {
 						},
 						{
 							type: "category",
-							label: "Rest Methods",
+							label: "REST Methods",
 							collapsible: true,
 							collapsed: true,
 							items: [

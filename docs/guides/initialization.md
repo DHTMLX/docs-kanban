@@ -74,7 +74,7 @@ new kanban.Toolbar("#toolbar", {
 ```
 
 :::info
-To learn more about configuring the Toolbar of JS Kanban, read [**this**](./configuration.md/#toolbar) article
+To learn more about configuring the Toolbar of JS Kanban, read the [**Configuration**](./configuration.md/#toolbar) section
 :::
 
 ### Configuration properties
@@ -97,8 +97,6 @@ This is a list of properties that you can specify in the JS Kanban and Toolbar c
 
 ## Example
 
-In this snippet you can see how to initialize *JS Kanban* and its *Toolbar*:
+In this snippet you can see how to initialize **JS Kanban** with the initial settings:
 
-!!![TODO] **Добавить ссылку на сниппет с максимальным количеством конфигураций виджета и его Тулбаром**
-
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="400"></iframe>
+<iframe src="https://snippet.dhtmlx.com/gb50vyip?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
