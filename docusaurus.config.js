@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   noIndex: true, // TODO: delete before release
-  title: 'DHTMLX Suite 7 Docs', //TODO: change it
-  tagline: 'DHTMLX Suite 7 Docs', //TODO: change it
+  title: 'DHTMLX JS Kanban Docs', // (Done) TODO: change it
+  tagline: 'DHTMLX JS Kanban Docs', // (Done) TODO: change it
   url: 'https://docs.dhtmlx.com',
   baseUrl: '/kanbanalt/',
   onBrokenLinks: 'warn',
@@ -24,8 +24,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          // (Done)Please change this to your repo.
+          editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
           routeBasePath: '/',
         },
         theme: {
@@ -44,10 +44,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'JavaScript Kanban',
+        title: 'JavaScript Kanban Documentation',
         logo: {
           alt: 'DHTMLX JavaScript Kanban Logo',
           src: 'img/logo.svg',
+					href: 'https://docs.dhtmlx.com/'
         },
         items: [
           // {
@@ -56,57 +57,99 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+					{
+	          "label": "Examples",
+	          "href": "https://webix.io/dev/webix/js-kanban/master/",
+	          "position": "right"
+	        },
+	        {
+	          "label": "Forum",
+	          "href": "https://forum.dhtmlx.com/c/widgets/",
+	          "position": "right"
+	        },
+	        {
+	          "label": "Support",
+	          "href": "https://dhtmlx.com/docs/technical-support.shtml",
+	          "position": "right"
+	        },
+	        {
+	          "label": "Download",
+	          "href": "https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml",
+	          "position": "right"
+	        }
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+				"style": "dark",
+				"links": [
+					{
+						"title": "Development center",
+						"items": [
+							{
+								"label": "Download JS Kanban",
+								"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml",
+								"position": "right"
+							},
+							{
+								"label": "Examples",
+								"href": "https://webix.io/dev/webix/js-kanban/master/",
+								"position": "right"
+							},
+							{
+								"label": "Blog",
+								"href": "https://dhtmlx.com/blog/"
+							},
+							{
+								"label": "Forum",
+								"href": "https://forum.dhtmlx.com/c/widgets/",
+								"position": "right"
+							}
+						]
+					},
+					{
+						"title": "Community",
+						"items": [
+							{
+								"label": "GitHub",
+								"href": "https://github.com/DHTMLX"
+							},
+							{
+								"label": "Youtube",
+								"href": "https://www.youtube.com/user/dhtmlx"
+							},
+							{
+								"label": "Facebook",
+								"href": "https://www.facebook.com/dhtmlx"
+							},
+							{
+								"label": "Twitter",
+								"href": "https://twitter.com/dhtmlx"
+							},
+							{
+								"label": "Linkedin",
+								"href": "https://www.linkedin.com/groups/3345009/"
+							}
+						]
+					},
+					{
+						"title": "Company",
+						"items": [
+							{
+								"label": "About us",
+								"href": "https://dhtmlx.com/docs/company.shtml"
+							},
+							{
+								"label": "Contact us",
+								"href": "https://dhtmlx.com/docs/contact.shtml"
+							},
+							{
+								"label": "Licensing",
+								"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/#editions-licenses"
+							}
+						]
+					}
+				],
+				copyright: `Copyright © ${new Date().getFullYear()} XB Software Ltd.`,
       },
       prism: {
         theme: lightCodeTheme,
