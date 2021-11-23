@@ -25,6 +25,10 @@
     "react-dom": "^17.0.1",
     "url-loader": "^4.1.1"
   },
+  "devDependencies": {
+    "dhx-md-data-parser": "file:local_modules/dhx-md-data-parser",
+    "docusaurus-plugin-sass": "^0.1.11"
+  },
   "browserslist": {
     "production": [
       ">0.5%",
