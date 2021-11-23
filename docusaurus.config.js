@@ -10,7 +10,7 @@ const config = {
   title: 'DHTMLX JS Kanban Docs', // (Done) TODO: change it
   tagline: 'DHTMLX JS Kanban Docs', // (Done) TODO: change it
   url: 'https://docs.dhtmlx.com',
-  baseUrl: '/kanbanalt/',
+  baseUrl: '/kanban/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
