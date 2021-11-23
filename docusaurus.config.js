@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  noIndex: true, // TODO: delete before release
-  title: 'DHTMLX JS Kanban Docs', // (Done) TODO: change it
-  tagline: 'DHTMLX JS Kanban Docs', // (Done) TODO: change it
+  noIndex: false,
+  title: 'DHTMLX JS Kanban Docs',
+  tagline: 'DHTMLX JS Kanban Docs', 
   url: 'https://docs.dhtmlx.com',
   baseUrl: '/kanban/',
   onBrokenLinks: 'warn',
