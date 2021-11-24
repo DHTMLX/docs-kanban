@@ -134,7 +134,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   noIndex: false,
   title: 'DHTMLX JS Kanban Docs',
-  tagline: 'DHTMLX JS Kanban Docs', 
+  tagline: 'DHTMLX JS Kanban Docs',
   url: 'https://docs.dhtmlx.com',
   baseUrl: '/kanban/',
   onBrokenLinks: 'warn',
@@ -150,7 +150,6 @@ const config = {
 	  ({
 		docs: {
 		  sidebarPath: require.resolve('./sidebars.js'),
-		  // (Done)Please change this to your repo.
 		  editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
 		  routeBasePath: '/',
 		},
@@ -177,6 +176,12 @@ const config = {
 				onAfterDataTransformation
 			}
 		],
+    [
+        require.resolve('docusaurus-gtm-plugin'),
+        {
+          id: 'GTM-5M5RCSJ',
+        }
+    ]
 	],
   themeConfig:
 	/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -197,7 +202,7 @@ const config = {
 		  // },
 			{
 			  "label": "Examples",
-			  "href": "https://webix.io/dev/webix/js-kanban/master/",
+			  "href": "https://snippet.dhtmlx.com/5hcx01h4?text=%23kanban",
 			  "position": "right"
 			},
 			{
@@ -230,7 +235,7 @@ const config = {
 							},
 							{
 								"label": "Examples",
-								"href": "https://webix.io/dev/webix/js-kanban/master/",
+								"href": "https://snippet.dhtmlx.com/5hcx01h4?text=%23kanban",
 								"position": "right"
 							},
 							{

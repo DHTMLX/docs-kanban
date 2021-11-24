@@ -23,7 +23,7 @@ api.setNext(next: any) => void;
 ### Example
 
 ```jsx {15}
-const url = "https://master--kanban-go--dev.webix.io";
+const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
 Promise.all([
