@@ -301,7 +301,7 @@ const config = {
 	  algolia: {
 		// This is a read-only, search-only key served directly by the front-end, managed by Algolia via their
 		// free DocSearch program. The key is not sensitive. See https://docsearch.algolia.com/ for more details.
-		apiKey: '123', //TODO: change it
+		apiKey: '645d5f8d83897bf3ffb8b3ff241bfc98',
 		indexName: 'kanbanalt', //TODO: change it
 
 		// Optional: see doc section bellow
