@@ -287,7 +287,7 @@ const config = {
 							},
 							{
 								"label": "Licensing",
-								"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/#editions-licenses"
+								"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/#licensing"
 							}
 						]
 					}
