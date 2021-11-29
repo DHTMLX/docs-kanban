@@ -24,8 +24,8 @@ To create JS Kanban, you need to include 2 source files on your page:
 Make sure that you set correct relative paths to these files:
 
 ```html title="index.html"
-<script type="text/javascript" src="codebase/kanban.js"></script>  
-<link rel="stylesheet" href="codebase/kanban.css">
+<script type="text/javascript" src="./dist/kanban.js"></script>  
+<link rel="stylesheet" href="./dist/kanban.css">
 ```
 
 ## Creating container
@@ -36,7 +36,7 @@ Add a container for JS Kanban and give it an ID, for example *"root"*:
 <div id="root"></div>
 ```
 
-If you want to create the widget together with its *Toolbar*, you need to add a separate container for it:
+If you want to create the widget along with its *Toolbar*, you need to add a separate container for it:
 
 ```jsx {1} title="index.html"
 <div id="toolbar"></div> // container for Toolbar
@@ -57,7 +57,7 @@ new kanban.Kanban("#root", {
 });
 ```
 
-If you want to create the widget together with its *Toolbar*, you need to initialize it separately using the **kanban.Toolbar** constructor. It also takes two parameters:
+If you want to create the widget along with its *Toolbar*, you need to initialize it separately using the **kanban.Toolbar** constructor. It also takes two parameters:
 
 - an HTML container (the ID of the HTML container)
 - an object with configuration properties.

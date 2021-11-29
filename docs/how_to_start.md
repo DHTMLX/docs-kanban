@@ -28,9 +28,9 @@ and
 <html>
 	<head>
 		<title>How to Start with JS Kanban</title>
-		<script src="codebase/kanban.js"></script>   
+		<script src="./dist/kanban.js"></script>   
 
-		<link href="codebase/kanban.css" rel="stylesheet">
+		<link href="./dist/kanban.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
 		rel="stylesheet">
 	</head>
@@ -60,9 +60,9 @@ As parameters, the constructors take the HTML containers where the JS Kanban and
 <html>
 	<head>
 		<title>How to Start with JS Kanban</title>
-		<script src="codebase/kanban.js"></script>   
+		<script src="./dist/kanban.js"></script>   
 
-		<link href="codebase/kanban.css" rel="stylesheet">  
+		<link href="./dist/kanban.css" rel="stylesheet">  
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
 		rel="stylesheet">
 	</head>
