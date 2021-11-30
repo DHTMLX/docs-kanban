@@ -1,6 +1,6 @@
 ---
 sidebar_label: deleteColumn()
-title: JS Kanban deleteColumn method
+title: Kanban deleteColumn method
 description: You can learn about the deleteColumn method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the deleteColumn method in the documentation of
 
 ### Description
 
-Removes the specified **column** from datastore of JS Kanban
+Removes the specified **column** from datastore of Kanban
 
 ### Usage
 
@@ -23,7 +23,7 @@ deleteColumn: ({ id: string | number }) => void;
 ### Example
 
 ```jsx {7}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

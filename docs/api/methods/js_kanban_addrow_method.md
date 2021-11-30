@@ -1,6 +1,6 @@
 ---
 sidebar_label: addRow()
-title: JS Kanban addRow method
+title: Kanban addRow method
 description: You can learn about the addRow method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the addRow method in the documentation of the J
 
 ### Description
 
-Adds a **new row** into JS Kanban
+Adds a **new row** into Kanban
 
 ### Usage
 
@@ -29,7 +29,7 @@ addRow: ({
 ### Example
 
 ```jsx {7-11}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

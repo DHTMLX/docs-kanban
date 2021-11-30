@@ -1,6 +1,6 @@
 ---
 sidebar_label: getRows()
-title: JS Kanban getRows method
+title: Kanban getRows method
 description: You can learn about the getRows method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 

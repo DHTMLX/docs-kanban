@@ -1,6 +1,6 @@
 ---
 sidebar_label: addColumn()
-title: JS Kanban addColumn method
+title: Kanban addColumn method
 description: You can learn about the addColumn method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the addColumn method in the documentation of th
 
 ### Description
 
-Adds a **new column** into JS Kanban
+Adds a **new column** into Kanban
 
 ### Usage
 
@@ -27,7 +27,7 @@ addColumn: ({
 ### Example
 
 ```jsx {7-10}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

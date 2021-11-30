@@ -6,11 +6,11 @@ description: You can study the developer guide in the documentation of the JavaS
 
 # Configuration
 
-You can adjust the desired settings of JS Kanban to meet your needs. The available configuration properties allow you to [load data](./working_with_data.md) for *columns*, *rows* and *cards*, as well as configure the **Cards**, **Editor** and **Toolbar** appearance.
+You can adjust the desired settings of Kanban to meet your needs. The available configuration properties allow you to [load data](./working_with_data.md) for *columns*, *rows* and *cards*, as well as configure the **Cards**, **Editor** and **Toolbar** appearance.
 
 ## Cards
 
-The board of JS Kanban consists of the cards distributed into *columns* and *rows*. You can configure the cards appearance using the [cardShape](api/config/js_kanban_cardshape_config.md) configuration property:
+The board of Kanban consists of the cards distributed into *columns* and *rows*. You can configure the cards appearance using the [cardShape](api/config/js_kanban_cardshape_config.md) configuration property:
 
 ```jsx {12-35,43}
 const users = [ // user data
@@ -64,7 +64,7 @@ Unless you specify the cards settings via the **cardShape** property, the widget
 
 ## Editor
 
-The editor of JS Kanban consists of the fields to manage the cards data. You can configure the editor fields using the [editorShape](api/config/js_kanban_editorshape_config.md) configuration property:
+The editor of Kanban consists of the fields to manage the cards data. You can configure the editor fields using the [editorShape](api/config/js_kanban_editorshape_config.md) configuration property:
 
 ```jsx {6-14,22}
 const users = [ // user data
@@ -98,10 +98,10 @@ Unless you specify the editor settings via the **editorShape** property, the wid
 
 ## Toolbar
 
-The toolbar of JS Kanban consists of the search bar and controls for adding *columns* and *rows*. To display the toolbar, you need to initialize it in a separate container using the **kanban.Toolbar** constructor.
+The toolbar of Kanban consists of the search bar and controls for adding *columns* and *rows*. To display the toolbar, you need to initialize it in a separate container using the **kanban.Toolbar** constructor.
 
 ```jsx {13}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	// data
 	columns,
@@ -119,7 +119,7 @@ new kanban.Toolbar("#toolbar", { api: board.api });
 You can also manage (*hide/show*) the toolbar controls using the **items** array:
 
 ```jsx {6-10}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {...});
 
 new kanban.Toolbar("#toolbar", {
@@ -142,6 +142,6 @@ Unless you specify the [**rowKey**](api/config/js_kanban_rowkey_config.md) prope
 
 ## Example
 
-In this snippet you can see how to configure the **Cards**, **Editor** and **Toolbar** of JS Kanban:
+In this snippet you can see how to configure the **Cards**, **Editor** and **Toolbar** of Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

@@ -1,6 +1,6 @@
 ---
 sidebar_label: moveCard()
-title: JS Kanban moveCard method
+title: Kanban moveCard method
 description: You can learn about the moveCard method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -35,7 +35,7 @@ If you specify the **rowKey** property in the widget config, the **rowId** param
 ### Example
 
 ```jsx {9-14}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

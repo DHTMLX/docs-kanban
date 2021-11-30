@@ -1,6 +1,6 @@
 ---
 sidebar_label: editorShape
-title: JS Kanban editorShape property
+title: Kanban editorShape property
 description: You can learn about the editorShape property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the editorShape property in the documentation o
 
 ### Description
 
-The **editor configs** that manage the appearance of the JS Kanban editor
+The **editor configs** that manage the appearance of the Kanban editor
 
 ### Usage
 

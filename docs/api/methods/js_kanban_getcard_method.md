@@ -1,6 +1,6 @@
 ---
 sidebar_label: getCard()
-title: JS Kanban getCard method
+title: Kanban getCard method
 description: You can learn about the getCard method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -27,7 +27,7 @@ The method returns the data object of the card with the specified ID
 ### Example
 
 ```jsx {7}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

@@ -14,41 +14,15 @@ module.exports = {
 		},
     {
       type: "category",
-      label: "JS Kanban API",
+      label: "API",
       collapsible: true,
       collapsed: false,
       items: [
         "api/api_overview",
-				{
-          type: "category",
-          label: "JS Kanban Properties",
-          collapsible: true,
-          collapsed: true,
-          items: [
-						// JS Kanban
-						// C
-						"api/config/js_kanban_cards_config",
-						"api/config/js_kanban_cardshape_config",
-						"api/config/js_kanban_cardtemplate_config",
-						"api/config/js_kanban_columnkey_config",
-						"api/config/js_kanban_columns_config",
-						// E
-						"api/config/js_kanban_editorautosave_config",
-						"api/config/js_kanban_editorshape_config",
-						// R
-						"api/config/js_kanban_readonly_config",
-						"api/config/js_kanban_rowkey_config",
-						"api/config/js_kanban_rows_config",
-
-						// Toolbar
-						"api/config/toolbar_api_config",
-						"api/config/toolbar_items_config"
-          ]
-        },
 				// JS Kanban methods
         {
           type: "category",
-          label: "JS Kanban Methods",
+          label: "Kanban methods",
           collapsible: true,
           collapsed: true,
           items: [
@@ -85,13 +59,13 @@ module.exports = {
 				// JS Kanban internal methods
 				{
 					type: "category",
-					label: "JS Kanban Internal API",
+					label: "Kanban internal API",
 					collapsible: true,
 					collapsed: true,
 					items: [
 						{
 							type: "category",
-							label: "Event Bus Methods",
+							label: "Event Bus methods",
 							collapsible: true,
 							collapsed: true,
 							items: [
@@ -103,7 +77,7 @@ module.exports = {
 						},
 						{
 							type: "category",
-							label: "State Methods",
+							label: "State methods",
 							collapsible: true,
 							collapsed: true,
 							items: [
@@ -114,7 +88,7 @@ module.exports = {
 						},
 						{
 							type: "category",
-							label: "REST Methods",
+							label: "REST methods",
 							collapsible: true,
 							collapsed: true,
 							items: [
@@ -124,7 +98,33 @@ module.exports = {
 							]
 						}
 					]
-				}
+				},
+				{
+					type: "category",
+					label: "Kanban properties",
+					collapsible: true,
+					collapsed: true,
+					items: [
+						// JS Kanban
+						// C
+						"api/config/js_kanban_cards_config",
+						"api/config/js_kanban_cardshape_config",
+						"api/config/js_kanban_cardtemplate_config",
+						"api/config/js_kanban_columnkey_config",
+						"api/config/js_kanban_columns_config",
+						// E
+						"api/config/js_kanban_editorautosave_config",
+						"api/config/js_kanban_editorshape_config",
+						// R
+						"api/config/js_kanban_readonly_config",
+						"api/config/js_kanban_rowkey_config",
+						"api/config/js_kanban_rows_config",
+
+						// Toolbar
+						"api/config/toolbar_api_config",
+						"api/config/toolbar_items_config"
+					]
+				},
       ]
     },
     {

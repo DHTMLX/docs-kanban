@@ -1,6 +1,6 @@
 ---
 sidebar_label: setLocale()
-title: JS Kanban setLocale method
+title: Kanban setLocale method
 description: You can learn about the setLocale method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the setLocale method in the documentation of th
 
 ### Description
 
-Sets new locale to the JS Kanban widget
+Sets new locale to the Kanban widget
 
 ### Usage
 
@@ -27,17 +27,17 @@ Using this method, you can set a built-in locale (en, ru, cn) as well as a custo
 ### Example
 
 ```jsx {7}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// set ru locale to JS Kanban
+// set ru locale to Kanban
 board.setLocale(ru);
 ```
 
 :::info
-Toolbar of JS Kanban is a separate part of the interface. To change its locale, you need to call the **setLocal()** method for the Toolbar too.
+Toolbar of Kanban is a separate part of the interface. To change its locale, you need to call the **setLocal()** method for the Toolbar too.
 :::
 
 ```jsx {7}

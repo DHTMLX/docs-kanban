@@ -1,6 +1,6 @@
 ---
 sidebar_label: addCard()
-title: JS Kanban addCard method
+title: Kanban addCard method
 description: You can learn about the addCard method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the addCard method in the documentation of the 
 
 ### Description
 
-Adds a **new card** into JS Kanban
+Adds a **new card** into Kanban
 
 ### Usage
 
@@ -33,7 +33,7 @@ addCard: ({
 ### Example
 
 ```jsx {7-12}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

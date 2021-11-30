@@ -1,6 +1,6 @@
 ---
 sidebar_label: api.on()
-title: JS Kanban api.on method
+title: Kanban api.on method
 description: You can learn about the api.on method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -40,7 +40,7 @@ api.on(event: string, handler: function) => void;
 ### Example
 
 ```jsx {7-9}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

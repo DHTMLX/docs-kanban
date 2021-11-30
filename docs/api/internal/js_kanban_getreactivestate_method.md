@@ -1,6 +1,6 @@
 ---
 sidebar_label: api.getReactiveState()
-title: JS Kanban api.getReactiveState method
+title: Kanban api.getReactiveState method
 description: You can learn about the api.getReactiveState method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the api.getReactiveState method in the document
 
 ### Description
 
-Gets an object with the reactive properties of the JS Kanban ***StateStore***
+Gets an object with the reactive properties of the Kanban ***StateStore***
 
 ### Usage
 
@@ -40,7 +40,7 @@ The method returns an object with the following properties:
 ### Example
 
 ```jsx {8-11}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

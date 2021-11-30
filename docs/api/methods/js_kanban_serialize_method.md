@@ -1,6 +1,6 @@
 ---
 sidebar_label: serialize()
-title: JS Kanban serialize method
+title: Kanban serialize method
 description: You can learn about the serialize method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the serialize method in the documentation of th
 
 ### Description
 
-Serializes JS Kanban data to JSON
+Serializes Kanban data to JSON
 
 ### Usage
 
@@ -18,7 +18,7 @@ serialize: () => object;
 
 ### Returns
 
-The method returns the object of JS Kanban data  
+The method returns the object of Kanban data  
 
 ```jsx
 {
@@ -31,11 +31,11 @@ The method returns the object of JS Kanban data
 ### Example
 
 ```jsx {7}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// get the object of the JS Kanban data
+// get the object of the Kanban data
 board.serialize();
 ```

@@ -8,7 +8,7 @@ description: You can learn about the api property in the documentation of the Ja
 
 ### Description
 
-An array of controls located in the toolbar of JS Kanban
+An array of controls located in the toolbar of Kanban
 
 ### Usage
 

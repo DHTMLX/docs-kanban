@@ -1,6 +1,6 @@
 ---
 sidebar_label: updateRow()
-title: JS Kanban updateRow method
+title: Kanban updateRow method
 description: You can learn about the updateRow method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -27,7 +27,7 @@ Note, the ID of the row to be updated is required. Other row parameters can be f
 ### Example
 
 ```jsx {8-12}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards,

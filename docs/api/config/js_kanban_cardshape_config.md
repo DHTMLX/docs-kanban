@@ -1,6 +1,6 @@
 ---
 sidebar_label: cardShape
-title: JS Kanban cardShape property
+title: Kanban cardShape property
 description: You can learn about the cardShape property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the cardShape property in the documentation of 
 
 ### Description
 
-The **card configs** that manage the appearance of the JS Kanban board
+The **card configs** that manage the appearance of the Kanban board
 
 ### Usage
 
