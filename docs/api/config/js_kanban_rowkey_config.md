@@ -1,6 +1,6 @@
 ---
 sidebar_label: rowKey
-title: JS Kanban rowKey property
+title: Kanban rowKey property
 description: You can learn about the rowKey property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 

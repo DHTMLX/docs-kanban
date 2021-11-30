@@ -1,6 +1,6 @@
 ---
 sidebar_label: api.exec()
-title: JS Kanban API
+title: Kanban API
 description: You can learn about the api.exec method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -40,7 +40,7 @@ api.exec(event: string, config: object) => void;
 ### Example
 
 ```jsx {8}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

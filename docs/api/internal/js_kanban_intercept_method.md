@@ -1,6 +1,6 @@
 ---
 sidebar_label: api.intercept()
-title: JS Kanban api.intercept method
+title: Kanban api.intercept method
 description: You can learn about the api.intercept method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -40,7 +40,7 @@ api.intercept(event: string, callback: function) => void;
 ### Example
 
 ```jsx {7-11}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

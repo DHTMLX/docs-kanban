@@ -8,7 +8,7 @@ description: You can learn about the api property in the documentation of the Ja
 
 ### Description
 
-An object with the internal api of JS Kanban. *It is used for Toolbar controls functionality*
+An object with the internal api of Kanban. *It is used for Toolbar controls functionality*
 
 ### Usage
 
@@ -16,7 +16,7 @@ An object with the internal api of JS Kanban. *It is used for Toolbar controls f
 api: object
 ```
 :::info
-In this case, the internal api of JS Kanban is used for the *search bar* and *controls for adding columns and rows* located on the Toolbar
+In this case, the internal api of Kanban is used for the *search bar* and *controls for adding columns and rows* located on the Toolbar
 :::
 
 ### Example

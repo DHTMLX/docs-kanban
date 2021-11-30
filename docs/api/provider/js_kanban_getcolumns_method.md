@@ -1,6 +1,6 @@
 ---
 sidebar_label: getColumns()
-title: JS Kanban getColumns method
+title: Kanban getColumns method
 description: You can learn about the getColumns method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 

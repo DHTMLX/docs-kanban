@@ -1,6 +1,6 @@
 ---
 sidebar_label: editorAutoSave
-title: JS Kanban editorAutoSave property
+title: Kanban editorAutoSave property
 description: You can learn about the editorAutoSave property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the editorAutoSave property in the documentatio
 
 ### Description
 
-Enables/disables an **autosave mode** of JS Kanban
+Enables/disables an **autosave mode** of Kanban
 
 ### Usage
 
@@ -17,7 +17,7 @@ editorAutoSave?: boolean // (true by default)
 ```
 
 :::info
-Using this parameter, you can enable/disable an autosave mode of JS Kanban. If you set the **editorAutoSave** property to *false*, the editor will display the "Save" button to save edited data
+Using this parameter, you can enable/disable an autosave mode of Kanban. If you set the **editorAutoSave** property to *false*, the editor will display the "Save" button to save edited data
 :::
 
 ### Example

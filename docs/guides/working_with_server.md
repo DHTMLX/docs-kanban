@@ -1,10 +1,10 @@
 ---
-sidebar_label: Working with Server
-title: Working with Server
+sidebar_label: Working with server
+title: Working with server
 description: You can study the developer guide in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
 ---
 
-# Working with Server
+# Working with server
 
 JS Kanban allows to work both with the client and server data. The widget doesn't have any special requirements for the backend. It can be easily connected with any backend platform which supports the REST API (RESTful API).
 

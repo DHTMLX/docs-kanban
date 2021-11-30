@@ -1,6 +1,6 @@
 ---
 sidebar_label: unselectCard()
-title: JS Kanban unselectCard method
+title: Kanban unselectCard method
 description: You can learn about the unselectCard method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -27,7 +27,7 @@ To unselect all cards, call the **unselectCard()** method without parameters
 ### Example
 
 ```jsx {7}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

@@ -1,6 +1,6 @@
 ---
 sidebar_label: setSearch()
-title: JS Kanban setSearch method
+title: Kanban setSearch method
 description: You can learn about the setSearch method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -29,7 +29,7 @@ Using this method, you can search for the needed cards by the specified paramete
 ### Example
 
 ```jsx {7}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

@@ -1,6 +1,6 @@
 ---
 sidebar_label: readonly
-title: JS Kanban readonly property
+title: Kanban readonly property
 description: You can learn about the readonly property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -13,7 +13,7 @@ Enables/disables ***editing***, ***adding***, ***selecting***, ***dragging***  o
 ### Usage
 
 ```js
-readonly?: boolean // enables/disables readonly mode of JS Kanban (false by default)
+readonly?: boolean // enables/disables readonly mode of Kanban (false by default)
 //or
 readonly?: {
 	edit?: boolean, // enables/disables editing of the cards (true by default)

@@ -1,14 +1,14 @@
 ---
-sidebar_label: Working with Data
-title: Working with Data
+sidebar_label: Working with data
+title: Working with data
 description: You can study the developer guide in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
 ---
 
-# Working with Data
+# Working with data
 
 ## Initial data loading
 
-When initializing JS Kanban, you need to provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
+When initializing Kanban, you need to provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
 
 :::note
 The data for **columns** and **cards** are mandatory!
@@ -94,7 +94,7 @@ const rows = [ // data for rows
 	}
 ];
 
-// initializing JS Kanban with the initial data for columns, cards and rows
+// initializing Kanban with the initial data for columns, cards and rows
 new kanban.Kanban("#root", {
 	columns, // mandatory!
 	cards, // mandatory!
@@ -104,7 +104,7 @@ new kanban.Kanban("#root", {
 
 ## Loading data from local source
 
-To load data for ***columns***, ***rows*** and ***cards*** from a local source, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method. It takes an object with the needed data as a parameter. Before parsing the data in this way, you need to set the *columns*, *cards* and *rows* properties to an empty array in the JS Kanban configuration object.
+To load data for ***columns***, ***rows*** and ***cards*** from a local source, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method. It takes an object with the needed data as a parameter. Before parsing the data in this way, you need to set the *columns*, *cards* and *rows* properties to an empty array in the Kanban configuration object.
 
 ~~~js {2-4,8}
 const board = new kanban.Kanban("#root", {
@@ -113,27 +113,27 @@ const board = new kanban.Kanban("#root", {
 	rows: []
 });
 
-// loading data into JS Kanban
+// loading data into Kanban
 board.parse({ columns, cards, rows });
 ~~~
 
-## Sync JS Kanban data with Gantt and Scheduler
+## Syncing Kanban data with Gantt and Scheduler
 
-In this snippet you can see how to sync JS Kanban data with other DHTMLX widgets, namely [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) and [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/):
+In this snippet you can see how to sync Kanban data with other DHTMLX widgets, namely [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) and [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/):
 
 <iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Getting JS Kanban data
+## Getting Kanban data
 
-To get JS Kanban data, you can use the following methods:
+To get Kanban data, you can use the following methods:
 
 - [getAreaCards()](api/methods/js_kanban_getareacards_method.md) - gets an array with data objects of all cards of the specified column (and row)
 - [getCard()](api/methods/js_kanban_getcard_method.md) - gets a data object of a card with the specified ID
-- [serialize()](api/methods/js_kanban_serialize_method.md) - serializes JS Kanban data to JSON
+- [serialize()](api/methods/js_kanban_serialize_method.md) - serializes Kanban data toON
 
-## Getting JS Kanban state
+## Getting Kanban state
 
-To get JS Kanban state, you can use the following methods:
+To get Kanban state, you can use the following methods:
 
 - [api.getReactiveState()](api/internal/js_kanban_getreactivestate_method.md) - gets an object with the reactive properties of the *StateStore*
 - [api.getState()](api/internal/js_kanban_getstate_method.md) - gets an object with the current properties of the *StateStore*
@@ -143,9 +143,9 @@ To get JS Kanban state, you can use the following methods:
 
 To add new *cards*, *columns* and *rows*, you can use the following methods:
 
-- [addCard()](api/methods/js_kanban_addcard_method.md) - adds a new card into JS Kanban
-- [addColumn()](api/methods/js_kanban_addcolumn_method.md) - adds a new column into JS Kanban
-- [addRow()](api/methods/js_kanban_addrow_method.md) - adds a new row into JS Kanban
+- [addCard()](api/methods/js_kanban_addcard_method.md) - adds a new card into Kanban
+- [addColumn()](api/methods/js_kanban_addcolumn_method.md) - adds a new column into Kanban
+- [addRow()](api/methods/js_kanban_addrow_method.md) - adds a new row into Kanban
 
 ## Updating items
 
@@ -159,9 +159,9 @@ To update the *cards*, *columns* and *rows*, you can use the following methods:
 
 To remove the *cards*, *columns* and *rows*, you can use the following methods:
 
-- [deleteCard()](api/methods/js_kanban_deletecard_method.md) - removes a card from JS Kanban by the specified ID
-- [deleteColumn()](api/methods/js_kanban_deletecolumn_method.md) - removes a column from JS Kanban by the specified ID
-- [deleteRow()](api/methods/js_kanban_deleterow_method.md) - removes a row from JS Kanban by the specified ID
+- [deleteCard()](api/methods/js_kanban_deletecard_method.md) - removes a card from Kanban by the specified ID
+- [deleteColumn()](api/methods/js_kanban_deletecolumn_method.md) - removes a column from Kanban by the specified ID
+- [deleteRow()](api/methods/js_kanban_deleterow_method.md) - removes a row from Kanban by the specified ID
 
 ## Moving cards
 
@@ -169,6 +169,6 @@ To move the *card* to the desired *column* and *row*, you can use the [moveCard(
 
 ## Example
 
-In this snippet you can see how to use JS Kanban API for working with data:
+In this snippet you can see how to use Kanban API for working with data:
 
 <iframe src="https://snippet.dhtmlx.com/61crsls3?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

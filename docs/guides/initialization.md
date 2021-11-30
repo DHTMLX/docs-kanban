@@ -6,22 +6,22 @@ description: You can study the developer guide in the documentation of the JavaS
 
 # Initialization
 
-This guide will give you detailed instructions on how to create JS Kanban on a page to enrich your application with features of the Kanban board. Take the following steps to get a ready-to-use component:
+This guide will give you detailed instructions on how to create Kanban on a page to enrich your application with features of the Kanban board. Take the following steps to get a ready-to-use component:
 
-1. [Include the JS Kanban source files on a page](#including-source-files)
-2. [Create a container for JS Kanban](#creating-container)
-3. [Initialize JS Kanban with a constructor](#initializing-js-kanban)
+1. [Include the Kanban source files on a page](#including-source-files).
+2. [Create a container for Kanban](#creating-container).
+3. [Initialize Kanban with a constructor](#initializing-js-kanban).
 
 ## Including source files
 
 [Download the package](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and unpack it into a folder of your project.
 
-To create JS Kanban, you need to include 2 source files on your page:
+To create Kanban, you need to include 2 source files on your page:
 
 - *kanban.js*
 - *kanban.css*
 
-Make sure that you set correct relative paths to these files:
+Make sure that you set correct relative paths to the source files:
 
 ```html title="index.html"
 <script type="text/javascript" src="./dist/kanban.js"></script>  
@@ -30,7 +30,7 @@ Make sure that you set correct relative paths to these files:
 
 ## Creating container
 
-Add a container for JS Kanban and give it an ID, for example *"root"*:
+Add a container for Kanban and give it an ID, for example *"root"*:
 
 ```jsx title="index.html"
 <div id="root"></div>
@@ -40,18 +40,18 @@ If you want to create the widget along with its *Toolbar*, you need to add a sep
 
 ```jsx {1} title="index.html"
 <div id="toolbar"></div> // container for Toolbar
-<div id="root"></div> // container for JS Kanban
+<div id="root"></div> // container for Kanban
 ```
 
-## Initializing JS Kanban
+## Initializing Kanban
 
-Initialize JS Kanban with the **kanban.Kanban** constructor. It takes two parameters:
+Initialize Kanban with the **kanban.Kanban** constructor. It takes two parameters:
 
 - an HTML container (the ID of the HTML container)
 - an object with configuration properties. [See the full list here](#configuration-properties).
 
 ```jsx title="index.html"
-// create JS Kanban
+// create Kanban
 new kanban.Kanban("#root", {
     // configuration properties
 });
@@ -63,7 +63,7 @@ If you want to create the widget along with its *Toolbar*, you need to initializ
 - an object with configuration properties.
 
 ```jsx {6-8} title="index.html"
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	// configuration properties
 });
@@ -74,12 +74,12 @@ new kanban.Toolbar("#toolbar", {
 ```
 
 :::info
-To learn more about configuring the Toolbar of JS Kanban, read the [**Configuration**](./configuration.md/#toolbar) section
+To learn more about configuring the Toolbar of Kanban, read the [**Configuration**](./configuration.md/#toolbar) section
 :::
 
 ### Configuration properties
 
-This is a list of properties that you can specify in the JS Kanban and Toolbar configuration objects:
+This is a list of properties that you can specify in the Kanban and Toolbar configuration objects:
 
 - [cards](api/config/js_kanban_cards_config.md) - (*array*) an array of objects containing the cards data. ***This parameter is mandatory***
 - [cardShape](api/config/js_kanban_cardshape_config.md) - (*object*) an object of the cards configs
@@ -92,8 +92,8 @@ This is a list of properties that you can specify in the JS Kanban and Toolbar c
 - [rowKey](api/config/js_kanban_rowkey_config.md) - (*string*) defines belonging the card to the row
 - [rows](api/config/js_kanban_rows_config.md) - (*array*) an array of objects containing the rows data
 
-- *(Toolbar)* [api](api/config/toolbar_api_config.md) - an object with the internal api of JS Kanban. It is used for Toolbar controls functionality
-- *(Toolbar)* [items](api/config/toolbar_items_config.md) - an array of controls located in the toolbar of JS Kanban.
+- *(Toolbar)* [api](api/config/toolbar_api_config.md) - an object with the internal api of Kanban. It is used for Toolbar controls functionality
+- *(Toolbar)* [items](api/config/toolbar_items_config.md) - an array of controls located in the toolbar of Kanban.
 
 ## Example
 

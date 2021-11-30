@@ -1,10 +1,10 @@
 ---
-sidebar_label: What's New
-title: What's New in JS Kanban
+sidebar_label: What's new
+title: What's new in Kanban
 description: You can learn What's New in the JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
-# What's New
+# What's new
 
 Version 1.0
 ----------------

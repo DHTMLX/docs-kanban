@@ -1,12 +1,12 @@
 ---
-sidebar_label: API Overview
-title: API Overview
+sidebar_label: API overview
+title: API overview
 description: You can have an API overview of the JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
-# API Overview
+# API overview
 
-## JS Kanban constructor
+## Kanban constructor
 
 ~~~js
 new kanban.Kanban("#root", {
@@ -17,7 +17,7 @@ new kanban.Kanban("#root", {
 **Parameters**:
 
 - an HTML container (the ID of the HTML container)
-- an object of the configuration parameters ([check here](#js-kanban-properties)).
+- an object of the configuration parameters ([check here](#kanban-properties)).
 
 ## Toolbar constructor
 
@@ -30,41 +30,24 @@ new kanban.Toolbar("#toolbar", {
 **Parameters**:
 
 - an HTML container (the ID of the HTML container)
-- an object of the configuration parameters (check below).
+- an object of the configuration parameters ([check here](#kanban-properties)).
 
-## JS Kanban properties
-
-| Name                                           		         | Description                                              |
-| -----------------------------------------------------------| ---------------------------------------------------------|
-| [cards](../config/js_kanban_cards_config) 				         | an array of objects containing the cards data 		  	    |
-| [cardShape](../config/js_kanban_cardshape_config)          | card configs that manage the appearance of the board     |
-| [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the cards     |
-| [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
-| [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
-| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of JS Kanban           |
-| [editorShape](../config/js_kanban_editorshape_config) 	   | editor configs that manage the appearance of the editor	|
-| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of JS Kanban          	  |
-| [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
-| [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
-| (*Toolbar*) [api](../config/toolbar_api_config)  				   | an object with internal api of JS Kanban 		  	        |
-| (*Toolbar*) [items](../config/toolbar_items_config)        | an array of controls located in the toolbar              |
-
-## JS Kanban methods
+## Kanban methods
 
 | Name                                         				  		| Description                                            			 |
 | ----------------------------------------------------------| -------------------------------------------------------------|
-| [addCard()](../methods/js_kanban_addcard_method)  	  		| adds a new card into JS Kanban          				   			 		 |
-| [addColumn()](../methods/js_kanban_addcolumn_method)  		| adds a new column into JS Kanban                   		 	 		 |
-| [addRow()](../methods/js_kanban_addrow_method)    	  		| adds a new row into JS Kanban                      					 |
-| [deleteCard()](../methods/js_kanban_deletecard_method)		| removes a card from JS Kanban                      			   	 |
-| [deleteColumn()](../methods/js_kanban_deletecolumn_method)| removes a column from JS Kanban                      			 	 |
-| [deleteRow()](../methods/js_kanban_deleterow_method)      | removes a row from JS Kanban                        		   	 |
-| [destructor()](../methods/js_kanban_destructor_method)		| removes JS Kanban                   								   			 |
+| [addCard()](../methods/js_kanban_addcard_method)  	  		| adds a new card into Kanban          				   			 		     |
+| [addColumn()](../methods/js_kanban_addcolumn_method)  		| adds a new column into Kanban                   		 	 		   |
+| [addRow()](../methods/js_kanban_addrow_method)    	  		| adds a new row into Kanban                      					   |
+| [deleteCard()](../methods/js_kanban_deletecard_method)		| removes a card from Kanban                      			   	   |
+| [deleteColumn()](../methods/js_kanban_deletecolumn_method)| removes a column from Kanban                      			 	   |
+| [deleteRow()](../methods/js_kanban_deleterow_method)      | removes a row from Kanban                        		   	     |
+| [destructor()](../methods/js_kanban_destructor_method)		| removes Kanban                   								   			     |
 | [getAreaCards()](../methods/js_kanban_getareacards_method)| gets an array of the data objects of the cards               |
 | [getCard()](../methods/js_kanban_getcard_method)      		| gets the data object of the card with the specified ID 			 |
 | [getSelection()](../methods/js_kanban_getselection_method)| gets an array of IDs of the selected cards			 						 |
 | [moveCard()](../methods/js_kanban_movecard_method)      	| moves a card to the specified column (and row)			 				 |
-| [parse()](../methods/js_kanban_parse_method)      				| loads data into JS Kanban			 													  	 |
+| [parse()](../methods/js_kanban_parse_method)      				| loads data into Kanban			 													  	   |
 | [selectCard()](../methods/js_kanban_selectcard_method)    | selects a card by the specified ID  											   |
 | [serialize()](../methods/js_kanban_serialize_method)      | serializes the widget data to JSON  					          		 |
 | [setConfig()](../methods/js_kanban_setconfig_method)      | sets the config parameters 					                  		   |
@@ -75,7 +58,7 @@ new kanban.Toolbar("#toolbar", {
 | [updateColumn()](../methods/js_kanban_updatecolumn_method)| updates the column data	by the specified ID	  							 |
 | [updateRow()](../methods/js_kanban_updaterow_method)      | updates the row data by the specified ID	  								 |
 
-## JS Kanban internal API
+## Kanban internal API
 
 ### Event Bus methods
 
@@ -101,3 +84,20 @@ new kanban.Toolbar("#toolbar", {
 | [getCards()](../provider/js_kanban_getcards_method)		  | gets a promise with the cards data   |
 | [getColumns()](../provider/js_kanban_getcolumns_method) | gets a promise with the columns data |
 | [getRows()](../provider/js_kanban_getrows_method)    		| gets a promise with the rows data    |
+
+## Kanban properties
+
+| Name                                           		         | Description                                              |
+| -----------------------------------------------------------| ---------------------------------------------------------|
+| [cards](../config/js_kanban_cards_config) 				         | an array of objects containing the cards data 		  	    |
+| [cardShape](../config/js_kanban_cardshape_config)          | card configs that manage the appearance of the board     |
+| [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the cards     |
+| [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
+| [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
+| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of Kanban           |
+| [editorShape](../config/js_kanban_editorshape_config) 	   | editor configs that manage the appearance of the editor	|
+| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of Kanban          	  |
+| [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
+| [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
+| (*Toolbar*) [api](../config/toolbar_api_config)  				   | an object with internal api of Kanban 		  	        |
+| (*Toolbar*) [items](../config/toolbar_items_config)        | an array of controls located in the toolbar              |

@@ -1,6 +1,6 @@
 ---
 sidebar_label: selectCard()
-title: JS Kanban selectCard method
+title: Kanban selectCard method
 description: You can learn about the selectCard method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -28,7 +28,7 @@ If you set the **groupMode** parameter to *true*, the **selectCard()** method wi
 ### Example
 
 ```jsx {7-10}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

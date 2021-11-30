@@ -1,6 +1,6 @@
 ---
 sidebar_label: updateColumn()
-title: JS Kanban updateColumn method
+title: Kanban updateColumn method
 description: You can learn about the updateColumn method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -27,7 +27,7 @@ Note, the **ID** of the column to be updated is required. Other column parameter
 ### Example
 
 ```jsx {7-10}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

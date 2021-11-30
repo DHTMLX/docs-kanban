@@ -1,6 +1,6 @@
 ---
 sidebar_label: updateCard()
-title: JS Kanban updateCard method
+title: Kanban updateCard method
 description: You can learn about the updateCard method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -27,7 +27,7 @@ Note, the **ID** of the card to be updated is required. Other card parameters ca
 ### Example
 
 ```jsx {7-13}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards

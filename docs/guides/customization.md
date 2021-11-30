@@ -6,11 +6,11 @@ description: You can study the developer guide in the documentation of the JavaS
 
 # Customization
 
-Besides the built-in settings you can specify a custom template for the cards, change the toolbar structure and functionality, and apply custom styles to JS Kanban.
+Besides the built-in settings you can specify a custom template for the cards, change the toolbar structure and functionality, and apply custom styles to Kanban.
 
 ## Custom cards
 
-To apply a custom template to the cards of JS Kanban, you need to specify the [cardTemplate](api/config/js_kanban_cardtemplate_config.md) property in the configuration object of JS Kanban. In this callback you can define the desired styles and logic. See the snippet below:   
+To apply a custom template to the cards of Kanban, you need to specify the [cardTemplate](api/config/js_kanban_cardtemplate_config.md) property in the configuration object of Kanban. In this callback you can define the desired styles and logic. See the snippet below:   
 
 <iframe src="https://snippet.dhtmlx.com/8rhdq81d?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
@@ -22,6 +22,6 @@ To change the toolbar structure and functionality, you need to specify the [item
 
 ## Custom styles
 
-In this snippet you can see how to apply custom styles to JS Kanban:
+In this snippet you can see how to apply custom styles to Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

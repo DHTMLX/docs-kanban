@@ -1,6 +1,6 @@
 ---
 sidebar_label: deleteRow()
-title: JS Kanban deleteRow method
+title: Kanban deleteRow method
 description: You can learn about the deleteRow method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the deleteRow method in the documentation of th
 
 ### Description
 
-Removes the specified **row** from datastore of JS Kanban
+Removes the specified **row** from datastore of Kanban
 
 ### Usage
 
@@ -23,7 +23,7 @@ deleteRow: ({ id: string | number }) => void;
 ### Example
 
 ```jsx {7}
-// create JS Kanban
+// create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards
