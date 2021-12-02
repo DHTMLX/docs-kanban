@@ -1,7 +1,7 @@
 ---
 sidebar_label: columnKey
-title: Kanban columnKey property
-description: You can learn about the columnKey property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: columnKey Config
+description: You can learn about the columnKey config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # columnKey

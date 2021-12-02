@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateRow()
-title: Kanban updateRow method
-description: You can learn about the updateRow method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: updateRow Method
+description: You can learn about the updateRow method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # updateRow()

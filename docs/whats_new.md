@@ -1,7 +1,7 @@
 ---
 sidebar_label: What's new
-title: What's new in Kanban
-description: You can learn What's New in the JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos.
+title: What's New
+description: You can explore what's new in DHTMLX Kanban and its release history in the documentation of the DHTMLX JavaScript UI library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # What's new
