@@ -6,7 +6,7 @@ description: You can learn about the configuration in the documentation of the D
 
 # Configuration
 
-You can adjust the desired settings of Kanban to meet your needs. The available configuration properties allow you to [load data](./working_with_data.md) for *columns*, *rows* and *cards*, as well as configure the **Cards**, **Editor** and **Toolbar** appearance.
+You can adjust the desired settings of Kanban to meet your needs. The available configuration properties allow you to [load data](guides/working_with_data.md) for *columns*, *rows* and *cards*, as well as configure the **Cards**, **Editor** and **Toolbar** appearance.
 
 ## Cards
 
@@ -24,7 +24,7 @@ const  cardPriority = [ // card priority data
     { id: 3, color: "#0AB169", label: "low" }
 ];
 
-const cardShape = { // card configs
+const cardShape = { // card settings
     label: true,
     description: true,
     progress: true,
@@ -54,13 +54,13 @@ new kanban.Kanban("#root", {
 	columns,
 	cards,
 	rows,
-	// cards settings
+	// card settings
 	cardShape
 });
 ~~~
 
 :::note
-Unless you specify the cards settings via the **cardShape** property, the widget will apply a [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) set of parameters!
+Unless you specify the card settings via the **cardShape** property, the widget will apply a [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) set of parameters!
 :::
 
 ## Editor
@@ -73,9 +73,9 @@ const users = [ // user data
 	{ id: 2, label: "Aaron Short" }
 ];
 
-const editorShape = [ // editor configs
-	...kanban.defaultEditorShape, // include default configs
-	{ // add custom configs
+const editorShape = [ // editor settings
+	...kanban.defaultEditorShape, // include default settings
+	{ // add custom field
 	    type: "multiselect",
 	    key: "users",
 	    label: "Users",
@@ -108,7 +108,7 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards,
 	rows,
-	// cards settings
+	// card settings
 	cardShape,
 	// editor settings
 	editorShape

@@ -8,7 +8,7 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Description
 
-The **editor configs** for managing the appearance and functionality of the Kanban editor
+The **editor settings** for managing the appearance and functionality of the Kanban editor
 
 ### Usage
 
@@ -47,7 +47,7 @@ To configure the editor appearance and functionality, you can specify the follow
 - `key: string` - an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property (*mandatory*). See the example below:
 
 ~~~js {2,5,16,21}
-	const cardShape = { // card configs
+	const cardShape = { // card settings
 		label: true,
 		headerFields: [
 			{ // custom field
@@ -59,7 +59,7 @@ To configure the editor appearance and functionality, you can specify the follow
 		// other parameters
 	};
 
-	const editorShape= { // editor configs
+	const editorShape= { // editor settings
 		{
 			type: "text",
 			key: "label",
@@ -82,7 +82,7 @@ To configure the editor appearance and functionality, you can specify the follow
 - `colors?: array` - an array with valid HEX codes. It is used for the *color* type
 - `placeholder?: string` - an editor field placeholder
 
-- `config?:object` - an object with the editor uploader configs. Here you can specify the following parameters:
+- `config?:object` - an object with the editor uploader configuration. Here you can specify the following parameters:
 	- `accept?: string` -  a file type the uploader should accept
 	- `disabled?: boolean` - when the *disabled* attribute is ***true***, the uploader forbids the user to upload any files
 	- `multiple?: boolean` - when the *multiple* attribute is ***true***, the uploader allows the user to select more than one file
@@ -124,8 +124,8 @@ const users = [ // user data
 	{ id: 2, label: "Aaron Short" }
 ];
 
-const editorShape = [ // editor configs
-	...kanban.defaultEditorShape, // include the default configs
+const editorShape = [ // editor settings
+	...kanban.defaultEditorShape, // include the default settings
 	{ // add custom field
 		type: "multiselect",
 		key: "users",

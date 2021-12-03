@@ -6,7 +6,7 @@ description: You can explore how to work with Server in the documentation of the
 
 # Working with server
 
-JS Kanban allows to work both with the client and server data. The widget doesn't have any special requirements for the backend. It can be easily connected with any backend platform which supports the REST API (RESTful API).
+JavaScript Kanban allows to work both with the client and server data. The widget doesn't have any special requirements for the backend. It can be easily connected with any backend platform which supports the REST API (RESTful API).
 
 :::info
 By default, the widget is shipped with the built-in **Go** and **Node** backend. But you can use your custom server scripts as well
@@ -14,7 +14,7 @@ By default, the widget is shipped with the built-in **Go** and **Node** backend.
 
 ## RestDataProvider
 
-JS Kanban has the **RestDataProvider** service that completely supports REST API for dealing with the backend. It allows to interact with the server and perform the following data operations:
+JavaScript Kanban has the **RestDataProvider** service that completely supports REST API for dealing with the backend. It allows to interact with the server and perform the following data operations:
 
 - ***"add-card"***
 - ***"add-column"***

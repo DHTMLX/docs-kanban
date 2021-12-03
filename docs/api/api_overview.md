@@ -17,7 +17,7 @@ new kanban.Kanban("#root", {
 **Parameters**:
 
 - an HTML container (the ID of the HTML container)
-- an object of the configuration parameters ([check here](#kanban-properties)).
+- an object of the configuration parameters ([check here](#kanban-properties))
 
 ## Toolbar constructor
 
@@ -30,7 +30,7 @@ new kanban.Toolbar("#toolbar", {
 **Parameters**:
 
 - an HTML container (the ID of the HTML container)
-- an object of the configuration parameters ([check here](#kanban-properties)).
+- an object of the configuration parameters ([check here](#kanban-properties))
 
 ## Kanban methods
 
@@ -44,7 +44,7 @@ new kanban.Toolbar("#toolbar", {
 | [deleteRow()](../methods/js_kanban_deleterow_method)      | removes a row from Kanban                        		   	     |
 | [destructor()](../methods/js_kanban_destructor_method)		| removes Kanban                   								   			     |
 | [getAreaCards()](../methods/js_kanban_getareacards_method)| gets an array of the data objects of the cards               |
-| [getCard()](../methods/js_kanban_getcard_method)      		| gets the data object of the card with the specified ID 			 |
+| [getCard()](../methods/js_kanban_getcard_method)      		| gets the data object of the card by the specified ID 		  	 |
 | [getSelection()](../methods/js_kanban_getselection_method)| gets an array of IDs of the selected cards			 						 |
 | [moveCard()](../methods/js_kanban_movecard_method)      	| moves a card to the specified column (and row)			 				 |
 | [parse()](../methods/js_kanban_parse_method)      				| loads data into Kanban			 													  	   |
@@ -90,12 +90,12 @@ new kanban.Toolbar("#toolbar", {
 | Name                                           		         | Description                                              |
 | -----------------------------------------------------------| ---------------------------------------------------------|
 | [cards](../config/js_kanban_cards_config) 				         | an array of objects containing the cards data 		  	    |
-| [cardShape](../config/js_kanban_cardshape_config)          | card configs that manage the appearance of the board     |
+| [cardShape](../config/js_kanban_cardshape_config)          | card settings that manage the appearance of the board    |
 | [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the cards     |
 | [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
 | [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
 | [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of Kanban              |
-| [editorShape](../config/js_kanban_editorshape_config) 	   | editor configs that manage the appearance of the editor	|
+| [editorShape](../config/js_kanban_editorshape_config) 	   | editor settings that manage the appearance of the editor	|
 | [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of Kanban          	      |
 | [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
 | [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |

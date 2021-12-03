@@ -8,7 +8,7 @@ description: You can learn about the cardShape config in the documentation of th
 
 ### Description
 
-The **card configs** for managing the appearance of the Kanban board
+The **card settings** for managing the appearance of the Kanban board
 
 ### Usage
 
@@ -146,7 +146,7 @@ const  cardPriority = [ // card priority data
 	{ id: 3, color: "#0AB169", label: "low" }
 ];
 
-const cardShape = { // card configs
+const cardShape = { // card settings
 	label: true,
 	description: true,
 	progress: true,

@@ -8,7 +8,7 @@ description: You can learn about the getCard method in the documentation of the 
 
 ### Description
 
-Gets a data object of the card with the specified ID
+Gets a data object of the card by the specified ID
 
 ### Usage
 
