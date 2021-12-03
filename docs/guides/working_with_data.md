@@ -129,7 +129,7 @@ To get Kanban data, you can use the following methods:
 
 - [getAreaCards()](api/methods/js_kanban_getareacards_method.md) - gets an array with data objects of all cards of the specified column (and row)
 - [getCard()](api/methods/js_kanban_getcard_method.md) - gets a data object of a card with the specified ID
-- [serialize()](api/methods/js_kanban_serialize_method.md) - serializes Kanban data toON
+- [serialize()](api/methods/js_kanban_serialize_method.md) - serializes Kanban data to JSON
 
 ## Getting Kanban state
 

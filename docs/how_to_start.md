@@ -23,7 +23,7 @@ and
 
 - the link to the Google Fonts source file for the correct rendering of fonts
 
-```html {5,7-9} title="index.html"
+~~~html {5,7-9} title="index.html"
 <!DOCTYPE html>
 <html>
 	<head>
@@ -40,7 +40,7 @@ and
 		</script>
 	</body>
 </html>
-```
+~~~
 
 ## Step 2. Creating Kanban
 
@@ -55,7 +55,7 @@ The Toolbar is an optional part of the Kanban interface. To create Kanban withou
 
 As parameters, the constructors take the HTML containers where the Kanban and Toolbar will be placed into and the corresponding configuration objects.
 
-```html {12-13,16,20} title="index.html"
+~~~html {12-13,16,20} title="index.html"
 <!DOCTYPE html>
 <html>
 	<head>
@@ -81,7 +81,7 @@ As parameters, the constructors take the HTML containers where the Kanban and To
 		</script>
 	</body>
 </html>
-```
+~~~
 
 ## Step 3. Configuring Kanban
 
@@ -90,7 +90,7 @@ Next you can specify configuration properties you want the Kanban component to h
 To start working with Kanban, first you need to provide the initial data for **cards** and **columns** (and *rows*).
 Beside the initial data, you can configure the [cards](../guides/configuration#cards), [editor](../guides/configuration#editor) and [toolbar](../guides/configuration#toolbar) appearance.
 
-```js {2-7,11-15}
+~~~jsx {2-7,11-15}
 const board = new kanban.Kanban("#root", {
 	cards,
 	columns,
@@ -107,7 +107,7 @@ new kanban.Toolbar("#toolbar", {
 		"controls"
 	]
 });
-```
+~~~
 
 ## What's next
 

@@ -94,10 +94,10 @@ new kanban.Toolbar("#toolbar", {
 | [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the cards     |
 | [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
 | [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
-| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of Kanban           |
+| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of Kanban              |
 | [editorShape](../config/js_kanban_editorshape_config) 	   | editor configs that manage the appearance of the editor	|
-| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of Kanban          	  |
+| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of Kanban          	      |
 | [rowKey](../config/js_kanban_rowkey_config)        	       | defines belonging the card to the row                    |
 | [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
-| (*Toolbar*) [api](../config/toolbar_api_config)  				   | an object with internal api of Kanban 		  	        |
+| (*Toolbar*) [api](../config/toolbar_api_config)  				   | an object with internal api of Kanban 		  	            |
 | (*Toolbar*) [items](../config/toolbar_items_config)        | an array of controls located in the toolbar              |

@@ -12,7 +12,7 @@ You can adjust the desired settings of Kanban to meet your needs. The available 
 
 The board of Kanban consists of the cards distributed into *columns* and *rows*. You can configure the cards appearance using the [cardShape](api/config/js_kanban_cardshape_config.md) configuration property:
 
-```jsx {12-35,43}
+~~~jsx {12-35,43}
 const users = [ // user data
     { id: 1, label: "John Smith", path: "../assets/user.jpg" },
     { id: 2, label: "Aaron Short" }
@@ -57,7 +57,8 @@ new kanban.Kanban("#root", {
 	// cards settings
 	cardShape
 });
-```
+~~~
+
 :::note
 Unless you specify the cards settings via the **cardShape** property, the widget will apply a [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) set of parameters!
 :::
@@ -66,7 +67,7 @@ Unless you specify the cards settings via the **cardShape** property, the widget
 
 The editor of Kanban consists of the fields to manage the cards data. You can configure the editor fields using the [editorShape](api/config/js_kanban_editorshape_config.md) configuration property:
 
-```jsx {6-14,22}
+~~~jsx {6-14,22}
 const users = [ // user data
 	{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
@@ -90,7 +91,7 @@ new kanban.Kanban("#root", {
 	// editor settings
 	editorShape
 });
-```
+~~~
 
 :::note
 Unless you specify the editor settings via the **editorShape** property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters!
@@ -100,7 +101,7 @@ Unless you specify the editor settings via the **editorShape** property, the wid
 
 The toolbar of Kanban consists of the search bar and controls for adding *columns* and *rows*. To display the toolbar, you need to initialize it in a separate container using the **kanban.Toolbar** constructor.
 
-```jsx {13}
+~~~jsx {13}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	// data
@@ -114,11 +115,11 @@ const board = new kanban.Kanban("#root", {
 });
 
 new kanban.Toolbar("#toolbar", { api: board.api });
-```
+~~~
 
 You can also manage (*hide/show*) the toolbar controls using the **items** array:
 
-```jsx {6-10}
+~~~jsx {6-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {...});
 
@@ -130,7 +131,7 @@ new kanban.Toolbar("#toolbar", {
 		// custom elements
 	]
 });
-```
+~~~
 
 :::tip
 To *hide* some of the toolbar controls, remove the "search" or/and "controls" string(s) from the **items** array

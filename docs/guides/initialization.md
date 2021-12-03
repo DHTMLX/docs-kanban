@@ -23,25 +23,25 @@ To create Kanban, you need to include 2 source files on your page:
 
 Make sure that you set correct relative paths to the source files:
 
-```html title="index.html"
+~~~html title="index.html"
 <script type="text/javascript" src="./dist/kanban.js"></script>  
 <link rel="stylesheet" href="./dist/kanban.css">
-```
+~~~
 
 ## Creating container
 
 Add a container for Kanban and give it an ID, for example *"root"*:
 
-```jsx title="index.html"
+~~~jsx title="index.html"
 <div id="root"></div>
-```
+~~~
 
 If you want to create the widget along with its *Toolbar*, you need to add a separate container for it:
 
-```jsx {1} title="index.html"
+~~~jsx {1} title="index.html"
 <div id="toolbar"></div> // container for Toolbar
 <div id="root"></div> // container for Kanban
-```
+~~~
 
 ## Initializing Kanban
 
@@ -50,19 +50,19 @@ Initialize Kanban with the **kanban.Kanban** constructor. It takes two parameter
 - an HTML container (the ID of the HTML container)
 - an object with configuration properties. [See the full list here](#configuration-properties).
 
-```jsx title="index.html"
+~~~jsx title="index.html"
 // create Kanban
 new kanban.Kanban("#root", {
     // configuration properties
 });
-```
+~~~
 
 If you want to create the widget along with its *Toolbar*, you need to initialize it separately using the **kanban.Toolbar** constructor. It also takes two parameters:
 
 - an HTML container (the ID of the HTML container)
 - an object with configuration properties.
 
-```jsx {6-8} title="index.html"
+~~~jsx {6-8} title="index.html"
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	// configuration properties
@@ -71,7 +71,7 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", {
 	// configuration properties
 });
-```
+~~~
 
 :::info
 To learn more about configuring the Toolbar of Kanban, read the [**Configuration**](./configuration.md/#toolbar) section
