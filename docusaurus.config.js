@@ -133,8 +133,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   noIndex: false,
-  title: 'DHTMLX JS Kanban Docs',
-  tagline: 'DHTMLX JS Kanban Docs',
+  title: 'DHTMLX JavaScript Kanban Docs',
+  tagline: 'DHTMLX JavaScript Kanban Docs',
   url: 'https://docs.dhtmlx.com',
   baseUrl: '/kanban/',
   onBrokenLinks: 'warn',

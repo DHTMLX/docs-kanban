@@ -1,7 +1,7 @@
 ---
 sidebar_label: (Toolbar) items
-title: Toolbar items property
-description: You can learn about the api property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: items Config
+description: You can learn about the items config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # (Toolbar) items

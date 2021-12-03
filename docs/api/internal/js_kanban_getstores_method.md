@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getStores()
-title: Kanban api.getStores method
-description: You can learn about the api.getStores method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: getStores Method
+description: You can learn about the getStores method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # api.getStores()

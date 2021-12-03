@@ -1,7 +1,7 @@
 ---
 sidebar_label: Customization
 title: Customization
-description: You can study the developer guide in the documentation of the JavaScript Kanban library. Browse API reference, try out code examples and live demos.
+description: You can learn about the customization in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # Customization
@@ -10,7 +10,7 @@ Besides the built-in settings you can specify a custom template for the cards, c
 
 ## Custom cards
 
-To apply a custom template to the cards of Kanban, you need to specify the [cardTemplate](api/config/js_kanban_cardtemplate_config.md) property in the configuration object of Kanban. In this callback you can define the desired styles and logic. See the snippet below:   
+To apply a custom template to the cards of Kanban, you need to specify the [cardTemplate](api/config/js_kanban_cardtemplate_config.md) property in the configuration object of Kanban. In this callback you can define the desired styles and logic. See the snippet below:
 
 <iframe src="https://snippet.dhtmlx.com/8rhdq81d?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
