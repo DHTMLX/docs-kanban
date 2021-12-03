@@ -12,9 +12,12 @@ Looks for the needed cards by the specified parameters
 
 ### Usage
 
-```js
-setSearch: ({ value: string, by?: string }) => void;
-```
+~~~jsx {}
+setSearch: ({
+	value: string,
+	by?: string
+}) => void;
+~~~
 
 :::info
 Using this method, you can search for the needed cards by the specified parameters. If you call the **setSearch()** method without parameters, it will clear the search bar and highlighting of the cards
@@ -22,13 +25,12 @@ Using this method, you can search for the needed cards by the specified paramete
 
 ### Parameters
 
-- `value: string` - the value to search
+- `value: string` - the value to search (*mandatory*)
 - `by?: string` - the card field for searching
-
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -36,4 +38,4 @@ const board = new kanban.Kanban("#root", {
 });
 // highlight the cards that match the parameters
 board.setSearch({ value: "Integration", by: "label" });
-```
+~~~

@@ -16,9 +16,9 @@ The **getColumns()** method is a part of the **RestDataProvider** service intend
 
 ### Usage
 
-```js
+~~~jsx {}
 getColumns: () => promise;
-```
+~~~
 
 ### Returns
 
@@ -26,7 +26,7 @@ The **getColumns()** method sends a request to the server by the **GET** method 
 
 ### Example
 
-```jsx {2,6}
+~~~jsx {2,6}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
@@ -40,6 +40,6 @@ Promise.all([
 	});
 	board.api.setNext(restProvider);
 });
-```
+~~~
 
-**Related article:** [Working with Server](../../../guides/working_with_server)
+**Related articles:** [Working with Server](../../../guides/working_with_server)

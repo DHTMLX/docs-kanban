@@ -12,14 +12,17 @@ Allows attaching a handler to the inner events
 
 ### Usage
 
-```js
-api.on(event: string, handler: function) => void;
-```
+~~~jsx {}
+api.on(
+	event: string,
+	handler: function
+) => void;
+~~~
 
 ### Parameters
 
-- `event: string` -  an event to be fired
-- `handler: function` - a handler to be attached
+- `event: string` -  an event to be fired (*mandatory*)
+- `handler: function` - a handler to be attached (*mandatory*)
 
 ### Event list
 
@@ -39,7 +42,7 @@ api.on(event: string, handler: function) => void;
 
 ### Example
 
-```jsx {7-9}
+~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -49,4 +52,4 @@ const board = new kanban.Kanban("#root", {
 board.api.on("move-card", ({ id, columnId }) => {
 	console.log({ id, columnId });
 });
-```
+~~~

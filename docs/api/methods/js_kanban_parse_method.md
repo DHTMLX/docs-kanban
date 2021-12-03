@@ -12,13 +12,13 @@ Parses data into Kanban
 
 ### Usage
 
-```js
+~~~jsx {}
 parse: ({
 	columns?: object,
 	rows?: object,
 	cards?: object
 }) => void;
-```
+~~~
 
 ### Parameters
 
@@ -29,21 +29,21 @@ parse: ({
 ### Details
 
 :::info
-To parse data via the **parse()** method, you need to reset initial data in the constructor of Kanban
+To parse data via the **parse()** method, you need to reset initial data in the Kanban constructor
 
-```jsx
+~~~jsx {}
 new kanban.Kanban("#root", {
 	// resets initial data, to parse new ones
 	columns: [],
 	rows: [],
 	cards: []
 });
-```
+~~~
 :::
 
 ### Example
 
-```jsx {8-12}
+~~~jsx {8-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns: [],
@@ -56,6 +56,6 @@ board.parse({
 	cards,
 	rows
 });
-```
+~~~
 
-**Related article:** [Working with Data](../../../guides/working_with_data#loading-data-from-local-source)
+**Related articles:** [Working with Data](../../../guides/working_with_data#loading-data-from-local-source)

@@ -12,13 +12,16 @@ Selects a card by the specified ID
 
 ### Usage
 
-```js
-selectCard: ({ id: string | number, groupMode?: boolean }) => void;
-```
+~~~jsx {}
+selectCard: ({
+	id: string | number,
+	groupMode?: boolean
+}) => void;
+~~~
 
 ### Parameters
 
-- `id: string | number` - the **ID** of the selected card
+- `id: string | number` - the **ID** of the selected card (*mandatory*)
 - `groupMode?: boolean` - multiselecting (*false* by default)
 
 :::info
@@ -27,7 +30,7 @@ If you set the **groupMode** parameter to *true*, the **selectCard()** method wi
 
 ### Example
 
-```jsx {7-10}
+~~~jsx {7-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -38,4 +41,4 @@ board.selectCard({
 	id: 1,
 	groupMode: true
 });
-```
+~~~

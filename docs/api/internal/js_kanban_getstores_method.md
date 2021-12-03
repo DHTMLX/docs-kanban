@@ -12,24 +12,24 @@ Gets an object with the ***StateStore*** and ***DataStore*** objects of Kanban
 
 ### Usage
 
-```js
+~~~jsx {}
 api.getStores() => object;
-```
+~~~
 
 ### Returns
 
 The method returns an object with *StateStore* and *DataStore*:
 
-```js
+~~~jsx {}
 {
 	state: StateStore, // ( object )
 	data: DataStore // ( object )
 }
-```
+~~~
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -38,4 +38,4 @@ const board = new kanban.Kanban("#root", {
 // get the StateStore and DataStore objects of Kanban
 const stores = board.api.getStores();
 console.log(stores);
-```
+~~~

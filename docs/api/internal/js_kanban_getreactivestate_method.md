@@ -12,15 +12,15 @@ Gets an object with the reactive properties of the Kanban ***StateStore***
 
 ### Usage
 
-```js
+~~~jsx {}
 api.getReactiveState() => object;
-```
+~~~
 
 ### Returns
 
 The method returns an object with the following properties:
 
-```js
+~~~jsx {}
 {
 	dragItemId: {
 		subscribe: any,
@@ -35,11 +35,11 @@ The method returns an object with the following properties:
 	dragItemsCoords: {...},
 	selected: {...}
 }
-```  
+~~~  
 
 ### Example
 
-```jsx {8-11}
+~~~jsx {8-11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -51,4 +51,4 @@ board.api.getReactiveState().selected.subscribe((value) => {
 	console.log(value);
 	// other actions
 });
-```
+~~~

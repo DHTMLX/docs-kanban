@@ -12,7 +12,7 @@ Adds a **new card** into Kanban
 
 ### Usage
 
-```js
+~~~jsx {}
 addCard: ({
 	columnId: string | number,
 	id?: string | number,
@@ -20,11 +20,11 @@ addCard: ({
 	before?: string | number,
 	card?: object
 }) => void;
-```
+~~~
 
 ### Parameters
 
-- `columnId: string | number` - the **ID** of the target column
+- `columnId: string | number` - the **ID** of the target column (*mandatory*)
 - `id?: string | number` -  the **ID** of the new card
 - `rowId?: string | number` - the **ID** of the target row
 - `before?: string | number` - the **ID** of the card, before which the new card will be placed  
@@ -32,7 +32,7 @@ addCard: ({
 
 ### Example
 
-```jsx {7-12}
+~~~jsx {7-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -44,7 +44,7 @@ board.addCard({
 	columnId: "backlog",
 	card: { label: "New card" }
 });
-```
+~~~
 
 :::tip
 You can also specify the ID of the new card in the **card** object

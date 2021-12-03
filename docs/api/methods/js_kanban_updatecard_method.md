@@ -12,13 +12,13 @@ Updates the card data by its ID
 
 ### Usage
 
-```js
+~~~jsx {}
 updateCard: (config: object) => void;
-```
+~~~
 
 ### Parameters
 
-- `config: object` - the new data object of the current card
+- `config: object` - the new data object of the current card (*mandatory*)
 
 :::info
 Note, the **ID** of the card to be updated is required. Other card parameters can be found [**here**](../config/js_kanban_cards_config.md).
@@ -26,7 +26,7 @@ Note, the **ID** of the card to be updated is required. Other card parameters ca
 
 ### Example
 
-```jsx {7-13}
+~~~jsx {7-13}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -40,4 +40,4 @@ board.updateCard({
 	stage: "inprogress",
 	/*other parameters*/
 });
-```
+~~~

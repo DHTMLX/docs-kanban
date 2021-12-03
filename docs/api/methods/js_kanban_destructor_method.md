@@ -12,13 +12,13 @@ Removes all HTML elements of the Kanban, and detaches all related events
 
 ### Usage
 
-```js
+~~~jsx {}
 destructor: () => void;
-```
+~~~
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -26,4 +26,4 @@ const board = new kanban.Kanban("#root", {
 });
 // remove Kanban
 board.destructor();
-```
+~~~

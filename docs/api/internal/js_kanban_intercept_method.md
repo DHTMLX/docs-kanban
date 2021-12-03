@@ -12,14 +12,17 @@ Allows intercepting and preventing the inner events
 
 ### Usage
 
-```js
-api.intercept(event: string, callback: function) => void;
-```
+~~~jsx {}
+api.intercept(
+	event: string,
+	callback: function
+) => void;
+~~~
 
 ### Parameters
 
-- `event: string` - an event to be fired
-- `callback: function` - a callback to be performed
+- `event: string` - an event to be fired (*mandatory*)
+- `callback: function` - a callback to be performed (*mandatory*)
 
 ### Event list
 
@@ -39,7 +42,7 @@ api.intercept(event: string, callback: function) => void;
 
 ### Example
 
-```jsx {7-11}
+~~~jsx {7-11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -51,4 +54,4 @@ board.api.intercept("move-card", ({ id, columnId }) => {
 		return false;
 	}
 });
-```
+~~~

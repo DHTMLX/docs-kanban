@@ -12,9 +12,12 @@ Gets an array with data objects of all cards of the specified column (and row)
 
 ### Usage
 
-```js
-getAreaCards: ( columnId: string | number, rowId?: string | number ) => array;
-```
+~~~jsx {}
+getAreaCards: (
+	columnId: string | number,
+	rowId?: string | number
+) => array;
+~~~
 
 ### Parameters
 
@@ -33,7 +36,7 @@ If Kanban includes **columns** and **rows**, the method requires both the ***col
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -41,4 +44,4 @@ const board = new kanban.Kanban("#root", {
 });
 // get an array with the cards data objects of the specified column and row
 board.getAreaCards("column_id", "row_id");
-```
+~~~

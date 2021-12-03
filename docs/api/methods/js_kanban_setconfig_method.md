@@ -12,13 +12,13 @@ Sets the config parameters of the Kanban widget
 
 ### Usage
 
-```js
+~~~jsx {}
 setConfig: (config: object) => void;
-```
+~~~
 
 ### Parameters
 
-- `config: object` - the object of the Kanban configuration
+- `config: object` - the object of the Kanban configuration (*mandatory*)
 
 :::tip
 Using this method, you can set the configuration parameters of the Kanban widget as well as load data to it. The method changes only the parameters you passed
@@ -26,7 +26,7 @@ Using this method, you can set the configuration parameters of the Kanban widget
 
 ### Example
 
-```jsx {7-14}
+~~~jsx {7-14}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -41,4 +41,4 @@ board.setConfig({
 	editorShape,
 	/*other parameters*/
 });
-```
+~~~

@@ -12,9 +12,9 @@ Gets an array with ID(s) of the selected card(s)
 
 ### Usage
 
-```js
+~~~jsx {}
 getSelection: () => array;
-```
+~~~
 
 ### Returns
 
@@ -22,7 +22,7 @@ The method returns an array with ID(s) of the selected card(s)
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -30,4 +30,4 @@ const board = new kanban.Kanban("#root", {
 });
 
 board.getSelection();
-```
+~~~

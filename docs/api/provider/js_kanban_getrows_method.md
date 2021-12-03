@@ -16,9 +16,9 @@ The **getRows()** method is a part of the **RestDataProvider** service intended 
 
 ### Usage
 
-```js
+~~~jsx {}
 getRows: () => promise;
-```
+~~~
 
 ### Returns
 
@@ -26,7 +26,7 @@ The **getRows()** method sends a request to the server by the **GET** method and
 
 ### Example
 
-```jsx {2,7}
+~~~jsx {2,7}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
@@ -43,6 +43,6 @@ Promise.all([
 	});
 	board.api.setNext(restProvider);
 });
-```
+~~~
 
-**Related article:** [Working with Server](../../../guides/working_with_server)
+**Related articles:** [Working with Server](../../../guides/working_with_server)

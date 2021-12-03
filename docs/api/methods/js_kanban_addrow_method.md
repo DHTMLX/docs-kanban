@@ -12,13 +12,13 @@ Adds a **new row** into Kanban
 
 ### Usage
 
-```js
+~~~jsx {}
 addRow: ({
 	id?: string | number,
 	label?: string,
 	collapsed?: boolean
 }) => void;
-```
+~~~
 
 ### Parameters
 
@@ -28,7 +28,7 @@ addRow: ({
 
 ### Example
 
-```jsx {7-11}
+~~~jsx {7-11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -40,4 +40,4 @@ board.addRow({
 	label: "Extra row",
 	collapsed: false
 });
-```
+~~~

@@ -12,12 +12,12 @@ Adds a **new column** into Kanban
 
 ### Usage
 
-```js
+~~~jsx {}
 addColumn: ({
 	id?: string | number,
 	label?: string
 }) => void;
-```
+~~~
 
 ### Parameters
 
@@ -26,7 +26,7 @@ addColumn: ({
 
 ### Example
 
-```jsx {7-10}
+~~~jsx {7-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -37,4 +37,4 @@ board.addColumn({
 	id: "extra_column",
 	label: "Extra column"
 });
-```
+~~~

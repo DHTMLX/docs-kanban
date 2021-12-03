@@ -12,13 +12,13 @@ Sets new locale to the Kanban widget
 
 ### Usage
 
-```js
+~~~jsx {}
 setLocale: (locale: object) => void;
-```
+~~~
 
 ### Parameters
 
-- `locale: object` - the data object of the new locale
+- `locale: object` - the data object of the new locale (*mandatory*)
 
 :::info
 Using this method, you can set a built-in locale (en, ru, cn) as well as a custom one.
@@ -26,7 +26,7 @@ Using this method, you can set a built-in locale (en, ru, cn) as well as a custo
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -34,19 +34,19 @@ const board = new kanban.Kanban("#root", {
 });
 // set ru locale to Kanban
 board.setLocale(ru);
-```
+~~~
 
 :::info
-Toolbar of Kanban is a separate part of the interface. To change its locale, you need to call the **setLocal()** method for the Toolbar too.
+Toolbar of Kanban is a separate part of the interface. To change its locale, you need to call the **setLocale()** method for the Toolbar as well.
 :::
 
-```jsx {7}
+~~~jsx {7}
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", {
 	api: board.api
 });
-// set ru locale to the Toolbar
+// apply the ru locale to the Toolbar
 toolbar.setLocale(ru);
-```
+~~~
 
-**Related article:** [Localization](guides/localization.md)
+**Related articles:** [Localization](guides/localization.md)

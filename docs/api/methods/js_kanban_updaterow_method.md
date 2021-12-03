@@ -12,13 +12,13 @@ Updates the row data by its ID
 
 ### Usage
 
-```js
+~~~jsx {}
 updateRow: (config: object) => void;
-```
+~~~
 
 ### Parameters
 
-- `config: object` - the new data object of the current row
+- `config: object` - the new data object of the current row (*mandatory*)
 
 :::info
 Note, the ID of the row to be updated is required. Other row parameters can be found [**here**](../config/js_kanban_rows_config.md)
@@ -26,7 +26,7 @@ Note, the ID of the row to be updated is required. Other row parameters can be f
 
 ### Example
 
-```jsx {8-12}
+~~~jsx {8-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -39,4 +39,4 @@ board.updateRow({
 	label: "New Row",
 	collapsed: true
 });
-```
+~~~

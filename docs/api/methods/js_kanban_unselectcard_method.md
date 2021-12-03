@@ -12,9 +12,9 @@ Unselects card(s) by its ID
 
 ### Usage
 
-```js
+~~~jsx {}
 unselectCard: ({ id: string | number }) => void;
-```
+~~~
 
 :::info
 To unselect all cards, call the **unselectCard()** method without parameters
@@ -22,11 +22,11 @@ To unselect all cards, call the **unselectCard()** method without parameters
 
 ### Parameters
 
-- `id: string | number` - the **ID** of the card to be unselected
+- `id: string | number` - the **ID** of the card to be unselected (*mandatory*)
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -34,4 +34,4 @@ const board = new kanban.Kanban("#root", {
 });
 // unselect the card with the 1 ID
 board.unselectCard({ id: 1 });
-```
+~~~

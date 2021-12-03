@@ -12,13 +12,13 @@ Updates the column data by its ID
 
 ### Usage
 
-```js
+~~~jsx {}
 updateColumn: (config: object) => void;
-```
+~~~
 
 ### Parameters
 
-- `config: object` - the new data object of the current column
+- `config: object` - the new data object of the current column (*mandatory*)
 
 :::info
 Note, the **ID** of the column to be updated is required. Other column parameters can be found [**here**](../config/js_kanban_columns_config.md).
@@ -26,7 +26,7 @@ Note, the **ID** of the column to be updated is required. Other column parameter
 
 ### Example
 
-```jsx {7-10}
+~~~jsx {7-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -37,4 +37,4 @@ board.updateColumn({
 	id: "backlog",
 	label: "New Column"
 });
-```
+~~~

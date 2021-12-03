@@ -12,15 +12,15 @@ Gets an object with the current properties of the Kanban ***StateStore***
 
 ### Usage
 
-```js
+~~~jsx {}
 api.getState() => object;
-```
+~~~
 
 ### Returns
 
 The method returns an object with the following properties:
 
-```js
+~~~jsx {}
 {
 	dragItemId: string | number,
 	before: string | number,
@@ -31,11 +31,11 @@ The method returns an object with the following properties:
 	dragItemsCoords: array,
 	selected: array
 }
-```  
+~~~  
 
 ### Example
 
-```jsx {7}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -44,4 +44,4 @@ const board = new kanban.Kanban("#root", {
 // get the state of Kanban
 const state = board.api.getState();
 console.log(state);
-```
+~~~

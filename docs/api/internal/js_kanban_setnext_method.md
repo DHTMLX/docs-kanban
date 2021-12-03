@@ -12,17 +12,17 @@ Allows adding some action into the **Event Bus** order
 
 ### Usage
 
-```js
+~~~jsx {}
 api.setNext(next: any) => void;
-```
+~~~
 
 ### Parameters
 
-- `next: any` - the action to be included into the **Event Bus** order
+- `next: any` - the action to be included into the **Event Bus** order  (*mandatory*)
 
 ### Example
 
-```jsx {15}
+~~~jsx {15}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
@@ -39,7 +39,7 @@ Promise.all([
 	});
 	board.api.setNext(restProvider);
 });
-```
+~~~
 
 :::info
 You need to include **RestDataProvider** into the **Event Bus** order to perform operations with data (*adding*, *deleting* etc) and send the corresponding requests to the server

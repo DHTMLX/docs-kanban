@@ -12,19 +12,19 @@ Moves a card to the specified column (and row)
 
 ### Usage
 
-```js
+~~~jsx {}
 moveCard: ({
 	id: string | number,
 	columnId: string | number,
 	rowId?: string | number,
 	before?: string | number
 }) => void;
-```
+~~~
 
 ### Parameters
 
-- `id: string | number` - the **ID** of the card that will be moved
-- `columnId: string | number` - the **ID** of the column the card will be placed into
+- `id: string | number` - the **ID** of the card that will be moved (*mandatory*)
+- `columnId: string | number` - the **ID** of the column the card will be placed into (*mandatory*)
 - `rowId?: string | number` - the **ID** of the row the card will be placed into
 - `before?: string | number` - the **ID** of the card, before which the new card will be placed
 
@@ -34,7 +34,7 @@ If you specify the **rowKey** property in the widget config, the **rowId** param
 
 ### Example
 
-```jsx {9-14}
+~~~jsx {9-14}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -49,4 +49,4 @@ board.moveCard({
 	rowId: "feature",
 	before: 8
 });
-```
+~~~

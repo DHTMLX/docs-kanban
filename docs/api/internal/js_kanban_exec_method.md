@@ -12,14 +12,17 @@ Allows triggering the inner events
 
 ### Usage
 
-```js
-api.exec(event: string, config: object) => void;
-```
+~~~jsx {}
+api.exec(
+	event: string,
+	config: object
+) => void;
+~~~
 
 ### Parameters
 
-- `event: string` - an event to be fired
-- `config: object` - the config object with parameters
+- `event: string` - an event to be fired (*mandatory*)
+- `config: object` - the config object with parameters (*mandatory*)
 
 ### Event list
 
@@ -39,7 +42,7 @@ api.exec(event: string, config: object) => void;
 
 ### Example
 
-```jsx {8}
+~~~jsx {8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -48,4 +51,4 @@ const board = new kanban.Kanban("#root", {
 
 // select the card with the 1 ID
 board.api.exec("select-card", { id: 1 });
-```
+~~~
