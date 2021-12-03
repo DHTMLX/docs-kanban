@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.setNext()
-title: Kanban api.setNext method
-description: You can learn about the api.setNext method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: setNext Method
+description: You can learn about the setNext method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # api.setNext()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: getRows()
-title: Kanban getRows method
-description: You can learn about the getRows method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: getRows REST Method
+description: You can learn about the getRows REST method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # getRows()

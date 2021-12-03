@@ -1,7 +1,7 @@
 ---
 sidebar_label: How to start
-title: How to start with Kanban
-description: You can have an overview of the JavaScript Kanban documentation. Browse developer guides and API reference and try out code examples and live demos.
+title: How to Start
+description: You can explore how to start working with DHTMLX Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # How to start

@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.on()
-title: Kanban api.on method
-description: You can learn about the api.on method in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: on Method
+description: You can learn about the on method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # api.on()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardTemplate
-title: Kanban cardTemplate property
-description: You can learn about the cardTemplate property in the documentation of the JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos.
+title: cardTemplate Config
+description: You can learn about the cardTemplate config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # cardTemplate

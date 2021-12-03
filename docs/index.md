@@ -1,8 +1,8 @@
 ---
 sidebar_label: Kanban overview
-title: Kanban overview
+title: JavaScript Kanban Overview
 slug: /
-description: You can have an overview of the JavaScript Kanban documentation. Browse developer guides and API reference and try out code examples and live demos.
+description: You can have an overview of DHTMLX JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # JavaScript Kanban overview
