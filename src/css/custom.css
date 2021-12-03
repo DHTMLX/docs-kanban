@@ -156,7 +156,7 @@ margin-bottom: var(--ifm-leading);
 /* small code block */
 
 code {
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 6px 8px;
   font-weight: 600;
 }
@@ -167,10 +167,11 @@ code {
 
 .markdown ul  {
   margin-top: 10px;
+	line-height: 38px;
 }
 
 ::marker {
-  color: #9c9c9c;
+  color: *#9c9c9c*;
 }
 
 /* end list */
