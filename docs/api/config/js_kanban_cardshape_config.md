@@ -75,6 +75,7 @@ To configure the card appearance, you can specify the following parameters (fiel
 
 - `label: boolean | { show?: boolean }` - show/hide a ***card label*** (*mandatory*)
 - `progress?: boolean | { show?: boolean }` - show/hide a ***card progress bar***
+- `start_date?: boolean | { show?: boolean }` - show/hide a ***card start date***
 - `end_date?: boolean | { show?: boolean }` - show/hide a ***card end date***
 - `menu?: boolean | { show?: boolean }` - show/hide a ***card menu***
 - `attached?: boolean | { show?: boolean }` - show/hide a ***card attachment***
