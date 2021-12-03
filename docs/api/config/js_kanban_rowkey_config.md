@@ -12,9 +12,9 @@ Defines belonging the card to the **row**
 
 ### Usage
 
-```js
+~~~jsx {}
 rowKey?: string
-```  
+~~~  
 
 :::info
 To distribute the cards into rows, you need to specify a **custom key** and set it to the ID of the desired row (in the card data object). The **rowKey** property needs to be set to this custom key in the widget config
@@ -22,7 +22,7 @@ To distribute the cards into rows, you need to specify a **custom key** and set 
 
 ### Example
 
-```jsx {4,8,15}
+~~~jsx {4,8,16}
 const cards = [
 	{
 		label: "Backlog task",
@@ -37,6 +37,8 @@ const cards = [
 new kanban.Kanban("#root", {
 	columns,
 	cards,
-	rowKey: "row_custom_key"
+	rows,
+	rowKey: "row_custom_key",
+	// other parameters
 });
-```
+~~~

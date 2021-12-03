@@ -12,15 +12,22 @@ An array of objects containing the **columns data**. *This parameter is mandator
 
 ### Usage
 
-```js
+~~~jsx {}
 columns: [
 	{
-		id: string, // a column ID
-		label?: string // a column label
+		id: string,
+		label?: string
 	},
 	{...} // other columns data
 ]
-```
+~~~
+
+### Parameters
+
+For each column you can specify the following parameters (data):
+
+- `id: string` - a column ID. It is used for managing the column via the corresponding methods (*mandatory*)
+- `label?: string` - a column label. It is displayed in the column section
 
 :::info
 If you want to load the columns data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **columns** property to the empty array
@@ -28,7 +35,7 @@ If you want to load the columns data via the [**parse()**](../../methods/js_kanb
 
 ### Example
 
-```jsx {1-5,8}
+~~~jsx {1-5,8}
 const columns = [
 	{ label: "Backlog", id: "backlog" },
 	{ label: "In progress", id: "inprogress" },
@@ -37,6 +44,7 @@ const columns = [
 
 new kanban.Kanban("#root", {
 	columns,
-	cards
+	cards,
+	// other parameters
 });
-```
+~~~

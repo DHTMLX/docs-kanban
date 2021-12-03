@@ -12,11 +12,11 @@ Returns and applies a new HTML **template** of the card
 
 ### Usage
 
-```js
+~~~jsx
 function cardTemplate({ cardFields, selected, dragging, cardShape }){
 	return "HTML template of the card";
 }
-```
+~~~
 ### Parameters
 
 - `cardFields: object` - gets the data object of the card
@@ -26,7 +26,7 @@ function cardTemplate({ cardFields, selected, dragging, cardShape }){
 
 ### Example
 
-```jsx {21}
+~~~jsx {1-17,22}
 function cardTemplate({ cardFields, selected, dragging, cardShape }){
 	const { label, color } = cardFields;
 	if (selected) {
@@ -46,9 +46,11 @@ function cardTemplate({ cardFields, selected, dragging, cardShape }){
 }
 
 new kanban.Kanban("#root", {
-	...,
+	cards,
+	columns,
 	cardTemplate
+	// other parameters
 });
-```
+~~~
 
-**Related article:** [Customization](../../../guides/customization#custom-cards)
+**Related articles:** [Customization](../../../guides/customization#custom-cards)

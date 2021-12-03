@@ -8,31 +8,62 @@ description: You can learn about the readonly property in the documentation of t
 
 ### Description
 
-Enables/disables ***editing***, ***adding***, ***selecting***, ***dragging***  of the cards
+Enables/disables ***editing***, ***adding***, ***selecting***, ***dragging*** the cards
 
 ### Usage
 
-```js
-readonly?: boolean // enables/disables readonly mode of Kanban (false by default)
+~~~js {}
+readonly?: boolean
 //or
 readonly?: {
-	edit?: boolean, // enables/disables editing of the cards (true by default)
-	add?: boolean, // enables/disables adding of the new cards (true by default)
-	select?: boolean, // enables/disables selecting of the cards (true by default)
-	dnd?: boolean // enables/disables dragging of the cards (true by default)
+	edit?: boolean,
+	add?: boolean,
+	select?: boolean,
+	dnd?: boolean
 }
-```
+~~~
+
+### Parameters
+
+To configure the *readonly mode*, you can use the *short* or *extended* parameters.
+
+The *short* parameter:
+- `readonly?: boolean` - enables/disables ***readonly mode*** of Kanban
+
+The *extended* parameters:
+- `readonly?: object` - an object with extended settings. Here you can specify the following parameters:
+	- `edit?: boolean` - enables/disables ***editing*** of the cards
+	- `add?: boolean` - enables/disables ***adding*** of the new cards
+	- `select?: boolean` - enables/disables ***selecting*** of the cards
+	- `dnd?: boolean`  - enables/disables ***dragging*** of the cards
+
+### Default config
+
+~~~jsx {}
+readonly: false // readonly mode is disabled
+//or
+readonly: {
+	edit: true, // editing is enabled
+	add: true, // adding is enabled
+	select: true, // selecting is enabled
+	dnd: true // dragging is enabled
+}
+~~~
+
 ### Example
 
-```jsx {3-8}
+~~~jsx {3-8}
 new kanban.Kanban("#root", {
-	...,
+	cards,
+	columns,
 	readonly: {
 		edit: false, // disable editing
 		add: true, // enable addind
 		select: false, // disable selecting
 		dnd: true // enable dragging
-	}
+	},
+	// other parameters
 });
-```
+~~~
+
 **Related sample:** [Readonly mode](https://snippet.dhtmlx.com/b8x84yln)

@@ -8,58 +8,106 @@ description: You can learn about the cardShape property in the documentation of 
 
 ### Description
 
-The **card configs** that manage the appearance of the Kanban board
+The **card configs** for managing the appearance of the Kanban board
 
 ### Usage
 
-```js
+~~~jsx {}
 cardShape?: {
-	label: boolean | { show?: boolean }, // to show/hide a card label
-	description?: boolean | { show?: boolean }, // to show/hide a card description
-	progress?: boolean | { show?: boolean }, // to show/hide a card progress bar
-	start_date?: boolean | { show?: boolean }, // to show/hide the start date
-	end_date?: boolean | { show?: boolean }, // to show/hide the end date
-	menu?: boolean | { show?: boolean }, // to show/hide a card menu
-	attached?: boolean | { show?: boolean }, // to show/hide an attachment
-	users?: { // to show/hide users data
+	label: boolean | { show?: boolean },
+	description?: boolean | { show?: boolean },
+	progress?: boolean | { show?: boolean },
+	start_date?: boolean | { show?: boolean },
+	end_date?: boolean | { show?: boolean },
+	menu?: boolean | { show?: boolean },
+	attached?: boolean | { show?: boolean },
+	users?: {
 		show?: boolean,
 		values?: [
 			{
-				id: string | number, // a user ID
-				path?: string, // a path to the user picture
-				label?: string // a user name
+				id: string | number,
+				path?: string,
+				label?: string
 			},
-			{...}
+			{...} // other users data
 		]
 	},
-	priority?: { // to show/hide a card priority
+	priority?: {
 		show?: boolean,
 		values?: [
 			{
-				id: string | number, // a priority ID
-				color: string, // a valid HEX code
-				label?: string // a priority name
+				id: string | number,
+				color: string,
+				label?: string
 			},
-			{...}
+			{...} // other priorities data
 		]
 	},
-	color?: boolean | { show?: boolean }, // to show/hide a colored top line of a card
-	cover?: boolean | { show?: boolean }, // to show/hide a card image
-	headerFields?: [ // an array of custom fields
+	color?: boolean | { show?: boolean },
+	cover?: boolean | { show?: boolean },
+	headerFields?: [
 		{
-			key: string, // a key of the custom field
-			// available types:
-			// text, textarea, date, select, combo, multiselect, files, color, progress
-			type: string, // a type of the custom field
+			key: string,
+			css?: string,
+			label?: string
 		},
-		{...}
+		{...} // other fields data
 	]
 }
-```
+~~~
+
+### Parameters
+
+:::info
+In some cases, you can set the parameter to the *short* or *extended* value. See the code below:
+
+~~~jsx {3,6}
+	label: boolean | { show?: boolean }
+	// short value
+	label: true
+	// or
+	// full value
+	label: { show: true }
+~~~
+:::
+
+To configure the card appearance, you can specify the following parameters (fields):
+
+- `label: boolean | { show?: boolean }` - show/hide a ***card label*** (*mandatory*)
+- `progress?: boolean | { show?: boolean }` - show/hide a ***card progress bar***
+- `end_date?: boolean | { show?: boolean }` - show/hide a ***card end date***
+- `menu?: boolean | { show?: boolean }` - show/hide a ***card menu***
+- `attached?: boolean | { show?: boolean }` - show/hide a ***card attachment***
+
+- `users?: object` - an object with ***users*** parameters
+	- `show?: boolean` - show/hide the ***assigned users*** data
+	- `values?: array` - an array of objects with users data. Here you can specify the following fields:
+		- `id: string | number` - a user ID (*mandatory*)
+		- `path?: string` - a path to the user picture
+		- `label?: string` - a user name
+
+- `priority?: object` - an object with ***priorities*** parameters
+	- `show?: boolean` - show/hide a ***card priority***
+	- `values?: array` - an array of objects with priorities data. Here you can specify the following fields:
+		- `id: string | number` - a priority ID (*mandatory*)
+		- `color: string` - a valid HEX code (*mandatory*)
+		- `label?: string` - a priority name
+
+- `color?: boolean | { show?: boolean }` - show/hide a colored ***top line*** of a card
+- `cover?: boolean | { show?: boolean }` - show/hide a ***card picture***
+
+- `headerFields?: array` - an array of objects with ***custom fields*** data. Here you can specify the following parameters:
+	- `key: string` - a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property (*mandatory*)
+	- `css?: string` - a css class of the custom field
+	- `label?: string` - a label of the custom field
+
+:::info
+Unless you specify the cards settings via the **cardShape** property, the widget will apply a **defaultCardShape** set of parameters!
+:::
 
 ### Default config
 
-```js
+~~~jsx {}
 const defaultPriorities = [
 	{ id: 1, color: "#FF5252", label: "high" },
 	{ id: 2, color: "#FFC975", label: "medium" },
@@ -82,12 +130,12 @@ const defaultCardShape = {
 	attached: false,
 	menu: true
 };
-```
+~~~
 
 ### Example
 
-```jsx {39}
-const users = [ // user data
+~~~jsx {42}
+const users = [ // users data
 	{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
 ];
@@ -106,27 +154,31 @@ const cardShape = { // card configs
 	end_date: true,
 	menu: true,
 	attached: true,
-	priority: {
-		show: true,
-		values: cardPriority
-	},
 	users: {
 		show: true,
 		values: users
 	},
+	priority: {
+		show: true,
+		values: cardPriority
+	},
+	color: false,
+	cover: false,
 	headerFields: [
-		{
+		{ // custom field
 			key: "sprint",
-			type: "text",
-			label: "Custom field"
+			css: "custom_style",
+			label: "Sprint"
 		}
 	]
 };
 
 new kanban.Kanban("#root", {
-	...,
-	cardShape
+	cards,
+	columns,
+	cardShape,
+	// other parameters
 });
-```
+~~~
 
-**Related article:** [Configuration](../../../guides/configuration#cards)
+**Related articles:** [Configuration](../../../guides/configuration#cards)

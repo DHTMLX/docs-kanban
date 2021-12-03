@@ -12,17 +12,24 @@ An array of controls located in the toolbar of Kanban
 
 ### Usage
 
-```jsx
+~~~jsx {}
 items?: [
-	"search", // (string) a search bar
-	"controls", // (string) controls for adding the columns and rows
-	// (string | function) custom controls
+	"search",
+	"controls",
+	custom_control // string or function
 ]
-```
+~~~
+
+### Parameters
+
+- `items?: array` - an array with settings for configuring the toolbar controls. Here you can specify the following parameters:
+	- `"search"` - (*string*) a search bar
+	- `"controls"` - (*string*) controls for adding the columns and rows
+	- **custom_control** - custom control. Here you can specify the custom control(s) both as a *string* or *function*. See the [Customization](../../../guides/customization#custom-toolbar) section
 
 ### Example
 
-```jsx {9-12}
+~~~jsx {9-12}
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards,
@@ -36,6 +43,6 @@ new kanban.Toolbar("#toolbar", {
 		"controls"
 	]
 });
-```
+~~~
 
-**Related article:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
+**Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)

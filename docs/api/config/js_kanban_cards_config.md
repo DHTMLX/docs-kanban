@@ -12,33 +12,55 @@ An array of objects containing the **cards data**. *This parameter is mandatory!
 
 ### Usage
 
-```js
+~~~jsx {}
 cards: [
 	{
-		id?: string | number, // a card ID
-		label?: string, // a card label
-		description?: string, // a value of the description section
-		progress?: number, // a value of the progress bar (from 0 to 100)
-		users?: array, // an array with the users IDs
-		start_date?: Date, // a value of the start date
-		end_date?: Date, // a value of the end date
-		color?: string, // a valid HEX color code
-		priority?: string | number, // a card priority ID
-		attached?: [ // an array with the data of the attached file
+		id?: string | number,
+		label?: string,
+		description?: string,
+		progress?: number,
+		users?: array,
+		start_date?: Date,
+		end_date?: Date,
+		color?: string,
+		priority?: string | number,
+		attached?: [
 			id: string | number,
-			url?: string, // a link to the file to be attached
-			previewURL?: string, // a link to the preview image
-			coverURL?: string, // a link to the image to be set as a cover
-			name?: string, // a file name
-			// enables a cover image
-			// if true, the cover image will be downloaded via the "coverURL"
+			url?: string,
+			previewURL?: string,
+			coverURL?: string,
+			name?: string,
 			isCover?: boolean
 		],
-		[custom_key: string]?: any // a custom key of the card
+		[custom_key: string]?: any
 	},
 	{...} // other cards data
 ]
-```
+~~~
+
+### Parameters
+
+For each card you can specify the following parameters (data):
+
+- `id?: string | number` - a card ID. It is used for managing the card via the corresponding methods
+- `label?: string` - a card label. It is displayed in the *Label* field
+- `description?: string` - a card description. It is displayed in the *Description* field
+- `progress?: number` - a progress bar value. You can specify the value in the range from 0 to 100 points. It is displayed in the *Progress bar* field
+- `users?: array` - an array with the assigned users IDs. To specify the assigned users, you need to define an array with users data in the [cardShape](../js_kanban_cardshape_config) property (see the ***users*** parameter). The users are displayed in the *Users* field
+- `start_date?: Date` - a start date value. It is displayed in the *Start date* field
+- `end_date?: Date` - an end date value. It is displayed in the *End date* field
+- `color?: string` - a valid HEX color code. It is the color of the card top line
+- `priority?: string | number` - a card priority ID. To specify the card priority, you need to define an array with priorities data in the [cardShape](../js_kanban_cardshape_config) property (see the *priority* parameter). It is displayed in the *Priority* field
+
+- `attached?: array` - an array with data of the attached file(s). It is displayed in the *Attachment* field. Here you can specify the following parameters:
+	- `id: string | number` - an ID of the attached file (*mandatory*)
+	- `url?: string` - a path to the file to be attached
+	- `previewURL?: string` - a path to the preview image
+	- `coverURL?: string` - a path to the image to be set as a cover
+	- `name?: string` - a file name
+	- `isCover?: boolean` - enables a cover image. If ***true***, the cover image will be downloaded via the "coverURL" url
+
+- `[custom_key: string]?: any` - a custom key of the card. You can specify the custom keys to place the card into column and row. See the [columnKey](../js_kanban_columnkey_config) and [rowKey](../js_kanban_rowkey_config) properties
 
 :::info
 If you want to load the cards data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **cards** property to the empty array
@@ -46,11 +68,10 @@ If you want to load the cards data via the [**parse()**](../../methods/js_kanban
 
 ### Example
 
-```jsx {1-16,20}
+~~~jsx {1-29,33}
 const cards = [
 	{
 		id: 1,
-		stage: "backlog",
 		label: "Integration with React",
 		description: "Some description",
 		progress: 25,
@@ -59,13 +80,30 @@ const cards = [
 		end_date: new Date("01/15/2021"),
 		color: "#65D3B3",
 		priority: 1,
-		type: "feature", // custom field
+		attached: [
+			{
+				id: 234,
+				url: "../assets/img-1.jpg",
+				previewURL: "../assets/img-1.jpg",
+				coverURL: "../assets/img-1.jpg",
+				name: "img-1.jpg",
+				isCover: true
+			},
+			{...} // other attached files data
+		],
+		// custom field to place the card into the "feature" row (rowKey is required)
+		type: "feature",
+		// custom field to place the card into the "backlog" column (columnKey is required)
+		stage: "backlog"
 	},
 	{...} // other cards data
 ];
 
 new kanban.Kanban("#root", {
 	columns,
-	cards
+	cards,
+	// other parameters
 });
-```
+~~~
+
+**Related articles:** [Working with data](../../../guides/working_with_data)

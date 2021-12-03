@@ -12,19 +12,27 @@ Enables/disables an **autosave mode** of Kanban
 
 ### Usage
 
-```js
+~~~jsx {}
 editorAutoSave?: boolean // (true by default)
-```
+~~~
 
 :::info
 Using this parameter, you can enable/disable an autosave mode of Kanban. If you set the **editorAutoSave** property to *false*, the editor will display the "Save" button to save edited data
 :::
 
+### Default config
+
+~~~jsx {}
+editorAutoSave: true
+~~~
+
 ### Example
 
-```jsx {3}
+~~~jsx {4}
 new kanban.Kanban("#root", {
-	...,
-	editorAutoSave: false // disable autosaving
+	columns,
+	cards,
+	editorAutoSave: false, // disable autosaving
+	// other parameters
 });
-```
+~~~
