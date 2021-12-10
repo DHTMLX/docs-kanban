@@ -48,7 +48,6 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-
 // select the card with the 1 ID
 board.api.exec("select-card", { id: 1 });
 ~~~

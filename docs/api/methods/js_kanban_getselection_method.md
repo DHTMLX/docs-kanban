@@ -28,6 +28,6 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-
+// gets an array with IDs of the selected cards
 board.getSelection();
 ~~~

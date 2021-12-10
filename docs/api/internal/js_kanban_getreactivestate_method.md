@@ -45,7 +45,6 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-
 // subscribe on the card selection
 board.api.getReactiveState().selected.subscribe((value) => {
 	console.log(value);
