@@ -8,7 +8,7 @@ description: You can learn about the setLocale method in the documentation of th
 
 ### Description
 
-Sets new locale to the Kanban widget
+Applies new locale to the Kanban widget
 
 ### Usage
 
@@ -18,7 +18,7 @@ setLocale: (locale: object) => void;
 
 ### Parameters
 
-- `locale: object` - the data object of the new locale (*mandatory*)
+- `locale: object` - a data object of the new locale (*mandatory*)
 
 :::info
 Using this method, you can set a built-in locale (en, ru, cn) as well as a custom one.
@@ -30,23 +30,25 @@ Using this method, you can set a built-in locale (en, ru, cn) as well as a custo
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
-	cards
+	cards,
+	locale: kanban.cn // the "cn" is set by default
 });
-// set ru locale to Kanban
-board.setLocale(ru);
+// apply "ru" locale to Kanban
+board.setLocale(kanban.ru);
 ~~~
 
 :::info
-Toolbar of Kanban is a separate part of the interface. To change its locale, you need to call the **setLocale()** method for the Toolbar as well.
+The Toolbar of Kanban is a separate part of the interface. To change its locale, you need to call the **setLocale()** method for the Toolbar as well.
 :::
 
 ~~~jsx {7}
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", {
-	api: board.api
+	api: board.api,
+	locale: kanban.cn // the "cn" is set by default
 });
-// apply the ru locale to the Toolbar
-toolbar.setLocale(ru);
+// apply the "ru" locale to the Toolbar
+toolbar.setLocale(kanban.ru);
 ~~~
 
 **Related articles:** [Localization](guides/localization.md)

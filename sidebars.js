@@ -1,34 +1,34 @@
 module.exports = {
-  docs: [
-    {
-      type: "doc",
-      id: "index"
-    },
-    {
-      type: "doc",
-      id: "how_to_start"
-    },
+	docs: [
 		{
 			type: "doc",
-			id: "whats_new"
+			id: "index"
 		},
-    {
-      type: "category",
-      label: "API",
-      collapsible: true,
-      collapsed: false,
-      items: [
-        "api/api_overview",
-				// JS Kanban methods
-        {
-          type: "category",
-          label: "Kanban methods",
-          collapsible: true,
-          collapsed: true,
-          items: [
+		{
+			type: "doc",
+			id: "how_to_start"
+		},
+			{
+				type: "doc",
+				id: "whats_new"
+			},
+		{
+			type: "category",
+			label: "API",
+			collapsible: true,
+			collapsed: false,
+			items: [
+				"api/api_overview",
+					// JS Kanban methods
+				{
+					type: "category",
+					label: "Kanban methods",
+					collapsible: true,
+					collapsed: true,
+					items: [
 						// A
-            "api/methods/js_kanban_addcard_method",
-            "api/methods/js_kanban_addcolumn_method",
+						"api/methods/js_kanban_addcard_method",
+						"api/methods/js_kanban_addcolumn_method",
 						"api/methods/js_kanban_addrow_method",
 						// D
 						"api/methods/js_kanban_deletecard_method",
@@ -54,8 +54,8 @@ module.exports = {
 						"api/methods/js_kanban_updatecard_method",
 						"api/methods/js_kanban_updatecolumn_method",
 						"api/methods/js_kanban_updaterow_method"
-          ]
-        },
+					]
+				},
 				// JS Kanban internal methods
 				{
 					type: "category",
@@ -115,6 +115,8 @@ module.exports = {
 						// E
 						"api/config/js_kanban_editorautosave_config",
 						"api/config/js_kanban_editorshape_config",
+						// L
+						"api/config/js_kanban_locale_config",
 						// R
 						"api/config/js_kanban_readonly_config",
 						"api/config/js_kanban_rowkey_config",
@@ -125,21 +127,21 @@ module.exports = {
 						"api/config/toolbar_items_config"
 					]
 				},
-      ]
-    },
-    {
-      type: "category",
-      label: "Guides",
-      collapsible: true,
-      collapsed: true,
-      items: [
+			]
+		},
+		{
+			type: "category",
+			label: "Guides",
+			collapsible: true,
+			collapsed: true,
+			items: [
 				"guides/initialization",
 				"guides/configuration",
 				"guides/customization",
 				"guides/localization",
 				"guides/working_with_data",
 				"guides/working_with_server"
-      ]
-    }
-  ]
+			]
+		}
+	]
 };

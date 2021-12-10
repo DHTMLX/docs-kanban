@@ -256,8 +256,8 @@ const cn = {
 
 To apply a custom locale you need to:
 
-- create the custom locale (or modify the existed one) and provide translation for all text labels in Kanban (it can be any language you need)
-- apply the new locale by calling the [**setLocale()**](api/methods/js_kanban_setlocale_method.md) method, that takes an object with translation (custom locale) as a parameter.
+- create the custom locale (or modify the existed one) and provide translations for all text labels in Kanban (it can be any language you need)
+- apply the new locale via the [**locale**](api/config/js_kanban_locale_config.md) property or by calling the [**setLocale()**](api/methods/js_kanban_setlocale_method.md) method, that takes an object with translations (custom locale) as a parameter
 
 ## Example
 
