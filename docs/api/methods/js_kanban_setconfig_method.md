@@ -18,7 +18,7 @@ setConfig: (config: object) => void;
 
 ### Parameters
 
-- `config: object` - the object of the Kanban configuration (*mandatory*)
+- `config: object` - the object of the Kanban configuration (*mandatory*). See the full list of the parameters [here](api/api_overview.md#kanban-properties)
 
 :::tip
 Using this method, you can set the configuration parameters of the Kanban widget as well as load data to it. The method changes only the parameters you passed
