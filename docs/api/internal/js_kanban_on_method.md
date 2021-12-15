@@ -48,7 +48,7 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-
+// output the card data in console when its moving
 board.api.on("move-card", ({ id, columnId }) => {
 	console.log({ id, columnId });
 });
