@@ -36,7 +36,7 @@ new kanban.Toolbar("#toolbar", {
 
 | Name                                                      | Description                                              |
 | ----------------------------------------------------------| ---------------------------------------------------------|
-| [addCard()](../methods/js_kanban_addcard_method)          | adds a new card into Kanban                              |
+| [](api/methods/js_kanban_addcard_method.md)               | @getshort(api/methods/js_kanban_addcard_method.md)       |
 | [addColumn()](../methods/js_kanban_addcolumn_method)      | adds a new column into Kanban                            |
 | [addRow()](../methods/js_kanban_addrow_method)            | adds a new row into Kanban                               |
 | [deleteCard()](../methods/js_kanban_deletecard_method)    | removes a card from Kanban                               |
