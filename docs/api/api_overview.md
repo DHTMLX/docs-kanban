@@ -37,26 +37,26 @@ new kanban.Toolbar("#toolbar", {
 | Name                                                      | Description                                              |
 | ----------------------------------------------------------| ---------------------------------------------------------|
 | [](api/methods/js_kanban_addcard_method.md)               | @getshort(api/methods/js_kanban_addcard_method.md)       |
-| [addColumn()](../methods/js_kanban_addcolumn_method)      | adds a new column into Kanban                            |
-| [addRow()](../methods/js_kanban_addrow_method)            | adds a new row into Kanban                               |
-| [deleteCard()](../methods/js_kanban_deletecard_method)    | removes a card from Kanban                               |
-| [deleteColumn()](../methods/js_kanban_deletecolumn_method)| removes a column from Kanban                             |
-| [deleteRow()](../methods/js_kanban_deleterow_method)      | removes a row from Kanban                                |
-| [destructor()](../methods/js_kanban_destructor_method)    | removes Kanban                                           |
-| [getAreaCards()](../methods/js_kanban_getareacards_method)| gets an array of the data objects of the cards           |
-| [getCard()](../methods/js_kanban_getcard_method)          | gets the data object of the card by the specified ID     |
-| [getSelection()](../methods/js_kanban_getselection_method)| gets an array of IDs of the selected cards               |
-| [moveCard()](../methods/js_kanban_movecard_method)        | moves a card to the specified column (and row)           |
-| [parse()](../methods/js_kanban_parse_method)              | loads data into Kanban                                   |
-| [selectCard()](../methods/js_kanban_selectcard_method)    | selects a card by the specified ID                       |
-| [serialize()](../methods/js_kanban_serialize_method)      | serializes the widget data to JSON                       |
-| [setConfig()](../methods/js_kanban_setconfig_method)      | sets the config parameters                               |
-| [setLocale()](../methods/js_kanban_setlocale_method)      | applies a new locale                                     |
-| [setSearch()](../methods/js_kanban_setsearch_method)      | looks for the needed cards by the specified parameters   |
-| [unselectCard()](../methods/js_kanban_unselectcard_method)| unselects the card(s) by the specified ID                |
-| [updateCard()](../methods/js_kanban_updatecard_method)    | updates the card data by the specified ID                |
-| [updateColumn()](../methods/js_kanban_updatecolumn_method)| updates the column data by the specified ID              |
-| [updateRow()](../methods/js_kanban_updaterow_method)      | updates the row data by the specified ID                 |
+| [](api/methods/js_kanban_addcolumn_method.md)             | @getshort(api/methods/js_kanban_addcolumn_method.md)     |
+| [](api/methods/js_kanban_addrow_method.md)                | @getshort(api/methods/js_kanban_addrow_method.md)        |
+| [](api/methods/js_kanban_deletecard_method.md)            | @getshort(api/methods/js_kanban_deletecard_method.md)    |
+| [](api/methods/js_kanban_deletecolumn_method.md)          | @getshort(api/methods/js_kanban_deletecolumn_method.md)  |
+| [](api/methods/js_kanban_deleterow_method.md)             | @getshort(api/methods/js_kanban_deleterow_method.md)     |
+| [](api/methods/js_kanban_destructor_method.md)            | @getshort(api/methods/js_kanban_destructor_method.md)    |
+| [](api/methods/js_kanban_getareacards_method.md)          | @getshort(api/methods/js_kanban_getareacards_method.md)  |
+| [](api/methods/js_kanban_getcard_method.md)               | @getshort(api/methods/js_kanban_getcard_method.md)       |
+| [](api/methods/js_kanban_getselection_method.md)          | @getshort(api/methods/js_kanban_getselection_method.md)  |
+| [](api/methods/js_kanban_movecard_method.md)              | @getshort(api/methods/js_kanban_movecard_method.md)      |
+| [](api/methods/js_kanban_parse_method.md)                 | @getshort(api/methods/js_kanban_parse_method.md)         |
+| [](api/methods/js_kanban_selectcard_method.md)            | @getshort(api/methods/js_kanban_selectcard_method.md)    |
+| [](api/methods/js_kanban_serialize_method.md)             | @getshort(api/methods/js_kanban_serialize_method.md)     |
+| [](api/methods/js_kanban_setconfig_method.md)             | @getshort(api/methods/js_kanban_setconfig_method.md)     |
+| [](api/methods/js_kanban_setlocale_method.md)             | @getshort(api/methods/js_kanban_setlocale_method.md)     |
+| [](api/methods/js_kanban_setsearch_method.md)             | @getshort(api/methods/js_kanban_setsearch_method.md)     |
+| [](api/methods/js_kanban_unselectcard_method.md)          | @getshort(api/methods/js_kanban_unselectcard_method.md)  |
+| [](api/methods/js_kanban_updatecard_method.md)            | @getshort(api/methods/js_kanban_updatecard_method.md)    |
+| [](api/methods/js_kanban_updatecolumn_method.md)          | @getshort(api/methods/js_kanban_updatecolumn_method.md)  |
+| [](api/methods/js_kanban_updaterow_method.md)             | @getshort(api/methods/js_kanban_updaterow_method.md)     |
 
 ## Kanban internal API
 
@@ -64,41 +64,41 @@ new kanban.Toolbar("#toolbar", {
 
 | Name                                                      | Description                                                  |
 | ----------------------------------------------------------| ------------------------------------------------------------ |
-| [api.exec()](../internal/js_kanban_exec_method)           | allows triggering the inner events                           |
-| [api.intercept()](../internal/js_kanban_intercept_method) | allows intercepting and preventing the inner events          |
-| [api.on()](../internal/js_kanban_on_method)               | allows attaching a handler to the inner events               |
-| [api.setNext()](../internal/js_kanban_setnext_method)     | allows adding some action into the Event Bus order           |
+| [](api/internal/js_kanban_exec_method.md)                 | @getshort(api/internal/js_kanban_exec_method.md)             |
+| [](api/internal/js_kanban_intercept_method.md)            | @getshort(api/internal/js_kanban_intercept_method.md)        |
+| [](api/internal/js_kanban_on_method.md)                   | @getshort(api/internal/js_kanban_on_method.md)               |
+| [](api/internal/js_kanban_setnext_method.md)              | @getshort(api/internal/js_kanban_setnext_method.md)          |
 
 ### State methods
 
 | Name                                                                   | Description                                                   |
 | -----------------------------------------------------------------------| ------------------------------------------------------------- |
-| [api.getReactiveState()](../internal/js_kanban_getreactivestate_method)| gets an object with the reactive properties of the StateStore |
-| [api.getState()](../internal/js_kanban_getstate_method)                | gets an object with the current properties of the StateStore  |
-| [api.getStores()](../internal/js_kanban_getstores_method)              | gets an object with the StateStore and DataStore objects      |
+| [](api/internal/js_kanban_getreactivestate_method.md)                  | @getshort(api/internal/js_kanban_getreactivestate_method.md)  |
+| [](api/internal/js_kanban_getstate_method.md)                          | @getshort(api/internal/js_kanban_getstate_method.md)          |
+| [](api/internal/js_kanban_getstores_method.md)                         | @getshort(api/internal/js_kanban_getstores_method.md)         |
 
 ### RestDataProvider methods
 
-| Name                                                    | Description                          |
-| --------------------------------------------------------| -------------------------------------|
-| [getCards()](../provider/js_kanban_getcards_method)     | gets a promise with the cards data   |
-| [getColumns()](../provider/js_kanban_getcolumns_method) | gets a promise with the columns data |
-| [getRows()](../provider/js_kanban_getrows_method)       | gets a promise with the rows data    |
+| Name                                                    | Description                                            |
+| --------------------------------------------------------| -------------------------------------------------------|
+| [](api/provider/js_kanban_getcards_method.md)           | @getshort(api/provider/js_kanban_getcards_method.md)   |
+| [](api/provider/js_kanban_getcolumns_method.md)         | @getshort(api/provider/js_kanban_getcolumns_method.md) |
+| [](api/provider/js_kanban_getrows_method.md)            | @getshort(api/provider/js_kanban_getrows_method.md)    |
 
 ## Kanban properties
 
 | Name                                                       | Description                                              |
 | -----------------------------------------------------------| ---------------------------------------------------------|
-| [cards](../config/js_kanban_cards_config)                  | an array of objects containing the cards data            |
-| [cardShape](../config/js_kanban_cardshape_config)          | card settings that manage the appearance of the board    |
-| [cardTemplate](../config/js_kanban_cardtemplate)           | returns and applies a new HTML template of the cards     |
-| [columnKey](../config/js_kanban_columnkey_config)          | defines belonging the card to the column                 |
-| [columns](../config/js_kanban_columns_config)              | an array of objects containing the columns data          |
-| [editorAutoSave](../config/js_kanban_editorautosave_config)| enables/disables an autosave mode of Kanban              |
-| [editorShape](../config/js_kanban_editorshape_config)      | editor settings that manage the appearance of the editor |
-| [locale](../config/js_kanban_locale_config)                | an object of the built-in or custom locale               |
-| [readonly](../config/js_kanban_readonly_config)            | enables/disables readonly mode of Kanban                 |
-| [rowKey](../config/js_kanban_rowkey_config)                | defines belonging the card to the row                    |
-| [rows](../config/js_kanban_rows_config)                    | an array of objects containing the rows data             |
-| (*Toolbar*) [api](../config/toolbar_api_config)            | an object with internal api of Kanban                    |
-| (*Toolbar*) [items](../config/toolbar_items_config)        | an array of controls located in the toolbar              |
+| [](api/config/js_kanban_cards_config.md)                   | @getshort(api/config/js_kanban_cards_config.md)          |
+| [](api/config/js_kanban_cardshape_config.md)               | @getshort(api/config/js_kanban_cardshape_config.md)      |
+| [](api/config/js_kanban_cardtemplate_config.md)            | @getshort(api/config/js_kanban_cardtemplate_config.md)   |
+| [](api/config/js_kanban_columnkey_config.md)               | @getshort(api/config/js_kanban_columnkey_config.md)      |
+| [](api/config/js_kanban_columns_config.md)                 | @getshort(api/config/js_kanban_columns_config.md)        |
+| [](api/config/js_kanban_editorautosave_config.md)          | @getshort(api/config/js_kanban_editorautosave_config.md) |
+| [](api/config/js_kanban_editorshape_config.md)             | @getshort(api/config/js_kanban_editorshape_config.md)    |
+| [](api/config/js_kanban_locale_config.md)                  | @getshort(api/config/js_kanban_locale_config.md)         |
+| [](api/config/js_kanban_readonly_config.md)                | @getshort(api/config/js_kanban_readonly_config.md)       |
+| [](api/config/js_kanban_rowkey_config.md)                  | @getshort(api/config/js_kanban_rowkey_config.md)         |
+| [](api/config/js_kanban_rows_config.md)                    | @getshort(api/config/js_kanban_rows_config.md)           |
+| [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
+| [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
