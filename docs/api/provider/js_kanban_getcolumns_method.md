@@ -8,7 +8,7 @@ description: You can learn about the getColumns REST method in the documentation
 
 ### Description
 
-Gets a **promise** with the *columns data*
+@short: gets a promise with the columns data
 
 :::info
 The **getColumns()** method is a part of the **RestDataProvider** service intended for working with server

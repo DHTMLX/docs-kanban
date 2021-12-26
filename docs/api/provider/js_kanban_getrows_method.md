@@ -8,7 +8,7 @@ description: You can learn about the getRows REST method in the documentation of
 
 ### Description
 
-Gets a **promise** with the *rows data*
+@short: gets a promise with the rows data
 
 :::info
 The **getRows()** method is a part of the **RestDataProvider** service intended for working with server
