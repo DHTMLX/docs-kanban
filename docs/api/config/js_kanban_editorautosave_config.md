@@ -8,7 +8,7 @@ description: You can learn about the editorAutoSave config in the documentation 
 
 ### Description
 
-Enables/disables an **autosave mode** of Kanban
+@short: enables/disables an autosave mode of Kanban
 
 ### Usage
 
@@ -16,8 +16,12 @@ Enables/disables an **autosave mode** of Kanban
 editorAutoSave?: boolean // (true by default)
 ~~~
 
+### Parameters
+
+- `editorAutoSave` - (optioanal) if **true**, the **autosave** mode of Kanban will be enabled 
+
 :::info
-Using this parameter, you can enable/disable an autosave mode of Kanban. If you set the **editorAutoSave** property to *false*, the editor will display the "Save" button to save edited data
+Using this parameter, you can enable/disable an autosave mode of Kanban. If you set the **editorAutoSave** property to **false**, the editor will display the "Save" button to save edited data
 :::
 
 ### Default config

@@ -8,21 +8,22 @@ description: You can learn about the cardTemplate config in the documentation of
 
 ### Description
 
-Returns and applies a new HTML **template** of the card
+@short: returns and applies a new HTML template of the card
 
 ### Usage
 
 ~~~jsx
-function cardTemplate({ cardFields, selected, dragging, cardShape }){
+function cardTemplate ({ cardFields, selected, dragging, cardShape }){
 	return "HTML template of the card";
 }
 ~~~
+
 ### Parameters
 
-- `cardFields: object` - gets the data object of the card
-- `selected: boolean` - gets the selecting state of the card
-- `dragging: boolean` - gets the dragging state of the card
-- `cardShape: object` - gets the configuration object of the card
+- `cardFields` - gets the data object of the card
+- `selected` - gets the selecting state of the card
+- `dragging` - gets the dragging state of the card
+- `cardShape` - gets the configuration object of the card
 
 ### Example
 

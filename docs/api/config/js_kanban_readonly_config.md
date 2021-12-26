@@ -8,7 +8,7 @@ description: You can learn about the readonly config in the documentation of the
 
 ### Description
 
-Enables/disables ***editing***, ***adding***, ***selecting***, ***dragging*** the cards
+@short: enables/disables editing, adding, selecting, dragging the cards
 
 ### Usage
 
@@ -25,17 +25,17 @@ readonly?: {
 
 ### Parameters
 
-To configure the *readonly mode*, you can use the *short* or *extended* parameters.
+To configure the **readonly mode**, you can use the **short** or **extended** parameters.
 
-The *short* parameter:
-- `readonly?: boolean` - enables/disables ***readonly mode*** of Kanban
+The **short** parameter:
+- `readonly` - (optional) enables/disables **readonly mode** of Kanban
 
-The *extended* parameters:
-- `readonly?: object` - an object with extended settings. Here you can specify the following parameters:
-	- `edit?: boolean` - enables/disables ***editing*** of the cards
-	- `add?: boolean` - enables/disables ***adding*** of the new cards
-	- `select?: boolean` - enables/disables ***selecting*** of the cards
-	- `dnd?: boolean`  - enables/disables ***dragging*** of the cards
+The **extended** parameters:
+- `readonly` - (optional) an object with extended settings. Here you can specify the following parameters:
+	- `edit` - (optional) enables/disables **editing** of the cards
+	- `add` - (optional) enables/disables **adding** of the new cards
+	- `select` - (optional) enables/disables **selecting** of the cards
+	- `dnd` - (optional) enables/disables **dragging** of the cards
 
 ### Default config
 

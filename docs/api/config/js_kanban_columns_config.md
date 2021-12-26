@@ -8,7 +8,7 @@ description: You can learn about the columns config in the documentation of the 
 
 ### Description
 
-An array of objects containing the **columns data**. *This parameter is mandatory!*
+@short: an array of objects containing the columns data. This parameter is mandatory!
 
 ### Usage
 
@@ -26,8 +26,8 @@ columns: [
 
 For each column you can specify the following parameters (data):
 
-- `id: string` - a column ID. It is used for managing the column via the corresponding methods (*mandatory*)
-- `label?: string` - a column label. It is displayed in the column section
+- `id` - (mandatory) a column **ID**. It is used for managing the column via the corresponding methods 
+- `label` - (optional) a column label. It is displayed in the column section
 
 :::info
 If you want to load the columns data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **columns** property to the empty array

@@ -8,7 +8,7 @@ description: You can learn about the locale config in the documentation of the D
 
 ### Description
 
-An object of the built-in or custom locale
+@short: an object of the built-in or custom locale
 
 ### Usage
 
@@ -18,11 +18,11 @@ locale?: object
 
 ### Parameters
 
-- `locale?: object` - an object of the built-in or custom locale. It includes all labels of the Kanban with the corresponding translations
+- `locale` - (optional) an object of the built-in or custom locale. It includes all labels of the Kanban with the corresponding translations
 
 ### Default config
 
-By default, the **locale** parameter is set to the built-in ***en*** locale. You can set it to the ***ru***, ***cn*** or custom locale as well
+By default, the **locale** parameter is set to the built-in **en** locale. You can set it to the **ru**, **cn** or custom locale as well
 
 :::tip
 To change the default locale, you can use the [**setLocale()**](../../methods/js_kanban_setlocale_method) method

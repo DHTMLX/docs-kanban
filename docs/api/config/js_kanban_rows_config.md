@@ -8,7 +8,7 @@ description: You can learn about the rows config in the documentation of the DHT
 
 ### Description
 
-An array of objects containing the **rows data**
+@short: an array of objects containing the rows data
 
 ### Usage
 
@@ -27,9 +27,9 @@ rows?: [
 
 For each row you can specify the following parameters (data):
 
-- `id: string` - a row ID. It is used for managing the row via the corresponding methods (*mandatory*)
-- `label?: string` - a row label. It is displayed in the row section
-- `collapsed?: boolean` - a row state. If ***true***, the row is collapsed by default
+- `id` - (mandatory) a row **ID**. It is used for managing the row via the corresponding methods 
+- `label` - (optional) a row label. It is displayed in the row section
+- `collapsed` - (optional) a row state. If **true**, the row is collapsed by default
 
 :::info
 If you want to load the rows data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **rows** property to the empty array

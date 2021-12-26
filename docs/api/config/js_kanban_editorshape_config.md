@@ -8,7 +8,7 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Description
 
-The **editor settings** for managing the appearance and functionality of the Kanban editor
+@short: the editor settings for managing the appearance and functionality of the Kanban editor
 
 ### Usage
 
@@ -43,8 +43,8 @@ editorShape?: [
 
 To configure the editor appearance and functionality, you can specify the following parameters (fields):
 
-- `type: string` - an editor field type. Here you can specify the following types: ***text***, ***textarea***, ***date***, ***select***, ***combo***, ***multiselect***, ***files***, ***color***, ***progress*** (*mandatory*)
-- `key: string` - an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property (*mandatory*). See the example below:
+- `type` - (mandatory) an editor field type. Here you can specify the following types: **text**, **textarea**, **date**, **select**, **combo**, **multiselect**, **files**, **color**, **progress** 
+- `key` - (mandatory) an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property. See the example below:
 
 ~~~js {2,5,16,21}
 	const cardShape = { // card settings
@@ -73,22 +73,19 @@ To configure the editor appearance and functionality, you can specify the follow
 		// other parameters
 	};
 ~~~
-- `label?: string` - an editor field label
 
-- `options?: array` - an array of objects with the dropdown options (for the *select* and *combo* types). Here you can specify the following fields:
-	- `id: any` - an option ID (*mandatory*)
-	- `label: string` - an option label (*mandatory*)
-
-- `colors?: array` - an array with valid HEX codes. It is used for the *color* type
-- `placeholder?: string` - an editor field placeholder
-
-- `config?:object` - an object with the editor uploader configuration. Here you can specify the following parameters:
-	- `accept?: string` -  a file type the uploader should accept
-	- `disabled?: boolean` - when the *disabled* attribute is ***true***, the uploader forbids the user to upload any files
-	- `multiple?: boolean` - when the *multiple* attribute is ***true***, the uploader allows the user to select more than one file
-	- `folder?: boolean` - when the *folder* attribute is ***true***, the uploader allows the user to select a folder
-
-- `uploadURL?: string` - an editor uploader URL (this parameter is *mandatory* for the "files" type)
+- `label` - (optional) an editor field label
+- `options` - (optional) an array of objects with the dropdown options (for the **select** and **combo** types). Here you can specify the following fields:
+	- `id` - (mandatory) an option **ID** 
+	- `label` - (mandatory) an option label 
+- `colors` - (optional) an array with valid HEX codes. It is used for the **color** type
+- `placeholder` - (optional) an editor field placeholder
+- `config` - (optional) an object with the editor uploader configuration. Here you can specify the following parameters:
+	- `accept` - (optional) a file type the uploader should accept
+	- `disabled` - (optional) if **true**, the uploader forbids the user to upload any files
+	- `multiple` - (optional) if **true**, the uploader allows the user to select more than one file
+	- `folder` - (optional) if **true**, the uploader allows the user to select a folder
+- `uploadURL` - (optional) an editor uploader URL (this parameter is **mandatory** for the "files" type)
 
 :::info
 Unless you specify the editor settings via the **editorShape** property, the widget will apply a **defaultEditorShape** set of parameters!

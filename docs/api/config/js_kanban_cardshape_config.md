@@ -8,7 +8,7 @@ description: You can learn about the cardShape config in the documentation of th
 
 ### Description
 
-The **card settings** for managing the appearance of the Kanban board
+@short: the card settings for managing the appearance of the Kanban board
 
 ### Usage
 
@@ -59,7 +59,7 @@ cardShape?: {
 ### Parameters
 
 :::info
-In some cases, you can set the parameter to the *short* or *extended* value. See the code below:
+In some cases, you can set the parameter to the **short** or **extended** value. See the code below:
 
 ~~~jsx {3,6}
 	label: boolean | { show?: boolean }
@@ -73,34 +73,30 @@ In some cases, you can set the parameter to the *short* or *extended* value. See
 
 To configure the card appearance, you can specify the following parameters (fields):
 
-- `label: boolean | { show?: boolean }` - show/hide a ***card label*** (*mandatory*)
-- `progress?: boolean | { show?: boolean }` - show/hide a ***card progress bar***
-- `start_date?: boolean | { show?: boolean }` - show/hide a ***card start date***
-- `end_date?: boolean | { show?: boolean }` - show/hide a ***card end date***
-- `menu?: boolean | { show?: boolean }` - show/hide a ***card menu***
-- `attached?: boolean | { show?: boolean }` - show/hide a ***card attachment***
-
-- `users?: object` - an object with ***users*** parameters
-	- `show?: boolean` - show/hide the ***assigned users*** data
-	- `values?: array` - an array of objects with users data. Here you can specify the following fields:
-		- `id: string | number` - a user ID (*mandatory*)
-		- `path?: string` - a path to the user picture
-		- `label?: string` - a user name
-
-- `priority?: object` - an object with ***priorities*** parameters
-	- `show?: boolean` - show/hide a ***card priority***
-	- `values?: array` - an array of objects with priorities data. Here you can specify the following fields:
-		- `id: string | number` - a priority ID (*mandatory*)
-		- `color: string` - a valid HEX code (*mandatory*)
-		- `label?: string` - a priority name
-
-- `color?: boolean | { show?: boolean }` - show/hide a colored ***top line*** of a card
-- `cover?: boolean | { show?: boolean }` - show/hide a ***card picture***
-
-- `headerFields?: array` - an array of objects with ***custom fields*** data. Here you can specify the following parameters:
-	- `key: string` - a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property (*mandatory*)
-	- `css?: string` - a css class of the custom field
-	- `label?: string` - a label of the custom field
+- `label` - (mandatory) show/hide a **card label** 
+- `progress` - (optional) show/hide a **card progress bar**
+- `start_date` - (optional) show/hide a **card start date**
+- `end_date` - (optional) show/hide a **card end date**
+- `menu` - (optional) show/hide a **card menu**
+- `attached` - (optional) show/hide a **card attachment**
+- `users` - (optional) an object with **users** parameters
+	- `show` - (optional) show/hide the **assigned users** data
+	- `values` - (optional) an array of objects with users data. Here you can specify the following fields:
+		- `id` - (mandatory) a user **ID** 
+		- `path` - (optional) a path to the user picture
+		- `label` - (optional) a user name
+- `priority` - (optional) an object with **priorities** parameters
+	- `show` - (optional) show/hide a **card priority**
+	- `values` - (optional) an array of objects with priorities data. Here you can specify the following fields:
+		- `id` - (mandatory) a priority **ID** 
+		- `color` - (mandatory) a valid HEX code 
+		- `label` - (optional) a priority name
+- `color` - (optional) show/hide a colored **top line** of a card
+- `cover` - (optional) show/hide a **card picture**
+- `headerFields` - (optional) an array of objects with **custom fields** data. Here you can specify the following parameters:
+	- `key` - (mandatory) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property 
+	- `css` - (optional) a css class of the custom field
+	- `label` - (optional) a label of the custom field
 
 :::info
 Unless you specify the cards settings via the **cardShape** property, the widget will apply a **defaultCardShape** set of parameters!

@@ -8,7 +8,7 @@ description: You can learn about the api config in the documentation of the DHTM
 
 ### Description
 
-An object with the internal API of Kanban. It is used for the toolbar controls functionality. *This parameter is mandatory!*
+@short: an object with the internal API of Kanban. This parameter is mandatory!
 
 ### Usage
 
@@ -16,8 +16,12 @@ An object with the internal API of Kanban. It is used for the toolbar controls f
 api: object
 ~~~
 
+### Parameters
+
+- `api` - an object with the internal API of Kanban. It is used for the toolbar controls functionality
+
 :::info
-In this case, the **internal API of Kanban** is used for the *search bar* and *controls for adding columns and rows* located on the Toolbar
+In this case, the **internal API of Kanban** is used for the **search bar** and **controls for adding columns and rows** located on the Toolbar
 :::
 
 ### Example

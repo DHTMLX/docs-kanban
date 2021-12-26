@@ -8,7 +8,7 @@ description: You can learn about the columnKey config in the documentation of th
 
 ### Description
 
-Defines belonging the card to the **column**
+@short: defines belonging the card to the column
 
 ### Usage
 
@@ -16,14 +16,18 @@ Defines belonging the card to the **column**
 columnKey?: string
 ~~~
 
+### Parameters
+
+- `columnKey` - (optional) defines belonging the card to the **column**
+
 :::info
-To distribute the cards into columns, you need to specify a **custom key** and set it to the ID of the desired column (in the card data object). The **columnKey** property needs to be set to this custom key in the widget config
+To distribute the cards into columns, you need to specify a **custom key** and set it to the **ID** of the desired column (in the card data object). The **columnKey** property needs to be set to this custom key in the widget config
 :::
 
 ### Default config
 
 :::note
-Unless you specify a *column key* via the **columnKey** property, the widget will use the ***column*** key by default! In this case, you need to specify the ***column*** key to the needed column ID in the card data object
+Unless you specify a column key via the **columnKey** property, the widget will use the **column** key by default! In this case, you need to specify the **column** key to the needed column **ID** in the card data object
 
 ~~~jsx {3}
 const cards = [
