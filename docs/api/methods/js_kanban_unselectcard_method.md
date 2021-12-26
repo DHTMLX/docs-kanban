@@ -8,7 +8,7 @@ description: You can learn about the unselectCard method in the documentation of
 
 ### Description
 
-Unselects card(s) by its ID
+@short: unselects card(s) by its ID
 
 ### Usage
 
@@ -22,7 +22,7 @@ To unselect all cards, call the **unselectCard()** method without parameters
 
 ### Parameters
 
-- `id: string | number` - the **ID** of the card to be unselected (*mandatory*)
+- `id` - (mandatory) the **ID** of the card to be unselected 
 
 ### Example
 

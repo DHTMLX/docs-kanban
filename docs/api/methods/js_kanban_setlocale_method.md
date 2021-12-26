@@ -8,7 +8,7 @@ description: You can learn about the setLocale method in the documentation of th
 
 ### Description
 
-Applies new locale to the Kanban widget
+@short: applies new locale to the Kanban widget
 
 ### Usage
 
@@ -18,15 +18,15 @@ setLocale: (locale: object) => void;
 
 ### Parameters
 
-- `locale: object` - a data object of the new locale (*mandatory*)
+- `locale` - (mandatory) a data object of the new locale 
 
 :::info
-Using this method, you can set a built-in locale (en, ru, cn) as well as a custom one.
+Using this method, you can set a built-in locale (**en**, **ru**, **cn**) as well as a custom one.
 :::
 
 ### Example
 
-~~~jsx {7}
+~~~jsx {8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,

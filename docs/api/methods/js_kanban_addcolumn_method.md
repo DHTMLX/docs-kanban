@@ -8,7 +8,7 @@ description: You can learn about the addColumn method in the documentation of th
 
 ### Description
 
-Adds a **new column** into Kanban
+@short: adds a new column into Kanban
 
 ### Usage
 
@@ -21,8 +21,8 @@ addColumn: ({
 
 ### Parameters
 
-- `id?: string | number` -  the **ID** of the new column
-- `label?: string` - the **label** of the new column
+- `id` - (optional) the **ID** of the new column
+- `label` - (optional) the **label** of the new column
 
 ### Example
 

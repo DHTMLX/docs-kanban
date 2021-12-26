@@ -8,7 +8,7 @@ description: You can learn about the deleteRow method in the documentation of th
 
 ### Description
 
-Removes the specified **row** from datastore of Kanban
+@short: removes the specified row from datastore of Kanban
 
 ### Usage
 
@@ -18,7 +18,7 @@ deleteRow: ({ id: string | number }) => void;
 
 ### Parameters
 
-- `id: string | number` - the **ID** of the row to be deleted (*mandatory*)
+- `id` - (mandatory) the **ID** of the row to be deleted 
 
 ### Example
 

@@ -8,12 +8,12 @@ description: You can learn about the setSearch method in the documentation of th
 
 ### Description
 
-Looks for the needed cards by the specified parameters
+@short: looks for the needed cards by the specified parameters
 
 ### Usage
 
 ~~~jsx {}
-setSearch: ({
+setSearch ({
 	value: string,
 	by?: string
 }) => void;
@@ -25,8 +25,8 @@ Using this method, you can search for the needed cards by the specified paramete
 
 ### Parameters
 
-- `value: string` - the value to search (*mandatory*)
-- `by?: string` - the card field for searching
+- `value` - (mandatory) the value to search 
+- `by` - (optional) the card field for searching
 
 ### Example
 

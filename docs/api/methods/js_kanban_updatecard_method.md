@@ -8,7 +8,7 @@ description: You can learn about the updateCard method in the documentation of t
 
 ### Description
 
-Updates the card data by its ID
+@short: updates the card data by its ID
 
 ### Usage
 
@@ -18,10 +18,10 @@ updateCard: (config: object) => void;
 
 ### Parameters
 
-- `config: object` - the new data object of the current card (*mandatory*)
+- `config` - (mandatory) the new data object of the current card 
 
 :::info
-Note, the **ID** of the card to be updated is required. Other card parameters can be found [**here**](../config/js_kanban_cards_config.md).
+Note, the **ID** of the card to be updated is required. Other card parameters can be found [**here**](api/config/js_kanban_cards_config.md).
 :::
 
 ### Example

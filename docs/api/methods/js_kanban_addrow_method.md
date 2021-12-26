@@ -8,7 +8,7 @@ description: You can learn about the addRow method in the documentation of the D
 
 ### Description
 
-Adds a **new row** into Kanban
+@short: adds a new row into Kanban
 
 ### Usage
 
@@ -22,9 +22,9 @@ addRow: ({
 
 ### Parameters
 
-- `id?: string | number` -  the **ID** of the new row
-- `label?: string` - the **label** of the new row
-- `collapsed?: boolean` - the **state** of the new row
+- `id` - (optional) the **ID** of the new row
+- `label` - (optional) the **label** of the new row
+- `collapsed` - (optional) the **state** of the new row
 
 ### Example
 

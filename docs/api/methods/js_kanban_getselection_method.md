@@ -8,7 +8,7 @@ description: You can learn about the getSelection method in the documentation of
 
 ### Description
 
-Gets an array with ID(s) of the selected card(s)
+@short: gets an array with ID(s) of the selected card(s)
 
 ### Usage
 

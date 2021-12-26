@@ -8,7 +8,7 @@ description: You can learn about the selectCard method in the documentation of t
 
 ### Description
 
-Selects a card by the specified ID
+@short: selects a card by the specified ID
 
 ### Usage
 
@@ -21,11 +21,11 @@ selectCard: ({
 
 ### Parameters
 
-- `id: string | number` - the **ID** of the selected card (*mandatory*)
-- `groupMode?: boolean` - multiselecting (*false* by default)
+- `id` - (mandatory) the **ID** of the selected card 
+- `groupMode` - (optional) multiselecting (**false** by default)
 
 :::info
-If you set the **groupMode** parameter to *true*, the **selectCard()** method will not reset selecting of the other elements
+If you set the **groupMode** parameter to **true**, the **selectCard()** method will not reset selecting of the other elements
 :::
 
 ### Example

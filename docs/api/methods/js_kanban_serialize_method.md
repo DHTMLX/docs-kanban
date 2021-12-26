@@ -8,7 +8,7 @@ description: You can learn about the serialize method in the documentation of th
 
 ### Description
 
-Serializes Kanban data to JSON
+@short: serializes Kanban data to JSON
 
 ### Usage
 

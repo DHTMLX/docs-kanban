@@ -8,7 +8,7 @@ description: You can learn about the destructor method in the documentation of t
 
 ### Description
 
-Removes all HTML elements of the Kanban, and detaches all related events
+@short: removes all HTML elements of the Kanban, and detaches all related events
 
 ### Usage
 

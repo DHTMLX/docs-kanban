@@ -24,11 +24,15 @@ addCard: ({
 
 ### Parameters
 
-- `columnId: string | number` - the **ID** of the target column (*mandatory*)
-- `id?: string | number` -  the **ID** of the new card
-- `rowId?: string | number` - the **ID** of the target row
-- `before?: string | number` - the **ID** of the card, before which the new card will be placed  
-- `card?: object` - the data object of the new card
+- <code title = "string | number" >columnId</code> - (mandatory) the ID of the target column 
+- <code title = "string | number" >id</code> -  (optional) the ID of the new card
+- <code title = "string | number" >rowId</code> - (optional) the ID of the target row
+- <code title = "string | number" >before</code> - (optional) the ID of the card, before which the new card will be placed  
+- <code title = "object" >card</code> - (optional) the data object of the new card. 
+
+:::tip
+The full list of the **card** parameters can be found [**here**](api/config/js_kanban_cards_config.md)
+:::
 
 ### Example
 

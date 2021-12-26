@@ -8,7 +8,7 @@ description: You can learn about the getAreaCards method in the documentation of
 
 ### Description
 
-Gets an array with data objects of all cards of the specified column (and row)
+@short: gets an array with data objects of all cards of the specified column (and row)
 
 ### Usage
 
@@ -21,8 +21,8 @@ getAreaCards: (
 
 ### Parameters
 
-- `columnId: string | number` - the **ID** of the target column (*mandatory*)
-- `rowId?: string | number` - the **ID** of the target row
+- `columnId` - (mandatory) the **ID** of the target column 
+- `rowId` - (optional) the **ID** of the target row
 
 ### Returns
 

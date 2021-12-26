@@ -8,7 +8,7 @@ description: You can learn about the parse method in the documentation of the DH
 
 ### Description
 
-Parses data into Kanban
+@short: parses data into Kanban
 
 ### Usage
 
@@ -22,9 +22,9 @@ parse: ({
 
 ### Parameters
 
-- `columns?: object` - the object of the columns data
-- `rows?: object` - the object of the rows data
-- `cards?: object` - the object of the cards data
+- `columns` - (optional) the object of the columns data
+- `rows` - (optional) the object of the rows data
+- `cards` - (optional) the object of the cards data
 
 ### Details
 
