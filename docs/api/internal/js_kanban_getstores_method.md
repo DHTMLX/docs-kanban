@@ -8,17 +8,17 @@ description: You can learn about the getStores method in the documentation of th
 
 ### Description
 
-Gets an object with the ***StateStore*** and ***DataStore*** objects of Kanban
+@short: gets an object with the StateStore and DataStore objects of Kanban
 
 ### Usage
 
 ~~~jsx {}
-api.getStores() => object;
+api.getStores: () => object;
 ~~~
 
 ### Returns
 
-The method returns an object with *StateStore* and *DataStore*:
+The method returns an object with **StateStore** and **DataStore**:
 
 ~~~jsx {}
 {

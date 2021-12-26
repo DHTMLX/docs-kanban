@@ -8,12 +8,12 @@ description: You can learn about the on method in the documentation of the DHTML
 
 ### Description
 
-Allows attaching a handler to the inner events
+@short: allows attaching a handler to the inner events
 
 ### Usage
 
 ~~~jsx {}
-api.on(
+api.on: (
 	event: string,
 	handler: function
 ) => void;
@@ -21,24 +21,24 @@ api.on(
 
 ### Parameters
 
-- `event: string` -  an event to be fired (*mandatory*)
-- `handler: function` - a handler to be attached (*mandatory*)
+- `event` - (mandatory) an event to be fired 
+- `handler` - (mandatory) a handler to be attached 
 
 ### Event list
 
-- ***"add-card"***
-- ***"add-column"***
-- ***"add-row"***
-- ***"delete-card"***
-- ***"delete-column"***
-- ***"delete-row"***
-- ***"move-card"***
-- ***"unselect-card"***
-- ***"update-card"***
-- ***"update-column"***
-- ***"update-row"***
-- ***"select-card"***
-- ***"set-search"***
+- **"add-card"**
+- **"add-column"**
+- **"add-row"**
+- **"delete-card"**
+- **"delete-column"**
+- **"delete-row"**
+- **"move-card"**
+- **"unselect-card"**
+- **"update-card"**
+- **"update-column"**
+- **"update-row"**
+- **"select-card"**
+- **"set-search"**
 
 ### Example
 

@@ -8,12 +8,12 @@ description: You can learn about the exec method in the documentation of the DHT
 
 ### Description
 
-Allows triggering the inner events
+@short: allows triggering the inner events
 
 ### Usage
 
 ~~~jsx {}
-api.exec(
+api.exec: (
 	event: string,
 	config: object
 ) => void;
@@ -21,28 +21,28 @@ api.exec(
 
 ### Parameters
 
-- `event: string` - an event to be fired (*mandatory*)
-- `config: object` - the config object with parameters (*mandatory*)
+- `event` - (mandatory) an event to be fired 
+- `config` - (mandatory) the config object with parameters 
 
 ### Event list
 
-- ***"add-card"***
-- ***"add-column"***
-- ***"add-row"***
-- ***"delete-card"***
-- ***"delete-column"***
-- ***"delete-row"***
-- ***"move-card"***
-- ***"unselect-card"***
-- ***"update-card"***
-- ***"update-column"***
-- ***"update-row"***
-- ***"select-card"***
-- ***"set-search"***
+- **"add-card"**
+- **"add-column"**
+- **"add-row"**
+- **"delete-card"**
+- **"delete-column"**
+- **"delete-row"**
+- **"move-card"**
+- **"unselect-card"**
+- **"update-card"**
+- **"update-column"**
+- **"update-row"**
+- **"select-card"**
+- **"set-search"**
 
 ### Example
 
-~~~jsx {8}
+~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,

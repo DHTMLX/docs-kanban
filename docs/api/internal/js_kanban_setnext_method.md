@@ -8,17 +8,17 @@ description: You can learn about the setNext method in the documentation of the 
 
 ### Description
 
-Allows adding some action into the **Event Bus** order
+@short: allows adding some action into the Event Bus order
 
 ### Usage
 
 ~~~jsx {}
-api.setNext(next: any) => void;
+api.setNext: (next: any) => void;
 ~~~
 
 ### Parameters
 
-- `next: any` - the action to be included into the **Event Bus** order  (*mandatory*)
+- `next` - (mandatory) the action to be included into the **Event Bus** order  
 
 ### Example
 
@@ -42,5 +42,5 @@ Promise.all([
 ~~~
 
 :::info
-You need to include **RestDataProvider** into the **Event Bus** order to perform operations with data (*adding*, *deleting* etc) and send the corresponding requests to the server
+You need to include **RestDataProvider** into the **Event Bus** order to perform operations with data (**adding**, **deleting** etc) and send the corresponding requests to the server
 :::

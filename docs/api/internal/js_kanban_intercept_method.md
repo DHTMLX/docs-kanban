@@ -8,12 +8,12 @@ description: You can learn about the intercept method in the documentation of th
 
 ### Description
 
-Allows intercepting and preventing the inner events
+@short: allows intercepting and preventing the inner events
 
 ### Usage
 
 ~~~jsx {}
-api.intercept(
+api.intercept: (
 	event: string,
 	callback: function
 ) => void;
@@ -21,24 +21,24 @@ api.intercept(
 
 ### Parameters
 
-- `event: string` - an event to be fired (*mandatory*)
-- `callback: function` - a callback to be performed (*mandatory*)
+- `event` - (mandatory) an event to be fired 
+- `callback` - (mandatory) a callback to be performed
 
 ### Event list
 
-- ***"add-card"***
-- ***"add-column"***
-- ***"add-row"***
-- ***"delete-card"***
-- ***"delete-column"***
-- ***"delete-row"***
-- ***"move-card"***
-- ***"unselect-card"***
-- ***"update-card"***
-- ***"update-column"***
-- ***"update-row"***
-- ***"select-card"***
-- ***"set-search"***
+- **"add-card"**
+- **"add-column"**
+- **"add-row"**
+- **"delete-card"**
+- **"delete-column"**
+- **"delete-row"**
+- **"move-card"**
+- **"unselect-card"**
+- **"update-card"**
+- **"update-column"**
+- **"update-row"**
+- **"select-card"**
+- **"set-search"**
 
 ### Example
 

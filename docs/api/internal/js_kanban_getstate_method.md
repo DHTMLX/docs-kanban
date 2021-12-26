@@ -8,12 +8,12 @@ description: You can learn about the getState method in the documentation of the
 
 ### Description
 
-Gets an object with the current properties of the Kanban ***StateStore***
+@short: gets an object with the current properties of the Kanban StateStore
 
 ### Usage
 
 ~~~jsx {}
-api.getState() => object;
+api.getState: () => object;
 ~~~
 
 ### Returns

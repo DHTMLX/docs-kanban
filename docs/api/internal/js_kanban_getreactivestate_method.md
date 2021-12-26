@@ -8,12 +8,12 @@ description: You can learn about the getReactiveState method in the documentatio
 
 ### Description
 
-Gets an object with the reactive properties of the Kanban ***StateStore***
+@short: gets an object with the reactive properties of the Kanban StateStore
 
 ### Usage
 
 ~~~jsx {}
-api.getReactiveState() => object;
+api.getReactiveState: () => object;
 ~~~
 
 ### Returns
@@ -39,7 +39,7 @@ The method returns an object with the following properties:
 
 ### Example
 
-~~~jsx {8-11}
+~~~jsx {7-11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
