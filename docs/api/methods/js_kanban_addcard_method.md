@@ -13,13 +13,13 @@ description: You can learn about the addCard method in the documentation of the 
 ### Usage
 
 ~~~jsx {}
-addCard: ({
+addCard({
 	columnId: string | number,
 	id?: string | number,
 	rowId?: string | number,
 	before?: string | number,
 	card?: object
-}) => void;
+}): void;
 ~~~
 
 ### Parameters

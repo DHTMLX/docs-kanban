@@ -13,7 +13,7 @@ description: You can learn about the setNext method in the documentation of the 
 ### Usage
 
 ~~~jsx {}
-api.setNext: (next: any) => void;
+api.setNext(next: any): void;
 ~~~
 
 ### Parameters

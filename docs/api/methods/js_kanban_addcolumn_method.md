@@ -13,10 +13,10 @@ description: You can learn about the addColumn method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-addColumn: ({
+addColumn({
 	id?: string | number,
 	label?: string
-}) => void;
+}): void;
 ~~~
 
 ### Parameters

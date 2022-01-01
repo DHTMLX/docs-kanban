@@ -13,10 +13,10 @@ description: You can learn about the getAreaCards method in the documentation of
 ### Usage
 
 ~~~jsx {}
-getAreaCards: (
+getAreaCards(
 	columnId: string | number,
 	rowId?: string | number
-) => array;
+): array;
 ~~~
 
 ### Parameters

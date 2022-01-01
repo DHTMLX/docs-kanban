@@ -13,7 +13,7 @@ description: You can learn about the getSelection method in the documentation of
 ### Usage
 
 ~~~jsx {}
-getSelection: () => array;
+getSelection(): array;
 ~~~
 
 ### Returns

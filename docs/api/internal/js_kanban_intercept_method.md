@@ -13,10 +13,10 @@ description: You can learn about the intercept method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-api.intercept: (
+api.intercept(
 	event: string,
 	callback: function
-) => void;
+): void;
 ~~~
 
 ### Parameters

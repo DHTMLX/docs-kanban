@@ -13,7 +13,7 @@ description: You can learn about the destructor method in the documentation of t
 ### Usage
 
 ~~~jsx {}
-destructor: () => void;
+destructor(): void;
 ~~~
 
 ### Example

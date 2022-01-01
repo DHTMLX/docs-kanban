@@ -13,12 +13,12 @@ description: You can learn about the moveCard method in the documentation of the
 ### Usage
 
 ~~~jsx {}
-moveCard: ({
+moveCard({
 	id: string | number,
 	columnId: string | number,
 	rowId?: string | number,
 	before?: string | number
-}) => void;
+}): void;
 ~~~
 
 ### Parameters

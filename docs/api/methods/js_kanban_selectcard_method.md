@@ -13,10 +13,10 @@ description: You can learn about the selectCard method in the documentation of t
 ### Usage
 
 ~~~jsx {}
-selectCard: ({
+selectCard({
 	id: string | number,
 	groupMode?: boolean
-}) => void;
+}): void;
 ~~~
 
 ### Parameters

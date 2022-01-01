@@ -13,10 +13,10 @@ description: You can learn about the exec method in the documentation of the DHT
 ### Usage
 
 ~~~jsx {}
-api.exec: (
+api.exec(
 	event: string,
 	config: object
-) => void;
+): void;
 ~~~
 
 ### Parameters

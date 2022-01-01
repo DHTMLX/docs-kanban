@@ -13,7 +13,7 @@ description: You can learn about the updateRow method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-updateRow: (config: object) => void;
+updateRow(config: object): void;
 ~~~
 
 ### Parameters

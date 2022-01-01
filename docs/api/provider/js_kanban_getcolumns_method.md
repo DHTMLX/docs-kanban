@@ -17,7 +17,7 @@ The **getColumns()** method is a part of the **RestDataProvider** service intend
 ### Usage
 
 ~~~jsx {}
-getColumns: () => promise;
+getColumns(): promise;
 ~~~
 
 ### Returns

@@ -13,7 +13,7 @@ description: You can learn about the serialize method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-serialize: () => object;
+serialize(): object;
 ~~~
 
 ### Returns

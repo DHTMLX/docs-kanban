@@ -13,7 +13,7 @@ description: You can learn about the deleteRow method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-deleteRow: ({ id: string | number }) => void;
+deleteRow({ id: string | number }): void;
 ~~~
 
 ### Parameters

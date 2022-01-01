@@ -13,11 +13,11 @@ description: You can learn about the parse method in the documentation of the DH
 ### Usage
 
 ~~~jsx {}
-parse: ({
+parse({
 	columns?: object,
 	rows?: object,
 	cards?: object
-}) => void;
+}): void;
 ~~~
 
 ### Parameters

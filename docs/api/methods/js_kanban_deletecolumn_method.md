@@ -13,7 +13,7 @@ description: You can learn about the deleteColumn method in the documentation of
 ### Usage
 
 ~~~jsx {}
-deleteColumn: ({ id: string | number }) => void;
+deleteColumn({ id: string | number }): void;
 ~~~
 
 ### Parameters

@@ -13,7 +13,7 @@ description: You can learn about the getReactiveState method in the documentatio
 ### Usage
 
 ~~~jsx {}
-api.getReactiveState: () => object;
+api.getReactiveState(): object;
 ~~~
 
 ### Returns

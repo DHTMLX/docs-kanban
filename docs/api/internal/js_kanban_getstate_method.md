@@ -13,7 +13,7 @@ description: You can learn about the getState method in the documentation of the
 ### Usage
 
 ~~~jsx {}
-api.getState: () => object;
+api.getState(): object;
 ~~~
 
 ### Returns

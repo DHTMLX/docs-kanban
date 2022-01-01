@@ -13,11 +13,11 @@ description: You can learn about the addRow method in the documentation of the D
 ### Usage
 
 ~~~jsx {}
-addRow: ({
+addRow({
 	id?: string | number,
 	label?: string,
 	collapsed?: boolean
-}) => void;
+}): void;
 ~~~
 
 ### Parameters

@@ -13,7 +13,7 @@ description: You can learn about the deleteCard method in the documentation of t
 ### Usage
 
 ~~~jsx {}
-deleteCard: ({ id: string | number }) => void;
+deleteCard({ id: string | number }): void;
 ~~~
 
 ### Parameters

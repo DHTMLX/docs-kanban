@@ -13,7 +13,7 @@ description: You can learn about the getCard method in the documentation of the 
 ### Usage
 
 ~~~jsx {}
-getCard: (id: string | number) => object;
+getCard(id: string | number): object;
 ~~~
 
 ### Parameters

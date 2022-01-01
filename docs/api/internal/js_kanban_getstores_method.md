@@ -13,7 +13,7 @@ description: You can learn about the getStores method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-api.getStores: () => object;
+api.getStores(): object;
 ~~~
 
 ### Returns

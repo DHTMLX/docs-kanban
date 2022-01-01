@@ -17,7 +17,7 @@ The **getCards()** method is a part of the **RestDataProvider** service intended
 ### Usage
 
 ~~~jsx {}
-getCards: () => promise;
+getCards(): promise;
 ~~~
 
 ### Returns

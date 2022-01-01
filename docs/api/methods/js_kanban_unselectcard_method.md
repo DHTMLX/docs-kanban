@@ -13,7 +13,7 @@ description: You can learn about the unselectCard method in the documentation of
 ### Usage
 
 ~~~jsx {}
-unselectCard: ({ id: string | number }) => void;
+unselectCard({ id: string | number }): void;
 ~~~
 
 :::info

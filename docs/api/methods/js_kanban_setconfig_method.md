@@ -13,7 +13,7 @@ description: You can learn about the setConfig method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-setConfig: (config: object) => void;
+setConfig(config: object): void;
 ~~~
 
 ### Parameters

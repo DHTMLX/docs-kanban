@@ -13,7 +13,7 @@ description: You can learn about the updateCard method in the documentation of t
 ### Usage
 
 ~~~jsx {}
-updateCard: (config: object) => void;
+updateCard(config: object): void;
 ~~~
 
 ### Parameters

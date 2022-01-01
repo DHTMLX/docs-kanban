@@ -17,7 +17,7 @@ The **getRows()** method is a part of the **RestDataProvider** service intended 
 ### Usage
 
 ~~~jsx {}
-getRows: () => promise;
+getRows(): promise;
 ~~~
 
 ### Returns

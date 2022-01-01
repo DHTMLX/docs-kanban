@@ -13,10 +13,10 @@ description: You can learn about the setSearch method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-setSearch ({
+setSearch({
 	value: string,
 	by?: string
-}) => void;
+}): void;
 ~~~
 
 :::info

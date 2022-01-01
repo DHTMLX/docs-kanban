@@ -13,10 +13,10 @@ description: You can learn about the on method in the documentation of the DHTML
 ### Usage
 
 ~~~jsx {}
-api.on: (
+api.on(
 	event: string,
 	handler: function
-) => void;
+): void;
 ~~~
 
 ### Parameters

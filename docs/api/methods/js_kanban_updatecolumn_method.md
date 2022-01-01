@@ -13,7 +13,7 @@ description: You can learn about the updateColumn method in the documentation of
 ### Usage
 
 ~~~jsx {}
-updateColumn: (config: object) => void;
+updateColumn(config: object): void;
 ~~~
 
 ### Parameters
