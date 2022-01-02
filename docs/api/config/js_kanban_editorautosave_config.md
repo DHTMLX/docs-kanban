@@ -18,7 +18,7 @@ editorAutoSave?: boolean // (true by default)
 
 ### Parameters
 
-- `editorAutoSave` - (optioanal) if **true**, the **autosave** mode of Kanban will be enabled 
+- `editorAutoSave` - (optional) if **true**, the **autosave** mode of Kanban is enabled 
 
 :::info
 Using this parameter, you can enable/disable an autosave mode of Kanban. If you set the **editorAutoSave** property to **false**, the editor will display the "Save" button to save edited data

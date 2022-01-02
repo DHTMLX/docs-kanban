@@ -18,7 +18,7 @@ api: object
 
 ### Parameters
 
-- `api` - an object with the internal API of Kanban. It is used for the toolbar controls functionality
+- `api` - (mandatory) an object with the internal API of Kanban. It is used for the toolbar controls functionality
 
 :::info
 In this case, the **internal API of Kanban** is used for the **search bar** and **controls for adding columns and rows** located on the Toolbar
