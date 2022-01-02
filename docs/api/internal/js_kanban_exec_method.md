@@ -22,23 +22,13 @@ api.exec(
 ### Parameters
 
 - `event` - (mandatory) an event to be fired 
-- `config` - (mandatory) the config object with parameters 
+- `config` - (mandatory) the config object with parameters (see the event to be fired)
 
-### Event list
+### Events
 
-- **"add-card"**
-- **"add-column"**
-- **"add-row"**
-- **"delete-card"**
-- **"delete-column"**
-- **"delete-row"**
-- **"move-card"**
-- **"unselect-card"**
-- **"update-card"**
-- **"update-column"**
-- **"update-row"**
-- **"select-card"**
-- **"set-search"**
+:::info
+The full list of the Kanban internal events can be found [**here**](api/api_overview.md/#kanban-events)
+:::
 
 ### Example
 

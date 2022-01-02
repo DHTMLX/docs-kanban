@@ -22,23 +22,13 @@ api.on(
 ### Parameters
 
 - `event` - (mandatory) an event to be fired 
-- `handler` - (mandatory) a handler to be attached 
+- `handler` - (mandatory) a handler to be attached (the handler arguments will depend on the event to be fired)
 
-### Event list
+### Events
 
-- **"add-card"**
-- **"add-column"**
-- **"add-row"**
-- **"delete-card"**
-- **"delete-column"**
-- **"delete-row"**
-- **"move-card"**
-- **"unselect-card"**
-- **"update-card"**
-- **"update-column"**
-- **"update-row"**
-- **"select-card"**
-- **"set-search"**
+:::info
+The full list of the Kanban internal events can be found [**here**](api/api_overview.md/#kanban-events)
+:::
 
 ### Example
 
