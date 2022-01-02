@@ -85,6 +85,24 @@ new kanban.Toolbar("#toolbar", {
 | [](api/provider/js_kanban_getcolumns_method.md)         | @getshort(api/provider/js_kanban_getcolumns_method.md) |
 | [](api/provider/js_kanban_getrows_method.md)            | @getshort(api/provider/js_kanban_getrows_method.md)    |
 
+## Kanban events
+
+| Name                                                       | Description                                              |
+| -----------------------------------------------------------| ---------------------------------------------------------|
+| [](api/events/js_kanban_addcard_event.md)                  | @getshort(api/events/js_kanban_addcard_event.md)         |
+| [](api/events/js_kanban_addcolumn_event.md)                | @getshort(api/events/js_kanban_addcolumn_event.md)       |
+| [](api/events/js_kanban_addrow_event.md)                   | @getshort(api/events/js_kanban_addrow_event.md)          |
+| [](api/events/js_kanban_deletecard_event.md)               | @getshort(api/events/js_kanban_deletecard_event.md)      |
+| [](api/events/js_kanban_deletecolumn_event.md)             | @getshort(api/events/js_kanban_deletecolumn_event.md)    |
+| [](api/events/js_kanban_deleterow_event.md)                | @getshort(api/events/js_kanban_deleterow_event.md)       |
+| [](api/events/js_kanban_movecard_event.md)                 | @getshort(api/events/js_kanban_movecard_event.md)        |
+| [](api/events/js_kanban_selectcard_event.md)               | @getshort(api/events/js_kanban_selectcard_event.md)      |
+| [](api/events/js_kanban_setsearch_event.md)                | @getshort(api/events/js_kanban_setsearch_event.md)       |
+| [](api/events/js_kanban_unselectcard_event.md)             | @getshort(api/events/js_kanban_unselectcard_event.md)    |
+| [](api/events/js_kanban_updatecard_event.md)               | @getshort(api/events/js_kanban_updatecard_event.md)      |
+| [](api/events/js_kanban_updatecolumn_event.md)             | @getshort(api/events/js_kanban_updatecolumn_event.md)    |
+| [](api/events/js_kanban_updaterow_event.md)                | @getshort(api/events/js_kanban_updaterow_event.md)       |
+
 ## Kanban properties
 
 | Name                                                       | Description                                              |

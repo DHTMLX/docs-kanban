@@ -101,6 +101,27 @@ module.exports = {
 				},
 				{
 					type: "category",
+					label: "Kanban events",
+					collapsible: true,
+					collapsed: true,
+					items: [
+						"api/events/js_kanban_addcard_event",
+						"api/events/js_kanban_addcolumn_event",
+						"api/events/js_kanban_addrow_event",
+						"api/events/js_kanban_deletecard_event",
+						"api/events/js_kanban_deletecolumn_event",
+						"api/events/js_kanban_deleterow_event",
+						"api/events/js_kanban_movecard_event",
+						"api/events/js_kanban_selectcard_event",
+						"api/events/js_kanban_setsearch_event",
+						"api/events/js_kanban_unselectcard_event",
+						"api/events/js_kanban_updatecard_event",
+						"api/events/js_kanban_updatecolumn_event",
+						"api/events/js_kanban_updaterow_event"	
+					]
+				},
+				{
+					type: "category",
 					label: "Kanban properties",
 					collapsible: true,
 					collapsed: true,
