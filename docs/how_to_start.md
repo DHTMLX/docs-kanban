@@ -16,7 +16,7 @@ Start from creating an HTML file and call it *index.html*. Then proceed to inclu
 
 There are two necessary files:
 
-- the file of Kanban
+- the JS file of Kanban
 - the CSS file of Kanban
 
 and
