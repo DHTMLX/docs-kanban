@@ -20,7 +20,7 @@ rows?: [
 		collapsed?: boolean
 	},
 	{...} // other rows data
-]
+];
 ~~~
 
 ### Parameters

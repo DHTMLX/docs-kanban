@@ -13,7 +13,7 @@ description: You can learn about the editorAutoSave config in the documentation 
 ### Usage
 
 ~~~jsx {}
-editorAutoSave?: boolean // (true by default)
+editorAutoSave?: boolean; // (true by default)
 ~~~
 
 ### Parameters

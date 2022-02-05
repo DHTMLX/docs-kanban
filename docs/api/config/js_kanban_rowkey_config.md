@@ -13,7 +13,7 @@ description: You can learn about the rowKey config in the documentation of the D
 ### Usage
 
 ~~~jsx {}
-rowKey?: string
+rowKey?: string;
 ~~~  
 
 ### Parameters

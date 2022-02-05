@@ -20,7 +20,7 @@ readonly?: {
 	add?: boolean,
 	select?: boolean,
 	dnd?: boolean
-}
+};
 ~~~
 
 ### Parameters

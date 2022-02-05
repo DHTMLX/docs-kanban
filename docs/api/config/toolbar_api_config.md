@@ -13,7 +13,7 @@ description: You can learn about the api config in the documentation of the DHTM
 ### Usage
 
 ~~~jsx {}
-api: object
+api: object;
 ~~~
 
 ### Parameters

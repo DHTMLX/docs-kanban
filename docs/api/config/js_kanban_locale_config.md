@@ -13,7 +13,7 @@ description: You can learn about the locale config in the documentation of the D
 ### Usage
 
 ~~~jsx {}
-locale?: object
+locale?: object;
 ~~~
 
 ### Parameters

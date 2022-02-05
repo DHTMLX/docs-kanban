@@ -15,7 +15,7 @@ description: You can learn about the cardTemplate config in the documentation of
 ~~~jsx
 function cardTemplate ({ cardFields, selected, dragging, cardShape }){
 	return "HTML template of the card";
-}
+};
 ~~~
 
 ### Parameters

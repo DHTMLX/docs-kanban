@@ -19,7 +19,7 @@ columns: [
 		label?: string
 	},
 	{...} // other columns data
-]
+];
 ~~~
 
 ### Parameters

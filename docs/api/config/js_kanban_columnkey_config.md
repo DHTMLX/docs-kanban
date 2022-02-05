@@ -13,7 +13,7 @@ description: You can learn about the columnKey config in the documentation of th
 ### Usage
 
 ~~~jsx {}
-columnKey?: string
+columnKey?: string;
 ~~~
 
 ### Parameters

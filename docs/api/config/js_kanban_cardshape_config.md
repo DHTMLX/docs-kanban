@@ -53,7 +53,7 @@ cardShape?: {
 		},
 		{...} // other fields data
 	]
-}
+};
 ~~~
 
 ### Parameters
@@ -71,7 +71,7 @@ In some cases, you can set the parameter to the **short** or **extended** value.
 ~~~
 :::
 
-To configure the card appearance, you can specify the following parameters (fields):
+To configure the card appearance, in the **cardShape** object you can specify the following parameters (fields):
 
 - `label` - (mandatory) show/hide a **card label** 
 - `progress` - (optional) show/hide a **card progress bar**

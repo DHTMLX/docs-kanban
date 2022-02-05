@@ -36,7 +36,7 @@ editorShape?: [
 		uploadURL?: string
 	},
 	{...} // other fields data
-]
+];
 ~~~
 
 ### Parameters

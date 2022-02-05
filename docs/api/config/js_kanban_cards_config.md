@@ -35,7 +35,7 @@ cards: [
 		[custom_key: string]?: any
 	},
 	{...} // other cards data
-]
+];
 ~~~
 
 ### Parameters

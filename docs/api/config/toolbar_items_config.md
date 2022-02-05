@@ -17,7 +17,7 @@ items?: [
 	"search",
 	"controls",
 	custom_control // string or function
-]
+];
 ~~~
 
 ### Parameters
