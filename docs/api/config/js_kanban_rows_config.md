@@ -8,7 +8,7 @@ description: You can learn about the rows config in the documentation of the DHT
 
 ### Description
 
-@short: an array of objects containing the rows data
+@short: Optional. An array of objects containing the rows data
 
 ### Usage
 
@@ -27,7 +27,7 @@ rows?: [
 
 For each row you can specify the following parameters (data):
 
-- `id` - (mandatory) a row **ID**. It is used for managing the row via the corresponding methods 
+- `id` - (required) a row **ID**. It is used for managing the row via the corresponding methods 
 - `label` - (optional) a row label. It is displayed in the row section
 - `collapsed` - (optional) a row state. If **true**, the row is collapsed by default
 

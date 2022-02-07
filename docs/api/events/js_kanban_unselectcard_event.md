@@ -8,7 +8,7 @@ description: You can learn about the unselect-card event in the documentation of
 
 ### Description
 
-@short: fires when unselecting a card
+@short: Fires when unselecting a card
 
 ### Usage
 
@@ -20,7 +20,7 @@ description: You can learn about the unselect-card event in the documentation of
 
 The callback of the **unselect-card** event can take an object with the following parameters:
 
-- `id` - (mandatory) the ID of the card to be unselected
+- `id` - (required) the ID of the card to be unselected
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

@@ -8,7 +8,7 @@ description: You can learn about the setNext method in the documentation of the 
 
 ### Description
 
-@short: allows adding some action into the Event Bus order
+@short: Allows adding some action into the Event Bus order
 
 ### Usage
 
@@ -18,7 +18,7 @@ api.setNext(next: any): void;
 
 ### Parameters
 
-- `next` - (mandatory) the action to be included into the **Event Bus** order  
+- `next` - (required) the action to be included into the **Event Bus** order  
 
 ### Example
 

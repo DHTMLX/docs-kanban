@@ -8,7 +8,7 @@ description: You can learn about the cards config in the documentation of the DH
 
 ### Description
 
-@short: an array of objects containing the cards data. This parameter is mandatory!
+@short: Required. An array of objects containing the cards data
 
 ### Usage
 
@@ -52,7 +52,7 @@ For each card you can specify the following parameters (data):
 - `color` - (optional) a valid HEX color code. It is the color of the card top line
 - `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape](../js_kanban_cardshape_config) property (see the **priority** parameter). It is displayed in the **Priority** field
 - `attached` - (optional) an array with data of the attached file(s). It is displayed in the **Attachment** field. Here you can specify the following parameters:
-	- `id` - (mandatory) an **ID** of the attached file 
+	- `id` - (required) an **ID** of the attached file 
 	- `url` - (optional) a path to the file to be attached
 	- `previewURL` - (optional) a path to the preview image
 	- `coverURL` - (optional) a path to the image to be set as a cover

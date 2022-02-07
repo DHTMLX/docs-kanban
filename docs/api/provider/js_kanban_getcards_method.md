@@ -8,7 +8,7 @@ description: You can learn about the getCards REST method in the documentation o
 
 ### Description
 
-@short: gets a promise with the cards data
+@short: Gets a promise with the cards data
 
 :::info
 The **getCards()** method is a part of the **RestDataProvider** service intended for working with server

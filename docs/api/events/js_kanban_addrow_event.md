@@ -8,7 +8,7 @@ description: You can learn about the add-row event in the documentation of the D
 
 ### Description
 
-@short: fires when adding a new row
+@short: Fires when adding a new row
 
 ### Usage
 

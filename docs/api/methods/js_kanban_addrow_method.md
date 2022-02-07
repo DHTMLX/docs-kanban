@@ -8,7 +8,7 @@ description: You can learn about the addRow method in the documentation of the D
 
 ### Description
 
-@short: adds a new row into Kanban
+@short: Adds a new row into Kanban
 
 ### Usage
 

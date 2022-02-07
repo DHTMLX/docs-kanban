@@ -8,7 +8,7 @@ description: You can learn about the add-column event in the documentation of th
 
 ### Description
 
-@short: fires when adding a new column
+@short: Fires when adding a new column
 
 ### Usage
 

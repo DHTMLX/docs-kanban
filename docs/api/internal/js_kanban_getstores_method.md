@@ -8,7 +8,7 @@ description: You can learn about the getStores method in the documentation of th
 
 ### Description
 
-@short: gets an object with the StateStore and DataStore objects of Kanban
+@short: Gets an object with the StateStore and DataStore objects of Kanban
 
 ### Usage
 

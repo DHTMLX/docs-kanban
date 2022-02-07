@@ -8,7 +8,7 @@ description: You can learn about the deleteCard method in the documentation of t
 
 ### Description
 
-@short: removes the specified card from datastore of Kanban
+@short: Removes the specified card from datastore of Kanban
 
 ### Usage
 
@@ -18,7 +18,7 @@ deleteCard({ id: string | number }): void;
 
 ### Parameters
 
-- `id` - (mandatory) the **ID** of the card to be deleted 
+- `id` - (required) the **ID** of the card to be deleted 
 
 ### Example
 

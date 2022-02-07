@@ -8,7 +8,7 @@ description: You can learn about the updateRow method in the documentation of th
 
 ### Description
 
-@short: updates the row data by its ID
+@short: Updates the row data by its ID
 
 ### Usage
 
@@ -18,7 +18,7 @@ updateRow(config: object): void;
 
 ### Parameters
 
-- `config` - (mandatory) the new data object of the current row 
+- `config` - (required) the new data object of the current row 
 
 :::info
 Note, the ID of the row to be updated is required. Other row parameters can be found [**here**](api/config/js_kanban_rows_config.md)

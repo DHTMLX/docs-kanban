@@ -8,7 +8,7 @@ description: You can learn about the setSearch method in the documentation of th
 
 ### Description
 
-@short: looks for the needed cards by the specified parameters
+@short: Looks for the needed cards by the specified parameters
 
 ### Usage
 
@@ -25,7 +25,7 @@ Using this method, you can search for the needed cards by the specified paramete
 
 ### Parameters
 
-- `value` - (mandatory) the value to search 
+- `value` - (required) the value to search 
 - `by` - (optional) the card field for searching
 
 ### Example

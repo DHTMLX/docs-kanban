@@ -8,21 +8,17 @@ description: You can learn about the rowKey config in the documentation of the D
 
 ### Description
 
-@short: defines belonging the card to the row
+@short: Optional. Defines belonging the card to the row
+
+:::info
+To distribute the cards into rows, you need to specify a **custom key** and set it to the **ID** of the desired row (in the card data object). The **rowKey** property needs to be set to this custom key in the widget config
+:::
 
 ### Usage
 
 ~~~jsx {}
 rowKey?: string;
 ~~~  
-
-### Parameters
-
-- `rowKey` - (optional) defines belonging the card to the **row**
-
-:::info
-To distribute the cards into rows, you need to specify a **custom key** and set it to the **ID** of the desired row (in the card data object). The **rowKey** property needs to be set to this custom key in the widget config
-:::
 
 ### Example
 

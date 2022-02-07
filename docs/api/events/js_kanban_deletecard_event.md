@@ -8,7 +8,7 @@ description: You can learn about the delete-card event in the documentation of t
 
 ### Description
 
-@short: fires when removing a card
+@short: Fires when removing a card
 
 ### Usage
 
@@ -20,7 +20,7 @@ description: You can learn about the delete-card event in the documentation of t
 
 The callback of the **delete-card** event can take an object with the following parameters:
 
-- `id` - (mandatory) the ID of the card to be deleted
+- `id` - (required) the ID of the card to be deleted
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

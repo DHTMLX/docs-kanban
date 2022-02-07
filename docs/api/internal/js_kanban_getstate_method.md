@@ -8,7 +8,7 @@ description: You can learn about the getState method in the documentation of the
 
 ### Description
 
-@short: gets an object with the current properties of the Kanban StateStore
+@short: Gets an object with the current properties of the Kanban StateStore
 
 ### Usage
 

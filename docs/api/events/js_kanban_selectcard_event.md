@@ -8,7 +8,7 @@ description: You can learn about the select-card event in the documentation of t
 
 ### Description
 
-@short: fires when selecting a card
+@short: Fires when selecting a card
 
 ### Usage
 
@@ -23,7 +23,7 @@ description: You can learn about the select-card event in the documentation of t
 
 The callback of the **select-card** event can take an object with the following parameters:
 
-- `id` - (mandatory) the ID of the selected card
+- `id` - (required) the ID of the selected card
 - `groupMode` - (optional) multiselecting (false by default)
 
 :::info

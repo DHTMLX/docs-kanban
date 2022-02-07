@@ -8,7 +8,7 @@ description: You can learn about the on method in the documentation of the DHTML
 
 ### Description
 
-@short: allows attaching a handler to the inner events
+@short: Allows attaching a handler to the inner events
 
 ### Usage
 
@@ -21,8 +21,8 @@ api.on(
 
 ### Parameters
 
-- `event` - (mandatory) an event to be fired 
-- `handler` - (mandatory) a handler to be attached (the handler arguments will depend on the event to be fired)
+- `event` - (required) an event to be fired 
+- `handler` - (required) a handler to be attached (the handler arguments will depend on the event to be fired)
 
 ### Events
 

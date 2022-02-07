@@ -8,7 +8,7 @@ description: You can learn about the exec method in the documentation of the DHT
 
 ### Description
 
-@short: allows triggering the inner events
+@short: Allows triggering the inner events
 
 ### Usage
 
@@ -21,8 +21,8 @@ api.exec(
 
 ### Parameters
 
-- `event` - (mandatory) an event to be fired 
-- `config` - (mandatory) the config object with parameters (see the event to be fired)
+- `event` - (required) an event to be fired 
+- `config` - (required) the config object with parameters (see the event to be fired)
 
 ### Events
 

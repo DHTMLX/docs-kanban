@@ -8,7 +8,7 @@ description: You can learn about the delete-column event in the documentation of
 
 ### Description
 
-@short: fires when removing a column
+@short: Fires when removing a column
 
 ### Usage
 
@@ -20,7 +20,7 @@ description: You can learn about the delete-column event in the documentation of
 
 The callback of the **delete-column** event can take an object with the following parameters:
 
-- `id` - (mandatory) the ID of the column to be deleted
+- `id` - (required) the ID of the column to be deleted
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

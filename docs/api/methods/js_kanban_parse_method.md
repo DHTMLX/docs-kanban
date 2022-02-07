@@ -8,7 +8,7 @@ description: You can learn about the parse method in the documentation of the DH
 
 ### Description
 
-@short: parses data into Kanban
+@short: Parses data into Kanban
 
 ### Usage
 

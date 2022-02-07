@@ -8,7 +8,7 @@ description: You can learn about the intercept method in the documentation of th
 
 ### Description
 
-@short: allows intercepting and preventing the inner events
+@short: Allows intercepting and preventing the inner events
 
 ### Usage
 
@@ -21,8 +21,8 @@ api.intercept(
 
 ### Parameters
 
-- `event` - (mandatory) an event to be fired 
-- `callback` - (mandatory) a callback to be performed (the callback arguments will depend on the event to be fired)
+- `event` - (required) an event to be fired 
+- `callback` - (required) a callback to be performed (the callback arguments will depend on the event to be fired)
 
 ### Events
 
