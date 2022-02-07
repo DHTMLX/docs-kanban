@@ -11,7 +11,7 @@ description: You can explore how to work with Data in the documentation of the D
 When initializing Kanban, you need to provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
 
 :::note
-The data for **columns** and **cards** are mandatory!
+The data for **columns** and **cards** are required!
 :::
 
 ~~~jsx {1,16,68,81-85}
@@ -96,8 +96,8 @@ const rows = [ // data for rows
 
 // initializing Kanban with the initial data for columns, cards and rows
 new kanban.Kanban("#root", {
-	columns, // mandatory!
-	cards, // mandatory!
+	columns, // required!
+	cards, // required!
 	rows // optional
 });
 ~~~
