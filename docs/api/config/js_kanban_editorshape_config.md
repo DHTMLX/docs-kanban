@@ -8,7 +8,7 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Description
 
-@short: the editor settings for managing the appearance and functionality of the Kanban editor
+@short: Optional. An array of objects containing settings for managing the appearance and functionality of the Kanban editor
 
 ### Usage
 
@@ -36,15 +36,15 @@ editorShape?: [
 		uploadURL?: string
 	},
 	{...} // other fields data
-]
+];
 ~~~
 
 ### Parameters
 
 To configure the editor appearance and functionality, you can specify the following parameters (fields):
 
-- `type` - (mandatory) an editor field type. Here you can specify the following types: **text**, **textarea**, **date**, **select**, **combo**, **multiselect**, **files**, **color**, **progress** 
-- `key` - (mandatory) an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property. See the example below:
+- `type` - (required) an editor field type. Here you can specify the following types: **text**, **textarea**, **date**, **select**, **combo**, **multiselect**, **files**, **color**, **progress** 
+- `key` - (required) an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property. See the example below:
 
 ~~~js {2,5,16,21}
 	const cardShape = { // card settings
@@ -76,8 +76,8 @@ To configure the editor appearance and functionality, you can specify the follow
 
 - `label` - (optional) an editor field label
 - `options` - (optional) an array of objects with the dropdown options (for the **select** and **combo** types). Here you can specify the following fields:
-	- `id` - (mandatory) an option **ID** 
-	- `label` - (mandatory) an option label 
+	- `id` - (required) an option **ID** 
+	- `label` - (required) an option label 
 - `colors` - (optional) an array with valid HEX codes. It is used for the **color** type
 - `placeholder` - (optional) an editor field placeholder
 - `config` - (optional) an object with the editor uploader configuration. Here you can specify the following parameters:
@@ -85,7 +85,7 @@ To configure the editor appearance and functionality, you can specify the follow
 	- `disabled` - (optional) if **true**, the uploader forbids the user to upload any files
 	- `multiple` - (optional) if **true**, the uploader allows the user to select more than one file
 	- `folder` - (optional) if **true**, the uploader allows the user to select a folder
-- `uploadURL` - (optional) an editor uploader URL (this parameter is **mandatory** for the "files" type)
+- `uploadURL` - (optional) an editor uploader URL (this parameter is **required** for the "files" type)
 
 :::info
 Unless you specify the editor settings via the **editorShape** property, the widget will apply a **defaultEditorShape** set of parameters!

@@ -8,14 +8,14 @@ description: You can learn about the cardTemplate config in the documentation of
 
 ### Description
 
-@short: returns and applies a new HTML template of the card
+@short: Optional. Returns and applies a new HTML template of the card
 
 ### Usage
 
 ~~~jsx
 function cardTemplate ({ cardFields, selected, dragging, cardShape }){
 	return "HTML template of the card";
-}
+};
 ~~~
 
 ### Parameters

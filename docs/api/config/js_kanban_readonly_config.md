@@ -8,19 +8,19 @@ description: You can learn about the readonly config in the documentation of the
 
 ### Description
 
-@short: enables/disables editing, adding, selecting, dragging the cards
+@short: Optional. Enables/disables editing, adding, selecting, dragging the cards
 
 ### Usage
 
 ~~~js {}
-readonly?: boolean
+readonly?: boolean;
 //or
 readonly?: {
 	edit?: boolean,
 	add?: boolean,
 	select?: boolean,
 	dnd?: boolean
-}
+};
 ~~~
 
 ### Parameters

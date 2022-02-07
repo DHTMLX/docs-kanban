@@ -8,7 +8,7 @@ description: You can learn about the columns config in the documentation of the 
 
 ### Description
 
-@short: an array of objects containing the columns data. This parameter is mandatory!
+@short: Required. An array of objects containing the columns data
 
 ### Usage
 
@@ -19,14 +19,14 @@ columns: [
 		label?: string
 	},
 	{...} // other columns data
-]
+];
 ~~~
 
 ### Parameters
 
 For each column you can specify the following parameters (data):
 
-- `id` - (mandatory) a column **ID**. It is used for managing the column via the corresponding methods 
+- `id` - (required) a column **ID**. It is used for managing the column via the corresponding methods 
 - `label` - (optional) a column label. It is displayed in the column section
 
 :::info

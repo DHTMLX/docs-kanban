@@ -8,21 +8,17 @@ description: You can learn about the api config in the documentation of the DHTM
 
 ### Description
 
-@short: an object with the internal API of Kanban. This parameter is mandatory!
-
-### Usage
-
-~~~jsx {}
-api: object
-~~~
-
-### Parameters
-
-- `api` - (mandatory) an object with the internal API of Kanban. It is used for the toolbar controls functionality
+@short: Required. An object with the internal API of Kanban
 
 :::info
 In this case, the **internal API of Kanban** is used for the **search bar** and **controls for adding columns and rows** located on the Toolbar
 :::
+
+### Usage
+
+~~~jsx {}
+api: object;
+~~~
 
 ### Example
 

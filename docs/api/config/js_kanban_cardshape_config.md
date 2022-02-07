@@ -8,7 +8,7 @@ description: You can learn about the cardShape config in the documentation of th
 
 ### Description
 
-@short: the card settings for managing the appearance of the Kanban board
+@short: Optional. An object of the card settings for managing the appearance of the Kanban board
 
 ### Usage
 
@@ -53,7 +53,7 @@ cardShape?: {
 		},
 		{...} // other fields data
 	]
-}
+};
 ~~~
 
 ### Parameters
@@ -73,7 +73,7 @@ In some cases, you can set the parameter to the **short** or **extended** value.
 
 To configure the card appearance, you can specify the following parameters (fields):
 
-- `label` - (mandatory) show/hide a **card label** 
+- `label` - (required) show/hide a **card label** 
 - `progress` - (optional) show/hide a **card progress bar**
 - `start_date` - (optional) show/hide a **card start date**
 - `end_date` - (optional) show/hide a **card end date**
@@ -82,19 +82,19 @@ To configure the card appearance, you can specify the following parameters (fiel
 - `users` - (optional) an object with **users** parameters
 	- `show` - (optional) show/hide the **assigned users** data
 	- `values` - (optional) an array of objects with users data. Here you can specify the following fields:
-		- `id` - (mandatory) a user **ID** 
+		- `id` - (required) a user **ID** 
 		- `path` - (optional) a path to the user picture
 		- `label` - (optional) a user name
 - `priority` - (optional) an object with **priorities** parameters
 	- `show` - (optional) show/hide a **card priority**
 	- `values` - (optional) an array of objects with priorities data. Here you can specify the following fields:
-		- `id` - (mandatory) a priority **ID** 
-		- `color` - (mandatory) a valid HEX code 
+		- `id` - (required) a priority **ID** 
+		- `color` - (required) a valid HEX code 
 		- `label` - (optional) a priority name
 - `color` - (optional) show/hide a colored **top line** of a card
 - `cover` - (optional) show/hide a **card picture**
 - `headerFields` - (optional) an array of objects with **custom fields** data. Here you can specify the following parameters:
-	- `key` - (mandatory) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property 
+	- `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property 
 	- `css` - (optional) a css class of the custom field
 	- `label` - (optional) a label of the custom field
 

@@ -8,7 +8,7 @@ description: You can learn about the items config in the documentation of the DH
 
 ### Description
 
-@short: an array of controls located in the toolbar of Kanban
+@short: Optional. An array of controls arranged in the toolbar of Kanban
 
 ### Usage
 
@@ -17,12 +17,12 @@ items?: [
 	"search",
 	"controls",
 	custom_control // string or function
-]
+];
 ~~~
 
 ### Parameters
 
-- `items` - (optional) an array with settings for configuring the toolbar controls. Here you can specify the following parameters:
+In the **items** array you can specify the following parameters:
 	- `"search"` - (optional) a search bar
 	- `"controls"` - (optional) controls for adding the columns and rows
 	- `custom_control` - (optional) custom control. Here you can specify the custom control(s) both as a **string** or **function**. See the [Customization](../../../guides/customization#custom-toolbar) section

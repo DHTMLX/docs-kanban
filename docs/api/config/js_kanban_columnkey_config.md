@@ -8,21 +8,17 @@ description: You can learn about the columnKey config in the documentation of th
 
 ### Description
 
-@short: defines belonging the card to the column
-
-### Usage
-
-~~~jsx {}
-columnKey?: string
-~~~
-
-### Parameters
-
-- `columnKey` - (optional) defines belonging the card to the **column**
+@short: Optional. Defines belonging the card to the column
 
 :::info
 To distribute the cards into columns, you need to specify a **custom key** and set it to the **ID** of the desired column (in the card data object). The **columnKey** property needs to be set to this custom key in the widget config
 :::
+
+### Usage
+
+~~~jsx {}
+columnKey?: string;
+~~~
 
 ### Default config
 

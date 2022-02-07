@@ -8,17 +8,17 @@ description: You can learn about the locale config in the documentation of the D
 
 ### Description
 
-@short: an object of the built-in or custom locale
+@short: Optional. An object of the built-in or custom locale
+
+:::info
+The **locale** object includes all labels of the Kanban with the corresponding translations
+:::
 
 ### Usage
 
 ~~~jsx {}
-locale?: object
+locale?: object;
 ~~~
-
-### Parameters
-
-- `locale` - (optional) an object of the built-in or custom locale. It includes all labels of the Kanban with the corresponding translations
 
 ### Default config
 
