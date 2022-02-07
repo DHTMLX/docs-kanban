@@ -8,7 +8,7 @@ description: You can learn about the updateColumn method in the documentation of
 
 ### Description
 
-@short: updates the column data by its ID
+@short: Updates the column data by its ID
 
 ### Usage
 
@@ -18,7 +18,7 @@ updateColumn(config: object): void;
 
 ### Parameters
 
-- `config` - (mandatory) the new data object of the current column 
+- `config` - (required) the new data object of the current column 
 
 :::info
 Note, the **ID** of the column to be updated is required. Other column parameters can be found [**here**](api/config/js_kanban_columns_config.md).

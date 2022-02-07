@@ -8,7 +8,7 @@ description: You can learn about the getCard method in the documentation of the 
 
 ### Description
 
-@short: gets a data object of the card by the specified ID
+@short: Gets a data object of the card by the specified ID
 
 ### Usage
 
@@ -18,7 +18,7 @@ getCard(id: string | number): object;
 
 ### Parameters
 
-- `id` - (mandatory) the **ID** of the target card 
+- `id` - (required) the **ID** of the target card 
 
 ### Returns
 

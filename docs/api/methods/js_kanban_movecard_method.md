@@ -8,7 +8,7 @@ description: You can learn about the moveCard method in the documentation of the
 
 ### Description
 
-@short: moves a card to the specified column (and row)
+@short: Moves a card to the specified column (and row)
 
 ### Usage
 
@@ -23,13 +23,13 @@ moveCard({
 
 ### Parameters
 
-- `id` - (mandatory) the **ID** of the card that will be moved 
-- `columnId` - (mandatory) the **ID** of the column the card will be placed into 
+- `id` - (required) the **ID** of the card that will be moved 
+- `columnId` - (required) the **ID** of the column the card will be placed into 
 - `rowId` - (optional) the **ID** of the row the card will be placed into
 - `before` - (optional) the **ID** of the card, before which the new card will be placed
 
 :::info
-If you specify the **rowKey** property in the widget config, the **rowId** parameter of the **moveCard()** method is *mandatory*!
+If you specify the **rowKey** property in the widget config, the **rowId** parameter of the **moveCard()** method is *required*!
 :::
 
 ### Example

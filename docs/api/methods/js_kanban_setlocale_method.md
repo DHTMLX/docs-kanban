@@ -8,7 +8,7 @@ description: You can learn about the setLocale method in the documentation of th
 
 ### Description
 
-@short: applies new locale to the Kanban widget
+@short: Applies new locale to the Kanban widget
 
 ### Usage
 
@@ -18,7 +18,7 @@ setLocale(locale: object): void;
 
 ### Parameters
 
-- `locale` - (mandatory) a data object of the new locale 
+- `locale` - (required) a data object of the new locale 
 
 :::info
 Using this method, you can set a built-in locale (**en**, **ru**, **cn**) as well as a custom one.

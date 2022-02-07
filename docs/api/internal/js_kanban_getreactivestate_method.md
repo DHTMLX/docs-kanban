@@ -8,7 +8,7 @@ description: You can learn about the getReactiveState method in the documentatio
 
 ### Description
 
-@short: gets an object with the reactive properties of the Kanban StateStore
+@short: Gets an object with the reactive properties of the Kanban StateStore
 
 ### Usage
 

@@ -8,7 +8,7 @@ description: You can learn about the selectCard method in the documentation of t
 
 ### Description
 
-@short: selects a card by the specified ID
+@short: Selects a card by the specified ID
 
 ### Usage
 
@@ -21,7 +21,7 @@ selectCard({
 
 ### Parameters
 
-- `id` - (mandatory) the **ID** of the selected card 
+- `id` - (required) the **ID** of the selected card 
 - `groupMode` - (optional) multiselecting (**false** by default)
 
 :::info

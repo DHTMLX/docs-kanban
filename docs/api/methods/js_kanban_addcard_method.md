@@ -8,7 +8,7 @@ description: You can learn about the addCard method in the documentation of the 
 
 ### Description
 
-@short: adds a new card into Kanban
+@short: Adds a new card into Kanban
 
 ### Usage
 
@@ -24,7 +24,7 @@ addCard({
 
 ### Parameters
 
-- <code title = "string | number" >columnId</code> - (mandatory) the ID of the target column 
+- <code title = "string | number" >columnId</code> - (required) the ID of the target column 
 - <code title = "string | number" >id</code> -  (optional) the ID of the new card
 - <code title = "string | number" >rowId</code> - (optional) the ID of the target row
 - <code title = "string | number" >before</code> - (optional) the ID of the card, before which the new card will be placed  

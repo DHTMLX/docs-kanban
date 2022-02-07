@@ -8,7 +8,7 @@ description: You can learn about the addColumn method in the documentation of th
 
 ### Description
 
-@short: adds a new column into Kanban
+@short: Adds a new column into Kanban
 
 ### Usage
 
