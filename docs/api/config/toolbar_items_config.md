@@ -23,9 +23,10 @@ items?: [
 ### Parameters
 
 In the **items** array you can specify the following parameters:
-	- `"search"` - (optional) a search bar
-	- `"controls"` - (optional) controls for adding the columns and rows
-	- `custom_control` - (optional) custom control. Here you can specify the custom control(s) both as a **string** or **function**. See the [Customization](../../../guides/customization#custom-toolbar) section
+
+- `"search"` - (optional) a search bar
+- `"controls"` - (optional) controls for adding the columns and rows
+- `custom_control` - (optional) custom control. Here you can specify the custom control(s) both as a **string** or **function**. See the [Customization](../../../guides/customization#custom-toolbar) section
 
 ### Example
 
