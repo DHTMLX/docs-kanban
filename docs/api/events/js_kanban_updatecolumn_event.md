@@ -8,7 +8,7 @@ description: You can learn about the update-column event in the documentation of
 
 ### Description
 
-@short: fires when updating a column data
+@short: Fires when updating a column data
 
 ### Usage
 
@@ -20,7 +20,7 @@ description: You can learn about the update-column event in the documentation of
 
 The callback of the **update-column** event can take an object with the following parameters:
 
-- `config` - (mandatory) the new data object of the current column. The full list of the column parameters can be found [here](api/config/js_kanban_columns_config.md)
+- `config` - (required) the new data object of the current column. The full list of the column parameters can be found [here](api/config/js_kanban_columns_config.md)
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

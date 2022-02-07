@@ -8,7 +8,7 @@ description: You can learn about the add-card event in the documentation of the 
 
 ### Description
 
-@short: fires when adding a new card
+@short: Fires when adding a new card
 
 ### Usage
 
@@ -26,7 +26,7 @@ description: You can learn about the add-card event in the documentation of the 
 
 The callback of the **add-card** event can take an object with the following parameters:
 
-- `columnId` - (mandatory) the ID of the target column
+- `columnId` - (required) the ID of the target column
 - `id` - (optional) the ID of the new card
 - `rowId` - (optional) the ID of the target row
 - `before` - (optional) the ID of the card, before which the new card will be placed

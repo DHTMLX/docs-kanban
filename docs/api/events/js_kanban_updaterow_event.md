@@ -8,7 +8,7 @@ description: You can learn about the update-row event in the documentation of th
 
 ### Description
 
-@short: fires when updating a row data
+@short: Fires when updating a row data
 
 ### Usage
 
@@ -20,7 +20,7 @@ description: You can learn about the update-row event in the documentation of th
 
 The callback of the **update-row** event can take an object with the following parameters:
 
-- `config` - (mandatory) the new data object of the current row. The full list of the row parameters can be found [here](api/config/js_kanban_rows_config.md)
+- `config` - (required) the new data object of the current row. The full list of the row parameters can be found [here](api/config/js_kanban_rows_config.md)
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

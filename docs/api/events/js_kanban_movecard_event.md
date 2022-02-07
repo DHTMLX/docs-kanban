@@ -8,7 +8,7 @@ description: You can learn about the move-card event in the documentation of the
 
 ### Description
 
-@short: fires when moving a card
+@short: Fires when moving a card
 
 ### Usage
 
@@ -25,8 +25,8 @@ description: You can learn about the move-card event in the documentation of the
 
 The callback of the **move-card** event can take an object with the following parameters:
 
-- `id` - (mandatory) the ID of the card that will be moved
-- `columnId` - (mandatory) the ID of the column the card will be placed into
+- `id` - (required) the ID of the card that will be moved
+- `columnId` - (required) the ID of the column the card will be placed into
 - `rowId` - (optional) the ID of the row the card will be placed into
 - `before` - (optional) the ID of the card, before which the new card will be placed
 

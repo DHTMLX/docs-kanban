@@ -8,7 +8,7 @@ description: You can learn about the set-search event in the documentation of th
 
 ### Description
 
-@short: fires when searching a card
+@short: Fires when searching a card
 
 ### Usage
 
@@ -23,7 +23,7 @@ description: You can learn about the set-search event in the documentation of th
 
 The callback of the **set-search** event can take an object with the following parameters:
 
-- `value` - (mandatory) the value to search
+- `value` - (required) the value to search
 - `by` - (optional) the card field for searching
 
 :::info

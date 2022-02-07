@@ -8,7 +8,7 @@ description: You can learn about the delete-row event in the documentation of th
 
 ### Description
 
-@short: fires when removing a row
+@short: Fires when removing a row
 
 ### Usage
 
@@ -20,7 +20,7 @@ description: You can learn about the delete-row event in the documentation of th
 
 The callback of the **delete-row** event can take an object with the following parameters:
 
-- `id` - (mandatory) the ID of the row to be deleted
+- `id` - (required) the ID of the row to be deleted
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
