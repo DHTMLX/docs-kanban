@@ -23,6 +23,8 @@ JavaScript Kanban has the **RestDataProvider** service that completely supports 
 - ***"delete-column"***
 - ***"delete-row"***
 - ***"move-card"***
+- ***"move-column"***
+- ***"move-row"***
 - ***"update-card"***
 - ***"update-column"***
 - ***"update-row"***

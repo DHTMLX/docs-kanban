@@ -47,6 +47,8 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_getcard_method.md)               | @getshort(api/methods/js_kanban_getcard_method.md)       |
 | [](api/methods/js_kanban_getselection_method.md)          | @getshort(api/methods/js_kanban_getselection_method.md)  |
 | [](api/methods/js_kanban_movecard_method.md)              | @getshort(api/methods/js_kanban_movecard_method.md)      |
+| [](api/methods/js_kanban_movecolumn_method.md)            | @getshort(api/methods/js_kanban_movecolumn_method.md)    |
+| [](api/methods/js_kanban_moverow_method.md)               | @getshort(api/methods/js_kanban_moverow_method.md)       |
 | [](api/methods/js_kanban_parse_method.md)                 | @getshort(api/methods/js_kanban_parse_method.md)         |
 | [](api/methods/js_kanban_selectcard_method.md)            | @getshort(api/methods/js_kanban_selectcard_method.md)    |
 | [](api/methods/js_kanban_serialize_method.md)             | @getshort(api/methods/js_kanban_serialize_method.md)     |
@@ -96,6 +98,8 @@ new kanban.Toolbar("#toolbar", {
 | [](api/events/js_kanban_deletecolumn_event.md)             | @getshort(api/events/js_kanban_deletecolumn_event.md)    |
 | [](api/events/js_kanban_deleterow_event.md)                | @getshort(api/events/js_kanban_deleterow_event.md)       |
 | [](api/events/js_kanban_movecard_event.md)                 | @getshort(api/events/js_kanban_movecard_event.md)        |
+| [](api/events/js_kanban_movecolumn_event.md)               | @getshort(api/events/js_kanban_movecolumn_event.md)      |
+| [](api/events/js_kanban_moverow_event.md)                  | @getshort(api/events/js_kanban_moverow_event.md)         |
 | [](api/events/js_kanban_selectcard_event.md)               | @getshort(api/events/js_kanban_selectcard_event.md)      |
 | [](api/events/js_kanban_setsearch_event.md)                | @getshort(api/events/js_kanban_setsearch_event.md)       |
 | [](api/events/js_kanban_unselectcard_event.md)             | @getshort(api/events/js_kanban_unselectcard_event.md)    |
