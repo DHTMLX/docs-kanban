@@ -44,3 +44,5 @@ board.api.on("move-row", (obj) => {
 	console.log(obj);
 });
 ~~~
+
+**Change log:** This event was added in v1.1

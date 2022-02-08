@@ -43,3 +43,5 @@ board.api.on("move-column", (obj) => {
 	console.log(obj);
 });
 ~~~
+
+**Change log:** This event was added in v1.1
