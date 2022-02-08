@@ -163,9 +163,13 @@ To remove the *cards*, *columns* and *rows*, you can use the following methods:
 - [deleteColumn()](api/methods/js_kanban_deletecolumn_method.md) - removes a column from Kanban by the specified ID
 - [deleteRow()](api/methods/js_kanban_deleterow_method.md) - removes a row from Kanban by the specified ID
 
-## Moving cards
+## Moving items
 
-To move the *card* to the desired *column* and *row*, you can use the [moveCard()](api/methods/js_kanban_movecard_method.md) method.
+To move the *cards*, *columns* and *rows*, you can use the following methods:
+
+- [moveCard()](api/methods/js_kanban_movecard_method.md) - moves a card to the desired column and row
+- [moveColumn()](api/methods/js_kanban_movecolumn_method.md) - moves a column to the desired position
+- [moveRow()](api/methods/js_kanban_moverow_method.md) - moves a row to the desired position
 
 ## Example
 
