@@ -41,6 +41,9 @@ module.exports = {
 						"api/methods/js_kanban_getselection_method",
 						// M
 						"api/methods/js_kanban_movecard_method",
+						"api/methods/js_kanban_movecolumn_method",
+						"api/methods/js_kanban_moverow_method",
+
 						// P
 						"api/methods/js_kanban_parse_method",
 						// S
@@ -112,6 +115,8 @@ module.exports = {
 						"api/events/js_kanban_deletecolumn_event",
 						"api/events/js_kanban_deleterow_event",
 						"api/events/js_kanban_movecard_event",
+						"api/events/js_kanban_movecolumn_event",
+						"api/events/js_kanban_moverow_event",
 						"api/events/js_kanban_selectcard_event",
 						"api/events/js_kanban_setsearch_event",
 						"api/events/js_kanban_unselectcard_event",
