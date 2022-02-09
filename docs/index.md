@@ -5,11 +5,11 @@ slug: /
 description: You can have an overview of DHTMLX JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# JavaScript Kanban overview
+# DHTMLX Kanban overview
 
 JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool can work with any number of cards. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page.
 
-## Kanban structure
+## Kanban structure­
 
 ### Toolbar
 
@@ -24,11 +24,16 @@ The **Board** is the main part of Kanban. It consist of the ***cards*** distribu
 On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
 
 - add new cards by clicking on the plus icon
-- delete cards, columns and rows using the 3 dots icon
+- delete cards, columns and rows using a context menu (a 3 dots icon)
 - move cards by dragging them into desired place (row and column)
-- rename columns and rows by double clicking on the corresponding labels
+- move columns and rows using a context menu (a 3 dots icon)
+- rename columns and rows by double clicking on the corresponding labels or using a context menu (a 3 dots icon)
 - display a card editor by clicking on the needed card
-- show/hide the rows by clicking on the triangle icon on the left of the row label
+- collape/uncollapse rows by clicking on the arrow icon on the left of the row label
+- collape/uncollapse columns by clicking on the arrow icon on the left of the column label
+- select multiple cards using the following shortcuts:
+    - `Shift` +  clicking on the corresponding cards, to select multiple cards in the same column
+    - `Ctrl (Command)` + clicking on the corresponding cards, to select multiple cards in different columns
 
 ![Kanban Board](assets/js_kanban_board.png)
 
