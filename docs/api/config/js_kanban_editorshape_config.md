@@ -102,7 +102,7 @@ const defaultPriorities = [
 
 const defaultColors = [ "#65D3B3", "#FFC975", "#58C3FE" ];
 
-const defaultEditorShape: [
+const defaultEditorShape = [
 	{ key: "label", type: "text", label: "Label" },
 	{ key: "description", type: "textarea", label: "Description" },
 	{ key: "priority", type: "combo", label: "Priority", options: defaultPriorities },
@@ -110,7 +110,7 @@ const defaultEditorShape: [
 	{ key: "progress", type: "progress", label: "Progress" },
 	{ key: "start_date", type: "date", label: "Start date" },
 	{ key: "end_date", type: "date", label: "End date" }
-]
+];
 ~~~
 
 ### Example
