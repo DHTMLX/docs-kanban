@@ -1,31 +1,50 @@
-# DHTMLX JavaScript Kanban Documentation
+<h1 align="center"><a href="https://docs.dhtmlx.com/kanban/">DHTMLX Kanban Documentation</a></h1>
 
-### Installation
+JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool allows to work with any number of cards as well as limit number of cards for columns and swimlanes. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page. 
+
+## Explore documentation locally
+
+To run the Kanban documentation locally, take the following steps:
+
+#### 1. Clone the documentation to the local folder
+
+```
+$ git clone git@github.com:DHTMLX/docs-kanban.git
+$ cd docs-kanban
+```
+
+#### 2. Install dependencies
 
 ```
 $ yarn
 ```
 
-### Local Development
+#### 3. Run the documentation on the local server and explore it
 
 ```
 $ yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Related sources
 
-### Build
+[Download DHTMLX Kanban](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml)
 
-```
-$ yarn build
-```
+[Live demos](https://snippet.dhtmlx.com/5hcx01h4?mode=wide&text=#kanban)
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+[Blog](https://dhtmlx.com/blog/tag/kanban/)
 
-### Deployment
+[Forum](https://forum.dhtmlx.com/c/widgets/kanban)
 
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
+## Follow us
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Star our GitHub repo :star:
+
+Watch our tutorials on [YouTube](https://www.youtube.com/user/dhtmlx/videos) :eyes:
+
+Read us on [Medium](https://medium.com/@dhtmlx) :newspaper:
+
+Follow us on [Twitter](https://twitter.com/dhtmlx) :feet:
+
+Like our page on [Facebook](https://www.facebook.com/dhtmlx/) :thumbsup:
+
+See our news on [Linkedin](https://www.linkedin.com/groups/3345009/) :mega:
