@@ -6,8 +6,29 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 # What's new
 
-Version 1.0
-----------------
+If you are updating Kanban from an older version, check [Migration to newer version](news/migration.md) for details.
+
+## Version 1.1
+
+Released on February ??, 2022
+
+### New functionality
+
+- The ability to ...
+- The ability to ...
+- The ability to ...
+
+### New API
+
+-
+- 
+
+### Updates
+
+-
+-
+
+## Version 1.0
 
 Released on November 23, 2021
 

@@ -8,10 +8,20 @@ module.exports = {
 			type: "doc",
 			id: "how_to_start"
 		},
-			{
+		{
+			type: "category",
+			label: "What's new and migration",
+			collapsible: true,
+			collapsed: true,
+			items: [
+				"news/whats_new",
+				"news/migration",
+			]
+		},
+			/*{
 				type: "doc",
 				id: "whats_new"
-			},
+			},*/
 		{
 			type: "category",
 			label: "API",
