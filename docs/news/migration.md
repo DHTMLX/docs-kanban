@@ -5,3 +5,36 @@ description: You can learn about the Migration to Newer Versions in the document
 ---
 
 # Migration to newer versions
+
+## 1.0 -> 1.1
+
+### Api
+
+The [`columns`](../../api/config/js_kanban_columns_config) property was extended by the new parameters. Starting from v1.1, you can use the ***collapsed, limit*** and ***strictLimit*** configurations.
+
+~~~jsx title="Before v1.1"
+const columns = [
+    { 
+        label: "Backlog", 
+        id: "backlog"
+    }, ...
+];
+~~~
+
+~~~jsx {5-7,12} title="From v1.1"
+const columns = [
+    { 
+        label: "Backlog", 
+        id: "backlog",
+        collapsed: true,
+        limit: 3,
+        strictLimit: true 
+    }, ...
+];
+
+new kanban.Kanban("#root", {
+    columns,
+    cards,
+    // other parameters
+});
+~~~

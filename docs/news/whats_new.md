@@ -10,23 +10,34 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.1
 
-Released on February ??, 2022
+Released on February **BIG SECRET**, 2022
 
 ### New functionality
 
-- The ability to ...
-- The ability to ...
-- The ability to ...
+- The ability to *collapse/uncollapse* columns using an arrow on the left of the column label
+- The ability to *limit* the number of cards for the columns and swimlanes
+- The ability to *move* columns via the context menu (a 3 dots icon)
+- The ability to *move* rows via the context menu (a 3 dots icon)
+- The ability to *select multiple cards* of the same column using the familiar **Shift** + **click** combination
+- The ability to use [TypeScript definitions](../../guides/typescript_support) of Kanban
 
 ### New API
 
--
-- 
+- New **events** for moving columns and cards: 
+	[`move-column`](../../api/events/js_kanban_movecolumn_event)
+	and
+	[`move-row`](../../api/events/js_kanban_moverow_event)
+- New **methods** for moving columns and rows: 
+	[`moveColumn()`](../../api/methods/js_kanban_movecolumn_method) 
+	and
+	[`moveRow()`](../../api/methods/js_kanban_moverow_method)
 
 ### Updates
 
--
--
+- The [`columns`](../../api/config/js_kanban_columns_config) property was updated and extended by the following parameters:
+	- ***`collapsed`***
+	- ***`limit`***
+	- ***`strictLimit`***
 
 ## Version 1.0
 
@@ -34,7 +45,7 @@ Released on November 23, 2021
 
 ### Initial functionality
 
-- Ability to work with **cards** in the following way:
+- The ability to work with **cards** in the following way:
 	-	add new cards
 	- select cards (multiselection)
 	- delete cards
