@@ -23,7 +23,7 @@ The **Board** is the main part of Kanban. It consist of the ***cards*** distribu
 
 On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
 
-- add new cards by clicking on the plus icon
+- add new cards by clicking on the plus icon (in accordance with the specified *limits* for each column and swimlane)
 - delete cards, columns and rows using a context menu (a 3 dots icon)
 - move cards by dragging them into desired place (row and column)
 - move columns and rows using a context menu (a 3 dots icon)
