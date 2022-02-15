@@ -24,7 +24,7 @@ description: You can learn about the move-row event in the documentation of the 
 The callback of the **move-row** event can take an object with the following parameters:
 
 - `id` - (required) an **ID** of the row to be moved
-- `before` - (required) an **ID** of the row, the moved row will be place before
+- `before` - (required) an **ID** of the row, the moved one will be placed before it
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
