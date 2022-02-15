@@ -6,7 +6,7 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 # What's new
 
-If you are updating Kanban from an older version, check [Migration to newer version](news/migration.md) for details.
+If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
 ## Version 1.1
 
@@ -68,7 +68,7 @@ Released on November 23, 2021
 	- rename columns and rows
 	- collapse/uncollapse rows
 
-- [Localization](../guides/localization)
-- [Integration with backend](../guides/working_with_server) (Go and Node)
+- [Localization](../../guides/localization)
+- [Integration with backend](../../guides/working_with_server) (Go and Node)
 - Cross browser compatibility
 - Touch support
