@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.1
 
-Released on February **BIG SECRET**, 2022
+Released on February 15, 2022
 
 ### New functionality
 
@@ -23,7 +23,7 @@ Released on February **BIG SECRET**, 2022
 
 ### New API
 
-- New **events** for moving columns and cards: 
+- New **events** for moving columns and rows: 
 	[`move-column`](../../api/events/js_kanban_movecolumn_event)
 	and
 	[`move-row`](../../api/events/js_kanban_moverow_event)
