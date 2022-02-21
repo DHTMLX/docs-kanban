@@ -58,7 +58,7 @@ new kanban.Kanban("#root", {
 	columns,
 	readonly: {
 		edit: false, // disable editing
-		add: true, // enable addind
+		add: true, // enable adding
 		select: false, // disable selecting
 		dnd: true // enable dragging
 	},
