@@ -291,8 +291,7 @@ const config = {
 							}
 						]
 					}
-				],
-				copyright: `Copyright © ${new Date().getFullYear()} XB Software Ltd.`,
+				]
 	  },
 	  prism: {
 		theme: lightCodeTheme,

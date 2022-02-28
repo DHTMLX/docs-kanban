@@ -8,6 +8,14 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.1.1
+
+Released on February 28, 2022
+### Fixes
+
+- Custom editor field doesn't work without defining it in a card shape
+- Selecting the required card from the dropdown menu of the search bar
+
 ## Version 1.1
 
 Released on February 15, 2022
