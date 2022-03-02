@@ -132,38 +132,38 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  noIndex: false,
-  title: 'DHTMLX JavaScript Kanban Docs',
-  tagline: 'DHTMLX JavaScript Kanban Docs',
-  url: 'https://docs.dhtmlx.com',
-  baseUrl: '/kanban/',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'DHTMLX', // Usually your GitHub org/user name.
-  projectName: 'docs-kanban', // Usually your repo name.
-  trailingSlash: true,
-  presets: [
-	[
-	  '@docusaurus/preset-classic',
-	  /** @type {import('@docusaurus/preset-classic').Options} */
-	  ({
-		docs: {
-		  sidebarPath: require.resolve('./sidebars.js'),
-		  editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
-		  routeBasePath: '/',
-		},
-		theme: {
-		  customCss: require.resolve('./src/css/custom.css'),
-		},
-		sitemap: {
-		  changefreq: 'daily',
-		  priority: 0.5,
-		  trailingSlash: true
-		},
-	  }),
+	noIndex: false,
+	title: 'DHTMLX JavaScript Kanban Docs',
+	tagline: 'DHTMLX JavaScript Kanban Docs',
+	url: 'https://docs.dhtmlx.com',
+	baseUrl: '/kanban/',
+	onBrokenLinks: 'warn',
+	onBrokenMarkdownLinks: 'warn',
+	favicon: 'img/favicon.ico',
+	organizationName: 'DHTMLX', // Usually your GitHub org/user name.
+	projectName: 'docs-kanban', // Usually your repo name.
+	trailingSlash: true,
+	presets: [
+		[
+			'@docusaurus/preset-classic',
+			/** @type {import('@docusaurus/preset-classic').Options} */
+			({
+				docs: {
+				sidebarPath: require.resolve('./sidebars.js'),
+				editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
+				routeBasePath: '/',
+				},
+				theme: {
+				customCss: require.resolve('./src/css/custom.css'),
+				},
+				sitemap: {
+				changefreq: 'daily',
+				priority: 0.5,
+				trailingSlash: true
+				},
+			}),
+		],
 	],
-  ],
 	plugins: [
 		'docusaurus-plugin-sass',
 		[
