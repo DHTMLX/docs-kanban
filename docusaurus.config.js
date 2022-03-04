@@ -149,6 +149,7 @@ const config = {
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
 				docs: {
+<<<<<<< HEAD
 				sidebarPath: require.resolve('./sidebars.js'),
 				editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
 				routeBasePath: '/',
@@ -160,6 +161,18 @@ const config = {
 				changefreq: 'daily',
 				priority: 0.5,
 				trailingSlash: true
+=======
+					sidebarPath: require.resolve('./sidebars.js'),
+					//editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
+					routeBasePath: '/',
+				},
+				theme: {
+					customCss: require.resolve('./src/css/custom.css'),
+				},
+				sitemap: {
+					changefreq: 'daily',
+					priority: 0.5,
+>>>>>>> master
 				},
 			}),
 		],
@@ -176,35 +189,24 @@ const config = {
 				onAfterDataTransformation
 			}
 		],
-    [
-        require.resolve('docusaurus-gtm-plugin'),
-        {
-          id: 'GTM-5M5RCSJ',
-        }
-    ]
+		[
+			require.resolve('docusaurus-gtm-plugin'),
+			{
+				id: 'GTM-5M5RCSJ',
+			}
+		]
 	],
-  themeConfig:
+  	themeConfig:
 	/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 	({
-	  navbar: {
-		title: 'JavaScript Kanban Documentation',
-		logo: {
-		  alt: 'DHTMLX JavaScript Kanban Logo',
-		  src: 'img/logo.svg',
-					href: 'https://docs.dhtmlx.com/'
-		},
-		items: [
-		  // {
-		  //   type: 'doc',
-		  //   docId: 'intro',
-		  //   position: 'left',
-		  //   label: 'Tutorial',
-		  // },
-			{
-			  "label": "Examples",
-			  "href": "https://snippet.dhtmlx.com/5hcx01h4?text=%23kanban",
-			  "position": "right"
+		navbar: {
+			title: 'JavaScript Kanban Documentation',
+			logo: {
+				alt: 'DHTMLX JavaScript Kanban Logo',
+				src: 'img/logo.svg',
+				href: 'https://docs.dhtmlx.com/'
 			},
+<<<<<<< HEAD
 			{
 			  "label": "Forum",
 			  "href": "https://forum.dhtmlx.com/c/widgets/",
@@ -303,15 +305,127 @@ const config = {
 		appId: '0O8M0T0DUJ',
 		apiKey: '541438887f3386a7cdb48fb77176a184',
 		indexName: 'kanban',
+=======
+			items: [
+			// {
+			//   type: 'doc',
+			//   docId: 'intro',
+			//   position: 'left',
+			//   label: 'Tutorial',
+			// },
+				{
+					"label": "Examples",
+					"href": "https://snippet.dhtmlx.com/5hcx01h4?text=%23kanban",
+					"position": "right"
+				},
+				{
+					"label": "Forum",
+					"href": "https://forum.dhtmlx.com/c/widgets/",
+					"position": "right"
+				},
+				{
+					"label": "Support",
+					"href": "https://dhtmlx.com/docs/technical-support.shtml",
+					"position": "right"
+				},
+				{
+					"label": "Download",
+					"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml",
+					"position": "right"
+				}
+			],
+		},
+	  	footer: {
+			"style": "dark",
+			"links": [
+				{
+					"title": "Development center",
+					"items": [
+						{
+							"label": "Download JS Kanban",
+							"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml",
+							"position": "right"
+						},
+						{
+							"label": "Examples",
+							"href": "https://snippet.dhtmlx.com/5hcx01h4?text=%23kanban",
+							"position": "right"
+						},
+						{
+							"label": "Blog",
+							"href": "https://dhtmlx.com/blog/tag/kanban/"
+						},
+						{
+							"label": "Forum",
+							"href": "https://forum.dhtmlx.com/c/widgets/kanban",
+							"position": "right"
+						}
+					]
+				},
+				{
+					"title": "Community",
+					"items": [
+						{
+							"label": "GitHub",
+							"href": "https://github.com/DHTMLX"
+						},
+						{
+							"label": "Youtube",
+							"href": "https://www.youtube.com/user/dhtmlx"
+						},
+						{
+							"label": "Facebook",
+							"href": "https://www.facebook.com/dhtmlx"
+						},
+						{
+							"label": "Twitter",
+							"href": "https://twitter.com/dhtmlx"
+						},
+						{
+							"label": "Linkedin",
+							"href": "https://www.linkedin.com/groups/3345009/"
+						}
+					]
+				},
+				{
+					"title": "Company",
+					"items": [
+						{
+							"label": "About us",
+							"href": "https://dhtmlx.com/docs/company.shtml"
+						},
+						{
+							"label": "Contact us",
+							"href": "https://dhtmlx.com/docs/contact.shtml"
+						},
+						{
+							"label": "Licensing",
+							"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/#licensing"
+						}
+					]
+				}
+			]
+	  	},
+		prism: {
+			theme: lightCodeTheme,
+			darkTheme: darkCodeTheme,
+		},
+		algolia: {
+			// This is a read-only, search-only key served directly by the front-end, managed by Algolia via their
+			// free DocSearch program. The key is not sensitive. See https://docsearch.algolia.com/ for more details.
+			appId: '0O8M0T0DUJ',
+			apiKey: '541438887f3386a7cdb48fb77176a184',
+			indexName: 'kanban',
+>>>>>>> master
 
-		// Optional: see doc section bellow
-		contextualSearch: true,
+			// Optional: see doc section bellow
+			contextualSearch: true,
 
-		// Optional: Algolia search parameters
-		searchParameters: {},
+			// Optional: Algolia search parameters
+			searchParameters: {},
 
-		//... other Algolia params
-	  },
+			//... other Algolia params
+		},
 	}),
 };
 
