@@ -175,3 +175,32 @@ code {
 }
 
 /* end list */
+
+/* buttons */
+.support_btn{
+  
+  font-size: 16pt;
+  color: rgb(53, 148, 243);
+  background-color: transparent;
+  border: 1px solid rgba(53, 148, 243, 0.692);;
+  border-radius: 5px;
+  width: 280px;
+  height: 50px;
+}
+
+.support_btn:hover{
+  background-color: rgba(53, 148, 243, 0.692);
+  color: white;
+}
+
+.support_btn > a {
+  text-decoration: none;
+  color: inherit;
+}
+/* buttons end */
+
+/*table*/
+table{
+  width: 100%;
+}
+/*table end*/

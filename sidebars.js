@@ -15,7 +15,7 @@ module.exports = {
 			collapsed: true,
 			items: [
 				"news/whats_new",
-				"news/migration",
+				"news/migration"
 			]
 		},
 			/*{
@@ -179,6 +179,10 @@ module.exports = {
 				"guides/working_with_server",
 				"guides/typescript_support"
 			]
+		},
+		{
+			type: "doc",
+			id: "howtos"
 		}
 	]
 };
