@@ -180,12 +180,11 @@ code {
 
 /* styles for tables */
 
+table{
+  width: 100%;
+}
 table th:first-child {
   width: 25%;
-}
-
-table th:last-child {
-  width: 650px;
 }
 
 table tr:nth-child(even) {
