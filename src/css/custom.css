@@ -175,3 +175,21 @@ code {
 }
 
 /* end list */
+
+
+
+/* styles for tables */
+
+table th:first-child {
+  width: 25%;
+}
+
+table th:last-child {
+  width: 650px;
+}
+
+table tr:nth-child(even) {
+  background: #f5f6f7;
+} 
+
+/* end styles for tables */
