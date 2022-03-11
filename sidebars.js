@@ -13,6 +13,14 @@ module.exports = {
 			label: "What's new and migration",
 			collapsible: true,
 			collapsed: true,
+			link: {
+				type: 'generated-index',
+				title: "What's new and migration",
+				//description: '',
+				//slug: '/category/docusaurus-guides',
+				keywords: ['news'],
+				image: '/img/docusaurus.png',
+			},
 			items: [
 				"news/whats_new",
 				"news/migration"
@@ -27,14 +35,22 @@ module.exports = {
 			label: "API",
 			collapsible: true,
 			collapsed: false,
+			link: {
+				type: 'doc',
+				id: "api/api_overview"
+			},
 			items: [
-				"api/api_overview",
-					// JS Kanban methods
+				//"api/api_overview",
+				// JS Kanban methods
 				{
 					type: "category",
 					label: "Kanban methods",
 					collapsible: true,
 					collapsed: true,
+					link: {
+						type: 'doc',
+						id: "api/overview/methods_overview"
+					},
 					items: [
 						// A
 						"api/methods/js_kanban_addcard_method",
@@ -75,12 +91,22 @@ module.exports = {
 					label: "Kanban internal API",
 					collapsible: true,
 					collapsed: true,
+					link: {
+						type: 'generated-index',
+						title: 'Internal API overview',
+						keywords: ['internal api'],
+						image: '/img/docusaurus.png',
+					},
 					items: [
 						{
 							type: "category",
 							label: "Event Bus methods",
 							collapsible: true,
 							collapsed: true,
+							link: {
+								type: 'doc',
+								id: "api/overview/internal_eventbus_overview"
+							},
 							items: [
 								"api/internal/js_kanban_exec_method",
 								"api/internal/js_kanban_intercept_method",
@@ -93,6 +119,10 @@ module.exports = {
 							label: "State methods",
 							collapsible: true,
 							collapsed: true,
+							link: {
+								type: 'doc',
+								id: "api/overview/internal_state_overview"
+							},
 							items: [
 								"api/internal/js_kanban_getreactivestate_method",
 								"api/internal/js_kanban_getstate_method",
@@ -104,6 +134,10 @@ module.exports = {
 							label: "REST methods",
 							collapsible: true,
 							collapsed: true,
+							link: {
+								type: 'doc',
+								id: "api/overview/internal_rest_overview"
+							},
 							items: [
 								"api/provider/js_kanban_getcards_method",
 								"api/provider/js_kanban_getcolumns_method",
@@ -117,6 +151,10 @@ module.exports = {
 					label: "Kanban events",
 					collapsible: true,
 					collapsed: true,
+					link: {
+						type: 'doc',
+						id: "api/overview/events_overview"
+					},
 					items: [
 						"api/events/js_kanban_addcard_event",
 						"api/events/js_kanban_addcolumn_event",
@@ -140,6 +178,10 @@ module.exports = {
 					label: "Kanban properties",
 					collapsible: true,
 					collapsed: true,
+					link: {
+						type: 'doc',
+						id: "api/overview/properties_overview"
+					},
 					items: [
 						// JS Kanban
 						// C
@@ -170,6 +212,12 @@ module.exports = {
 			label: "Guides",
 			collapsible: true,
 			collapsed: true,
+			link: {
+				type: 'generated-index',
+				title: 'Guides',
+				keywords: ['guides'],
+				image: '/img/docusaurus.png',
+			},
 			items: [
 				"guides/initialization",
 				"guides/configuration",

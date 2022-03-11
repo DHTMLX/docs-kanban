@@ -177,6 +177,7 @@ code {
 /* end list */
 
 /* buttons */
+
 .support_btn{
   
   font-size: 16pt;
@@ -197,10 +198,21 @@ code {
   text-decoration: none;
   color: inherit;
 }
+
 /* buttons end */
 
-/*table*/
+
+/* styles for tables */
+
 table{
   width: 100%;
 }
-/*table end*/
+table th:first-child {
+  width: 25%;
+}
+
+table tr:nth-child(even) {
+  background: #f5f6f7;
+} 
+
+/* end styles for tables */
