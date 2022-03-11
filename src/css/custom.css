@@ -101,19 +101,20 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 /* styles for tables */
 
+
 table {
-  display: inline-table;
+  /*display: inline-table;*/
 }
 
 table tr:nth-child(2n) {
-  background-color: var(--ifm-table-background);
+  /*background-color: var(--ifm-table-background);*/
 }
 
 tr {
-  line-height: 1.2;
+  /*line-height: 1.2;*/
 }
 table {
-  text-align: left;
+  /*text-align: left;*/
 }
 
 /* end styles for tables */
@@ -147,8 +148,8 @@ table {
 /* for Code Snippet iframe */
 
 .snippet_iframe {
-border: 1px solid var(--ifm-hr-border-color);
-margin-bottom: var(--ifm-leading);
+  border: 1px solid var(--ifm-hr-border-color);
+  margin-bottom: var(--ifm-leading);
 }
 
 /* end for Code Snippet iframe */
@@ -207,13 +208,14 @@ code {
 
 table{
   width: 100%;
+  display: inline-table;
 }
 table th:first-child {
   width: 25%;
 }
 
 table tr:nth-child(even) {
-  background: #f5f6f7;
+  /*background: #f5f6f7;*/
 } 
 
 /* end styles for tables */
