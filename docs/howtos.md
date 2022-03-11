@@ -25,12 +25,12 @@ In this section you can find out corresponding references of Kanban API
 
 | Topic                                                 | Description                                              |
 | ----------------------------------------------------- | ---------------------------------------------------------|
-| [Kanban methods](api/api_overview.md#kanban-methods)  | Learn how to work with Kanban methods                    |
-| [Event Bus methods](api/api_overview.md#event-bus-methods)| Learn how to work with Event Bus methods             |
-| [State methods](api/api_overview.md#state-methods)    | Learn how to work with State methods                     |
-| [RestDataProvider methods](api/api_overview.md#restdataprovider-methods)| Learn how to work with RestDataProvider methods|
-| [Kanban events](api/api_overview.md#kanban-events)    | Learn how to work with Kanban events                     |
-| [Kanban properties](api/api_overview.md#kanban-properties)| Learn how to work with Kanban properties             |
+| [Kanban methods](api/overview/methods_overview.md)    | Learn how to work with Kanban methods                    |
+| [Event Bus methods](api/overview/internal_eventbus_overview.md)| Learn how to work with Event Bus methods        |
+| [State methods](api/overview/internal_state_overview.md)| Learn how to work with State methods                   |
+| [RestDataProvider methods](api/overview/internal_rest_overview.md)| Learn how to work with RestDataProvider methods|
+| [Kanban events](api/overview/events_overview.md)      | Learn how to work with Kanban events                     |
+| [Kanban properties](api/overview/properties_overview.md)| Learn how to work with Kanban properties               |
 
 ## How to work with cards
 
@@ -129,7 +129,7 @@ In these sections you can find out how to perform operations with rows and work 
 
 | Topic                                                       | Description                                        |
 | ----------------------------------------------------------- | ---------------------------------------------------|
-| [List of inner events](api/api_overview.md#kanban-events)   | See the list of Kanban inner events                |
+| [List of inner events](api/overview/events_overview.md)     | See the list of Kanban inner events                |
 | [Subscribing on events](api/internal/js_kanban_on_method.md)| Learn how to subscribe on the inner event          |
 | [Executing events](api/internal/js_kanban_exec_method.md)   | Learn how to execute the inner event               |
 | [Intercepting events](api/internal/js_kanban_intercept_method.md)| Learn how to intercept the inner event        |
@@ -168,3 +168,7 @@ In these sections you can find out how to perform operations with rows and work 
 ## Any questions left?
 
 <button class="support_btn"><a href="https://forum.dhtmlx.com/">Ask the community</a> </button>
+
+:::info
+You can also ask your questions using a special form at the bottom part of each documentation page!
+:::

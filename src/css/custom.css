@@ -187,6 +187,7 @@ code {
   border-radius: 5px;
   width: 280px;
   height: 50px;
+  margin-bottom: 30px;
 }
 
 .support_btn:hover{
