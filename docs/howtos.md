@@ -170,5 +170,5 @@ In these sections you can find out how to perform operations with rows and work 
 <button class="support_btn"><a href="https://forum.dhtmlx.com/">Ask the community</a> </button>
 
 :::info
-You can also ask your questions using a special form at the bottom part of each documentation page!
+You can also leave your questions in the comments below!
 :::
