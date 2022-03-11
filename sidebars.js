@@ -41,7 +41,7 @@ module.exports = {
 			},
 			items: [
 				//"api/api_overview",
-					// JS Kanban methods
+				// JS Kanban methods
 				{
 					type: "category",
 					label: "Kanban methods",
@@ -93,7 +93,7 @@ module.exports = {
 					collapsed: true,
 					link: {
 						type: 'generated-index',
-						title: 'Kanban internal API',
+						title: 'Internal API overview',
 						keywords: ['internal api'],
 						image: '/img/docusaurus.png',
 					},
@@ -105,7 +105,7 @@ module.exports = {
 							collapsed: true,
 							link: {
 								type: 'doc',
-								id: "api/overview/internal_api_overview"
+								id: "api/overview/internal_eventbus_overview"
 							},
 							items: [
 								"api/internal/js_kanban_exec_method",
@@ -121,7 +121,7 @@ module.exports = {
 							collapsed: true,
 							link: {
 								type: 'doc',
-								id: "api/overview/internal_api_overview"
+								id: "api/overview/internal_state_overview"
 							},
 							items: [
 								"api/internal/js_kanban_getreactivestate_method",
@@ -136,7 +136,7 @@ module.exports = {
 							collapsed: true,
 							link: {
 								type: 'doc',
-								id: "api/overview/internal_api_overview"
+								id: "api/overview/internal_rest_overview"
 							},
 							items: [
 								"api/provider/js_kanban_getcards_method",
