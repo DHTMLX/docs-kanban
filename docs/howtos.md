@@ -70,6 +70,7 @@ In these sections you can find out how to perform operations with cards, work wi
 | [Editing cards](api/config/js_kanban_readonly_config.md)     | Learn how to enable/disable an ability to edit cards|
 | [Selecting cards](api/config/js_kanban_readonly_config.md)   | Learn how to enable/disable an ability to select cards|
 | [Updating card settings](api/methods/js_kanban_setconfig_method.md)| Learn how to update card settings             |
+| [Limiting cards](api/methods/js_kanban_unselectcard_method.md)| Learn how to limit cards for columns and swimlanes (WIP validation)|
 
 ## How to work with a card editor
 
@@ -139,7 +140,7 @@ In these sections you can find out how to perform operations with rows and work 
 
 | Topic                                                       | Description                                        |
 | ----------------------------------------------------------- | ---------------------------------------------------|
-| [Working with server](guides/working_with_server.md)         | Learn how to work with server via REST API         |
+| [Working with server](guides/working_with_server.md)        | Learn how to work with server via REST API         |
 | [Loading server data for cards](api/provider/js_kanban_getcards_method.md)| Learn how to load server data for cards |
 | [Loading server data for columns](api/provider/js_kanban_getcolumns_method.md)| Learn how to load server data for columns |
 | [Loading server data for rows](api/provider/js_kanban_getrows_method.md)| Learn how to load server data for rows |
