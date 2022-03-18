@@ -164,7 +164,7 @@ In these sections you can find out how to perform operations with rows and work 
 
 | Topic                                                       | Description                                        |
 | ----------------------------------------------------------- | ---------------------------------------------------|
-| [Working with TypeScripts](guides/typescript_support.md)    | Learn how to work with TypeScript                  |
+| [Working with TypeScript](guides/typescript_support.md)     | Learn how to work with TypeScript                  |
 
 ## Any questions left?
 
