@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://docs.dhtmlx.com/kanban/">DHTMLX Kanban Documentation</a></h1>
 
-JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool allows to work with any number of cards as well as limit number of cards for columns and swimlanes. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page. 
+JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool allows working with any number of cards as well as limit number of cards for columns and swimlanes. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page. 
 
 ## Explore documentation locally
 

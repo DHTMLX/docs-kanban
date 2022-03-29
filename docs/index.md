@@ -19,7 +19,7 @@ The **Toolbar** of Kanban is a separate part of the interface. It includes a ***
 
 ### Board
 
-The **Board** is the main part of Kanban. It consist of the ***cards*** distributed into *columns* and *rows*. You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](./guides/configuration#cards) section.
+The **Board** is the main part of Kanban. It consists of the ***cards*** distributed into *columns* and *rows*. You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](./guides/configuration#cards) section.
 
 On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
 
@@ -39,7 +39,7 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
 
 ### Editor
 
-The **Editor** is a modal panel that consist of the fields and controls for managing the selected card data. To display the editor, click on the card you want to change. You can flexibly configure the editor structure by adding new fields and controls. Read more in the [Configuration](./guides/configuration#editor) section.
+The **Editor** is a modal panel that consists of the fields and controls for managing the selected card data. To display the editor, click on the card you want to change. You can flexibly configure the editor structure by adding new fields and controls. Read more in the [Configuration](./guides/configuration#editor) section.
 
 ![Kanban Editor](assets/js_kanban_editor.png)
 
