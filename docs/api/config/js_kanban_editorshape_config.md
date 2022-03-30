@@ -75,7 +75,7 @@ To configure the editor appearance and functionality, you can specify the follow
 ~~~
 
 - `label` - (optional) an editor field label
-- `options` - (optional) an array of objects with the dropdown options (for the **select** and **combo** types). Here you can specify the following fields:
+- `options` - (optional) an array of objects with the dropdown options (for the **select**, **combo** and **multiselect** types). Here you can specify the following fields:
 	- `id` - (required) an option **ID** 
 	- `label` - (required) an option label 
 - `colors` - (optional) an array with valid HEX codes. It is used for the **color** type
