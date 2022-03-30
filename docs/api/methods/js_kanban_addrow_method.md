@@ -13,18 +13,16 @@ description: You can learn about the addRow method in the documentation of the D
 ### Usage
 
 ~~~jsx {}
-addRow({
-	id?: string | number,
-	label?: string,
-	collapsed?: boolean
-}): void;
+addRow(config: object): void;
 ~~~
 
 ### Parameters
 
-- `id` - (optional) the **ID** of the new row
-- `label` - (optional) the **label** of the new row
-- `collapsed` - (optional) the **state** of the new row
+- `config` - (required) the data object of the new row 
+
+:::info
+Note, the **ID** of the new row is required. Other row parameters can be found [**here**](api/config/js_kanban_rows_config.md)
+:::
 
 ### Example
 

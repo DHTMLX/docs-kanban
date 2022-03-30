@@ -21,7 +21,7 @@ updateColumn(config: object): void;
 - `config` - (required) the new data object of the current column 
 
 :::info
-Note, the **ID** of the column to be updated is required. Other column parameters can be found [**here**](api/config/js_kanban_columns_config.md).
+Note, the **ID** of the column to be updated is required. Other column parameters can be found [**here**](api/config/js_kanban_columns_config.md)
 :::
 
 ### Example

@@ -14,17 +14,17 @@ description: You can learn about the parse method in the documentation of the DH
 
 ~~~jsx {}
 parse({
-	columns?: object,
-	rows?: object,
-	cards?: object
+	columns?: array,
+	rows?: array,
+	cards?: array
 }): void;
 ~~~
 
 ### Parameters
 
-- `columns` - (optional) the object of the columns data
-- `rows` - (optional) the object of the rows data
-- `cards` - (optional) the object of the cards data
+- [`columns`](api/config/js_kanban_columns_config.md) - (optional) the array of objects of the columns data
+- [`rows`](api/config/js_kanban_rows_config.md) - (optional) the array of objects of the rows data
+- [`cards`](api/config/js_kanban_cards_config.md) - (optional) the array of objects of the cards data
 
 ### Details
 

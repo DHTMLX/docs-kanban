@@ -13,16 +13,16 @@ description: You can learn about the addColumn method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-addColumn({
-	id?: string | number,
-	label?: string
-}): void;
+addColumn(config: object): void;
 ~~~
 
 ### Parameters
 
-- `id` - (optional) the **ID** of the new column
-- `label` - (optional) the **label** of the new column
+- `config` - (required) the data object of the new column 
+
+:::info
+Note, the **ID** of the new column is required. Other column parameters can be found [**here**](api/config/js_kanban_columns_config.md)
+:::
 
 ### Example
 
