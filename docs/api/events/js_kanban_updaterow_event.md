@@ -18,7 +18,7 @@ description: You can learn about the update-row event in the documentation of th
 
 ### Parameters
 
-The callback of the **update-row** event can take an object with the following parameters:
+The callback of the **update-row** event can take the following parameter:
 
 - `config` - (required) the new data object of the current row. The full list of the row parameters can be found [here](api/config/js_kanban_rows_config.md)
 

@@ -18,7 +18,7 @@ description: You can learn about the update-column event in the documentation of
 
 ### Parameters
 
-The callback of the **update-column** event can take an object with the following parameters:
+The callback of the **update-column** event can take the following parameter:
 
 - `config` - (required) the new data object of the current column. The full list of the column parameters can be found [here](api/config/js_kanban_columns_config.md)
 

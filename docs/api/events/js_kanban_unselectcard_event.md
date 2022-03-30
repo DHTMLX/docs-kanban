@@ -18,7 +18,7 @@ description: You can learn about the unselect-card event in the documentation of
 
 ### Parameters
 
-The callback of the **unselect-card** event can take an object with the following parameters:
+The callback of the **unselect-card** event can take an object with the following parameter:
 
 - `id` - (required) the ID of the card to be unselected
 

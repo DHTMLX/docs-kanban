@@ -13,18 +13,14 @@ description: You can learn about the add-column event in the documentation of th
 ### Usage
 
 ~~~jsx {}
-"add-column": ({
-    id?: string | number,
-    label?: string
-}) => void;
+"add-column": (config: object) => void;
 ~~~
 
 ### Parameters
 
-The callback of the **add-column** event can take an object with the following parameters:
+The callback of the **add-column** event can take the following parameter:
 
-- `id` - (optional) the ID of the new column
-- `label` - (optional) the label of the new column
+- `config` - (required) the data object of the new column. The full list of the column parameters can be found [here](api/config/js_kanban_columns_config.md)
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

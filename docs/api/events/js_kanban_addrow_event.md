@@ -13,20 +13,14 @@ description: You can learn about the add-row event in the documentation of the D
 ### Usage
 
 ~~~jsx {}
-"add-row": ({
-    id?: string | number,
-    label?: string,
-    collapsed?: boolean
-}) => void;
+"add-row": (config: object) => void;
 ~~~
 
 ### Parameters
 
-The callback of the **add-row** event can take an object with the following parameters:
+The callback of the **add-row** event can take the following parameter:
 
-- `id` - (optional) the ID of the new row
-- `label` - (optional) the label of the new row
-- `collapsed` - (optional) the state of the new row
+- `config` - (required) the data object of the new row. The full list of the row parameters can be found [here](api/config/js_kanban_rows_config.md)
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

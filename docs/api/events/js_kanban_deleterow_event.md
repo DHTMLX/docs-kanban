@@ -18,7 +18,7 @@ description: You can learn about the delete-row event in the documentation of th
 
 ### Parameters
 
-The callback of the **delete-row** event can take an object with the following parameters:
+The callback of the **delete-row** event can take an object with the following parameter:
 
 - `id` - (required) the ID of the row to be deleted
 

@@ -18,7 +18,7 @@ description: You can learn about the update-card event in the documentation of t
 
 ### Parameters
 
-The callback of the **update-card** event can take an object with the following parameters:
+The callback of the **update-card** event can take the following parameter:
 
 - `config` - (required) the new data object of the current card. The full list of the card parameters can be found [here](api/config/js_kanban_cards_config.md)
 

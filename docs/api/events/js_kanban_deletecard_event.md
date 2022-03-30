@@ -18,7 +18,7 @@ description: You can learn about the delete-card event in the documentation of t
 
 ### Parameters
 
-The callback of the **delete-card** event can take an object with the following parameters:
+The callback of the **delete-card** event can take an object with the following parameter:
 
 - `id` - (required) the ID of the card to be deleted
 
