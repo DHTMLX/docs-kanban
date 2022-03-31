@@ -70,7 +70,7 @@ In these sections you can find out how to perform operations with cards, work wi
 | [Editing cards](api/config/js_kanban_readonly_config.md)     | Learn how to enable/disable an ability to edit cards|
 | [Selecting cards](api/config/js_kanban_readonly_config.md)   | Learn how to enable/disable an ability to select cards|
 | [Updating card settings](api/methods/js_kanban_setconfig_method.md)| Learn how to update card settings             |
-| [Limiting cards](api/config/js_kanban_columns_config.md)     | Learn how to limit cards for columns and swimlanes (WIP validation) ([Example](https://snippet.dhtmlx.com/2blo6hx8?text=kanban))|
+| [Limiting cards](api/config/js_kanban_columns_config.md)     | Learn how to limit cards for columns and swimlanes (**WIP validation**) ([Example](https://snippet.dhtmlx.com/2blo6hx8?text=kanban))|
 
 ## How to work with a card editor
 
