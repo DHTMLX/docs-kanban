@@ -8,19 +8,23 @@ description: You can learn about the update-column event in the documentation of
 
 ### Description
 
-@short: Fires when updating a column data
+@short: Fires when updating column data
 
 ### Usage
 
 ~~~jsx {}
-"update-column": (config: object) => void;
+"update-column": ({
+	id: string | number,
+	column?: object
+}) => void;
 ~~~
 
 ### Parameters
 
-The callback of the **update-column** event can take the following parameter:
+The callback of the **update-column** event can take an object with the following parameter:
 
-- `config` - (required) the new data object of the current column. The full list of the column parameters can be found [here](api/config/js_kanban_columns_config.md)
+- `id` - (required) the **ID** of the column to be updated
+- `column` - (optional) the new data object of the column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
@@ -39,3 +43,5 @@ board.api.on("update-column", (obj) => {
 	console.log(obj);
 });
 ~~~
+
+**Change log**: The **id** and **column** parameters were added in v1.1

@@ -8,19 +8,23 @@ description: You can learn about the update-row event in the documentation of th
 
 ### Description
 
-@short: Fires when updating a row data
+@short: Fires when updating row data
 
 ### Usage
 
 ~~~jsx {}
-"update-row": (config: object) => void;
+"update-row": ({
+	id: string | number,
+	row?: object
+}) => void;
 ~~~
 
 ### Parameters
 
-The callback of the **update-row** event can take the following parameter:
+The callback of the **update-row** event can take an object with the following parameters:
 
-- `config` - (required) the new data object of the current row. The full list of the row parameters can be found [here](api/config/js_kanban_rows_config.md)
+- `id` - (required) the **ID** of the row to be updated
+- `row` - (optional) the new data object of the row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
@@ -39,3 +43,5 @@ board.api.on("update-row", (obj) => {
 	console.log(obj);
 });
 ~~~
+
+**Change log**: The **id** and **row** parameters were added in v1.1

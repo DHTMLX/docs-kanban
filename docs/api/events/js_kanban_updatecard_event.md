@@ -8,19 +8,23 @@ description: You can learn about the update-card event in the documentation of t
 
 ### Description
 
-@short: Fires when updating a card data
+@short: Fires when updating card data
 
 ### Usage
 
 ~~~jsx {}
-"update-card": (config: object) => void;
+"update-card": ({
+	id: string | number,
+	card?: object
+}) => void;
 ~~~
 
 ### Parameters
 
-The callback of the **update-card** event can take the following parameter:
+The callback of the **update-card** event can take an object with the following parameters:
 
-- `config` - (required) the new data object of the current card. The full list of the card parameters can be found [here](api/config/js_kanban_cards_config.md)
+- `id` - (required) the **ID** of the card to be updated
+- `card` - (optional) the new data object of the card. The full list of the **card** parameters can be found [**here**](api/config/js_kanban_cards_config.md)
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
@@ -39,3 +43,5 @@ board.api.on("update-card", (obj) => {
 	console.log(obj);
 });
 ~~~
+
+**Change log**: The **id** and **card** parameters were added in v1.1
