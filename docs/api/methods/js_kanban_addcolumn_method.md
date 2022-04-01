@@ -13,20 +13,24 @@ description: You can learn about the addColumn method in the documentation of th
 ### Usage
 
 ~~~jsx {}
-addColumn(config: object): void;
+addColumn({
+	id?: string | number,
+	column?: object
+}): void;
 ~~~
 
 ### Parameters
 
-- `config` - (required) the data object of the new column 
+- `id` - (optional) the new column **ID**
+- `column` - (optional) the data object of the new column 
 
 :::info
-Note, the **ID** of the new column is required. Other column parameters can be found [**here**](api/config/js_kanban_columns_config.md)
+The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
 :::
 
 ### Example
 
-~~~jsx {7-10}
+~~~jsx {7-15}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -35,6 +39,13 @@ const board = new kanban.Kanban("#root", {
 // add new column
 board.addColumn({
 	id: "extra_column",
-	label: "Extra column"
+	column: {
+		label: "Extra column",
+		limit: 2,
+		strictLimit: 2,
+		collapsed: true
+	}
 });
 ~~~
+
+**Change log**: The **id** and **column** parameters were added in v1.1

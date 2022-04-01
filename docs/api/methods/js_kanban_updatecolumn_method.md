@@ -13,28 +13,39 @@ description: You can learn about the updateColumn method in the documentation of
 ### Usage
 
 ~~~jsx {}
-updateColumn(config: object): void;
+updateColumn({
+	id: string | number,
+	column?: object
+}): void;
 ~~~
 
 ### Parameters
 
-- `config` - (required) the new data object of the current column 
+- `id` - (required) the **ID** of the column to be updated
+- `column` - (optional) the new data object of the column
 
 :::info
-Note, the **ID** of the column to be updated is required. Other column parameters can be found [**here**](api/config/js_kanban_columns_config.md)
+The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
 :::
 
 ### Example
 
-~~~jsx {7-10}
+~~~jsx {7-15}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// update a label of the column with the "backlog" ID
+// update column data with the "backlog" ID
 board.updateColumn({
 	id: "backlog",
-	label: "New Column"
+	column: {
+		label: "Updated column",
+		limit: 3,
+		strictLimit: 3,
+		collapsed: true
+	}
 });
 ~~~
+
+**Change log**: The **id** and **column** parameters were added in v1.1
