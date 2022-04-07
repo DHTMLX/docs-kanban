@@ -179,3 +179,5 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
+
+**Related sample:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban)

@@ -47,3 +47,5 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
+
+**Related sample:** [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?mode=wide&text=#kanban)

@@ -11,7 +11,7 @@ description: You can learn about the rowKey config in the documentation of the D
 @short: Optional. Defines belonging the card to the row
 
 :::info
-To distribute the cards into rows, you need to specify a **custom key** and set it to the **ID** of the desired row (in the card data object). The **rowKey** property needs to be set to this custom key in the widget config
+To distribute the cards into rows (swimlanes), you need to specify a **custom key** and set it to the **ID** of the desired row (in the card data object). The **rowKey** property needs to be set to this custom key in the widget config
 :::
 
 ### Usage
@@ -42,3 +42,5 @@ new kanban.Kanban("#root", {
 	// other parameters
 });
 ~~~
+
+**Related sample:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?mode=wide)

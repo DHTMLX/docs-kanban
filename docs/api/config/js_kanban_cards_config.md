@@ -105,3 +105,5 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Related articles:** [Working with data](../../../guides/working_with_data)
+
+**Related sample:** [Kanban. Initialization](https://snippet.dhtmlx.com/gb50vyip?mode=wide&text=#kanban)

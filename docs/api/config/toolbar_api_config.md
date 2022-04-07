@@ -35,3 +35,5 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar)
+
+**Related sample:** [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?mode=wide&text=#kanban)
