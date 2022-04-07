@@ -104,19 +104,19 @@ In these sections you can find out how to perform operations with colums and wor
 | [Serializing column data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the column data          |
 | [Updating column data](api/methods/js_kanban_updatecolumn_method.md)| Learn how to update the column data             |
 
-## How to work with rows
+## How to work with rows (swimlanes)
 
 In these sections you can find out how to perform operations with rows and work with rows data
 
-### Performing operations with rows
+### Performing operations with rows (swimlanes)
 
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
-| [Adding new rows](api/methods/js_kanban_addrow_method.md)       | Learn how to add new rows                           |
-| [Deleting rows](api/methods/js_kanban_deleterow_method.md)      | Learn how to delete rows                            |
-| [Moving rows](api/methods/js_kanban_moverow_method.md)          | Learn how to move rows                              |
+| [Adding new rows](api/methods/js_kanban_addrow_method.md)       | Learn how to add new rows (swimlanes)               |
+| [Deleting rows](api/methods/js_kanban_deleterow_method.md)      | Learn how to delete rows (swimlanes)                |
+| [Moving rows](api/methods/js_kanban_moverow_method.md)          | Learn how to move rows (swimlanes)                  |
 
-### Working with row data
+### Working with row (swimlane) data
 
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
