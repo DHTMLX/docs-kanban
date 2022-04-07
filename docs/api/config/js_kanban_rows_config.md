@@ -8,7 +8,7 @@ description: You can learn about the rows config in the documentation of the DHT
 
 ### Description
 
-@short: Optional. An array of objects containing the rows data
+@short: Optional. An array of objects containing the rows (swimlanes) data
 
 ### Usage
 
@@ -25,11 +25,11 @@ rows?: [
 
 ### Parameters
 
-For each row you can specify the following parameters (data):
+For each row (swimlane) you can specify the following parameters (data):
 
-- `id` - (required) a row **ID**. It is used for managing the row via the corresponding methods 
-- `label` - (optional) a row label. It is displayed in the row section
-- `collapsed` - (optional) a row state. If **true**, the row is collapsed by default
+- `id` - (required) a row (swimlane) **ID**. It is used for managing the row via the corresponding methods
+- `label` - (optional) a row (swimlane) label. It is displayed in the row section
+- `collapsed` - (optional) a row (swimlane) state. If **true**, the row is collapsed by default
 
 :::info
 If you want to load the rows data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **rows** property to the empty array
@@ -46,7 +46,9 @@ const rows = [
 new kanban.Kanban("#root", {
 	columns,
 	cards,
-	rows,
+	rows, // swimlanes data
 	// other parameters
 });
 ~~~
+
+**Related sample:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?mode=wide)
