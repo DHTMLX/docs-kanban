@@ -23,6 +23,10 @@ rows?: [
 ];
 ~~~
 
+:::info
+To create Swimlanes you need to specify the corresponding data in the array of the **rows** property. You can collapse/expand, rename, delete and move swimlanes via UI or using [related API](../../../../kanban/howtos/#how-to-work-with-rows-swimlanes)
+:::
+
 ### Parameters
 
 For each row (swimlane) you can specify the following parameters (data):
