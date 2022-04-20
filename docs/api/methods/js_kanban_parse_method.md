@@ -26,30 +26,11 @@ parse({
 - [`rows`](api/config/js_kanban_rows_config.md) - (optional) the array of objects of the rows data
 - [`cards`](api/config/js_kanban_cards_config.md) - (optional) the array of objects of the cards data
 
-### Details
-
-:::info
-To parse data via the **parse()** method, you need to reset initial data in the Kanban constructor
-
-~~~jsx {}
-new kanban.Kanban("#root", {
-	// resets initial data, to parse new ones
-	columns: [],
-	rows: [],
-	cards: []
-});
-~~~
-:::
-
 ### Example
 
-~~~jsx {8-12}
+~~~jsx {4-8}
 // create Kanban
-const board = new kanban.Kanban("#root", {
-	columns: [],
-	cards: [],
-	rows: []
-});
+const board = new kanban.Kanban("#root", {});
 // parse data into Kanban
 board.parse({
 	columns,
@@ -57,5 +38,7 @@ board.parse({
 	rows
 });
 ~~~
+
+**Change log:** Starting from v1.1 you don't need to reset initial data in constructor before parsing new data
 
 **Related articles:** [Working with Data](../../../guides/working_with_data#loading-data-from-local-source)

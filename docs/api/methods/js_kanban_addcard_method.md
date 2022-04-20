@@ -18,6 +18,7 @@ addCard({
 	id?: string | number,
 	rowId?: string | number,
 	before?: string | number,
+	select?: boolean,
 	card?: object
 }): void;
 ~~~
@@ -28,6 +29,7 @@ addCard({
 - `id` -  (optional) the ID of the new card
 - `rowId` - (optional) the ID of the target row
 - `before` - (optional) the ID of the card, before which the new card will be placed  
+- `select` - (optional) enables/disables selecting new added card
 - `card` - (optional) the data object of the new card
 
 :::info
