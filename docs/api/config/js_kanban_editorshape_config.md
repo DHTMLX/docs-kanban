@@ -12,30 +12,57 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Usage
 
-~~~jsx {}
+~~~jsx {3,8,18,25,34,41}
 editorShape?: [
 	{
-		type: string,
-		key: string,
-		label?: string,
-		options?: [
+		// common parameters for all types
+		type: string, 
+		key: string, 
+		label?: string, 
+
+		// for "combo", "select" and "multiselect" types only
+		values?: [ 
 			{
-				id: any,
-				label: string
+				id: string | number,
+				label: string,
+				path?: string // for a "multiselect" type only
 			},
 			{...} // other options
 		],
-		colors?: array,
-		placeholder?: string,
+
+		// for a "color" type only
+		values?: array, 
+		config?: {
+			placeholder?: string,
+			clear?: boolean
+		},
+
+		// for "text" and "textarea" types only
+		config?: {
+			placeholder?: string,
+			readonly?: boolean,
+			focus?: boolean,
+			disabled?: boolean,
+			inputStyle?: string
+		},
+
+		// for a "progress" type only
+		config?: {
+			min?: number,
+			max?: number,
+			step?: number
+		},
+		
+		// for a "files" type only
+		uploadURL?: string,
 		config?: {
 			accept?: string,
 			disabled?: boolean,
 			multiple?: boolean,
 			folder?: boolean
-		},
-		uploadURL?: string
+		}
 	},
-	{...} // other fields data
+	{...} // other fields settings
 ];
 ~~~
 
@@ -43,49 +70,73 @@ editorShape?: [
 
 To configure the editor appearance and functionality, you can specify the following parameters (fields):
 
-- `type` - (required) an editor field type. Here you can specify the following types: **text**, **textarea**, **date**, **select**, **combo**, **multiselect**, **files**, **color**, **progress** 
+#### - Common parameters for all types
+
+- `type` - (required) an editor field type. Here you can specify the following types: **text**, **textarea**, **progress**, **select**, **combo**, **multiselect**, **color**, **date**, **files**
 - `key` - (required) an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property. See the example below:
 
-~~~js {2,5,16,21}
-	const cardShape = { // card settings
-		label: true,
+~~~js {8,17}
+	// card appearance settings
+	const cardShape = { 
+		...kanban.defaultCardShape,
 		headerFields: [
 			{ // custom field
-				key: "sprint",
+				label: "Custom field",
 				css: "custom_style",
-				label: "Sprint"
+				key: "custom_key"
 			}
 		]
-		// other parameters
 	};
-
-	const editorShape= { // editor settings
+	// editor appearance settings
+	const editorShape = [
 		{
+			label: "Custom field",
 			type: "text",
-			key: "label",
-			label: "Label"
-		},
-		{
-			type: "text",
-			key: "sprint",
-			label: "Sprint"
-		},
-		// other parameters
-	};
+			key: "custom_key"
+		}
+	];
 ~~~
 
 - `label` - (optional) an editor field label
-- `options` - (optional) an array of objects with the dropdown options (for the **select**, **combo** and **multiselect** types). Here you can specify the following fields:
+
+#### - Parameters for "combo", "select" and "multiselect" types
+
+- `values` - (optional) an array of objects containing the dropdown options data. Here you can specify the following parameters:
 	- `id` - (required) an option **ID** 
 	- `label` - (required) an option label 
-- `colors` - (optional) an array with valid HEX codes. It is used for the **color** type
-- `placeholder` - (optional) an editor field placeholder
-- `config` - (optional) an object with the editor uploader configuration. Here you can specify the following parameters:
-	- `accept` - (optional) a file type the uploader should accept
-	- `disabled` - (optional) if **true**, the uploader forbids the user to upload any files
-	- `multiple` - (optional) if **true**, the uploader allows the user to select more than one file
-	- `folder` - (optional) if **true**, the uploader allows the user to select a folder
-- `uploadURL` - (optional) an editor uploader URL (this parameter is **required** for the "files" type)
+	- `path` - (optional) a path to the option preview image (for a **"multiselect"** type only)
+
+#### - Parameters for a "color" type
+
+- `values` - (optional) an array with valid HEX codes
+- `config` - (optional) a configuration object of the **"color"** field. Here you can specify the following parameters:
+	- `placeholder` - (optional) a placeholder value
+	- `clear` - (optional) shows/hides a "clear" icon
+
+#### - Parameters for "text" and "textarea" types
+
+- `config` - (optional) a configuration object of the **"text"** and **"textarea"** fields. Here you can specify the following parameters:
+	- `placeholder` - (optional) a placeholder value
+	- `readonly` - (optional) enables/disables a readonly mode
+	- `focus` - (optional) enables/disables a focus
+	- `disabled` - (optional) enables/disables a field
+	- `inputStyle` - (optional) a custom css style
+
+#### - Parameters for a "progress" type
+
+- `config` - (optional) a configuration object of the **"progress"** field. Here you can specify the following parameters:
+	- `min` - (optional) a min value
+	- `max` - (optional) a max value
+	- `step` - (optional) a step of the progress bar
+
+#### - Parameters for a "files" type
+
+- `uploadURL` - (optional) an URL of the editor uploader
+- `config` - (optional) a configuration object the **"files"** field. Here you can specify the following parameters:
+	- `accept` - (optional) a file type to be uploaded
+	- `disabled` - (optional) enables/disables uploading *files*
+	- `multiple` - (optional) enables/disables uploading *multiple files*
+	- `folder` - (optional) enables/disables uploading *folders* 
 
 :::info
 Unless you specify the editor settings via the **editorShape** property, the widget will apply a **defaultEditorShape** set of parameters!
@@ -105,8 +156,8 @@ const defaultColors = [ "#65D3B3", "#FFC975", "#58C3FE" ];
 const defaultEditorShape = [
 	{ key: "label", type: "text", label: "Label" },
 	{ key: "description", type: "textarea", label: "Description" },
-	{ key: "priority", type: "combo", label: "Priority", options: defaultPriorities },
-	{ key: "color", type: "color", label: "Color", colors: defaultColors },
+	{ key: "priority", type: "combo", label: "Priority", values: defaultPriorities },
+	{ key: "color", type: "color", label: "Color", values: defaultColors },
 	{ key: "progress", type: "progress", label: "Progress" },
 	{ key: "start_date", type: "date", label: "Start date" },
 	{ key: "end_date", type: "date", label: "End date" }
@@ -127,7 +178,7 @@ const editorShape = [ // editor settings
 		type: "multiselect",
 		key: "users",
 		label: "Users",
-		options: users
+		values: users
 	}
 ];
 

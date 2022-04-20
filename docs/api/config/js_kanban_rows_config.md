@@ -33,10 +33,10 @@ For each row (swimlane) you can specify the following parameters (data):
 
 - `id` - (required) a row (swimlane) **ID**. It is used for managing the row via the corresponding methods
 - `label` - (optional) a row (swimlane) label. It is displayed in the row section
-- `collapsed` - (optional) a row (swimlane) state. If **true**, the row is collapsed by default
+- `collapsed` - (optional) a current state of the row (swimlane). If ***true***, the row is collapsed initially. Default value is ***false*** (expanded state)
 
 :::info
-If you want to load the rows data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **rows** property to the empty array
+If you want to load new data for rows (swimlanes) dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
 :::
 
 ### Example

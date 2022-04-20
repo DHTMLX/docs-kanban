@@ -8,12 +8,12 @@ description: You can learn about the cards config in the documentation of the DH
 
 ### Description
 
-@short: Required. An array of objects containing the cards data
+@short: Optional. An array of objects containing the cards data
 
 ### Usage
 
 ~~~jsx {}
-cards: [
+cards?: [
 	{
 		id?: string | number,
 		label?: string,
@@ -61,12 +61,12 @@ For each card you can specify the following parameters (data):
 - `custom_key` - (optional) a custom key of the card. You can specify the custom keys to place the card into column and row. See the [columnKey](../js_kanban_columnkey_config) and [rowKey](../js_kanban_rowkey_config) properties
 
 :::info
-If you want to load the cards data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **cards** property to the empty array
+If you want to load new data for cards dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
 :::
 
 ### Example
 
-~~~jsx {1-29,33}
+~~~jsx {1-31,35}
 const cards = [
 	{
 		id: 1,
@@ -89,9 +89,11 @@ const cards = [
 			},
 			{...} // other attached files data
 		],
-		// custom field to place the card into the "feature" row (rowKey is required)
+		// custom field to place the card into the "feature" row 
+		// the rowKey config needs to be set to the "type" value
 		type: "feature",
-		// custom field to place the card into the "backlog" column (columnKey is required)
+		// custom field to place the card into the "backlog" column 
+		// the columnKey config needs to be set to the "stage" value
 		stage: "backlog"
 	},
 	{...} // other cards data
@@ -103,6 +105,8 @@ new kanban.Kanban("#root", {
 	// other parameters
 });
 ~~~
+
+**Change log:** Starting from v1.1 the **cards** property is optional
 
 **Related articles:** [Working with data](../../../guides/working_with_data)
 

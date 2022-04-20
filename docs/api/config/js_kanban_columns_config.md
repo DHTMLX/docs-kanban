@@ -8,12 +8,12 @@ description: You can learn about the columns config in the documentation of the 
 
 ### Description
 
-@short: Required. An array of objects containing the columns data
+@short: Optional. An array of objects containing the columns data
 
 ### Usage
 
 ~~~jsx {}
-columns: [
+columns?: [
 	{
 		id: string,
 		label?: string,
@@ -31,14 +31,14 @@ For each column you can specify the following parameters (data):
 
 - `id` - (required) a column **ID**. It is used for managing the column via the corresponding methods 
 - `label` - (optional) a column label. It is displayed in the column section
-- `collapsed` - (optional) a current state of the column. If **true**, the column will be collapsed initially. Default value is **false** (uncollapsed state)
-- `limit` - (optional) this parameter may take two types of values:
+- `collapsed` - (optional) a current state of the column. If ***true***, the column is collapsed initially. Default value is ***false*** (expanded state)
+- `limit` - (optional) this parameter may take one of the two types of values:
 	- `number` - a limit of cards in the current column
-	- `object` - in this object you can specify a limit of cards for each swimlane (row) by its ID in the current column
-- `strictLimit` - (optional) a strict limit mode. If **true**, a user will not be able to create new cards over the specified number via the **limit** parameter. Default value is **false** 
+	- `object` - an object with the limits of cards for each row (swimlane) by its ID
+- `strictLimit` - (optional) a strict limit mode. If ***true***, a user will not be able to create new cards over the specified number via the **limit** parameter. Default value is ***false*** 
 
 :::info
-If you want to load the columns data via the [**parse()**](../../methods/js_kanban_parse_method) method, set the **columns** property to the empty array
+If you want to load new data for columns dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
 :::
 
 ### Example
@@ -75,6 +75,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Change log:**
+- Starting from v1.1 the **columns** property is optional
 - The **collapsed** parameter was added in v1.1 
 - The **limit** parameter was added in v1.1
 - The **strictLimit** parameter was added in v1.1
