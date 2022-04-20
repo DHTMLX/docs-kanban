@@ -8,11 +8,7 @@ description: You can explore how to work with Data in the documentation of the D
 
 ## Initial data loading
 
-When initializing Kanban, you need to provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
-
-:::note
-The data for **columns** and **cards** are required!
-:::
+When initializing Kanban, you can to provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
 
 ~~~jsx {1,16,68,81-85}
 const columns = [ // data for columns
@@ -96,22 +92,18 @@ const rows = [ // data for rows
 
 // initializing Kanban with the initial data for columns, cards and rows
 new kanban.Kanban("#root", {
-	columns, // required!
-	cards, // required!
-	rows // optional
+	columns, 
+	cards, 
+	rows 
 });
 ~~~
 
 ## Loading data from local source
 
-To load data for ***columns***, ***rows*** and ***cards*** from a local source, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method. It takes an object with the needed data as a parameter. Before parsing the data in this way, you need to set the *columns*, *cards* and *rows* properties to an empty array in the Kanban configuration object.
+To load data for ***columns***, ***rows*** and ***cards*** from a local source, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method. It takes an object with the needed data as a parameter. 
 
-~~~js {2-4,8}
-const board = new kanban.Kanban("#root", {
-	columns: [],
-	cards: [],
-	rows: []
-});
+~~~js {4}
+const board = new kanban.Kanban("#root", {});
 
 // loading data into Kanban
 board.parse({ columns, cards, rows });

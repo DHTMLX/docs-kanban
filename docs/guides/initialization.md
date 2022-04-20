@@ -81,11 +81,11 @@ To learn more about configuring the Toolbar of Kanban, read the [**Configuration
 
 This is a list of properties that you can specify in the Kanban and Toolbar configuration objects:
 
-- [cards](api/config/js_kanban_cards_config.md) - (*array*) an array of objects containing the cards data. ***This parameter is required***
+- [cards](api/config/js_kanban_cards_config.md) - (*array*) an array of objects containing the cards data
 - [cardShape](api/config/js_kanban_cardshape_config.md) - (*object*) an object of the card settings
 - [cardTemplate](api/config/js_kanban_cardtemplate_config.md) - (*function*) returns and applies a new HTML template of the card
 - [columnKey](api/config/js_kanban_columnkey_config.md) - (*string*) defines belonging the card to the column
-- [columns](api/config/js_kanban_columns_config.md) - (*array*) an array of objects containing the columns data. ***This parameter is required***
+- [columns](api/config/js_kanban_columns_config.md) - (*array*) an array of objects containing the columns data
 - [editorAutoSave](api/config/js_kanban_editorautosave_config.md) - (*boolean*) enables/disables an autosave mode of the Editor
 - [editorShape](api/config/js_kanban_editorshape_config.md) - (*object*) an object of the editor settings
 - [locale](api/config/js_kanban_locale_config.md) - (*object*) an object of the built-in or custom locale
