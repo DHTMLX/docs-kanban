@@ -203,3 +203,10 @@ table th:first-child {
 
 /* end styles for tables */
 
+/* icons styles */
+
+.iconExternalLink_I5OW{ /* hides the link icon */
+  display: none
+}
+
+/* end icons styles */
