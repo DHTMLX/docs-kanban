@@ -8,7 +8,7 @@ description: You can learn about the cardShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An object of the card settings for managing the appearance of the Kanban board
+@short: Optional. An object of settings for managing the cards appearance
 
 ### Usage
 
@@ -21,6 +21,11 @@ cardShape?: {
 	end_date?: boolean | { show?: boolean },
 	menu?: boolean | { show?: boolean },
 	attached?: boolean | { show?: boolean },
+	cover?: boolean | { show?: boolean },
+	color?: boolean | { 
+		show?: boolean,
+		values?: array  
+	},
 	users?: boolean | {
 		show?: boolean,
 		values?: [
@@ -42,12 +47,7 @@ cardShape?: {
 			},
 			{...} // other priorities data
 		]
-	},
-	color?: boolean | { 
-		show?: boolean,
-		values?: array  
-	},
-	cover?: boolean | { show?: boolean },
+	},	
 	headerFields?: [
 		{
 			key: string,
@@ -77,11 +77,16 @@ In some cases, you can set the parameter to the **short** or **extended** value.
 To configure the card appearance, in the **cardShape** object you can specify the following parameters (fields):
 
 - `label` - (required) shows/hides a **card label**
+- `description` - (optional) shows/hides a **card description**
 - `progress` - (optional) shows/hides a **card progress bar**
 - `start_date` - (optional) shows/hides a **card start date**
 - `end_date` - (optional) shows/hides a **card end date**
 - `menu` - (optional) shows/hides a **card menu**
 - `attached` - (optional) shows/hides a **card attachment**
+- `cover` - (optional) shows/hides a **card picture**
+- `color` - (optional) an object of parameters of **the top color line** of card
+	- `show` - (optional) shows/hides a **top color line**
+	- `values` - (optional) an array of valid HEX codes
 - `users` - (optional) an object with **users** parameters
 	- `show` - (optional) shows/hides the **assigned users** data
 	- `values` - (optional) an array of objects with users data. Here you can specify the following fields:
@@ -94,14 +99,10 @@ To configure the card appearance, in the **cardShape** object you can specify th
 		- `id` - (required) a priority **ID**
 		- `label` - (optional) a priority name
 		- `color` - (required) a valid HEX code
-- `color` - (optional) an object with **colors** parameters
-	- `show` - (optional) shows/hides a colored **top line** of a card
-	- `values` - (optional) an array of valid HEX codes
-- `cover` - (optional) shows/hides a **card picture**
 - `headerFields` - (optional) an array of objects with **custom fields** data. Here you can specify the following parameters:
 	- `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
-	- `css` - (optional) a css class of the custom field
 	- `label` - (optional) a label of the custom field
+	- `css` - (optional) a css class of the custom field
 
 :::info
 Unless you specify the cards settings via the **cardShape** property, the widget will apply a **defaultCardShape** set of parameters!
@@ -124,18 +125,18 @@ const defaultCardShape = {
 	progress: false,
 	start_date: false,
 	end_date: false,
+	menu: true,
+	attached: false,
+	cover: false,
+	color: {
+        show: false,
+        values: defaultColors
+    },
 	users: false,
 	priority: {
-		show: false,
-		values: defaultPriorities
-	},
-	color: {
-		show: false,
-		values: defaultColors,
-    },
-	cover: false,
-	attached: false,
-	menu: true
+        show: false,
+        values: defaultPriorities
+    }
 };
 ~~~
 
@@ -163,6 +164,11 @@ const cardShape = { // card settings
 	end_date: true,
 	menu: true,
 	attached: true,
+	cover: false,
+	color: {
+		show: true,
+		values: cardColors
+	},
 	users: {
 		show: true,
 		values: users
@@ -171,11 +177,6 @@ const cardShape = { // card settings
 		show: true,
 		values: cardPriority
 	},
-	color: {
-		show: true,
-		values: cardColors
-	},
-	cover: false,
 	headerFields: [
 		{ // custom field
 			key: "sprint",

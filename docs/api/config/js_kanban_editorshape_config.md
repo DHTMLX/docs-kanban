@@ -72,7 +72,7 @@ To configure the editor appearance and functionality, you can specify the follow
 
 #### - Common parameters for all types
 
-- `type` - (required) an editor field type. Here you can specify the following types: **text**, **textarea**, **progress**, **select**, **combo**, **multiselect**, **color**, **date**, **files**
+- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**
 - `key` - (required) an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property. See the example below:
 
 ~~~js {8,17}
@@ -133,7 +133,7 @@ To configure the editor appearance and functionality, you can specify the follow
 
 - `uploadURL` - (optional) an URL of the editor uploader
 - `config` - (optional) a configuration object the **"files"** field. Here you can specify the following parameters:
-	- `accept` - (optional) a file type to be uploaded
+	- `accept` - (optional) a file type to be uploaded (***"image/\*", "video/\*", "audio/\*"*** *and other*)
 	- `disabled` - (optional) enables/disables uploading *files*
 	- `multiple` - (optional) enables/disables uploading *multiple files*
 	- `folder` - (optional) enables/disables uploading *folders* 
