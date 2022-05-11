@@ -257,7 +257,7 @@ const cn = {
 To apply a custom locale you need to:
 
 - create the custom locale (or modify the existed one) and provide translations for all text labels in Kanban (it can be any language you need)
-- apply the new locale via the [**locale**](api/config/js_kanban_locale_config.md) property or by calling the [**setLocale()**](api/methods/js_kanban_setlocale_method.md) method, that takes an object with translations (custom locale) as a parameter
+- apply the new locale via the [`locale`](api/config/js_kanban_locale_config.md) property or by calling the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method, that takes an object with translations (custom locale) as a parameter
 
 ## Example
 
@@ -266,5 +266,5 @@ In this snippet you can see how to switch through the *EN*, *RU* and *CN* locale
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 :::note
-To localize the **Toolbar** of Kanban, you need to call its [**setLocale()**](api/methods/js_kanban_setlocale_method.md) method with the required locale
+To localize the **Toolbar** of Kanban, you need to call its [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method with the required locale
 :::

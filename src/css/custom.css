@@ -145,6 +145,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .snippet_iframe {
   border: 1px solid var(--ifm-hr-border-color);
   margin-bottom: var(--ifm-leading);
+
+  border-radius: 5px; 
 }
 
 /* end for Code Snippet iframe */
@@ -209,7 +211,7 @@ code {
 
 /* styles for tables */
 
-table{
+table {
   width: 100%;
   display: inline-table;
 }
@@ -218,4 +220,3 @@ table th:first-child {
 }
 
 /* end styles for tables */
-

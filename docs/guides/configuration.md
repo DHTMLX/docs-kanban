@@ -8,18 +8,18 @@ description: You can learn about the configuration in the documentation of the D
 
 You can configure the *Kanban* appearance and functionality via corresponding API. The available parameters will allow you to:
 
-- configure the cards appearance via the [**cardShape**](api/config/js_kanban_cardshape_config.md) property
-- configure the editor fields via the [**editorShape**](api/config/js_kanban_editorshape_config.md) property
-- customize the card appearance via the [**cardTemplate**](api/config/js_kanban_cardtemplate_config.md) property
+- configure the cards appearance via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property
+- configure the editor fields via the [`editorShape`](api/config/js_kanban_editorshape_config.md) property
+- customize the card appearance via the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property
 	- *Refer to the [**Customisation**](guides/customization.md) section for details!*
-- apply the desired locale via the [**locale**](api/config/js_kanban_locale_config.md) property
+- apply the desired locale via the [`locale`](api/config/js_kanban_locale_config.md) property
 	- *Refer to the [**Localization**](guides/localization.md) section for details!*
-- load data for cards, columns and rows via the corresponding [**cards**](api/config/js_kanban_cards_config.md), [**columns**](api/config/js_kanban_columns_config.md) and [**rows**](api/config/js_kanban_rows_config.md) properties
+- load data for cards, columns and rows via the corresponding [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md) and [`rows`](api/config/js_kanban_rows_config.md) properties
 	- *Refer to the [**Working with data**](guides/working_with_data.md) section for details!*
 
 ## Cards
 
-The board of Kanban consists of the **cards** distributed into *columns* and *rows*. You can configure the cards appearance using the [cardShape](api/config/js_kanban_cardshape_config.md) configuration property. There are several predefined fields you can include (or exclude) into the card template, namely:
+The board of Kanban consists of the *cards* distributed into *columns* and *rows*. You can configure the cards appearance using the [**cardShape**](api/config/js_kanban_cardshape_config.md) configuration property. There are several predefined fields you can include (or exclude) into the card template, namely:
 
 - a card label via the `label: boolean` config
 - a card description via the `description: boolean` config

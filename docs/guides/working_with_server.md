@@ -33,9 +33,9 @@ JavaScript Kanban has the **RestDataProvider** service that completely supports 
 
 The **RestDataProvider** service includes the special REST methods for dynamic data loading:
 
-- [getCards](api/provider/js_kanban_getcards_method.md) - gets a promise with the ***cards data***
-- [getColumns](api/provider/js_kanban_getcolumns_method.md) - gets a promise with the ***columns data***
-- [getRows](api/provider/js_kanban_getrows_method.md) - gets a promise with the ***rows data***
+- [`getCards()`](api/provider/js_kanban_getcards_method.md) - gets a promise with the ***cards data***
+- [`getColumns()`](api/provider/js_kanban_getcolumns_method.md) - gets a promise with the ***columns data***
+- [`getRows()`](api/provider/js_kanban_getrows_method.md) - gets a promise with the ***rows data***
 
 ## Interacting with backend  
 
