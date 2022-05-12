@@ -29,8 +29,8 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
 - move columns and rows using a context menu (a 3 dots icon)
 - rename columns and rows by double clicking on the corresponding labels or using a context menu (a 3 dots icon)
 - display a card editor by clicking on the needed card
-- collape/uncollapse rows by clicking on the arrow icon on the left of the row label
-- collape/uncollapse columns by clicking on the arrow icon on the left of the column label
+- collapse/uncollapse rows by clicking on the arrow icon on the left of the row label
+- collapse/uncollapse columns by clicking on the arrow icon on the left of the column label
 - select multiple cards using the following shortcuts:
     - `Shift` +  clicking on the corresponding cards, to select multiple cards in the same column
     - `Ctrl (Command)` + clicking on the corresponding cards, to select multiple cards in different columns
