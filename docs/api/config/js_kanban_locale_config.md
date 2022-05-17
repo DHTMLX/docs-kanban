@@ -35,7 +35,7 @@ To change the default locale, you can use the [**setLocale()**](../../methods/js
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards,
-	locale: kanban.ru // apply the "ru" locale by default
+	locale: kanban.ru // the "ru" locale will be set initially
 	// other parameters
 });
 ~~~
@@ -48,7 +48,7 @@ The Toolbar of Kanban is a separate part of the interface. To apply a new locale
 // create Toolbar
 new kanban.Toolbar("#toolbar", {
 	api: board.api,
-	locale: kanban.ru // apply the "ru" locale to the Toolbar by default
+	locale: kanban.ru // apply the "ru" locale to the Toolbar 
 });
 ~~~
 

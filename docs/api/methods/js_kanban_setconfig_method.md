@@ -8,7 +8,7 @@ description: You can learn about the setConfig method in the documentation of th
 
 ### Description
 
-@short: Sets the config parameters of the Kanban widget
+@short: Sets new config parameters of Kanban
 
 ### Usage
 

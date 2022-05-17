@@ -8,7 +8,7 @@ description: You can learn about the setLocale method in the documentation of th
 
 ### Description
 
-@short: Applies new locale to the Kanban widget
+@short: Applies new locale to Kanban
 
 ### Usage
 
@@ -31,7 +31,7 @@ Using this method, you can set a built-in locale (**en**, **ru**, **cn**) as wel
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards,
-	locale: kanban.cn // the "cn" is set by default
+	locale: kanban.cn // the "cn" locale will be set initially
 });
 // apply "ru" locale to Kanban
 board.setLocale(kanban.ru);

@@ -8,7 +8,7 @@ description: You can learn about the editorAutoSave config in the documentation 
 
 ### Description
 
-@short: Optional. Enables/disables an autosave mode of Kanban
+@short: Optional. Enables/disables an autosave mode
 
 :::info
 Using this parameter, you can enable/disable an autosave mode of Kanban. If you set the **editorAutoSave** property to **false**, the editor will display the "Save" button to save edited data
