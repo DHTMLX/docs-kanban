@@ -21,8 +21,8 @@ updateRow({
 
 ### Parameters
 
-- `id` - (required) the **ID** of the row to be updated
-- `row` - (optional) the new data object of row
+- `id` - (required) the ID of the row to be updated
+- `row` - (optional) the new data object of the row
 
 :::info
 The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)

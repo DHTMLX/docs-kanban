@@ -18,7 +18,7 @@ deleteCard({ id: string | number }): void;
 
 ### Parameters
 
-- `id` - (required) the **ID** of the card to be deleted 
+- `id` - (required) the ID of the card to be deleted 
 
 ### Example
 

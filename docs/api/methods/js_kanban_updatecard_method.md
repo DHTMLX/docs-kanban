@@ -21,7 +21,7 @@ updateCard({
 
 ### Parameters
 
-- `id` - (required) the **ID** of the card to be updated
+- `id` - (required) the ID of the card to be updated
 - `card` - (optional) the new data object of the card
 
 :::info

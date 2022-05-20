@@ -21,7 +21,7 @@ addColumn({
 
 ### Parameters
 
-- `id` - (optional) the new column **ID**
+- `id` - (optional) the ID of the new column
 - `column` - (optional) the data object of the new column 
 
 :::info

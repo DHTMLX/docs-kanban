@@ -21,7 +21,7 @@ updateColumn({
 
 ### Parameters
 
-- `id` - (required) the **ID** of the column to be updated
+- `id` - (required) the ID of the column to be updated
 - `column` - (optional) the new data object of the column
 
 :::info

@@ -21,7 +21,7 @@ addRow({
 
 ### Parameters
 
-- `id` - (optional) the new row **ID**
+- `id` - (optional) the ID of the new row
 - `row` - (optional) the data object of the new row
 
 :::info

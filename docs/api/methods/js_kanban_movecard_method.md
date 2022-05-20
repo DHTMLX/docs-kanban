@@ -23,10 +23,10 @@ moveCard({
 
 ### Parameters
 
-- `id` - (required) the **ID** of the card that will be moved 
-- `columnId` - (required) the **ID** of the column the card will be placed into 
-- `rowId` - (optional) the **ID** of the row the card will be placed into
-- `before` - (optional) the **ID** of the card, before which the new card will be placed
+- `id` - (required) the ID of the card that will be moved 
+- `columnId` - (required) the ID of the column the card will be placed into 
+- `rowId` - (optional) the ID of the row the card will be placed into
+- `before` - (optional) the ID of the card, before which the new card will be placed
 
 :::info
 If you specify the **rowKey** property in the widget config, the **rowId** parameter of the **moveCard()** method is *required*!

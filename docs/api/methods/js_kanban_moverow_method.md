@@ -21,8 +21,8 @@ moveRow({
 
 ### Parameters
 
-- `id` - (required) an **ID** of the row to be moved
-- `before` - (required) an **ID** of the row, the moved one will be placed before it
+- `id` - (required) the ID of the row to be moved
+- `before` - (required) the ID of the row, the moved one will be placed before it
 
 ### Example
 

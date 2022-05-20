@@ -21,8 +21,8 @@ moveColumn({
 
 ### Parameters
 
-- `id` - (required) an **ID** of the column to be moved
-- `before` - (required) an **ID** of the column, the moved one will be placed before it
+- `id` - (required) the ID of the column to be moved
+- `before` - (required) the ID of the column, the moved one will be placed before it
 
 ### Example
 

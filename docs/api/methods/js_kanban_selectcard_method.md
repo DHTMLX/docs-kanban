@@ -21,8 +21,8 @@ selectCard({
 
 ### Parameters
 
-- `id` - (required) the **ID** of the selected card 
-- `groupMode` - (optional) multiselecting (**false** by default)
+- `id` - (required) the ID of the selected card 
+- `groupMode` - (optional) enables/disables multiselecting of cards (**false** by default)
 
 :::info
 If you set the **groupMode** parameter to **true**, the **selectCard()** method will not reset selecting of the other elements

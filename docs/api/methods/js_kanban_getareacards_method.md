@@ -21,8 +21,8 @@ getAreaCards(
 
 ### Parameters
 
-- `columnId` - (required) the **ID** of the target column 
-- `rowId` - (optional) the **ID** of the target row
+- `columnId` - (required) the ID of the target column 
+- `rowId` - (optional) the ID of the target row
 
 ### Returns
 

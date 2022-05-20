@@ -18,7 +18,7 @@ getCard(id: string | number): object;
 
 ### Parameters
 
-- `id` - (required) the **ID** of the target card 
+- `id` - (required) the ID of the target card 
 
 ### Returns
 

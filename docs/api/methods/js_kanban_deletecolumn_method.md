@@ -18,7 +18,7 @@ deleteColumn({ id: string | number }): void;
 
 ### Parameters
 
-- `id` - (required) the **ID** of the column to be deleted 
+- `id` - (required) the ID of the column to be deleted
 
 ### Example
 

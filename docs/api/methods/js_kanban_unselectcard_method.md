@@ -22,7 +22,7 @@ To unselect all cards, call the **unselectCard()** method without parameters
 
 ### Parameters
 
-- `id` - (required) the **ID** of the card to be unselected 
+- `id` - (required) the ID of the card to be unselected 
 
 ### Example
 

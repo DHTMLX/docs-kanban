@@ -18,7 +18,7 @@ setLocale(locale: object): void;
 
 ### Parameters
 
-- `locale` - (required) a data object of the new locale 
+- `locale` - (required) the data object of the new locale 
 
 :::info
 Using this method, you can set a built-in locale (**en**, **ru**, **cn**) as well as a custom one.
@@ -45,7 +45,7 @@ The Toolbar of Kanban is a separate part of the interface. To change its locale,
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", {
 	api: board.api,
-	locale: kanban.cn // the "cn" is set by default
+	locale: kanban.cn // the "cn" locale will be set initially
 });
 // apply the "ru" locale to the Toolbar
 toolbar.setLocale(kanban.ru);
