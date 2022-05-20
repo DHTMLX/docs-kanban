@@ -23,7 +23,7 @@ description: You can learn about the update-row event in the documentation of th
 
 The callback of the **update-row** event can take an object with the following parameters:
 
-- `id` - (required) the **ID** of the row to be updated
+- `id` - (required) the ID of the row to be updated
 - `row` - (optional) the new data object of the row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
 
 :::info

@@ -23,7 +23,7 @@ description: You can learn about the add-column event in the documentation of th
 
 The callback of the **add-column** event can take an object with the following parameters:
 
-- `id` - (optional) the new column **ID**
+- `id` - (optional) the ID of the new column 
 - `column` - (optional) the data object of the new column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md) 
 
 :::info

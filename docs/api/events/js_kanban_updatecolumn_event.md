@@ -23,7 +23,7 @@ description: You can learn about the update-column event in the documentation of
 
 The callback of the **update-column** event can take an object with the following parameter:
 
-- `id` - (required) the **ID** of the column to be updated
+- `id` - (required) the ID of the column to be updated
 - `column` - (optional) the new data object of the column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
 
 :::info

@@ -23,7 +23,7 @@ description: You can learn about the update-card event in the documentation of t
 
 The callback of the **update-card** event can take an object with the following parameters:
 
-- `id` - (required) the **ID** of the card to be updated
+- `id` - (required) the ID of the card to be updated
 - `card` - (optional) the new data object of the card. The full list of the **card** parameters can be found [**here**](api/config/js_kanban_cards_config.md)
 
 :::info

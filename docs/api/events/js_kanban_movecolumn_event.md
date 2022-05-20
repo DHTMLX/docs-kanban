@@ -23,8 +23,8 @@ description: You can learn about the move-column event in the documentation of t
 
 The callback of the **move-column** event can take an object with the following parameters:
 
-- `id` - (required) an **ID** of the column to be moved
-- `before` - (required) an **ID** of the column, the moved one will be placed before it
+- `id` - (required) the ID of the column to be moved
+- `before` - (required) the ID of the column, the moved one will be placed before it
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

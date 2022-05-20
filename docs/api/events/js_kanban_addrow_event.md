@@ -23,7 +23,7 @@ description: You can learn about the add-row event in the documentation of the D
 
 The callback of the **add-row** event can take an object with the the following parameters:
 
-- `id` - (optional) the new row **ID**
+- `id` - (optional) the ID of the new row
 - `row` - (optional) the data object of the new row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
 
 :::info
