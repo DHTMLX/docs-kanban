@@ -30,7 +30,7 @@ The method can take an object of the sorting parameters or the *null* value. In 
 - `by` - (optional) the card field for sorting. This parameter can be set to the *string* or *function* value. The function needs to return the card field for sorting
 - `dir` - (optional) the order of sorting. The possible values are *"asc"* and *"desc"*
 - `columnId` - (optional) the ID of column to be sorted
-- `preserve` - (optional) enables/disables preserving of sorting state
+- `preserve` - (optional) enables/disables preserving of sorting state (*false* by default)
 
 :::info
 If the **preserve** parameter is set to *false*, the sorting will be applied once. It means that after adding or moving cards, the sorting state will not be preserved (the order will be changed). Otherwise, the sorting state will be preserved even after adding new cards or moving them. To reset preserving, call the **setSort()** method with the ***null*** parameter.
