@@ -8,7 +8,7 @@ description: You can learn about the setSearch method in the documentation of th
 
 ### Description
 
-@short: Looks for the needed cards by the specified parameters
+@short: Looks for cards by the specified parameters
 
 ### Usage
 

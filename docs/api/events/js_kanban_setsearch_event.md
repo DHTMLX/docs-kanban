@@ -8,7 +8,7 @@ description: You can learn about the set-search event in the documentation of th
 
 ### Description
 
-@short: Fires when searching a card
+@short: Fires when searching for cards
 
 ### Usage
 
