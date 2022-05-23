@@ -53,6 +53,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_selectcard_method.md)            | @getshort(api/methods/js_kanban_selectcard_method.md)    |
 | [](api/methods/js_kanban_serialize_method.md)             | @getshort(api/methods/js_kanban_serialize_method.md)     |
 | [](api/methods/js_kanban_setconfig_method.md)             | @getshort(api/methods/js_kanban_setconfig_method.md)     |
+| [](api/methods/js_kanban_setedit_method.md)               | @getshort(api/methods/js_kanban_setedit_method.md)       |
 | [](api/methods/js_kanban_setlocale_method.md)             | @getshort(api/methods/js_kanban_setlocale_method.md)     |
 | [](api/methods/js_kanban_setsearch_method.md)             | @getshort(api/methods/js_kanban_setsearch_method.md)     |
 | [](api/methods/js_kanban_setsort_method.md)               | @getshort(api/methods/js_kanban_setsort_method.md)       |

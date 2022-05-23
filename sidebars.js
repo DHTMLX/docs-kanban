@@ -76,6 +76,7 @@ module.exports = {
 						"api/methods/js_kanban_selectcard_method",
 						"api/methods/js_kanban_serialize_method",
 						"api/methods/js_kanban_setconfig_method",
+						"api/methods/js_kanban_setedit_method",
 						"api/methods/js_kanban_setlocale_method",
 						"api/methods/js_kanban_setsearch_method",
 						"api/methods/js_kanban_setsort_method",
