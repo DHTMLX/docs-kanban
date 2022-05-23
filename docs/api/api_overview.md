@@ -113,6 +113,7 @@ new kanban.Toolbar("#toolbar", {
 
 | Name                                                       | Description                                              |
 | -----------------------------------------------------------| ---------------------------------------------------------|
+| [](api/config/js_kanban_cardheight_config.md)              | @getshort(api/config/js_kanban_cardheight_config.md)     |
 | [](api/config/js_kanban_cards_config.md)                   | @getshort(api/config/js_kanban_cards_config.md)          |
 | [](api/config/js_kanban_cardshape_config.md)               | @getshort(api/config/js_kanban_cardshape_config.md)      |
 | [](api/config/js_kanban_cardtemplate_config.md)            | @getshort(api/config/js_kanban_cardtemplate_config.md)   |

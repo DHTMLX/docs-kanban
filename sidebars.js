@@ -187,6 +187,7 @@ module.exports = {
 					items: [
 						// JS Kanban
 						// C
+						"api/config/js_kanban_cardheight_config",
 						"api/config/js_kanban_cards_config",
 						"api/config/js_kanban_cardshape_config",
 						"api/config/js_kanban_cardtemplate_config",

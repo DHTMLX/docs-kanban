@@ -6,8 +6,9 @@ description: You can have a Properties overview of JavaScript Kanban in the docu
 
 # Properties overview
 
-| Name                                                       | Description                                              |
-| -----------------------------------------------------------| ---------------------------------------------------------|
+| Name                                                      | Description                                             |
+| ----------------------------------------------------------| --------------------------------------------------------|
+| [](../config/js_kanban_cardheight_config.md)              | @getshort(../config/js_kanban_cardheight_config.md)     |
 | [](../config/js_kanban_cards_config.md)                   | @getshort(../config/js_kanban_cards_config.md)          |
 | [](../config/js_kanban_cardshape_config.md)               | @getshort(../config/js_kanban_cardshape_config.md)      |
 | [](../config/js_kanban_cardtemplate_config.md)            | @getshort(../config/js_kanban_cardtemplate_config.md)   |
