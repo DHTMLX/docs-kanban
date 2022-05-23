@@ -78,6 +78,7 @@ module.exports = {
 						"api/methods/js_kanban_setconfig_method",
 						"api/methods/js_kanban_setlocale_method",
 						"api/methods/js_kanban_setsearch_method",
+						"api/methods/js_kanban_setsort_method",
 						// U
 						"api/methods/js_kanban_unselectcard_method",
 						"api/methods/js_kanban_updatecard_method",
@@ -167,6 +168,7 @@ module.exports = {
 						"api/events/js_kanban_moverow_event",
 						"api/events/js_kanban_selectcard_event",
 						"api/events/js_kanban_setsearch_event",
+						"api/events/js_kanban_setsort_event",
 						"api/events/js_kanban_unselectcard_event",
 						"api/events/js_kanban_updatecard_event",
 						"api/events/js_kanban_updatecolumn_event",

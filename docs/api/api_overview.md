@@ -55,6 +55,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_setconfig_method.md)             | @getshort(api/methods/js_kanban_setconfig_method.md)     |
 | [](api/methods/js_kanban_setlocale_method.md)             | @getshort(api/methods/js_kanban_setlocale_method.md)     |
 | [](api/methods/js_kanban_setsearch_method.md)             | @getshort(api/methods/js_kanban_setsearch_method.md)     |
+| [](api/methods/js_kanban_setsort_method.md)               | @getshort(api/methods/js_kanban_setsort_method.md)       |
 | [](api/methods/js_kanban_unselectcard_method.md)          | @getshort(api/methods/js_kanban_unselectcard_method.md)  |
 | [](api/methods/js_kanban_updatecard_method.md)            | @getshort(api/methods/js_kanban_updatecard_method.md)    |
 | [](api/methods/js_kanban_updatecolumn_method.md)          | @getshort(api/methods/js_kanban_updatecolumn_method.md)  |
@@ -102,6 +103,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/events/js_kanban_moverow_event.md)                  | @getshort(api/events/js_kanban_moverow_event.md)         |
 | [](api/events/js_kanban_selectcard_event.md)               | @getshort(api/events/js_kanban_selectcard_event.md)      |
 | [](api/events/js_kanban_setsearch_event.md)                | @getshort(api/events/js_kanban_setsearch_event.md)       |
+| [](api/events/js_kanban_setsort_event.md)                  | @getshort(api/events/js_kanban_setsort_event.md)         |
 | [](api/events/js_kanban_unselectcard_event.md)             | @getshort(api/events/js_kanban_unselectcard_event.md)    |
 | [](api/events/js_kanban_updatecard_event.md)               | @getshort(api/events/js_kanban_updatecard_event.md)      |
 | [](api/events/js_kanban_updatecolumn_event.md)             | @getshort(api/events/js_kanban_updatecolumn_event.md)    |

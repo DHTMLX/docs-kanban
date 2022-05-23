@@ -6,8 +6,8 @@ description: You can have an Events overview of JavaScript Kanban in the documen
 
 # Events overview
 
-| Name                                                       | Description                                              |
-| -----------------------------------------------------------| ---------------------------------------------------------|
+| Name                                                       | Description                                            |
+| -----------------------------------------------------------| -------------------------------------------------------|
 | [](../events/js_kanban_addcard_event.md)                  | @getshort(../events/js_kanban_addcard_event.md)         |
 | [](../events/js_kanban_addcolumn_event.md)                | @getshort(../events/js_kanban_addcolumn_event.md)       |
 | [](../events/js_kanban_addrow_event.md)                   | @getshort(../events/js_kanban_addrow_event.md)          |
@@ -19,6 +19,7 @@ description: You can have an Events overview of JavaScript Kanban in the documen
 | [](../events/js_kanban_moverow_event.md)                  | @getshort(../events/js_kanban_moverow_event.md)         |
 | [](../events/js_kanban_selectcard_event.md)               | @getshort(../events/js_kanban_selectcard_event.md)      |
 | [](../events/js_kanban_setsearch_event.md)                | @getshort(../events/js_kanban_setsearch_event.md)       |
+| [](../events/js_kanban_setsort_event.md)                  | @getshort(../events/js_kanban_setsort_event.md)         |
 | [](../events/js_kanban_unselectcard_event.md)             | @getshort(../events/js_kanban_unselectcard_event.md)    |
 | [](../events/js_kanban_updatecard_event.md)               | @getshort(../events/js_kanban_updatecard_event.md)      |
 | [](../events/js_kanban_updatecolumn_event.md)             | @getshort(../events/js_kanban_updatecolumn_event.md)    |
