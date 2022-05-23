@@ -102,6 +102,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/events/js_kanban_movecolumn_event.md)               | @getshort(api/events/js_kanban_movecolumn_event.md)      |
 | [](api/events/js_kanban_moverow_event.md)                  | @getshort(api/events/js_kanban_moverow_event.md)         |
 | [](api/events/js_kanban_selectcard_event.md)               | @getshort(api/events/js_kanban_selectcard_event.md)      |
+| [](api/events/js_kanban_setedit_event.md)                  | @getshort(api/events/js_kanban_setedit_event.md)         |
 | [](api/events/js_kanban_setsearch_event.md)                | @getshort(api/events/js_kanban_setsearch_event.md)       |
 | [](api/events/js_kanban_setsort_event.md)                  | @getshort(api/events/js_kanban_setsort_event.md)         |
 | [](api/events/js_kanban_unselectcard_event.md)             | @getshort(api/events/js_kanban_unselectcard_event.md)    |

@@ -167,6 +167,7 @@ module.exports = {
 						"api/events/js_kanban_movecolumn_event",
 						"api/events/js_kanban_moverow_event",
 						"api/events/js_kanban_selectcard_event",
+						"api/events/js_kanban_setedit_event",
 						"api/events/js_kanban_setsearch_event",
 						"api/events/js_kanban_setsort_event",
 						"api/events/js_kanban_unselectcard_event",
