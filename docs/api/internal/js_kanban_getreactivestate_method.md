@@ -8,7 +8,7 @@ description: You can learn about the getReactiveState method in the documentatio
 
 ### Description
 
-@short: Gets an object with the reactive properties of the Kanban StateStore
+@short: Gets an object with the reactive properties of Kanban
 
 ### Usage
 
@@ -18,22 +18,38 @@ api.getReactiveState(): object;
 
 ### Returns
 
-The method returns an object with the following properties:
+The method returns an object with the following parameters:
 
 ~~~jsx {}
 {
-	dragItemId: {
+	areasMeta: {
 		subscribe: any,
 		update: any,
 		set: any
 	},
-	before: {...},
-	overAreaId: {...},
-	overAreaMeta: {...},
-	dropAreaItemsCoords: {...},
-	dropAreasCoords: {...},
-	dragItemsCoords: {...},
-	selected: {...}
+	before: {...}, 
+	cardShape: {...},
+	cards: {...},
+	cardsMap: {...},
+	cardsMeta: {...},
+	columnKey: {...},
+	columns: {...},
+	dragItemId: {...}, 
+	dragItemsCoords: {...}, 
+	dropAreaItemsCoords: {...}, 
+	dropAreasCoords: {...}, 
+	edit: {...},
+	editorShape: {...},
+	fromAreaMeta: {...},
+	overAreaId: {...}, 
+    overAreaMeta: {...},
+	readonly: {...},
+	rowKey: {...},
+	rows: {...},
+	scroll: {...}
+	search: {...},
+	selected: {...}, 
+	sort: {...}
 }
 ~~~  
 
@@ -51,3 +67,5 @@ board.api.getReactiveState().selected.subscribe((value) => {
 	// other actions
 });
 ~~~
+
+**Change log:** The method was updated in v1.2
