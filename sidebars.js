@@ -73,6 +73,7 @@ module.exports = {
 						// P
 						"api/methods/js_kanban_parse_method",
 						// S
+						"api/methods/js_kanban_scroll_method",
 						"api/methods/js_kanban_selectcard_method",
 						"api/methods/js_kanban_serialize_method",
 						"api/methods/js_kanban_setconfig_method",

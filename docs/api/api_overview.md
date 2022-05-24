@@ -50,6 +50,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_movecolumn_method.md)            | @getshort(api/methods/js_kanban_movecolumn_method.md)    |
 | [](api/methods/js_kanban_moverow_method.md)               | @getshort(api/methods/js_kanban_moverow_method.md)       |
 | [](api/methods/js_kanban_parse_method.md)                 | @getshort(api/methods/js_kanban_parse_method.md)         |
+| [](api/methods/js_kanban_scroll_method.md)                | @getshort(api/methods/js_kanban_scroll_method.md)        |
 | [](api/methods/js_kanban_selectcard_method.md)            | @getshort(api/methods/js_kanban_selectcard_method.md)    |
 | [](api/methods/js_kanban_serialize_method.md)             | @getshort(api/methods/js_kanban_serialize_method.md)     |
 | [](api/methods/js_kanban_setconfig_method.md)             | @getshort(api/methods/js_kanban_setconfig_method.md)     |
