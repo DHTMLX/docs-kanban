@@ -17,6 +17,7 @@ description: You can have an Events overview of JavaScript Kanban in the documen
 | [](../events/js_kanban_movecard_event.md)                 | @getshort(../events/js_kanban_movecard_event.md)        |
 | [](../events/js_kanban_movecolumn_event.md)               | @getshort(../events/js_kanban_movecolumn_event.md)      |
 | [](../events/js_kanban_moverow_event.md)                  | @getshort(../events/js_kanban_moverow_event.md)         |
+| [](../events/js_kanban_scroll_event.md)                   | @getshort(../events/js_kanban_scroll_event.md)          |
 | [](../events/js_kanban_selectcard_event.md)               | @getshort(../events/js_kanban_selectcard_event.md)      |
 | [](../events/js_kanban_setedit_event.md)                  | @getshort(../events/js_kanban_setedit_event.md)         |
 | [](../events/js_kanban_setsearch_event.md)                | @getshort(../events/js_kanban_setsearch_event.md)       |
