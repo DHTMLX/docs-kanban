@@ -8,7 +8,7 @@ description: You can learn about the getStores method in the documentation of th
 
 ### Description
 
-@short: Gets an object with the StateStore and DataStore objects of Kanban
+@short: Gets an object with the DataStore properties of Kanban
 
 ### Usage
 
@@ -18,12 +18,11 @@ api.getStores(): object;
 
 ### Returns
 
-The method returns an object with **StateStore** and **DataStore**:
+The method returns an object with the **DataStore** parameters:
 
 ~~~jsx {}
 {
-	state: StateStore, // ( object )
-	data: DataStore // ( object )
+	data: DataStore // ( object of parameters )
 }
 ~~~
 
@@ -35,7 +34,9 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// get the StateStore and DataStore objects of Kanban
-const stores = board.api.getStores();
-console.log(stores);
+// get the DataStore object of Kanban
+const store = board.api.getStores();
+console.log(store);
 ~~~
+
+**Change log:** The method was updated in v1.2
