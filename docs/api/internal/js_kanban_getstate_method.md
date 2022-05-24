@@ -8,7 +8,7 @@ description: You can learn about the getState method in the documentation of the
 
 ### Description
 
-@short: Gets an object with the current properties of the Kanban StateStore
+@short: Gets an object with the StateStore properties of Kanban
 
 ### Usage
 
@@ -18,18 +18,34 @@ api.getState(): object;
 
 ### Returns
 
-The method returns an object with the following properties:
+The method returns an object with the following parameters:
 
 ~~~jsx {}
-{
-	dragItemId: string | number,
-	before: string | number,
-	overAreaId: string | number,
-	overAreaMeta: object,
-	dropAreaItemsCoords: array,
-	dropAreasCoords: array,
-	dragItemsCoords: array,
-	selected: array
+{	
+	areasMeta: object, 
+	before: string | number, 
+	cardShape: object,
+	cards: array,
+	cardsMap: object,
+	cardsMeta: object,
+	columnKey: string,
+	columns: array,
+	dragItemId: string | number, 
+	dragItemsCoords: array, 
+	dropAreaItemsCoords: array, 
+	dropAreasCoords: array, 
+	edit: object,
+	editorShape: array,
+	fromAreaMeta: object,
+	overAreaId: string | number, 
+    overAreaMeta: object,
+	readonly: object,
+	rowKey: string,
+	rows: array,
+	scroll: object
+	search: object,
+	selected: array, 
+	sort: object
 }
 ~~~  
 
@@ -41,7 +57,9 @@ const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// get the state of Kanban
+// get the StateStore of Kanban
 const state = board.api.getState();
 console.log(state);
 ~~~
+
+**Change log:** The method was updated in v1.2
