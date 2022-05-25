@@ -42,7 +42,7 @@ The method returns an object with the following parameters:
 	readonly: object,
 	rowKey: string,
 	rows: array,
-	scroll: object
+	scroll: object,
 	search: object,
 	selected: array, 
 	sort: object

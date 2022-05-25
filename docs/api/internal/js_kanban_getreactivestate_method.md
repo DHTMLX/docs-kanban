@@ -46,7 +46,7 @@ The method returns an object with the following parameters:
 	readonly: {...},
 	rowKey: {...},
 	rows: {...},
-	scroll: {...}
+	scroll: {...},
 	search: {...},
 	selected: {...}, 
 	sort: {...}
