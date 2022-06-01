@@ -204,8 +204,10 @@ module.exports = {
 						"api/config/js_kanban_locale_config",
 						// R
 						"api/config/js_kanban_readonly_config",
+						"api/config/js_kanban_rendertype_config",
 						"api/config/js_kanban_rowkey_config",
 						"api/config/js_kanban_rows_config",
+						"api/config/js_kanban_scrolltype_config",
 
 						// Toolbar
 						"api/config/toolbar_api_config",

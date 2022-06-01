@@ -18,7 +18,9 @@ description: You can have a Properties overview of JavaScript Kanban in the docu
 | [](../config/js_kanban_editorshape_config.md)             | @getshort(../config/js_kanban_editorshape_config.md)    |
 | [](../config/js_kanban_locale_config.md)                  | @getshort(../config/js_kanban_locale_config.md)         |
 | [](../config/js_kanban_readonly_config.md)                | @getshort(../config/js_kanban_readonly_config.md)       |
+| [](../config/js_kanban_rendertype_config.md)              | @getshort(../config/js_kanban_rendertype_config.md)     |
 | [](../config/js_kanban_rowkey_config.md)                  | @getshort(../config/js_kanban_rowkey_config.md)         |
 | [](../config/js_kanban_rows_config.md)                    | @getshort(../config/js_kanban_rows_config.md)           |
+| [](../config/js_kanban_scrolltype_config.md)              | @getshort(../config/js_kanban_scrolltype_config.md)     |
 | [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
 | [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
