@@ -197,6 +197,7 @@ module.exports = {
 						"api/config/js_kanban_cardtemplate_config",
 						"api/config/js_kanban_columnkey_config",
 						"api/config/js_kanban_columns_config",
+						"api/config/js_kanban_columnshape_config",
 						// E
 						"api/config/js_kanban_editorautosave_config",
 						"api/config/js_kanban_editorshape_config",
@@ -207,6 +208,7 @@ module.exports = {
 						"api/config/js_kanban_rendertype_config",
 						"api/config/js_kanban_rowkey_config",
 						"api/config/js_kanban_rows_config",
+						"api/config/js_kanban_rowshape_config",
 						"api/config/js_kanban_scrolltype_config",
 
 						// Toolbar

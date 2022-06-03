@@ -123,6 +123,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/js_kanban_cardtemplate_config.md)            | @getshort(api/config/js_kanban_cardtemplate_config.md)   |
 | [](api/config/js_kanban_columnkey_config.md)               | @getshort(api/config/js_kanban_columnkey_config.md)      |
 | [](api/config/js_kanban_columns_config.md)                 | @getshort(api/config/js_kanban_columns_config.md)        |
+| [](api/config/js_kanban_columnshape_config.md)             | @getshort(api/config/js_kanban_columnshape_config.md)    |
 | [](api/config/js_kanban_editorautosave_config.md)          | @getshort(api/config/js_kanban_editorautosave_config.md) |
 | [](api/config/js_kanban_editorshape_config.md)             | @getshort(api/config/js_kanban_editorshape_config.md)    |
 | [](api/config/js_kanban_locale_config.md)                  | @getshort(api/config/js_kanban_locale_config.md)         |
@@ -130,6 +131,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/js_kanban_rendertype_config.md)              | @getshort(api/config/js_kanban_rendertype_config.md)     |
 | [](api/config/js_kanban_rowkey_config.md)                  | @getshort(api/config/js_kanban_rowkey_config.md)         |
 | [](api/config/js_kanban_rows_config.md)                    | @getshort(api/config/js_kanban_rows_config.md)           |
+| [](api/config/js_kanban_rowshape_config.md)                | @getshort(api/config/js_kanban_rowshape_config.md)       |
 | [](api/config/js_kanban_scrolltype_config.md)              | @getshort(api/config/js_kanban_scrolltype_config.md)     |
 | [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
 | [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
