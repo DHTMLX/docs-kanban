@@ -220,4 +220,8 @@ table th:first-child {
   line-height: 2.2;
 }
 
+.admonition {
+  margin-top: 15px;
+}
+
 /* end styles for infoblock */
