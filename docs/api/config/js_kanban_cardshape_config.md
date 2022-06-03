@@ -14,17 +14,29 @@ description: You can learn about the cardShape config in the documentation of th
 
 ~~~jsx {}
 cardShape?: {
-	label: boolean | { show?: boolean },
+	label?: boolean | { show?: boolean },
 	description?: boolean | { show?: boolean },
 	progress?: boolean | { show?: boolean },
 	start_date?: boolean | { show?: boolean },
 	end_date?: boolean | { show?: boolean },
-	menu?: boolean | { show?: boolean },
 	attached?: boolean | { show?: boolean },
 	cover?: boolean | { show?: boolean },
 	color?: boolean | { 
 		show?: boolean,
 		values?: array  
+	},
+	menu?: boolean | {
+		show?: boolean | ({ card }) => boolean,
+		items?: [
+			{
+				id?: string,
+				icon?: string,
+				label?: string,
+				disabled? boolean,
+				onClick?: ({ id, item, card }) => void
+			}, 
+			{...}
+		] | ({ card, store }) => array
 	},
 	users?: boolean | {
 		show?: boolean,
@@ -76,17 +88,65 @@ In some cases, you can set the parameter to the **short** or **extended** value.
 
 To configure the card appearance, in the **cardShape** object you can specify the following parameters (fields):
 
-- `label` - (required) shows/hides a **card label**
+- `label` - (optional) shows/hides a **card label**
 - `description` - (optional) shows/hides a **card description**
 - `progress` - (optional) shows/hides a **card progress bar**
 - `start_date` - (optional) shows/hides a **card start date**
 - `end_date` - (optional) shows/hides a **card end date**
-- `menu` - (optional) shows/hides a **card menu**
 - `attached` - (optional) shows/hides a **card attachment**
 - `cover` - (optional) shows/hides a **card picture**
 - `color` - (optional) an object of parameters of **the top color line** of card
 	- `show` - (optional) shows/hides a **top color line**
 	- `values` - (optional) an array of valid HEX codes
+- `menu` - (optional) an object of parameters of a **card menu**. Here you can specify the following parameters:
+	- `show` - (optional) - enables/disables a card context menu
+
+	:::info
+	You can set the `show` parameter to the *boolean* value, to show or hide menu for all cards:
+	~~~jsx {}
+		// hides menu of all cards
+		show: false, 
+	~~~
+	You can also set the `show` parameter to a custom function, that takes an object of card data. This function allows showing or hiding menu for a specific card:
+	~~~jsx {}
+		// hides menu of card with the "first" ID
+		show: ({ card }) => card.id !== "first", 
+	~~~
+	:::
+
+	- `items` - (optional) an array of objects containing parameters of items of the cards context menu. For each item you can specify the following parameters:
+		- `id` - (optional) an ID of the menu item
+		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+		- `label` - (optional) a name of the menu item
+		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
+		- `onClick` - (optional) a custom callback function, that takes the following arguments:
+			- ***id*** - an ID of the current menu item
+			- ***item*** - a data object of the current menu item
+			- ***card*** - a data object of the target card
+
+	:::info
+	You can also set the `items` parameter to a custom function, that takes the following arguments:
+	- ***card*** - a data object of a current card
+	- ***store*** - an object of *dataStore*
+
+	This function allows customizing menu for a specific card:
+
+	~~~jsx {}
+	items: ({ card, store }) => {
+		if(card.id === 1){
+			return [
+				{ id: "set-edit", icon: "wxi-edit", label: "Edit" },
+				{ id: "delete-card", icon: "wxi-delete", label: "Delete" }
+			];
+		} else {
+			return [
+				{ id: "set-edit", icon: "wxi-edit", label: "Edit" }
+			];
+		}
+	}
+	~~~
+	:::
+
 - `users` - (optional) an object with **users** parameters
 	- `show` - (optional) shows/hides the **assigned users** data
 	- `values` - (optional) an array of objects with users data. Here you can specify the following fields:
@@ -118,6 +178,17 @@ const defaultPriorities = [
 ];
 
 const defaultColors = ["#65D3B3", "#FFC975", "#58C3FE"];
+// TODO defaultCardMenuItems
+const getCardMenuItems = ({ card, store }) => {
+    const readonly = store.getState();
+    if (!readonly?.select && readonly?.edit) {
+        return [
+            { id: "set-edit", icon: "wxi-edit", label: "Edit" },
+            { id: "delete-card", icon: "wxi-delete", label: "Delete" },
+        ];
+    }
+    return [{ id: "delete-card", icon: "wxi-delete", label: "Delete" }];
+};
 
 const defaultCardShape = {
 	label: true,
@@ -125,7 +196,10 @@ const defaultCardShape = {
 	progress: false,
 	start_date: false,
 	end_date: false,
-	menu: true,
+	menu: {
+		show: true,
+		items: getCardMenuItems // TODO defaultCardMenuItems
+	},
 	attached: false,
 	cover: false,
 	color: {
@@ -194,7 +268,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The ***color*** parameter (field) was updated in v1.1
+**Change log:**
+
+- The ***color*** parameter (field) was updated in v1.1
+- The ***menu*** parameter was updated in v1.2
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
