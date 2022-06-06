@@ -19,20 +19,13 @@ There are two necessary files:
 - the JS file of Kanban
 - the CSS file of Kanban
 
-and
-
-- the link to the Google Fonts source file for the correct rendering of fonts
-
-~~~html {5,7-9} title="index.html"
+~~~html {5-6} title="index.html"
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>How to Start with Kanban</title>
 		<script src="./dist/kanban.js"></script>   
-
 		<link href="./dist/kanban.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
-		rel="stylesheet">
 	</head>
 	<body>
 		<script>
@@ -55,16 +48,13 @@ The Toolbar is an optional part of the Kanban interface. To create Kanban withou
 
 As parameters, the constructors take the HTML containers where the Kanban and Toolbar will be placed into and the corresponding configuration objects.
 
-~~~html {12-13,16,20} title="index.html"
+~~~html {9-10,13-15,17-19} title="index.html"
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>How to Start with Kanban</title>
 		<script src="./dist/kanban.js"></script>   
-
 		<link href="./dist/kanban.css" rel="stylesheet">  
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500"
-		rel="stylesheet">
 	</head>
 	<body>
 		<div id="toolbar"></div>
@@ -90,7 +80,7 @@ Next you can specify configuration properties you want the Kanban component to h
 To start working with Kanban, first you need to provide the initial data for **cards** and **columns** (and *rows*).
 Beside the initial data, you can configure the [cards](../guides/configuration#cards), [editor](../guides/configuration#editor) and [toolbar](../guides/configuration#toolbar) appearance.
 
-~~~jsx {2-7,11-15}
+~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {
 	cards,
 	columns,
@@ -104,7 +94,10 @@ new kanban.Toolbar("#toolbar", {
 	api: board.api,
 	items: [
 		"search",
-		"controls"
+		"spacer",
+		"sort",
+		"addColumn",
+		"addRow"
 	]
 });
 ~~~
