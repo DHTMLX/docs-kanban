@@ -8,10 +8,10 @@ description: You can learn about the locale config in the documentation of the D
 
 ### Description
 
-@short: Optional. An object of the built-in or custom locale
+@short: Optional. An object with the built-in or custom locale of Kanban
 
 :::info
-The **locale** object includes all labels of the Kanban with the corresponding translations
+The **locale** object includes all labels of Kanban with the corresponding translations
 :::
 
 ### Usage
@@ -22,7 +22,7 @@ locale?: object;
 
 ### Default config
 
-By default, the **locale** parameter is set to the built-in **en** locale. You can set it to the **ru**, **cn** or custom locale as well
+By default, the **locale** parameter is set to the built-in **English** locale. You can set it to the custom locale as well
 
 :::tip
 To change the default locale, you can use the [**setLocale()**](../../methods/js_kanban_setlocale_method) method
@@ -35,20 +35,8 @@ To change the default locale, you can use the [**setLocale()**](../../methods/js
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards,
-	locale: kanban.ru // the "ru" locale will be set initially
+	locale: cn // the "cn" locale will be set initially
 	// other parameters
-});
-~~~
-
-:::info
-The Toolbar of Kanban is a separate part of the interface. To apply a new locale to the Toolbar, you need to set the **locale** property to the needed locale object as well
-:::
-
-~~~jsx {4}
-// create Toolbar
-new kanban.Toolbar("#toolbar", {
-	api: board.api,
-	locale: kanban.ru // apply the "ru" locale to the Toolbar 
 });
 ~~~
 
