@@ -1,17 +1,17 @@
 ---
-sidebar_label: (Toolbar) api
+sidebar_label: api
 title: api Config
-description: You can learn about the api config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: You can learn about the (Toolbar) api config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# (Toolbar) api
+# api
 
 ### Description
 
 @short: Required. An object with the internal API of Kanban
 
 :::info
-In this case, the **internal API of Kanban** is used for the **search bar** and **controls for adding columns and rows** located on the Toolbar
+In this case, the **internal API of Kanban** is used for **controls** located on Toolbar
 :::
 
 ### Usage
@@ -22,11 +22,10 @@ api: object;
 
 ### Example
 
-~~~jsx {8}
+~~~jsx {7}
 const board = new kanban.Kanban("#root", {
 	columns,
-	cards,
-	rows
+	cards
 });
 
 new kanban.Toolbar("#toolbar", {

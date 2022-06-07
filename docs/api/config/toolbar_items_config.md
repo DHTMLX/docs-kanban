@@ -1,14 +1,14 @@
 ---
-sidebar_label: (Toolbar) items
+sidebar_label: items
 title: items Config
-description: You can learn about the items config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: You can learn about the (Toolbar) items config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# (Toolbar) items
+# items
 
 ### Description
 
-@short: Optional. An array of controls (and its parameters) arranged in the toolbar of Kanban
+@short: Optional. An array with controls arranged on Toolbar of Kanban 
 
 ### Usage
 
@@ -134,11 +134,10 @@ items: [
 
 ### Example
 
-~~~jsx {9-15}
+~~~jsx {8-14}
 const board = new kanban.Kanban("#root", {
 	columns,
-	cards,
-	rows
+	cards
 });
 
 new kanban.Toolbar("#toolbar", {
