@@ -24,5 +24,3 @@ description: You can have a Properties overview of JavaScript Kanban in the docu
 | [](../config/js_kanban_rows_config.md)                    | @getshort(../config/js_kanban_rows_config.md)           |
 | [](../config/js_kanban_rowshape_config.md)                | @getshort(../config/js_kanban_rowshape_config.md)       |
 | [](../config/js_kanban_scrolltype_config.md)              | @getshort(../config/js_kanban_scrolltype_config.md)     |
-| [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
-| [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
