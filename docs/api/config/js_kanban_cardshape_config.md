@@ -40,7 +40,7 @@ cardShape?: {
 	},
 	users?: boolean | {
 		show?: boolean,
-		values?: [
+		values: [
 			{
 				id: string | number,
 				label?: string,
@@ -149,10 +149,27 @@ To configure the card appearance, in the **cardShape** object you can specify th
 
 - `users` - (optional) an object with **users** parameters
 	- `show` - (optional) shows/hides the **assigned users** data
-	- `values` - (optional) an array of objects with users data. Here you can specify the following fields:
+	- `values` - (required) an array of objects with users data. Here you can specify the following fields:
 		- `id` - (required) a user **ID**
 		- `label` - (optional) a user name
 		- `path` - (optional) a path to the user picture
+
+	:::info
+	By default, the **users** field is disabled (`users: false`). To work with users, you need to set the `show` parameter to `true` and provide the corresponding data via the `values` parameter. Note, that you cannot activate users via the `users: true` expression!
+
+	~~~jsx {3-7}		
+	cardShape: {
+		users: {
+			show: true,
+			values: [
+				{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
+				{ id: 2, label: "Aaron Short" }
+			]
+		}
+	}
+	~~~
+	:::
+
 - `priority` - (optional) an object with **priorities** parameters
 	- `show` - (optional) shows/hides a **card priority**
 	- `values` - (optional) an array of objects with priorities data. Here you can specify the following fields:
