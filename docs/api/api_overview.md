@@ -67,28 +67,28 @@ new kanban.Toolbar("#toolbar", {
 
 ### Event Bus methods
 
-| Name                                                      | Description                                                  |
-| ----------------------------------------------------------| ------------------------------------------------------------ |
-| [](api/internal/js_kanban_exec_method.md)                 | @getshort(api/internal/js_kanban_exec_method.md)             |
-| [](api/internal/js_kanban_intercept_method.md)            | @getshort(api/internal/js_kanban_intercept_method.md)        |
-| [](api/internal/js_kanban_on_method.md)                   | @getshort(api/internal/js_kanban_on_method.md)               |
-| [](api/internal/js_kanban_setnext_method.md)              | @getshort(api/internal/js_kanban_setnext_method.md)          |
+| Name                                                       | Description                                                  |
+| -----------------------------------------------------------| ------------------------------------------------------------ |
+| [](api/internal/js_kanban_exec_method.md)                  | @getshort(api/internal/js_kanban_exec_method.md)             |
+| [](api/internal/js_kanban_intercept_method.md)             | @getshort(api/internal/js_kanban_intercept_method.md)        |
+| [](api/internal/js_kanban_on_method.md)                    | @getshort(api/internal/js_kanban_on_method.md)               |
+| [](api/internal/js_kanban_setnext_method.md)               | @getshort(api/internal/js_kanban_setnext_method.md)          |
 
 ### State methods
 
-| Name                                                                   | Description                                                   |
-| -----------------------------------------------------------------------| ------------------------------------------------------------- |
-| [](api/internal/js_kanban_getreactivestate_method.md)                  | @getshort(api/internal/js_kanban_getreactivestate_method.md)  |
-| [](api/internal/js_kanban_getstate_method.md)                          | @getshort(api/internal/js_kanban_getstate_method.md)          |
-| [](api/internal/js_kanban_getstores_method.md)                         | @getshort(api/internal/js_kanban_getstores_method.md)         |
+| Name                                                       | Description                                                   |
+| -----------------------------------------------------------| ------------------------------------------------------------- |
+| [](api/internal/js_kanban_getreactivestate_method.md)      | @getshort(api/internal/js_kanban_getreactivestate_method.md)  |
+| [](api/internal/js_kanban_getstate_method.md)              | @getshort(api/internal/js_kanban_getstate_method.md)          |
+| [](api/internal/js_kanban_getstores_method.md)             | @getshort(api/internal/js_kanban_getstores_method.md)         |
 
 ### RestDataProvider methods
 
-| Name                                                    | Description                                            |
-| --------------------------------------------------------| -------------------------------------------------------|
-| [](api/provider/js_kanban_getcards_method.md)           | @getshort(api/provider/js_kanban_getcards_method.md)   |
-| [](api/provider/js_kanban_getcolumns_method.md)         | @getshort(api/provider/js_kanban_getcolumns_method.md) |
-| [](api/provider/js_kanban_getrows_method.md)            | @getshort(api/provider/js_kanban_getrows_method.md)    |
+| Name                                                       | Description                                            |
+| -----------------------------------------------------------| -------------------------------------------------------|
+| [](api/provider/js_kanban_getcards_method.md)              | @getshort(api/provider/js_kanban_getcards_method.md)   |
+| [](api/provider/js_kanban_getcolumns_method.md)            | @getshort(api/provider/js_kanban_getcolumns_method.md) |
+| [](api/provider/js_kanban_getrows_method.md)               | @getshort(api/provider/js_kanban_getrows_method.md)    |
 
 ## Kanban events
 
@@ -133,5 +133,19 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/js_kanban_rows_config.md)                    | @getshort(api/config/js_kanban_rows_config.md)           |
 | [](api/config/js_kanban_rowshape_config.md)                | @getshort(api/config/js_kanban_rowshape_config.md)       |
 | [](api/config/js_kanban_scrolltype_config.md)              | @getshort(api/config/js_kanban_scrolltype_config.md)     |
+
+## Toolbar methods
+
+| Name                                                       | Description                                              |
+| -----------------------------------------------------------| ---------------------------------------------------------|
+| [](api/methods/toolbar_destructor_method.md)               | @getshort(api/methods/toolbar_destructor_method.md)      |
+| [](api/methods/toolbar_setconfig_method.md)                | @getshort(api/methods/toolbar_setconfig_method.md)       |
+| [](api/methods/toolbar_setlocale_method.md)                | @getshort(api/methods/toolbar_setlocale_method.md)       |
+
+## Toolbar properties
+
+| Name                                                       | Description                                              |
+| -----------------------------------------------------------| ---------------------------------------------------------|
 | [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
 | [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
+| [](api/config/toolbar_locale_config.md)                    | @getshort(api/config/toolbar_locale_config.md)           |

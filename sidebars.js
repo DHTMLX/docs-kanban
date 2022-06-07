@@ -69,7 +69,6 @@ module.exports = {
 						"api/methods/js_kanban_movecard_method",
 						"api/methods/js_kanban_movecolumn_method",
 						"api/methods/js_kanban_moverow_method",
-
 						// P
 						"api/methods/js_kanban_parse_method",
 						// S
@@ -209,11 +208,39 @@ module.exports = {
 						"api/config/js_kanban_rowkey_config",
 						"api/config/js_kanban_rows_config",
 						"api/config/js_kanban_rowshape_config",
-						"api/config/js_kanban_scrolltype_config",
-
-						// Toolbar
+						"api/config/js_kanban_scrolltype_config"
+					]
+				},
+				{
+					type: "category",
+					label: "Toolbar methods",
+					collapsible: true,
+					collapsed: true,
+					link: {
+						type: 'doc',
+						id: "api/overview/toolbar_methods_overview"
+					},
+					items: [	
+						// D
+						"api/methods/toolbar_destructor_method",
+						// S
+						"api/methods/toolbar_setconfig_method",
+						"api/methods/toolbar_setlocale_method"
+					]
+				},
+				{
+					type: "category",
+					label: "Toolbar properties",
+					collapsible: true,
+					collapsed: true,
+					link: {
+						type: 'doc',
+						id: "api/overview/toolbar_properties_overview"
+					},
+					items: [	
 						"api/config/toolbar_api_config",
-						"api/config/toolbar_items_config"
+						"api/config/toolbar_items_config",
+						"api/config/toolbar_locale_config"
 					]
 				},
 			]
