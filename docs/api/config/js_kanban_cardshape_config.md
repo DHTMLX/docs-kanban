@@ -44,7 +44,7 @@ cardShape?: {
 			{
 				id: string | number,
 				label?: string,
-				path?: string
+				avatar?: string
 			},
 			{...} // other users data
 		]
@@ -152,7 +152,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 	- `values` - (required) an array of objects with users data. Here you can specify the following fields:
 		- `id` - (required) a user **ID**
 		- `label` - (optional) a user name
-		- `path` - (optional) a path to the user picture
+		- `avatar` - (optional) a path to the user avatar
 
 	:::info
 	By default, the **users** field is disabled (`users: false`). To work with users, you need to set the `show` parameter to `true` and provide the corresponding data via the `values` parameter. Note, that you cannot activate users via the `users: true` expression!
@@ -162,7 +162,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 		users: {
 			show: true,
 			values: [
-				{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
+				{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 				{ id: 2, label: "Aaron Short" }
 			]
 		}
@@ -235,7 +235,7 @@ const defaultCardShape = {
 
 ~~~jsx {47}
 const users = [ // users data
-	{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
+	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
 ];
 
@@ -288,7 +288,7 @@ new kanban.Kanban("#root", {
 **Change log:**
 
 - The ***color*** parameter (field) was updated in v1.1
-- The ***menu*** parameter was updated in v1.2
+- The ***menu*** and ***users*** parameters were updated in v1.2
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
