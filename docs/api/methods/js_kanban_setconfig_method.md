@@ -8,7 +8,7 @@ description: You can learn about the setConfig method in the documentation of th
 
 ### Description
 
-@short: Sets new config parameters of Kanban
+@short: Sets new configuration parameters of Kanban
 
 ### Usage
 
@@ -21,7 +21,7 @@ setConfig(config: object): void;
 - `config` - (required) the object of the Kanban configuration. See the full list of properties [here](api/api_overview.md#kanban-properties)
 
 :::tip
-Using this method, you can configure the Kanban widget as well as load data to it. The method changes only the parameters you passed
+Using this method, you can configure the Kanban widget as well as load data to it. The method changes only the parameters you passed.
 :::
 
 ### Example

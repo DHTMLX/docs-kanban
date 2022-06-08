@@ -8,7 +8,7 @@ description: You can learn about the setConfig method of Toolbar in the document
 
 ### Description
 
-@short: Sets new config parameters of Toolbar
+@short: Sets new configuration parameters of Toolbar
 
 ### Usage
 
@@ -20,6 +20,10 @@ setConfig(config: object): void;
 
 - `config` - (required) the object of the Toolbar configuration. See the full list of properties [here](api/api_overview.md#toolbar-properties)
 
+:::note
+The method changes only the parameters you passed.
+:::
+
 ### Example
 
 ~~~jsx {6-8}
@@ -27,7 +31,7 @@ setConfig(config: object): void;
 const board = new kanban.Kanban("#root", {});
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-// set new config parameters of Toolbar
+// set new configuration parameters of Toolbar
 toolbar.setConfig({
 	items: ["search", "spacer", "sort"]
 });
