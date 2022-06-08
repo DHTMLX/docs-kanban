@@ -8,31 +8,41 @@ description: You can learn about the setLocale method of Toolbar in the document
 
 ### Description
 
-@short: Applies new locale to Toolbar
+@short: Applies a new locale to Toolbar
 
 ### Usage
 
 ~~~jsx {}
-setLocale(locale: object): void;
+setLocale(null | locale?: object): void;
 ~~~
 
 ### Parameters
 
-- `locale` - (required) the data object of the new locale 
+- `null` - (optional) - resets to the default locale (*English*)
+- `locale` - (optional) the object of data of the new locale to be applied
 
 :::info
-Using this method, you can set the built-in **English** locale as well as a custom one.
+Using this method, you can apply a new locale to Toolbar. To reset Toolbar to the default locale, call the method without arguments (or with a *null* value)
+:::
+
+:::important
+After applying a new locale to Toolbar, don't forget to refresh the logic of Toolbar controls via the [`setConfig()`](api/methods/toolbar_setconfig_method.md) method. See the example below.
 :::
 
 ### Example
 
-~~~jsx {6}
+~~~jsx {6,8-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {});
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-// apply the "cn" locale to Toolbar
-toolbar.setLocale(cn);
+// apply the "de" locale to Toolbar
+toolbar.setLocale(de);
+// apply the default locale to Toolbar
+toolbar.setLocale(); // or toolbar.setLocale(null);
+toolbar.setConfig({ api: board.api }); // refresh logic of Toolbar controls (required after changing locales)
 ~~~
+
+**Chande log:** The method was updated in v1.2
 
 **Related articles:** [Localization](guides/localization.md)
