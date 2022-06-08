@@ -25,7 +25,7 @@ editorShape?: [
 			{
 				id: string | number,
 				label: string,
-				path?: string // for a "multiselect" type only
+				avatar?: string // for a "multiselect" type only
 			},
 			{...} // other options
 		],
@@ -104,7 +104,7 @@ To configure the editor appearance and functionality, you can specify the follow
 - `values` - (optional) an array of objects containing the dropdown options data. Here you can specify the following parameters:
 	- `id` - (required) an option **ID** 
 	- `label` - (required) an option label 
-	- `path` - (optional) a path to the option preview image (for a **"multiselect"** type only)
+	- `avatart` - (optional) a path to the option preview image (for a **"multiselect"** type only)
 
 #### - Parameters for a "color" type
 
@@ -127,7 +127,7 @@ To configure the editor appearance and functionality, you can specify the follow
 - `config` - (optional) a configuration object of the **"progress"** field. Here you can specify the following parameters:
 	- `min` - (optional) a min value
 	- `max` - (optional) a max value
-	- `step` - (optional) a step of the progress bar
+	- `step` - (optional) a step of moving the progress bar slider
 
 #### - Parameters for a "files" type
 
@@ -168,7 +168,7 @@ const defaultEditorShape = [
 
 ~~~jsx {6-14,19}
 const users = [ // user data
-	{ id: 1, label: "John Smith", path: "../assets/user.jpg" },
+	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
 ];
 
@@ -189,5 +189,7 @@ new kanban.Kanban("#root", {
 	// other parameters
 });
 ~~~
+
+**Change log:** The *multiselect* type was updated in v1.2
 
 **Related articles:** [Configuration](../../../guides/configuration#editor)
