@@ -8,10 +8,10 @@ description: You can learn about the (Toolbar) locale config in the documentatio
 
 ### Description
 
-@short: Optional. An object with a custom locale of Toolbar of Kanban
+@short: Optional. An object of a custom locale of Toolbar
 
 :::info
-The **locale** object includes all labels of Toolbar (Kanban) with the corresponding translations
+The **locale** object needs to include all labels of Kanban and Toolbar with the corresponding translations.
 :::
 
 ### Usage
@@ -22,10 +22,10 @@ locale?: object;
 
 ### Default config
 
-By default, the **locale** parameter is set to the built-in **english** locale. You can set it to the custom locale as well
+By default, Toolbar uses the **English** locale. You can set it to the custom locale as well
 
 :::tip
-To change the default locale, you can use the [**setLocale()**](../../methods/toolbar_setlocale_method) method of Toolbar
+To change the current locale dynamically, you can use the [**setLocale()**](../../methods/toolbar_setlocale_method) method of Toolbar
 :::
 
 ### Example
@@ -38,7 +38,7 @@ const board = new kanban.Kanban("#root", {
 // create Toolbar
 new kanban.Toolbar("#toolbar", {
 	api: board.api,
-	locale: cn // apply the "cn" locale to the Toolbar 
+	locale: cn // apply the "cn" locale to Toolbar 
 });
 ~~~
 

@@ -8,10 +8,10 @@ description: You can learn about the locale config in the documentation of the D
 
 ### Description
 
-@short: Optional. An object with the built-in or custom locale of Kanban
+@short: Optional. An object of a custom locale of Kanban
 
 :::info
-The **locale** object includes all labels of Kanban with the corresponding translations
+The **locale** object needs to include all labels of Kanban and Toolbar with the corresponding translations.
 :::
 
 ### Usage
@@ -22,10 +22,10 @@ locale?: object;
 
 ### Default config
 
-By default, the **locale** parameter is set to the built-in **English** locale. You can set it to the custom locale as well
+By default, Kanban uses the **English** locale. You can set it to the custom locale as well
 
 :::tip
-To change the default locale, you can use the [**setLocale()**](../../methods/js_kanban_setlocale_method) method
+To change the current locale dynamically, you can use the [**setLocale()**](../../methods/js_kanban_setlocale_method) method of Kanban
 :::
 
 ### Example
