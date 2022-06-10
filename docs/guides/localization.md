@@ -6,265 +6,100 @@ description: You can learn about the localization in the documentation of the DH
 
 # Localization
 
-You can localize labels in the interface of JavaScript Kanban and present it in any necessary language. You just need to provide localized strings for labels and apply your locale to the component.
+You can localize all labels in the interface of JavaScript Kanban. For this you need to create a new locale or modify a built-in one and apply it to Kanban and Toolbar (*separately*).
 
 ## Default locale
 
-The English locale is used by default:
+The **English** locale is used by default:
 
-~~~js
-const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-const months = [
-	"January",
-	"February",
-	"March",
-	"April",
-	"May",
-	"June",
-	"July",
-	"August",
-	"September",
-	"October",
-	"November",
-	"December"
-];
-
-const monthsShort = [
-	"Jan",
-	"Feb",
-	"Mar",
-	"Apr",
-	"May",
-	"Jun",
-	"Jul",
-	"Aug",
-	"Sep",
-	"Oct",
-	"Nov",
-	"Dec"
-];
-
-const wx = {
-	Today: "Today",
-	Clear: "Clear",
-	Close: "Close"
-};
-
+~~~jsx
 const en = {
-	lang: "en",
-
-	__dates: {
-		months,
-		monthsShort,
-		days
-	},
-	wx,
-
-	kanban: {
-		Save: "Save",
-		Close: "Close",
-		Delete: "Delete",
-		Name: "Name",
-		Description: "Description",
-		Type: "Type",
+	kanban: { // translations of the Kanabn labels
+		"Save": "Save",
+		"Close": "Close",
+		"Delete": "Delete",
+		"Name": "Name",
+		"Description": "Description",
+		"Type": "Type",
 		"Start date": "Start date",
 		"End date": "End date",
-
-		Result: "Result",
+		"Result": "Result",
 		"No results": "No results",
-		Search: "Search",
+		"Search": "Search",
 		"Search in": "Search in",
 		"Add new row": "Add new row",
 		"Add new column": "Add new column",
 		"Add new card": "Add new card",
 		"Edit card": "Edit card",
-		Edit: "Edit",
-
-		Everywhere: "Everywhere",
-		Label: "Label",
-		Status: "Status",
-		Color: "Color",
-		Date: "Date",
-
-		Untitled: "Untitled",
-		Rename: "Rename"
-	}
-};
-~~~
-
-:::info
-Besides the ***en*** locale, Kanban also includes the built-in ***ru*** and ***cn*** locales
-:::
-
-<details>
-<summary><b>ru</b> locale</summary>
-
-~~~jsx
-const days = ["Вск", "Пон", "Втр", "Срд", "Чет", "Птн", "Суб"];
-
-const months = [
-	"Январь",
-	"Февраль",
-	"Март",
-	"Апрель",
-	"Май",
-	"Июнь",
-	"Июль",
-	"Август",
-	"Сентябрь",
-	"Октябрь",
-	"Ноябрь",
-	"Декабрь"
-];
-
-const monthsShort = [
-	"Янв",
-	"Фев",
-	"Мар",
-	"Апр",
-	"Май",
-	"Июн",
-	"Июл",
-	"Авг",
-	"Сен",
-	"Окт",
-	"Ноя",
-	"Дек"
-];
-
-const wx = {
-	Today: "Сегодня",
-	Clear: "Очистить",
-	Close: "Закрыть"
-};
-
-const ru = {
-	lang: "ru",
-
-	__dates: {
-		months,
-		monthsShort,
-		days
+		"Edit": "Edit",
+		"Everywhere": "Everywhere",
+		"Label": "Label",
+		"Status": "Status",
+		"Color": "Color",
+		"Date": "Date",
+		"Untitled": "Untitled",
+		"Rename": "Rename",
+		"Move up": "Move up",
+		"Move down": "Move down",
+		"Move left": "Move left",
+		"Move right": "Move right",
+		"Sort": "Sort",
+		"Label (a-z)": "Label (a-z)",
+		"Label (z-a)": "Label (z-a)",
+		"Description (a-z)": "Description (a-z)",
+		"Description (z-a)": "Description (z-a)"
 	},
-	wx,
-
-	kanban: {
-		Save: "Сохранить",
-		Close: "Закрыть",
-		Delete: "Удалить",
-		Name: "Задача",
-		Description: "Описание",
-		Type: "Тип",
-		"Start Date": "Дата выполнения",
-		"End Date": "Дата окончания",
-
-		Result: "Результат",
-		"No results": "Ничего не найдено",
-		Search: "Поиск",
-		"Search in": "Поиск",
-		"Add new row": "Новая строка",
-		"Add new column": "Новая колонка",
-		"Add new card": "Добавить новую карточку",
-		"Edit card": "Редактировать карточку",
-		Edit: "Редактировать",
-
-		Everywhere: "Всюду",
-		Label: "Заголовок",
-		Status: "Статус",
-		Color: "Цвет",
-		Date: "Дата",
-
-		Untitled: "Без названия",
-		Rename: "Переименовать"
-	}
-};
-~~~
-</details>
-
-<details>
-<summary><b>cn</b> locale</summary>
-
-~~~jsx
-const days = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
-
-const months = [
-	"一月",
-	"二月",
-	"三月",
-	"四月",
-	"五月",
-	"六月",
-	"七月",
-	"八月",
-	"九月",
-	"十月",
-	"十一月",
-	"十二月"
-];
-
-const wx = {
-	Today: "今天",
-	Clear: "清除",
-	Close: "关闭"
-};
-
-const cn = {
-	lang: "cn",
-
-	__dates: {
-		months,
-		monthsShort: months,
-		days
+	calendar: { // translations and settings of the calendar
+		monthFull: [
+			"January", "February", "March", "April",
+			"May", "June", "July", "August", 
+			"September", "October", "November", "December"
+		],
+		monthShort: [
+			"Jan", "Feb", "Mar", "Apr",
+			"May", "Jun", "Jul", "Aug",
+			"Sep", "Oct", "Nov", "Dec"
+		],
+		dayFull: [
+			"Sunday",
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday"
+		],
+		dayShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+		hours: "Hours",
+		minutes: "Minutes",
+		done: "Done",
+		clear: "Clear",
+		today: "Today",
+		am: ["am", "AM"],
+		pm: ["pm", "PM"],
+		weekStart: 7,
+		timeFormat: 24
 	},
-	wx,
-
-	kanban: {
-		Save: "保存",
-		Close: "关闭",
-		Delete: "删除",
-		Name: "名称",
-		Description: "描述",
-		Type: "类型",
-		"Start Date": "开始日期",
-		"End Date": "结束日期",
-
-		Result: "结果",
-		"No results": "没有结果",
-		Search: "搜索",
-		"Search in": "搜索",
-		"Add new row": "添加新行",
-		"Add new column": "添加新列",
-		"Add new card": "添加新卡",
-		"Edit card": "编辑卡片",
-		Edit: "编辑",
-
-		Everywhere: "无处不在",
-		Label: "标签",
-		Status: "状态",
-		Color: "颜色",
-		Date: "日期",
-
-		Untitled: "无题",
-		Rename: "重命名"
+	core: { // translations of the core elements
+		ok: "OK",
+		cancel: "Cancel"
 	}
 };
 ~~~
-</details>
 
 ## Custom locale
 
-To apply a custom locale you need to:
+To apply a new locale you need to:
 
-- create the custom locale (or modify the existed one) and provide translations for all text labels in Kanban (it can be any language you need)
-- apply the new locale via the [`locale`](api/config/js_kanban_locale_config.md) property or by calling the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method, that takes an object with translations (custom locale) as a parameter
+- create a custom locale (or modify the default one) and provide translations for all text labels (it can be any language you need)
+:::info
+**TODO** - descride custom locales from github repo
+:::
+- apply the new locale to **Kanabn** via its [`locale`](api/config/js_kanban_locale_config.md) property or use the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method
+- apply the new locale to **Toolbar** via its [`locale`](api/config/toolbar_locale_config.md) property or use the [`setLocale()`](api/methods/toolbar_setlocale_method.md) method
 
 ## Example
 
 In this snippet you can see how to switch through the *EN*, *RU* and *CN* locales:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
-
-:::note
-To localize the **Toolbar** of Kanban, you need to call its [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method with the required locale
-:::
