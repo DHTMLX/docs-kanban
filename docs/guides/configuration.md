@@ -6,10 +6,11 @@ description: You can learn about the configuration in the documentation of the D
 
 # Configuration
 
-You can configure the *Kanban* appearance and functionality via corresponding API. The available parameters will allow you to:
+You can configure the *Kanban* appearance and functionality via the corresponding API. The available parameters will allow you to:
 
 - configure the cards appearance via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property
 - configure the editor fields via the [`editorShape`](api/config/js_kanban_editorshape_config.md) property
+- configure rendering and scrolling via the [`renderType`](api/config/js_kanban_rendertype_config.md) and [`scrollType`](api/config/js_kanban_scrolltype_config.md) properties
 - customize the card appearance via the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property
 	- *Refer to the [**Customisation**](guides/customization.md) section for details!*
 - apply the desired locale via the [`locale`](api/config/js_kanban_locale_config.md) property
@@ -25,20 +26,20 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 - a card description via the `description: boolean` config
 
 	:::tip
-	You can manage the **label** and **description** of any card via the corresponding fields of the Kanban editor. To configure these editor fields, you can use the [**text** and **textarea**](#text-and-textarea-types) types.
+	You can manage the **label** and **description** fields of any card via the corresponding inputs of the Kanban editor. If you activate these fields, the corresponding inputs will be displayed in the editor automatically. To configure these inputs, you can use the [**text** and **textarea**](#text-and-textarea-types) types.
 	:::
 
 - a card progress via the `progress: boolean` config
 
 	:::tip
-	You can manage the **progress** of any card via the corresponding control of the Kanban editor. To configure this control, you can use the [**progress**](#progress-type) type.
+	You can manage the **progress** field of any card via the corresponding control of the Kanban editor. If you activate this field, the corresponding control will be displayed in the editor automatically. To configure this control, you can use the [**progress**](#progress-type) type.
 	:::
 
 - a start date via the `start_date: boolean` config
 - a end date via the `end_date: boolean` config
 
 	:::tip
-	You can manage the **start date** and **end date** of any card via the corresponding controls of the Kanban editor. To configure these controls, you can use the [**date**](#date-type) type.
+	You can manage the **start date** and **end date** fields of any card via the corresponding controls of the Kanban editor. If you activate these fields, the corresponding controls will be displayed in the editor automatically. To configure these controls, you can use the [**date**](#date-type) type.
 	:::
 
 - a card context menu via the `menu: boolean` config
@@ -51,10 +52,10 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 - a card color via the `color: boolean` config
 
 	:::tip
-	You can manage the **top color line** of any card via the corresponding control of the Kanban editor. To configure this control, you can use the [**color**](#color-type) type.
+	You can manage the **top color line** of any card via the corresponding control of the Kanban editor. If you activate **color**, the corresponding control (*colorpicker*) will be displayed in the editor automatically. To configure this control, you can use the [**color**](#color-type) type.
 	:::
 
-- a card cover (preview image) via the `cover: boolean` config
+- a card cover (*preview image*) via the `cover: boolean` config
 - a card assignment (users) via the `users: { show: boolean, values: object }` config
 
 	:::tip
@@ -64,14 +65,14 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 - a card priority via the `priority: { show: boolean, values: object }` config
 
 	:::tip
-	You can manage the **priority** of any card via the corresponding control of the Kanban editor. To configure this control, you can use the [**combo** or **select**](#combo-select-and-multiselect-types) types only
+	You can manage the **priority** of any card via the corresponding control of the Kanban editor. If you activate **priority**, the corresponding control will be displayed in the editor automatically. To configure this control, you can use the [**combo** or **select**](#combo-select-and-multiselect-types) types only.
 	:::
 
 - *a custom field* via the `headerFields: [ { key: string, label: string, css: string } ]` config
 
 ~~~jsx {12-35,42}
 const users = [ // users data
-    { id: 1, label: "John Smith", path: "../assets/user.jpg" },
+    { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
     { id: 2, label: "Aaron Short" }
 ];
 
@@ -164,11 +165,11 @@ editorShape: [
 		values: [
 			{ 
 				id: 1, label: "Alan", 
-				path: "preview_image_path_1.png" 
+				avatar: "preview_image_path_1.png" 
 			},
 			{ 
 				id: 2, label: "John", 
-				path: "preview_image_path_2.png" 
+				avatar: "preview_image_path_2.png" 
 			}
 		]
 	},
@@ -347,12 +348,12 @@ new kanban.Kanban("#root", {
 :::
 
 :::note
-Unless you specify the editor settings via the [**editorShape**](api/config/js_kanban_editorshape_config.md) property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters!
+Unless you specify the editor settings via the [**editorShape**](api/config/js_kanban_editorshape_config.md) property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters. In this case, the default controls and inputs will be displayed in editor only after activating the corresponding fields of cards via the [**cardShape**](api/config/js_kanban_cardshape_config.md) property.
 :::
 
 ## Toolbar
 
-The toolbar of Kanban consists of the search bar and controls for adding *columns* and *rows*. To display the toolbar, you need to initialize it in a separate container using the **kanban.Toolbar** constructor.
+Toolbar of Kanban consists of the search bar and controls for sorting *cards* and adding new *columns* and *rows*. To display Toolbar, you need to initialize it in a separate container using the **kanban.Toolbar()** constructor.
 
 ~~~jsx {13}
 // create Kanban
@@ -370,9 +371,9 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-You can also manage (*hide/show*) the toolbar controls using the **items** array:
+You can also manage (*hide/show/customize*) the Toolbar controls using the **items** array:
 
-~~~jsx {6-10}
+~~~jsx {6-13}
 // create Kanban
 const board = new kanban.Kanban("#root", {...});
 
@@ -380,18 +381,17 @@ new kanban.Toolbar("#toolbar", {
 	api: board.api,
 	items: [
 		"search", // search bar
-		"controls", // controls for adding new columns and rows
+        "spacer", // empty space
+        "sort", // control for sorting cards
+        "addColumn", // control for adding new columns
+        "addRow", // control for adding new rows
 		// custom elements
 	]
 });
 ~~~
 
 :::tip
-To *hide* some of the toolbar controls, remove the "search" or/and "controls" string(s) from the **items** array
-:::
-
-:::info
-Unless you specify the [**rowKey**](api/config/js_kanban_rowkey_config.md) property, the toolbar control for adding rows will be hidden!
+To *hide* some of the Toolbar controls, remove the corresponding string(s) from the **items** array.
 :::
 
 ## Example
