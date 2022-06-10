@@ -57,12 +57,12 @@ Released on Month 00, 2022 // TODO
 
 ### Fixes
 
-- Editing cards when `select: false` (**readonly** config) works incorectrly
-- Dragging several cards works incorectrly
-- The `label: false` and `menu: false` parameters of the `cardShape` property work incorectrly
-- Binding cards to swimlanes via the `rowKey` config works incorectrly
-- Selecting new added cards via the `addCard()` method works incorectrly
+- Binding cards to swimlanes via the `rowKey` config works incorrectly
 - Clicking on card menu opens editor
+- Dragging several cards works incorrectly
+- Editing cards when `select: false` (**readonly** config) works incorrectly
+- Selecting new added cards via the `addCard()` method works incorrectly
+- The `label: false` and `menu: false` parameters of the `cardShape` property work incorrectly
 
 ## Version 1.1.1
 
