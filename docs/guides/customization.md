@@ -6,17 +6,30 @@ description: You can learn about the customization in the documentation of the D
 
 # Customization
 
-Besides the built-in settings you can specify a custom template for the cards, change the toolbar structure and functionality, and apply custom styles to Kanban.
+Besides configuring Kanban, you can customize its appearance and behaviour. The widget allows you to specify a custom template for cards, modify a context menu for cards, columns and rows, change the Toolbar structure and functionality, and apply your css styles to Kanban.
 
 ## Custom cards
 
-To apply a custom template to the cards of Kanban, you need to specify the [cardTemplate](api/config/js_kanban_cardtemplate_config.md) property in the configuration object of Kanban. In this callback you can define the desired styles and logic. See the snippet below:
+To display cards by a custom template, you can use the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property. It is a callback function that allows you to define the desired styles and logic and apply it to Kanban. See the snippet below:
 
 <iframe src="https://snippet.dhtmlx.com/8rhdq81d?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Custom toolbar
+## Custom context menu (TODO)
 
-To change the toolbar structure and functionality, you need to specify the [items](api/config/toolbar_items_config.md) property in the toolbar configuration object. In the array of this property you can define the desired controls and place them in the order you need. See the snippet below:
+To customize a context menu for cards, columns and rows, you can use the corresponding [`cardShape`](api/config/js_kanban_cardshape_config.md), [`columnShape`](api/config/js_kanban_columnshape_config.md) and [`rowShape`](api/config/js_kanban_rowshape_config.md) properties. See the snippet below:
+
+<iframe src="https://snippet.dhtmlx.com/s5r5h4ju?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+
+## Custom toolbar (TODO)
+
+To customize the Toolbar structure and its functionality, you can use the [`items`](api/config/toolbar_items_config.md) property. In the array of this config you can define controls you need, arrange them in the desired order as well as modify their behaviour.
+
+In the snippet below you can see how to customize the following:
+
+- an order of controls arrangement
+- a searchbar and its behaviour
+- a sort control and its behaviour
+- a custom control and its behaviour  
 
 <iframe src="https://snippet.dhtmlx.com/s5r5h4ju?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
