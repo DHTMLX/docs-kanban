@@ -8,6 +8,62 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.2 (Inprogress)
+
+Released on Month 00, 2022 // TODO
+
+### New functionality 
+
+- Adding new cards via a column menu
+- Lazy rendering
+- Scrolling for separate columns
+- Scrolling Kanban to the new created cards, columns and rows (API and UI)
+- Sorting cards (API and UI)
+
+### New API 
+
+- **Events:**
+	[`set-sort`](../../api/events/js_kanban_setsort_event), 
+	[`set-edit`](../../api/events/js_kanban_setedit_event) and 
+	[`scroll`](../../api/events/js_kanban_scroll_event)
+
+- **Methods:**
+	[`setSort()`](../../api/methods/js_kanban_setsort_method), 
+	[`setEdit()`](../../api/methods/js_kanban_setedit_method) and 
+	[`scroll()`](../../api/methods/js_kanban_scroll_method) 
+
+- **Properties:**
+	[`cardHeight`](../../api/config/js_kanban_cardheight_config),
+	[`renderType`](../../api/config/js_kanban_rendertype_config),
+	[`scrollType`](../../api/config/js_kanban_scrolltype_config),
+	[`columnShape`](../../api/config/js_kanban_columnshape_config) and
+	[`rowShape`](../../api/config/js_kanban_rowshape_config)
+
+### Updates
+
+#### Properties
+
+- The [`items`](../../api/config/toolbar_items_config) property of Toolbar is updated
+- The ***menu*** and ***users*** parameters of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property are updated
+- The ***multiselect*** type of the [`editorShape`](../../api/config/js_kanban_editorshape_config) property is updated
+
+#### Methods
+
+- The [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) method is updated
+- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
+- The [`api.getStores()`](../../api/internal/js_kanban_getstores_method) method is updated
+- The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method of Kanban is updated
+- The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar is updated
+
+### Fixes
+
+- Editing cards when `select: false` (**readonly** config) works incorectrly
+- Dragging several cards works incorectrly
+- The `label: false` and `menu: false` parameters of the `cardShape` property work incorectrly
+- Binding cards to swimlanes via the `rowKey` config works incorectrly
+- Selecting new added cards via the `addCard()` method works incorectrly
+- Clicking on card menu opens editor
+
 ## Version 1.1.1
 
 Released on February 28, 2022
