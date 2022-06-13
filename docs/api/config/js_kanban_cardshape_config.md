@@ -17,16 +17,22 @@ cardShape?: {
 	label?: boolean | { show?: boolean },
 	description?: boolean | { show?: boolean },
 	progress?: boolean | { show?: boolean },
-	start_date?: boolean | { show?: boolean },
-	end_date?: boolean | { show?: boolean },
 	attached?: boolean | { show?: boolean },
 	cover?: boolean | { show?: boolean },
+	start_date?: boolean | { 
+		show?: boolean,
+		format?: string 
+	},
+	end_date?: boolean | { 
+		show?: boolean,
+		format?: string
+	},
 	color?: boolean | { 
 		show?: boolean,
 		values?: array  
 	},
 	menu?: boolean | {
-		show?: boolean | ({ card }) => boolean,
+		show?: boolean, // | ({ card }) => boolean,
 		items?: [
 			{
 				id?: string,
@@ -88,20 +94,25 @@ In some cases, you can set the parameter to the **short** or **extended** value.
 
 To configure the card appearance, in the **cardShape** object you can specify the following parameters (fields):
 
-- `label` - (optional) shows/hides a **card label**
-- `description` - (optional) shows/hides a **card description**
-- `progress` - (optional) shows/hides a **card progress bar**
-- `start_date` - (optional) shows/hides a **card start date**
-- `end_date` - (optional) shows/hides a **card end date**
-- `attached` - (optional) shows/hides a **card attachment**
+- `label` - (optional) shows/hides a **label** field
+- `description` - (optional) shows/hides a **description** field
+- `progress` - (optional) shows/hides a **progress** field
+- `attached` - (optional) shows/hides an **attachment** field
 - `cover` - (optional) shows/hides a **card picture**
-- `color` - (optional) an object of parameters of **the top color line** of card
-	- `show` - (optional) shows/hides a **top color line**
+- `start_date` - (optional) an object of parameters of a **start date** field
+	- `show` - (optional) shows/hides a card start date
+	- `format` - (optional) defines format of a card start date. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+- `end_date` - (optional) an object of parameters of an **end date** field
+	- `show` - (optional) shows/hides a card end date
+	- `format` - (optional) defines format of a card end date. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+- `color` - (optional) an object of parameters of a **top color line** of card
+	- `show` - (optional) shows/hides a top color line
 	- `values` - (optional) an array of valid HEX codes
-- `menu` - (optional) an object of parameters of a **card menu**. Here you can specify the following parameters:
+- `menu` - (optional) an object of parameters of a **card context menu**. Here you can specify the following parameters:
 	- `show` - (optional) - enables/disables a card context menu
 
 	:::info
+	TODO (can be deleted soon)
 	You can set the `show` parameter to the *boolean* value, to show or hide menu for all cards:
 	~~~jsx {}
 		// hides menu of all cards
@@ -147,9 +158,9 @@ To configure the card appearance, in the **cardShape** object you can specify th
 	~~~
 	:::
 
-- `users` - (optional) an object with **users** parameters
-	- `show` - (optional) shows/hides the **assigned users** data
-	- `values` - (required) an array of objects with users data. Here you can specify the following fields:
+- `users` - (optional) an object of parameters of a **users** field
+	- `show` - (optional) shows/hides the assigned users
+	- `values` - (required) an array of objects with users data. For each user you can specify the following parameters:
 		- `id` - (required) a user **ID**
 		- `label` - (optional) a user name
 		- `avatar` - (optional) a path to the user avatar
@@ -157,7 +168,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 	:::info
 	By default, the **users** field is disabled (`users: false`). To work with users, you need to set the `show` parameter to `true` and provide the corresponding data via the `values` parameter. Note, that you cannot activate users via the `users: true` expression!
 
-	~~~jsx {3-7}		
+	~~~jsx {3-7}
 	cardShape: {
 		users: {
 			show: true,
@@ -170,13 +181,13 @@ To configure the card appearance, in the **cardShape** object you can specify th
 	~~~
 	:::
 
-- `priority` - (optional) an object with **priorities** parameters
-	- `show` - (optional) shows/hides a **card priority**
-	- `values` - (optional) an array of objects with priorities data. Here you can specify the following fields:
+- `priority` - (optional) an object of parameters of a **priority** field
+	- `show` - (optional) shows/hides a card priority
+	- `values` - (optional) an array of objects with priorities data. For each priority you can specify the following parameters:
 		- `id` - (required) a priority **ID**
 		- `label` - (optional) a priority name
 		- `color` - (required) a valid HEX code
-- `headerFields` - (optional) an array of objects with **custom fields** data. Here you can specify the following parameters:
+- `headerFields` - (optional) an array of objects with the **custom fields** data. Here you can specify the following parameters:
 	- `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
 	- `label` - (optional) a label of the custom field
 	- `css` - (optional) a css class of the custom field
@@ -195,8 +206,8 @@ const defaultPriorities = [
 ];
 
 const defaultColors = ["#65D3B3", "#FFC975", "#58C3FE"];
-// TODO defaultCardMenuItems
-const getCardMenuItems = ({ card, store }) => {
+
+const getDefaultCardMenuItems = ({ card, store }) => {
     const readonly = store.getState();
     if (!readonly?.select && readonly?.edit) {
         return [
@@ -215,7 +226,7 @@ const defaultCardShape = {
 	end_date: false,
 	menu: {
 		show: true,
-		items: getCardMenuItems // TODO defaultCardMenuItems
+		items: getDefaultCardMenuItems
 	},
 	attached: false,
 	cover: false,
@@ -288,7 +299,7 @@ new kanban.Kanban("#root", {
 **Change log:**
 
 - The ***color*** parameter (field) was updated in v1.1
-- The ***menu*** and ***users*** parameters were updated in v1.2
+- The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) were updated in v1.2
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
