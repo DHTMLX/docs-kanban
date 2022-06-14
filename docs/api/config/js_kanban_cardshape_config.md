@@ -149,7 +149,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 		- `avatar` - (optional) a path to the user avatar
 
 	:::info
-	By default, the **users** field is disabled (`users: false`). To work with users, you need to set the `show` parameter to `true` and provide the corresponding data via the `values` parameter. Note, that you cannot activate users via the `users: true` expression!
+	The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding data via the `values` parameter. To assign new users via the editor, you need to set the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) property using a ***multiselect*** type.
 
 	~~~jsx {3-7}
 	cardShape: {

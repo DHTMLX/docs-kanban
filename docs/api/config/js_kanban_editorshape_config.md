@@ -106,6 +106,10 @@ To configure the editor appearance and functionality, you can specify the follow
 	- `label` - (required) an option label 
 	- `avatart` - (optional) a path to the option preview image (for a **"multiselect"** type only)
 
+:::important
+To set a control for assigning users (the ***users*** field of the [**cardShape**](../js_kanban_cardshape_config) property), you need to use the ***multiselect*** type only!
+:::
+
 #### - Parameters for a "color" type
 
 - `values` - (optional) an array with valid HEX codes

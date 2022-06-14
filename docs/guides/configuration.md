@@ -133,7 +133,7 @@ The *editor* of Kanban consists of the fields for managing the cards data. To co
 
 ### Combo, Select and Multiselect types
 
-The editor fields of **combo**, **select**, and **multiselect** types you can set in the following way:
+The editor fields of **combo**, **select**, and **multiselect** types can be set in the following way:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
@@ -154,7 +154,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::info
-For the editor field of **"multiselect"** type you can also specify a path to the preview image via the **path** property:
+For the editor field of **"multiselect"** type you can also specify a path to the preview image via the **avatar** property:
 
 ~~~jsx {3,9,13}
 editorShape: [
@@ -180,7 +180,7 @@ editorShape: [
 
 ### Color type
 
-The editor field of **color** type you can set in the following way:
+The editor field of **color** type can be set in the following way:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
@@ -202,7 +202,7 @@ new kanban.Kanban("#root", {
 
 ### Text and Textarea types
 
-The editor fields of **text** and **textarea** types you can set in the following way:
+The editor fields of **text** and **textarea** types can be set in the following way:
 
 ~~~jsx {3-14}
 new kanban.Kanban("#root", {
@@ -226,7 +226,7 @@ new kanban.Kanban("#root", {
 
 ### Progress type
 
-The editor field of **progress** type you can set in the following way:
+The editor field of **progress** type can be set in the following way:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
@@ -248,7 +248,7 @@ new kanban.Kanban("#root", {
 
 ### Files type
 
-The editor field of **files** type you can set in the following way:
+The editor field of **files** type can be set in the following way:
 
 ~~~jsx {4-15}
 const url = "https://docs.dhtmlx.com/kanban-backend";
@@ -273,7 +273,7 @@ new kanban.Kanban("#root", {
 
 ### Date type
 
-The editor field of **date** type you can set in the following way:
+The editor field of **date** type can be set in the following way:
 
 ~~~jsx {3-7}
 new kanban.Kanban("#root", {
