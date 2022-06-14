@@ -15,7 +15,7 @@ description: You can learn about the columnShape config in the documentation of 
 ~~~jsx {}
 columnShape?: {
 	menu?: {
-		show?: boolean | ({ column }) => boolean,
+		show?: boolean,
 		items?: [
 			{
 				id?: string,
@@ -25,7 +25,7 @@ columnShape?: {
 				onClick?: ({ id, item, column }) => void
 			}, 
 			{...}
-		] | ({ column, columnIndex, store }) => array
+		] | ({ column, columnIndex, store }) => array | boolean
 	}
 };
 ~~~
@@ -36,20 +36,6 @@ To configure the columns appearance, in the **columnShape** object you can speci
 
 - `menu` - (optional) an object of parameters of the columns context menu. Here you can specify the following parameters:
 	- `show` - (optional) - enables/disables a column context menu
-
-	:::info
-	You can set the `show` parameter to the *boolean* value, to show or hide menu for all columns:
-	~~~jsx {}
-		// hides menu of all columns
-		show: false, 
-	~~~
-	You can also set the `show` parameter to a custom function, that takes an object of column data. This function allows showing or hiding menu for a specific column:
-	~~~jsx {}
-		// hides menu of the "Inprogress" column
-		show: ({ column }) => column.id !== "inprogress", 
-	~~~
-	:::
-
 	- `items` - (optional) an array of objects containing parameters of items of the columns context menu. For each item you can specify the following parameters:
 		- `id` - (optional) an ID of the menu item
 		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
@@ -66,10 +52,13 @@ To configure the columns appearance, in the **columnShape** object you can speci
 	- ***columnIndex*** - an index of a current column
 	- ***store*** - an object of *dataStore*
 
-	This function allows customizing menu for a specific column:
+	This function allows customizing menu for any column or hide it for a specific one (by returning *null* or *false*):
 
 	~~~jsx {}
 	items: ({ column, columnIndex, store }) => {
+		if(column.id === "inprogress"){
+			return null;
+		}
 		const items = [
 			{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
 			{
@@ -94,8 +83,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
 ### Default config
 
 ~~~jsx {}
-// TODO defaultColumnMenuItems
-const getColumnMenuItems = ({ column, columnIndex, store }) => [
+const getDefaultColumnMenuItems = ({ column, columnIndex, store }) => [
 	{ id: "add-card", icon: "wxi-plus", label: "Add new card" },
     { id: "set-edit", icon: "wxi-edit", label: "Rename" },
     {
@@ -115,14 +103,14 @@ const getColumnMenuItems = ({ column, columnIndex, store }) => [
 const columnShape = {
 	menu: {
 		show: true,
-		items: getColumnMenuItems // TODO defaultColumnMenuItems
+		items: getDefaultColumnMenuItems
 	}
 };
 ~~~
 
 ### Example
 
-~~~jsx {1-21,27}
+~~~jsx {1-22,28}
 const columnShape = {
 	menu: {
 		show: true,
@@ -143,6 +131,7 @@ const columnShape = {
 				disabled: true
 			}
 		]
+	}
 };
 
 new kanban.Kanban("#root", {

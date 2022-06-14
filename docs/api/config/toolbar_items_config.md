@@ -152,7 +152,7 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Change log:** The parameter was updated in v1.2
+**Change log:** The property was updated in v1.2
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
 

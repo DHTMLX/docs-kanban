@@ -15,7 +15,7 @@ description: You can learn about the rowShape config in the documentation of the
 ~~~jsx {}
 rowShape?: {
 	menu?: {
-		show?: boolean | ({ row }) => boolean,
+		show?: boolean, 
 		items?: [
 			{
 				id?: string,
@@ -25,7 +25,7 @@ rowShape?: {
 				onClick?: ({ id, item, row }) => void
 			}, 
 			{...}
-		] | ({ row, rowIndex, store }) => array
+		] | ({ row, rowIndex, store }) => array | boolean
 	}
 };
 ~~~
@@ -35,21 +35,7 @@ rowShape?: {
 To configure the rows appearance, in the **rowShape** object you can specify the following parameters:
 
 - `menu` - (optional) an object of parameters of the rows context menu. Here you can specify the following parameters:
-	- `show` - (optional) - enables/disables a row context menu
-
-	:::info
-	You can set the `show` parameter to the *boolean* value, to show or hide menu for all rows:
-	~~~jsx {}
-		// hides menu of all rows
-		show: false, 
-	~~~
-	You can also set the `show` parameter to a custom function, that takes an object of row data. This function allows showing or hiding menu for a specific row:
-	~~~jsx {}
-		// hides menu of the "Feature" row
-		show: ({ row }) => row.id !== "feature", 
-	~~~
-	:::
-
+	- `show` - (optional) enables/disables a row context menu
 	- `items` - (optional) an array of objects containing parameters of items of the rows context menu. For each item you can specify the following parameters:
 		- `id` - (optional) an ID of the menu item
 		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
@@ -66,11 +52,13 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 	- ***rowIndex*** - an index of a current row
 	- ***store*** - an object of *dataStore*
 
-	This function allows customizing menu for a specific row:
+	This function allows customizing menu for any row or hide it for a specific one (by returning *null* or *false*):
 
 	~~~jsx {}
 	items: ({ row, rowIndex, store }) => {
 		if(rowIndex == 0){
+			return null;
+		} else {
 			return [
 				{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
 				{
@@ -78,10 +66,7 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 					icon: "wxi-delete",
 					label: "Remove row",
 					onClick: ({ id, item, row }) => board.deleteRow({ id: row.id })
-				}
-			];
-		} else {
-			return [
+				},
 				{
 					id: "move-row:up",
 					icon: "wxi-arrow-up",
@@ -97,8 +82,7 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 ### Default config
 
 ~~~jsx {}
-// TODO defaultRowMenuItems
-const getRowMenuItems = ({ row, rowIndex, store }) => [
+const getDefaultRowMenuItems = ({ row, rowIndex, store }) => [
 	{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
     {
         id: "move-row:up",
@@ -117,7 +101,7 @@ const getRowMenuItems = ({ row, rowIndex, store }) => [
 const rowShape = {
 	menu: {
 		show: true,
-		items: getRowMenuItems // TODO defaultRowMenuItems
+		items: getDefaultRowMenuItems
 	}
 };
 ~~~

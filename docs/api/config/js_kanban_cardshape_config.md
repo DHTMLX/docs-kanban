@@ -32,7 +32,7 @@ cardShape?: {
 		values?: array  
 	},
 	menu?: boolean | {
-		show?: boolean, // | ({ card }) => boolean,
+		show?: boolean, 
 		items?: [
 			{
 				id?: string,
@@ -42,7 +42,7 @@ cardShape?: {
 				onClick?: ({ id, item, card }) => void
 			}, 
 			{...}
-		] | ({ card, store }) => array
+		] | ({ card, store }) => array | boolean
 	},
 	users?: boolean | {
 		show?: boolean,
@@ -110,21 +110,6 @@ To configure the card appearance, in the **cardShape** object you can specify th
 	- `values` - (optional) an array of valid HEX codes
 - `menu` - (optional) an object of parameters of a **card context menu**. Here you can specify the following parameters:
 	- `show` - (optional) - enables/disables a card context menu
-
-	:::info
-	TODO (can be deleted soon)
-	You can set the `show` parameter to the *boolean* value, to show or hide menu for all cards:
-	~~~jsx {}
-		// hides menu of all cards
-		show: false, 
-	~~~
-	You can also set the `show` parameter to a custom function, that takes an object of card data. This function allows showing or hiding menu for a specific card:
-	~~~jsx {}
-		// hides menu of card with the "first" ID
-		show: ({ card }) => card.id !== "first", 
-	~~~
-	:::
-
 	- `items` - (optional) an array of objects containing parameters of items of the cards context menu. For each item you can specify the following parameters:
 		- `id` - (optional) an ID of the menu item
 		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
@@ -140,20 +125,18 @@ To configure the card appearance, in the **cardShape** object you can specify th
 	- ***card*** - a data object of a current card
 	- ***store*** - an object of *dataStore*
 
-	This function allows customizing menu for a specific card:
+	This function allows customizing menu for any card or hide it for a specific one (by returning *null* or *false*):
 
 	~~~jsx {}
 	items: ({ card, store }) => {
 		if(card.id === 1){
+			return false;
+		} else {
 			return [
 				{ id: "set-edit", icon: "wxi-edit", label: "Edit" },
 				{ id: "delete-card", icon: "wxi-delete", label: "Delete" }
 			];
-		} else {
-			return [
-				{ id: "set-edit", icon: "wxi-edit", label: "Edit" }
-			];
-		}
+		} 
 	}
 	~~~
 	:::
