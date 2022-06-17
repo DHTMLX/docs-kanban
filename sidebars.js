@@ -260,6 +260,7 @@ module.exports = {
 				"guides/initialization",
 				"guides/configuration",
 				"guides/customization",
+				"guides/stylization",
 				"guides/localization",
 				"guides/working_with_data",
 				"guides/working_with_server",
