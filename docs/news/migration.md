@@ -6,6 +6,304 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
+## 1.1 -> 1.2 (Inprogress)
+
+### Api
+
+#### Properties
+
+- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property of Kanban was updated in the following way:
+
+    - the ***menu*** parameter
+
+    ~~~jsx {} title="Before v1.2"
+    menu: true,
+    // other parameters
+    ~~~
+
+    ~~~jsx {3-12} title="From v1.2"
+    menu: { // or menu: true
+        show: true,
+        items: ({ card, store }) => {
+            if(card.id === 1){
+                return false;
+            } else {
+                return [
+                    { id: "set-edit", icon: "wxi-edit", label: "Edit" },
+                    { id: "delete-card", icon: "wxi-delete", label: "Delete" }
+                ];
+            } 
+        }
+    },
+    // other parameters
+    ~~~
+
+    - the ***users*** parameter
+
+    ~~~jsx {7} title="Before v1.2"
+    users: {
+        show: true,
+        values: [
+            { 
+                id: 1, 
+                label: "John Smith", 
+                path: "../assets/user.jpg" 
+            },
+        ]
+    },
+    // other parameters
+    ~~~
+
+    ~~~jsx {7} title="From v1.2"
+    users: {
+        show: true,
+        values: [
+            { 
+                id: 1, 
+                label: "John Smith", 
+                avatar: "../assets/user.jpg" 
+            },
+        ]
+    },
+    // other parameters
+    ~~~
+
+    - the ***start_date*** and ***end_date*** parameters 
+
+    ~~~jsx {} title="Before v1.2"
+    start_date: true,
+    end_date: true,
+    // other parameters
+    ~~~
+
+    ~~~jsx {3,7} title="From v1.2"
+    start_date: {
+        show: true,
+        format: "%d.%m.%Y"
+    },
+    end_date: {
+        show: true,
+        format: "%d.%m.%Y"
+    },
+    // other parameters
+    ~~~
+
+- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property of Kanban was updated in the following way:
+
+~~~jsx {8} title="Before v1.2"
+{
+    type: "multiselect", 
+    key: "users", 
+    label: "Users",
+    values: [
+        { 
+            id: 1, label: "Alan", 
+            path: "preview_image_path_1.png" 
+        },
+    ]
+},
+// settings of other fields
+~~~
+
+~~~jsx {8} title="From v1.2"
+{
+    type: "multiselect", 
+    key: "users", 
+    label: "Users",
+    values: [
+        { 
+            id: 1, label: "Alan", 
+            avatar: "preview_image_path_1.png" 
+        },
+    ]
+},
+// settings of other fields
+~~~
+
+- The [`items`](../../api/config/toolbar_items_config) property of Toolbar was updated in the following way:
+
+~~~jsx {} title="Before v1.2"
+items: [
+    "search",
+    "controls"
+]
+~~~
+
+~~~jsx {} title="From v1.2"
+items: [
+    { // or "search",
+        type: "search",
+        options: [
+            {
+                id: "label",
+                label: "By label"
+            },
+            {
+                id: "start_date",
+                label: "By date",
+                searchRule: (card, value, by) => {
+                    const date = card[by];
+                    return date?.toString().includes(value);
+                }
+            }
+        ]
+    },
+    "spacer",
+    { // or "sort",
+        type: "sort",
+        options: [
+            {
+                label: "Sort by label",
+                by: "label",
+                dir: "asc"
+            },
+            {
+                label: "Sort by description",
+                by: "description",
+                dir: "desc"
+            }
+        ]
+    }, 
+    "addColumn",
+    "addRow"
+]
+~~~
+
+#### Methods
+
+- The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method of Kanban and [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar were updated:
+
+~~~jsx {} title="Before v1.2"
+setLocale(kanban.en); // reset to default locale
+~~~
+
+~~~jsx {} title="From v1.2"
+setLocale(null); // reset to default locale
+~~~
+
+- The [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) method of Kanban was updated:
+
+~~~jsx {} title="Before v1.2"
+api.getReactiveState();
+// the method returns an object with the following properties
+/*{
+    dragItemId: {
+        subscribe: any,
+        update: any,
+        set: any
+    },
+    before: {...},
+    overAreaId: {...},
+    overAreaMeta: {...},
+    dropAreaItemsCoords: {...},
+    dropAreasCoords: {...},
+    dragItemsCoords: {...},
+    selected: {...}
+}*/
+~~~
+
+~~~jsx {} title="From v1.2"
+api.getReactiveState();
+// the method returns an object with the following properties
+/*{
+    areasMeta: {
+        subscribe: any,
+        update: any,
+        set: any
+    },
+    before: {...}, 
+    cardShape: {...},
+    cards: {...},
+    cardsMap: {...},
+    cardsMeta: {...},
+    columnKey: {...},
+    columns: {...},
+    dragItemId: {...}, 
+    dragItemsCoords: {...}, 
+    dropAreaItemsCoords: {...}, 
+    dropAreasCoords: {...}, 
+    edit: {...},
+    editorShape: {...},
+    fromAreaMeta: {...},
+    overAreaId: {...}, 
+    overAreaMeta: {...},
+    readonly: {...},
+    rowKey: {...},
+    rows: {...},
+    scroll: {...},
+    search: {...},
+    selected: {...}, 
+    sort: {...}
+}*/
+~~~
+
+- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method of Kanban was updated:
+
+~~~jsx {} title="Before v1.2"
+api.getState();
+// the method returns an object with the following properties
+/*{
+    dragItemId: string | number,
+    before: string | number,
+    overAreaId: string | number,
+    overAreaMeta: object,
+    dropAreaItemsCoords: array,
+    dropAreasCoords: array,
+    dragItemsCoords: array,
+    selected: array
+}*/
+~~~
+
+~~~jsx {} title="From v1.2"
+api.getState();
+// the method returns an object with the following properties
+/*{
+    areasMeta: object, 
+    before: string | number, 
+    cardShape: object,
+    cards: array,
+    cardsMap: object,
+    cardsMeta: object,
+    columnKey: string,
+    columns: array,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
+    dropAreaItemsCoords: array, 
+    dropAreasCoords: array, 
+    edit: object,
+    editorShape: array,
+    fromAreaMeta: object,
+    overAreaId: string | number, 
+    overAreaMeta: object,
+    readonly: object,
+    rowKey: string,
+    rows: array,
+    scroll: object,
+    search: object,
+    selected: array, 
+    sort: object
+}*/
+~~~
+
+- The [`api.getStores()`](../../api/internal/js_kanban_getstores_method) method of Kanban was updated:
+
+~~~jsx {} title="Before v1.2"
+api.getStores();
+// the method returns an object with the following stores
+/*{
+    state: StateStore, // ( object )
+    data: DataStore // ( object )
+}*/
+~~~
+
+~~~jsx {} title="From v1.2"
+api.getStores();
+// the method returns an object with the following properties
+/*{
+    state: StateStore, // ( object )
+}*/
+~~~
+
 ## 1.0 -> 1.1
 
 ### Api
