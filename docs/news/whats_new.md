@@ -20,31 +20,31 @@ Released on Month 00, 2022 // TODO
 - Scrolling Kanban to the new created cards, columns and rows (API and UI)
 - Sorting cards (API and UI)
 
-### New API 
+### New API
 
 - **Events:**
-	[`set-sort`](../../api/events/js_kanban_setsort_event), 
-	[`set-edit`](../../api/events/js_kanban_setedit_event) and 
 	[`scroll`](../../api/events/js_kanban_scroll_event)
+	[`set-edit`](../../api/events/js_kanban_setedit_event) and 
+	[`set-sort`](../../api/events/js_kanban_setsort_event), 
 
 - **Methods:**
-	[`setSort()`](../../api/methods/js_kanban_setsort_method), 
-	[`setEdit()`](../../api/methods/js_kanban_setedit_method) and 
 	[`scroll()`](../../api/methods/js_kanban_scroll_method) 
+	[`setEdit()`](../../api/methods/js_kanban_setedit_method) and 
+	[`setSort()`](../../api/methods/js_kanban_setsort_method), 
 
 - **Properties:**
 	[`cardHeight`](../../api/config/js_kanban_cardheight_config),
-	[`renderType`](../../api/config/js_kanban_rendertype_config),
-	[`scrollType`](../../api/config/js_kanban_scrolltype_config),
 	[`columnShape`](../../api/config/js_kanban_columnshape_config) and
+	[`renderType`](../../api/config/js_kanban_rendertype_config),
 	[`rowShape`](../../api/config/js_kanban_rowshape_config)
+	[`scrollType`](../../api/config/js_kanban_scrolltype_config),
 
 ### Updates
 
 #### Properties
 
 - The [`items`](../../api/config/toolbar_items_config) property of Toolbar is updated
-- The ***menu*** and ***users*** parameters of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property are updated
+- The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property are updated
 - The ***multiselect*** type of the [`editorShape`](../../api/config/js_kanban_editorshape_config) property is updated
 
 #### Methods
@@ -63,6 +63,7 @@ Released on Month 00, 2022 // TODO
 - Editing cards when `select: false` (**readonly** config) works incorrectly
 - Selecting new added cards via the `addCard()` method works incorrectly
 - The `label: false` and `menu: false` parameters of the `cardShape` property work incorrectly
+- Prefixes of CSS classes
 
 ## Version 1.1.1
 
