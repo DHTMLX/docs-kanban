@@ -20,7 +20,7 @@ You can configure the *Kanban* appearance and functionality via the correspondin
 
 ## Cards
 
-The board of Kanban consists of the *cards* distributed into *columns* and *rows*. You can configure the cards appearance using the [**cardShape**](api/config/js_kanban_cardshape_config.md) configuration property. There are several predefined fields you can include (or exclude) into the card template, namely:
+The board of Kanban consists of the *cards* distributed into *columns* and *rows*. You can configure the cards appearance using the [`cardShape`](api/config/js_kanban_cardshape_config.md) configuration property. There are several predefined fields you can include (or exclude) into the card template, namely:
 
 - a card label via the `label: boolean` config
 - a card description via the `description: boolean` config
@@ -117,12 +117,12 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-Unless you specify the card settings via the [**cardShape**](api/config/js_kanban_cardshape_config.md) property, the widget will apply a [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) set of parameters!
+Unless you specify the card settings via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property, the widget will apply a [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) set of parameters!
 :::
 
 ## Editor
 
-The *editor* of Kanban consists of the fields for managing the cards data. To configure the editor fields (controles), you can use the [editorShape](api/config/js_kanban_editorshape_config.md) property. You can use the following types of the editor fields:
+The *editor* of Kanban consists of the fields for managing the cards data. To configure the editor fields (controls), you can use the [`editorShape`](api/config/js_kanban_editorshape_config.md) property. You can use the following types of the editor fields:
 
 - [**combo**, **select**, and **multiselect**](#combo-select-and-multiselect-types)
 - [**color**](#color-type)
@@ -291,7 +291,7 @@ new kanban.Kanban("#root", {
 ### Linking editor fields to card fields
 
 :::info
-To link the editor field to the corresponding card field, you need to provide special **key** in the object of [**editorShape**](api/config/js_kanban_editorshape_config.md) property (`key: "editor_field_key"`). The value of this key needs to be set to *true* in the [**cardShape**](api/config/js_kanban_cardshape_config.md) property (for built-in card fields) or specified in the **headerFields** array (for custom card fields). You can provide the initial data of any field via this key as well.
+To link the editor field to the corresponding card field, you need to provide special **key** in the object of [`editorShape`](api/config/js_kanban_editorshape_config.md) property (`key: "editor_field_key"`). The value of this key needs to be set to *true* in the [`cardShape`](api/config/js_kanban_cardshape_config.md) property (for built-in card fields) or specified in the **headerFields** array (for custom card fields). You can provide the initial data of any field via this key as well.
 
 ~~~jsx {5,13,22,25,33-34,38-39,45-47}
 // editor settings
@@ -348,7 +348,7 @@ new kanban.Kanban("#root", {
 :::
 
 :::note
-Unless you specify the editor settings via the [**editorShape**](api/config/js_kanban_editorshape_config.md) property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters. In this case, the default controls and inputs will be displayed in editor only after activating the corresponding fields of cards via the [**cardShape**](api/config/js_kanban_cardshape_config.md) property.
+Unless you specify the editor settings via the [`editorShape`](api/config/js_kanban_editorshape_config.md) property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters. In this case, the default controls and inputs will be displayed in editor only after activating the corresponding fields of cards via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property.
 :::
 
 ## Toolbar
