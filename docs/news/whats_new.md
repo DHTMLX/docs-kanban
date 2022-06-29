@@ -8,9 +8,9 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
-## Version 1.2 (Inprogress)
+## Version 1.2
 
-Released on Month 00, 2022 // TODO
+Released on June 29, 2022
 
 ### New functionality 
 
@@ -23,21 +23,21 @@ Released on Month 00, 2022 // TODO
 ### New API
 
 - **Events:**
-	[`scroll`](../../api/events/js_kanban_scroll_event)
-	[`set-edit`](../../api/events/js_kanban_setedit_event) and 
-	[`set-sort`](../../api/events/js_kanban_setsort_event), 
+	[`scroll`](../../api/events/js_kanban_scroll_event),
+	[`set-edit`](../../api/events/js_kanban_setedit_event), and
+	[`set-sort`](../../api/events/js_kanban_setsort_event)
 
 - **Methods:**
-	[`scroll()`](../../api/methods/js_kanban_scroll_method) 
-	[`setEdit()`](../../api/methods/js_kanban_setedit_method) and 
-	[`setSort()`](../../api/methods/js_kanban_setsort_method), 
+	[`scroll()`](../../api/methods/js_kanban_scroll_method),
+	[`setEdit()`](../../api/methods/js_kanban_setedit_method), and 
+	[`setSort()`](../../api/methods/js_kanban_setsort_method)
 
 - **Properties:**
 	[`cardHeight`](../../api/config/js_kanban_cardheight_config),
-	[`columnShape`](../../api/config/js_kanban_columnshape_config) and
-	[`renderType`](../../api/config/js_kanban_rendertype_config),
-	[`rowShape`](../../api/config/js_kanban_rowshape_config)
-	[`scrollType`](../../api/config/js_kanban_scrolltype_config),
+	[`columnShape`](../../api/config/js_kanban_columnshape_config),
+	[`rowShape`](../../api/config/js_kanban_rowshape_config), 
+	[`renderType`](../../api/config/js_kanban_rendertype_config), and
+	[`scrollType`](../../api/config/js_kanban_scrolltype_config)
 
 ### Updates
 
@@ -55,6 +55,11 @@ Released on Month 00, 2022 // TODO
 - The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method of Kanban is updated
 - The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar is updated
 
+#### Common
+
+- Prefixes of CSS classes (*see the [Stylization](./guides/stylization.md) section*)
+- Locale structure (*see the [Localization](./guides/localization.md) section*)
+
 ### Fixes
 
 - Binding cards to swimlanes via the `rowKey` config works incorrectly
@@ -63,7 +68,6 @@ Released on Month 00, 2022 // TODO
 - Editing cards when `select: false` (**readonly** config) works incorrectly
 - Selecting new added cards via the `addCard()` method works incorrectly
 - The `label: false` and `menu: false` parameters of the `cardShape` property work incorrectly
-- Prefixes of CSS classes
 
 ## Version 1.1.1
 
