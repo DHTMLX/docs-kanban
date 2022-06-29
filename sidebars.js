@@ -262,6 +262,7 @@ module.exports = {
 				"guides/customization",
 				"guides/stylization",
 				"guides/localization",
+				"guides/integration",
 				"guides/working_with_data",
 				"guides/working_with_server",
 				"guides/typescript_support"
