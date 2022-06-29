@@ -14,10 +14,11 @@ In this section you can find out basic principles of work with Kanban
 
 | Topic                                         | Description                                              |
 | --------------------------------------------- | ---------------------------------------------------------|
-| [](guides/initialization.md)                  | Learn how to initialize Kanban ([Example](https://snippet.dhtmlx.com/gb50vyip?mode=wide&text=kanban))                           |
+| [](guides/initialization.md)                  | Learn how to initialize Kanban ([Example](https://snippet.dhtmlx.com/gb50vyip?mode=wide&text=kanban))|
 | [](guides/configuration.md)                   | Learn how to configure Kanban                            |
 | [](guides/customization.md)                   | Learn how to customize Kanban                            |
-| [](guides/localization.md)                    | Learn how to localize Kanban ([Example](https://snippet.dhtmlx.com/hrblf1mm?mode=wide&text=kanban))                             |
+| [](guides/stylization.md)                     | Learn how to stylize Kanban                              |
+| [](guides/localization.md)                    | Learn how to localize Kanban ([Example](https://snippet.dhtmlx.com/hrblf1mm?mode=wide&text=kanban))|
 
 ## API reference
 
@@ -25,12 +26,14 @@ In this section you can find out corresponding references of Kanban API
 
 | Topic                                                 | Description                                              |
 | ----------------------------------------------------- | ---------------------------------------------------------|
-| [Event Bus methods](api/overview/internal_eventbus_overview.md)| Learn how to work with Event Bus methods        |
 | [Kanban events](api/overview/events_overview.md)      | Learn how to work with Kanban events                     |
 | [Kanban methods](api/overview/methods_overview.md)    | Learn how to work with Kanban methods                    |
 | [Kanban properties](api/overview/properties_overview.md)| Learn how to work with Kanban properties               |
+| [Event Bus methods](api/overview/internal_eventbus_overview.md)| Learn how to work with Event Bus methods        |
 | [RestDataProvider methods](api/overview/internal_rest_overview.md)| Learn how to work with RestDataProvider methods|
 | [State methods](api/overview/internal_state_overview.md)| Learn how to work with State methods                   |
+| [Toolbar methods](api/overview/toolbar_methods_overview.md)| Learn how to work with Toolbar methods              |
+| [Toolbar properties](api/overview/toolbar_properties_overview.md)| Learn how to work with Toolbar properties     |
 
 ## How to work with cards
 
@@ -121,10 +124,10 @@ In these sections you can find out how to perform operations with rows and work 
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
 | [Adding new rows](api/methods/js_kanban_addrow_method.md)       | Learn how to add new rows (swimlanes)               |
-| [Configuring a rows menu](api/config/js_kanban_rowshape_config.md)| Learn how to configure a rows context menu        |
+| [Configuring a rows menu](api/config/js_kanban_rowshape_config.md)| Learn how to configure a rows (swimlanes) context menu        |
 | [Deleting rows](api/methods/js_kanban_deleterow_method.md)      | Learn how to delete rows (swimlanes)                |
 | [Moving rows](api/methods/js_kanban_moverow_method.md)          | Learn how to move rows (swimlanes)                  |
-| [Scrolling to the desired row](api/methods/js_kanban_scroll_method.md)| Learn how to scroll Kanban to the desired row |
+| [Scrolling to the desired row](api/methods/js_kanban_scroll_method.md)| Learn how to scroll Kanban to the desired row (swimlane)|
 
 ### Working with row (swimlane) data
 
@@ -163,14 +166,15 @@ In these sections you can find out how to perform operations with rows and work 
 | [Getting StateStore properties](api/internal/js_kanban_getstate_method.md)| Learn how to get an object of the StateStore properties |
 | [Getting StateStore reactive properties](api/internal/js_kanban_getreactivestate_method.md)| Learn how to get an object of the StateStore reactive properties |
 
-## How to work with Kanban Toolbar
+## How to work with Toolbar
 
 | Topic                                                       | Description                                           |
 | ----------------------------------------------------------- | ------------------------------------------------------|
 | [Configuring a searchbar on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a searchbar on Toolbar |
 | [Configuring a sort control on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a sort control on Toolbar |
 | [Configuring Toolbar controls](api/config/toolbar_items_config.md)| Learn how to configure, customize and reorder the Toolbar contols ([Example](https://snippet.dhtmlx.com/s5r5h4ju?text=kanban)) |
-| [Including Kanban API in Toolbar](api/config/toolbar_api_config.md) | Learn how to include and use Kanban API in the Toolbar |
+| [Including Kanban API in Toolbar](api/config/toolbar_api_config.md) | Learn how to include and use Kanban API in Toolbar |
+| [Localizing Toolbar](api/config/toolbar_locale_config.md) | Learn how to localize Toolbar |
 
 ## How to work with TypeScript
 

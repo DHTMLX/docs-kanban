@@ -7,19 +7,19 @@ description: You can have an overview of DHTMLX JavaScript Kanban library in the
 
 # DHTMLX Kanban overview
 
-JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool can work with any number of cards. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page.
+JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool can work with any number of cards, columns and swimlanes. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page.
 
 ## Kanban structure­
 
 ### Toolbar
 
-The **Toolbar** of Kanban is a separate part of the interface. It includes a ***search bar*** for searching the needed cards and ***special controls*** for adding new columns and rows. You can change the toolbar structure by adding custom elements or changing the order of the built-in controls. Read more in the [Configuration](./guides/configuration#toolbar) section.
+**Toolbar** of Kanban is a separate part of the interface. It includes a search bar for *searching* cards, a control for *sorting* cards by the specified parameters and controls for *adding new columns and rows*. You can flexibly manage the searching and sorting logic as well as change the Toolbar structure by adding custom elements or changing the order of the built-in ones. Read more in the [Configuration](./guides/configuration#toolbar) section.
 
 ![Kanban Toolbar](assets/js_kanban_toolbar.png)
 
 ### Board
 
-The **Board** is the main part of Kanban. It consists of the ***cards*** distributed into *columns* and *rows*. You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](./guides/configuration#cards) section.
+The **Board** is main part of Kanban. It consists of the cards distributed into columns and rows (swimlanes). You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](./guides/configuration#cards) section.
 
 On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
 
@@ -28,7 +28,7 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
 - move cards by dragging them into desired place (row and column)
 - move columns and rows using a context menu (a 3 dots icon)
 - rename columns and rows by double clicking on the corresponding labels or using a context menu (a 3 dots icon)
-- display a card editor by clicking on the needed card
+- display a card editor by clicking on the card
 - collapse/uncollapse rows by clicking on the arrow icon on the left of the row label
 - collapse/uncollapse columns by clicking on the arrow icon on the left of the column label
 - select multiple cards using the following shortcuts:

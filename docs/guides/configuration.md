@@ -353,7 +353,7 @@ Unless you specify the editor settings via the [`editorShape`](api/config/js_kan
 
 ## Toolbar
 
-Toolbar of Kanban consists of the search bar and controls for sorting *cards* and adding new *columns* and *rows*. To display Toolbar, you need to initialize it in a separate container using the **kanban.Toolbar()** constructor.
+**Toolbar** of Kanban consists of the searchbar for *searching cards* and controls for *sorting cards* and *adding new columns and rows*. To display Toolbar, you need to initialize it in a separate container using the **kanban.Toolbar()** constructor.
 
 ~~~jsx {13}
 // create Kanban
@@ -371,7 +371,7 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-You can also manage (*hide/show/customize*) the Toolbar controls using the **items** array:
+You can manage (*hide/show/customize*) the Toolbar controls using the **items** property:
 
 ~~~jsx {6-13}
 // create Kanban
@@ -391,7 +391,7 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 :::tip
-To *hide* some of the Toolbar controls, remove the corresponding string(s) from the **items** array.
+To hide some of the Toolbar controls, remove the corresponding string(s) from the **items** array.
 :::
 
 ## Example

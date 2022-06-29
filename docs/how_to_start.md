@@ -46,7 +46,7 @@ Now you are ready to add Kanban to the page. First, let's create the DIV contain
 The Toolbar is an optional part of the Kanban interface. To create Kanban without Toolbar, you can specify only one DIV container and initialize the widget via the **kanban.Kanban** constructor  
 :::
 
-As parameters, the constructors take the HTML containers where the Kanban and Toolbar will be placed into and the corresponding configuration objects.
+As parameters, constructors take the IDs of HTML containers where the Kanban and Toolbar will be placed into, as well as corresponding configuration objects.
 
 ~~~html {9-10,13-15,17-19} title="index.html"
 <!DOCTYPE html>
