@@ -89,17 +89,28 @@ const en = {
 
 ## Custom locale
 
-To apply a new locale you need to:
+To apply a custom locale you need to:
 
 - create a custom locale (or modify the default one) and provide translations for all text labels (it can be any language you need)
-:::info
-**TODO** - descride custom locales from github repo
-:::
+
 - apply the new locale to **Kanabn** via its [`locale`](api/config/js_kanban_locale_config.md) property or use the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method
 - apply the new locale to **Toolbar** via its [`locale`](api/config/toolbar_locale_config.md) property or use the [`setLocale()`](api/methods/toolbar_setlocale_method.md) method
 
+:::info
+Starting from v1.2 Kanban doesn't export built-in locales. But you can find more locales on the corresponding [**github page**](https://github.com/web-widgets/wx-kanban-locales). It is also possible to install the desired locale via *npm* and apply it in the following way:
+~~~js
+import { de } from "@xbs/wx-kanban-locales"
+import { de as coreDe } from "@xbs/wx-core-locales"
+
+new kanban.Kanban({
+	// other properties
+	locale: { ...coreDe, ...de },
+});
+~~~
+:::
+
 ## Example
 
-In this snippet you can see how to switch through the *EN*, *RU* and *CN* locales:
+In this snippet you can see how to switch through the several locales:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
