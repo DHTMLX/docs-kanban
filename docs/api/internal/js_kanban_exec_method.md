@@ -41,3 +41,5 @@ const board = new kanban.Kanban("#root", {
 // select the card with the 1 ID
 board.api.exec("select-card", { id: 1 });
 ~~~
+
+**Related sample:** [Kanban. Preserve sorting](https://snippet.dhtmlx.com/74nyuv14?text=#kanban)

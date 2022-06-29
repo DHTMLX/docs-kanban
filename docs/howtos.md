@@ -70,11 +70,11 @@ In these sections you can find out how to perform operations with cards, work wi
 | [Binding cards into columns](api/config/js_kanban_columnkey_config.md) | Learn how to bind cards into columns      |
 | [Binding cards into rows](api/config/js_kanban_rowkey_config.md) | Learn how to bind cards into rows               |
 | [Configuring a card appearance](api/config/js_kanban_cardshape_config.md)| Learn how to configure a card appearance|
-| [Configuring a cards menu](api/config/js_kanban_cardshape_config.md)| Learn how to configure a cards context menu  |
+| [Configuring a cards menu](api/config/js_kanban_cardshape_config.md)| Learn how to configure a cards context menu  ([Example](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))|
 | [Customizing a card appearance](api/config/js_kanban_cardtemplate_config.md)| Learn how to customize a card appearance using templates ([Example](https://snippet.dhtmlx.com/8rhdq81d?text=kanban))|
 | [Dragging cards](api/config/js_kanban_readonly_config.md)    | Learn how to enable/disable an ability to drag-n-drop cards|
 | [Editing cards](api/config/js_kanban_readonly_config.md)     | Learn how to enable/disable an ability to edit cards|
-| [Lazy rendering](api/config/js_kanban_rendertype_config.md)| Learn how to enable/disable **lazy (dynamic) rendering** of a big number of cards|
+| [Lazy rendering](api/config/js_kanban_rendertype_config.md)| Learn how to enable/disable **lazy rendering** of a big number of cards ([Example](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))|
 | [Limiting cards](api/config/js_kanban_columns_config.md)     | Learn how to limit cards for columns and swimlanes (**WIP validation**) ([Example](https://snippet.dhtmlx.com/2blo6hx8?text=kanban))|
 | [Selecting cards](api/config/js_kanban_readonly_config.md)   | Learn how to enable/disable an ability to select cards|
 | [Setting a fix height of cards](api/config/js_kanban_cardheight_config.md)| Learn how to set a fix height of cards   |
@@ -99,11 +99,11 @@ In these sections you can find out how to perform operations with colums and wor
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
 | [Adding new columns](api/methods/js_kanban_addcolumn_method.md) | Learn how to add new columns ([Example](https://snippet.dhtmlx.com/61crsls3?text=kanban))|
-| [Configuring a columns menu](api/config/js_kanban_columnshape_config.md)| Learn how to configure a columns context menu |
+| [Configuring a columns menu](api/config/js_kanban_columnshape_config.md)| Learn how to configure a columns context menu ([Example](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))|
 | [Deleting columns](api/methods/js_kanban_deletecolumn_method.md)| Learn how to delete columns                         |
 | [Moving columns](api/methods/js_kanban_movecolumn_method.md)    | Learn how to move columns                           |
 | [Scrolling to the desired columns](api/methods/js_kanban_scroll_method.md)| Learn how to scroll Kanban to the desired column |
-| [Separate scrolling for columns](api/config/js_kanban_scrolltype_config.md)| Learn how to set a separate scrolling for each column |
+| [Separate scrolling for columns](api/config/js_kanban_scrolltype_config.md)| Learn how to set a separate scrolling for each column ([Example](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))|
 
 ### Working with column data
 
@@ -124,7 +124,7 @@ In these sections you can find out how to perform operations with rows and work 
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
 | [Adding new rows](api/methods/js_kanban_addrow_method.md)       | Learn how to add new rows (swimlanes)               |
-| [Configuring a rows menu](api/config/js_kanban_rowshape_config.md)| Learn how to configure a rows (swimlanes) context menu        |
+| [Configuring a rows menu](api/config/js_kanban_rowshape_config.md)| Learn how to configure a rows (swimlanes) context menu ([Example](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))|
 | [Deleting rows](api/methods/js_kanban_deleterow_method.md)      | Learn how to delete rows (swimlanes)                |
 | [Moving rows](api/methods/js_kanban_moverow_method.md)          | Learn how to move rows (swimlanes)                  |
 | [Scrolling to the desired row](api/methods/js_kanban_scroll_method.md)| Learn how to scroll Kanban to the desired row (swimlane)|
@@ -170,8 +170,8 @@ In these sections you can find out how to perform operations with rows and work 
 
 | Topic                                                       | Description                                           |
 | ----------------------------------------------------------- | ------------------------------------------------------|
-| [Configuring a searchbar on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a searchbar on Toolbar |
-| [Configuring a sort control on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a sort control on Toolbar |
+| [Configuring a searchbar on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a searchbar on Toolbar ([Example](https://snippet.dhtmlx.com/s5r5h4ju?text=kanban))|
+| [Configuring a sort control on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a sort control on Toolbar ([Example](https://snippet.dhtmlx.com/s5r5h4ju?text=kanban))|
 | [Configuring Toolbar controls](api/config/toolbar_items_config.md)| Learn how to configure, customize and reorder the Toolbar contols ([Example](https://snippet.dhtmlx.com/s5r5h4ju?text=kanban)) |
 | [Including Kanban API in Toolbar](api/config/toolbar_api_config.md) | Learn how to include and use Kanban API in Toolbar |
 | [Localizing Toolbar](api/config/toolbar_locale_config.md) | Learn how to localize Toolbar |

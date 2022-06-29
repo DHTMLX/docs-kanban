@@ -14,11 +14,11 @@ Released on June 29, 2022
 
 ### New functionality 
 
-- Adding new cards via a column menu
-- Lazy rendering
-- Scrolling for separate columns
-- Scrolling Kanban to the new created cards, columns and rows (API and UI)
-- Sorting cards (API and UI)
+- Adding new cards via a column menu (see the [**example**](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))
+- Lazy rendering (see the [**example**](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))
+- Scrolling for separate columns (see the [**example**](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))
+- Scrolling Kanban to the new created cards, columns and rows (API and UI) see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?text=#kanban)
+- Sorting cards (API and UI) see the ([**example**](https://snippet.dhtmlx.com/74nyuv14?text=#kanban))
 
 ### New API
 

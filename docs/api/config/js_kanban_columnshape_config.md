@@ -146,3 +146,5 @@ new kanban.Kanban("#root", {
 **Change log:** The property was added in v1.2
 
 **Related articles:** [Configuration](../../../guides/configuration)
+
+**Related sample:** [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban)
