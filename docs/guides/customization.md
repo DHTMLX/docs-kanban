@@ -6,7 +6,7 @@ description: You can learn about the customization in the documentation of the D
 
 # Customization
 
-Besides configuring Kanban, you can customize its appearance and behaviour. The widget allows you to specify a custom template for cards, modify a context menu for cards, columns and rows, change the Toolbar structure and functionality, and apply your css styles to Kanban.
+Besides configuring Kanban, you can customize its appearance and behaviour. The widget allows you to specify a custom template for cards, modify a context menu for cards, columns and rows, change the Toolbar structure and functionality, and apply custom css styles to Kanban.
 
 ## Custom cards
 
@@ -14,13 +14,13 @@ To display cards by a custom template, you can use the [`cardTemplate`](api/conf
 
 <iframe src="https://snippet.dhtmlx.com/8rhdq81d?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Custom context menu (TODO заменить ссылку на сниппет)
+## Custom context menu
 
 To customize a context menu for cards, columns and rows, you can use the corresponding [`cardShape`](api/config/js_kanban_cardshape_config.md), [`columnShape`](api/config/js_kanban_columnshape_config.md) and [`rowShape`](api/config/js_kanban_rowshape_config.md) properties. See the snippet below:
 
-<iframe src="https://snippet.dhtmlx.com/s5r5h4ju?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/8eo65gr5?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Custom toolbar (TODO заменить ссылку на сниппет)
+## Custom toolbar
 
 To customize the Toolbar structure and its functionality, you can use the [`items`](api/config/toolbar_items_config.md) property. In the array of this config you can define controls you need, arrange them in the desired order as well as modify their behaviour.
 
