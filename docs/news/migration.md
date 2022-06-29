@@ -6,7 +6,7 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
-## 1.1 -> 1.2 (Inprogress)
+## 1.1 -> 1.2
 
 ### Api
 
@@ -18,11 +18,15 @@ description: You can learn about the Migration to Newer Versions in the document
 
     ~~~jsx {} title="Before v1.2"
     menu: true,
+    //or
+    menu: { show: true }
     // other parameters
     ~~~
 
-    ~~~jsx {3-12} title="From v1.2"
-    menu: { // or menu: true
+    ~~~jsx {5-14} title="From v1.2"
+    menu: true,
+    // or
+    menu: { 
         show: true,
         items: ({ card, store }) => {
             if(card.id === 1){
@@ -303,6 +307,163 @@ api.getStores();
     state: StateStore, // ( object )
 }*/
 ~~~
+
+### Localization
+
+<details>
+<summary>Before v1.2</summary>
+
+~~~jsx {}
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const months = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December"
+];
+const monthsShort = [
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
+	"May",
+	"Jun",
+	"Jul",
+	"Aug",
+	"Sep",
+	"Oct",
+	"Nov",
+	"Dec"
+];
+const wx = {
+	Today: "Today",
+	Clear: "Clear",
+	Close: "Close"
+};
+const en = {
+	lang: "en",
+	__dates: {
+		months,
+		monthsShort,
+		days
+	},
+	wx,
+	kanban: {
+		Save: "Save",
+		Close: "Close",
+		Delete: "Delete",
+		Name: "Name",
+		Description: "Description",
+		Type: "Type",
+		"Start date": "Start date",
+		"End date": "End date",
+		Result: "Result",
+		"No results": "No results",
+		Search: "Search",
+		"Search in": "Search in",
+		"Add new row": "Add new row",
+		"Add new column": "Add new column",
+		"Add new card": "Add new card",
+		"Edit card": "Edit card",
+		Edit: "Edit",
+		Everywhere: "Everywhere",
+		Label: "Label",
+		Status: "Status",
+		Color: "Color",
+		Date: "Date",
+		Untitled: "Untitled",
+		Rename: "Rename"
+	}
+};
+~~~
+</details>
+
+<details>
+<summary>From v1.2</summary>
+
+~~~jsx {}
+const en = {
+    kanban: { // translations of the Kanabn labels
+        "Save": "Save",
+        "Close": "Close",
+        "Delete": "Delete",
+        "Name": "Name",
+        "Description": "Description",
+        "Type": "Type",
+        "Start date": "Start date",
+        "End date": "End date",
+        "Result": "Result",
+        "No results": "No results",
+        "Search": "Search",
+        "Search in": "Search in",
+        "Add new row": "Add new row",
+        "Add new column": "Add new column",
+        "Add new card": "Add new card",
+        "Edit card": "Edit card",
+        "Edit": "Edit",
+        "Everywhere": "Everywhere",
+        "Label": "Label",
+        "Status": "Status",
+        "Color": "Color",
+        "Date": "Date",
+        "Untitled": "Untitled",
+        "Rename": "Rename",
+        "Move up": "Move up",
+        "Move down": "Move down",
+        "Move left": "Move left",
+        "Move right": "Move right",
+        "Sort": "Sort",
+        "Label (a-z)": "Label (a-z)",
+        "Label (z-a)": "Label (z-a)",
+        "Description (a-z)": "Description (a-z)",
+        "Description (z-a)": "Description (z-a)"
+    },
+    calendar: { // translations and settings of the calendar
+        monthFull: [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August", 
+            "September", "October", "November", "December"
+        ],
+        monthShort: [
+            "Jan", "Feb", "Mar", "Apr",
+            "May", "Jun", "Jul", "Aug",
+            "Sep", "Oct", "Nov", "Dec"
+        ],
+        dayFull: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ],
+        dayShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        hours: "Hours",
+        minutes: "Minutes",
+        done: "Done",
+        clear: "Clear",
+        today: "Today",
+        am: ["am", "AM"],
+        pm: ["pm", "PM"],
+        weekStart: 7,
+        timeFormat: 24
+    },
+    core: { // translations of the core elements
+        ok: "OK",
+        cancel: "Cancel"
+    }
+};
+~~~
+</details>
 
 ## 1.0 -> 1.1
 
