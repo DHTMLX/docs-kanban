@@ -12,6 +12,8 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 Released on June 29, 2022
 
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-2/)
+
 ### New functionality 
 
 - Adding new cards via a column menu (see the [**example**](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))
@@ -72,6 +74,9 @@ Released on June 29, 2022
 ## Version 1.1.1
 
 Released on February 28, 2022
+
+[Review of release on the blog](https://dhtmlx.com/blog/maintenance-release-kanban-1-1-1/)
+
 ### Fixes
 
 - Custom editor field doesn't work without defining it in a cardShape config
@@ -80,6 +85,8 @@ Released on February 28, 2022
 ## Version 1.1
 
 Released on February 15, 2022
+
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-1-wip-validation-new-operations-columns-rows-typescript-support/)
 
 ### New functionality
 
@@ -134,6 +141,8 @@ Released on February 15, 2022
 ## Version 1.0
 
 Released on November 23, 2021
+
+[Review of release on the blog](https://dhtmlx.com/blog/releasing-dhtmlx-kanban-board-v-1-0/)
 
 ### Initial functionality
 
