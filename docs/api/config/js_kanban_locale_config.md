@@ -22,7 +22,7 @@ locale?: object;
 
 ### Default config
 
-By default, Kanban uses the **English** locale. You can set it to the custom locale as well
+By default, Kanban uses the [**English**](../../../guides/localization/#default-locale) locale. You can set it to the custom locale as well
 
 :::tip
 To change the current locale dynamically, you can use the [**setLocale()**](../../methods/js_kanban_setlocale_method) method of Kanban

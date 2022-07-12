@@ -18,7 +18,7 @@ setLocale(null | locale?: object): void;
 
 ### Parameters
 
-- `null` - (optional) - resets to the default locale (*English*)
+- `null` - (optional) resets to the default locale (*English*)
 - `locale` - (optional) the object of data of the new locale to be applied
 
 :::info

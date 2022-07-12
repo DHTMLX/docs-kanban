@@ -22,7 +22,7 @@ locale?: object;
 
 ### Default config
 
-By default, Toolbar uses the **English** locale. You can set it to the custom locale as well
+By default, Toolbar uses the [**English**](../../../guides/localization/#default-locale) locale. You can set it to the custom locale as well
 
 :::tip
 To change the current locale dynamically, you can use the [**setLocale()**](../../methods/toolbar_setlocale_method) method of Toolbar
