@@ -1,12 +1,12 @@
 ---
 sidebar_label: How-tos
 title: JavaScript Kanban How-Tos
-description: You can explore the How-tos page of DHTMLX JavaScript Kanban library in the documentation Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: You can explore the How-tos page of DHTMLX JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # How-tos
 
-This page provides all the information that you need to configure JavaScript Kanban. If you are interested in detailed information about the working principles behind Kanban, refer to the corresponding sections below.
+This page provides a full-fledged reference about initializing, configuring, customizing and working with JavaScript Kanban.
 
 ## Basic principles
 
