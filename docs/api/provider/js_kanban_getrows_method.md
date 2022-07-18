@@ -39,10 +39,10 @@ Promise.all([
 		cards,
 		columns,
 		rows,
-		rowKey: "row"
+		rowKey: "type"
 	});
 	board.api.setNext(restProvider);
 });
 ~~~
 
-**Related articles:** [Working with Server](../../../guides/working_with_server)
+**Related articles:** [Working with server](../../../guides/working_with_server)
