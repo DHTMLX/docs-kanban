@@ -143,7 +143,8 @@ module.exports = {
 							items: [
 								"api/provider/js_kanban_getcards_method",
 								"api/provider/js_kanban_getcolumns_method",
-								"api/provider/js_kanban_getrows_method"
+								"api/provider/js_kanban_getrows_method",
+								"api/provider/js_kanban_getusers_method"
 							]
 						}
 					]

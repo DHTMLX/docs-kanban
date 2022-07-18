@@ -36,6 +36,7 @@ The **RestDataProvider** service includes the special REST methods for dynamic d
 - [`getCards()`](api/provider/js_kanban_getcards_method.md) - gets a promise with the ***cards data***
 - [`getColumns()`](api/provider/js_kanban_getcolumns_method.md) - gets a promise with the ***columns data***
 - [`getRows()`](api/provider/js_kanban_getrows_method.md) - gets a promise with the ***rows data***
+- [`getUsers()`](api/provider/js_kanban_getusers_method.md) - gets a promise with the ***users data***
 
 ## Interacting with backend  
 
@@ -48,20 +49,30 @@ or you can create a custom one.
 
 To connect **RestDataProvider** to the backend, you need to call the **kanban.RestDataProvider** constructor by passing the corresponding **URL** as a parameter.
 
-~~~js {1-2,15}
+~~~js {1-2,25}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
 Promise.all([
+    restProvider.getUsers(),
     restProvider.getCards(),
     restProvider.getColumns(),
     restProvider.getRows()
-]).then(([cards, columns, rows]) => {
+]).then(([users, cards, columns, rows]) => {
     const board = new kanban.Kanban("#root", {
         cards,
         columns,
         rows,
-        rowKey: "row"
+        rowKey: "type",
+        editorShape: [
+			...kanban.defaultEditorShape,
+			{
+				type: "multiselect", 
+				key: "users",
+				label: "Users",
+				values: users
+			}
+		]
     });
     board.api.setNext(restProvider);
 });
