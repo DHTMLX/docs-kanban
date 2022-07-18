@@ -89,6 +89,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/provider/js_kanban_getcards_method.md)              | @getshort(api/provider/js_kanban_getcards_method.md)   |
 | [](api/provider/js_kanban_getcolumns_method.md)            | @getshort(api/provider/js_kanban_getcolumns_method.md) |
 | [](api/provider/js_kanban_getrows_method.md)               | @getshort(api/provider/js_kanban_getrows_method.md)    |
+| [](api/provider/js_kanban_getusers_method.md)              | @getshort(api/provider/js_kanban_getusers_method.md)   |
 
 ## Kanban events
 
