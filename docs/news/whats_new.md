@@ -60,8 +60,8 @@ Released on June 29, 2022
 
 #### Common
 
-- Prefixes of CSS classes (*see the [Stylization](../../guides/stylization.md) section*)
-- Locale structure (*see the [Localization](../../guides/localization.md) section*)
+- Prefixes of CSS classes (*see the [Stylization](../../guides/stylization) section*)
+- Locale structure (*see the [Localization](../../guides/localization) section*)
 
 ### Fixes
 
