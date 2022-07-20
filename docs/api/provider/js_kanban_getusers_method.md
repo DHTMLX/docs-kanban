@@ -52,4 +52,6 @@ Promise.all([
 });
 ~~~
 
+**Change log:** The method was added in v1.3
+
 **Related articles:** [Working with server](../../../guides/working_with_server)

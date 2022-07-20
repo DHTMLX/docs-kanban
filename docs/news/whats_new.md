@@ -31,9 +31,8 @@ Released on June 29, 2022
 
 - **Methods:**
 	[`scroll()`](../../api/methods/js_kanban_scroll_method),
-	[`setEdit()`](../../api/methods/js_kanban_setedit_method),
-	[`setSort()`](../../api/methods/js_kanban_setsort_method), and 
-	[`getUsers()`](../../api/provider/js_kanban_getusers_method),
+	[`setEdit()`](../../api/methods/js_kanban_setedit_method) and
+	[`setSort()`](../../api/methods/js_kanban_setsort_method)
 
 - **Properties:**
 	[`cardHeight`](../../api/config/js_kanban_cardheight_config),
