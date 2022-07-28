@@ -8,6 +8,16 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.2.1
+
+Released on July 28, 2022
+
+### Fixes​
+
+- The `cardHeight` property doesn't work with the enabled `scrollType:"column"` config
+- Uploader doesn't show uploaded files in card editor
+- Localization doesn't work for "combo" and "progress" fields in card editor
+
 ## Version 1.2
 
 Released on June 29, 2022
