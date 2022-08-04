@@ -12,13 +12,19 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Usage
 
-~~~jsx {3,8,18,25,34,41}
+~~~jsx {3,8,14,24,31,40,47}
 editorShape?: [
 	{
 		// common parameters for all types
 		type: string, 
 		key: string, 
 		label?: string, 
+		
+		// for a "dateRange" type only
+		key: {
+			start: string,
+			end: string
+		},
 
 		// for "combo", "select" and "multiselect" types only
 		values?: [ 
@@ -72,8 +78,8 @@ To configure the editor appearance and functionality, you can specify the follow
 
 #### - Common parameters for all types
 
-- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**
-- `key` - (required) an editor field key. Here you need to use the value specified in the [cardShape](../js_kanban_cardshape_config) property. See the example below:
+- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange**
+- `key` - (required) an editor field key. Here you need to use the value specified in the [`cardShape`](../js_kanban_cardshape_config) property. See the example below:
 
 ~~~js {8,17}
 	// card appearance settings
@@ -99,15 +105,25 @@ To configure the editor appearance and functionality, you can specify the follow
 
 - `label` - (optional) an editor field label
 
+#### - Parameters for a "dateRange" type
+
+- `key` - (required) an object of keys of the editor field. Here you can specify the following parameters:
+	- `start` - (required) a start date key
+	- `end` - (required) an end date key
+
+:::important
+The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config) property!
+:::
+
 #### - Parameters for "combo", "select" and "multiselect" types
 
 - `values` - (optional) an array of objects containing the dropdown options data. Here you can specify the following parameters:
-	- `id` - (required) an option **ID** 
-	- `label` - (required) an option label 
+	- `id` - (required) an option **ID**
+	- `label` - (required) an option label
 	- `avatart` - (optional) a path to the option preview image (for a **"multiselect"** type only)
 
 :::important
-To set a control for assigning users (the ***users*** field of the [**cardShape**](../js_kanban_cardshape_config) property), you need to use the ***multiselect*** type only!
+To set a control for assigning users (the ***users*** field of the [`cardShape`](../js_kanban_cardshape_config) property), you need to use the ***multiselect*** type only!
 :::
 
 #### - Parameters for a "color" type
@@ -140,10 +156,10 @@ To set a control for assigning users (the ***users*** field of the [**cardShape*
 	- `accept` - (optional) a file type to be uploaded (***"image/\*", "video/\*", "audio/\*"*** *and other*)
 	- `disabled` - (optional) enables/disables uploading *files*
 	- `multiple` - (optional) enables/disables uploading *multiple files*
-	- `folder` - (optional) enables/disables uploading *folders* 
+	- `folder` - (optional) enables/disables uploading *folders*
 
 :::info
-Unless you specify the editor settings via the **editorShape** property, the widget will apply a **defaultEditorShape** set of parameters!
+Unless you specify the editor settings via the `editorShape` property, the widget will apply a **defaultEditorShape** set of parameters!
 :::
 
 ### Default config
@@ -195,5 +211,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Change log:** The *multiselect* type was updated in v1.2
+
+**Change log:** The *dateRange* type was added in v1.3
 
 **Related articles:** [Configuration](../../../guides/configuration#editor)

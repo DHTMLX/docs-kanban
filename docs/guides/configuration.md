@@ -271,7 +271,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Date type
+### Date and DateRange types
 
 The editor field of **date** type can be set in the following way:
 
@@ -282,6 +282,24 @@ new kanban.Kanban("#root", {
             type: "date", 
             key: "start_date",
             label: "Start date"
+        },
+        // settings of other fields
+    ]
+});
+~~~
+
+The editor field of **dateRange** type can be set in the following way:
+
+~~~jsx {3-10}
+new kanban.Kanban("#root", {
+    editorShape: [
+        {
+            type: "dateRange", 
+            key: {
+                start: "start_date",
+                end: "end_date"
+            }
+            label: "Date Range"
         },
         // settings of other fields
     ]
