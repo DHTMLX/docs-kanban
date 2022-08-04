@@ -71,7 +71,7 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 
 /* end of Kanban css variables */
 
-/* Wx library css variables */
+/* WX library css variables */
 
 	/* background style */
 	--wx-background: var(--wx-kanban-background-light);
@@ -148,6 +148,7 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 	/* end of scroll style */
 	
 /* end of WX library css variables */
+}
 ~~~
 
 :::tip Note
