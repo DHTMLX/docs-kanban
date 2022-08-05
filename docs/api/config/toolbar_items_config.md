@@ -38,6 +38,8 @@ items?: [
 		
 	},
 	"spacer",
+	"undo",
+	"redo",
 	"addColumn",
 	"addRow",
 	custom_control // string or function
@@ -128,13 +130,15 @@ items: [
 :::
 
 - `"spacer"` - an empty space between controls
+- `"undo"` - a control for managing history (one click makes one step back)
+- `"redo"` - a control for managing history (one click makes one step forward)
 - `"addColumn"` - a control for adding new columns
 - `"addRow"` - a control for adding new rows
 - `custom_control` - (optional) custom control. Here you can specify the custom control(s) both as a **string** or **function**. See the [Customization](../../../guides/customization#custom-toolbar) section
 
 ### Example
 
-~~~jsx {8-14}
+~~~jsx {8-16}
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards
@@ -145,14 +149,16 @@ new kanban.Toolbar("#toolbar", {
 	items: [
 		"search",
 		"spacer",
-		"sort", 
+		"sort",
+		"undo",
+		"redo", 
 		"addColumn",
 		"addRow"
 	],
 });
 ~~~
 
-**Change log:** The property was updated in v1.2
+**Change log:** The *"Undo"* and *"Redo"* controls were added in v1.3
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
 
