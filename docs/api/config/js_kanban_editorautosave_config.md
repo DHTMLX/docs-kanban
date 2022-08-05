@@ -6,7 +6,11 @@ description: You can learn about the editorAutoSave config in the documentation 
 
 # 
 
-<h1 style = {{color: "red"}}><s>editorAutoSave</s> Deprecated!</h1>
+<h1 style = {{color: "red"}}><s>editorAutoSave</s></h1>
+
+:::danger
+Starting from version 1.3, the `editorAutoSave` property is **deprecated**. To manage the "autosave" mode, use the [`editor`](api/config/js_kanban_editor_config.md) property!
+:::
 
 ### Description
 
