@@ -298,7 +298,7 @@ new kanban.Kanban("#root", {
             key: {
                 start: "start_date",
                 end: "end_date"
-            }
+            },
             label: "Date Range"
         },
         // settings of other fields

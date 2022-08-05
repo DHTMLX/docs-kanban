@@ -210,8 +210,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The *multiselect* type was updated in v1.2
-
-**Change log:** The *dateRange* type was added in v1.3
+**Change log:** 
+	- The *multiselect* type was updated in v1.2
+	- The *dateRange* type was added in v1.3
 
 **Related articles:** [Configuration](../../../guides/configuration#editor)

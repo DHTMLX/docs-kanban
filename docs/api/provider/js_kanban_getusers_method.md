@@ -26,18 +26,21 @@ The **getUsers()** method sends a request to the server by the **GET** method an
 
 ### Example
 
-~~~jsx {2,5}
+~~~jsx {2,8,21}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
 Promise.all([
-	restProvider.getUsers(),
 	restProvider.getCards(),
 	restProvider.getColumns(),
-]).then(([users, cards, columns, rows]) => {
+	restProvider.getRows(),
+	restProvider.getUsers(),
+]).then(([cards, columns, rows, users]) => {
 	const board = new kanban.Kanban("#root", {
 		cards,
 		columns,
+		rows,
+        rowKey: "type",
 		editorShape: [
 			...kanban.defaultEditorShape,
 			{
