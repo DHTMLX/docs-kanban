@@ -126,7 +126,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/js_kanban_columns_config.md)                 | @getshort(api/config/js_kanban_columns_config.md)        |
 | [](api/config/js_kanban_columnshape_config.md)             | @getshort(api/config/js_kanban_columnshape_config.md)    |
 | [](api/config/js_kanban_editor_config.md)                  | @getshort(api/config/js_kanban_editor_config.md)         |
-| [](api/config/js_kanban_editorautosave_config.md)          | @getshort(api/config/js_kanban_editorautosave_config.md) |
+| [~~editorAutoSave~~](api/config/js_kanban_editorautosave_config.md) | <span style = {{color: "red"}}>**Deprecated!**</span> ~~Optional. Enables/disables an autosave mode~~ |
 | [](api/config/js_kanban_editorshape_config.md)             | @getshort(api/config/js_kanban_editorshape_config.md)    |
 | [](api/config/js_kanban_history_config.md)                 | @getshort(api/config/js_kanban_history_config.md)        |
 | [](api/config/js_kanban_locale_config.md)                  | @getshort(api/config/js_kanban_locale_config.md)         |

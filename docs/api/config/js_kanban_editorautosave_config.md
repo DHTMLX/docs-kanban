@@ -4,7 +4,9 @@ title: editorAutoSave Config
 description: You can learn about the editorAutoSave config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# editorAutoSave
+# 
+
+<h1 style = {{color: "red"}}><s>editorAutoSave</s> Deprecated!</h1>
 
 ### Description
 
