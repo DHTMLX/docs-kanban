@@ -199,6 +199,7 @@ module.exports = {
 						"api/config/js_kanban_columns_config",
 						"api/config/js_kanban_columnshape_config",
 						// E
+						"api/config/js_kanban_editor_config",
 						"api/config/js_kanban_editorautosave_config",
 						"api/config/js_kanban_editorshape_config",
 						// H

@@ -15,6 +15,7 @@ description: You can have a Properties overview of JavaScript Kanban in the docu
 | [](../config/js_kanban_columnkey_config.md)               | @getshort(../config/js_kanban_columnkey_config.md)      |
 | [](../config/js_kanban_columns_config.md)                 | @getshort(../config/js_kanban_columns_config.md)        |
 | [](../config/js_kanban_columnshape_config.md)             | @getshort(../config/js_kanban_columnshape_config.md)    |
+| [](../config/js_kanban_editor_config.md)                  | @getshort(../config/js_kanban_editor_config.md)         |
 | [](../config/js_kanban_editorautosave_config.md)          | @getshort(../config/js_kanban_editorautosave_config.md) |
 | [](../config/js_kanban_editorshape_config.md)             | @getshort(../config/js_kanban_editorshape_config.md)    |
 | [](../config/js_kanban_history_config.md)                 | @getshort(../config/js_kanban_history_config.md)        |
