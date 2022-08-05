@@ -201,6 +201,8 @@ module.exports = {
 						// E
 						"api/config/js_kanban_editorautosave_config",
 						"api/config/js_kanban_editorshape_config",
+						// H
+						"api/config/js_kanban_history_config",
 						// L
 						"api/config/js_kanban_locale_config",
 						// R
@@ -209,6 +211,7 @@ module.exports = {
 						"api/config/js_kanban_rowkey_config",
 						"api/config/js_kanban_rows_config",
 						"api/config/js_kanban_rowshape_config",
+						// S
 						"api/config/js_kanban_scrolltype_config"
 					]
 				},

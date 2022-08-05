@@ -7,7 +7,7 @@ description: You can have a Properties overview of JavaScript Kanban in the docu
 # Properties overview
 
 | Name                                                      | Description                                             |
-| ----------------------------------------------------------| --------------------------------------------------------|
+| --------------------------------------------------------- | ------------------------------------------------------- |
 | [](../config/js_kanban_cardheight_config.md)              | @getshort(../config/js_kanban_cardheight_config.md)     |
 | [](../config/js_kanban_cards_config.md)                   | @getshort(../config/js_kanban_cards_config.md)          |
 | [](../config/js_kanban_cardshape_config.md)               | @getshort(../config/js_kanban_cardshape_config.md)      |
@@ -17,6 +17,7 @@ description: You can have a Properties overview of JavaScript Kanban in the docu
 | [](../config/js_kanban_columnshape_config.md)             | @getshort(../config/js_kanban_columnshape_config.md)    |
 | [](../config/js_kanban_editorautosave_config.md)          | @getshort(../config/js_kanban_editorautosave_config.md) |
 | [](../config/js_kanban_editorshape_config.md)             | @getshort(../config/js_kanban_editorshape_config.md)    |
+| [](../config/js_kanban_history_config.md)                 | @getshort(../config/js_kanban_history_config.md)        |
 | [](../config/js_kanban_locale_config.md)                  | @getshort(../config/js_kanban_locale_config.md)         |
 | [](../config/js_kanban_readonly_config.md)                | @getshort(../config/js_kanban_readonly_config.md)       |
 | [](../config/js_kanban_rendertype_config.md)              | @getshort(../config/js_kanban_rendertype_config.md)     |

@@ -127,6 +127,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/js_kanban_columnshape_config.md)             | @getshort(api/config/js_kanban_columnshape_config.md)    |
 | [](api/config/js_kanban_editorautosave_config.md)          | @getshort(api/config/js_kanban_editorautosave_config.md) |
 | [](api/config/js_kanban_editorshape_config.md)             | @getshort(api/config/js_kanban_editorshape_config.md)    |
+| [](api/config/js_kanban_history_config.md)                 | @getshort(api/config/js_kanban_history_config.md)        |
 | [](api/config/js_kanban_locale_config.md)                  | @getshort(api/config/js_kanban_locale_config.md)         |
 | [](api/config/js_kanban_readonly_config.md)                | @getshort(api/config/js_kanban_readonly_config.md)       |
 | [](api/config/js_kanban_rendertype_config.md)              | @getshort(api/config/js_kanban_rendertype_config.md)     |
