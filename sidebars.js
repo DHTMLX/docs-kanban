@@ -71,6 +71,8 @@ module.exports = {
 						"api/methods/js_kanban_moverow_method",
 						// P
 						"api/methods/js_kanban_parse_method",
+						// R
+						"api/methods/js_kanban_redo_method",
 						// S
 						"api/methods/js_kanban_scroll_method",
 						"api/methods/js_kanban_selectcard_method",
@@ -81,6 +83,7 @@ module.exports = {
 						"api/methods/js_kanban_setsearch_method",
 						"api/methods/js_kanban_setsort_method",
 						// U
+						"api/methods/js_kanban_undo_method",
 						"api/methods/js_kanban_unselectcard_method",
 						"api/methods/js_kanban_updatecard_method",
 						"api/methods/js_kanban_updatecolumn_method",

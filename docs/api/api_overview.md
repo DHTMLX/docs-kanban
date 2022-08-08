@@ -50,6 +50,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_movecolumn_method.md)            | @getshort(api/methods/js_kanban_movecolumn_method.md)    |
 | [](api/methods/js_kanban_moverow_method.md)               | @getshort(api/methods/js_kanban_moverow_method.md)       |
 | [](api/methods/js_kanban_parse_method.md)                 | @getshort(api/methods/js_kanban_parse_method.md)         |
+| [](api/methods/js_kanban_redo_method.md)                  | @getshort(api/methods/js_kanban_redo_method.md)          |
 | [](api/methods/js_kanban_scroll_method.md)                | @getshort(api/methods/js_kanban_scroll_method.md)        |
 | [](api/methods/js_kanban_selectcard_method.md)            | @getshort(api/methods/js_kanban_selectcard_method.md)    |
 | [](api/methods/js_kanban_serialize_method.md)             | @getshort(api/methods/js_kanban_serialize_method.md)     |
@@ -58,6 +59,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_setlocale_method.md)             | @getshort(api/methods/js_kanban_setlocale_method.md)     |
 | [](api/methods/js_kanban_setsearch_method.md)             | @getshort(api/methods/js_kanban_setsearch_method.md)     |
 | [](api/methods/js_kanban_setsort_method.md)               | @getshort(api/methods/js_kanban_setsort_method.md)       |
+| [](api/methods/js_kanban_undo_method.md)                  | @getshort(api/methods/js_kanban_undo_method.md)          |
 | [](api/methods/js_kanban_unselectcard_method.md)          | @getshort(api/methods/js_kanban_unselectcard_method.md)  |
 | [](api/methods/js_kanban_updatecard_method.md)            | @getshort(api/methods/js_kanban_updatecard_method.md)    |
 | [](api/methods/js_kanban_updatecolumn_method.md)          | @getshort(api/methods/js_kanban_updatecolumn_method.md)  |
