@@ -15,22 +15,24 @@ description: You can learn about the updateColumn method in the documentation of
 ~~~jsx {}
 updateColumn({
 	id: string | number,
-	column?: object
+	column?: object,
+	replace?: boolean
 }): void;
 ~~~
 
 ### Parameters
 
 - `id` - (required) the ID of the column to be updated
-- `column` - (optional) the new data object of the column
+- `column` - (optional) the new data object of the column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
+- `replace` - (optional) enables/disables fully data replacing
 
-:::info
-The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
+:::note
+If you set the `replace` parameter to *true*, the method will fully replace old data by the new ones. Otherwise, the method will update only the values you passed.
 :::
 
 ### Example
 
-~~~jsx {7-15}
+~~~jsx {7-16}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -44,8 +46,11 @@ board.updateColumn({
 		limit: 3,
 		strictLimit: 3,
 		collapsed: true
-	}
+	},
+	replace: true
 });
 ~~~
 
-**Change log**: The **id** and **column** parameters were added in v1.1
+**Change log**: 
+- The **id** and **column** parameters were added in v1.1
+- The **replace** parameter was added in v1.3

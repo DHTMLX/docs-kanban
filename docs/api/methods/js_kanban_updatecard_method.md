@@ -15,22 +15,25 @@ description: You can learn about the updateCard method in the documentation of t
 ~~~jsx {}
 updateCard({
 	id: string | number,
-	card?: object
+	card?: object,
+	replace?: boolean
 }): void;
 ~~~
 
 ### Parameters
 
 - `id` - (required) the ID of the card to be updated
-- `card` - (optional) the new data object of the card
+- `card` - (optional) the new data object of the card. The full list of the card parameters can be found [**here**](api/config/js_kanban_cards_config.md)
+- `replace` - (optional) enables/disables fully data replacing
 
-:::info
-The full list of the **card** parameters can be found [**here**](api/config/js_kanban_cards_config.md)
+:::note
+If you set the `replace` parameter to *true*, the method will fully replace old data by the new ones. Otherwise, the method will update only the values you passed.
 :::
+
 
 ### Example
 
-~~~jsx {7-15}
+~~~jsx {7-16}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -44,8 +47,11 @@ board.updateCard({
 		row: "feature",
 		column: "inprogress",
 		/*other parameters*/
-	}	
+	},
+	replace: true
 });
 ~~~
 
-**Change log**: The **id** and **card** parameters were added in v1.1
+**Change log**: 
+- The **id** and **card** parameters were added in v1.1
+- The **replace** parameter was added in v1.3
