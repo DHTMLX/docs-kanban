@@ -26,10 +26,9 @@ updateCard({
 - `card` - (optional) the new data object of the card. The full list of the card parameters can be found [**here**](api/config/js_kanban_cards_config.md)
 - `replace` - (optional) enables/disables fully data replacing
 
-:::note
-If you set the `replace` parameter to *true*, the method will fully replace old data by the new ones. Otherwise, the method will update only the values you passed.
-:::
-
+	:::note
+	If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
+	:::
 
 ### Example
 
@@ -52,6 +51,6 @@ board.updateCard({
 });
 ~~~
 
-**Change log**: 
+**Change log**:
 - The **id** and **card** parameters were added in v1.1
 - The **replace** parameter was added in v1.3
