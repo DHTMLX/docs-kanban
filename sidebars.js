@@ -61,6 +61,7 @@ module.exports = {
 						"api/methods/js_kanban_deletecolumn_method",
 						"api/methods/js_kanban_deleterow_method",
 						"api/methods/js_kanban_destructor_method",
+						"api/methods/js_kanban_duplicatecard_method",
 						// G
 						"api/methods/js_kanban_getareacards_method",
 						"api/methods/js_kanban_getcard_method",

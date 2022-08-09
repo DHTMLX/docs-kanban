@@ -43,6 +43,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_deletecolumn_method.md)          | @getshort(api/methods/js_kanban_deletecolumn_method.md)  |
 | [](api/methods/js_kanban_deleterow_method.md)             | @getshort(api/methods/js_kanban_deleterow_method.md)     |
 | [](api/methods/js_kanban_destructor_method.md)            | @getshort(api/methods/js_kanban_destructor_method.md)    |
+| [](api/methods/js_kanban_duplicatecard_method.md)         | @getshort(api/methods/js_kanban_duplicatecard_method.md) |
 | [](api/methods/js_kanban_getareacards_method.md)          | @getshort(api/methods/js_kanban_getareacards_method.md)  |
 | [](api/methods/js_kanban_getcard_method.md)               | @getshort(api/methods/js_kanban_getcard_method.md)       |
 | [](api/methods/js_kanban_getselection_method.md)          | @getshort(api/methods/js_kanban_getselection_method.md)  |

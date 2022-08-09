@@ -15,6 +15,7 @@ description: You can have a Methods overview of JavaScript Kanban in the documen
 | [](../methods/js_kanban_deletecolumn_method.md)          | @getshort(../methods/js_kanban_deletecolumn_method.md)  |
 | [](../methods/js_kanban_deleterow_method.md)             | @getshort(../methods/js_kanban_deleterow_method.md)     |
 | [](../methods/js_kanban_destructor_method.md)            | @getshort(../methods/js_kanban_destructor_method.md)    |
+| [](../methods/js_kanban_duplicatecard_method.md)         | @getshort(../methods/js_kanban_duplicatecard_method.md) |
 | [](../methods/js_kanban_getareacards_method.md)          | @getshort(../methods/js_kanban_getareacards_method.md)  |
 | [](../methods/js_kanban_getcard_method.md)               | @getshort(../methods/js_kanban_getcard_method.md)       |
 | [](../methods/js_kanban_getselection_method.md)          | @getshort(../methods/js_kanban_getselection_method.md)  |
