@@ -8,7 +8,7 @@ description: You can learn about the undo method in the documentation of the DHT
 
 ### Description
 
-@short: Makes one step back in the Kanban history
+@short: Reverts the last operation in Kanban
 
 :::info
 The `undo()` method works with the [`history: true`](api/config/js_kanban_history_config.md) config only!

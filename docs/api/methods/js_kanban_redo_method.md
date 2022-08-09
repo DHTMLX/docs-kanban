@@ -8,7 +8,7 @@ description: You can learn about the redo method in the documentation of the DHT
 
 ### Description
 
-@short: Makes one step forward in the Kanban history
+@short: Repeats the action that was reverted by the undo action
 
 :::info
 The `redo()` method works with the [`history: true`](api/config/js_kanban_history_config.md) config only!
