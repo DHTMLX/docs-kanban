@@ -77,6 +77,12 @@ new kanban.Toolbar("#toolbar", {
 | [](api/internal/js_kanban_on_method.md)                    | @getshort(api/internal/js_kanban_on_method.md)               |
 | [](api/internal/js_kanban_setnext_method.md)               | @getshort(api/internal/js_kanban_setnext_method.md)          |
 
+### Export methods
+
+| Name                                         | Description                                        |
+| -------------------------------------------- | -------------------------------------------------- |
+| [](api/internal/js_kanban_json_method.md)    | @getshort(api/internal/js_kanban_json_method.md)   |
+
 ### State methods
 
 | Name                                                       | Description                                                   |

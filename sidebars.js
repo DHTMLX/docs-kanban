@@ -122,6 +122,20 @@ module.exports = {
 						},
 						{
 							type: "category",
+							label: "Export methods",
+							collapsible: true,
+							collapsed: true,
+							link: {
+								type: 'doc',
+								id: "api/overview/internal_export_overview"
+							},
+							items: [
+								"api/internal/js_kanban_json_method",
+								// this section will be extended by the new methods
+							]
+						},
+						{
+							type: "category",
 							label: "State methods",
 							collapsible: true,
 							collapsed: true,
