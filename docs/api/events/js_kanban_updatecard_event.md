@@ -15,7 +15,8 @@ description: You can learn about the update-card event in the documentation of t
 ~~~jsx {}
 "update-card": ({
 	id: string | number,
-	card?: object
+	card?: object,
+	replace?: boolean
 }) => void;
 ~~~
 
@@ -25,6 +26,12 @@ The callback of the **update-card** event can take an object with the following 
 
 - `id` - (required) the ID of the card to be updated
 - `card` - (optional) the new data object of the card. The full list of the **card** parameters can be found [**here**](api/config/js_kanban_cards_config.md)
+- `replace` - (optional) enables/disables fully data replacing
+
+	:::note
+	If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
+	:::
+
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
@@ -44,4 +51,6 @@ board.api.on("update-card", (obj) => {
 });
 ~~~
 
-**Change log**: The **id** and **card** parameters were added in v1.1
+**Change log**:
+- The **id** and **card** parameters were added in v1.1
+- The **replace** parameter was added in v1.3

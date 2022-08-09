@@ -15,7 +15,8 @@ description: You can learn about the update-row event in the documentation of th
 ~~~jsx {}
 "update-row": ({
 	id: string | number,
-	row?: object
+	row?: object,
+	replace?: boolean
 }) => void;
 ~~~
 
@@ -25,6 +26,11 @@ The callback of the **update-row** event can take an object with the following p
 
 - `id` - (required) the ID of the row to be updated
 - `row` - (optional) the new data object of the row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
+- `replace` - (optional) enables/disables fully data replacing
+
+	:::note
+	If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
+	:::
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
@@ -44,4 +50,6 @@ board.api.on("update-row", (obj) => {
 });
 ~~~
 
-**Change log**: The **id** and **row** parameters were added in v1.1
+**Change log**:
+- The **id** and **row** parameters were added in v1.1
+- The **replace** parameter was added in v1.3
