@@ -168,6 +168,7 @@ module.exports = {
 						"api/events/js_kanban_deletecard_event",
 						"api/events/js_kanban_deletecolumn_event",
 						"api/events/js_kanban_deleterow_event",
+						"api/events/js_kanban_duplicatecard_event",
 						"api/events/js_kanban_movecard_event",
 						"api/events/js_kanban_movecolumn_event",
 						"api/events/js_kanban_moverow_event",

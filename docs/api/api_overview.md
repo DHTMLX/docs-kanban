@@ -103,6 +103,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/events/js_kanban_deletecard_event.md)               | @getshort(api/events/js_kanban_deletecard_event.md)      |
 | [](api/events/js_kanban_deletecolumn_event.md)             | @getshort(api/events/js_kanban_deletecolumn_event.md)    |
 | [](api/events/js_kanban_deleterow_event.md)                | @getshort(api/events/js_kanban_deleterow_event.md)       |
+| [](api/events/js_kanban_duplicatecard_event.md)            | @getshort(api/events/js_kanban_duplicatecard_event.md)   |
 | [](api/events/js_kanban_movecard_event.md)                 | @getshort(api/events/js_kanban_movecard_event.md)        |
 | [](api/events/js_kanban_movecolumn_event.md)               | @getshort(api/events/js_kanban_movecolumn_event.md)      |
 | [](api/events/js_kanban_moverow_event.md)                  | @getshort(api/events/js_kanban_moverow_event.md)         |
