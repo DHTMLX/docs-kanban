@@ -6,6 +6,140 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
+## 1.2 -> 1.3
+
+### Api
+
+#### Properties
+
+- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property of Kanban was updated in the following way:
+
+    - the ***dateRange*** parameter
+
+    ~~~jsx {} title="Before v1.3"
+        {
+            type: "date", 
+            key: "start_date",
+            label: "Start date"
+        },
+        // other parameters
+    ~~~
+
+    ~~~jsx {} title="From v1.3"
+        {
+            type: "dateRange", // or you can also use the "date" type
+            key: {
+                start: "start_date",
+                end: "end_date"
+            },
+            label: "Date Range"
+        },
+        // other parameters
+    ~~~
+
+- The [`items`](../../api/config/toolbar_items_config) property of Toolbar was updated in the following way:
+
+~~~jsx {} title="Before v1.3"
+items: [
+    "search",
+    "spacer",
+    "sort",
+    "addColumn",
+    "addRow"
+]
+~~~
+
+~~~jsx {4-5} title="From v1.3"
+items: [
+    "search",
+    "spacer",
+    "undo",
+    "redo",
+    "sort",
+    "addColumn",
+    "addRow"
+]
+~~~
+
+#### Methods
+
+- The [`updateCard()`](../../api/methods/js_kanban_updatecard_method) method of Kanban was updated:
+
+~~~jsx {} title="Before v1.3"
+updateCard({
+    id: 1,
+    card: {
+        label: "New Label",
+        row: "feature",
+        column: "inprogress",
+        /*other parameters*/
+    }
+});
+~~~
+
+~~~jsx {9} title="From v1.3"
+updateCard({
+    id: 1,
+    card: {
+        label: "New Label",
+        row: "feature",
+        column: "inprogress",
+        /*other parameters*/
+    },
+    replace: true
+});
+~~~
+
+- The [`updateColumn()`](../../api/methods/js_kanban_updatecolumn_method) method of Kanban was updated:
+
+~~~jsx {} title="Before v1.3"
+updateColumn({
+    id: "backlog",
+    column: {
+        label: "Updated column",
+        limit: 3,
+        strictLimit: 3,
+        collapsed: true
+    }
+});
+~~~
+
+~~~jsx {9} title="From v1.3"
+updateColumn({
+    id: "backlog",
+    column: {
+        label: "Updated column",
+        limit: 3,
+        strictLimit: 3,
+        collapsed: true
+    },
+    replace: true
+});
+~~~
+
+- The [`updateRow()`](../../api/methods/js_kanban_updaterow_method) method of Kanban was updated:
+
+~~~jsx {} title="Before v1.3"
+updateRow({
+    id: "feature",
+    row: {
+        label: "Updated row",
+        collapsed: true
+    },
+});
+~~~
+
+~~~jsx {7} title="From v1.3"
+updateColumn({
+    id: "feature",
+    row: {
+        label: "Updated row",
+        collapsed: true
+    },
+    replace: true
+});
+~~~
+
 ## 1.1 -> 1.2
 
 ### Api
