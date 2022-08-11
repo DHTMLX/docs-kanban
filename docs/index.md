@@ -13,7 +13,7 @@ JavaScript Kanban is an effective solution for the workflow visualization. The w
 
 ### Toolbar
 
-**Toolbar** of Kanban is a separate part of the interface. It includes a search bar for *searching* cards, a control for *sorting* cards by the specified parameters and controls for *adding new columns and rows*. You can flexibly manage the searching and sorting logic as well as change the Toolbar structure by adding custom elements or changing the order of the built-in ones. Read more in the [Configuration](./guides/configuration#toolbar) section.
+**Toolbar** of Kanban is a separate part of the interface. It includes a search bar for *searching* cards, a control for *sorting* cards by the specified parameters, two controls for managing history (*undo/redo*) and controls for *adding new columns and rows*. You can flexibly manage the searching and sorting logic as well as change the Toolbar structure by adding custom elements or changing the order of the built-in ones. Read more in the [Configuration](./guides/configuration#toolbar) section.
 
 ![Kanban Toolbar](assets/js_kanban_toolbar.png)
 
@@ -25,6 +25,11 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
 
 - add new cards by clicking on the plus icon (in accordance with the specified *limits* for each column and swimlane)
 - delete cards, columns and rows using a context menu (a 3 dots icon)
+- duplicate cards using a context menu (a 3 dots icon)
+- export Kanban data to a JSON file
+- managing Kanban history using the following shortcuts:
+    - `Ctrl (Command)`+`Z` - reverts the last operation in Kanban (one step back in the Kanban history)
+    - `Ctrl (Command)`+`Y` or `Ctrl (Command)`+`Shift`+`Z` - repeats the operation that was reverted by the *undo* action (one step forward in the Kanban history)
 - move cards by dragging them into desired place (row and column)
 - move columns and rows using a context menu (a 3 dots icon)
 - rename columns and rows by double clicking on the corresponding labels or using a context menu (a 3 dots icon)
