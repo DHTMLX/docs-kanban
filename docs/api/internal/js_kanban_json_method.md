@@ -39,4 +39,4 @@ const board = new kanban.Kanban("#root", {
 board.export.json(); // => { "cards": [...], "columns": [...], "rows": [] }
 ~~~
 
-**Change log:** The method was addad in v1.3
+**Change log:** The method was added in v1.3
