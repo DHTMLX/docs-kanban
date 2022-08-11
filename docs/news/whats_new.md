@@ -8,6 +8,63 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.3
+
+Released on Month Day, 2022
+
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-3/)
+
+### New functionality
+
+- Duplicating cards via API and Interface
+- Exporting Kanban data to a JSON file
+- Managing Kanban history:
+	- via *Undo* and *Redo* controls on Toolbar
+	- via shortcuts:
+		- `Ctrl (Command)`+`Z` - undo action
+		- `Ctrl (Command)`+`Y` or `Ctrl (Command)`+`Shift`+`Z` - redo action
+	- via API
+
+### New API
+
+- **Events:**
+	[`duplicate-card`](../../api/events/js_kanban_duplicatecard_event)
+
+- **Methods:**
+	[`duplicateCard()`](../../api/methods/js_kanban_duplicatecard_method),
+	[`export.json()`](../../api/internal/js_kanban_json_method),
+	[`getUsers()`](../../api/provider/js_kanban_getusers_method),
+	[`redo()`](../../api/methods/js_kanban_redo_method) and
+	[`undo()`](../../api/methods/js_kanban_undo_method)
+
+- **Properties:**
+	[`editor`](../../api/config/js_kanban_editor_config) and
+	[`history`](../../api/config/js_kanban_history_config)
+
+### Deprecated API
+
+- **Properties:**
+	[`editorAutoSave`](../../api/config/js_kanban_editorautosave_config)
+
+### Updates
+
+- #### Events
+
+	- The [`update-card`](../../api/events/js_kanban_updatecard_event) event of Kanban is updated
+	- The [`update-column`](../../api/events/js_kanban_updatecolumn_event) event of Kanban is updated
+	- The [`update-row`](../../api/events/js_kanban_updaterow_event) event of Kanban is updated
+
+- #### Methods
+
+	- The [`updateCard()`](../../api/methods/js_kanban_updatecard_method) method of Kanban is updated
+	- The [`updateColumn()`](../../api/methods/js_kanban_updatecolumn_method) method of Kanban is updated
+	- The [`updateRow()`](../../api/methods/js_kanban_updaterow_method) method of Kanban is updated
+
+- #### Properties
+
+	- The [`items`](../../api/config/toolbar_items_config) property of Toolbar is extended by the ***"undo"*** and ***"redo"*** parameters (controls)
+	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the ***dateRange*** type
+
 ## Version 1.2.1
 
 Released on July 28, 2022
@@ -53,19 +110,19 @@ Released on June 29, 2022
 
 ### Updates
 
-#### Properties
+- #### Methods
 
-- The [`items`](../../api/config/toolbar_items_config) property of Toolbar is updated
-- The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property are updated
-- The ***multiselect*** type of the [`editorShape`](../../api/config/js_kanban_editorshape_config) property is updated
+	- The [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) method is updated
+	- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
+	- The [`api.getStores()`](../../api/internal/js_kanban_getstores_method) method is updated
+	- The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method of Kanban is updated
+	- The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar is updated
 
-#### Methods
+- #### Properties
 
-- The [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) method is updated
-- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
-- The [`api.getStores()`](../../api/internal/js_kanban_getstores_method) method is updated
-- The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method of Kanban is updated
-- The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar is updated
+	- The [`items`](../../api/config/toolbar_items_config) property of Toolbar is updated
+	- The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property are updated
+	- The ***multiselect*** type of the [`editorShape`](../../api/config/js_kanban_editorshape_config) property is updated
 
 #### Common
 
