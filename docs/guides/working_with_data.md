@@ -131,6 +131,12 @@ To get Kanban state, you can use the following methods:
 - [`api.getState()`](api/internal/js_kanban_getstate_method.md) - gets an object with the current properties of the *StateStore*
 - [`api.getStores()`](api/internal/js_kanban_getstores_method.md) - gets an object with the *StateStore* and *DataStore* objects
 
+## Exporting Kanban data
+
+To export Kanban data, you can use the following method:
+
+- [`export.json()`](api/internal/js_kanban_json_method.md) - exports data of Kanban to a JSON file
+
 ## Adding new items
 
 To add new *cards*, *columns* and *rows*, you can use the following methods:
