@@ -10,7 +10,9 @@ You can configure the *Kanban* appearance and functionality via the correspondin
 
 - configure the cards appearance via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property
 - configure the editor fields via the [`editorShape`](api/config/js_kanban_editorshape_config.md) property
+- configure the editor behaviour via the [`editor`](api/config/js_kanban_editor_config.md) property
 - configure rendering and scrolling via the [`renderType`](api/config/js_kanban_rendertype_config.md) and [`scrollType`](api/config/js_kanban_scrolltype_config.md) properties
+- configure the Kanban history via the [`history`](api/config/js_kanban_history_config.md) property
 - customize the card appearance via the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property
 	- *Refer to the [**Customisation**](guides/customization.md) section for details!*
 - apply the desired locale via the [`locale`](api/config/js_kanban_locale_config.md) property
