@@ -267,6 +267,19 @@ module.exports = {
 						"api/config/toolbar_locale_config"
 					]
 				},
+				{
+					type: "category",
+					label: "Common settings",
+					collapsible: true,
+					collapsed: true,
+					link: {
+						type: 'doc',
+						id: "api/overview/common_settings_overview"
+					},
+					items: [	
+						"api/common/js_kanban_meta_parameter",
+					]
+				},
 			]
 		},
 		{

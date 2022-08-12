@@ -162,3 +162,9 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
 | [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
 | [](api/config/toolbar_locale_config.md)                    | @getshort(api/config/toolbar_locale_config.md)           |
+
+## Common settings
+
+| Name                                         | Description                                        |
+| -------------------------------------------- | -------------------------------------------------- |
+| [](api/common/js_kanban_meta_parameter.md)   | @getshort(api/common/js_kanban_meta_parameter.md)  |
