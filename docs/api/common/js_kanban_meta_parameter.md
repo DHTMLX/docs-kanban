@@ -48,3 +48,5 @@ board.addCard({
 ~~~
 
 **Change log:** The `$meta` parameter was added in v1.3
+
+**Related article:** [`history`](api/config/js_kanban_history_config.md)
