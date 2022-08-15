@@ -8,7 +8,7 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
-## Version 1.3
+## Version 1.3 (In progress)
 
 Released on Month Day, 2022
 
@@ -40,6 +40,9 @@ Released on Month Day, 2022
 - **Properties:**
 	[`editor`](../../api/config/js_kanban_editor_config) and
 	[`history`](../../api/config/js_kanban_history_config)
+
+- **Common settings:**
+	[`$meta`](../../api/common/js_kanban_meta_parameter)
 
 ### Deprecated API
 
