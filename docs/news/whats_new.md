@@ -8,6 +8,14 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.2.2 
+
+Released on August 30, 2022
+
+### Fixes
+
+- Duplicating of some icons in menu and toolbar
+
 ## Version 1.2.1
 
 Released on July 28, 2022
