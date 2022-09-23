@@ -80,8 +80,8 @@ To learn more about configuring the Toolbar of Kanban, read the [**Configuration
 ### Configuration properties
 
 :::note
-The full list of properties to configure **Kanban** can be found [**here**](./api/overview/properties_overview.md). <br> 
-The full list of properties to configure **Toolbar of Kanban** can be found [**here**](./api/overview/toolbar_properties_overview.md).
+The full list of properties to configure **Kanban** can be found [**here**](api/overview/properties_overview.md). <br> 
+The full list of properties to configure **Toolbar of Kanban** can be found [**here**](api/overview/toolbar_properties_overview.md).
 :::
 
 ## Example
