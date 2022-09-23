@@ -94,7 +94,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 /* Link icons */
 
 .iconExternalLink_lCJq,
-.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-theme-IconExternalLink-styles-module {
+.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-theme-IconExternalLink-styles-module,
+.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module {
   display: none; /* hides the link icon */
 }
 
@@ -178,7 +179,6 @@ code {
 /* buttons */
 
 .support_btn{
-  
   font-size: 16pt;
   color: rgb(53, 148, 243);
   background-color: transparent;
