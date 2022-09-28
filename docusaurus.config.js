@@ -150,7 +150,7 @@ const config = {
 			({
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
-					//editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
+					editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
 					routeBasePath: '/',
 				},
 				theme: {

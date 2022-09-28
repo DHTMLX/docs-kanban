@@ -8,9 +8,9 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
-## Version 1.3 (In progress)
+## Version 1.3
 
-Released on Month Day, 2022
+Released on September 29, 2022
 
 [Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-3/)
 
@@ -67,6 +67,14 @@ Released on Month Day, 2022
 
 	- The [`items`](../../api/config/toolbar_items_config) property of Toolbar is extended by the ***"undo"*** and ***"redo"*** parameters (controls)
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the ***dateRange*** type
+
+## Version 1.2.2
+
+Released on August 30, 2022
+
+### Fixes
+
+- Duplicating of some icons in menu and toolbar
 
 ## Version 1.2.1
 
