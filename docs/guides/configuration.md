@@ -131,7 +131,7 @@ The *editor* of Kanban consists of the fields for managing the cards data. To co
 - [**text** and **textarea**](#text-and-textarea-types)
 - [**progress**](#progress-type)
 - [**files**](#files-type)
-- [**date**](#date-type)
+- [**date and dataRange**](#date-and-daterange-types)
 
 ### Combo, Select and Multiselect types
 
