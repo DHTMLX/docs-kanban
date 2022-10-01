@@ -25,7 +25,7 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
 
 - add new cards by clicking on the plus icon (in accordance with the specified *limits* for each column and swimlane)
 - delete cards, columns and rows using a context menu (a 3 dots icon)
-- duplicate cards using a context menu (a 3 dots icon)
+- duplicate cards using a context menu (a 3 dots icon) or the `Ctrl (Command)`+`D` shortcuts (allows duplicating multiple cards)
 - export Kanban data to a JSON file
 - managing Kanban history using the following shortcuts:
     - `Ctrl (Command)`+`Z` - reverts the last operation in Kanban (one step back in the Kanban history)

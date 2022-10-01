@@ -16,7 +16,7 @@ Released on September 29, 2022
 
 ### New functionality
 
-- Duplicating cards via API and Interface
+- Duplicating cards via API, a context menu (3 dots icon) or the `Ctrl (Command)` + `D` shortcuts (allows duplicating multiple cards)
 - Exporting Kanban data to a JSON file
 - Managing Kanban history:
 	- via *Undo* and *Redo* controls on Toolbar
