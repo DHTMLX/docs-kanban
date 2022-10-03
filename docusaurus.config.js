@@ -206,7 +206,7 @@ const config = {
 				},
 				{
 					"label": "Forum",
-					"href": "https://forum.dhtmlx.com/c/widgets/kanban/",
+					"href": "https://forum.dhtmlx.com/c/kanban/",
 					"position": "right"
 				},
 				{
@@ -243,7 +243,7 @@ const config = {
 						},
 						{
 							"label": "Forum",
-							"href": "https://forum.dhtmlx.com/c/widgets/kanban",
+							"href": "https://forum.dhtmlx.com/c/kanban/",
 							"position": "right"
 						}
 					]
