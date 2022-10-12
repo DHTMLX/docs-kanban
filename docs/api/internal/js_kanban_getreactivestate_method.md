@@ -55,16 +55,43 @@ The method returns an object with the following parameters:
 
 ### Example
 
-~~~jsx {7-11}
+~~~jsx {7-37}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
-	cards
+	cards,
+	rows
 });
-// subscribe on the card selection
-board.api.getReactiveState().selected.subscribe((value) => {
-	console.log(value);
-	// other actions
+// get the Reactive State of Kanban
+const state = board.api.getReactiveState();
+
+// subscribe on the columns changes and output the array of columns
+state.columns.subscribe((data) => {
+	console.log(data);
+});
+
+// subscribe on the cards changes and output the array of cards
+state.cards.subscribe((data) => {
+	console.log(data);
+});
+
+// subscribe on the rows changes and output the array of rows
+state.rows.subscribe((data) => {
+	console.log(data);
+});
+
+// subscribe on the card selection and output the IDs of the selected cards
+state.selected.subscribe((data) => {
+	console.log(data);
+});
+
+// set new selection 
+state.selected.set([1, 2]);
+
+// update selection
+state.selected.update((data) => {
+	data.push(3);
+	return data;
 });
 ~~~
 
