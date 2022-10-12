@@ -57,6 +57,8 @@ In these sections you can find out how to perform operations with cards, work wi
 | Topic                                                        | Description                                         |
 | ------------------------------------------------------------ | ----------------------------------------------------|
 | [Getting card data](api/methods/js_kanban_getcard_method.md) | Learn how to get the card data                      |
+| [Getting cards state](api/internal/js_kanban_getstate_method.md) | Learn how to get the cards state                 |
+| [Getting cards reactive state](api/internal/js_kanban_getreactivestate_method.md) | Learn how to get the cards reactive state |
 | [Loading card data](api/config/js_kanban_cards_config.md)    | Learn how to load the initial card data             |
 | [Parsing card data](api/methods/js_kanban_parse_method.md)   | Learn how to parse the card data                    |
 | [Serializing card data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the card data ([Example](https://snippet.dhtmlx.com/61crsls3?text=kanban))|
@@ -110,6 +112,8 @@ In these sections you can find out how to perform operations with colums and wor
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
 | [Getting card data of the column](api/methods/js_kanban_getareacards_method.md)| Learn how to get the card data of the column |
+| [Getting columns state](api/internal/js_kanban_getstate_method.md) | Learn how to get the columns state               |
+| [Getting columns reactive state](api/internal/js_kanban_getreactivestate_method.md) | Learn how to get the columns reactive state |
 | [Loading column data](api/config/js_kanban_columns_config.md)    | Learn how to load the initial column data          |
 | [Parsing column data](api/methods/js_kanban_parse_method.md)     | Learn how to parse the column data                 |
 | [Serializing column data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the column data          |
@@ -134,6 +138,8 @@ In these sections you can find out how to perform operations with rows and work 
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
 | [Getting card data of the column and row](api/methods/js_kanban_getareacards_method.md)| Learn how to get the card data of the column and row |
+| [Getting rows state](api/internal/js_kanban_getstate_method.md) | Learn how to get the rows state                     |
+| [Getting rows reactive state](api/internal/js_kanban_getreactivestate_method.md) | Learn how to get the rows reactive state |
 | [Loading row data](api/config/js_kanban_rows_config.md)         | Learn how to load the initial row data              |
 | [Parsing row data](api/methods/js_kanban_parse_method.md)       | Learn how to parse the row data                     |
 | [Serializing row data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the row data                |
