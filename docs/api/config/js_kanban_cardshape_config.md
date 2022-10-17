@@ -19,6 +19,7 @@ cardShape?: {
 	progress?: boolean | { show?: boolean },
 	attached?: boolean | { show?: boolean },
 	cover?: boolean | { show?: boolean },
+	comments?: boolean | { show?: boolean },
 	start_date?: boolean | { 
 		show?: boolean,
 		format?: string 
@@ -99,6 +100,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 - `progress` - (optional) shows/hides a **progress** field
 - `attached` - (optional) shows/hides an **attachment** field
 - `cover` - (optional) shows/hides a **card picture**
+- `comments` - (optional) shows/hides **comments** on cards
 - `start_date` - (optional) an object of parameters of a **start date** field
 	- `show` - (optional) shows/hides a card start date
 	- `format` - (optional) defines format of a card start date. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
@@ -213,6 +215,7 @@ const defaultCardShape = {
 	},
 	attached: false,
 	cover: false,
+	comments: false,
 	color: {
         show: false,
         values: defaultColors
@@ -227,7 +230,7 @@ const defaultCardShape = {
 
 ### Example
 
-~~~jsx {47}
+~~~jsx {48}
 const users = [ // users data
 	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
@@ -250,6 +253,7 @@ const cardShape = { // card settings
 	menu: true,
 	attached: true,
 	cover: false,
+	comments: false,
 	color: {
 		show: true,
 		values: cardColors
@@ -281,9 +285,19 @@ new kanban.Kanban("#root", {
 
 **Change log:**
 
-- The ***color*** parameter (field) was updated in v1.1
 - The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) were updated in v1.2
+- The ***comments*** parameter (field) was added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
-**Related samples:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban) and [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban)
+**Related samples:** 
+- [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban) 
+- [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban)
+- [Kanban. Comments](https://snippet.dhtmlx.com/f9ponfsg?text=#kanban)
+
+waal2pd4
+f9ponfsg
+
+This code snippet demonstrates how to set comments for cards of the DHTMLX JavaScript Kanban. Learn more about it [in the documentation](https://docs.dhtmlx.com/kanban/api/config/js_kanban_cardshape_config/).
+
+By downloading a trial version of DHTMLX Kanban you will get quick technical support from the DHTMLX team free of charge for 30 days.
