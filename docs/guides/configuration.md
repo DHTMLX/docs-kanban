@@ -58,6 +58,7 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 	:::
 
 - a card cover (*preview image*) via the `cover: boolean` config
+- a card comment(s) via the `comments: boolean` config
 - a card assignment (users) via the `users: { show: boolean, values: object }` config
 
 	:::tip
@@ -308,6 +309,28 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
+### Comments type
+
+The editor field of **comments** type can be set in the following way:
+
+~~~jsx {3-12}
+new kanban.Kanban("#root", {
+    editorShape: [
+       {
+            type: "comments",
+            key: "comments",
+            label: "Comments",
+            config: {
+                dateFormat: "%M %d",
+                placement: "page", // or "editor"
+                html: true,
+            },
+        },
+        // settings of other fields
+    ]
+});
+~~~
+
 ### Linking editor fields to card fields
 
 :::info
@@ -393,7 +416,7 @@ new kanban.Toolbar("#toolbar", { api: board.api });
 
 You can manage (*hide/show/customize*) the Toolbar controls using the **items** property:
 
-~~~jsx {6-13}
+~~~jsx {6-15}
 // create Kanban
 const board = new kanban.Kanban("#root", {...});
 
@@ -402,6 +425,8 @@ new kanban.Toolbar("#toolbar", {
 	items: [
 		"search", // search bar
         "spacer", // empty space
+        "undo", // control to undo the card operations in the history
+        "redo", // control to redo the card operations in the history
         "sort", // control for sorting cards
         "addColumn", // control for adding new columns
         "addRow", // control for adding new rows

@@ -55,10 +55,12 @@ module.exports = {
 						// A
 						"api/methods/js_kanban_addcard_method",
 						"api/methods/js_kanban_addcolumn_method",
+						//"api/methods/js_kanban_addcomment_method",
 						"api/methods/js_kanban_addrow_method",
 						// D
 						"api/methods/js_kanban_deletecard_method",
 						"api/methods/js_kanban_deletecolumn_method",
+						//"api/methods/js_kanban_deletecomment_method",
 						"api/methods/js_kanban_deleterow_method",
 						"api/methods/js_kanban_destructor_method",
 						"api/methods/js_kanban_duplicatecard_method",
@@ -88,6 +90,7 @@ module.exports = {
 						"api/methods/js_kanban_unselectcard_method",
 						"api/methods/js_kanban_updatecard_method",
 						"api/methods/js_kanban_updatecolumn_method",
+						//"api/methods/js_kanban_updatecomment_method",
 						"api/methods/js_kanban_updaterow_method"
 					]
 				},
@@ -179,9 +182,11 @@ module.exports = {
 					items: [
 						"api/events/js_kanban_addcard_event",
 						"api/events/js_kanban_addcolumn_event",
+						//"api/events/js_kanban_addcomment_event",
 						"api/events/js_kanban_addrow_event",
 						"api/events/js_kanban_deletecard_event",
 						"api/events/js_kanban_deletecolumn_event",
+						//"api/events/js_kanban_deletecomment_event",
 						"api/events/js_kanban_deleterow_event",
 						"api/events/js_kanban_duplicatecard_event",
 						"api/events/js_kanban_movecard_event",
@@ -195,6 +200,7 @@ module.exports = {
 						"api/events/js_kanban_unselectcard_event",
 						"api/events/js_kanban_updatecard_event",
 						"api/events/js_kanban_updatecolumn_event",
+						//"api/events/js_kanban_updatecomment_event",
 						"api/events/js_kanban_updaterow_event"	
 					]
 				},
@@ -217,6 +223,7 @@ module.exports = {
 						"api/config/js_kanban_columnkey_config",
 						"api/config/js_kanban_columns_config",
 						"api/config/js_kanban_columnshape_config",
+						"api/config/js_kanban_currentuser_config",
 						// E
 						"api/config/js_kanban_editor_config",
 						"api/config/js_kanban_editorautosave_config",
