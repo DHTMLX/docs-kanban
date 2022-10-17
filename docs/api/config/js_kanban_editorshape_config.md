@@ -12,7 +12,7 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Usage
 
-~~~jsx {3,8,14,24,31,40,47}
+~~~jsx {3,8,14,24,31,40,47,56}
 editorShape?: [
 	{
 		// common parameters for all types
@@ -66,7 +66,14 @@ editorShape?: [
 			disabled?: boolean,
 			multiple?: boolean,
 			folder?: boolean
-		}
+		},
+
+		// for a "comments" type only
+		config?: {
+            dateFormat?: string,
+            placement?: "page" | "editor",
+            html?: boolean
+        };
 	},
 	{...} // other fields settings
 ];
@@ -152,11 +159,20 @@ To set a control for assigning users (the ***users*** field of the [`cardShape`]
 #### - Parameters for a "files" type
 
 - `uploadURL` - (optional) an URL of the editor uploader
-- `config` - (optional) a configuration object the **"files"** field. Here you can specify the following parameters:
+- `config` - (optional) a configuration object of the **"files"** field. Here you can specify the following parameters:
 	- `accept` - (optional) a file type to be uploaded (***"image/\*", "video/\*", "audio/\*"*** *and other*)
 	- `disabled` - (optional) enables/disables uploading *files*
 	- `multiple` - (optional) enables/disables uploading *multiple files*
 	- `folder` - (optional) enables/disables uploading *folders*
+
+#### - Parameters for a "comments" type
+
+- `config` - (optional) a configuration object of the **"comments"** field. Here you can specify the following parameters:
+	- `dateFormat` - (optional) - a date format of the comments. The available formats can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+	- `placement` - (optional) - a place the comments will be displayed. You can set this property to the following values:
+		- `"editor"` - comments will be displayed in the editor
+		- `"page"` - comments will be displayed in a separate panel
+	- `html` - (optional) - enables/disables using of the HTML markup in comments
 
 :::info
 Unless you specify the editor settings via the `editorShape` property, the widget will apply a **defaultEditorShape** set of parameters!
@@ -186,7 +202,7 @@ const defaultEditorShape = [
 
 ### Example
 
-~~~jsx {6-14,19}
+~~~jsx {6-24,29}
 const users = [ // user data
 	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
@@ -194,12 +210,22 @@ const users = [ // user data
 
 const editorShape = [ // editor settings
 	...kanban.defaultEditorShape, // include the default settings
-	{ // add custom field
+	{ // add custom fields
 		type: "multiselect",
 		key: "users",
 		label: "Users",
 		values: users
-	}
+	},
+	{
+		type: "comments",
+		key: "comments",
+		label: "Comments",
+		config: {
+			dateFormat: "%M %d",
+			placement: "page",
+			html: true,
+		},
+    },
 ];
 
 new kanban.Kanban("#root", {
@@ -211,7 +237,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Change log:** 
-- The *multiselect* type was updated in v1.2
 - The *dateRange* type was added in v1.3
+- The *comments* type was added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#editor)
