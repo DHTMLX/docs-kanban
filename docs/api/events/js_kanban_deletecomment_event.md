@@ -44,4 +44,4 @@ board.api.on("delete-comment", (obj) => {
 });
 ~~~
 
-**Change log:** The method was added in v1.4
+**Change log:** The event was added in v1.4
