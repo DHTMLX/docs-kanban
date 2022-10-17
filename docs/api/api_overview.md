@@ -38,9 +38,11 @@ new kanban.Toolbar("#toolbar", {
 | ----------------------------------------------------------| ---------------------------------------------------------|
 | [](api/methods/js_kanban_addcard_method.md)               | @getshort(api/methods/js_kanban_addcard_method.md)       |
 | [](api/methods/js_kanban_addcolumn_method.md)             | @getshort(api/methods/js_kanban_addcolumn_method.md)     |
+| [](api/methods/js_kanban_addcomment_method.md)            | @getshort(api/methods/js_kanban_addcomment_method.md)    |
 | [](api/methods/js_kanban_addrow_method.md)                | @getshort(api/methods/js_kanban_addrow_method.md)        |
 | [](api/methods/js_kanban_deletecard_method.md)            | @getshort(api/methods/js_kanban_deletecard_method.md)    |
 | [](api/methods/js_kanban_deletecolumn_method.md)          | @getshort(api/methods/js_kanban_deletecolumn_method.md)  |
+| [](api/methods/js_kanban_deletecomment_method.md)         | @getshort(api/methods/js_kanban_deletecomment_method.md) |
 | [](api/methods/js_kanban_deleterow_method.md)             | @getshort(api/methods/js_kanban_deleterow_method.md)     |
 | [](api/methods/js_kanban_destructor_method.md)            | @getshort(api/methods/js_kanban_destructor_method.md)    |
 | [](api/methods/js_kanban_duplicatecard_method.md)         | @getshort(api/methods/js_kanban_duplicatecard_method.md) |
@@ -64,6 +66,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/methods/js_kanban_unselectcard_method.md)          | @getshort(api/methods/js_kanban_unselectcard_method.md)  |
 | [](api/methods/js_kanban_updatecard_method.md)            | @getshort(api/methods/js_kanban_updatecard_method.md)    |
 | [](api/methods/js_kanban_updatecolumn_method.md)          | @getshort(api/methods/js_kanban_updatecolumn_method.md)  |
+| [](api/methods/js_kanban_updatecomment_method.md)         | @getshort(api/methods/js_kanban_updatecomment_method.md) |
 | [](api/methods/js_kanban_updaterow_method.md)             | @getshort(api/methods/js_kanban_updaterow_method.md)     |
 
 ## Kanban internal API
@@ -106,9 +109,11 @@ new kanban.Toolbar("#toolbar", {
 | -----------------------------------------------------------| ---------------------------------------------------------|
 | [](api/events/js_kanban_addcard_event.md)                  | @getshort(api/events/js_kanban_addcard_event.md)         |
 | [](api/events/js_kanban_addcolumn_event.md)                | @getshort(api/events/js_kanban_addcolumn_event.md)       |
+| [](api/events/js_kanban_addcomment_event.md)               | @getshort(api/events/js_kanban_addcomment_event.md)      |
 | [](api/events/js_kanban_addrow_event.md)                   | @getshort(api/events/js_kanban_addrow_event.md)          |
 | [](api/events/js_kanban_deletecard_event.md)               | @getshort(api/events/js_kanban_deletecard_event.md)      |
 | [](api/events/js_kanban_deletecolumn_event.md)             | @getshort(api/events/js_kanban_deletecolumn_event.md)    |
+| [](api/events/js_kanban_deletecomment_event.md)            | @getshort(api/events/js_kanban_deletecomment_event.md)   |
 | [](api/events/js_kanban_deleterow_event.md)                | @getshort(api/events/js_kanban_deleterow_event.md)       |
 | [](api/events/js_kanban_duplicatecard_event.md)            | @getshort(api/events/js_kanban_duplicatecard_event.md)   |
 | [](api/events/js_kanban_movecard_event.md)                 | @getshort(api/events/js_kanban_movecard_event.md)        |
@@ -122,6 +127,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/events/js_kanban_unselectcard_event.md)             | @getshort(api/events/js_kanban_unselectcard_event.md)    |
 | [](api/events/js_kanban_updatecard_event.md)               | @getshort(api/events/js_kanban_updatecard_event.md)      |
 | [](api/events/js_kanban_updatecolumn_event.md)             | @getshort(api/events/js_kanban_updatecolumn_event.md)    |
+| [](api/events/js_kanban_updatecomment_event.md)            | @getshort(api/events/js_kanban_updatecomment_event.md)   |
 | [](api/events/js_kanban_updaterow_event.md)                | @getshort(api/events/js_kanban_updaterow_event.md)       |
 
 ## Kanban properties

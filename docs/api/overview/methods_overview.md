@@ -10,9 +10,11 @@ description: You can have a Methods overview of JavaScript Kanban in the documen
 | ---------------------------------------------------------| --------------------------------------------------------|
 | [](../methods/js_kanban_addcard_method.md)               | @getshort(../methods/js_kanban_addcard_method.md)       |
 | [](../methods/js_kanban_addcolumn_method.md)             | @getshort(../methods/js_kanban_addcolumn_method.md)     |
+| [](../methods/js_kanban_addcomment_method.md)            | @getshort(../methods/js_kanban_addcomment_method.md)    |
 | [](../methods/js_kanban_addrow_method.md)                | @getshort(../methods/js_kanban_addrow_method.md)        |
 | [](../methods/js_kanban_deletecard_method.md)            | @getshort(../methods/js_kanban_deletecard_method.md)    |
 | [](../methods/js_kanban_deletecolumn_method.md)          | @getshort(../methods/js_kanban_deletecolumn_method.md)  |
+| [](../methods/js_kanban_deletecomment_method.md)         | @getshort(../methods/js_kanban_deletecomment_method.md) |
 | [](../methods/js_kanban_deleterow_method.md)             | @getshort(../methods/js_kanban_deleterow_method.md)     |
 | [](../methods/js_kanban_destructor_method.md)            | @getshort(../methods/js_kanban_destructor_method.md)    |
 | [](../methods/js_kanban_duplicatecard_method.md)         | @getshort(../methods/js_kanban_duplicatecard_method.md) |
@@ -36,4 +38,5 @@ description: You can have a Methods overview of JavaScript Kanban in the documen
 | [](../methods/js_kanban_unselectcard_method.md)          | @getshort(../methods/js_kanban_unselectcard_method.md)  |
 | [](../methods/js_kanban_updatecard_method.md)            | @getshort(../methods/js_kanban_updatecard_method.md)    |
 | [](../methods/js_kanban_updatecolumn_method.md)          | @getshort(../methods/js_kanban_updatecolumn_method.md)  |
+| [](../methods/js_kanban_updatecomment_method.md)         | @getshort(../methods/js_kanban_updatecomment_method.md) |
 | [](../methods/js_kanban_updaterow_method.md)             | @getshort(../methods/js_kanban_updaterow_method.md)     |
