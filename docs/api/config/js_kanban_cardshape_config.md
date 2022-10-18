@@ -291,13 +291,6 @@ new kanban.Kanban("#root", {
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
 **Related samples:** 
-- [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban) 
+- [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban)
 - [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban)
 - [Kanban. Comments](https://snippet.dhtmlx.com/f9ponfsg?text=#kanban)
-
-waal2pd4
-f9ponfsg
-
-This code snippet demonstrates how to set comments for cards of the DHTMLX JavaScript Kanban. Learn more about it [in the documentation](https://docs.dhtmlx.com/kanban/api/config/js_kanban_cardshape_config/).
-
-By downloading a trial version of DHTMLX Kanban you will get quick technical support from the DHTMLX team free of charge for 30 days.
