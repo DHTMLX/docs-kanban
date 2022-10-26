@@ -193,15 +193,9 @@ const config = {
 				href: 'https://docs.dhtmlx.com/'
 			},
 			items: [
-			// {
-			//   type: 'doc',
-			//   docId: 'intro',
-			//   position: 'left',
-			//   label: 'Tutorial',
-			// },
 				{
 					"label": "Examples",
-					"href": "https://snippet.dhtmlx.com/5hcx01h4?text=%23kanban",
+					"href": "https://snippet.dhtmlx.com/5hcx01h4?tag=kanban",
 					"position": "right"
 				},
 				{
@@ -234,7 +228,7 @@ const config = {
 						},
 						{
 							"label": "Examples",
-							"href": "https://snippet.dhtmlx.com/5hcx01h4?text=%23kanban",
+							"href": "https://snippet.dhtmlx.com/5hcx01h4?tag=kanban",
 							"position": "right"
 						},
 						{
