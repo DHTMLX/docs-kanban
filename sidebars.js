@@ -276,6 +276,20 @@ module.exports = {
 				},
 				{
 					type: "category",
+					label: "Editor properties",
+					collapsible: true,
+					collapsed: true,
+					link: {
+						type: 'doc',
+						id: "api/overview/external_editor_properties_overview"
+					},
+					items: [	
+						"api/config/external_editor_api_config",
+						"api/config/external_editor_config_config",
+					]
+				},
+				{
+					type: "category",
 					label: "Common settings",
 					collapsible: true,
 					collapsed: true,
