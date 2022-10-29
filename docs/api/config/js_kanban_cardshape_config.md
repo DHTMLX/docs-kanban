@@ -47,6 +47,8 @@ cardShape?: {
 	},
 	users?: boolean | {
 		show?: boolean,
+		limit?: number | (card) => number,
+        showLimit?: boolean,
 		values: [
 			{
 				id: string | number,
@@ -145,18 +147,27 @@ To configure the card appearance, in the **cardShape** object you can specify th
 
 - `users` - (optional) an object of parameters of a **users** field
 	- `show` - (optional) shows/hides the assigned users
+	- `limit` - (optional) defines a limit of users that can be assign to the card (task)
+	- `showLimit` - (optional) shows/hides a limited number of users assigned to the card (task)
 	- `values` - (required) an array of objects with users data. For each user you can specify the following parameters:
 		- `id` - (required) a user **ID**
 		- `label` - (optional) a user name
 		- `avatar` - (optional) a path to the user avatar
 
 	:::info
-	The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding data via the `values` parameter. To assign new users via the editor, you need to set the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) property using a ***multiselect*** type.
+	The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding data via the `values` parameter. You can also limit users that can be assign to the card and show this limit via the `limit` and `showLimit` parameters. To assign new users via the editor, you need to set the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) property using a ***multiselect*** type.
 
-	~~~jsx {3-7}
+	~~~jsx {3-14}
 	cardShape: {
 		users: {
 			show: true,
+			limit: (card) => {
+				if (card.column === "testing") {
+					return 1
+				}
+				return 3
+			},
+			showLimit: true,
 			values: [
 				{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 				{ id: 2, label: "Aaron Short" }
@@ -230,7 +241,7 @@ const defaultCardShape = {
 
 ### Example
 
-~~~jsx {48}
+~~~jsx {14-50,55}
 const users = [ // users data
 	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
@@ -260,6 +271,13 @@ const cardShape = { // card settings
 	},
 	users: {
 		show: true,
+		limit: (card) => {
+            if (card.column === "backlog") {
+                return 3
+            }
+            return 2
+        },
+        showLimit: true,
 		values: users
 	},
 	priority: {
@@ -287,6 +305,7 @@ new kanban.Kanban("#root", {
 
 - The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) were updated in v1.2
 - The ***comments*** parameter (field) was added in v1.4
+- The ***users*** parameter (field) was updated in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 

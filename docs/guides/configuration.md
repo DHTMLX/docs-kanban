@@ -59,7 +59,7 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 
 - a card cover (*preview image*) via the `cover: boolean` config
 - a card comment(s) via the `comments: boolean` config
-- a card assignment (users) via the `users: { show: boolean, values: object }` config
+- a card assignment (users) via the `users: { show: boolean, limit: number, showLimit: boolean, values: object }` config
 
 	:::tip
 	You can assign one or several users to any card via the corresponding control of the Kanban editor. To configure this control, you can use the [**multiselect**](#combo-select-and-multiselect-types) type only.
