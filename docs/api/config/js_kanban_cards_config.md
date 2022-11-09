@@ -32,6 +32,7 @@ cards?: [
 		color?: string,
 		users?: array,
 		priority?: string | number,
+		parent?: string | number,
 		[custom_key: string]?: any
 	},
 	{...} // other cards data
@@ -56,8 +57,9 @@ For each card you can specify the following parameters (data):
 	- `name` - (optional) a file name
 	- `isCover` - (optional) enables a cover image. If **true**, the cover image will be downloaded via the "coverURL" url
 - `color` - (optional) a valid HEX color code. It is the color of the card top line
-- `users` - (optional) an array with the assigned users **ID**s. To specify the assigned users, you need to define an array with users data in the [cardShape](../js_kanban_cardshape_config) property (see the **users** parameter). The users are displayed in the **Users** field
-- `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape](../js_kanban_cardshape_config) property (see the **priority** parameter). It is displayed in the **Priority** field
+- `users` - (optional) an array with the assigned users **ID**s. To specify the assigned users, you need to define an array with users data in the [cardShape.users](../js_kanban_cardshape_config) property. The users are displayed in the **Users** field
+- `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape.priority](../js_kanban_cardshape_config) property. It is displayed in the **Priority** field
+- `parent` - (optional) a card ID, to which the current card is attached as subtask. To display **subtasks**, enable the [cardShape.subtasks](../js_kanban_cardshape_config) property
 - `custom_key` - (optional) a custom key of the card. You can specify the custom keys to place the card into column and row. See the [columnKey](../js_kanban_columnkey_config) and [rowKey](../js_kanban_rowkey_config) properties
 
 :::info
@@ -66,7 +68,7 @@ If you want to load new data for cards dynamically, you can use the [**parse()**
 
 ### Example
 
-~~~jsx {1-31,35}
+~~~jsx {1-32,36}
 const cards = [
 	{
 		id: 1,
@@ -89,6 +91,7 @@ const cards = [
 		color: "#65D3B3",
 		users: [1, 2],
 		priority: 1,
+		parent: 3
 		// custom field to place the card into the "feature" row 
 		// the rowKey config needs to be set to the "type" value
 		type: "feature",
@@ -106,8 +109,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** Starting from v1.1 the **cards** property is optional
+**Change log:** The ***parent*** parameter (field) was added in v1.4
 
 **Related articles:** [Working with data](../../../guides/working_with_data)
 
-**Related sample:** [Kanban. Initialization](https://snippet.dhtmlx.com/gb50vyip?mode=wide&text=#kanban)
+**Related sample:** [Kanban. Subtasks](https://snippet.dhtmlx.com/01k7qv5z?text=#kanban)
