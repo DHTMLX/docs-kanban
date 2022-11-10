@@ -85,7 +85,7 @@ To configure the editor appearance and functionality, you can specify the follow
 
 #### - Common parameters for all types
 
-- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange**
+- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange**, **comments**, **subtasks** and **parent**
 - `key` - (required) an editor field key. Here you need to use the value specified in the [`cardShape`](../js_kanban_cardshape_config) property. See the example below:
 
 ~~~js {8,17}
@@ -202,7 +202,7 @@ const defaultEditorShape = [
 
 ### Example
 
-~~~jsx {6-24,29}
+~~~jsx {6-32,37}
 const users = [ // user data
 	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
@@ -226,6 +226,14 @@ const editorShape = [ // editor settings
 			html: true,
 		},
     },
+	{
+		type: "subtasks",
+		label: "Subtasks",
+	},
+	{
+		type: "parent",
+		label: "Parent",
+	}
 ];
 
 new kanban.Kanban("#root", {
@@ -236,8 +244,11 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** 
-- The *dateRange* type was added in v1.3
-- The *comments* type was added in v1.4
+**Change log:**
+
+- The ***dateRange*** type was added in v1.3
+- The ***comments***, ***subtasks*** and ***parent*** types were added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#editor)
+
+**Related sample:** [Kanban. Subtasks](https://snippet.dhtmlx.com/01k7qv5z?text=#kanban)
