@@ -8,7 +8,7 @@ description: You can learn about the Put /rows/{id}/move REST route in the docum
 
 ### Description
 
-@short: Moves a row to the specified position 
+@short: Moves a row to a specified position 
 
 The route handles the **HTTP PUT** request made to the **'rows/{id}/move'** path.
 

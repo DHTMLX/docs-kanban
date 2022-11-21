@@ -8,7 +8,7 @@ description: You can learn about the Put /cards REST route in the documentation 
 
 ### Description
 
-@short: Updates data on the specified card and returns an empty json object
+@short: Updates data on a specified card and returns an empty json object
 
 The route handles the **HTTP PUT** request made to the **'/cards/{id}'** path.
 

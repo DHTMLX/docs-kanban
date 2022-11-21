@@ -8,7 +8,7 @@ description: You can learn about the Put /rows REST route in the documentation o
 
 ### Description
 
-@short: Updates data on the specified row (swimlane) and returns an empty json object
+@short: Updates data on a specified row (swimlane) and returns an empty json object
 
 The route handles the **HTTP PUT** request made to the **'/rows/{id}'** path.
 

@@ -8,7 +8,7 @@ description: You can learn about the Put /columns REST route in the documentatio
 
 ### Description
 
-@short: Updates data on the specified column and returns an empty json object
+@short: Updates data on a specified column and returns an empty json object
 
 The route handles the **HTTP PUT** request made to the **'/columns/{id}'** path.
 

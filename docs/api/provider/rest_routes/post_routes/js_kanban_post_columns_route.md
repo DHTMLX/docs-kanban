@@ -44,6 +44,4 @@ The HTTP status code shows whether the request succeeds (response.status == 200)
 
 ---
 
-**Related articles**: 
-- [Working with server](guides/working_with_server.md)
-- [api.setNext()](api/internal/js_kanban_setnext_method.md)
+**Related articles**: [Working with server](guides/working_with_server.md)
