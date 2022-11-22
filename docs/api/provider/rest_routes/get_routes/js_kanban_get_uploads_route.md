@@ -10,7 +10,7 @@ description: You can learn about the Get /uploads REST route in the documentatio
 
 @short: Gets the requested binary file from the server
 
-The route handles the **HTTP GET** request made to the **'/uploads/{id}/name'** path.
+The route handles the **HTTP GET** request made to the **'/uploads/{id}/{name}'** path.
 
 ### Query parameters
 

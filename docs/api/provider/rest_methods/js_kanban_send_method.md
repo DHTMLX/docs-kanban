@@ -58,7 +58,7 @@ restDataProvider.send(url, method, data)
 
 The example below shows how to send a request with additional parameters besides the default ones:
 
-~~~js{12-18}
+~~~js {14-20}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
@@ -99,7 +99,7 @@ board.api.on("add-cards", obj => {
 
 Or you can add headers in the way as below by redefining RestDataProvider, which can give you more control of the data you send to the server: 
 
-~~~jsx title="Example 1"{3-8}
+~~~js {3-8}
 const url = "https://some_backend_url";
 
 class MyDataProvider extends RestDataProvider {
@@ -112,3 +112,4 @@ class MyDataProvider extends RestDataProvider {
 board.api.setNext(new MyDataProvider(url));
 ~~~ 
 ---
+**Related articles:** [Working with server](../../../guides/working_with_server)

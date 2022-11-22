@@ -171,6 +171,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/provider/rest_methods/js_kanban_getcolumns_method.md)            | @getshort(api/provider/rest_methods/js_kanban_getcolumns_method.md) |
 | [](api/provider/rest_methods/js_kanban_getrows_method.md)               | @getshort(api/provider/rest_methods/js_kanban_getrows_method.md)    |
 | [](api/provider/rest_methods/js_kanban_getusers_method.md)              | @getshort(api/provider/rest_methods/js_kanban_getusers_method.md)   |
+| [](api/provider/rest_methods/js_kanban_send_method.md)             | @getshort(api/provider/rest_methods/js_kanban_send_method.md)   |
 
 ### RestDataProvider routes
 
