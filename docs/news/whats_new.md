@@ -8,6 +8,53 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.4
+
+Released on Month Day, 2022 [TODO]
+
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-4/)
+
+### New functionality
+
+- An ability to add comments. See the following examples: 
+	- [Kanban. Comments](https://snippet.dhtmlx.com/f9ponfsg)
+	- [Kanban. Comments on a separate page](https://snippet.dhtmlx.com/waal2pd4)
+	- [Kanban. HTML markup in comments](https://snippet.dhtmlx.com/q34l0yl4)
+	- [Kanban. Markdown parser in comments](https://snippet.dhtmlx.com/25hvpo7n)
+- An ability to limit users ([see the example](https://snippet.dhtmlx.com/q6iiplhz))
+- An ability to add subtasks to the cards ([see the example](https://snippet.dhtmlx.com/01k7qv5z))
+- An ability to edit cards in a modal window ([see the example](https://snippet.dhtmlx.com/qezjxegd))
+
+### New API
+
+- **Events:** 
+	[`add-comment`](../../api/events/js_kanban_addcomment_event),
+	[`delete-comment`](../../api/events/js_kanban_deletecomment_event) and
+	[`update-comment`](../../api/events/js_kanban_updatecomment_event)
+
+- **Methods:**
+	[`addComment()`](../../api/methods/js_kanban_addcomment_method),
+	[`deleteComment()`](../../api/methods/js_kanban_deletecomment_method) and
+	[`updateComment()`](../../api/methods/js_kanban_updatecomment_method)
+
+- **Properties:**
+	[`currentUser`](../../api/config/js_kanban_currentuser_config)
+
+### New Component
+
+Starting from version 1.4 you can initialize and configure the editor as a separate component. For this, you can use the following API:
+
+- [`api`](../../api/config/external_editor_api_config) and
+- [`config`](../../api/config/external_editor_config_config)
+
+### Updates
+- #### Properties
+
+	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments*** and ***subtasks*** parameters. The ***users*** parameter of this property was updated
+	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the ***comments***, ***subtasks*** and ***parent***  types
+	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the ***show*** and ***placement***  parameters
+	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent***  parameter
+
 ## Version 1.3
 
 Released on September 29, 2022
