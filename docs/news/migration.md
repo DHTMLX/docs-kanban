@@ -6,6 +6,83 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
+## 1.3 -> 1.4
+
+### Api
+
+#### Properties
+
+- The [`cardShape.users`](../../api/config/js_kanban_cardshape_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        {
+            show: true,
+            values: [ 
+                { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
+                { id: 2, label: "Aaron Short" }
+            ]
+        }
+    ~~~
+
+    ~~~jsx {3-9} title="From v1.4"
+        {
+            show: true,
+            limit: (card) => {
+                if (card.column === "backlog") {
+                    return 3
+                }
+                return 2
+            },
+            showLimit: true,
+            values: [ 
+                { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
+                { id: 2, label: "Aaron Short" }
+            ]
+        }
+    ~~~
+
+- The [`editor`](../../api/config/js_kanban_editor_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        {
+            autoSave: true,
+            debounce: 2000
+        }
+    ~~~
+
+    ~~~jsx {3-4} title="From v1.4"
+        {
+            show: true,
+            placement: "modal", // or "sidebar"
+            autoSave: true,
+            debounce: 2000
+        } 
+    ~~~
+
+- The [`cards`](../../api/config/js_kanban_cards_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        [
+            {
+                id: 1,
+                label: "Integration with React",
+                description: "Some description",
+                // other parameters
+            }, ...
+        ]
+    ~~~
+
+    ~~~jsx {6} title="From v1.4"
+        [
+            {
+                id: 1,
+                label: "Integration with React",
+                description: "Some description",
+                parent: 3,
+                // other parameters
+            }, ...
+        ]
+    ~~~
 ## 1.2 -> 1.3
 
 ### Api
