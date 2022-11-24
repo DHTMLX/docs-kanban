@@ -35,4 +35,4 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
-**Related sample:** [Kanban. Lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban)
+**Related sample:** [Kanban. Lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

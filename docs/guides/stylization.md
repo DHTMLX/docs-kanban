@@ -170,6 +170,6 @@ You can also apply a custom style to a scroll bar of Kanban. For this, you can u
 
 In this snippet you can see how to apply a custom style to Kanban
 
-<iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=html" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=html&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles:** [Customization](../customization)

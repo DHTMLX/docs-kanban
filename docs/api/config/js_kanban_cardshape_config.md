@@ -286,4 +286,4 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
-**Related samples:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban) and [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban)
+**Related samples:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban) and [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban)

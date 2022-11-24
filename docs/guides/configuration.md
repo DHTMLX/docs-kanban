@@ -418,4 +418,4 @@ To hide some of the Toolbar controls, remove the corresponding string(s) from th
 
 In this snippet you can see how to configure the **Cards**, **Editor** and **Toolbar** of Kanban:
 
-<iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

@@ -56,4 +56,4 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Customization](../../../guides/customization#custom-cards)
 
-**Related sample:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban)
+**Related sample:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban)

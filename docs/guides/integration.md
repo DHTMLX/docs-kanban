@@ -10,8 +10,8 @@ You can integrate DHTMLX Kanban with other DHTMLX widgets (for instance, [Gantt]
 
 ## Integration with DHTMLX Gantt and Scheduler
 
-<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
+<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
 
 ## Integration with DHTMLX To Do List
 
-<iframe src="https://snippet.dhtmlx.com/id05kedo?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="750"></iframe>
+<iframe src="https://snippet.dhtmlx.com/id05kedo?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="750"></iframe>
