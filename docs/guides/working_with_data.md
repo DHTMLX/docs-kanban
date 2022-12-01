@@ -8,7 +8,7 @@ description: You can explore how to work with Data in the documentation of the D
 
 ## Initial data loading
 
-When initializing Kanban, you can to provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
+When initializing Kanban, you can provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
 
 ~~~jsx {1,16,68,81-85}
 const columns = [ // data for columns
