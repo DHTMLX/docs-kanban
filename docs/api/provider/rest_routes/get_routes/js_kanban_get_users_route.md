@@ -1,10 +1,10 @@
 ---
-sidebar_label: Get /users
-title: Get /users
-description: You can learn about the Get /users REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: GET /users
+title: GET /users
+description: You can learn about the GET /users REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Get /users
+# GET /users
 
 ### Description
 

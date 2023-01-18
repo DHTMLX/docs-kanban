@@ -1,10 +1,10 @@
 ---
-sidebar_label: Put /cards
-title: Put /cards
-description: You can learn about the Put /cards REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: PUT /cards
+title: PUT /cards
+description: You can learn about the PUT /cards REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Put /cards
+# PUT /cards
 
 ### Description
 

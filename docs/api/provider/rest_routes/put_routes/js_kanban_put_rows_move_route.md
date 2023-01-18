@@ -1,10 +1,10 @@
 ---
-sidebar_label: Put /rows/{id}/move
-title: Put /rows/{id}/move
-description: You can learn about the Put /rows/{id}/move REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: PUT /rows/{id}/move
+title: PUT /rows/{id}/move
+description: You can learn about the PUT /rows/{id}/move REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Put /rows/{id}/move
+# PUT /rows/{id}/move
 
 ### Description
 

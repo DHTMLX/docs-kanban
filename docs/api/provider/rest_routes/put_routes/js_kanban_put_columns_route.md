@@ -1,10 +1,10 @@
 ---
-sidebar_label: Put /columns
-title: Put /columns
-description: You can learn about the Put /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: PUT /columns
+title: PUT /columns
+description: You can learn about the PUT /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Put /columns
+# PUT /columns
 
 ### Description
 

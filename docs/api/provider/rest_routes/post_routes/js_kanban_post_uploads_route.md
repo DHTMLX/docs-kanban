@@ -1,10 +1,10 @@
 ---
-sidebar_label: Post /uploads
-title: Post /uploads
-description: You can learn about the Post /uploads REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: POST /uploads
+title: POST /uploads
+description: You can learn about the POST /uploads REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Post /uploads
+# POST /uploads
 
 ### Description
 

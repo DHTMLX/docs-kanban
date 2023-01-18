@@ -1,10 +1,10 @@
 ---
-sidebar_label: Get /columns
-title: Get /columns
-description: You can learn about the Get /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: GET /columns
+title: GET /columns
+description: You can learn about the GET /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Get /columns
+# GET /columns
 
 ### Description
 

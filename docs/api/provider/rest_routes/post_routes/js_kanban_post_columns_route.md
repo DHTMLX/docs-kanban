@@ -1,10 +1,10 @@
 ---
-sidebar_label: Post /columns
-title: Post /columns
-description: You can learn about the Post /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: POST /columns
+title: POST /columns
+description: You can learn about the POST /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Post /columns
+# POST /columns
 
 ### Description
 

@@ -1,10 +1,10 @@
 ---
-sidebar_label: Get /rows
-title: Get /rows
-description: You can learn about the Get /rows REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: GET /rows
+title: GET /rows
+description: You can learn about the GET /rows REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Get /rows
+# GET /rows
 
 ### Description
 

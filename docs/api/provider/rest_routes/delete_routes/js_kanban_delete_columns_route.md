@@ -1,10 +1,10 @@
 ---
-sidebar_label: Delete /columns
-title: Delete /columns
-description: You can learn about the Delete /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+sidebar_label: DELETE /columns
+title: DELETE /columns
+description: You can learn about the DELETE /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# Delete /columns
+# DELETE /columns
 
 ### Description
 
