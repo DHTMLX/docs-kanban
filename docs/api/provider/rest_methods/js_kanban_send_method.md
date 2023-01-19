@@ -42,8 +42,7 @@ A promise is returned back to the success request status. In case of the failed 
 
 You can configure what to return back. To handle a response to the failed request, use the **catch** method of the promise that is returned. 
 
-~~~js
-
+~~~jsx
 restDataProvider.send(url, method, data)
 .then(data => {
    ... // success: do something with data
@@ -51,14 +50,13 @@ restDataProvider.send(url, method, data)
 .catch(err => {
     ... // error handler
 });
-
 ~~~
 
 ### Examples
 
 The example below shows how to send a request with additional parameters besides the default ones:
 
-~~~js {14-20}
+~~~jsx {14-20}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
@@ -88,7 +86,7 @@ The following examples demonstrate how to add more headers to the **send** metho
 
 ~~~js
 const customHeaders = {
-     "Authorization": "Bearer",
+    "Authorization": "Bearer",
     "Custom header": "some value",
 };
 
@@ -99,7 +97,7 @@ board.api.on("add-cards", obj => {
 
 Or you can add headers in the way as below by redefining RestDataProvider, which can give you more control of the data you send to the server: 
 
-~~~js {3-8}
+~~~jsx {3-8}
 const url = "https://some_backend_url";
 
 class MyDataProvider extends RestDataProvider {
@@ -111,5 +109,7 @@ class MyDataProvider extends RestDataProvider {
 
 board.api.setNext(new MyDataProvider(url));
 ~~~ 
+
 ---
+
 **Related articles:** [Working with server](../../../guides/working_with_server)

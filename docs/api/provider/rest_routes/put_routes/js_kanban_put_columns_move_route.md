@@ -32,11 +32,9 @@ The server expects to receive a json object with the next properties:
 Example:
 
 ~~~json
-
 {
     "before": 3
 }
-
 ~~~
 
 ### Response 
@@ -46,11 +44,9 @@ The server returns a json object with the ID of the moved column.
 Example:
 
 ~~~json 
-
 {
     "id": 4
 }
-
 ~~~
 
 The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).

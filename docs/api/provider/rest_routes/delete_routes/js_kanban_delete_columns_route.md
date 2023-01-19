@@ -28,7 +28,6 @@ No payload is required.
 
 No data is returned back. The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
-
 ---
 
 **Related articles**: [Working with server](guides/working_with_server.md)

@@ -33,7 +33,6 @@ Content-Type: image/png
 
 ------WebKitFormBoundarySlwgXDBw7kcKSI4p--
 
-
 ~~~
 
 ### Response
@@ -46,7 +45,6 @@ Example:
 
 
 ~~~ json
-
 {
    "id":4,
    "name":"myImage.png",

@@ -52,7 +52,6 @@ Example:
 In case multiple cards are moved, the `batch` property should contain an array of all cards objects that are moved:
 
 ~~~json
-
 {
     "batch": [
         {
@@ -78,20 +77,16 @@ The server returns a json object with a card ID (if one card is moved) or with t
 Example:
 
 ~~~json title="Response to the request for the single card operation"
-
 {
     "id": 4
 }
-
 ~~~
 
 
 ~~~json title="Response to the request for the multiple cards operation"
-
 {
     "id": 0
 }
-
 ~~~
 
 The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
