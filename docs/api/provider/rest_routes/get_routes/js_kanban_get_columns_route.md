@@ -16,10 +16,9 @@ The route handles the **HTTP GET** request made to the **'/columns'** path.
 
 No payload is required.
 
-
 ### Response
 
-The route returns a json object with an array of objects with columns data. 
+The route returns a json object with an array of objects with columns data.
 
 Example:
 
@@ -54,6 +53,6 @@ The HTTP status code shows whether the request succeeds (response.status == 200)
 
 ---
 
-**Related articles**: 
+**Related articles**:
 - [Working with server](guides/working_with_server.md)
 - [getColumns()](api/provider/rest_methods/js_kanban_getcolumns_method.md)

@@ -12,7 +12,6 @@ description: You can learn about the PUT /columns/{id}/move REST route in the do
 
 The route handles the **HTTP PUT** request made to the **'columns/{id}/move'** path.
 
-
 ### Query parameters
 
 The query parameter is sent in the request line:
@@ -37,13 +36,13 @@ Example:
 }
 ~~~
 
-### Response 
+### Response
 
 The server returns a json object with the ID of the moved column.
 
 Example:
 
-~~~json 
+~~~json
 {
     "id": 4
 }

@@ -20,8 +20,6 @@ The next parameter is sent in the request line:
 | ----------- | ----------- | ----------- |
 | `id`       |  number   | *Required*. The ID of the column to be updated.|
 
-
-
 ### Payload
 
 The server needs to receive a json object with all column properties (both unchanged and new/modified). 
@@ -36,7 +34,7 @@ Example:
 ~~~json
 {
     "column": {
-        "label": "Column 1"
+        "label": "Column 1",
         "collapsed": false,
     }
 }
@@ -46,7 +44,7 @@ You can find another example of the column object in the [**columns**](api/confi
 
 ### Response
 
-In case of the success status, an empty json object is returned back. 
+In case of the success status, an empty json object is returned back.
   
 The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 

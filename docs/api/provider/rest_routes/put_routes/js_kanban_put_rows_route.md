@@ -20,8 +20,6 @@ The next parameter is sent in the request line:
 | ----------- | ----------- | ----------- |
 | `id`       |  number   | *Required*. The ID of the row (swimlane) to be updated.|
 
-
-
 ### Payload
 
 The server needs to receive a json object with all row properties (both unchanged and new/modified). 
@@ -36,7 +34,7 @@ Example:
 ~~~json
 {
     "row": {
-        "label": "Row 1"
+        "label": "Row 1",
         "collapsed": false,
     }
 }
@@ -46,7 +44,7 @@ You can find another example of the row object in the [**rows**](api/config/js_k
 
 ### Response
 
-In case of the success status, an empty json object is returned back. 
+In case of the success status, an empty json object is returned back.
   
 The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 

@@ -8,10 +8,9 @@ description: You can learn about the PUT /rows/{id}/move REST route in the docum
 
 ### Description
 
-@short: Moves a row to a specified position 
+@short: Moves a row to a specified position
 
 The route handles the **HTTP PUT** request made to the **'rows/{id}/move'** path.
-
 
 ### Query parameters
 
@@ -20,7 +19,6 @@ The query parameter is sent in the request line:
 | Name       | Type        | Description |
 | ----------- | ----------- | ----------- |
 | `id`       |  number   | *Required*. The ID of the row to be moved.|
-
 
 ### Payload
 
@@ -38,13 +36,13 @@ Example:
 }
 ~~~
 
-### Response 
+### Response
 
 The server returns a json object with the ID of the moved row.
 
 Example:
 
-~~~json 
+~~~json
 {
     "id": 4
 }

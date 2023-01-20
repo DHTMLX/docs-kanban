@@ -43,7 +43,6 @@ The **isCover** property indicates whether an image is a cover image (true) or n
 
 Example:
 
-
 ~~~ json
 {
    "id":4,
@@ -52,7 +51,6 @@ Example:
    "isCover":false
 }
 ~~~
-
 
 The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 

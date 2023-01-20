@@ -30,7 +30,6 @@ Example:
 }
 ~~~
 
-
 ### Response
 
 The route returns a json object with a new row ID.

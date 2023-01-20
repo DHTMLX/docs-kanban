@@ -162,7 +162,6 @@ new kanban.Toolbar("#toolbar", {
 
 ## RestDataProvider API
 
-
 ### RestDataProvider methods
 
 | Name                                                       | Description                                            |
@@ -186,11 +185,11 @@ new kanban.Toolbar("#toolbar", {
 | [](api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md) |
 | [](api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md) |
 | [](api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md) |
-[](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md) |
-[](api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md) |
-[](api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md) |
-[](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md) |
-[](api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md) |
+| [](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md) |
+| [](api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md) |
+| [](api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md) |
+| [](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md) |
+| [](api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md) |
 | [](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md) |
 | [](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md) |
 | [](api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md) |

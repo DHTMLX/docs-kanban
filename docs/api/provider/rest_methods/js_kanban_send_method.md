@@ -12,7 +12,6 @@ description: You can learn about the send() method in the documentation of the D
 
 All requests to the server are made with the **send()** method which is a part of the [**RestDataProvider**](guides/working_with_server.md/#restdataprovider) service.
 
-
 ### Usage
 
 ~~~js
@@ -21,11 +20,10 @@ send(
     method: "GET" | "POST" | "PUT" | "DELETE" | string,
     data?: object,
     headers?: object,
-): Promise<obj[]>
+): promise;
 ~~~
 
 ### Parameters
-
 
 | Name       | Type        | Description |
 | ----------- | ----------- | ----------- |
@@ -82,7 +80,7 @@ Promise.all([
 });
 ~~~
 
-The following examples demonstrate how to add more headers to the **send** method.
+The following examples demonstrate how to add more headers to the **send()** method.
 
 ~~~js
 const customHeaders = {
@@ -108,7 +106,7 @@ class MyDataProvider extends RestDataProvider {
 }
 
 board.api.setNext(new MyDataProvider(url));
-~~~ 
+~~~
 
 ---
 

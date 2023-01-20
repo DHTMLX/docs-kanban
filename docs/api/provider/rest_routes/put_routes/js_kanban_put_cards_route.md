@@ -20,11 +20,9 @@ The query parameter sent in the request line is the following:
 | ----------- | ----------- | ----------- |
 | `id`       |  number   | *Required*. The ID of the card to be updated.|
 
-
-
 ### Payload
 
-The server needs to receive a json object with the card object in it that contains all card properties (both unchanged and new/modified). 
+The server needs to receive a json object with the card object in it that contains all card properties (both unchanged and new/modified).
 
 | Name       | Type        | Description |
 | ----------- | ----------- | ----------- |
@@ -39,7 +37,6 @@ The server needs to receive a json object with the card object in it that contai
 | `color`   |  string | *Required*. The color of the card top line in HEX.|
 | `priority`   |  number | *Required*. The card priority ID. |
 | `users`   |  object | *Required*. An array with the assigned users IDs. See the object example here [**cardShape**](api/config/js_kanban_cardshape_config.md) |
-
 
 Example:
 

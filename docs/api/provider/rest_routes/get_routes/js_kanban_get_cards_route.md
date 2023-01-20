@@ -16,7 +16,6 @@ The route handles the **HTTP GET** request made to the **'/cards'** path.
 
 No payload is required.
 
-
 ### Response
 
 The route returns a json object with an array of all cards objects. 
@@ -77,7 +76,6 @@ The HTTP status code shows whether the request succeeds (response.status == 200)
 
 ---
 
-**Related articles**: 
+**Related articles**:
 - [Working with server](guides/working_with_server.md)
 - [getCards()](api/provider/rest_methods/js_kanban_getcards_method.md)
-

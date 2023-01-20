@@ -25,11 +25,9 @@ The following parameters are sent in the request line:
 
 No payload is required.
 
-
 ### Response
 
-The route returns the requested binary file. 
-
+The route returns the requested binary file.
 
 The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 

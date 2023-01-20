@@ -12,7 +12,6 @@ description: You can learn about the PUT /cards/{id}/move REST route in the docu
 
 The route handles the **HTTP PUT** request made to the **'cards/{id}/move'** path.
 
-
 ### Query parameters
 
 The query parameter is sent in the request line:
@@ -36,7 +35,6 @@ The server expects to receive a json object with the next properties:
 | `rowId`       |  number   | *Required*. The ID of the row where the card is moved to.|
 | `before`       |  number   | *Optional*. The ID of the card before which the moved card should be placed.|
 | `batch`       |  object  | *Required for multiselect*. An array of cards objects that are moved.|
-
 
 Example:
 
@@ -68,11 +66,11 @@ In case multiple cards are moved, the `batch` property should contain an array o
         }
     ]
 }
-~~~ 
+~~~
 
-### Response 
+### Response
 
-The server returns a json object with a card ID (if one card is moved) or with the ID set to 0 for the operation on multiple cards. 
+The server returns a json object with a card ID (if one card is moved) or with the ID set to 0 for the operation on multiple cards.
 
 Example:
 
