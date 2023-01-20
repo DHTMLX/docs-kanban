@@ -80,4 +80,4 @@ new kanban.Kanban("#root", {
 - The **limit** parameter was added in v1.1
 - The **strictLimit** parameter was added in v1.1
 
-**Related sample:** [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8)
+**Related sample:** [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban)

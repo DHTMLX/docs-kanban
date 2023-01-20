@@ -93,7 +93,7 @@ board.api.on("add-cards", obj => {
 });
 ~~~
 
-Or you can add headers in the way as below by redefining RestDataProvider, which can give you more control of the data you send to the server: 
+Or you can add headers in the way as below by redefining RestDataProvider, which can give you more control of the data you send to the server:
 
 ~~~jsx {3-8}
 const url = "https://some_backend_url";

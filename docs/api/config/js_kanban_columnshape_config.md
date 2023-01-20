@@ -147,4 +147,4 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
-**Related sample:** [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban)
+**Related sample:** [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban)

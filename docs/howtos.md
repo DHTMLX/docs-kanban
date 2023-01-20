@@ -14,11 +14,11 @@ In this section you can find out basic principles of work with Kanban
 
 | Topic                                         | Description                                              |
 | --------------------------------------------- | ---------------------------------------------------------|
-| [](guides/initialization.md)                  | Learn how to initialize Kanban ([Example](https://snippet.dhtmlx.com/gb50vyip?mode=wide&text=kanban))|
+| [](guides/initialization.md)                  | Learn how to initialize Kanban ([Example](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
 | [](guides/configuration.md)                   | Learn how to configure Kanban                            |
 | [](guides/customization.md)                   | Learn how to customize Kanban                            |
 | [](guides/stylization.md)                     | Learn how to stylize Kanban                              |
-| [](guides/localization.md)                    | Learn how to localize Kanban ([Example](https://snippet.dhtmlx.com/hrblf1mm?mode=wide&text=kanban))|
+| [](guides/localization.md)                    | Learn how to localize Kanban ([Example](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API reference
 
@@ -43,9 +43,9 @@ In these sections you can find out how to perform operations with cards, work wi
 
 | Topic                                                        | Description                                 |
 | ------------------------------------------------------------ | --------------------------------------------|
-| [Adding new cards](api/methods/js_kanban_addcard_method.md)  | Learn how to add new cards ([Example](https://snippet.dhtmlx.com/61crsls3?text=kanban))|
-| [Deleting cards](api/methods/js_kanban_deletecard_method.md) | Learn how to delete cards ([Example](https://snippet.dhtmlx.com/61crsls3?text=kanban)) |
-| [Moving cards](api/methods/js_kanban_movecard_method.md)     | Learn how to move cards ([Example](https://snippet.dhtmlx.com/61crsls3?text=kanban))   |
+| [Adding new cards](api/methods/js_kanban_addcard_method.md)  | Learn how to add new cards ([Example](https://snippet.dhtmlx.com/61crsls3?tag=kanban)) |
+| [Deleting cards](api/methods/js_kanban_deletecard_method.md) | Learn how to delete cards ([Example](https://snippet.dhtmlx.com/61crsls3?tag=kanban)) |
+| [Moving cards](api/methods/js_kanban_movecard_method.md)     | Learn how to move cards ([Example](https://snippet.dhtmlx.com/61crsls3?tag=kanban))   |
 | [Scrolling to the desired cards](api/methods/js_kanban_scroll_method.md)| Learn how to scroll Kanban to the desired card|
 | [Searching for cards](api/methods/js_kanban_setsearch_method.md)| Learn how to search for cards            |
 | [Selecting cards](api/methods/js_kanban_selectcard_method.md)| Learn how to select cards                   |
@@ -61,7 +61,7 @@ In these sections you can find out how to perform operations with cards, work wi
 | [Getting cards reactive state](api/internal/js_kanban_getreactivestate_method.md) | Learn how to get the cards reactive state |
 | [Loading card data](api/config/js_kanban_cards_config.md)    | Learn how to load the initial card data             |
 | [Parsing card data](api/methods/js_kanban_parse_method.md)   | Learn how to parse the card data                    |
-| [Serializing card data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the card data ([Example](https://snippet.dhtmlx.com/61crsls3?text=kanban))|
+| [Serializing card data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the card data ([Example](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
 | [Updating card data](api/methods/js_kanban_updatecard_method.md)| Learn how to update the card data                |
 
 ### Configuring cards
@@ -72,12 +72,12 @@ In these sections you can find out how to perform operations with cards, work wi
 | [Binding cards into columns](api/config/js_kanban_columnkey_config.md) | Learn how to bind cards into columns      |
 | [Binding cards into rows](api/config/js_kanban_rowkey_config.md) | Learn how to bind cards into rows               |
 | [Configuring a card appearance](api/config/js_kanban_cardshape_config.md)| Learn how to configure a card appearance|
-| [Configuring a cards menu](api/config/js_kanban_cardshape_config.md)| Learn how to configure a cards context menu  ([Example](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))|
-| [Customizing a card appearance](api/config/js_kanban_cardtemplate_config.md)| Learn how to customize a card appearance using templates ([Example](https://snippet.dhtmlx.com/8rhdq81d?text=kanban))|
+| [Configuring a cards menu](api/config/js_kanban_cardshape_config.md)| Learn how to configure a cards context menu  ([Example](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
+| [Customizing a card appearance](api/config/js_kanban_cardtemplate_config.md)| Learn how to customize a card appearance using templates ([Example](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban))|
 | [Dragging cards](api/config/js_kanban_readonly_config.md)    | Learn how to enable/disable an ability to drag-n-drop cards|
 | [Editing cards](api/config/js_kanban_readonly_config.md)     | Learn how to enable/disable an ability to edit cards|
-| [Lazy rendering](api/config/js_kanban_rendertype_config.md)| Learn how to enable/disable **lazy rendering** of a big number of cards ([Example](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))|
-| [Limiting cards](api/config/js_kanban_columns_config.md)     | Learn how to limit cards for columns and swimlanes (**WIP validation**) ([Example](https://snippet.dhtmlx.com/2blo6hx8?text=kanban))|
+| [Lazy rendering](api/config/js_kanban_rendertype_config.md)| Learn how to enable/disable **lazy rendering** of a big number of cards ([Example](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))|
+| [Limiting cards](api/config/js_kanban_columns_config.md)     | Learn how to limit cards for columns and swimlanes (**WIP validation**) ([Example](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban))|
 | [Selecting cards](api/config/js_kanban_readonly_config.md)   | Learn how to enable/disable an ability to select cards|
 | [Setting a fix height of cards](api/config/js_kanban_cardheight_config.md)| Learn how to set a fix height of cards   |
 | [Updating card settings](api/methods/js_kanban_setconfig_method.md)| Learn how to update card settings               |
@@ -100,12 +100,12 @@ In these sections you can find out how to perform operations with colums and wor
 
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
-| [Adding new columns](api/methods/js_kanban_addcolumn_method.md) | Learn how to add new columns ([Example](https://snippet.dhtmlx.com/61crsls3?text=kanban))|
-| [Configuring a columns menu](api/config/js_kanban_columnshape_config.md)| Learn how to configure a columns context menu ([Example](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))|
+| [Adding new columns](api/methods/js_kanban_addcolumn_method.md) | Learn how to add new columns ([Example](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
+| [Configuring a columns menu](api/config/js_kanban_columnshape_config.md)| Learn how to configure a columns context menu ([Example](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
 | [Deleting columns](api/methods/js_kanban_deletecolumn_method.md)| Learn how to delete columns                         |
 | [Moving columns](api/methods/js_kanban_movecolumn_method.md)    | Learn how to move columns                           |
 | [Scrolling to the desired columns](api/methods/js_kanban_scroll_method.md)| Learn how to scroll Kanban to the desired column |
-| [Separate scrolling for columns](api/config/js_kanban_scrolltype_config.md)| Learn how to set a separate scrolling for each column ([Example](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))|
+| [Separate scrolling for columns](api/config/js_kanban_scrolltype_config.md)| Learn how to set a separate scrolling for each column ([Example](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))|
 
 ### Working with column data
 
@@ -128,7 +128,7 @@ In these sections you can find out how to perform operations with rows and work 
 | Topic                                                           | Description                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
 | [Adding new rows](api/methods/js_kanban_addrow_method.md)       | Learn how to add new rows (swimlanes)               |
-| [Configuring a rows menu](api/config/js_kanban_rowshape_config.md)| Learn how to configure a rows (swimlanes) context menu ([Example](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban))|
+| [Configuring a rows menu](api/config/js_kanban_rowshape_config.md)| Learn how to configure a rows (swimlanes) context menu ([Example](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
 | [Deleting rows](api/methods/js_kanban_deleterow_method.md)      | Learn how to delete rows (swimlanes)                |
 | [Moving rows](api/methods/js_kanban_moverow_method.md)          | Learn how to move rows (swimlanes)                  |
 | [Scrolling to the desired row](api/methods/js_kanban_scroll_method.md)| Learn how to scroll Kanban to the desired row (swimlane)|
@@ -162,7 +162,7 @@ In these sections you can find out how to perform operations with rows and work 
 | [Loading server data for cards](api/provider/js_kanban_getcards_method.md)| Learn how to load server data for cards |
 | [Loading server data for columns](api/provider/js_kanban_getcolumns_method.md)| Learn how to load server data for columns |
 | [Loading server data for rows](api/provider/js_kanban_getrows_method.md)| Learn how to load server data for rows |
-| [Working with server](guides/working_with_server.md)        | Learn how to work with server via REST API ([Example](https://snippet.dhtmlx.com/f25y0809?text=kanban))|
+| [Working with server](guides/working_with_server.md)        | Learn how to work with server via REST API ([Example](https://snippet.dhtmlx.com/f25y0809?tag=kanban))|
 
 ## How to work with Kanban state
 
@@ -176,9 +176,9 @@ In these sections you can find out how to perform operations with rows and work 
 
 | Topic                                                       | Description                                           |
 | ----------------------------------------------------------- | ------------------------------------------------------|
-| [Configuring a searchbar on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a searchbar on Toolbar ([Example](https://snippet.dhtmlx.com/s5r5h4ju?text=kanban))|
-| [Configuring a sort control on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a sort control on Toolbar ([Example](https://snippet.dhtmlx.com/s5r5h4ju?text=kanban))|
-| [Configuring Toolbar controls](api/config/toolbar_items_config.md)| Learn how to configure, customize and reorder the Toolbar contols ([Example](https://snippet.dhtmlx.com/s5r5h4ju?text=kanban)) |
+| [Configuring a searchbar on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a searchbar on Toolbar ([Example](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban))|
+| [Configuring a sort control on Toolbar](api/config/toolbar_items_config.md) | Learn how to configure a sort control on Toolbar ([Example](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban))|
+| [Configuring Toolbar controls](api/config/toolbar_items_config.md)| Learn how to configure, customize and reorder the Toolbar contols ([Example](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)) |
 | [Including Kanban API in Toolbar](api/config/toolbar_api_config.md) | Learn how to include and use Kanban API in Toolbar |
 | [Localizing Toolbar](api/config/toolbar_locale_config.md) | Learn how to localize Toolbar |
 

@@ -9,7 +9,7 @@ description: You can learn about using typescript with the DHTMLX JavaScript Kan
 Starting from v1.1, the library of DHTMLX Kanban provides an ability to use TypeScript definitions. The built-in support of TypeScript works out of the box.
 
 :::note 
-You can try out the functionality right in our <a href="https://snippet.dhtmlx.com/2blo6hx8"  target="_blank">Snippet Tool</a>.
+You can try out the functionality right in our <a href="https://snippet.dhtmlx.com/2blo6hx8?tag=kanban"  target="_blank">Snippet Tool</a>.
 :::
 
 ## Advantages of using TypeScript

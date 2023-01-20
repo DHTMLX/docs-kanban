@@ -12,13 +12,13 @@ Besides configuring Kanban, you can customize its appearance and behaviour. The 
 
 To display cards by a custom template, you can use the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property. It is a callback function that allows you to define the desired styles and logic and apply it to Kanban. See the snippet below:
 
-<iframe src="https://snippet.dhtmlx.com/8rhdq81d?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/8rhdq81d?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Custom context menu
 
 To customize a context menu for cards, columns and rows, you can use the corresponding [`cardShape`](api/config/js_kanban_cardshape_config.md), [`columnShape`](api/config/js_kanban_columnshape_config.md) and [`rowShape`](api/config/js_kanban_rowshape_config.md) properties. See the snippet below:
 
-<iframe src="https://snippet.dhtmlx.com/8eo65gr5?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/8eo65gr5?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Custom toolbar
 
@@ -31,7 +31,7 @@ In the snippet below you can see how to customize the following:
 - a sort control and its behaviour
 - a custom control and its behaviour  
 
-<iframe src="https://snippet.dhtmlx.com/s5r5h4ju?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/s5r5h4ju?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Custom styles
 
@@ -39,4 +39,4 @@ You can customize the appearance of Kanban by changing values of the correspondi
 
 In this snippet you can see how to apply custom styles to Kanban:
 
-<iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=html" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=html&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

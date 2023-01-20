@@ -88,4 +88,4 @@ The full list of properties to configure **Toolbar of Kanban** can be found [**h
 
 In this snippet you can see how to initialize **Kanban** with the initial data:
 
-<iframe src="https://snippet.dhtmlx.com/gb50vyip?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
+<iframe src="https://snippet.dhtmlx.com/gb50vyip?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

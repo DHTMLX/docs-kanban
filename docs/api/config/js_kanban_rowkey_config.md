@@ -43,4 +43,4 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Related sample:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?mode=wide)
+**Related sample:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
