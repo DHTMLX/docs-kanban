@@ -52,7 +52,7 @@ readonly: {
 
 ### Example
 
-~~~jsx {3-8}
+~~~jsx {4-9}
 new kanban.Kanban("#root", {
 	cards,
 	columns,
