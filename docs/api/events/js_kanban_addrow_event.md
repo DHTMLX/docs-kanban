@@ -15,7 +15,8 @@ description: You can learn about the add-row event in the documentation of the D
 ~~~jsx {}
 "add-row": ({
 	id?: string | number,
-	row?: object
+	row?: object,
+	before?: string | number
 }) => void;
 ~~~
 
@@ -25,6 +26,7 @@ The callback of the **add-row** event can take an object with the the following 
 
 - `id` - (optional) the ID of the new row
 - `row` - (optional) the data object of the new row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
+- `before` - (optional) the ID of the row, before which the new row will be placed
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
@@ -44,4 +46,4 @@ board.api.on("add-row", (obj) => {
 });
 ~~~
 
-**Change log**: The **id** and **row** parameters were added in v1.1
+**Change log**: The **id**, **before** and **row** parameters were added in v1.1
