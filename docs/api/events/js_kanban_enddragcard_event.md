@@ -8,7 +8,7 @@ description: You can learn about the end-drag-card event in the documentation of
 
 ### Description
 
-@short: Fires when start dragging a card
+@short: Fires when stop dragging a card
 
 ### Usage
 
