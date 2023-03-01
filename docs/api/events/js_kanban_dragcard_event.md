@@ -49,3 +49,5 @@ board.api.on("drag-card", (obj) => {
 	console.log(obj.columnId);
 });
 ~~~
+
+**Change log:** The event was added in v1.4

@@ -16,7 +16,9 @@ description: You can have an Events overview of JavaScript Kanban in the documen
 | [](../events/js_kanban_deletecolumn_event.md)             | @getshort(../events/js_kanban_deletecolumn_event.md)    |
 | [](../events/js_kanban_deletecomment_event.md)            | @getshort(../events/js_kanban_deletecomment_event.md)   |
 | [](../events/js_kanban_deleterow_event.md)                | @getshort(../events/js_kanban_deleterow_event.md)       |
+| [](../events/js_kanban_dragcard_event.md)                 | @getshort(../events/js_kanban_dragcard_event.md)        |
 | [](../events/js_kanban_duplicatecard_event.md)            | @getshort(../events/js_kanban_duplicatecard_event.md)   |
+| [](../events/js_kanban_enddragcard_event.md)              | @getshort(../events/js_kanban_enddragcard_event.md)     |
 | [](../events/js_kanban_movecard_event.md)                 | @getshort(../events/js_kanban_movecard_event.md)        |
 | [](../events/js_kanban_movecolumn_event.md)               | @getshort(../events/js_kanban_movecolumn_event.md)      |
 | [](../events/js_kanban_moverow_event.md)                  | @getshort(../events/js_kanban_moverow_event.md)         |
@@ -25,6 +27,7 @@ description: You can have an Events overview of JavaScript Kanban in the documen
 | [](../events/js_kanban_setedit_event.md)                  | @getshort(../events/js_kanban_setedit_event.md)         |
 | [](../events/js_kanban_setsearch_event.md)                | @getshort(../events/js_kanban_setsearch_event.md)       |
 | [](../events/js_kanban_setsort_event.md)                  | @getshort(../events/js_kanban_setsort_event.md)         |
+| [](../events/js_kanban_startdragcard_event.md)            | @getshort(../events/js_kanban_startdragcard_event.md)   |
 | [](../events/js_kanban_unselectcard_event.md)             | @getshort(../events/js_kanban_unselectcard_event.md)    |
 | [](../events/js_kanban_updatecard_event.md)               | @getshort(../events/js_kanban_updatecard_event.md)      |
 | [](../events/js_kanban_updatecolumn_event.md)             | @getshort(../events/js_kanban_updatecolumn_event.md)    |
