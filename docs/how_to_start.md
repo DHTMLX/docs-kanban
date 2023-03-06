@@ -35,6 +35,22 @@ There are two necessary files:
 </html>
 ~~~
 
+:::info
+You can also import Kanban into your project using `yarn` or `npm` commands. To get the trial version of Kanban, run the following commands:
+
+~~~jsx {2-3,6-7}
+// npm
+npm config set @dhx:registry https://npm.dhtmlx.com
+npm add @dhx/trial-kanban
+
+// yarn
+yarn config set @dhx:registry https://npm.dhtmlx.com
+yarn add @dhx/trial-kanban
+~~~
+
+To get PRO version of Kanban, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
+:::
+
 ## Step 2. Creating Kanban
 
 Now you are ready to add Kanban to the page. First, let's create the DIV containers for Kanban and its Toolbar. So, take the following steps:
