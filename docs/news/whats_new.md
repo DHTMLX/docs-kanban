@@ -29,8 +29,11 @@ Released on Month Day, 2022 [TODO]
 
 - **Events:** 
 	[`add-comment`](../../api/events/js_kanban_addcomment_event),
-	[`delete-comment`](../../api/events/js_kanban_deletecomment_event) and
-	[`update-comment`](../../api/events/js_kanban_updatecomment_event)
+	[`delete-comment`](../../api/events/js_kanban_deletecomment_event),
+	[`update-comment`](../../api/events/js_kanban_updatecomment_event),
+	[`start-drag-card`](../../api/events/js_kanban_startdragcard_event),
+	[`drag-card`](../../api/events/js_kanban_dragcard_event) and
+	[`end-drag-card`](../../api/events/js_kanban_enddragcard_event)
 
 - **Methods:**
 	[`addComment()`](../../api/methods/js_kanban_addcomment_method),
@@ -54,6 +57,7 @@ Starting from version 1.4 you can initialize and [configure the editor as a sepa
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type), [***subtasks*** and ***parent***](../../guides/configuration/#subtasks-and-parent-types)  types
 	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent***  parameter
+	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter
 
 ## Version 1.3
 
