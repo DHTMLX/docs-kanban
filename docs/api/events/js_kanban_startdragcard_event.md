@@ -17,7 +17,8 @@ description: You can learn about the start-drag-card event in the documentation 
     id: string | number,
     columnId: string | number,
     rowId?: string | number,
-    before?: string | number
+    before?: string | number,
+    source: array
 }) => void;
 ~~~
 
@@ -29,6 +30,7 @@ The callback of the **start-drag-card** event can take an object with the follow
 - `columnId` - (required) the ID of the column where the card currently is
 - `rowId` - (optional)  the ID of the row where the card currently is
 - `before` - (optional) the ID of a card that is currently after the dragged card in the column
+- `source` - (optional) the array of moved cards' IDs
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
