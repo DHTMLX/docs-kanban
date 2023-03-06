@@ -15,7 +15,8 @@ description: You can learn about the addRow method in the documentation of the D
 ~~~jsx {}
 addRow({
 	id?: string | number,
-	row?: object
+	row?: object,
+	before?: string | number
 }): void;
 ~~~
 
@@ -23,6 +24,7 @@ addRow({
 
 - `id` - (optional) the ID of the new row
 - `row` - (optional) the data object of the new row
+- `before` - (optional) the ID of the row, before which the new row will be placed 
 
 :::info
 The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
@@ -30,7 +32,7 @@ The full list of the **row** parameters can be found [**here**](api/config/js_ka
 
 ### Example
 
-~~~jsx {8-14}
+~~~jsx {8-15}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -43,8 +45,9 @@ board.addRow({
 	row: {
 		label: "Extra row",
 		collapsed: false
-	}
+	},
+	before: "row_2"
 });
 ~~~
 
-**Change log**: The **id** and **row** parameters were added in v1.1
+**Change log**: The **id**,  **row** and **before** parameters were added in v1.1

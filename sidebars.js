@@ -152,23 +152,7 @@ module.exports = {
 								"api/internal/js_kanban_getstores_method"
 							]
 						},
-						{
-							type: "category",
-							label: "REST methods",
-							collapsible: true,
-							collapsed: true,
-							link: {
-								type: 'doc',
-								id: "api/overview/internal_rest_overview"
-							},
-							items: [
-								"api/provider/js_kanban_getcards_method",
-								"api/provider/js_kanban_getcolumns_method",
-								"api/provider/js_kanban_getrows_method",
-								"api/provider/js_kanban_getusers_method"
-							]
-						}
-					]
+											]
 				},
 				{
 					type: "category",
@@ -304,6 +288,132 @@ module.exports = {
 						"api/common/js_kanban_meta_parameter",
 					]
 				},
+				// RestDataProvider api
+		
+				{
+					type: "category",
+					label: "RestDataProvider API",
+					collapsible: true,
+					collapsed: true,
+					link: {
+						type: 'generated-index',
+						title: "RestDataProvider API",
+						keywords: ['rest api'],
+						image: '/img/docusaurus.png'
+					},
+					items: [
+						{
+							type: "category",
+							label: "REST methods",
+							collapsible: true,
+							collapsed: true,
+							link: {
+								type: 'doc',
+								id: "api/overview/internal_rest_overview"
+							},
+							items: [
+								"api/provider/rest_methods/js_kanban_getcards_method",
+								"api/provider/rest_methods/js_kanban_getcolumns_method",
+								"api/provider/rest_methods/js_kanban_getrows_method",
+								"api/provider/rest_methods/js_kanban_getusers_method",
+								"api/provider/rest_methods/js_kanban_send_method",
+							]
+						},
+
+						{
+						type: "category",
+						label: "REST routes",
+						collapsed: true,
+						link: {
+							type: 'doc',
+							id: "api/overview/rest_routes_overview"
+														
+						},
+						
+						items: [
+							{
+								type: "category",
+								label: "GET routes",
+								collapsed: true,
+								link: {
+									type: 'generated-index',
+									title: "GET routes",
+						keywords: ['routes'],
+						image: '/img/docusaurus.png'
+								},
+								items: [
+									"api/provider/rest_routes/get_routes/js_kanban_get_cards_route",
+									"api/provider/rest_routes/get_routes/js_kanban_get_columns_route",	
+									"api/provider/rest_routes/get_routes/js_kanban_get_rows_route",
+									"api/provider/rest_routes/get_routes/js_kanban_get_users_route",
+									"api/provider/rest_routes/get_routes/js_kanban_get_uploads_route",
+								]
+		
+							},
+							{
+								type: "category",
+								label: "POST routes",
+								collapsed: true,
+								link: {
+									type: 'generated-index',
+									title: "POST routes",
+						keywords: ['routes'],
+						image: '/img/docusaurus.png'
+								},
+								items: [
+									"api/provider/rest_routes/post_routes/js_kanban_post_cards_route",
+									"api/provider/rest_routes/post_routes/js_kanban_post_rows_route",
+									"api/provider/rest_routes/post_routes/js_kanban_post_columns_route",
+									"api/provider/rest_routes/post_routes/js_kanban_post_uploads_route",
+									
+								]
+		
+							},
+							{
+								type: "category",
+								label: "PUT routes",
+								collapsed: true,
+								link: {
+									type: 'generated-index',
+									title: "PUT routes",
+						keywords: ['routes'],
+						image: '/img/docusaurus.png'
+								},
+								items: [
+									"api/provider/rest_routes/put_routes/js_kanban_put_cards_route",
+									"api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route",
+									"api/provider/rest_routes/put_routes/js_kanban_put_rows_route",
+									"api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route",
+									"api/provider/rest_routes/put_routes/js_kanban_put_columns_route",	
+									"api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route",
+								
+								]
+		
+							},
+		
+							{
+								type: "category",
+								label: "DELETE routes",
+								collapsed: true,
+								link: {
+									type: 'generated-index',
+									title: "DELETE routes",
+						keywords: ['routes'],
+						image: '/img/docusaurus.png'
+								},
+								items: [
+									"api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route",
+									"api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route",
+									"api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route",						
+								
+								]
+		
+							}
+						]
+						
+					}		
+				]
+			  },
 			]
 		},
 		{

@@ -51,15 +51,21 @@ The method returns an object with the following parameters:
 
 ### Example
 
-~~~jsx {7}
+~~~jsx {7-14}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
-	cards
+	cards,
+	rows
 });
-// get the StateStore of Kanban
+// get the State of Kanban
 const state = board.api.getState();
-console.log(state);
+console.log(state.cards); // output the cards data
+console.log(state.columns); // output the columns data
+console.log(state.rows); // output the rows data
+console.log(state.cardShape); // output the card configuration
+console.log(state.editorShape); // output the editor configuration
+//...
 ~~~
 
 **Change log:** The method was updated in v1.2

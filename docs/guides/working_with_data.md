@@ -8,7 +8,7 @@ description: You can explore how to work with Data in the documentation of the D
 
 ## Initial data loading
 
-When initializing Kanban, you can to provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
+When initializing Kanban, you can provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
 
 ~~~jsx {1,16,68,81-85}
 const columns = [ // data for columns
@@ -113,7 +113,7 @@ board.parse({ columns, cards, rows });
 
 In this snippet you can see how to sync Kanban data with other DHTMLX widgets, namely [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) and [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/):
 
-<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Getting Kanban data
 
@@ -173,4 +173,4 @@ To move the *cards*, *columns* and *rows*, you can use the following methods:
 
 In this snippet you can see how to use Kanban API for working with data:
 
-<iframe src="https://snippet.dhtmlx.com/61crsls3?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/61crsls3?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
