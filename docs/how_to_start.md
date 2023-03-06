@@ -41,7 +41,7 @@ You can also import Kanban into your project using `yarn` or `npm` commands. To 
 ~~~jsx {2-3,6-7}
 // npm
 npm config set @dhx:registry https://npm.dhtmlx.com
-npm add @dhx/trial-kanban
+npm i @dhx/trial-kanban
 
 // yarn
 yarn config set @dhx:registry https://npm.dhtmlx.com
