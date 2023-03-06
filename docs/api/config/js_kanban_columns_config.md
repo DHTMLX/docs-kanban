@@ -19,7 +19,8 @@ columns?: [
 		label?: string,
 		collapsed?: boolean,
 		limit?: number | object,
-		strictLimit?: boolean
+		strictLimit?: boolean,
+		css?: string
 	},
 	{...} // other columns data
 ];
@@ -36,6 +37,7 @@ For each column you can specify the following parameters (data):
 	- `number` - a limit of cards in the current column
 	- `object` - an object with the limits of cards for each row (swimlane) by its ID
 - `strictLimit` - (optional) a strict limit mode. If ***true***, a user will not be able to create new cards over the specified number via the **limit** parameter. Default value is ***false*** 
+- `css` - (optional) defines css styles for a separate column
 
 :::info
 If you want to load new data for columns dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
@@ -43,14 +45,15 @@ If you want to load new data for columns dynamically, you can use the [**parse()
 
 ### Example
 
-~~~jsx {1-21,24}
+~~~jsx {1-22,25}
 const columns = [
 	{ 
 		label: "Backlog", 
 		id: "backlog",
 		collapsed: true,
 		limit: 3,
-		strictLimit: true 
+		strictLimit: true,
+		css: "red" 
 	},
 	{ 
 		label: "In progress", 
@@ -76,8 +79,13 @@ new kanban.Kanban("#root", {
 
 **Change log:**
 - Starting from v1.1 the **columns** property is optional
-- The **collapsed** parameter was added in v1.1 
+- The **collapsed** parameter was added in v1.1
 - The **limit** parameter was added in v1.1
 - The **strictLimit** parameter was added in v1.1
+- The **css** parameter was added in v1.4
 
-**Related sample:** [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8)
+**Related article:** [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
+
+**Related samples:** 
+- [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8)
+- [Kanban. Custom CSS for columns](https://snippet.dhtmlx.com/2w9h9bi8)
