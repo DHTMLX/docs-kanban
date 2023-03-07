@@ -159,12 +159,12 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::info
-For the editor field of **"multiselect"** type you can also specify a path to the preview image via the **avatar** property:
+For the editor field of **"multiselect"** and **"combo"** types you can also specify a path to the preview image via the **avatar** property:
 
 ~~~jsx {3,9,13}
 editorShape: [
 	{
-		type: "multiselect", 
+		type: "multiselect", // or "combo"
 		key: "users", // the "users" key is used when configuring the "cardShape" property
 		label: "Users",
 		values: [

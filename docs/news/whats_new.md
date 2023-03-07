@@ -53,7 +53,7 @@ Starting from version 1.4 you can initialize and [configure the editor as a sepa
 ### Updates
 - #### Properties
 
-	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments*** and ***subtasks*** parameters. The ***users*** parameter of this property was updated
+	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments*** and ***subtasks*** parameters.
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type), [***subtasks*** and ***parent***](../../guides/configuration/#subtasks-and-parent-types)  types
 	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent***  parameter

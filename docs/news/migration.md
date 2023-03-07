@@ -12,35 +12,6 @@ description: You can learn about the Migration to Newer Versions in the document
 
 #### Properties
 
-- The [`cardShape.users`](../../api/config/js_kanban_cardshape_config) property of Kanban was updated in the following way:
-
-    ~~~jsx {} title="Before v1.4"
-        {
-            show: true,
-            values: [ 
-                { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
-                { id: 2, label: "Aaron Short" }
-            ]
-        }
-    ~~~
-
-    ~~~jsx {3-9} title="From v1.4"
-        {
-            show: true,
-            limit: (card) => {
-                if (card.column === "backlog") {
-                    return 3
-                }
-                return 2
-            },
-            showLimit: true,
-            values: [ 
-                { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
-                { id: 2, label: "Aaron Short" }
-            ]
-        }
-    ~~~
-
 - The [`editor`](../../api/config/js_kanban_editor_config) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
