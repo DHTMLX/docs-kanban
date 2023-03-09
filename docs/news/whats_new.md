@@ -45,12 +45,14 @@ Released on Month Day, 2022 [TODO]
 ### Updates
 - #### Properties
 
-	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***subtasks*** and ***votes*** parameters.
-	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type), [***subtasks*** and ***parent***](../../guides/configuration/#subtasks-and-parent-types)  types
-	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
+	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***css*** and ***votes*** parameters.
+	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter.
+	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter.
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent*** and ***css***  parameter
 	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter
 	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
+	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type), [***subtasks*** and ***parent***](../../guides/configuration/#subtasks-and-parent-types)  types
+	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
 
 ## Version 1.3
 

@@ -12,6 +12,66 @@ description: You can learn about the Migration to Newer Versions in the document
 
 #### Properties
 
+- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        {
+            label: true,
+            description: true,
+            // other parameters
+        }
+    ~~~
+
+    ~~~jsx {4-6} title="From v1.4"
+        {
+            label: true,
+            description: true,
+            votes: true,
+            comments: true,
+            css: (card) => card.type == "feature" ? "green" : "red",
+            // other parameters
+        } 
+    ~~~
+
+- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        {
+            menu: {
+                show: true,
+                // other parameters
+            }
+        }
+    ~~~
+
+    ~~~jsx {6} title="From v1.4"
+        {
+            menu: {
+                show: true,
+                // other parameters
+            },
+            css: (column, cards) => column.id == "feature" && cards.length < 5 ? "green" : "red"
+        } 
+    ~~~
+
+- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        {
+            menu: {
+                show: true,
+                // other parameters
+            }
+        }
+    ~~~
+
+    ~~~jsx {} title="From v1.4"
+        {
+            css: (row, cards) => row.id == "task" && cards.length < 5 ? "green" : "red",
+            // other parameters
+        } 
+    ~~~
+
 - The [`editor`](../../api/config/js_kanban_editor_config) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
