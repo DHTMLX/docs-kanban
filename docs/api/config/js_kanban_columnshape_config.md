@@ -26,7 +26,8 @@ columnShape?: {
 			}, 
 			{...}
 		] | ({ column, columnIndex, store }) => array | boolean
-	}
+	},
+	css?: (column, cards) => string
 };
 ~~~
 
@@ -80,6 +81,8 @@ To configure the columns appearance, in the **columnShape** object you can speci
 	~~~
 	:::
 
+- `css` - a function returns a css class that applies to columns conditionally
+
 ### Default config
 
 ~~~jsx {}
@@ -110,7 +113,7 @@ const columnShape = {
 
 ### Example
 
-~~~jsx {1-22,28}
+~~~jsx {1-23,29}
 const columnShape = {
 	menu: {
 		show: true,
@@ -131,7 +134,8 @@ const columnShape = {
 				disabled: true
 			}
 		]
-	}
+	},
+	css: (column, cards) => column.id == "feature" && cards.length < 5 ? "green" : "red"
 };
 
 new kanban.Kanban("#root", {
@@ -143,7 +147,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The property was added in v1.2
+**Change log:** The ***css*** parameter was added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
