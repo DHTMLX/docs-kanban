@@ -68,6 +68,7 @@ cardShape?: {
 			{...} // other priorities data
 		]
 	},	
+	votes?: boolean | { show?: boolean }, 
 	headerFields?: [
 		{
 			key: string,
@@ -116,7 +117,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 	- `show` - (optional) - enables/disables a card context menu
 	- `items` - (optional) an array of objects containing parameters of items of the cards context menu. For each item you can specify the following parameters:
 		- `id` - (optional) an ID of the menu item
-		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
 		- `label` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
 		- `onClick` - (optional) a custom callback function, that takes the following arguments:
@@ -174,6 +175,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 		- `id` - (required) a priority **ID**
 		- `label` - (optional) a priority name
 		- `color` - (required) a valid HEX code
+- `votes` - (optional) shows/hides **votes** on cards. If **true**, the corresponding control will be displayed in the editor
 - `headerFields` - (optional) an array of objects with the **custom fields** data. Here you can specify the following parameters:
 	- `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
 	- `label` - (optional) a label of the custom field
@@ -290,7 +292,7 @@ new kanban.Kanban("#root", {
 **Change log:**
 
 - The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) were updated in v1.2
-- The ***comments*** and ***subtasks*** parameters (fields) were added in v1.4
+- The ***comments***, ***subtasks*** and ***votes*** parameters (fields) were added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 

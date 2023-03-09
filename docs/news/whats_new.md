@@ -21,9 +21,9 @@ Released on Month Day, 2022 [TODO]
 	- [Kanban. Comments on a separate page](https://snippet.dhtmlx.com/waal2pd4)
 	- [Kanban. HTML markup in comments](https://snippet.dhtmlx.com/q34l0yl4)
 	- [Kanban. Markdown parser in comments](https://snippet.dhtmlx.com/25hvpo7n)
-- An ability to limit users (see the [example](https://snippet.dhtmlx.com/q6iiplhz))
+- An ability to limit users (see the [example](https://snippet.dhtmlx.com/q6iiplhz)) ???
 - An ability to add subtasks to the cards (see the [example](https://snippet.dhtmlx.com/01k7qv5z))
-- An ability to edit cards in a modal window (see the [example](https://snippet.dhtmlx.com/qezjxegd))
+
 
 ### New API
 
@@ -43,17 +43,10 @@ Released on Month Day, 2022 [TODO]
 - **Properties:**
 	[`currentUser`](../../api/config/js_kanban_currentuser_config)
 
-### New Component
-
-Starting from version 1.4 you can initialize and [configure the editor as a separate component](../../guides/configuration/#configuring-an-external-editor). For this, you can use the following API:
-
-- [`api`](../../api/config/external_editor_api_config) and
-- [`config`](../../api/config/external_editor_config_config)
-
 ### Updates
 - #### Properties
 
-	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments*** and ***subtasks*** parameters.
+	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***subtasks*** and ***votes*** parameters.
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type), [***subtasks*** and ***parent***](../../guides/configuration/#subtasks-and-parent-types)  types
 	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent***  parameter
