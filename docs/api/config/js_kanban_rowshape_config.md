@@ -26,7 +26,8 @@ rowShape?: {
 			}, 
 			{...}
 		] | ({ row, rowIndex, store }) => array | boolean
-	}
+	},
+	css?: (row, cards) => string
 };
 ~~~
 
@@ -79,6 +80,8 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 	~~~
 	:::
 
+- `css` - a function returns a css class that applies to rows conditionally
+
 ### Default config
 
 ~~~jsx {}
@@ -108,7 +111,7 @@ const rowShape = {
 
 ### Example
 
-~~~jsx {1-20,26}
+~~~jsx {1-22,28}
 const rowShape = {
 	menu: {
 		show: true,
@@ -128,6 +131,8 @@ const rowShape = {
 				disabled: true
 			}
 		]
+	},
+	css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red"
 };
 
 new kanban.Kanban("#root", {
@@ -139,7 +144,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The property was added in v1.2
+**Change log:** The ***css*** parameter was added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
