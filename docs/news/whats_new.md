@@ -24,7 +24,6 @@ Released on Month Day, 2022 [TODO]
 - An ability to limit users (see the [example](https://snippet.dhtmlx.com/q6iiplhz)) ???
 - An ability to add subtasks to the cards (see the [example](https://snippet.dhtmlx.com/01k7qv5z))
 
-
 ### New API
 
 - **Events:** 
@@ -49,8 +48,9 @@ Released on Month Day, 2022 [TODO]
 	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***subtasks*** and ***votes*** parameters.
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type), [***subtasks*** and ***parent***](../../guides/configuration/#subtasks-and-parent-types)  types
 	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
-	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent***  parameter
+	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent*** and ***css***  parameter
 	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter
+	!!! - The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
 
 ## Version 1.3
 

@@ -84,7 +84,9 @@ new kanban.Kanban("#root", {
 - The **strictLimit** parameter was added in v1.1
 - The **css** parameter was added in v1.4
 
-**Related article:** [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
+**Related article:** 
+- [Working with data](../../../guides/working_with_data)
+- [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 
 **Related samples:** 
 - [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8)

@@ -43,13 +43,14 @@ description: You can learn about the Migration to Newer Versions in the document
         ]
     ~~~
 
-    ~~~jsx {6} title="From v1.4"
+    ~~~jsx {6-7} title="From v1.4"
         [
             {
                 id: 1,
                 label: "Integration with React",
                 description: "Some description",
                 parent: 3,
+                css: "red"
                 // other parameters
             }, ...
         ]
