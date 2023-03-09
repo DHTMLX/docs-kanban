@@ -69,6 +69,7 @@ cardShape?: {
 		]
 	},	
 	votes?: boolean | { show?: boolean }, 
+	css?: (card) => string,
 	headerFields?: [
 		{
 			key: string,
@@ -176,6 +177,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 		- `label` - (optional) a priority name
 		- `color` - (required) a valid HEX code
 - `votes` - (optional) shows/hides **votes** on cards. If **true**, the corresponding control will be displayed in the editor
+- `css` - a function returns a css class that applies to cards conditionally
 - `headerFields` - (optional) an array of objects with the **custom fields** data. Here you can specify the following parameters:
 	- `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
 	- `label` - (optional) a label of the custom field
@@ -235,7 +237,7 @@ const defaultCardShape = {
 
 ### Example
 
-~~~jsx {14-51,56}
+~~~jsx {14-53,58}
 const users = [ // users data
 	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
@@ -272,6 +274,8 @@ const cardShape = { // card settings
 		show: true,
 		values: cardPriority
 	},
+	votes: true,
+	css: (card) => card.type == "feature" ? "green" : "red",
 	headerFields: [
 		{ // custom field
 			key: "sprint",
@@ -292,7 +296,7 @@ new kanban.Kanban("#root", {
 **Change log:**
 
 - The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) were updated in v1.2
-- The ***comments***, ***subtasks*** and ***votes*** parameters (fields) were added in v1.4
+- The ***comments***, ***css*** and ***votes*** parameters were added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
