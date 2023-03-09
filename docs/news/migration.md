@@ -78,6 +78,29 @@ description: You can learn about the Migration to Newer Versions in the document
             }, ...
         ]
     ~~~
+
+    - The [`rows`](../../api/config/js_kanban_rows_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        [
+            {
+                id: "features",
+                label: "Features",
+                // other parameters
+            }, ...
+        ]
+    ~~~
+
+    ~~~jsx {5} title="From v1.4"
+        [
+            {
+                id: "features",
+                label: "Features",
+                css: "green"
+                // other parameters
+            }, ...
+        ]
+    ~~~
 ## 1.2 -> 1.3
 
 ### Api

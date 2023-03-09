@@ -50,7 +50,7 @@ Released on Month Day, 2022 [TODO]
 	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent*** and ***css***  parameter
 	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter
-	!!! - The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
+	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
 
 ## Version 1.3
 
