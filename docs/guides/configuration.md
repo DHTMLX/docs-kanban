@@ -280,13 +280,14 @@ new kanban.Kanban("#root", {
 
 The editor field of **date** type can be set in the following way:
 
-~~~jsx {3-7}
+~~~jsx {3-8}
 new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "date", 
             key: "start_date",
-            label: "Start date"
+            label: "Start date",
+            format: "%d/%m/%y"
         },
         // settings of other fields
     ]
@@ -295,7 +296,7 @@ new kanban.Kanban("#root", {
 
 The editor field of **dateRange** type can be set in the following way:
 
-~~~jsx {3-10}
+~~~jsx {3-11}
 new kanban.Kanban("#root", {
     editorShape: [
         {
@@ -304,7 +305,8 @@ new kanban.Kanban("#root", {
                 start: "start_date",
                 end: "end_date"
             },
-            label: "Date Range"
+            label: "Date Range",
+            format: "%d/%m/%y"
         },
         // settings of other fields
     ]

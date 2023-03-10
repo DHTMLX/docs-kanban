@@ -12,7 +12,7 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Usage
 
-~~~jsx {3,8,14,24,31,40,47,56}
+~~~jsx {3,8,14,17,27,34,43,50,59}
 editorShape?: [
 	{
 		// common parameters for all types
@@ -25,6 +25,9 @@ editorShape?: [
 			start: string,
 			end: string
 		},
+
+		// for "date" and "dateRange" types
+		format?: string, 
 
 		// for "combo", "select" and "multiselect" types only
 		values?: [ 
@@ -85,7 +88,8 @@ To configure the editor appearance and functionality, you can specify the follow
 
 #### - Common parameters for all types
 
-- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange**, **comments**, **subtasks** and **parent**
+- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange** and **comments**
+
 - `key` - (required) an editor field key. Here you need to use the value specified in the [`cardShape`](../js_kanban_cardshape_config) property. See the example below:
 
 ~~~js {8,17}
@@ -121,6 +125,8 @@ To configure the editor appearance and functionality, you can specify the follow
 :::important
 The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config) property!
 :::
+
+- `format` - (optional) defines format of **"date"** and **"dateRange"** controls. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
 
 #### - Parameters for "combo", "select" and "multiselect" types
 
@@ -247,8 +253,6 @@ new kanban.Kanban("#root", {
 **Change log:**
 
 - The ***dateRange*** type was added in v1.3
-- The ***comments***, ***subtasks*** and ***parent*** types were added in v1.4
+- The ***comments***, and ***format*** parameters were added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#editor)
-
-**Related sample:** [Kanban. Subtasks](https://snippet.dhtmlx.com/01k7qv5z?text=#kanban)

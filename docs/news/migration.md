@@ -12,6 +12,37 @@ description: You can learn about the Migration to Newer Versions in the document
 
 #### Properties
 
+- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        {
+            type: "date", 
+            key: "start_date",
+            label: "Start date"
+        },
+        // other parameters
+    ~~~
+
+    ~~~jsx {5,7-16} title="From v1.4"
+        {
+            type: "date", // or you can also use the "dateRange" type
+            key: "start_date",
+            label: "Date Range"
+            format: "%d/%m/%y"
+        },
+        {
+            type: "comments",
+            key: "comments",
+            label: "Comments",
+            config: {
+                dateFormat: "%M %d",
+                placement: "page", // or "editor"
+                html: true,
+            },
+        },
+        // other parameters
+    ~~~
+
 - The [`cardShape`](../../api/config/js_kanban_cardshape_config) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
@@ -67,8 +98,11 @@ description: You can learn about the Migration to Newer Versions in the document
 
     ~~~jsx {} title="From v1.4"
         {
+            menu: {
+                show: true,
+                // other parameters
+            },
             css: (row, cards) => row.id == "task" && cards.length < 5 ? "green" : "red",
-            // other parameters
         } 
     ~~~
 
