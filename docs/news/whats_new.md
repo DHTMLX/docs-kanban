@@ -30,6 +30,8 @@ Released on Month Day, 2022 [TODO]
 	[`add-comment`](../../api/events/js_kanban_addcomment_event),
 	[`delete-comment`](../../api/events/js_kanban_deletecomment_event),
 	[`update-comment`](../../api/events/js_kanban_updatecomment_event),
+	[`add-link`](../../api/events/js_kanban_addlink_event),
+	[`delete-link`](../../api/events/js_kanban_deletelink_event),
 	[`start-drag-card`](../../api/events/js_kanban_startdragcard_event),
 	[`drag-card`](../../api/events/js_kanban_dragcard_event) and
 	[`end-drag-card`](../../api/events/js_kanban_enddragcard_event)

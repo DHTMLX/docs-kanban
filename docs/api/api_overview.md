@@ -114,10 +114,12 @@ new kanban.Editor("#editor", {
 | [](api/events/js_kanban_addcard_event.md)                  | @getshort(api/events/js_kanban_addcard_event.md)         |
 | [](api/events/js_kanban_addcolumn_event.md)                | @getshort(api/events/js_kanban_addcolumn_event.md)       |
 | [](api/events/js_kanban_addcomment_event.md)               | @getshort(api/events/js_kanban_addcomment_event.md)      |
+| [](api/events/js_kanban_addlink_event.md)                  | @getshort(api/events/js_kanban_addlink_event.md)         |
 | [](api/events/js_kanban_addrow_event.md)                   | @getshort(api/events/js_kanban_addrow_event.md)          |
 | [](api/events/js_kanban_deletecard_event.md)               | @getshort(api/events/js_kanban_deletecard_event.md)      |
 | [](api/events/js_kanban_deletecolumn_event.md)             | @getshort(api/events/js_kanban_deletecolumn_event.md)    |
 | [](api/events/js_kanban_deletecomment_event.md)            | @getshort(api/events/js_kanban_deletecomment_event.md)   |
+| [](api/events/js_kanban_deletelink_event.md)               | @getshort(api/events/js_kanban_deletelink_event.md)      |
 | [](api/events/js_kanban_deleterow_event.md)                | @getshort(api/events/js_kanban_deleterow_event.md)       |
 | [](api/events/js_kanban_dragcard_event.md)                 | @getshort(api/events/js_kanban_dragcard_event.md)        |
 | [](api/events/js_kanban_duplicatecard_event.md)            | @getshort(api/events/js_kanban_duplicatecard_event.md)   |
