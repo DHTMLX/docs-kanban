@@ -125,7 +125,7 @@ Unless you specify the card settings via the [`cardShape`](api/config/js_kanban_
 
 ## Editor
 
-Kanban supports the [**built-in**](#configuring-a-built-in-editor) and [**external**](#configuring-an-external-editor) types of editor. Each of them consists of the fields for managing the cards data. To configure the editor fields (controls), you can apply the [`editorShape`](api/config/js_kanban_editorshape_config.md) property.  Kanban allows you to specify the following types of the editor fields:
+The *Editor* of Kanban consists of the fields for managing the cards data. To configure the editor fields (controls), you can use the [`editorShape`](api/config/js_kanban_editorshape_config.md) property. You can use the following types of the editor fields:
 
 - [**combo**, **select**, and **multiselect**](#combo-select-and-multiselect-types)
 - [**color**](#color-type)
@@ -415,9 +415,9 @@ new kanban.Kanban("#root", {
 Unless you specify the editor settings via the [`editorShape`](api/config/js_kanban_editorshape_config.md) property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters. In this case, the default controls and inputs will be displayed in editor only after activating the corresponding fields of cards via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property.
 :::
 
-### Configuring a built-in editor
+### Configuring the editor
 
-The **built-in editor** is enabled by default. Using the [`editor`](api/config/js_kanban_editor_config.md) property, you can configure the editor in the following way:
+Using the [`editor`](api/config/js_kanban_editor_config.md) property, you can configure the editor in the following way:
 
 - show or hide the editor via the *`editor.show`* property
 - specify a place where the editor to be displayed via the *`editor.placement`* property. Here you can apply one of the following values:
@@ -439,37 +439,6 @@ new kanban.Kanban("#root", {
         debounce: 2000
     }
     // other parameters
-});
-~~~
-
-### Configuring an external editor
-
-If you want to use the **external editor** instead of a built-in one, take the following steps:
-
-- hide the built-in editor via the [`editor.show`](api/config/js_kanban_editor_config.md) property
-- create a separate container with a unique ID
-- initialize the **external editor** in a separate container via the **kanban.Editor()** constructor. In the configuration object you can specify the [`api`](api/config/external_editor_api_config.md) and [`config`](api/config/external_editor_config_config.md) properties.
-
-~~~jsx {5-7,14-20}
-// create Kanban
-const board = new kanban.Kanban("#root", {
-    editorShape,
-    cardShape,
-    editor: {
-        show: false // hide the built-in editor
-    },
-    cards,
-    columns
-    // other configuration parameters
-});
-
-// create external editor
-new kanban.Editor("#editor", {
-    api: board.api,
-    config: {
-        autoSave: true,
-        debounce: 2000
-    }
 });
 ~~~
 

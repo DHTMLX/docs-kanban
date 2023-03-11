@@ -91,13 +91,12 @@ In this section you can find out how to work with a card editor
 | ------------------------------------------------------------ | -------------------------------------------------------|
 | [Autosaving mode](api/config/js_kanban_editorautosave_config.md)| Learn how to enable/disable an editor autosave mode |
 | [Configuring editor fields](../guides/configuration/#editor)| Learn how to configure editor fields         |
-| [Configuring an external editor](../guides/configuration/#configuring-an-external-editor)| Learn how to configure an external editor |
-| [Configuring a built-in editor](../guides/configuration/#configuring-a-built-in-editor)| Learn how to configure a built-in editor |
+| [Configuring the editor](../guides/configuration/#configuring-the-editor)| Learn how to configure the editor |
 | [Updating editor settings](api/methods/js_kanban_setconfig_method.md)| Learn how to update editor settings            |
 
 ## How to work with columns
 
-In these sections you can find out how to perform operations with colums and work with columns data
+In these sections you can find out how to perform operations with columns and work with columns data
 
 ### Performing operations with columns
 

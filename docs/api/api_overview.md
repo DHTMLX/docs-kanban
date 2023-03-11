@@ -32,19 +32,6 @@ new kanban.Toolbar("#toolbar", {
 - an HTML container (the ID of the HTML container)
 - an object of the configuration parameters ([check here](#toolbar-properties))
 
-## External editor constructor
-
-~~~js
-new kanban.Editor("#editor", {
-	// configuration parameters
-});
-~~~
-
-**Parameters**:
-
-- an HTML container (the ID of the HTML container)
-- an object of the configuration parameters ([check here](#external-editor-properties))
-
 ## Kanban methods
 
 | Name                                                      | Description                                              |
@@ -179,13 +166,6 @@ new kanban.Editor("#editor", {
 | [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
 | [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
 | [](api/config/toolbar_locale_config.md)                    | @getshort(api/config/toolbar_locale_config.md)           |
-
-## External editor properties
-
-| Name                                                       | Description                                              |
-| -----------------------------------------------------------| ---------------------------------------------------------|
-| [](api/config/external_editor_api_config.md)               | @getshort(api/config/external_editor_api_config.md)      |
-| [](api/config/external_editor_config_config.md)            | @getshort(api/config/external_editor_config_config.md)   |
 
 ## Common settings
 
