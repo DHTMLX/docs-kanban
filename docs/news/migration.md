@@ -35,7 +35,7 @@ description: You can learn about the Migration to Newer Versions in the document
             key: "comments",
             label: "Comments",
             config: {
-                dateFormat: "%M %d",
+                format: "%M %d",
                 placement: "page", // or "editor"
                 html: true,
             },

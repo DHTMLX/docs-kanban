@@ -73,7 +73,7 @@ editorShape?: [
 
 		// for a "comments" type only
 		config?: {
-            dateFormat?: string,
+            format?: string,
             placement?: "page" | "editor",
             html?: boolean
         };
@@ -174,7 +174,7 @@ To set a control for assigning users (the ***users*** field of the [`cardShape`]
 #### - Parameters for a "comments" type
 
 - `config` - (optional) a configuration object of the **"comments"** field. Here you can specify the following parameters:
-	- `dateFormat` - (optional) - a date format of the comments. The available formats can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+	- `format` - (optional) - a date format of the comments. The available formats can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
 	- `placement` - (optional) - a place the comments will be displayed. You can set this property to the following values:
 		- `"editor"` - comments will be displayed in the editor
 		- `"page"` - comments will be displayed in a separate panel
@@ -227,7 +227,7 @@ const editorShape = [ // editor settings
 		key: "comments",
 		label: "Comments",
 		config: {
-			dateFormat: "%M %d",
+			format: "%M %d",
 			placement: "page",
 			html: true,
 		},
