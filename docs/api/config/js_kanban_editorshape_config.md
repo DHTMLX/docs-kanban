@@ -88,7 +88,11 @@ To configure the editor appearance and functionality, you can specify the follow
 
 #### - Common parameters for all types
 
-- `type` - (required) an editor field type. Here you can specify the following types: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange** and **comments**
+- `type` - (required) an editor field type
+
+:::important
+In the Kanban editor you can use the following types of fields: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange**, **comments** and **links**
+:::
 
 - `key` - (required) an editor field key. Here you need to use the value specified in the [`cardShape`](../js_kanban_cardshape_config) property. See the example below:
 
@@ -136,7 +140,7 @@ The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config
 	- `avatart` - (optional) a path to the option preview image (for a **"multiselect"** type only)
 
 :::important
-To set a control for assigning users (the ***users*** field of the [`cardShape`](../js_kanban_cardshape_config) property), you need to use the ***multiselect*** type only!
+To set the control for assigning one user, you need to use the ***"select"*** or ***"combo"*** types! For assigning several users, use the ***"multiselect"*** type.
 :::
 
 #### - Parameters for a "color" type
@@ -208,7 +212,7 @@ const defaultEditorShape = [
 
 ### Example
 
-~~~jsx {6-32,37}
+~~~jsx {6-29,34}
 const users = [ // user data
 	{ id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
 	{ id: 2, label: "Aaron Short" }
@@ -233,12 +237,9 @@ const editorShape = [ // editor settings
 		},
     },
 	{
-		type: "subtasks",
-		label: "Subtasks",
-	},
-	{
-		type: "parent",
-		label: "Parent",
+		type: "links",
+		key:"links",
+		label: "Links",
 	}
 ];
 
@@ -253,6 +254,6 @@ new kanban.Kanban("#root", {
 **Change log:**
 
 - The ***dateRange*** type was added in v1.3
-- The ***comments***, and ***format*** parameters were added in v1.4
+- The ***comments*** and ***links*** types of editor, and ***format*** parameters were added in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#editor)

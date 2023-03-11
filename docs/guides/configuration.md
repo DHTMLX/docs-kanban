@@ -134,7 +134,7 @@ Kanban supports the [**built-in**](#configuring-a-built-in-editor) and [**extern
 - [**files**](#files-type)
 - [**date** and **dataRange**](#date-and-daterange-types)
 - [**comments**](#comments-type)
-- [**subtasks** and **parent**](#subtasks-and-parent-types)
+- [**links**](#links-type)
 
 ### Combo, Select and Multiselect types
 
@@ -335,20 +335,17 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Subtasks and parent types
+### Links type
 
-The editor field of **subtasks** and **parent** types can be set in the following way:
+The editor field of **links** type can be set in the following way:
 
-~~~jsx {3-10}
+~~~jsx {3-7}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "subtasks",
-            label: "Subtasks",
-        },
-        {
-            type: "parent",
-            label: "Parent",
+            type: "links",
+            key: "links",
+            label: "Links",
         },
         // settings of other fields
     ]

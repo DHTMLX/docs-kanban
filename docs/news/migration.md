@@ -23,7 +23,7 @@ description: You can learn about the Migration to Newer Versions in the document
         // other parameters
     ~~~
 
-    ~~~jsx {5,7-16} title="From v1.4"
+    ~~~jsx {5,7-21} title="From v1.4"
         {
             type: "date", // or you can also use the "dateRange" type
             key: "start_date",
@@ -39,6 +39,11 @@ description: You can learn about the Migration to Newer Versions in the document
                 placement: "page", // or "editor"
                 html: true,
             },
+        },
+        {
+            type: "links",
+            key: "links",
+            label: "Links",
         },
         // other parameters
     ~~~
