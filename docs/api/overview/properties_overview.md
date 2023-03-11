@@ -22,6 +22,7 @@ To configure the **Kanban**, refer to the [Configuration](../../../guides/config
 | [~~editorAutoSave~~](../../config/js_kanban_editorautosave_config) | Deprecated! ~~Optional. Enables/disables an autosave mode~~ |
 | [](../config/js_kanban_editorshape_config.md)             | @getshort(../config/js_kanban_editorshape_config.md)    |
 | [](../config/js_kanban_history_config.md)                 | @getshort(../config/js_kanban_history_config.md)        |
+| [](../config/js_kanban_links_config.md)                   | @getshort(../config/js_kanban_links_config.md)          |
 | [](../config/js_kanban_locale_config.md)                  | @getshort(../config/js_kanban_locale_config.md)         |
 | [](../config/js_kanban_readonly_config.md)                | @getshort(../config/js_kanban_readonly_config.md)       |
 | [](../config/js_kanban_rendertype_config.md)              | @getshort(../config/js_kanban_rendertype_config.md)     |

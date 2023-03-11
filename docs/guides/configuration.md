@@ -14,10 +14,10 @@ You can configure the *Kanban* appearance and functionality via the correspondin
 - configure rendering and scrolling via the [`renderType`](api/config/js_kanban_rendertype_config.md) and [`scrollType`](api/config/js_kanban_scrolltype_config.md) properties
 - configure the Kanban history via the [`history`](api/config/js_kanban_history_config.md) property
 - customize the card appearance via the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property
-	- *Refer to the [**Customisation**](guides/customization.md) section for details!*
+	- *Refer to the [**Customization**](guides/customization.md) section for details!*
 - apply the desired locale via the [`locale`](api/config/js_kanban_locale_config.md) property
 	- *Refer to the [**Localization**](guides/localization.md) section for details!*
-- load data for cards, columns and rows via the corresponding [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md) and [`rows`](api/config/js_kanban_rows_config.md) properties
+- load data for cards, columns, rows and links via the corresponding [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md) and [`links`](api/config/js_kanban_links_config.md) properties
 	- *Refer to the [**Working with data**](guides/working_with_data.md) section for details!*
 
 ## Cards

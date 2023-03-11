@@ -21,12 +21,12 @@ Released on Month Day, 2022 [TODO]
 	- [Kanban. Comments on a separate page](https://snippet.dhtmlx.com/waal2pd4)
 	- [Kanban. HTML markup in comments](https://snippet.dhtmlx.com/q34l0yl4)
 	- [Kanban. Markdown parser in comments](https://snippet.dhtmlx.com/25hvpo7n)
-- An ability to limit users (see the [example](https://snippet.dhtmlx.com/q6iiplhz)) ???
-- An ability to add subtasks to the cards (see the [example](https://snippet.dhtmlx.com/01k7qv5z))
+- An ability to limit users (see the [example](https://snippet.dhtmlx.com/2rlg4qvk))
+- An ability to set links between cards (see the [example](https://snippet.dhtmlx.com/81qu7qh0))
 
 ### New API
 
-- **Events:** 
+- **Events:**
 	[`add-comment`](../../api/events/js_kanban_addcomment_event),
 	[`delete-comment`](../../api/events/js_kanban_deletecomment_event),
 	[`update-comment`](../../api/events/js_kanban_updatecomment_event),
@@ -41,6 +41,7 @@ Released on Month Day, 2022 [TODO]
 
 - **Properties:**
 	[`currentUser`](../../api/config/js_kanban_currentuser_config)
+	[`links`](../../api/config/js_kanban_links_config)
 
 ### Updates
 - #### Properties

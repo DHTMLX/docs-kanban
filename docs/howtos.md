@@ -51,6 +51,7 @@ In these sections you can find out how to perform operations with cards, work wi
 | [Selecting cards](api/methods/js_kanban_selectcard_method.md)| Learn how to select cards                   |
 | [Sorting cards](api/methods/js_kanban_setsort_method.md)     | Learn how to sort cards                     |
 | [Unselecting cards](api/methods/js_kanban_unselectcard_method.md)| Learn how to unselect cards             |
+| [Adding links between cards](api/config/js_kanban_links_config.md)| Learn how to add links between cards ([Example](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)) |
 
 ### Working with card data
 

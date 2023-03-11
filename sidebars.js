@@ -218,6 +218,7 @@ module.exports = {
 						// H
 						"api/config/js_kanban_history_config",
 						// L
+						"api/config/js_kanban_links_config",
 						"api/config/js_kanban_locale_config",
 						// R
 						"api/config/js_kanban_readonly_config",

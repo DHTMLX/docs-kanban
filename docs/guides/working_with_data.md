@@ -8,9 +8,9 @@ description: You can explore how to work with Data in the documentation of the D
 
 ## Initial data loading
 
-When initializing Kanban, you can provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md) and [**rows**](api/config/js_kanban_rows_config.md).
+When initializing Kanban, you can provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md), [**rows**](api/config/js_kanban_rows_config.md) and [**links**](api/config/js_kanban_links_config.md).
 
-~~~jsx {1,16,68,81-85}
+~~~jsx {1,17,70,83,95-98}
 const columns = [ // data for columns
 	{
 		label: "Backlog",
@@ -23,7 +23,8 @@ const columns = [ // data for columns
 	{
 		label: "Testing",
 		id: "testing"
-	}
+	},
+	{...}
 ];
 
 const cards = [ // data for cards
@@ -75,7 +76,8 @@ const cards = [ // data for cards
 		sprint: "1.2",
 		column: "inprogress",
 		type: "feature"
-	}
+	},
+	{...}
 ];
 
 const rows = [ // data for rows
@@ -87,14 +89,26 @@ const rows = [ // data for rows
 		label: "Task",
 		id: "task",
 		collapsed: true
-	}
+	},
+	{...}
+];
+
+const links = [
+	{
+		id: "link_1",
+		masterId: 1,
+		slaveId: 2,
+		relation: "relatesTo",
+	},
+	{...}
 ];
 
 // initializing Kanban with the initial data for columns, cards and rows
 new kanban.Kanban("#root", {
 	columns, 
 	cards, 
-	rows 
+	rows,
+	links 
 });
 ~~~
 
