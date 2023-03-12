@@ -6,7 +6,11 @@ description: You can learn about the stylization in the documentation of the DHT
 
 # Stylization
 
-You can stylize any part of the interface of JavaScript Kanban to meet your project requirements. For this, the library provides a wide range of CSS variables. Note, that Kanban includes two types of variables:
+Using Kanban, you can stylize **columns**, **rows** and **cards** appearance via the [`columnShape.css`](../../api/config/js_kanban_columnshape_config), [`rowShape.css`](../../api/config/js_kanban_rowshape_config) and [`cardShape.css`](../../api/config/js_kanban_cardshape_config) properties. These properties allow you styles columns, rows and cards conditionally.
+
+You can also apply a custom css class to a separate **column**, **row** and **card** via the [`columns.css`](../../api/config/js_kanban_columns_config), [`rows.css`](../../api/config/js_kanban_rows_config) and [`cards.css`](../../api/config/js_kanban_cards_config) properties.
+
+Besides, you can apply custom styles to any part of the Kanban interface to meet your project requirements. For this, the library provides a wide range of CSS variables. Note, that Kanban includes two types of variables:
 - CSS variables related to **Kanban** style
 - CSS variables related to the **WX** library style (*controls, calendars etc*)
 
@@ -146,7 +150,7 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 	--wx-styled-scroll-thumb-color: #babac0;
 	--wx-styled-scroll-width: 16px;
 	/* end of scroll style */
-	
+
 /* end of WX library css variables */
 }
 ~~~
@@ -154,6 +158,41 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 :::tip Note
 Next versions of Kanban can bring some changes for the variables and their names. Please, do not forget to check the names after updating to the newer versions and modify them in your code to avoid problems with display of the component.
 :::
+
+## Built-in themes
+
+You can use the [`theme`](../../api/config/js_kanban_theme_config) property to apply one of the following themes: **material**, **willow** and **willow-dark**.
+
+:::important
+Besides using the `theme` property, you can also apply the needed theme via adding the corresponding *css* classes to the widget containers:
+
+- **Material theme**
+~~~html {}
+	<!-- Kanban toolbar -->
+	<div id="toolbar" class="wx-material-theme"></div>
+	<!-- Kanban container -->
+	<div id="root" class="wx-material-theme"></div>
+~~~
+
+- **Willow theme**
+~~~html {}
+	<!-- Kanban toolbar -->
+	<div id="toolbar" class="wx-willow-theme"></div>
+	<!-- Kanban container -->
+	<div id="root" class="wx-willow-theme"></div>
+~~~
+
+- **Willow-Dark theme**
+~~~html {}
+	<!-- Kanban toolbar -->
+	<div id="toolbar" class="wx-willow-dark-theme"></div>
+	<!-- Kanban container -->
+	<div id="root" class="wx-willow-dark-theme"></div>
+~~~
+:::
+
+In this snippet you can see how to apply the **willow-dark** theme to Kanban
+<iframe src="https://snippet.dhtmlx.com/2ihqv6pz?mode=mobile" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Scroll style
 

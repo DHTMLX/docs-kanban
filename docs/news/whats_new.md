@@ -23,6 +23,8 @@ Released on Month Day, 2022 [TODO]
 	- [Kanban. Markdown parser in comments](https://snippet.dhtmlx.com/25hvpo7n)
 - An ability to limit users (see the [example](https://snippet.dhtmlx.com/2rlg4qvk))
 - An ability to set links between cards (see the [example](https://snippet.dhtmlx.com/81qu7qh0))
+- An ability to votes for a card
+- An ability to apply the **material**, **willow** and **willow-dark** themes
 
 ### New API
 
@@ -44,6 +46,7 @@ Released on Month Day, 2022 [TODO]
 - **Properties:**
 	[`currentUser`](../../api/config/js_kanban_currentuser_config)
 	[`links`](../../api/config/js_kanban_links_config)
+	[`theme`](../../api/config/js_kanban_theme_config)
 
 ### Updates
 - #### Properties

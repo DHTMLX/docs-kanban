@@ -150,6 +150,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/js_kanban_rows_config.md)                    | @getshort(api/config/js_kanban_rows_config.md)           |
 | [](api/config/js_kanban_rowshape_config.md)                | @getshort(api/config/js_kanban_rowshape_config.md)       |
 | [](api/config/js_kanban_scrolltype_config.md)              | @getshort(api/config/js_kanban_scrolltype_config.md)     |
+| [](api/config/js_kanban_theme_config.md)                   | @getshort(api/config/js_kanban_theme_config.md)          |
 
 ## Toolbar methods
 

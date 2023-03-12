@@ -229,7 +229,10 @@ module.exports = {
 						"api/config/js_kanban_rows_config",
 						"api/config/js_kanban_rowshape_config",
 						// S
-						"api/config/js_kanban_scrolltype_config"
+						"api/config/js_kanban_scrolltype_config",
+						// T
+						"api/config/js_kanban_theme_config"
+						
 					]
 				},
 				{
