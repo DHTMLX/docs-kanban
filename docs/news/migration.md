@@ -101,7 +101,7 @@ description: You can learn about the Migration to Newer Versions in the document
         }
     ~~~
 
-    ~~~jsx {} title="From v1.4"
+    ~~~jsx {6} title="From v1.4"
         {
             menu: {
                 show: true,
@@ -142,13 +142,12 @@ description: You can learn about the Migration to Newer Versions in the document
         ]
     ~~~
 
-    ~~~jsx {6-7} title="From v1.4"
+    ~~~jsx {6} title="From v1.4"
         [
             {
                 id: 1,
                 label: "Integration with React",
                 description: "Some description",
-                parent: 3,
                 css: "red"
                 // other parameters
             }, ...
@@ -178,7 +177,7 @@ description: You can learn about the Migration to Newer Versions in the document
         ]
     ~~~
 
-    - The [`rows`](../../api/config/js_kanban_rows_config) property of Kanban was updated in the following way:
+- The [`rows`](../../api/config/js_kanban_rows_config) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         [
@@ -199,6 +198,37 @@ description: You can learn about the Migration to Newer Versions in the document
                 // other parameters
             }, ...
         ]
+    ~~~
+
+- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        function cardTemplate({ cardFields, selected, dragging, cardShape }){
+            if (selected) {
+                return `
+                    <div class="custom-card" style="padding:20px">
+                        <div class="status-color" style="background:${cardFields.color}"></div>
+                        Selected:${cardFields.label}
+                    </div>
+                `;
+            }
+        }
+    ~~~
+
+    ~~~jsx {6-8} title="From v1.4"
+        function cardTemplate({ cardFields, selected, dragging, cardShape }){
+            if (selected) {
+                return `
+                    <div class="custom-card" style="padding:20px">
+                        <div class="status-color" style="background:${cardFields.color}"></div>
+                        <div data-menu-id=${cardFields.id} >
+                            <i class="wxi-dots-v"></i>
+                        </div>
+                        Selected:${cardFields.label}
+                    </div>
+                `;
+            }
+        }
     ~~~
 ## 1.2 -> 1.3
 

@@ -59,6 +59,7 @@ Released on Month Day, 2022 [TODO]
 	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
 	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
+	- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property has an ability to display context menu
 
 ## Version 1.3
 

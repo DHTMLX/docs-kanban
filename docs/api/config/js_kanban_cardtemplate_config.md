@@ -20,20 +20,29 @@ function cardTemplate ({ cardFields, selected, dragging, cardShape }){
 
 ### Parameters
 
-- `cardFields` - gets the data object of the card
-- `selected` - gets the selecting state of the card
-- `dragging` - gets the dragging state of the card
-- `cardShape` - gets the configuration object of the card
+The callback function takes an object with the following parameters:
+
+- `cardFields` - the data object of the card
+- `selected` - the selecting state of the card
+- `dragging` - the dragging state of the card
+- `cardShape` - the configuration object of the card
+
+:::important
+If you need to include a context menu into the card template, specify a custom icon in the template markup and provide the `data-menu-id=${cardFields.id}` expression as shown in the example below.
+:::
 
 ### Example
 
-~~~jsx {1-17,22}
+~~~jsx {1-23,28}
 function cardTemplate({ cardFields, selected, dragging, cardShape }){
-	const { label, color } = cardFields;
+	const { label, color, id } = cardFields;
 	if (selected) {
 		return `
 			<div class="custom-card" style="padding:20px">
 				<div class="status-color" style="background:${color}"></div>
+				<div data-menu-id=${id} >
+					<i class="wxi-dots-v"></i>
+				</div>
 				Selected:${label}
 			</div>
 		`;
@@ -41,6 +50,9 @@ function cardTemplate({ cardFields, selected, dragging, cardShape }){
 	return `
 		<div class="custom-card" style="padding:20px">
 			<div class="status-color" style="background:${color}"></div>
+			<div data-menu-id=${id} >
+				<i class="wxi-dots-v"></i>
+			</div>
 			${label}
 		</div>
 	`;
@@ -53,6 +65,8 @@ new kanban.Kanban("#root", {
 	// other parameters
 });
 ~~~
+
+**Change log:** The ability to display context menu was added in v1.4
 
 **Related articles:** [Customization](../../../guides/customization#custom-cards)
 
