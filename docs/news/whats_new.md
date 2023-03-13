@@ -16,15 +16,11 @@ Released on Month Day, 2022 [TODO]
 
 ### New functionality
 
-- An ability to add comments. See the following examples: 
-	- [Kanban. Comments](https://snippet.dhtmlx.com/f9ponfsg)
-	- [Kanban. Comments on a separate page](https://snippet.dhtmlx.com/waal2pd4)
-	- [Kanban. HTML markup in comments](https://snippet.dhtmlx.com/q34l0yl4)
-	- [Kanban. Markdown parser in comments](https://snippet.dhtmlx.com/25hvpo7n)
-- An ability to limit users (see the [example](https://snippet.dhtmlx.com/2rlg4qvk))
-- An ability to set links between cards (see the [example](https://snippet.dhtmlx.com/81qu7qh0))
-- An ability to votes for a card
-- An ability to apply the **material**, **willow** and **willow-dark** themes
+- An ability to add comments (Example TODO)
+- An ability to limit users (Example TODO)
+- An ability to set links between cards (Example TODO)
+- An ability to votes for a card (Example TODO)
+- An ability to apply the **material**, **willow** and **willow-dark** themes (Example TODO)
 
 ### New API
 
