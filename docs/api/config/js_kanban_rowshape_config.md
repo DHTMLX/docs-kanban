@@ -38,7 +38,31 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 - `menu` - (optional) an object of parameters of the rows context menu. Here you can specify the following parameters:
 	- `show` - (optional) enables/disables a row context menu
 	- `items` - (optional) an array of objects containing parameters of items of the rows context menu. For each item you can specify the following parameters:
-		- `id` - (optional) an ID of the menu item
+		- `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
+			- ***"set-edit"*** - defines the action to edit a row name
+			- ***"move-row:up"*** - defines the action to move a row up
+			- ***"move-row:down"*** - defines the action to move a row down
+			- ***"delete-row"*** - defines the action to delete a row
+		
+		:::important
+		If you want to implement a custom behavior using the `onClick` property, set the `id` property to the custom value to prevent te default behavior.
+
+		~~~jsx {2,8}
+			{
+				id: "custom-delete-row",
+				icon: "wxi-delete",
+				label: "Remove row",
+				onClick: ({ id, item, row }) => board.deleteRow({ id: row.id })
+			},
+			{
+				id: "custom-move-row:up",
+				icon: "wxi-arrow-up",
+				label: "Move up",
+				onClick: ({ id, item, row }) => board.moveRow({ id: row.id, before: "feature" })
+			}
+		~~~
+		:::
+
 		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
 		- `label` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
@@ -63,16 +87,16 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 			return [
 				{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
 				{
-					id: "delete-row",
+					id: "custom-delete-row",
 					icon: "wxi-delete",
 					label: "Remove row",
 					onClick: ({ id, item, row }) => board.deleteRow({ id: row.id })
 				},
 				{
-					id: "move-row:up",
+					id: "custom-move-row:up",
 					icon: "wxi-arrow-up",
 					label: "Move up",
-					disabled: false
+					onClick: ({ id, item, row }) => board.moveRow({ id: row.id, before: "feature" })
 				}
 			];
 		}
@@ -111,26 +135,42 @@ const rowShape = {
 
 ### Example
 
-~~~jsx {1-22,28}
+~~~jsx {1-38,44}
 const rowShape = {
 	menu: {
 		show: true,
-		items: [
-			{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
-			{ id: "delete-row", icon: "wxi-delete", label: "Delete" },
-			{
-				id: "move-row:up",
-				icon: "wxi-arrow-up",
-				label: "Move up",
-				disabled: true
-			},
-			{
-				id: "move-row:down",
-				icon: "wxi-arrow-down",
-				label: "Move down",
-				disabled: true
-			}
-		]
+		items: ({ row, rowIndex, store }) => {
+			if (rowIndex == 0) {
+				return false;
+			} 
+			return [
+				// include options with default behavior
+				{ 
+					id: "set-edit", 
+					icon: "wxi-edit", 
+					label: "Rename", 
+				},
+				{
+					id: "move-row:down",
+					icon: "wxi-arrow-down",
+					label: "Move down",
+					disabled: rowIndex >= 0,
+				},
+				// include options with custom behavior
+                {
+					id: "custom-move-row:up",
+					icon: "wxi-arrow-up",
+					label: "Move up",
+					onClick: ({ id, item, row }) => board.moveRow({ id: row.id, before: "feature" }),
+				},
+				{
+					id: "custom-delete-row",
+					icon: "wxi-delete",
+					label: "Remove row",
+					onClick: ({ id, item, row }) => board.deleteRow({ id: row.id }),
+				},
+			]
+		},
 	},
 	css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red"
 };
