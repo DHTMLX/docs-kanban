@@ -10,52 +10,54 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.4
 
-Released on Month Day, 2022 [TODO]
+Released on Month Day, 2023 [TODO]
 
 [Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-4/)
 
 ### New functionality
 
 - An ability to add comments (Example TODO)
+- An ability to apply the **material**, **willow** and **willow-dark** themes (Example TODO)
 - An ability to limit users (Example TODO)
+- An ability to open editor in a modal window (Example TODO)
 - An ability to set links between cards (Example TODO)
 - An ability to votes for a card (Example TODO)
-- An ability to apply the **material**, **willow** and **willow-dark** themes (Example TODO)
 
 ### New API
 
 - **Events:**
-	[`add-comment`](../../api/events/js_kanban_addcomment_event),
-	[`delete-comment`](../../api/events/js_kanban_deletecomment_event),
-	[`update-comment`](../../api/events/js_kanban_updatecomment_event),
-	[`add-link`](../../api/events/js_kanban_addlink_event),
-	[`delete-link`](../../api/events/js_kanban_deletelink_event),
-	[`start-drag-card`](../../api/events/js_kanban_startdragcard_event),
-	[`drag-card`](../../api/events/js_kanban_dragcard_event) and
-	[`end-drag-card`](../../api/events/js_kanban_enddragcard_event)
+	- [`add-comment`](../../api/events/js_kanban_addcomment_event)
+	- [`add-link`](../../api/events/js_kanban_addlink_event)
+	- [`delete-comment`](../../api/events/js_kanban_deletecomment_event)
+	- [`delete-link`](../../api/events/js_kanban_deletelink_event)
+	- [`drag-card`](../../api/events/js_kanban_dragcard_event)
+	- [`end-drag-card`](../../api/events/js_kanban_enddragcard_event)
+	- [`start-drag-card`](../../api/events/js_kanban_startdragcard_event)
+	- [`update-comment`](../../api/events/js_kanban_updatecomment_event)
 
 - **Methods:**
-	[`addComment()`](../../api/methods/js_kanban_addcomment_method),
-	[`deleteComment()`](../../api/methods/js_kanban_deletecomment_method) and
-	[`updateComment()`](../../api/methods/js_kanban_updatecomment_method)
+	- [`addComment()`](../../api/methods/js_kanban_addcomment_method)
+	- [`deleteComment()`](../../api/methods/js_kanban_deletecomment_method)
+	- [`updateComment()`](../../api/methods/js_kanban_updatecomment_method)
 
 - **Properties:**
-	[`currentUser`](../../api/config/js_kanban_currentuser_config)
-	[`links`](../../api/config/js_kanban_links_config)
-	[`theme`](../../api/config/js_kanban_theme_config)
+	- [`currentUser`](../../api/config/js_kanban_currentuser_config)
+	- [`links`](../../api/config/js_kanban_links_config)
+	- [`theme`](../../api/config/js_kanban_theme_config) (Kanban)
+	- [`theme`](../../api/config/toolbar_items_config) (Toolbar)
 
 ### Updates
 - #### Properties
 
-	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***css*** and ***votes*** parameters.
-	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter.
-	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter.
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent*** and ***css***  parameter
-	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter
-	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
-	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
-	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-a-built-in-editor)  parameters
+	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***css*** and ***votes*** parameters.
 	- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property has an ability to display context menu
+	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter
+	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter.
+	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-the-editor)  parameters
+	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
+	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
+	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter.
 
 ## Version 1.3
 

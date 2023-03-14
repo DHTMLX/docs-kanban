@@ -167,6 +167,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
 | [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
 | [](api/config/toolbar_locale_config.md)                    | @getshort(api/config/toolbar_locale_config.md)           |
+| [](api/config/toolbar_theme_config.md)                     | @getshort(api/config/toolbar_theme_config.md)            |
 
 ## Common settings
 

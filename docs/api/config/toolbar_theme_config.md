@@ -1,14 +1,14 @@
 ---
 sidebar_label: theme
 title: theme Config
-description: You can learn about the theme config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: You can learn about the (Toolbar) theme config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # theme
 
 ### Description
 
-@short: Optional. A theme to be applied to Kanban
+@short: Optional. A theme to be applied to Toolbar
 
 ### Usage
 
@@ -46,21 +46,26 @@ Besides using the `theme` property, you can also apply the needed theme via addi
 
 ### Default config
 
-By default, Kanban uses the **Material** theme. You can set it to the **Willow** and **Willow-Dark** themes as well.
+By default, Toolbar uses the **Material** theme. You can set it to the **Willow** and **Willow-Dark** themes as well.
 
 :::tip
-To change the current theme dynamically, you can use the [**setConfig()**](../../methods/js_kanban_setconfig_method) method.
+To change the current theme dynamically, you can use the [**setConfig()**](../../methods/toolbar_setconfig_method) method.
 :::
 
 ### Example
 
-~~~jsx {5}
+~~~jsx {5,11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards,
 	theme: "willow-dark" // the "willow-dark" theme will be set initially
 	// other parameters
+});
+// create Toolbar
+new Toolbar("#toolbar", {
+    api: board.api,
+    theme: "willow-dark", // the "willow-dark" theme will be set initially
 });
 ~~~
 

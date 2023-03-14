@@ -13,3 +13,4 @@ To configure the **Toolbar**, refer to the [Configuration](../../../guides/confi
 | [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
 | [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
 | [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |
+| [](../config/toolbar_theme_config.md)                     | @getshort(../config/toolbar_theme_config.md)            |

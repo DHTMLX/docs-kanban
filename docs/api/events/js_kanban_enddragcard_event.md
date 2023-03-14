@@ -18,7 +18,7 @@ description: You can learn about the end-drag-card event in the documentation of
     columnId: string | number,
     rowId?: string | number,
     before?: string | number,
-    source: array
+    source?: array
 }) => void;
 ~~~
 

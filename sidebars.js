@@ -249,7 +249,7 @@ module.exports = {
 						"api/methods/toolbar_destructor_method",
 						// S
 						"api/methods/toolbar_setconfig_method",
-						"api/methods/toolbar_setlocale_method"
+						"api/methods/toolbar_setlocale_method",
 					]
 				},
 				{
@@ -264,7 +264,8 @@ module.exports = {
 					items: [	
 						"api/config/toolbar_api_config",
 						"api/config/toolbar_items_config",
-						"api/config/toolbar_locale_config"
+						"api/config/toolbar_locale_config",
+						"api/config/toolbar_theme_config"
 					]
 				},
 				{
