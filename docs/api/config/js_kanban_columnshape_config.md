@@ -38,8 +38,13 @@ To configure the columns appearance, in the **columnShape** object you can speci
 - `menu` - (optional) an object of parameters of the columns context menu. Here you can specify the following parameters:
 	- `show` - (optional) - enables/disables a column context menu
 	- `items` - (optional) an array of objects containing parameters of items of the columns context menu. For each item you can specify the following parameters:
-		- `id` - (optional) an ID of the menu item
-		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+		- `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
+			- ***"add-card"*** - defines the action to add a new card
+			- ***"set-edit"*** - defines the action to edit a column name
+			- ***"move-column:left"*** - defines the action to move a column left
+			- ***"move-column:right"*** - defines the action to move a column right
+			- ***"delete-column"*** - defines the action to delete a column
+		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
 		- `label` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
 		- `onClick` - (optional) a custom callback function, that takes the following arguments:
@@ -57,26 +62,18 @@ To configure the columns appearance, in the **columnShape** object you can speci
 
 	~~~jsx {}
 	items: ({ column, columnIndex, store }) => {
-		if(column.id === "inprogress"){
-			return null;
-		}
-		const items = [
-			{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
-			{
-				id: "delete-card",
-				icon: "wxi-delete",
-				label: "Remove card",
-				onClick: ({ id, item, column }) => {
-					board.deleteCard({
-						id: board.getAreaCards(column.id)[0].id,
-					});
-				},
-			},
-		];
-		if (column.id === "backlog") {
-			items.push({ id: "add-card", icon: "wxi-plus", label: "Add card" });
-		}
-		return items;
+		if(column.id === "inprogress")
+			return null
+
+		if (column.id === "backlog") 
+			return [
+				{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
+				{
+					id: "delete-card",
+					icon: "wxi-delete",
+					label: "Remove card"
+				}
+			]
 	}
 	~~~
 	:::
@@ -113,29 +110,35 @@ const columnShape = {
 
 ### Example
 
-~~~jsx {1-23,29}
+~~~jsx {1-29,35}
 const columnShape = {
 	menu: {
 		show: true,
 		items: [
-			{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
-			{ id: "delete-column", icon: "wxi-delete", label: "Delete" },
-			{ id: "add-card", icon: "wxi-plus", label: "Add new card" },
 			{
-				id: "move-column:left",
-				icon: "wxi-arrow-left",
-				label: "Move left",
-				disabled: true
-			},
-			{
-				id: "move-column:right",
-				icon: "wxi-arrow-right",
-				label: "Move right",
-				disabled: true
+				id: "color",
+				label: "Color",
+				items: [
+					{ 
+						id:"yellow", 
+						label: "Yellow",
+						onClick: ({ column }) => changeColumnColor(column, "yellow")
+					},
+					{ 
+						id:"red", 
+						label: "Red",
+						onClick: ({ column }) => changeColumnColor(column, "red")
+					},
+					{ 
+						id:"green", 
+						label: "Green",
+						onClick: ({ column }) => changeColumnColor(column, "green")
+					}
+				]
 			}
 		]
 	},
-	css: (column, cards) => column.id == "feature" && cards.length < 5 ? "green" : "red"
+	css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red"
 };
 
 new kanban.Kanban("#root", {
@@ -151,4 +154,4 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
-**Related sample:** [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban)
+**Related sample:** [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)

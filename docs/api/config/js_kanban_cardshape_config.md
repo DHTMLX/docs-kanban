@@ -115,7 +115,9 @@ To configure the card appearance, in the **cardShape** object you can specify th
 - `menu` - (optional) an object of parameters of a **card context menu**. Here you can specify the following parameters:
 	- `show` - (optional) - enables/disables a card context menu
 	- `items` - (optional) an array of objects containing parameters of items of the cards context menu. For each item you can specify the following parameters:
-		- `id` - (optional) an ID of the menu item
+		- `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
+			- ***"set-edit"*** - defines the action to edit a card name
+			- ***"delete-card"*** - defines the action to delete a card
 		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
 		- `label` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
@@ -133,14 +135,12 @@ To configure the card appearance, in the **cardShape** object you can specify th
 
 	~~~jsx {}
 	items: ({ card, store }) => {
-		if(card.id === 1){
-			return false;
-		} else {
-			return [
-				{ id: "set-edit", icon: "wxi-edit", label: "Edit" },
-				{ id: "delete-card", icon: "wxi-delete", label: "Delete" }
-			];
-		} 
+		if(card.id === 1)
+			return false
+		return [
+			{ id: "set-edit", icon: "wxi-edit", label: "Edit" },
+			{ id: "delete-card", icon: "wxi-delete", label: "Delete" }
+		]
 	}
 	~~~
 	:::

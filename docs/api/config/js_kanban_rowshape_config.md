@@ -43,27 +43,8 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 			- ***"move-row:up"*** - defines the action to move a row up
 			- ***"move-row:down"*** - defines the action to move a row down
 			- ***"delete-row"*** - defines the action to delete a row
-		
-		:::important
-		If you want to implement a custom behavior using the `onClick` property, set the `id` property to the custom value to prevent te default behavior.
 
-		~~~jsx {2,8}
-			{
-				id: "custom-delete-row",
-				icon: "wxi-delete",
-				label: "Remove row",
-				onClick: ({ id, item, row }) => board.deleteRow({ id: row.id })
-			},
-			{
-				id: "custom-move-row:up",
-				icon: "wxi-arrow-up",
-				label: "Move up",
-				onClick: ({ id, item, row }) => board.moveRow({ id: row.id, before: "feature" })
-			}
-		~~~
-		:::
-
-		- `icon` - (optional) a classname of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
 		- `label` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
 		- `onClick` - (optional) a custom callback function, that takes the following arguments:
@@ -81,25 +62,21 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 
 	~~~jsx {}
 	items: ({ row, rowIndex, store }) => {
-		if(rowIndex == 0){
-			return null;
-		} else {
-			return [
-				{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
-				{
-					id: "custom-delete-row",
-					icon: "wxi-delete",
-					label: "Remove row",
-					onClick: ({ id, item, row }) => board.deleteRow({ id: row.id })
-				},
-				{
-					id: "custom-move-row:up",
-					icon: "wxi-arrow-up",
-					label: "Move up",
-					onClick: ({ id, item, row }) => board.moveRow({ id: row.id, before: "feature" })
-				}
-			];
-		}
+		if(rowIndex == 0)
+			return null
+		return [
+			{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
+			{
+				id: "custom-delete-row",
+				icon: "wxi-delete",
+				label: "Remove row",
+			},
+			{
+				id: "custom-move-row:up",
+				icon: "wxi-arrow-up",
+				label: "Move up",
+			}
+		]
 	}
 	~~~
 	:::
@@ -135,42 +112,46 @@ const rowShape = {
 
 ### Example
 
-~~~jsx {1-38,44}
+~~~jsx {10-42,48}
+const changeRowColor = (row, cssClass) => board.updateRow({ 
+    id: row.id,
+    row: {
+        css: cssClass,
+        collapsed: false
+    },
+    replace: false
+});
+
 const rowShape = {
 	menu: {
 		show: true,
 		items: ({ row, rowIndex, store }) => {
-			if (rowIndex == 0) {
-				return false;
-			} 
+			if (rowIndex == 0) 
+				return false
 			return [
-				// include options with default behavior
-				{ 
-					id: "set-edit", 
-					icon: "wxi-edit", 
-					label: "Rename", 
-				},
 				{
-					id: "move-row:down",
-					icon: "wxi-arrow-down",
-					label: "Move down",
-					disabled: rowIndex >= 0,
-				},
-				// include options with custom behavior
-                {
-					id: "custom-move-row:up",
-					icon: "wxi-arrow-up",
-					label: "Move up",
-					onClick: ({ id, item, row }) => board.moveRow({ id: row.id, before: "feature" }),
-				},
-				{
-					id: "custom-delete-row",
-					icon: "wxi-delete",
-					label: "Remove row",
-					onClick: ({ id, item, row }) => board.deleteRow({ id: row.id }),
-				},
+                    id: "color",
+                    label: "Color",
+                    items: [
+                        { 
+                            id:"gray", 
+                            label: "Gray",
+                            onClick: ({ id, item, row }) => changeRowColor(row, "gray")
+                        },
+                        { 
+                            id:"yellow", 
+                            label: "Yellow",
+                            onClick: ({ id, item, row }) => changeRowColor(row, "yellow")
+                        },
+                        { 
+                            id:"red", 
+                            label: "Red",
+                            onClick: ({ id, item, row }) => changeRowColor(row, "red")
+                        }
+                    ]
+                }
 			]
-		},
+		}
 	},
 	css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red"
 };
@@ -188,4 +169,4 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
-**Related sample:** [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban)
+**Related sample:** [Kanban. Changing color of rows via custom menu](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban)
