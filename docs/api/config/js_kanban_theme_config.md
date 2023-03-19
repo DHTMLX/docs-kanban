@@ -13,7 +13,10 @@ description: You can learn about the theme config in the documentation of the DH
 ### Usage
 
 ~~~jsx {}
-theme?: string; // "material" | "willow" | "willow-dark"
+theme?: {
+	name: string, // "material" (default) | "willow" | "willow-dark"
+	fonts: boolean
+};
 ~~~
 
 :::important
@@ -44,22 +47,40 @@ Besides using the `theme` property, you can also apply the needed theme via addi
 ~~~
 :::
 
-### Default config
+### Parameters
 
-By default, Kanban uses the **Material** theme. You can set it to the **Willow** and **Willow-Dark** themes as well.
+To configure the **theme**, you can use the following parameters.
+
+- `theme` - (optional) an object with theme settings. Here you can specify the following parameters:
+	- `name` - (required) a theme name to be applied to Kanban
+	- `fonts` - (optional) enables/disables fonts loading from the CDN (wxi font)
 
 :::tip
-To change the current theme dynamically, you can use the [**setConfig()**](../../methods/js_kanban_setconfig_method) method.
+You can also apply the **Willow** and **Willow-Dark** themes as well. To change the current theme dynamically, you can use the [**setConfig()**](../../methods/js_kanban_setconfig_method) method.
 :::
+
+### Default config
+
+By default, Kanban uses the **Material** theme.
+
+~~~jsx {}
+theme: {
+	name: "material",
+	fonts: true
+}
+~~~
 
 ### Example
 
-~~~jsx {5}
+~~~jsx {5-8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards,
-	theme: "willow-dark" // the "willow-dark" theme will be set initially
+	theme: {
+		name: "willow-dark", // the "willow-dark" theme will be set initially
+		fonts: false
+	}
 	// other parameters
 });
 ~~~
