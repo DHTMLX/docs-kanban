@@ -421,22 +421,16 @@ Unless you specify the editor settings via the [`editorShape`](api/config/js_kan
 
 Using the [`editor`](api/config/js_kanban_editor_config.md) property, you can configure the editor in the following way:
 
-- show or hide the editor via the *`editor.show`* property
-- specify a place where the editor to be displayed via the *`editor.placement`* property. Here you can apply one of the following values:
-    - *"sidebar"* - the editor is displayed in a sidebar on the right
-    - *"modal"* - the editor is displayed in a separate window
 - enables/disables an autosave mode of the editor via the *`editor.autoSave`* property
 - specify a delay time of autosaving data via the *`editor.debounce`* property (works with the ***autoSave: true*** parameter only)
 
-~~~jsx {6-11}
+~~~jsx {6-9}
 // create Kanban
 new kanban.Kanban("#root", {
     columns,
     cards,
     editorShape,
     editor: {
-        show: true,
-        placement: "modal",
         autoSave: true,
         debounce: 2000
     }
