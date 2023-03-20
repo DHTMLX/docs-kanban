@@ -54,14 +54,28 @@ description: You can learn about the Migration to Newer Versions in the document
         {
             label: true,
             description: true,
+            menu: {
+                items: [
+                    {
+                        label: "Delete", ...
+                    }
+                ]
+            }
             // other parameters
         }
     ~~~
 
-    ~~~jsx {4-6} title="From v1.4"
+    ~~~jsx {7,11-13} title="From v1.4"
         {
             label: true,
             description: true,
+            menu: {
+                items: [
+                    {
+                        text: "Delete", ...
+                    }
+                ]
+            },
             votes: true,
             comments: true,
             css: (card) => card.type == "feature" ? "green" : "red",
@@ -75,15 +89,25 @@ description: You can learn about the Migration to Newer Versions in the document
         {
             menu: {
                 show: true,
+                items: [
+                    {
+                        label: "Delete", ...
+                    }
+                ]
                 // other parameters
             }
         }
     ~~~
 
-    ~~~jsx {6} title="From v1.4"
+    ~~~jsx {6,11} title="From v1.4"
         {
             menu: {
                 show: true,
+                items: [
+                    {
+                        text: "Delete", ...
+                    }
+                ]
                 // other parameters
             },
             css: (column, cards) => column.id == "feature" && cards.length < 5 ? "green" : "red"
@@ -96,15 +120,25 @@ description: You can learn about the Migration to Newer Versions in the document
         {
             menu: {
                 show: true,
+                items: [
+                    {
+                        label: "Delete", ...
+                    }
+                ]
                 // other parameters
             }
         }
     ~~~
 
-    ~~~jsx {6} title="From v1.4"
+    ~~~jsx {6,11} title="From v1.4"
         {
             menu: {
                 show: true,
+                items: [
+                    {
+                        text: "Delete", ...
+                    }
+                ]
                 // other parameters
             },
             css: (row, cards) => row.id == "task" && cards.length < 5 ? "green" : "red",

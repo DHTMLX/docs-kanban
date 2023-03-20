@@ -20,7 +20,7 @@ columnShape?: {
 			{
 				id?: string,
 				icon?: string,
-				label?: string,
+				text?: string,
 				disabled? boolean,
 				onClick?: ({ id, item, column }) => void
 			}, 
@@ -45,7 +45,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
 			- ***"move-column:right"*** - defines the action to move a column right
 			- ***"delete-column"*** - defines the action to delete a column
 		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
-		- `label` - (optional) a name of the menu item
+		- `text` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
 		- `onClick` - (optional) a custom callback function, that takes the following arguments:
 			- ***id*** - an ID of the current menu item
@@ -67,11 +67,11 @@ To configure the columns appearance, in the **columnShape** object you can speci
 
 		if (column.id === "backlog") 
 			return [
-				{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
+				{ id: "set-edit", icon: "wxi-edit", text: "Rename" },
 				{
 					id: "delete-card",
 					icon: "wxi-delete",
-					label: "Remove card"
+					text: "Remove card"
 				}
 			]
 	}
@@ -84,21 +84,21 @@ To configure the columns appearance, in the **columnShape** object you can speci
 
 ~~~jsx {}
 const getDefaultColumnMenuItems = ({ column, columnIndex, store }) => [
-	{ id: "add-card", icon: "wxi-plus", label: "Add new card" },
-    { id: "set-edit", icon: "wxi-edit", label: "Rename" },
+	{ id: "add-card", icon: "wxi-plus", text: "Add new card" },
+    { id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
         id: "move-column:left",
         icon: "wxi-arrow-left",
-        label: "Move left",
+        text: "Move left",
         disabled: columnIndex <= 0
     },
     {
         id: "move-column:right",
         icon: "wxi-arrow-right",
-        label: "Move right",
+        text: "Move right",
         disabled: columnIndex >= columns.length - 1
     },
-    { id: "delete-column", icon: "wxi-delete", label: "Delete" }
+    { id: "delete-column", icon: "wxi-delete", text: "Delete" }
 ];
 const columnShape = {
 	menu: {
@@ -117,21 +117,21 @@ const columnShape = {
 		items: [
 			{
 				id: "color",
-				label: "Color",
+				text: "Color",
 				items: [
 					{ 
 						id:"yellow", 
-						label: "Yellow",
+						text: "Yellow",
 						onClick: ({ column }) => changeColumnColor(column, "yellow")
 					},
 					{ 
 						id:"red", 
-						label: "Red",
+						text: "Red",
 						onClick: ({ column }) => changeColumnColor(column, "red")
 					},
 					{ 
 						id:"green", 
-						label: "Green",
+						text: "Green",
 						onClick: ({ column }) => changeColumnColor(column, "green")
 					}
 				]
@@ -150,7 +150,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The ***css*** parameter was added in v1.4
+**Change log:**
+- The ***css*** parameter was added in v1.4
+- The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration)
 

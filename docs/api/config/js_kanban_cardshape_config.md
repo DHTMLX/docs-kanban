@@ -38,7 +38,7 @@ cardShape?: {
 			{
 				id?: string,
 				icon?: string,
-				label?: string,
+				text?: string,
 				disabled? boolean,
 				onClick?: ({ id, item, card }) => void
 			}, 
@@ -119,7 +119,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 			- ***"set-edit"*** - defines the action to edit a card name
 			- ***"delete-card"*** - defines the action to delete a card
 		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
-		- `label` - (optional) a name of the menu item
+		- `text` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
 		- `onClick` - (optional) a custom callback function, that takes the following arguments:
 			- ***id*** - an ID of the current menu item
@@ -200,11 +200,11 @@ const getDefaultCardMenuItems = ({ card, store }) => {
     const readonly = store.getState();
     if (!readonly?.select && readonly?.edit) {
         return [
-            { id: "set-edit", icon: "wxi-edit", label: "Edit" },
-            { id: "delete-card", icon: "wxi-delete", label: "Delete" },
+            { id: "set-edit", icon: "wxi-edit", text: "Edit" },
+            { id: "delete-card", icon: "wxi-delete", text: "Delete" },
         ];
     }
-    return [{ id: "delete-card", icon: "wxi-delete", label: "Delete" }];
+    return [{ id: "delete-card", icon: "wxi-delete", text: "Delete" }];
 };
 
 const defaultCardShape = {
@@ -290,9 +290,8 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Change log:**
-
-- The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) were updated in v1.2
 - The ***comments***, ***css*** and ***votes*** parameters were added in v1.4
+- The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 

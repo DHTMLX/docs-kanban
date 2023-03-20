@@ -20,7 +20,7 @@ rowShape?: {
 			{
 				id?: string,
 				icon?: string,
-				label?: string,
+				text?: string,
 				disabled? boolean,
 				onClick?: ({ id, item, row }) => void
 			}, 
@@ -45,7 +45,7 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 			- ***"delete-row"*** - defines the action to delete a row
 
 		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
-		- `label` - (optional) a name of the menu item
+		- `text` - (optional) a name of the menu item
 		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
 		- `onClick` - (optional) a custom callback function, that takes the following arguments:
 			- ***id*** - an ID of the current menu item
@@ -65,16 +65,16 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 		if(rowIndex == 0)
 			return null
 		return [
-			{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
+			{ id: "set-edit", icon: "wxi-edit", text: "Rename" },
 			{
 				id: "custom-delete-row",
 				icon: "wxi-delete",
-				label: "Remove row",
+				text: "Remove row",
 			},
 			{
 				id: "custom-move-row:up",
 				icon: "wxi-arrow-up",
-				label: "Move up",
+				text: "Move up",
 			}
 		]
 	}
@@ -87,20 +87,20 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 
 ~~~jsx {}
 const getDefaultRowMenuItems = ({ row, rowIndex, store }) => [
-	{ id: "set-edit", icon: "wxi-edit", label: "Rename" },
+	{ id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
         id: "move-row:up",
         icon: "wxi-arrow-up",
-        label: "Move up",
+        text: "Move up",
         disabled: rowIndex <= 0
     },
     {
         id: "move-row:down",
         icon: "wxi-arrow-down",
-        label: "Move down",
+        text: "Move down",
         disabled: rowIndex >= rows.length - 1
     },
-    { id: "delete-row", icon: "wxi-delete", label: "Delete" }
+    { id: "delete-row", icon: "wxi-delete", text: "Delete" }
 ];
 const rowShape = {
 	menu: {
@@ -131,21 +131,21 @@ const rowShape = {
 			return [
 				{
                     id: "color",
-                    label: "Color",
+                    text: "Color",
                     items: [
                         { 
                             id:"gray", 
-                            label: "Gray",
+                            text: "Gray",
                             onClick: ({ id, item, row }) => changeRowColor(row, "gray")
                         },
                         { 
                             id:"yellow", 
-                            label: "Yellow",
+                            text: "Yellow",
                             onClick: ({ id, item, row }) => changeRowColor(row, "yellow")
                         },
                         { 
                             id:"red", 
-                            label: "Red",
+                            text: "Red",
                             onClick: ({ id, item, row }) => changeRowColor(row, "red")
                         }
                     ]
@@ -165,7 +165,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The ***css*** parameter was added in v1.4
+**Change log:**
+- The ***css*** parameter was added in v1.4
+- The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
