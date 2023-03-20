@@ -24,7 +24,8 @@ Released on March Day, 2023 [TODO]
 
 ### New API
 
-- **Events:**
+- #### Events
+
 	- [`add-comment`](../../api/events/js_kanban_addcomment_event)
 	- [`add-link`](../../api/events/js_kanban_addlink_event)
 	- [`delete-comment`](../../api/events/js_kanban_deletecomment_event)
@@ -34,18 +35,24 @@ Released on March Day, 2023 [TODO]
 	- [`start-drag-card`](../../api/events/js_kanban_startdragcard_event)
 	- [`update-comment`](../../api/events/js_kanban_updatecomment_event)
 
-- **Methods:**
+- #### Methods
+
 	- [`addComment()`](../../api/methods/js_kanban_addcomment_method)
 	- [`deleteComment()`](../../api/methods/js_kanban_deletecomment_method)
 	- [`updateComment()`](../../api/methods/js_kanban_updatecomment_method)
 
-- **Properties:**
+- #### Properties
+
 	- [`currentUser`](../../api/config/js_kanban_currentuser_config)
 	- [`links`](../../api/config/js_kanban_links_config)
 	- [`theme`](../../api/config/js_kanban_theme_config) (Kanban)
 	- [`theme`](../../api/config/toolbar_items_config) (Toolbar)
 
 ### Updates
+
+- #### Methods
+
+	- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
 - #### Properties
 
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***css***  parameter

@@ -32,20 +32,20 @@ The method returns an object with the following parameters:
 	columns: array,
 	dragItemId: string | number, 
 	dragItemsCoords: array, 
-	dropAreaItemsCoords: array, 
-	dropAreasCoords: array, 
 	edit: object,
 	editorShape: array,
 	fromAreaMeta: object,
 	overAreaId: string | number, 
-    overAreaMeta: object,
 	readonly: object,
 	rowKey: string,
 	rows: array,
 	scroll: object,
 	search: object,
 	selected: array, 
-	sort: object
+	sort: object,
+	dropAreaItemsCoords: array, // deprecated in v1.4
+	dropAreasCoords: array, // deprecated in v1.4 
+	overAreaMeta: object, // deprecated in v1.4
 }
 ~~~  
 
@@ -68,4 +68,8 @@ console.log(state.editorShape); // output the editor configuration
 //...
 ~~~
 
-**Change log:** The method was updated in v1.2
+**Change log:**
+The method was updated in v1.4. The following parameters were deprecated:
+- ***dropAreaItemsCoords***
+- ***dropAreasCoords***
+- ***overAreaMeta***

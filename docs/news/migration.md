@@ -252,6 +252,70 @@ description: You can learn about the Migration to Newer Versions in the document
             }
         }
     ~~~
+
+#### Methods
+
+- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method of Kanban was updated:
+
+~~~jsx {25-27} title="Before v1.4"
+api.getState();
+// the method returns an object with the following properties
+/*{
+	areasMeta: object, 
+	before: string | number, 
+	cardShape: object,
+	cards: array,
+	cardsMap: object,
+	cardsMeta: object,
+	columnKey: string,
+	columns: array,
+	dragItemId: string | number, 
+	dragItemsCoords: array, 
+	edit: object,
+	editorShape: array,
+	fromAreaMeta: object,
+	overAreaId: string | number, 
+	readonly: object,
+	rowKey: string,
+	rows: array,
+	scroll: object,
+	search: object,
+	selected: array, 
+	sort: object,
+	dropAreaItemsCoords: array,
+	dropAreasCoords: array, 
+	overAreaMeta: object, 
+}*/
+~~~
+
+~~~jsx {} title="From v1.4"
+api.getState();
+// the method returns an object with the following properties
+/*{
+    areasMeta: object, 
+	before: string | number, 
+	cardShape: object,
+	cards: array,
+	cardsMap: object,
+	cardsMeta: object,
+	columnKey: string,
+	columns: array,
+	dragItemId: string | number, 
+	dragItemsCoords: array, 
+	edit: object,
+	editorShape: array,
+	fromAreaMeta: object,
+	overAreaId: string | number, 
+	readonly: object,
+	rowKey: string,
+	rows: array,
+	scroll: object,
+	search: object,
+	selected: array, 
+	sort: object,
+}*/
+~~~
+
 ## 1.2 -> 1.3
 
 ### Api
