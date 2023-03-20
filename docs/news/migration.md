@@ -148,12 +148,18 @@ description: You can learn about the Migration to Newer Versions in the document
         ]
     ~~~
 
-    ~~~jsx {5} title="From v1.4"
+    ~~~jsx {5-11} title="From v1.4"
         [
             {
                 id: "inprogress",
                 label: "In progress",
-                css: "red"
+                css: "red",
+                overlay: template(`
+                    <div class="blockOverlay disable-drop">
+                        <span class="disable-drop-header">Drop is not allowed</span>
+                        <span class="disable-drop-description">Only testers can move cards to this
+                            column</span>
+                    </div>`)
                 // other parameters
             }, ...
         ]

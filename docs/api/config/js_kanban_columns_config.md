@@ -20,7 +20,8 @@ columns?: [
 		collapsed?: boolean,
 		limit?: number | object,
 		strictLimit?: boolean,
-		css?: string
+		css?: string,
+		overlay?: any
 	},
 	{...} // other columns data
 ];
@@ -38,14 +39,24 @@ For each column you can specify the following parameters (data):
 	- `object` - an object with the limits of cards for each row (swimlane) by its ID
 - `strictLimit` - (optional) a strict limit mode. If ***true***, a user will not be able to create new cards over the specified number via the **limit** parameter. Default value is ***false*** 
 - `css` - (optional) defines css styles for a separate column
+- `overlay` - (optional) defines an overlay layer for a separate column. Here you can specify a template that covers a separate column in the following way:
+
+	~~~jsx {}
+	overlay: template(`
+		<div class="blockOverlay disable-drop">
+			<span class="disable-drop-header">Drop is not allowed</span>
+			<span class="disable-drop-description">Only testers can move cards to this
+				column</span>
+		</div>`)
+	~~~
 
 :::info
-If you want to load new data for columns dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
+If you want to load new data for columns dynamically, you can use the [`parse()`](../../methods/js_kanban_parse_method) method!
 :::
 
 ### Example
 
-~~~jsx {1-22,25}
+~~~jsx {1-31,34}
 const columns = [
 	{ 
 		label: "Backlog", 
@@ -66,7 +77,16 @@ const columns = [
 		},
 		strictLimit: false
 	},
-	{ label: "Done", id: "done" }
+	{ 
+		label: "Done", 
+		id: "done",
+		overlay: template(`
+			<div class="blockOverlay disable-drop">
+				<span class="disable-drop-header">Drop is not allowed</span>
+				<span class="disable-drop-description">Only testers can move cards to this
+					column</span>
+			</div>`) 
+	}
 ];
 
 new kanban.Kanban("#root", {
@@ -77,17 +97,13 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:**
-- Starting from v1.1 the **columns** property is optional
-- The **collapsed** parameter was added in v1.1
-- The **limit** parameter was added in v1.1
-- The **strictLimit** parameter was added in v1.1
-- The **css** parameter was added in v1.4
+**Change log:** The **css** and **overlay** parameters were added in v1.4
 
-**Related article:** 
+**Related article:**
 - [Working with data](../../../guides/working_with_data)
 - [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 
-**Related samples:** 
-- [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8)
-- [Kanban. Custom CSS for columns](https://snippet.dhtmlx.com/2w9h9bi8)
+**Related samples:**
+- [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban)
+- [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
+- [Kanban. Disabling drag and drop to specific columns](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

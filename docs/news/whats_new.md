@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.4
 
-Released on Month Day, 2023 [TODO]
+Released on March Day, 2023 [TODO]
 
 [Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-4/)
 
@@ -48,10 +48,10 @@ Released on Month Day, 2023 [TODO]
 ### Updates
 - #### Properties
 
-	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent*** and ***css***  parameter
+	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***css***  parameter
 	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***votes*** ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) and ***css*** ([Example](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) parameters.
 	- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property has an ability to display context menu
-	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
+	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css*** ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) and ***overlay*** ([Example](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)) parameters
 	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
 	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter ([Example](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
