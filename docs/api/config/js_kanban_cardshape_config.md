@@ -298,6 +298,6 @@ new kanban.Kanban("#root", {
 
 **Related samples:**
 
-- [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?mode=wide&text=#kanban)
-- [Kanban. Custom context menu](https://snippet.dhtmlx.com/8eo65gr5?text=#kanban)
-- [Kanban. Comments](https://snippet.dhtmlx.com/f9ponfsg?text=#kanban)
+- [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
+- [Kanban. Highlighting outdated and active tasks](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
+- [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)

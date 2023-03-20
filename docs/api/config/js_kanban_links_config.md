@@ -66,4 +66,4 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Working with data](../../../guides/working_with_data)
 
-**Related sample:** [Kanban. Links between tasks](https://snippet.dhtmlx.com/81qu7qh0)
+**Related sample:** [Kanban. Links between tasks](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)

@@ -181,6 +181,8 @@ editorShape: [
 	// settings of other fields
 ]
 ~~~
+
+[**Kanban. Limiting assignments to one user only**](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban)
 :::
 
 ### Color type

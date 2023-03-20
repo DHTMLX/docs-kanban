@@ -47,3 +47,5 @@ board.api.on("move-card", (obj) => {
 	console.log(obj.columnId);
 });
 ~~~
+
+**Related sample:** [Kanban. Disabling drag and drop to specific columns](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

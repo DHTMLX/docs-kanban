@@ -51,3 +51,5 @@ board.api.on("drag-card", (obj) => {
 ~~~
 
 **Change log:** The event was added in v1.4
+
+**Related sample:** [Kanban. Disabling drag and drop to specific columns](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

@@ -16,12 +16,12 @@ Released on Month Day, 2023 [TODO]
 
 ### New functionality
 
-- An ability to add comments (Example TODO)
-- An ability to apply the **material**, **willow** and **willow-dark** themes (Example TODO)
-- An ability to limit users (Example TODO)
+- An ability to add comments ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- An ability to apply the **material**, **willow** and **willow-dark** themes ([Example](https://snippet.dhtmlx.com/jnw54xif?tag=kanban))
+- An ability to limit users ([Example](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
 - An ability to open editor in a modal window (Example TODO)
-- An ability to set links between cards (Example TODO)
-- An ability to votes for a card (Example TODO)
+- An ability to set links between cards ([Example](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
+- An ability to votes for a card ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
 
 ### New API
 
@@ -50,14 +50,14 @@ Released on Month Day, 2023 [TODO]
 - #### Properties
 
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***parent*** and ***css***  parameter
-	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***css*** and ***votes*** parameters.
+	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***votes*** ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) and ***css*** ([Example](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) parameters.
 	- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property has an ability to display context menu
-	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter
-	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter.
+	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css***  parameter ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
+	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
 	- The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the [***show*** and ***placement***](../../guides/configuration/#configuring-the-editor)  parameters
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
-	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter
-	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter.
+	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter ([Example](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
+	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter ([Example](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
 
 ## Version 1.3
 

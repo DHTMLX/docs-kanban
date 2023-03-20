@@ -111,6 +111,8 @@ new kanban.Kanban("#root", {
 
 **Change log:** The ***css*** parameter was added in v1.4
 
-**Related articles:** 
+**Related articles:**
 - [Working with data](../../../guides/working_with_data)
 - [updateCard()](api/methods/js_kanban_updatecard_method.md)
+
+**Related sample:** [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
