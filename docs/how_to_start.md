@@ -8,7 +8,7 @@ description: You can explore how to start working with DHTMLX Kanban in the docu
 
 This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional Kanban on a page.
 
-![JS Kanban Main](assets/js_kanban_main.png)
+![JS Kanban Main](assets/js_kanban_editor.png)
 
 ## Step 1. Including source files
 

@@ -24,6 +24,8 @@ The **Board** is main part of Kanban. It consists of the cards distributed into 
 On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
 
 - add new cards by clicking on the plus icon (in accordance with the specified *limits* for each column and swimlane)
+- add comments and votes for tasks via the editor panel ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- set links between tasks via the editor ([Example](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
 - delete cards, columns and rows using a context menu (a 3 dots icon)
 - duplicate cards using a context menu (a 3 dots icon) or the `Ctrl (Command)`+`D` shortcuts (allows duplicating multiple cards)
 - export Kanban data to a JSON file
