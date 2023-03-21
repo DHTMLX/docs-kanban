@@ -33,4 +33,4 @@ new kanban.Kanban("#root", {
 
 **Change log:** The property was added in v1.4
 
-**Related sample:** [Kanban. Comments](https://snippet.dhtmlx.com/f9ponfsg?text=#kanban)
+**Related sample:** [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
