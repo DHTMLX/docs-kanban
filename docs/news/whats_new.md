@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.4
 
-Released on March Day, 2023 [TODO]
+Released on March 21, 2023
 
 [Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-4/)
 
@@ -63,6 +63,20 @@ Released on March Day, 2023 [TODO]
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
 	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter ([Example](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
 	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter ([Example](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
+
+### Deprecated API
+
+- #### Properties
+
+	- label in menu item objects in `cardShape.menu.items`, `columnShape.menu.items`, and `rowShape.menu.items`
+
+### Fixes
+
+- Menu position is wrong when Kanban is inside a container with margins
+- Wrong position of collapsed columns in case of custom column width
+- Dropping a card into a collapsed column results in the card's disappearing
+- Wrong position of collapsed columns in case of custom column width
+- Swimlanes. The context menu of the card is overlapped by the editing panel and therefore the card cannot be deleted
 
 ## Version 1.3
 

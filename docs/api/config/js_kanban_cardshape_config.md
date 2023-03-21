@@ -228,7 +228,9 @@ const defaultCardShape = {
 	priority: {
         show: false,
         values: defaultPriorities
-    }
+    },
+	comments: false,
+	votes: false,
 };
 ~~~
 

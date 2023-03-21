@@ -21,137 +21,71 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 ## Default style
 
 ~~~css
-.wx-material-theme,
-.wx-portal {
-/* Kanban css variables */
+.wx-material-theme {
+	/* WX library css variables */
+	--wx-field-width: 100%;
+	--wx-theme-name: material;
+	/* end of WX library css variables */
 
-	/* background color style */
+	/* Kanban  css variables*/
 	--wx-kanban-background: #f1f1f1;
-	--wx-kanban-background-light: #fff;
-	/* end of backgroung color style */
 
-	/* toolbar style */
+	/*  column styles */
+	--wx-kanban-column-width: 300px;
+	--wx-kanban-column-height: 300px;
+
+	/* toolbar styles */
 	--wx-kanban-toolbar-height: 56px;
 	--wx-kanban-toolbar-align: center;
 	--wx-kanban-toolbar-justify: flex-start;
-	/* end of toolbar style */
-
-	/* toolbar controls style */
 	--wx-kanban-toolbar-control-hover: rgba(0, 0, 0, 0.07);
 	--wx-kanban-toolbar-control-active: rgba(0, 0, 0, 0.15);
-	/* end of toolbar controls style */
+	--wx-kanban-toolbar-border: var(--wx-border);
 
-	/* column dimentions */
-	--wx-kanban-column-width: 300px;
-	--wx-kanban-column-height: 300px;
-	--wx-kanban-collapsed-column-width: 44px;
-	/* end of column dimentions */
-
-	/* column header style */
-	--wx-kanban-column-header-height: 44px;
-	--wx-kanban-over-limit-color: var(--wx-color-danger);
-	/* end of column header style */
-	
-	/* cards style */
+	/* card styles */
 	--wx-kanban-card-field-padding: 12px;
-	--wx-kanban-card-background: var(--wx-kanban-background-light);
+	--wx-kanban-content-background: var(--wx-background);
 	--wx-kanban-card-border: var(--wx-border);
 	--wx-kanban-card-border-radius: 6px;
-	/* end of cards style */
+	--wx-kanban-header-border-radius: var(--wx-kanban-card-border-radius);
 
-	/* user icon dimentions */
-	--wx-kanban-user-icon-size: 40px;
-	/* end of user icon dimentions */
+	/* row styles */
+	--wx-kanban-row-line: var(--wx-border);
 
-	/* header dimentions (place for column labels) */
-	--wx-kanban-header-height: 68px;
-	/* end of header dimentions */
+	/* user icon styles */
+	--wx-kanban-user-icon-size: 36px;
 
-	/* editor dimentions */
-	--wx-kanban-editor-width: 300px;
-	/* end of editor dimentions */
+	/* editor styles */
+	--wx-kanban-header-height: 64px;
+	--wx-kanban-editor-width: 569px;
+	--wx-kanban-editor-height: auto;
+	--wx-kanban-editor-x-padding: 20px;
+	--wx-kanban-editor-background: var(--wx-kanban-content-background);
+	--wx-kanban-editor-top-border: none;
 
+	/* column styles */
+	--wx-kanban-over-limit-color: var(--wx-color-danger);
+	--wx-kanban-collapsed-column-width: 44px;
 	--wx-kanban-z-index: 1;
 
-/* end of Kanban css variables */
-
-/* WX library css variables */
-
-	/* background style */
-	--wx-background: var(--wx-kanban-background-light);
-	--wx-background-hover: var(--wx-kanban-background);
-	/* end of background style */
-
-	/* label font style */
-	--wx-label-font-family: var(--wx-font-family);
-	--wx-label-font-size: var(--wx-font-size);
-	--wx-label-line-height: var(--wx-line-height);
-	--wx-label-font-weight: var(--wx-font-weight-md);
-	--wx-label-font-color: var(--wx-color-font);
-	/* end of label font style */
-
-	/* input style */
-	--wx-input-border-radius: 2px;
-	--wx-input-border: var(--wx-border);
-	--wx-input-padding: 5px 8px;
-	/* end of input style */
-
-	/* border style */
-	--wx-border: 1px solid #dfdfdf;
-	--wx-border-color: #dfdfdf;
-	/* end of border style */
-
-	/* color style */
-	--wx-color-primary: #2a7fff;
-	--wx-color-font: rgba(0, 0, 0, 0.7);
-	--wx-color-primary-font: #fff;
-	--wx-color-danger: #ff5252;
-	--wx-color-secondary-font: rgba(0, 0, 0, 0.7);
-	--wx-color-secondary-light
-	/* end of color style */
-
-	/* font style */
-	--wx-font: var(--wx-font-weight) var(--wx-font-size) var(--wx-font-family);
-	--wx-font-family: Roboto, Arial, Helvetica, sans-serif;
-	--wx-font-weight: 400;
-	--wx-font-weight-md: 500;
-	--wx-font-size: 14px;
-	--wx-font-size-md: 15px;
-	--wx-font-size-sm: 12px;
-	--wx-line-height: 20px;
-	/* end of font style */
-
-	/* icon color style */
-	--wx-icon-color: var(--wx-color-font-alt);
-	--wx-icon-color-hover: var(--wx-background-hover);
-	/* end of icon color style */
-	
-	/* label style */
-	--wx-label-margin: 0 0 8px;
-	--wx-label-padding: 0;
-	--wx-label-font-family: var(--wx-font-family);
-	--wx-label-font-size: var(--wx-font-size);
-	--wx-label-line-height: var(--wx-line-height);
-	--wx-label-font-weight: var(--wx-font-weight-md);
-	/* end of label style */
-
-	/* controls style */
+	/* progress control styles*/
 	--wx-progress-height: 4px;
-	--wx-popup-background: var(--wx-kanban-background-light);
-	--wx-field-width: 100%;
-	/* end of controls style */
+	--wx-kanban-progress-inactive-color: #dbdbdb;
 
-	/* padding style */
-	--wx-padding: 8px;
-	/* end of padding style */
+	/* menu styles */
+	--wx-kanban-menu-min-width: 100px;
 
-	/* scroll style */
-	--wx-styled-scroll-track-color: #fafafa;
-	--wx-styled-scroll-thumb-color: #babac0;
-	--wx-styled-scroll-width: 16px;
-	/* end of scroll style */
+	/* box and shadow styles*/
+	--wx-kanban-shadow: none;
+	--wx-kanban-box-border: var(--wx-border);
 
-/* end of WX library css variables */
+	/* collapsed column styles */
+	--wx-kanban-collapsed-padding: var(--wx-padding);
+	--wx-kanban-collapsed-margin: 0px;
+	--wx-kanban-collapsed-background: transparent;
+	--wx-kanban-collapsed-background-hover: #dfdfdf;
+
+/* End of Kanban  CSS variables*/
 }
 ~~~
 
@@ -189,10 +123,16 @@ Besides using the `theme` property, you can also apply the needed theme via addi
 	<!-- Kanban container -->
 	<div id="root" class="wx-willow-dark-theme"></div>
 ~~~
+
+or just include the needed theme on the page from the skins folder:
+
+~~~html {}
+<link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
+~~~
 :::
 
 In this snippet you can see how to apply the **willow-dark** theme to Kanban
-<iframe src="https://snippet.dhtmlx.com/2ihqv6pz?mode=mobile" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/k3iw6ti0?mode=mobile" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Scroll style
 

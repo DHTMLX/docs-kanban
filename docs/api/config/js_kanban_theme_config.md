@@ -45,6 +45,12 @@ Besides using the `theme` property, you can also apply the needed theme via addi
 	<!-- Kanban container -->
 	<div id="root" class="wx-willow-dark-theme"></div>
 ~~~
+
+or just include the needed theme on the page from the skins folder:
+
+~~~html {}
+<link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
+~~~
 :::
 
 ### Parameters
