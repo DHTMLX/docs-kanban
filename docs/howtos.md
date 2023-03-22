@@ -161,9 +161,9 @@ In these sections you can find out how to perform operations with rows and work 
 
 | Topic                                                       | Description                                        |
 | ----------------------------------------------------------- | ---------------------------------------------------|
-| [Loading server data for cards](api/provider/js_kanban_getcards_method.md)| Learn how to load server data for cards |
-| [Loading server data for columns](api/provider/js_kanban_getcolumns_method.md)| Learn how to load server data for columns |
-| [Loading server data for rows](api/provider/js_kanban_getrows_method.md)| Learn how to load server data for rows |
+| [Loading server data for cards](api/provider/rest_methods/js_kanban_getcards_method.md)| Learn how to load server data for cards |
+| [Loading server data for columns](api/provider/rest_methods/js_kanban_getcolumns_method.md)| Learn how to load server data for columns |
+| [Loading server data for rows](api/provider/rest_methods/js_kanban_getrows_method.md)| Learn how to load server data for rows |
 | [Working with server](guides/working_with_server.md)        | Learn how to work with server via REST API ([Example](https://snippet.dhtmlx.com/f25y0809?tag=kanban))|
 
 ## How to work with Kanban state

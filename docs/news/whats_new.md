@@ -103,7 +103,7 @@ Released on September 29, 2022
 - **Methods:**
 	[`duplicateCard()`](../../api/methods/js_kanban_duplicatecard_method),
 	[`export.json()`](../../api/internal/js_kanban_json_method),
-	[`getUsers()`](../../api/provider/js_kanban_getusers_method),
+	[`getUsers()`](../../api/provider/rest_methods/js_kanban_getusers_method),
 	[`redo()`](../../api/methods/js_kanban_redo_method) and
 	[`undo()`](../../api/methods/js_kanban_undo_method)
 
