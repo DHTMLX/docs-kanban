@@ -8,6 +8,20 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.4.1
+
+Released on Month Day, 2023
+
+[Review of release on the blog](https://dhtmlx.com/blog/maintenance-release-kanban-1-4-1/)
+
+### Fixes
+
+- Incorrect behavior of the preserve sorting
+- Incorrect behavior when a context menu is disabled via the **cardShape**, **columnShape** or **rowShape** properties
+- Incorrect behavior when you add links in the editor but do not provide links in data
+- The menu on the column can be the same as in the card or not displayed
+- Two tasks are dragged instead of one
+
 ## Version 1.4
 
 Released on March 21, 2023
