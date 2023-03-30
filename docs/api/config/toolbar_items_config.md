@@ -30,7 +30,7 @@ items?: [
 		type: "sort",
 		options?: [
 			{	
-				label: string,
+				text: string,
 				by?: string, // by?: ((card: object) => any),
 				dir?: "asc" | "desc"
 			}, {...}
@@ -57,7 +57,7 @@ In the **items** array you can specify the following parameters:
 - `type` - (required) a type of control (*"search"*)
 - `options` - (optional) an array of objects, that define the search parameters. For each object (*search option*) you can specify the following parameters:
 	- `id` - (required) a key of card field, by which the cards will be searched
-	- `label` - (required) a name of option, used in  a dropdawn list of the searchbar selector
+	- `label` - (required) a name of option, used in  a dropdown list of the searchbar selector
 	- `searchRule` (optional) - a custom function that allows defining search rules. It takes the following arguments:
 		- ***card*** - an object of the card data
 		- ***value*** - a searched value, specified in the searchbar
@@ -98,7 +98,7 @@ items: [
 
 - `type` - (required) a type of control (*"sort"*)
 - `options` - (optional) an array of objects, that define the sort parameters. For each object (*sort option*) you can specify the following parameters:
-	- `label` - (required) a name of option, used in a dropdawn list of the sort selector
+	- `text` - (required) a name of option, used in a dropdown list of the sort selector
 	- `by` - (optional) a key of card field, by which the cards will be sorted. This parameter can be set to the *string* or *function* value. The function needs to return the card field for sorting
 	- `dir` - (optional) an order of sorting. The possible values are *"asc"* and *"desc"*
 
@@ -113,12 +113,12 @@ items: [
 		type: "sort",
 		options: [
 			{
-				label: "Sort by label",
+				text: "Sort by label",
 				by: "label",
 				dir: "asc"
 			},
 			{
-				label: "Sort by description",
+				text: "Sort by description",
 				by: "description",
 				dir: "desc"
 			}
@@ -158,7 +158,9 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Change log:** The *"Undo"* and *"Redo"* controls were added in v1.3
+**Change log:**
+- The *"Undo"* and *"Redo"* controls were added in v1.3
+- The ***items.options[0].label*** parameter of the **sort** control was replaced by the ***items.options[0].text*** parameter in v1.4
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
 

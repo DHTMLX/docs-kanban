@@ -253,6 +253,48 @@ description: You can learn about the Migration to Newer Versions in the document
         }
     ~~~
 
+- The **sort** control in the [`items`](../../api/config/toolbar_items_config) property of Kanban Toolbar was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        [
+            { // custom sort control
+                type: "sort",
+                options: [
+                    {
+                        label: "Sort by label",
+                        by: "label",
+                        dir: "asc"
+                    },
+                    {
+                        label: "Sort by description",
+                        by: "description",
+                        dir: "desc"
+                    }
+                ]
+            },
+        ]
+    ~~~
+
+    ~~~jsx {6,11} title="From v1.4"
+        [
+            { // custom sort control
+                type: "sort",
+                options: [
+                    {
+                        text: "Sort by label",
+                        by: "label",
+                        dir: "asc"
+                    },
+                    {
+                        text: "Sort by description",
+                        by: "description",
+                        dir: "desc"
+                    }
+                ]
+            },
+        ]
+    ~~~
+
 #### Methods
 
 - The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method of Kanban was updated:
