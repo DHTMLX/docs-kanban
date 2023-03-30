@@ -151,4 +151,10 @@ In this snippet you can see how to apply a custom style to Kanban
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=html&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
+## Adaptivity
+
+In this snippet you can see how to create adaptive version of Kanban using custom CSS styles
+
+<iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=mobile" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+
 **Related articles:** [Customization](../customization)
