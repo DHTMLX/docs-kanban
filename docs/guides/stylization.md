@@ -132,7 +132,7 @@ or just include the needed theme on the page from the skins folder:
 :::
 
 In this snippet you can see how to apply the **willow-dark** theme to Kanban
-<iframe src="https://snippet.dhtmlx.com/k3iw6ti0?mode=mobile" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/k3iw6ti0?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Scroll style
 
@@ -149,12 +149,12 @@ You can also apply a custom style to a scroll bar of Kanban. For this, you can u
 
 In this snippet you can see how to apply a custom style to Kanban
 
-<iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=html&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Adaptivity
 
 In this snippet you can see how to create adaptive version of Kanban using custom CSS styles
 
-<iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=mobile" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles:** [Customization](../customization)
