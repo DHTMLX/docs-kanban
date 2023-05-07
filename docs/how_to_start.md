@@ -48,7 +48,7 @@ yarn config set @dhx:registry https://npm.dhtmlx.com
 yarn add @dhx/trial-kanban
 ~~~
 
-To get PRO version of Kanban, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
+To get Kanban under the proprietary license, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
 :::
 
 ## Step 2. Creating Kanban
