@@ -54,6 +54,7 @@ To get Kanban under the proprietary license, refer to **[Support Center](https:/
 :::tip
 If you want to integrate JavaScript Kanban into the React, Angular or Vue project, refer to the corresponding [**Examples on Replit**](https://replit.com/@dhtmlx) for more information.
 :::
+
 ## Step 2. Creating Kanban
 
 Now you are ready to add Kanban to the page. First, let's create the DIV containers for Kanban and its Toolbar. So, take the following steps:
