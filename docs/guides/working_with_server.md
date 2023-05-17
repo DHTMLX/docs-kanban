@@ -203,7 +203,7 @@ In the following code snippet you can see the implementation details:
 ~~~js {}
 // initialize kanban
 const kanbanInstance = new kanban.Kanban(...);
-const restProvider = new kanban.RestProvider(url);
+const restProvider = new kanban.RestDataProvider(url);
 const idResolver = restProvider.getIDResolver();
 const TypeCard = 1;
 const TypeRow = 2;
@@ -214,7 +214,7 @@ const cardsHandler = (obj: any) => {
     obj.card.row = idResolver(obj.card.row, TypeRow);
     obj.card.column = idResolver(obj.card.column, TypeColumn);
     switch (obj.type) {
-        "add-card":
+        case "add-card":
             kanbanInstance.api.exec("add-card", {
                 card: obj.card,
                 select: false,
