@@ -225,7 +225,7 @@ description: You can learn about the Migration to Newer Versions in the document
 - The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
-        function cardTemplate({ cardFields, selected, dragging, cardShape }){
+        const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
                     <div class="custom-card" style="padding:20px">
@@ -235,10 +235,16 @@ description: You can learn about the Migration to Newer Versions in the document
                 `;
             }
         }
+
+        new kanban.Kanban("#root", {
+            cards,
+            columns,
+            cardTemplate
+        });
     ~~~
 
     ~~~jsx {6-8} title="From v1.4"
-        function cardTemplate({ cardFields, selected, dragging, cardShape }){
+        const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
                     <div class="custom-card" style="padding:20px">
@@ -251,6 +257,55 @@ description: You can learn about the Migration to Newer Versions in the document
                 `;
             }
         }
+
+        new kanban.Kanban("#root", {
+            cards,
+            columns,
+            cardTemplate: kanban.template(card => cardTemplate(card)),
+            // other parameters
+        });
+    ~~~
+
+- The **sort** control in the [`items`](../../api/config/toolbar_items_config) property of Kanban Toolbar was updated in the following way:
+
+    ~~~jsx {} title="Before v1.4"
+        [
+            { // custom sort control
+                type: "sort",
+                options: [
+                    {
+                        label: "Sort by label",
+                        by: "label",
+                        dir: "asc"
+                    },
+                    {
+                        label: "Sort by description",
+                        by: "description",
+                        dir: "desc"
+                    }
+                ]
+            },
+        ]
+    ~~~
+
+    ~~~jsx {6,11} title="From v1.4"
+        [
+            { // custom sort control
+                type: "sort",
+                options: [
+                    {
+                        text: "Sort by label",
+                        by: "label",
+                        dir: "asc"
+                    },
+                    {
+                        text: "Sort by description",
+                        by: "description",
+                        dir: "desc"
+                    }
+                ]
+            },
+        ]
     ~~~
 
 #### Methods

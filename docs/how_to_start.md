@@ -48,7 +48,11 @@ yarn config set @dhx:registry https://npm.dhtmlx.com
 yarn add @dhx/trial-kanban
 ~~~
 
-To get PRO version of Kanban, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
+To get Kanban under the proprietary license, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
+:::
+
+:::tip
+If you want to integrate JavaScript Kanban into the React, Angular or Vue project, refer to the corresponding [**Examples on Replit**](https://replit.com/@dhtmlx) for more information.
 :::
 
 ## Step 2. Creating Kanban

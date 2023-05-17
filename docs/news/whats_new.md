@@ -8,11 +8,19 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.4.2
+
+Released on April 13, 2023
+
+### Fixes
+
+- Backend ID is not saved to local card/column/row data after add actions
+- Add missing TS definitions
+- Dark skin is leaking its styles
+
 ## Version 1.4.1
 
-Released on Month Day, 2023
-
-[Review of release on the blog](https://dhtmlx.com/blog/maintenance-release-kanban-1-4-1/)
+Released on March 29, 2023
 
 ### Fixes
 

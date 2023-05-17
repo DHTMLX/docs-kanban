@@ -34,7 +34,7 @@ If you need to include a context menu into the card template, specify a custom i
 ### Example
 
 ~~~jsx {1-23,28}
-function cardTemplate({ cardFields, selected, dragging, cardShape }){
+const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
 	const { label, color, id } = cardFields;
 	if (selected) {
 		return `
@@ -61,7 +61,7 @@ function cardTemplate({ cardFields, selected, dragging, cardShape }){
 new kanban.Kanban("#root", {
 	cards,
 	columns,
-	cardTemplate
+	cardTemplate: kanban.template(card => cardTemplate(card)),
 	// other parameters
 });
 ~~~
