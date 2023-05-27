@@ -22,17 +22,29 @@ cards?: [
 		start_date?: Date,
 		end_date?: Date,
 		attached?: [
-			id: string | number,
-			url?: string,
-			previewURL?: string,
-			coverURL?: string,
-			name?: string,
-			isCover?: boolean
+			{
+				id: string | number,
+				url?: string,
+				previewURL?: string,
+				coverURL?: string,
+				name?: string,
+				isCover?: boolean
+			}, {...}
 		],
 		color?: string,
 		users?: array,
 		priority?: string | number,
 		css?: string,
+		votes?: array,
+		comments?: [
+			{
+				id: string | number,
+				userId: string | number,
+				cardId: string | number,
+				text?: string,
+				date?: Date,
+			},{...}
+		], 
 		[custom_key: string]?: any
 	},
 	{...} // other cards data
@@ -47,10 +59,10 @@ For each card you can specify the following parameters (data):
 - `label` - (optional) a card label. It is displayed in the **Label** field
 - `description` -  (optional)a card description. It is displayed in the **Description** field
 - `progress` - (optional) a progress bar value. You can specify the value in the range from 0 to 100 points. It is displayed in the **Progress bar** field
-- `start_date` - (optional) a start date value. It is displayed in the **Start date** field
-- `end_date` - (optional) an end date value. It is displayed in the **End date** field
-- `attached` - (optional) an array with data of the attached file(s). It is displayed in the **Attachment** field. Here you can specify the following parameters:
-	- `id` - (required) an **ID** of the attached file 
+- `start_date` - (optional) a start Date object (do not specify a string date). It is displayed in the **Start date** field
+- `end_date` - (optional) an end Date object (do not specify a string date). It is displayed in the **End date** field
+- `attached` - (optional) an array of objects with data of the attached file(s). It is displayed in the **Attachment** field. For each object you can specify the following parameters:
+	- `id` - (required) an **ID** of the attached file
 	- `url` - (optional) a path to the file to be attached
 	- `previewURL` - (optional) a path to the preview image
 	- `coverURL` - (optional) a path to the image to be set as a cover
@@ -60,6 +72,13 @@ For each card you can specify the following parameters (data):
 - `users` - (optional) an array with the assigned users **ID**s. To specify the assigned users, you need to define an array with users data in the [cardShape.users](../js_kanban_cardshape_config) property. The users are displayed in the **Users** field
 - `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape.priority](../js_kanban_cardshape_config) property. It is displayed in the **Priority** field
 - `css` - (optional) defines css styles for a separate card
+- `votes` - (optional) an array of user IDs
+- `comments` - (optional) an array of objects with data of comments. For each comment's object you can specify the following parameters:
+	- `id` - (required) an **ID** of the comment
+	- `userId` - (required) an **ID** of a user that posted the comment
+	- `cardId` - (required) an **ID** of the card that the comment belongs to
+	- `text` - (optional) a text of the comment. It also can contain html markup
+	- `date` - (optional) a Date object (do not specify a string date). The date when the comment was posted. It is not updated after editing
 - `custom_key` - (optional) a custom key of the card. You can specify the custom keys to place the card into column and row. See the [columnKey](../js_kanban_columnkey_config) and [rowKey](../js_kanban_rowkey_config) properties
 
 :::info
@@ -68,15 +87,15 @@ If you want to load new data for cards dynamically, you can use the [**parse()**
 
 ### Example
 
-~~~jsx {1-32,36}
+~~~jsx {1-40,44}
 const cards = [
 	{
 		id: 1,
 		label: "Integration with React",
 		description: "Some description",
 		progress: 25,
-		start_date: new Date("01/05/2021"),
-		end_date: new Date("01/15/2021"),
+		start_date: new Date("02/24/2022"),
+		end_date: new Date("02/24/2023"),
 		attached: [
 			{
 				id: 234,
@@ -85,11 +104,20 @@ const cards = [
 				coverURL: "../assets/img-1.jpg",
 				name: "img-1.jpg",
 				isCover: true
-			},
-			{...} // other attached files data
+			}, {...} // other attached files data
 		],
 		color: "#65D3B3",
-		users: [1, 2],
+		users: [1,2],
+		votes: [3,6,8],
+		comments: [
+			{
+				id: 1,
+				userId: 1,
+				cardId: 1,
+				text: "Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays. ",
+				date: new Date(),
+			}, {...}
+		],
 		priority: 1,
 		// custom field to place the card into the "feature" row 
 		// the rowKey config needs to be set to the "type" value
@@ -98,8 +126,7 @@ const cards = [
 		// the columnKey config needs to be set to the "stage" value
 		stage: "backlog",
 		css: "red",
-	},
-	{...} // other cards data
+	},{...} // other cards data
 ];
 
 new kanban.Kanban("#root", {
@@ -109,7 +136,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The ***css*** parameter was added in v1.4
+**Change log:** The ***css***, ***comments*** and ***votes*** parameters were added in v1.4
 
 **Related articles:**
 - [Working with data](../../../guides/working_with_data)

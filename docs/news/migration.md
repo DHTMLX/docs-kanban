@@ -158,13 +158,23 @@ description: You can learn about the Migration to Newer Versions in the document
         ]
     ~~~
 
-    ~~~jsx {6} title="From v1.4"
+    ~~~jsx {6-18} title="From v1.4"
         [
             {
                 id: 1,
                 label: "Integration with React",
                 description: "Some description",
-                css: "red"
+                css: "red",
+                votes: [4,6,9],
+                comments: [
+                    {
+                        id: 1,
+                        userId: 9,
+                        cardId: 6,
+                        text: "Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays.",
+                        date: new Date(),
+                    },{...}
+                ]
                 // other parameters
             }, ...
         ]

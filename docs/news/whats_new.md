@@ -77,7 +77,7 @@ Released on March 21, 2023
 	- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
 - #### Properties
 
-	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***css***  parameter
+	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***css***, ***comments*** and ***votes*** parameters
 	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***votes*** ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) and ***css*** ([Example](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) parameters.
 	- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property has an ability to display context menu
 	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css*** ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) and ***overlay*** ([Example](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)) parameters

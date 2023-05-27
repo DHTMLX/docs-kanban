@@ -46,10 +46,10 @@ If you want to load new data for links dynamically, you can use the [**parse()**
 ~~~jsx {1-9,14}
 const links = [
 	{
-		id: string | number,
-		masterId: string | number,
-		slaveId: string | number,
-		relation: "relatesTo" | "requiredFor" | "duplicate" | "parent",
+		id: 1,
+		masterId: 2,
+		slaveId: 5,
+		relation: "relatesTo",
 	},
 	{...}
 ];

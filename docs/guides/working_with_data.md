@@ -10,7 +10,7 @@ description: You can explore how to work with Data in the documentation of the D
 
 When initializing Kanban, you can provide the initial data for [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md), [**rows**](api/config/js_kanban_rows_config.md) and [**links**](api/config/js_kanban_links_config.md).
 
-~~~jsx {1,17,70,83,95-98}
+~~~jsx {1,17,81,94,106-109}
 const columns = [ // data for columns
 	{
 		label: "Backlog",
@@ -39,10 +39,21 @@ const cards = [ // data for cards
 		end_date: new Date("01/15/2021"),
 
 		progress: 25,
-		users: [1, 2, 3, 4],
+		users: [1,2,3,4],
 		sprint: "1.0",
 		column: "backlog",
-		type: "feature"
+		type: "feature",
+		css: "red",
+		votes: [4,6,9],
+		comments: [
+			{
+				id: 1,
+				userId: 9,
+				cardId: 6,
+				text: "Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays.",
+				date: new Date(),
+			},{...}
+		]
 	},
 	{
 		id: 2,
