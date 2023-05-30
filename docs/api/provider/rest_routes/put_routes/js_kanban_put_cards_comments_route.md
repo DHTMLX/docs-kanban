@@ -27,7 +27,7 @@ The server expects to receive a json object with the next properties:
 
 | Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
-| `text`      | number      | *Required*. The comment's text.|
+| `text`      | string      | *Required*. The comment's text.|
 | `date`      | object      | *Required*. The comment's date.|
 
 Example:
