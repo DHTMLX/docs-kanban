@@ -18,15 +18,18 @@ JavaScript Kanban has the **RestDataProvider** service that completely supports 
 
 - ***"add-card"***
 - ***"add-column"***
+- ***"add-comment"***
 - ***"add-row"***
 - ***"delete-card"***
 - ***"delete-column"***
+- ***"delete-comment"***
 - ***"delete-row"***
 - ***"move-card"***
 - ***"move-column"***
 - ***"move-row"***
 - ***"update-card"***
 - ***"update-column"***
+- ***"update-comment"***
 - ***"update-row"***
 
 ## REST methods

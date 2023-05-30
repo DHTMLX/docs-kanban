@@ -282,7 +282,6 @@ module.exports = {
 					]
 				},
 				// RestDataProvider api
-		
 				{
 					type: "category",
 					label: "RestDataProvider API",
@@ -322,7 +321,6 @@ module.exports = {
 							id: "api/overview/rest_routes_overview"
 														
 						},
-						
 						items: [
 							{
 								type: "category",
@@ -331,8 +329,8 @@ module.exports = {
 								link: {
 									type: 'generated-index',
 									title: "GET routes",
-						keywords: ['routes'],
-						image: '/img/docusaurus.png'
+									keywords: ['routes'],
+									image: '/img/docusaurus.png'
 								},
 								items: [
 									"api/provider/rest_routes/get_routes/js_kanban_get_cards_route",
@@ -341,7 +339,6 @@ module.exports = {
 									"api/provider/rest_routes/get_routes/js_kanban_get_users_route",
 									"api/provider/rest_routes/get_routes/js_kanban_get_uploads_route",
 								]
-		
 							},
 							{
 								type: "category",
@@ -350,17 +347,17 @@ module.exports = {
 								link: {
 									type: 'generated-index',
 									title: "POST routes",
-						keywords: ['routes'],
-						image: '/img/docusaurus.png'
+									keywords: ['routes'],
+									image: '/img/docusaurus.png'
 								},
 								items: [
 									"api/provider/rest_routes/post_routes/js_kanban_post_cards_route",
+									"api/provider/rest_routes/post_routes/js_kanban_post_cards_comments_route",
+									"api/provider/rest_routes/post_routes/js_kanban_post_cards_votes_route",
 									"api/provider/rest_routes/post_routes/js_kanban_post_rows_route",
 									"api/provider/rest_routes/post_routes/js_kanban_post_columns_route",
 									"api/provider/rest_routes/post_routes/js_kanban_post_uploads_route",
-									
 								]
-		
 							},
 							{
 								type: "category",
@@ -369,21 +366,19 @@ module.exports = {
 								link: {
 									type: 'generated-index',
 									title: "PUT routes",
-						keywords: ['routes'],
-						image: '/img/docusaurus.png'
+									keywords: ['routes'],
+									image: '/img/docusaurus.png'
 								},
 								items: [
 									"api/provider/rest_routes/put_routes/js_kanban_put_cards_route",
 									"api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route",
+									"api/provider/rest_routes/put_routes/js_kanban_put_cards_comments_route",
 									"api/provider/rest_routes/put_routes/js_kanban_put_rows_route",
 									"api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route",
 									"api/provider/rest_routes/put_routes/js_kanban_put_columns_route",	
 									"api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route",
-								
 								]
-		
 							},
-		
 							{
 								type: "category",
 								label: "DELETE routes",
@@ -391,19 +386,18 @@ module.exports = {
 								link: {
 									type: 'generated-index',
 									title: "DELETE routes",
-						keywords: ['routes'],
-						image: '/img/docusaurus.png'
+									keywords: ['routes'],
+									image: '/img/docusaurus.png'
 								},
 								items: [
 									"api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route",
+									"api/provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route",
+									"api/provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route",
 									"api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route",
 									"api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route",						
-								
 								]
-		
 							}
 						]
-						
 					}		
 				]
 			  },

@@ -17,8 +17,8 @@ The route handles the **HTTP DELETE** request made to the **'/cards/{id}'** path
 The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
-| ----------- | ----------- | ----------- |
-| `id`       |  number   | *Required*. The ID of the card to be deleted.|
+| ---------- | ----------- | ----------- |
+| `id`       |  number     | *Required*. The ID of the card to be deleted.|
 
 ### Payload
 
