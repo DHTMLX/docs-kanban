@@ -18,7 +18,7 @@ Released on June Day, 2023
 
 - An ability to set and delete links between cards at runtime
 - An ability to manage links between cards on the server side
-- An ability to fix column headers
+- An ability to fix column headers ([Example](https://snippet.dhtmlx.com/gc19coj0?tag=kanban))
 
 ### New API
 

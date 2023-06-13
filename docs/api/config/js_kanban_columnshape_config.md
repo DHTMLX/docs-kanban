@@ -161,4 +161,6 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
-**Related sample:** [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
+**Related samples:** 
+- [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
+- [Kanban. Fixed headers](https://snippet.dhtmlx.com/gc19coj0?tag=kanban)
