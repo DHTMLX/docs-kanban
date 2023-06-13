@@ -20,10 +20,12 @@ JavaScript Kanban has the **RestDataProvider** service that completely supports 
 - ***"add-column"***
 - ***"add-comment"***
 - ***"add-row"***
+- ***"add-link"***
 - ***"delete-card"***
 - ***"delete-column"***
 - ***"delete-comment"***
 - ***"delete-row"***
+- ***"delete-link"***
 - ***"move-card"***
 - ***"move-column"***
 - ***"move-row"***
@@ -38,6 +40,7 @@ The **RestDataProvider** service includes the special REST methods for dynamic d
 
 - [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - gets a promise with the ***cards data***
 - [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - gets a promise with the ***columns data***
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - gets a promise with the ***links data***
 - [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - gets a promise with the ***rows data***
 - [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - gets a promise with the ***users data***
 
@@ -52,7 +55,7 @@ or you can create a custom one.
 
 To connect **RestDataProvider** to the backend, you need to call the **kanban.RestDataProvider** constructor by passing the corresponding **URL** as a parameter.
 
-~~~js {1-2,25}
+~~~js {1-2,27}
 const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
@@ -60,11 +63,13 @@ Promise.all([
     restProvider.getUsers(),
     restProvider.getCards(),
     restProvider.getColumns(),
+    restProvider.getLinks(),
     restProvider.getRows()
-]).then(([users, cards, columns, rows]) => {
+]).then(([users, cards, columns, links, rows]) => {
     const board = new kanban.Kanban("#root", {
         cards,
         columns,
+        links,
         rows,
         rowKey: "type",
         editorShape: [
@@ -135,11 +140,13 @@ After receiving the token, you should initialize the widget. It can be done in t
 Promise.all([
     restProvider.getCards(),
     restProvider.getColumns(),
+    restProvider.getLinks(),
     restProvider.getRows(),
-]).then(([cards, columns, rows]) => {
+]).then(([cards, columns, links, rows]) => {
     const board = new Kanban("#root", {
         cards,
         columns,
+        links,
         rows,
         rowKey: "row",
         cardShape,
@@ -189,6 +196,7 @@ You can define your own logic for handling server events. For this purpose, you 
 {
     "cards": cardsHandler: function(obj: any),
     "columns": columnsHandler: function(obj: any),
+    "links": linksHandler: function(obj: any),
     "rows": rowsHandler: function(obj: any),
 }
 ~~~
@@ -199,6 +207,7 @@ The data updated on the client side will be placed in the **obj** argument of th
 
 - For **cards**: `"add-card"`, `"update-card"`, `"delete-card"`, `"move-card"`
 - For **columns**: `"add-column"`, `"update-column"`, `"delete-column"`, `"move-column"`
+- For **links**: `"add-link"`, `"delete-link"`
 - For **rows**: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
 
 In the following code snippet you can see the implementation details:

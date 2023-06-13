@@ -179,18 +179,19 @@ new kanban.Toolbar("#toolbar", {
 
 ### RestDataProvider methods
 
-| Name                                                       | Description                                            |
-| -----------------------------------------------------------| -------------------------------------------------------|
-| [](api/provider/rest_methods/js_kanban_getcards_method.md)              | @getshort(api/provider/rest_methods/js_kanban_getcards_method.md)   |
-| [](api/provider/rest_methods/js_kanban_getcolumns_method.md)            | @getshort(api/provider/rest_methods/js_kanban_getcolumns_method.md) |
-| [](api/provider/rest_methods/js_kanban_getrows_method.md)               | @getshort(api/provider/rest_methods/js_kanban_getrows_method.md)    |
-| [](api/provider/rest_methods/js_kanban_getusers_method.md)              | @getshort(api/provider/rest_methods/js_kanban_getusers_method.md)   |
-| [](api/provider/rest_methods/js_kanban_send_method.md)             | @getshort(api/provider/rest_methods/js_kanban_send_method.md)   |
+| Name                                                           | Description                                                         |
+| -------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [](api/provider/rest_methods/js_kanban_getcards_method.md)     | @getshort(api/provider/rest_methods/js_kanban_getcards_method.md)   |
+| [](api/provider/rest_methods/js_kanban_getcolumns_method.md)   | @getshort(api/provider/rest_methods/js_kanban_getcolumns_method.md) |
+| [](api/provider/rest_methods/js_kanban_getlinks_method.md)     | @getshort(api/provider/rest_methods/js_kanban_getlinks_method.md)   |
+| [](api/provider/rest_methods/js_kanban_getrows_method.md)      | @getshort(api/provider/rest_methods/js_kanban_getrows_method.md)    |
+| [](api/provider/rest_methods/js_kanban_getusers_method.md)     | @getshort(api/provider/rest_methods/js_kanban_getusers_method.md)   |
+| [](api/provider/rest_methods/js_kanban_send_method.md)         | @getshort(api/provider/rest_methods/js_kanban_send_method.md)       |
 
 ### RestDataProvider routes
 
-| Name                                                       | Description                                            |
-| -----------------------------------------------------------| -------------------------------------------------------|
+| Name                                                        | Description                                            |
+| ----------------------------------------------------------- | -------------------------------------------------------|
 | [](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md) | @getshort(api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md) |
 | [](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)| @getshort(api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md) |
 | [](api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md)| @getshort(api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md) |
