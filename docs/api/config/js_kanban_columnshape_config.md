@@ -27,6 +27,7 @@ columnShape?: {
 			{...}
 		] | ({ column, columnIndex, store }) => array | boolean
 	},
+	fixedHeaders?: boolean,
 	css?: (column, cards) => string
 };
 ~~~
@@ -78,7 +79,8 @@ To configure the columns appearance, in the **columnShape** object you can speci
 	~~~
 	:::
 
-- `css` - a function returns a css class that applies to columns conditionally
+- `fixedHeaders` - (optional) fixes column headers during vertical scroll (*true* by default)
+- `css` - (optional) a function returns a css class that applies to columns conditionally
 
 ### Default config
 
@@ -104,13 +106,14 @@ const columnShape = {
 	menu: {
 		show: true,
 		items: getDefaultColumnMenuItems
-	}
+	},
+	fixedHeaders: true
 };
 ~~~
 
 ### Example
 
-~~~jsx {1-29,35}
+~~~jsx {1-30,36}
 const columnShape = {
 	menu: {
 		show: true,
@@ -138,6 +141,7 @@ const columnShape = {
 			}
 		]
 	},
+	fixedHeaders: false,
 	css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red"
 };
 
@@ -153,6 +157,7 @@ new kanban.Kanban("#root", {
 **Change log:**
 - The ***css*** parameter was added in v1.4
 - The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***fixedHeaders*** parameter was added in v1.5
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
