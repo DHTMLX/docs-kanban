@@ -6,6 +6,43 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
+## 1.4 -> 1.5
+
+### Api
+
+#### Properties
+
+- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property of Kanban was updated in the following way:
+
+    ~~~jsx {} title="Before v1.5"
+        {
+            menu: {
+                show: true,
+                items: [
+                    {
+                        label: "Update", ...
+                    }
+                ]
+                // other parameters
+            }
+        }
+    ~~~
+
+    ~~~jsx {11} title="From v1.5"
+        {
+            menu: {
+                show: true,
+                items: [
+                    {
+                        text: "Update", ...
+                    }
+                ]
+                // other parameters
+            },
+            fixedHeaders: true
+        } 
+    ~~~
+
 ## 1.3 -> 1.4
 
 ### Api

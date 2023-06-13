@@ -8,6 +8,41 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5
+
+Released on June Day, 2023
+
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-5/)
+
+### New functionality
+
+- An ability to set and delete links between cards at runtime
+- An ability to manage links between cards on the server side
+- An ability to fix column headers
+
+### New API
+
+- #### Methods
+
+	- [`addLink()`](../../api/methods/js_kanban_addlink_method)
+	- [`deleteComment()`](../../api/methods/js_kanban_deletelink_method)
+	- [`getLinks()`](../../api/provider/rest_methods/js_kanban_getlinks_method)
+
+### Updates
+
+- #### Properties
+
+	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***fixedHeaders*** parameter.
+
+### Fixes
+
+- Links cannot be parsed at runtime, exported, or serialized
+- Creating comments section fails if users section was not activated
+- Links in store mutates original data and aren't saved properly
+- Lazy rendering breaks styles of collapsed columns hover area
+- Cards moved to newly created columns disappear
+- Textarea for a new comment is not closed when start editing
+
 ## Version 1.4.2
 
 Released on April 13, 2023

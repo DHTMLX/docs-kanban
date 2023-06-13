@@ -21,7 +21,7 @@ columnShape?: {
 				id?: string,
 				icon?: string,
 				text?: string,
-				disabled? boolean,
+				disabled?: boolean,
 				onClick?: ({ id, item, column }) => void
 			}, 
 			{...}
