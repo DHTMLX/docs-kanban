@@ -16,11 +16,11 @@ The route handles the **HTTP POST** request made to the **'/links'** path.
 
 The server expects to receive a json object with the next properties:
 
-| Name        | Type            | Description |
-| ----------- | --------------- | ----------- |
-| `masterId`  |  number|string  | *Required*. The ID of a master link.|
-| `slaveId`   |  number|string  | *Required*. The ID of a slave link.|
-| `relation`  |  string         | *Required*. The type of the relation created by the link.|
+| Name        | Type                   | Description |
+| ----------- | ---------------------- | ----------- |
+| `masterId`  |  *number* or *string*  | *Required*. The ID of a master link. |
+| `slaveId`   |  *number* or *string*  | *Required*. The ID of a slave link. |
+| `relation`  |  *string*              | *Required*. The type of the relation created by the link. |
 
 Example:
 
