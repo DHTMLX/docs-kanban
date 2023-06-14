@@ -196,6 +196,7 @@ new kanban.Toolbar("#toolbar", {
 | ----------------------------------------------------------- | -------------------------------------------------------|
 | [](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md) | @getshort(api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md) |
 | [](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)| @getshort(api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md) |
+| [](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)| @getshort(api/provider/rest_routes/get_routes/js_kanban_get_links_route.md) |
 | [](api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md)| @getshort(api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md) |
 | [](api/provider/rest_routes/get_routes/js_kanban_get_users_route.md)| @getshort(api/provider/rest_routes/get_routes/js_kanban_get_users_route.md) |
 | [](api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md)| @getshort(api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md) |
@@ -203,6 +204,7 @@ new kanban.Toolbar("#toolbar", {
 | [](api/provider/rest_routes/post_routes/js_kanban_post_cards_comments_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_cards_comments_route.md) |
 | [](api/provider/rest_routes/post_routes/js_kanban_post_cards_votes_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_cards_votes_route.md) |
 | [](api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md) |
+| [](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_links_route.md) |
 | [](api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md) |
 | [](api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)| @getshort(api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md) |
 | [](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)| @getshort(api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md) |
@@ -216,4 +218,5 @@ new kanban.Toolbar("#toolbar", {
 | [](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route.md) |
 | [](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route.md) |
 | [](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md) |
+| [](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md) |
 | [](api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)| @getshort(api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md) |

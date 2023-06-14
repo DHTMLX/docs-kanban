@@ -337,7 +337,8 @@ module.exports = {
 								},
 								items: [
 									"api/provider/rest_routes/get_routes/js_kanban_get_cards_route",
-									"api/provider/rest_routes/get_routes/js_kanban_get_columns_route",	
+									"api/provider/rest_routes/get_routes/js_kanban_get_columns_route",
+									"api/provider/rest_routes/get_routes/js_kanban_get_links_route",	
 									"api/provider/rest_routes/get_routes/js_kanban_get_rows_route",
 									"api/provider/rest_routes/get_routes/js_kanban_get_users_route",
 									"api/provider/rest_routes/get_routes/js_kanban_get_uploads_route",
@@ -359,6 +360,7 @@ module.exports = {
 									"api/provider/rest_routes/post_routes/js_kanban_post_cards_votes_route",
 									"api/provider/rest_routes/post_routes/js_kanban_post_rows_route",
 									"api/provider/rest_routes/post_routes/js_kanban_post_columns_route",
+									"api/provider/rest_routes/post_routes/js_kanban_post_links_route",
 									"api/provider/rest_routes/post_routes/js_kanban_post_uploads_route",
 								]
 							},
@@ -397,7 +399,8 @@ module.exports = {
 									"api/provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route",
 									"api/provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route",
 									"api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route",
-									"api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route",						
+									"api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route",
+									"api/provider/rest_routes/delete_routes/js_kanban_delete_links_route",						
 								]
 							}
 						]
