@@ -172,28 +172,28 @@ For quick navigation you can use either the tabs below or the side menu:
 </TabItem>
 
 <TabItem value="uploads" label="uploads">
-<p>Use the next routes to perform operations on uploads (files uploaded to the server):</p>
-<table>
-<thead>
-<tr>
-<th>HTTP method</th>
-<th>Route</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="/api/provider/rest_routes/get_routes/js_kanban_get_uploads_route"> /uploads</a></td>
-<td>Gets the requested binary file from the server</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="/api/provider/rest_routes/post_routes/js_kanban_post_uploads_route"> /uploads</a></td>
-<td>Uploads a binary file to the server and returns a json object with its id, name, and url</td>
-</tr>
-</tbody>
-</table>
+    <p>Use the next routes to perform operations on uploads (files uploaded to the server):</p>
+    <table>
+        <thead>
+            <tr>
+                <th>HTTP method</th>
+                <th>Route</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td><a href="/api/provider/rest_routes/get_routes/js_kanban_get_uploads_route"> /uploads</a></td>
+                <td>Gets the requested binary file from the server</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td><a href="/api/provider/rest_routes/post_routes/js_kanban_post_uploads_route"> /uploads</a></td>
+                <td>Uploads a binary file to the server and returns a json object with its id, name, and url</td>
+            </tr>
+        </tbody>
+    </table>
 </TabItem>
 
 </Tabs>

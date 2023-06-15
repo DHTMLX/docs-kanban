@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.5
 
-Released on June Day, 2023
+Released on June 15, 2023
 
 [Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-5/)
 
