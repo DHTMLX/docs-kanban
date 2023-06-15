@@ -28,6 +28,12 @@ Released on June Day, 2023
 	- [`deleteComment()`](../../api/methods/js_kanban_deletelink_method)
 	- [`getLinks()`](../../api/provider/rest_methods/js_kanban_getlinks_method)
 
+- #### Routes
+
+	- [`DELETE /links`](../../api/provider/rest_routes/delete_routes/js_kanban_delete_links_route)
+	- [`GET /links`](../../api/provider/rest_routes/get_routes/js_kanban_get_links_route)
+	- [`POST /links`](../../api/provider/rest_routes/post_routes/js_kanban_post_links_route)
+
 ### Updates
 
 - #### Properties
@@ -110,6 +116,7 @@ Released on March 21, 2023
 - #### Methods
 
 	- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
+
 - #### Properties
 
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***css***, ***comments*** and ***votes*** parameters
