@@ -25,7 +25,7 @@ Released on June 15, 2023
 - #### Methods
 
 	- [`addLink()`](../../api/methods/js_kanban_addlink_method)
-	- [`deleteComment()`](../../api/methods/js_kanban_deletelink_method)
+	- [`deleteLink()`](../../api/methods/js_kanban_deletelink_method)
 	- [`getLinks()`](../../api/provider/rest_methods/js_kanban_getlinks_method)
 
 - #### Routes
