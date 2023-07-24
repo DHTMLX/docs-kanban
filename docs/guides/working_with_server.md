@@ -90,7 +90,7 @@ Promise.all([
 You need to include **RestDataProvider** into the **Event Bus** order via the [**api.setNext()**](api/internal/js_kanban_setnext_method.md) method to perform operations with data (*adding*, *deleting* etc) and send the corresponding requests to the server
 :::
 
-## Example
+### Example
 
 In this snippet you can see how to connect **RestDataProvider** to the **Go** backend and load server data dynamically:
 
@@ -214,7 +214,7 @@ In the following code snippet you can see the implementation details:
 
 ~~~js {}
 // initialize kanban
-const kanbanInstance = new kanban.Kanban(...);
+const board = new kanban.Kanban(...);
 const restProvider = new kanban.RestDataProvider(url);
 const idResolver = restProvider.getIDResolver();
 const TypeCard = 1;
@@ -227,7 +227,7 @@ const cardsHandler = (obj: any) => {
     obj.card.column = idResolver(obj.card.column, TypeColumn);
     switch (obj.type) {
         case "add-card":
-            kanbanInstance.api.exec("add-card", {
+            board.api.exec("add-card", {
                 card: obj.card,
                 select: false,
                 skipProvider: true, // prevent the client from sending request to the server
@@ -254,6 +254,110 @@ The `type` argument is the type of model that takes the following values:
 - `RowID` - 2,
 - `ColumnID` - 3
 
-To prevent the request from being sent to the server, you need to use the `skipProvider: true` flag when calling the `kanbanInstance.api.exec()` method.
+To prevent the request from being sent to the server, you need to use the `skipProvider: true` flag when calling the `board.api.exec()` method.
 
 And the final step is to apply custom handlers to the server events. In this way you can create your own server event handlers.
+
+## Grouping two or more statuses into a single column
+
+In this section you can see how to display cards from different columns in one column (for example, a common column for cards with *To do* and *Unassigned* statuses).
+
+To implement such grouping, you need to add a custom field (for example, **status**). This field will store a current status of a card. The **column** field will store a common status.
+
+After this you need to create specific rules for grouping cards. In our case, the cards will be grouped in specific columns by the following statuses:
+
+- *todo*, *unassigned* - statuses for the **Open** column
+- *dev*, *testing* - statuses for the **Inprogress** column
+- *merged*, *released* - statuses for the **Done** column
+
+There are 2 ways how to implement such grouping cards in a single column by 2 or more statuses:
+
+- [Server side](#server-side-grouping)
+- [Server side + client side](#server-side--client-side-grouping)
+
+### Server side grouping
+
+If you want to implement the server side grouping, your server should have an ability to send data to client side via [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (see [Multiuser backend](#multiuser-backend)).
+
+In a place, where a server handles a query to update a card, you need to check the **status** field. In our case we use the [Go](https://go.dev/) programming language, but you can use any other backend technologies.
+
+~~~go
+func Update(id int, c Card) error {
+   // ...
+   oldColumn := c.Column
+   s := data.Status
+   if s == "todo" || s == "unassigned" {
+      c.Column = "open"
+   } else if s == "dev" || s == "testing" {
+      c.Column = "inprogress"
+   } else if s == "merged" || s == "released" {
+      c.Column = "done"
+   }
+
+   db.Save(&c)
+
+   if oldColumn != c.Column {
+      // if the column has been updated by the status field,
+      // the client should be notified to move the card to the corresponding column
+
+      // need to update the index of the card
+      updateCardIndex(&c)
+
+      // notify client to update the column
+      ws.Publish("card-update", &c)
+   }
+   // ...
+}
+~~~
+
+Thus, when the user changes the value of the status field, the server logic checks the value and put the card in the corresponding column. After this, the server will use WebSocket to notify the client that the card needs to be moved  to another column.
+
+### Server side + client side grouping
+
+For the mixed server + client approach, you should obtain grouping rules from the server. According to this rules, the client will be able to determine to which column the card will be moved depending on the value of the status field.
+
+~~~js
+const groupingRules = await fetch("http://server.com/rules");
+~~~
+
+For example, you can specify the following rules:
+
+~~~json
+{
+   "open": ["todo", "unassigned"],
+   "progress": ["dev", "testing"],
+   "done": ["merged", "released"],
+}
+~~~
+
+Next, you need to define a logic, that will check the card changes and move the card to the required column:
+
+~~~js
+const updateColumn = card => {
+   for (let col in groupingRules) {
+      if (groupingRules[col].includes(card.status)) {
+         card.column = col;
+         break;
+      }
+   }
+};
+
+kanban.api.intercept("move-card", ev => {
+   kanban.api.exec("update-card", {
+      id: ev.id,
+      card: { status: groupingRules[ev.columnId][0],
+   });
+});
+
+kanban.api.intercept("update-card", ev => {
+   updateColumn(ev.card);
+});
+~~~
+
+In this way, you can define certain columns for cards depending on other fields.
+
+### Example
+
+The snippet below shows how to configure the server side to group two or more statuses into a single column in a real time:
+
+<iframe src="https://snippet.dhtmlx.com/habbz6mf?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
