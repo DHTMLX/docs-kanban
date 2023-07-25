@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.5
 
-Released on June Day, 2023
+Released on June 15, 2023
 
 [Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-5/)
 
@@ -18,15 +18,21 @@ Released on June Day, 2023
 
 - An ability to set and delete links between cards at runtime
 - An ability to manage links between cards on the server side
-- An ability to fix column headers ([Example](https://snippet.dhtmlx.com/gc19coj0?tag=kanban))
+- An ability to fix column headers (see the [**example**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
 
 ### New API
 
 - #### Methods
 
 	- [`addLink()`](../../api/methods/js_kanban_addlink_method)
-	- [`deleteComment()`](../../api/methods/js_kanban_deletelink_method)
+	- [`deleteLink()`](../../api/methods/js_kanban_deletelink_method)
 	- [`getLinks()`](../../api/provider/rest_methods/js_kanban_getlinks_method)
+
+- #### Routes
+
+	- [`DELETE /links`](../../api/provider/rest_routes/delete_routes/js_kanban_delete_links_route)
+	- [`GET /links`](../../api/provider/rest_routes/get_routes/js_kanban_get_links_route)
+	- [`POST /links`](../../api/provider/rest_routes/post_routes/js_kanban_post_links_route)
 
 ### Updates
 
@@ -73,11 +79,11 @@ Released on March 21, 2023
 
 ### New functionality
 
-- An ability to add comments ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
-- An ability to apply the **material**, **willow** and **willow-dark** themes ([Example](https://snippet.dhtmlx.com/jnw54xif?tag=kanban))
-- An ability to limit users ([Example](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
-- An ability to set links between cards ([Example](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
-- An ability to votes for a card ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- An ability to add comments (see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- An ability to apply the **material**, **willow** and **willow-dark** themes (see the [**example**](https://snippet.dhtmlx.com/jnw54xif?tag=kanban))
+- An ability to limit users (see the [**example**](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
+- An ability to set links between cards (see the [**example**](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
+- An ability to votes for a card (see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
 
 ### New API
 
@@ -110,16 +116,17 @@ Released on March 21, 2023
 - #### Methods
 
 	- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
+
 - #### Properties
 
 	- The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***css***, ***comments*** and ***votes*** parameters
-	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***votes*** ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) and ***css*** ([Example](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) parameters.
+	- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***votes*** (see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) and ***css*** (see the [**example**](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) parameters.
 	- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property has an ability to display context menu
-	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css*** ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) and ***overlay*** ([Example](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)) parameters
-	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter ([Example](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
+	- The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css*** (see the [**example**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) and ***overlay*** (see the [**example**](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)) parameters
+	- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter (see the [**example**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
 	- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
-	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter ([Example](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
-	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter ([Example](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
+	- The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter (see the [**example**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
+	- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter (see the [**example**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
 
 ### Deprecated API
 

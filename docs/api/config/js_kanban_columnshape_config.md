@@ -163,4 +163,4 @@ new kanban.Kanban("#root", {
 
 **Related samples:** 
 - [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
-- [Kanban. Fixed headers](https://snippet.dhtmlx.com/gc19coj0?tag=kanban)
+- [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

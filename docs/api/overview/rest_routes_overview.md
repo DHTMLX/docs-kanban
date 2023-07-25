@@ -9,7 +9,6 @@ description: You can have an Internal RestDataProvider routes overview of JavaSc
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 This page gives you the list of all REST routes with their short description and links to pages with more details.<br> Before you dive into each route description, it's recommended to read about [Working with Server](guides/working_with_server.md).
 
 ---
@@ -102,72 +101,99 @@ For quick navigation you can use either the tabs below or the side menu:
 </table>
 </TabItem>
 
-
 <TabItem value="columns" label="columns">
-<p>Use the next routes to perform operations on columns:</p>
-<table>
-<thead>
-<tr>
-<th>HTTP method</th>
-<th>Route</th>
-<th>Description</th>
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="/api/provider/rest_routes/get_routes/js_kanban_get_columns_route"> /columns</a></td>
-<td>Gets data on all columns and returns a json object with an array of objects with columns data</td>
-</tr>
-<tr>
-<td>POST</td>
-<td ><a href="/api/provider/rest_routes/post_routes/js_kanban_post_columns_route"> /columns</a></td>
-<td>Adds a new column and returns a json object with the row ID in it</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td><a href="/api/provider/rest_routes/put_routes/js_kanban_put_columns_route"> /columns</a>
-</td><td>Updates data on a specified column and returns an empty json object</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td><a href="/api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route"> /columns/id/move</a></td>
-<td>Moves a column to a specified position</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td><a href="/api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route"> /columns</a></td>
-<td>Deletes data on a column</td>
-</tr>
-</tbody>
-</table>
+    <p>Use the next routes to perform operations on columns:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>HTTP method</th>
+                <th>Route</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td><a href="/api/provider/rest_routes/get_routes/js_kanban_get_columns_route"> /columns</a></td>
+                <td>Gets data on all columns and returns a json object with an array of objects with columns data</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td ><a href="/api/provider/rest_routes/post_routes/js_kanban_post_columns_route"> /columns</a></td>
+                <td>Adds a new column and returns a json object with the row ID in it</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td><a href="/api/provider/rest_routes/put_routes/js_kanban_put_columns_route"> /columns</a></td>
+                <td>Updates data on a specified column and returns an empty json object</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td><a href="/api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route"> /columns/id/move</a></td>
+                <td>Moves a column to a specified position</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td><a href="/api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route"> /columns</a></td>
+                <td>Deletes data on a column</td>
+            </tr>
+        </tbody>
+    </table>
 </TabItem>
 
+<TabItem value="links" label="links">
+    <p>Use the next routes to perform operations on links:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>HTTP method</th>
+                <th>Route</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td><a href="/api/provider/rest_routes/get_routes/js_kanban_get_links_route"> /links</a></td>
+                <td>Gets data on all links and returns a json object with an array of links objects</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td ><a href="/api/provider/rest_routes/post_routes/js_kanban_post_links_route"> /links</a></td>
+                <td>Creates a new link and returns a json object with a new link ID</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td><a href="/api/provider/rest_routes/delete_routes/js_kanban_delete_links_route"> /links</a></td>
+                <td>Deletes data on a link</td>
+            </tr>
+        </tbody>
+    </table>
+</TabItem>
 
 <TabItem value="uploads" label="uploads">
-<p>Use the next routes to perform operations on uploads (files uploaded to the server):</p>
-<table>
-<thead>
-<tr>
-<th>HTTP method</th>
-<th>Route</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="/api/provider/rest_routes/get_routes/js_kanban_get_uploads_route"> /uploads</a></td>
-<td>Gets the requested binary file from the server</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><a href="/api/provider/rest_routes/post_routes/js_kanban_post_uploads_route"> /uploads</a></td>
-<td>Uploads a binary file to the server and returns a json object with its id, name, and url</td>
-</tr>
-</tbody>
-</table>
+    <p>Use the next routes to perform operations on uploads (files uploaded to the server):</p>
+    <table>
+        <thead>
+            <tr>
+                <th>HTTP method</th>
+                <th>Route</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td><a href="/api/provider/rest_routes/get_routes/js_kanban_get_uploads_route"> /uploads</a></td>
+                <td>Gets the requested binary file from the server</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td><a href="/api/provider/rest_routes/post_routes/js_kanban_post_uploads_route"> /uploads</a></td>
+                <td>Uploads a binary file to the server and returns a json object with its id, name, and url</td>
+            </tr>
+        </tbody>
+    </table>
 </TabItem>
 
 </Tabs>
