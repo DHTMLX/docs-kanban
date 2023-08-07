@@ -8,6 +8,18 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.4
+
+Released on August 8, 2023
+
+### Fixes
+
+- Previously uploaded files remain in the form after switching to another card
+- File upload via drag-and-drop doesn't work
+- Unexpected deletion of cards while the user presses the Delete key and the form is opens
+- The "Search in" dropdown input becomes empty after a card was selected through search
+- Added links are not deleted on the backend when the add-link operation is undone
+
 ## Version 1.5
 
 Released on June 15, 2023
