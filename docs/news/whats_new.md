@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.5.4
 
-Released on August 8, 2023
+Released on August 9, 2023
 
 ### Fixes
 
@@ -19,6 +19,12 @@ Released on August 8, 2023
 - Unexpected deletion of cards while the user presses the Delete key and the form is opens
 - The "Search in" dropdown input becomes empty after a card was selected through search
 - Added links are not deleted on the backend when the add-link operation is undone
+
+## Version 1.5.1
+
+### Fixes
+
+- correct TypeScript definitions generation
 
 ## Version 1.5
 
