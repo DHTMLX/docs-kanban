@@ -28,26 +28,33 @@ The method returns an object with the following parameters:
 	cards: array,
 	cardsMap: object,
 	cardsMeta: object,
+	cardHeight: object,
 	columnKey: string,
 	columns: array,
+	columnShape: object,
 	dragItemId: string | number, 
 	dragItemsCoords: array, 
 	edit: object,
-	editorShape: array,
-	fromAreaMeta: object,
 	overAreaId: string | number, 
 	readonly: object,
 	rowKey: string,
+	rowShape: object,
 	rows: array,
 	scroll: object,
 	search: object,
 	selected: array, 
 	sort: object,
+	layout: string,
+	history: object,
+	currentUser: number,
+	links: object,
+	// deprecated options
+	editorShape: array, // deprecated in v1.4
+	fromAreaMeta: object, // deprecated in v1.4
 	dropAreaItemsCoords: array, // deprecated in v1.4
 	dropAreasCoords: array, // deprecated in v1.4 
 	overAreaMeta: object, // deprecated in v1.4
 }
-~~~  
 
 ### Example
 
@@ -73,3 +80,5 @@ The method was updated in v1.4. The following parameters were deprecated:
 - ***dropAreaItemsCoords***
 - ***dropAreasCoords***
 - ***overAreaMeta***
+- ***editorShape***
+- ***fromAreaMeta***

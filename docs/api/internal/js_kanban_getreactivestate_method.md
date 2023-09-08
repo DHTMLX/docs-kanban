@@ -27,28 +27,30 @@ The method returns an object with the following parameters:
 		update: any,
 		set: any
 	},
-	before: {...}, 
+	before: {...},
+	cardHeight: {...},
 	cardShape: {...},
 	cards: {...},
 	cardsMap: {...},
 	cardsMeta: {...},
 	columnKey: {...},
+	columnShape: {...},
 	columns: {...},
-	dragItemId: {...}, 
-	dragItemsCoords: {...}, 
-	dropAreaItemsCoords: {...}, 
-	dropAreasCoords: {...}, 
+	currentUser: {...},
+	dragItemId: {...},
+	dragItemsCoords: {...},
 	edit: {...},
-	editorShape: {...},
-	fromAreaMeta: {...},
-	overAreaId: {...}, 
-    overAreaMeta: {...},
+	history: {...},
+	layout: {...},
+	links: {...},
+	overAreaId: {...},
 	readonly: {...},
 	rowKey: {...},
+	rowShape: {...},
 	rows: {...},
 	scroll: {...},
 	search: {...},
-	selected: {...}, 
+	selected: {...},
 	sort: {...}
 }
 ~~~  
@@ -95,4 +97,4 @@ state.selected.update((data) => {
 });
 ~~~
 
-**Change log:** The method was updated in v1.2
+**Change log:** The method was updated in v1.4
