@@ -24,15 +24,23 @@ setConfig(config: object): void;
 Using this method, you can configure the Kanban widget as well as load data to it. The method changes only the parameters you passed.
 :::
 
+:::important
+The `setConfig()` method destroys the current component and initialize a new one. If you use the component with **Toolbar**, you need to call the [`setConfig()`](api/methods/toolbar_setconfig_method.md) method of **Toolbar**, because it uses the internal API of Kanban. See the example below!
+:::
+
 ### Example
 
-~~~jsx {7-14}
+~~~jsx {10-18,20-23}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
 	cards
 });
-// set the configuration parameters of Kanban
+
+// create Toolbar
+const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
+
+// set new configuration parameters of Kanban
 board.setConfig({
 	editorAutoSave: false,
 	columnKey: "stage",
@@ -40,5 +48,10 @@ board.setConfig({
 	cardShape,
 	editorShape,
 	/*other parameters*/
+});
+
+// update configuration parameters of Toolbar
+toolbar.setConfig({
+	api: board.api
 });
 ~~~
