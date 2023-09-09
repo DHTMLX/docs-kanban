@@ -24,33 +24,33 @@ The method returns an object with the following parameters:
 {	
 	areasMeta: object, 
 	before: string | number, 
-	cardShape: object,
+	cardHeight: number | null, 
 	cards: array,
+	cardShape: object,
 	cardsMap: object,
 	cardsMeta: object,
-	cardHeight: object,
 	columnKey: string,
 	columns: array,
 	columnShape: object,
+	currentUser: number | string | null,
 	dragItemId: string | number, 
 	dragItemsCoords: array, 
 	edit: object,
+	history: object,
+	layout: string,
+	links: array,
 	overAreaId: string | number, 
 	readonly: object,
 	rowKey: string,
-	rowShape: object,
 	rows: array,
+	rowShape: object,
 	scroll: object,
 	search: object,
 	selected: array, 
 	sort: object,
-	layout: string,
-	history: object,
-	currentUser: number,
-	links: object,
 	// deprecated options
-	editorShape: array, // deprecated in v1.4
-	fromAreaMeta: object, // deprecated in v1.4
+	fromAreaMeta: object, // deleted in v.1.2
+	editorShape: array, // deleted in v.1.4
 	dropAreaItemsCoords: array, // deprecated in v1.4
 	dropAreasCoords: array, // deprecated in v1.4 
 	overAreaMeta: object, // deprecated in v1.4
@@ -58,7 +58,7 @@ The method returns an object with the following parameters:
 
 ### Example
 
-~~~jsx {7-14}
+~~~jsx {7-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -71,7 +71,6 @@ console.log(state.cards); // output the cards data
 console.log(state.columns); // output the columns data
 console.log(state.rows); // output the rows data
 console.log(state.cardShape); // output the card configuration
-console.log(state.editorShape); // output the editor configuration
 //...
 ~~~
 
@@ -80,5 +79,4 @@ The method was updated in v1.4. The following parameters were deprecated:
 - ***dropAreaItemsCoords***
 - ***dropAreasCoords***
 - ***overAreaMeta***
-- ***editorShape***
-- ***fromAreaMeta***
+The ***editorShape*** parameter was deleted
