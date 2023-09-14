@@ -8,6 +8,18 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.6
+
+Released on September 13, 2023
+
+### Updates
+
+- An ability to import component as ES module
+
+### Fixes
+
+- Regression in npm packages
+
 ## Version 1.5.4
 
 Released on August 9, 2023
