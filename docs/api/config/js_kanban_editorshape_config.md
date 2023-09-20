@@ -137,7 +137,7 @@ The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config
 - `values` - (optional) an array of objects containing the dropdown options data. Here you can specify the following parameters:
 	- `id` - (required) an option **ID**
 	- `label` - (required) an option label
-	- `avatart` - (optional) a path to the option preview image (for a **"multiselect"** type only)
+	- `avatar` - (optional) a path to the option preview image (for a **"multiselect"** type only)
 
 :::important
 To set the control for assigning one user, you need to use the ***"select"*** or ***"combo"*** types! For assigning several users, use the ***"multiselect"*** type.
