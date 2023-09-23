@@ -32,7 +32,9 @@ cards?: [
 			}, {...}
 		],
 		color?: string,
-		users?: array,
+		users?: array | string | number,
+			// users?: array - for multiple users, if you use the "multiselect" editor type to assign users
+			// users?: string | number - for a single user, if you use the "combo" or "select" editor type to assign a user
 		priority?: string | number,
 		css?: string,
 		votes?: array,
@@ -69,7 +71,14 @@ For each card you can specify the following parameters (data):
 	- `name` - (optional) a file name
 	- `isCover` - (optional) enables a cover image. If **true**, the cover image will be downloaded via the "coverURL" url
 - `color` - (optional) a valid HEX color code. It is the color of the card top line
-- `users` - (optional) an array with the assigned users **ID**s. To specify the assigned users, you need to define an array with users data in the [cardShape.users](../js_kanban_cardshape_config) property. The users are displayed in the **Users** field
+- `users` - (optional) an **array** with **ID**s for multiple the assigned users or **string | number**  for a single assigned user. To specify the assigned users, you need to define an array with users data in the [cardShape.users](../js_kanban_cardshape_config) property. The users are displayed in the **Users** field
+
+:::info
+`users?: array` - specify **array** with users **ID**s, if you use the [**multiselect**](../js_kanban_editorshape_config/#--parameters-for-combo-select-and-multiselect-types) editor type to assign multiple users
+
+`users?: string | number` - specify a single **ID**, if you use the [**combo** or **select**](../js_kanban_editorshape_config/#--parameters-for-combo-select-and-multiselect-types) editor types to assign a single user
+:::
+
 - `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape.priority](../js_kanban_cardshape_config) property. It is displayed in the **Priority** field
 - `css` - (optional) defines css styles for a separate card
 - `votes` - (optional) an array of user IDs
