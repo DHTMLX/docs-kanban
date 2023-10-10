@@ -52,7 +52,7 @@ To get Kanban under the proprietary license, refer to **[Support Center](https:/
 :::
 
 :::tip
-If you want to integrate JavaScript Kanban into the React, Angular or Vue project, refer to the corresponding [**Examples on Replit**](https://replit.com/@dhtmlx) for more information.
+If you want to integrate JavaScript Kanban into React, Angular or Vue projects, refer to the corresponding [**Examples on CodeSandbox**](https://codesandbox.io/u/DHTMLX) for more information.
 :::
 
 ## Step 2. Creating Kanban
