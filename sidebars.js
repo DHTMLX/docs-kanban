@@ -409,6 +409,27 @@ module.exports = {
 			  },
 			]
 		},
+
+		//start Backend and frameworks integration
+		{
+			type: "category",
+			label: "Backend and frameworks integration",
+			link: {
+				type: 'generated-index',
+				title: "Backend and frameworks integration",
+				keywords: ['backend and frameworks integration'],
+				image: '/img/docusaurus.png'
+			},
+			items: [
+				"guides/working_with_server",
+				"guides/integration_with_angular",
+				"guides/integration_with_react",
+				"guides/integration_with_vue",
+				"guides/integration_with_svelte",
+			],
+		},
+		// end Backend and frameworks integration
+		
 		{
 			type: "category",
 			label: "Guides",
@@ -428,7 +449,7 @@ module.exports = {
 				"guides/localization",
 				"guides/integration",
 				"guides/working_with_data",
-				"guides/working_with_server",
+				//"guides/working_with_server",
 				"guides/typescript_support"
 			]
 		},
