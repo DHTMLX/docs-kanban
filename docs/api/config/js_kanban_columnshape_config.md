@@ -25,7 +25,7 @@ columnShape?: {
 				onClick?: ({ id, item, column }) => void
 			}, 
 			{...}
-		] | ({ column, columnIndex, store }) => array | boolean
+		] | ({ column, columnIndex, columns, store }) => array | boolean
 	},
 	fixedHeaders?: boolean,
 	css?: (column, cards) => string
@@ -57,12 +57,13 @@ To configure the columns appearance, in the **columnShape** object you can speci
 	You can also set the `items` parameter to a custom function, that takes the following arguments:
 	- ***column*** - a data object of a current column
 	- ***columnIndex*** - an index of a current column
+	- ***columns*** - an array of objects containing all columns data
 	- ***store*** - an object of *dataStore*
 
 	This function allows customizing menu for any column or hide it for a specific one (by returning *null* or *false*):
 
 	~~~jsx {}
-	items: ({ column, columnIndex, store }) => {
+	items: ({ column, columnIndex, columns, store }) => {
 		if(column.id === "inprogress")
 			return null
 
@@ -85,7 +86,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
 ### Default config
 
 ~~~jsx {}
-const getDefaultColumnMenuItems = ({ column, columnIndex, store }) => [
+const getDefaultColumnMenuItems = ({ column, columnIndex, columns, store }) => [
 	{ id: "add-card", icon: "wxi-plus", text: "Add new card" },
     { id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
@@ -161,6 +162,6 @@ new kanban.Kanban("#root", {
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
-**Related samples:** 
+**Related samples:**
 - [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
 - [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

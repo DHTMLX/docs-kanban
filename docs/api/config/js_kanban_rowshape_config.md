@@ -25,7 +25,7 @@ rowShape?: {
 				onClick?: ({ id, item, row }) => void
 			}, 
 			{...}
-		] | ({ row, rowIndex, store }) => array | boolean
+		] | ({ row, rowIndex, rows, store }) => array | boolean
 	},
 	css?: (row, cards) => string
 };
@@ -56,12 +56,13 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 	You can also set the `items` parameter to a custom function, that takes the following arguments:
 	- ***row*** - a data object of a current row
 	- ***rowIndex*** - an index of a current row
+	- ***rows*** - an array of objects containing all rows data
 	- ***store*** - an object of *dataStore*
 
 	This function allows customizing menu for any row or hide it for a specific one (by returning *null* or *false*):
 
 	~~~jsx {}
-	items: ({ row, rowIndex, store }) => {
+	items: ({ row, rowIndex, rows, store }) => {
 		if(rowIndex == 0)
 			return null
 		return [
@@ -86,7 +87,7 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 ### Default config
 
 ~~~jsx {}
-const getDefaultRowMenuItems = ({ row, rowIndex, store }) => [
+const getDefaultRowMenuItems = ({ row, rowIndex, rows, store }) => [
 	{ id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
         id: "move-row:up",
@@ -125,7 +126,7 @@ const changeRowColor = (row, cssClass) => board.updateRow({
 const rowShape = {
 	menu: {
 		show: true,
-		items: ({ row, rowIndex, store }) => {
+		items: ({ row, rowIndex, rows, store }) => {
 			if (rowIndex == 0) 
 				return false
 			return [
