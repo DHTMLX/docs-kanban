@@ -426,10 +426,11 @@ module.exports = {
 				"guides/integration_with_react",
 				"guides/integration_with_vue",
 				"guides/integration_with_svelte",
+				"guides/integration",
 			],
 		},
 		// end Backend and frameworks integration
-		
+
 		{
 			type: "category",
 			label: "Guides",
@@ -447,7 +448,7 @@ module.exports = {
 				"guides/customization",
 				"guides/stylization",
 				"guides/localization",
-				"guides/integration",
+				//"guides/integration",
 				"guides/working_with_data",
 				//"guides/working_with_server",
 				"guides/typescript_support"
