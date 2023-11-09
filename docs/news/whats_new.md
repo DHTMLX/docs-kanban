@@ -8,6 +8,18 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.7
+
+Released on Month Day, 2023
+
+### Updates
+
+- The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar was extended by the ***api*** parameter
+
+### Fixes
+
+- ...
+
 ## Version 1.5.6
 
 Released on September 13, 2023

@@ -120,7 +120,7 @@ To apply a custom locale you need to:
 
 - create a custom locale (or modify the default one) and provide translations for all text labels (it can be any language you need)
 
-- apply the new locale to **Kanabn** via its [`locale`](api/config/js_kanban_locale_config.md) property or use the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method
+- apply the new locale to **Kanban** via its [`locale`](api/config/js_kanban_locale_config.md) property or use the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method
 - apply the new locale to **Toolbar** via its [`locale`](api/config/toolbar_locale_config.md) property or use the [`setLocale()`](api/methods/toolbar_setlocale_method.md) method
 
 :::info
@@ -138,6 +138,6 @@ new kanban.Kanban({
 
 ## Example
 
-In this snippet you can see how to switch through the several locales:
+In this snippet you can see how to switch through several locales:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

@@ -8,41 +8,36 @@ description: You can learn about the setLocale method of Toolbar in the document
 
 ### Description
 
-@short: Applies a new locale to Toolbar
+@short: Applies a new locale to the Toolbar of Kanban
 
 ### Usage
 
 ~~~jsx {}
-setLocale(null | locale?: object): void;
+setLocale(locale?: object, api?: object): void;
 ~~~
 
 ### Parameters
 
-- `null` - (optional) resets to the default locale (*English*)
-- `locale` - (optional) the object of data of the new locale to be applied
+- `locale` - (optional) an object of the locale to be applied to the Toolbar of Kanban
+- `api` - (optional) an object with the internal API of Kanban
 
 :::info
-Using this method, you can apply a new locale to Toolbar. To reset Toolbar to the default locale, call the method without arguments (or with a *null* value)
-:::
-
-:::important
-After applying a new locale to Toolbar, don't forget to refresh the logic of Toolbar controls via the [`setConfig()`](api/methods/toolbar_setconfig_method.md) method. See the example below.
+The **Toolbar** of Kanban is a separate component. Before changing its locale, be sure that you have already applied the [`setLocale()`](api/methods/toolbar_setlocale_method.md) method to the **Kanban** component
 :::
 
 ### Example
 
-~~~jsx {6,8-9}
+~~~jsx {8}
 // create Kanban
 const board = new kanban.Kanban("#root", {});
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-// apply the "de" locale to Toolbar
-toolbar.setLocale(de);
-// apply the default locale to Toolbar
-toolbar.setLocale(); // or toolbar.setLocale(null);
-toolbar.setConfig({ api: board.api }); // refresh logic of Toolbar controls (required after changing locales)
+// apply the "de" locale to Kanban
+board.setLocale(de);
+// apply the "de" locale to the Toolbar
+toolbar.setLocale(de, board.api);
 ~~~
 
-**Chande log:** The method was updated in v1.2
+**Chande log:** The **api** parameter was added in v1.5.7
 
 **Related articles:** [Localization](guides/localization.md)
