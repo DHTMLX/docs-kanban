@@ -8,6 +8,21 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.7
+
+Released on November 14, 2023
+
+### Updates
+
+- The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar was extended by the ***api*** parameter
+
+### Fixes
+
+- The `disabled: true` configuration doesn't work for card menu items
+- Unwanted console warnings in Kanban examples
+- It is not possible to reset the priority of a task
+- Drop-down controls in the Kanban editor don't close on click outside
+
 ## Version 1.5.6
 
 Released on September 13, 2023
