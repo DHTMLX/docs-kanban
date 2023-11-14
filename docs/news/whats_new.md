@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.5.7
 
-Released on Month Day, 2023
+Released on November 14, 2023
 
 ### Updates
 
@@ -18,7 +18,10 @@ Released on Month Day, 2023
 
 ### Fixes
 
-- ...
+- The `disabled: true` configuration doesn't work for card menu items
+- Unwanted console warnings in Kanban examples
+- It is not possible to reset the priority of a task
+- Drop-down controls in the Kanban editor don't close on click outside
 
 ## Version 1.5.6
 
