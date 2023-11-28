@@ -8,6 +8,14 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.8
+
+Released on November 28, 2023
+
+### Fixes
+
+- Missing the `currentUser` TS definition in type **IKanbanConfig**
+
 ## Version 1.5.7
 
 Released on November 14, 2023
