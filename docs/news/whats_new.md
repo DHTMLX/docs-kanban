@@ -14,7 +14,7 @@ Released on November 28, 2023
 
 ### Fixes
 
-- Missing the `currentUser` TS definition in type **IKanbanConfig**
+- Missing the **currentUser** TS definition in the **IKanbanConfig** type
 
 ## Version 1.5.7
 
