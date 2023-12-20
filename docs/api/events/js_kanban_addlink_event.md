@@ -16,6 +16,7 @@ description: You can learn about the add-link event in the documentation of the 
 "add-link": ({
 	id?: string | number,
 	link: object,
+	skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -25,6 +26,7 @@ The callback of the **add-link** event can take an object with the following par
 
 - `id` - (optional) the ID of the new link
 - `link` - (required) the data object of the new link. The full list of the link parameters can be found [here](api/config/js_kanban_links_config.md)
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

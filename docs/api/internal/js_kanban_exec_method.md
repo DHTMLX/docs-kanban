@@ -32,7 +32,7 @@ The full list of the Kanban internal events can be found [**here**](api/api_over
 
 ### Example
 
-~~~jsx {7}
+~~~jsx {7,9-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
 	columns,
@@ -40,6 +40,11 @@ const board = new kanban.Kanban("#root", {
 });
 // select the card with the 1 ID
 board.api.exec("select-card", { id: 1 });
+// add new card without sending changes to the sever
+board.api.exec("add-card", { 
+	columnId: "backlog",
+	skipProvider: true, 
+});
 ~~~
 
 **Related sample:** [Kanban. Preserve sorting](https://snippet.dhtmlx.com/74nyuv14?tag=kanban)

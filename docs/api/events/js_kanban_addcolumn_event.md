@@ -16,7 +16,8 @@ description: You can learn about the add-column event in the documentation of th
 "add-column": ({
 	id?: string | number,
 	column?: object,
-	before?: string | number
+	before?: string | number,
+	skipProvider?: boolean,
 }) => void;
 ~~~
 
@@ -24,9 +25,10 @@ description: You can learn about the add-column event in the documentation of th
 
 The callback of the **add-column** event can take an object with the following parameters:
 
-- `id` - (optional) the ID of the new column 
-- `column` - (optional) the data object of the new column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md) 
+- `id` - (optional) the ID of the new column
+- `column` - (optional) the data object of the new column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
 - `before` - (optional) the ID of the column, before which the new column will be placed
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
