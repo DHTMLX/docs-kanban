@@ -14,7 +14,8 @@ description: You can learn about the delete-link event in the documentation of t
 
 ~~~jsx {}
 "delete-link": ({
-	id: string | number
+	id: string | number,
+	skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -23,6 +24,7 @@ description: You can learn about the delete-link event in the documentation of t
 The callback of the **delete-link** event can take an object with the following parameters:
 
 - `id` - (required) the ID of the link to be deleted
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

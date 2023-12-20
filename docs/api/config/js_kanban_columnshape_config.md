@@ -80,7 +80,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
 	~~~
 	:::
 
-- `fixedHeaders` - (optional) fixes column headers during vertical scroll (*true* by default)
+- `fixedHeaders` - (optional) freezes column headers during vertical scroll (*true* by default). Scroll must be enabled in Kanban itself (height must be limited).
 - `css` - (optional) a function returns a css class that applies to columns conditionally
 
 ### Default config

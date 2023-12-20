@@ -13,7 +13,10 @@ description: You can learn about the delete-row event in the documentation of th
 ### Usage
 
 ~~~jsx {}
-"delete-row": ({ id: string | number }) => void;
+"delete-row": ({ 
+	id: string | number,
+	skipProvider?: boolean 
+}) => void;
 ~~~
 
 ### Parameters
@@ -21,6 +24,7 @@ description: You can learn about the delete-row event in the documentation of th
 The callback of the **delete-row** event can take an object with the following parameter:
 
 - `id` - (required) the ID of the row to be deleted
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

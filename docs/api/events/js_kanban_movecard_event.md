@@ -17,7 +17,8 @@ description: You can learn about the move-card event in the documentation of the
     id: string | number,
     columnId: string | number,
     rowId?: string | number,
-    before?: string | number
+    before?: string | number,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -29,6 +30,7 @@ The callback of the **move-card** event can take an object with the following pa
 - `columnId` - (required) the ID of the column the card will be placed into
 - `rowId` - (optional) the ID of the row the card will be placed into
 - `before` - (optional) the ID of the card, before which the new card will be placed
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

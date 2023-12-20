@@ -15,7 +15,8 @@ description: You can learn about the delete-comment event in the documentation o
 ~~~jsx {}
 "delete-comment": ({
 	id?: string | number, 
-    cardId: string | number
+    cardId: string | number,
+	skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -25,6 +26,7 @@ The callback of the **delete-comment** event can take an object with the followi
 
 - `id` -  (optional) the ID of the comment to be deleted
 - `cardId` - (required) the ID of the card which comment to be deleted
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
