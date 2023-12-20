@@ -13,7 +13,10 @@ description: You can learn about the delete-card event in the documentation of t
 ### Usage
 
 ~~~jsx {}
-"delete-card": ({ id: string | number }) => void;
+"delete-card": ({ 
+	id: string | number,
+	skipProvider?: boolean
+}) => void;
 ~~~
 
 ### Parameters
@@ -21,6 +24,7 @@ description: You can learn about the delete-card event in the documentation of t
 The callback of the **delete-card** event can take an object with the following parameter:
 
 - `id` - (required) the ID of the card to be deleted
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

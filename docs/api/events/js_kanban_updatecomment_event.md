@@ -22,7 +22,8 @@ description: You can learn about the update-comment event in the documentation o
         text?: string, 
         date?: Date, 
         html?: string 
-    }
+    },
+	skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -38,6 +39,7 @@ The callback of the **update-comment** event can take an object with the followi
 	- `text` - (optional) the text of the updated comment
 	- `date` - (optional) the date of the updated comment
 	- `html` - (optional) the HTML markup of the updated comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

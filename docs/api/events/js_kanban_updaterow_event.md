@@ -16,7 +16,8 @@ description: You can learn about the update-row event in the documentation of th
 "update-row": ({
 	id: string | number,
 	row?: object,
-	replace?: boolean
+	replace?: boolean,
+	skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -31,6 +32,8 @@ The callback of the **update-row** event can take an object with the following p
 	:::note
 	If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
 	:::
+
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)

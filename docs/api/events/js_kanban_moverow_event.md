@@ -15,7 +15,8 @@ description: You can learn about the move-row event in the documentation of the 
 ~~~jsx {}
 "move-row": ({
     id: string | number,
-    before : string | number
+    before: string | number,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -25,6 +26,7 @@ The callback of the **move-row** event can take an object with the following par
 
 - `id` - (required) the ID of the row to be moved
 - `before` - (required) the ID of the row, the moved one will be placed before it
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
