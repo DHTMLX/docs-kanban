@@ -40,7 +40,7 @@ const board = new kanban.Kanban("#root", {
 });
 // select the card with the 1 ID
 board.api.exec("select-card", { id: 1 });
-// add new card without sending changes to the sever
+// add new card without sending changes to the server
 board.api.exec("add-card", { 
 	columnId: "backlog",
 	skipProvider: true, 
