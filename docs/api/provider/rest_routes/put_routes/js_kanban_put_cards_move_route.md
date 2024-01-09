@@ -4,20 +4,20 @@ title: PUT /cards/{id}/move
 description: You can learn about the PUT /cards/{id}/move REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# PUT /cards/{id}/move
+# PUT `/cards/{id}/move`
 
 ### Description
 
-@short: Moves cards to a specified position 
+@short: Moves cards to a specified position
 
-The route handles the **HTTP PUT** request made to the **'cards/{id}/move'** path.
+The route handles the **HTTP PUT** request made to the `cards/{id}/move` path.
 
 ### Query parameters
 
 The query parameter is sent in the request line:
 
 | Name       | Type        | Description |
-| ----------- | ----------- | ----------- |
+| ---------- | ----------- | ----------- |
 | `id`       |  number   | *Required*. The ID of the card to be moved. In case multiple cards are requested to be moved, the id should be set to 0|
 
 :::info
@@ -28,13 +28,13 @@ When you move multiple cards, make sure that the `id` is set to 0, otherwise (if
 
 The server expects to receive a json object with the next properties:
 
-| Name       | Type        | Description |
+| Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
 | `id`        | number      |*Required*. The ID of the moved card. |
 | `columnId`  |  number     | *Required*. The ID of the column where the card is moved to.|
-| `rowId`       |  number   | *Required*. The ID of the row where the card is moved to.|
-| `before`       |  number   | *Optional*. The ID of the card before which the moved card should be placed.|
-| `batch`       |  object  | *Required for multiselect*. An array of cards objects that are moved.|
+| `rowId`     |  number     | *Required*. The ID of the row where the card is moved to.|
+| `before`    |  number     | *Optional*. The ID of the card before which the moved card should be placed.|
+| `batch`     |  object     | *Required for multiselect*. An array of cards objects that are moved.|
 
 Example:
 
@@ -79,7 +79,6 @@ Example:
     "id": 4
 }
 ~~~
-
 
 ~~~json title="Response to the request for the multiple cards operation"
 {

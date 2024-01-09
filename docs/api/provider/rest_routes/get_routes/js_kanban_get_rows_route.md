@@ -4,13 +4,13 @@ title: GET /rows
 description: You can learn about the GET /rows REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# GET /rows
+# GET `/rows`
 
 ### Description
 
 @short: Gets data on all rows and returns a json object with an array of objects with rows (swimlanes) data
 
-The route handles the **HTTP GET** request made to the **'/rows'** path.
+The route handles the **HTTP GET** request made to the `/rows` path.
 
 ### Payload
 
@@ -18,7 +18,7 @@ No payload is required.
 
 ### Response
 
-The route returns a json object with an array of objects with rows data. 
+The route returns a json object with an array of objects with rows data.
 
 Example:
 

@@ -4,13 +4,13 @@ title: DELETE /cards/{cardId}/vote
 description: You can learn about the DELETE /cards/{cardId}/vote REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# DELETE /cards/{cardId}/vote
+# DELETE `/cards/{cardId}/vote`
 
 ### Description
 
 @short: Removes a vote from a card
 
-The route handles the **HTTP DELETE** request made to the **'/cards/{cardId}/vote'** path.
+The route handles the **HTTP DELETE** request made to the `/cards/{cardId}/vote` path.
 
 ### Query parameters
 

@@ -4,13 +4,13 @@ title: DELETE /links
 description: You can learn about the DELETE /links REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# DELETE /links
+# DELETE `/links`
 
 ### Description
 
 @short: Deletes data on a link
 
-The route handles the **HTTP DELETE** request made to the **'/links/{id}'** path. 
+The route handles the **HTTP DELETE** request made to the `/links/{id}` path.
 
 ### Query parameters
 
@@ -18,7 +18,7 @@ The next parameter is sent in the request line:
 
 | Name | Type    | Description |
 | ---- | ------- | ----------- |
-| `id` | number  | *Required*. The ID of the link to be deleted.|
+| `id` | number  | *Required*. The ID of the link to be deleted. |
 
 ### Payload
 

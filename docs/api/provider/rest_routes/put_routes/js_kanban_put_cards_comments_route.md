@@ -4,13 +4,13 @@ title: PUT /cards/{cardId}/comments/{commentId}
 description: You can learn about the PUT /cards/{cardId}/comments/{cardId} REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# PUT /cards/{cardId}/comments/{cardId}
+# PUT `/cards/{cardId}/comments/{cardId}`
 
 ### Description
 
 @short: Updates a comment in a card and returns a json object with the card ID
 
-The route handles the **HTTP PUT** request made to the **'cards/{cardId}/comments/{cardId}'** path.
+The route handles the **HTTP PUT** request made to the `cards/{cardId}/comments/{cardId}` path.
 
 ### Query parameters
 
