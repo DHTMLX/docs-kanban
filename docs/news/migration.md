@@ -14,23 +14,23 @@ description: You can learn about the Migration to Newer Versions in the document
 
 - The [`setLocale`](../../api/methods/toolbar_setlocale_method.md) method of the Kanban toolbar was updated in the following way:
 
-    ~~~jsx {6} title="Before v1.5.7"
-        // create Kanban
-        const board = new kanban.Kanban("#root", {...});
-        // create Toolbar
-        const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-        // apply the "de" locale to Toolbar
-        toolbar.setLocale(de); // or null to reset the locale to the default one (en)
-    ~~~
+~~~jsx {6} title="Before v1.5.7"
+    // create Kanban
+    const board = new kanban.Kanban("#root", {...});
+    // create Toolbar
+    const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
+    // apply the "de" locale to Toolbar
+    toolbar.setLocale(de); // or null to reset the locale to the default one (en)
+~~~
 
-    ~~~jsx {6} title="From v1.5.7"
-        // create Kanban
-        const board = new kanban.Kanban("#root", {...});
-        // create Toolbar
-        const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-        // apply the "de" locale to the Toolbar
-        toolbar.setLocale(de, board.api); 
-    ~~~
+~~~jsx {6} title="From v1.5.7"
+    // create Kanban
+    const board = new kanban.Kanban("#root", {...});
+    // create Toolbar
+    const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
+    // apply the "de" locale to the Toolbar
+    toolbar.setLocale(de, board.api); 
+~~~
 
 ## 1.4 -> 1.5
 

@@ -15,7 +15,7 @@ description: You can learn about the select-card event in the documentation of t
 ~~~jsx {}
 "select-card": ({
 	id: string | number,
-    groupMode?: boolean
+	groupMode?: boolean
 }) => void;
 ~~~
 

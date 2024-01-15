@@ -15,7 +15,7 @@ description: You can learn about the delete-comment event in the documentation o
 ~~~jsx {}
 "delete-comment": ({
 	id?: string | number, 
-    cardId: string | number,
+	cardId: string | number,
 	skipProvider?: boolean
 }) => void;
 ~~~

@@ -15,7 +15,7 @@ description: You can learn about the deleteComment method in the documentation o
 ~~~jsx {}
 deleteComment({
 	id?: string | number, 
-    cardId: string | number
+	cardId: string | number
 }): void;
 ~~~
 

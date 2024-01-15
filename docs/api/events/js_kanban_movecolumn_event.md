@@ -14,8 +14,8 @@ description: You can learn about the move-column event in the documentation of t
 
 ~~~jsx {}
 "move-column": ({
-    id: string | number,
-    before: string | number,
+	id: string | number,
+	before: string | number,
 	skipProvider?: boolean
 }) => void;
 ~~~

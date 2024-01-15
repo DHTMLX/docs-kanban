@@ -15,12 +15,12 @@ description: You can learn about the add-comment event in the documentation of t
 ~~~jsx {}
 "add-comment": ({
 	id?: string | number,
-    cardId: string | number,
-    comment: {
-        text?: string,
-        date?: Date,
-        html?: string
-    },
+	cardId: string | number,
+	comment: {
+		text?: string,
+		date?: Date,
+		html?: string
+	},
 	skipProvider?: boolean
 }) => void;
 ~~~
