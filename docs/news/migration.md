@@ -12,7 +12,7 @@ description: You can learn about the Migration to Newer Versions in the document
 
 #### Methods
 
-- The [`setLocale`](../../api/methods/toolbar_setlocale_method.md) method of the Kanban toolbar was updated in the following way:
+- The [`setLocale`](../../api/methods/toolbar_setlocale_method) method of the Kanban toolbar was updated in the following way:
 
 ~~~jsx {6} title="Before v1.5.7"
     // create Kanban

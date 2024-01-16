@@ -36,10 +36,10 @@ module.exports = {
 			collapsed: false,
 			link: {
 				type: "doc",
-				id: "api/api_overview"
+				id: "api/overview/main_overview"
 			},
 			items: [
-				//"api/api_overview",
+				//"api/overview/main_overview",
 				// JS Kanban methods
 				{
 					type: "category",

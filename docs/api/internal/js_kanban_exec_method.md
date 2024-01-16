@@ -27,7 +27,7 @@ api.exec(
 ### Events
 
 :::info
-The full list of the Kanban internal events can be found [**here**](api/api_overview.md/#kanban-events)
+The full list of the Kanban internal events can be found [**here**](api/overview/main_overview.md/#kanban-events)
 :::
 
 ### Example

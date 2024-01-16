@@ -33,7 +33,7 @@ The callback of the **end-drag-card** event can take an object with the followin
 - `source` - (optional) the array of moved cards' IDs
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
