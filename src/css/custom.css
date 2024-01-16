@@ -144,10 +144,14 @@ code {
 .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
   /*background-color: rgb(90, 86, 86);*/
 }
-  /* specify the coment text color */
+  /* specify the comment text color */
 span.token.comment {
   color: rgb(12, 121, 8) !important;
 }    
+  /* specify the comment background color */
+span.token-line.theme-code-block-highlighted-line {
+  background-color: rgba(225, 212, 212, 0.075);
+}
 
 /* end styles for block of code */
 
