@@ -15,14 +15,14 @@ description: You can learn about the updateComment method in the documentation o
 ~~~jsx {}
 updateComment({
 	id?: string | number, 
-    cardId: string | number, 
-    comment: {
-        id?: string | number, 
-        cardId?: string | number, 
-        text?: string, 
-        date?: Date, 
-        html?: string 
-    }
+	cardId: string | number, 
+	comment: {
+		id?: string | number, 
+		cardId?: string | number, 
+		text?: string, 
+		date?: Date, 
+		html?: string 
+	}
 }): void;
 ~~~
 

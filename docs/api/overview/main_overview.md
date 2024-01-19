@@ -4,7 +4,7 @@ title: API Overview
 description: You can have an API overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# API overview
+# API overview !!! (NEW)
 
 ## Kanban constructor
 

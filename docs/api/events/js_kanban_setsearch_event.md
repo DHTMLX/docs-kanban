@@ -27,7 +27,7 @@ The callback of the **set-search** event can take an object with the following p
 - `by` - (optional) the card field for searching
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example

@@ -4,13 +4,13 @@ title: POST /links
 description: You can learn about the POST /links REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# POST /links
+# POST `/links`
 
 ### Description
 
 @short: Creates a new link and returns a json object with a new link ID
 
-The route handles the **HTTP POST** request made to the **'/links'** path.
+The route handles the **HTTP POST** request made to the `/links` path.
 
 ### Payload
 
@@ -19,7 +19,7 @@ The server expects to receive a json object with the next properties:
 | Name        | Type                   | Description |
 | ----------- | ---------------------- | ----------- |
 | `masterId`  |  *number* or *string*  | *Required*. The ID of a master link. |
-| `slaveId`   |  *number* or *string*  | *Required*. The ID of a slave link. |
+| `slaveId`   |  *number* or *string*  | *Required*. The ID of a slave link.  |
 | `relation`  |  *string*              | *Required*. The type of the relation created by the link. |
 
 Example:

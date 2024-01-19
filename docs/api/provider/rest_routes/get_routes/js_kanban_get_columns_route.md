@@ -4,13 +4,13 @@ title: GET /columns
 description: You can learn about the GET /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# GET /columns
+# GET `/columns`
 
 ### Description
 
 @short: Gets data on all columns and returns a json object with an array of objects with columns data
 
-The route handles the **HTTP GET** request made to the **'/columns'** path.
+The route handles the **HTTP GET** request made to the `/columns` path.
 
 ### Payload
 

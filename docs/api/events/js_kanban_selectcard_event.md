@@ -15,7 +15,7 @@ description: You can learn about the select-card event in the documentation of t
 ~~~jsx {}
 "select-card": ({
 	id: string | number,
-    groupMode?: boolean
+	groupMode?: boolean
 }) => void;
 ~~~
 
@@ -27,7 +27,7 @@ The callback of the **select-card** event can take an object with the following 
 - `groupMode` - (optional) multiselecting (false by default)
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example

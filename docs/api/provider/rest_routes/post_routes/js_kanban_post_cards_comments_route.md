@@ -4,13 +4,13 @@ title: POST /cards/{cardId}/comments
 description: You can learn about the POST /cards/{cardId}/comments REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# POST /cards/{cardId}/comments
+# POST `/cards/{cardId}/comments`
 
 ### Description
 
 @short: Adds a new comment(s) to the card and returns a json object with the card ID
 
-The route handles the **HTTP POST** request made to the **'/cards/{cardId}/comments'** path.
+The route handles the **HTTP POST** request made to the `/cards/{cardId}/comments` path.
 
 ### Payload
 

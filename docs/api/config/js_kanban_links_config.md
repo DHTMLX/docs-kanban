@@ -19,7 +19,7 @@ links?: [
 		masterId: string | number,
 		slaveId: string | number,
 		relation: "relatesTo" | "requiredFor" | "duplicate" | "parent",
-	}	
+	},	
 	{...} // other links data
 ];
 ~~~

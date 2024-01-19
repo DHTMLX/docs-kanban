@@ -4,21 +4,21 @@ title: DELETE /columns
 description: You can learn about the DELETE /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# DELETE /columns
+# DELETE `/columns`
 
 ### Description
 
 @short: Deletes data on a column
 
-The route handles the **HTTP DELETE** request made to the **'/columns/{id}'** path. 
+The route handles the **HTTP DELETE** request made to the `/columns/{id}` path.
 
 ### Query parameters
 
 The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
-| ----------- | ----------- | ----------- |
-| `id`       |  number   | *Required*. The ID of the column to be deleted.|
+| ---------- | ----------- | ----------- |
+| `id`       |  number     | *Required*. The ID of the column to be deleted.|
 
 ### Payload
 

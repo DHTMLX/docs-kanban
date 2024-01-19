@@ -14,16 +14,15 @@ module.exports = {
 			collapsible: true,
 			collapsed: true,
 			link: {
-				type: 'generated-index',
+				type: "generated-index",
 				title: "What's new and migration",
-				//description: '',
 				//slug: '/category/docusaurus-guides',
 				keywords: ['news'],
-				image: '/img/docusaurus.png',
+				image: "/img/docusaurus.png",
 			},
 			items: [
-				"news/whats_new",
-				"news/migration"
+				'news/whats_new',
+				'news/migration'
 			]
 		},
 			/*{
@@ -36,11 +35,11 @@ module.exports = {
 			collapsible: true,
 			collapsed: false,
 			link: {
-				type: 'doc',
-				id: "api/api_overview"
+				type: "doc",
+				id: "api/overview/main_overview"
 			},
 			items: [
-				//"api/api_overview",
+				//"api/overview/main_overview",
 				// JS Kanban methods
 				{
 					type: "category",
@@ -48,7 +47,7 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'doc',
+						type: "doc",
 						id: "api/overview/methods_overview"
 					},
 					items: [
@@ -103,10 +102,10 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'generated-index',
+						type: "generated-index",
 						title: 'Internal API overview',
 						keywords: ['internal api'],
-						image: '/img/docusaurus.png',
+						image: "/img/docusaurus.png",
 					},
 					items: [
 						{
@@ -115,7 +114,7 @@ module.exports = {
 							collapsible: true,
 							collapsed: true,
 							link: {
-								type: 'doc',
+								type: "doc",
 								id: "api/overview/internal_eventbus_overview"
 							},
 							items: [
@@ -131,7 +130,7 @@ module.exports = {
 							collapsible: true,
 							collapsed: true,
 							link: {
-								type: 'doc',
+								type: "doc",
 								id: "api/overview/internal_export_overview"
 							},
 							items: [
@@ -145,7 +144,7 @@ module.exports = {
 							collapsible: true,
 							collapsed: true,
 							link: {
-								type: 'doc',
+								type: "doc",
 								id: "api/overview/internal_state_overview"
 							},
 							items: [
@@ -154,7 +153,7 @@ module.exports = {
 								"api/internal/js_kanban_getstores_method"
 							]
 						},
-											]
+					]
 				},
 				{
 					type: "category",
@@ -162,7 +161,7 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'doc',
+						type: "doc",
 						id: "api/overview/events_overview"
 					},
 					items: [
@@ -201,7 +200,7 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'doc',
+						type: "doc",
 						id: "api/overview/properties_overview"
 					},
 					items: [
@@ -243,7 +242,7 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'doc',
+						type: "doc",
 						id: "api/overview/toolbar_methods_overview"
 					},
 					items: [	
@@ -260,7 +259,7 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'doc',
+						type: "doc",
 						id: "api/overview/toolbar_properties_overview"
 					},
 					items: [	
@@ -276,7 +275,7 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'doc',
+						type: "doc",
 						id: "api/overview/common_settings_overview"
 					},
 					items: [	
@@ -290,10 +289,10 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 					link: {
-						type: 'generated-index',
+						type: "generated-index",
 						title: "RestDataProvider API",
 						keywords: ['rest api'],
-						image: '/img/docusaurus.png'
+						image: "/img/docusaurus.png"
 					},
 					items: [
 						{
@@ -302,7 +301,7 @@ module.exports = {
 							collapsible: true,
 							collapsed: true,
 							link: {
-								type: 'doc',
+								type: "doc",
 								id: "api/overview/internal_rest_overview"
 							},
 							items: [
@@ -318,9 +317,10 @@ module.exports = {
 						{
 						type: "category",
 						label: "REST routes",
+						collapsible: true,
 						collapsed: true,
 						link: {
-							type: 'doc',
+							type: "doc",
 							id: "api/overview/rest_routes_overview"
 														
 						},
@@ -328,12 +328,13 @@ module.exports = {
 							{
 								type: "category",
 								label: "GET routes",
+								collapsible: true,
 								collapsed: true,
 								link: {
-									type: 'generated-index',
+									type: "generated-index",
 									title: "GET routes",
 									keywords: ['routes'],
-									image: '/img/docusaurus.png'
+									image: "/img/docusaurus.png"
 								},
 								items: [
 									"api/provider/rest_routes/get_routes/js_kanban_get_cards_route",
@@ -347,12 +348,13 @@ module.exports = {
 							{
 								type: "category",
 								label: "POST routes",
+								collapsible: true,
 								collapsed: true,
 								link: {
-									type: 'generated-index',
+									type: "generated-index",
 									title: "POST routes",
 									keywords: ['routes'],
-									image: '/img/docusaurus.png'
+									image: "/img/docusaurus.png"
 								},
 								items: [
 									"api/provider/rest_routes/post_routes/js_kanban_post_cards_route",
@@ -367,12 +369,13 @@ module.exports = {
 							{
 								type: "category",
 								label: "PUT routes",
+								collapsible: true,
 								collapsed: true,
 								link: {
-									type: 'generated-index',
+									type: "generated-index",
 									title: "PUT routes",
 									keywords: ['routes'],
-									image: '/img/docusaurus.png'
+									image: "/img/docusaurus.png"
 								},
 								items: [
 									"api/provider/rest_routes/put_routes/js_kanban_put_cards_route",
@@ -387,12 +390,13 @@ module.exports = {
 							{
 								type: "category",
 								label: "DELETE routes",
+								collapsible: true,
 								collapsed: true,
 								link: {
-									type: 'generated-index',
+									type: "generated-index",
 									title: "DELETE routes",
 									keywords: ['routes'],
-									image: '/img/docusaurus.png'
+									image: "/img/docusaurus.png"
 								},
 								items: [
 									"api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route",
@@ -415,10 +419,10 @@ module.exports = {
 			type: "category",
 			label: "Backend and frameworks integration",
 			link: {
-				type: 'generated-index',
+				type: "generated-index",
 				title: "Backend and frameworks integration",
 				keywords: ['backend and frameworks integration'],
-				image: '/img/docusaurus.png'
+				image: "/img/docusaurus.png"
 			},
 			items: [
 				"guides/working_with_server",
@@ -437,10 +441,10 @@ module.exports = {
 			collapsible: true,
 			collapsed: true,
 			link: {
-				type: 'generated-index',
+				type: "generated-index",
 				title: 'Guides',
 				keywords: ['guides'],
-				image: '/img/docusaurus.png',
+				image: "/img/docusaurus.png",
 			},
 			items: [
 				"guides/initialization",

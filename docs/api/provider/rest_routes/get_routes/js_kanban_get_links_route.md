@@ -4,13 +4,13 @@ title: GET /links
 description: You can learn about the GET /links REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# GET /links
+# GET `/links`
 
 ### Description
 
 @short: Gets data on all links and returns a json object with an array of links objects
 
-The route handles the **HTTP GET** request made to the **'/links'** path.
+The route handles the **HTTP GET** request made to the `/links` path.
 
 ### Payload
 

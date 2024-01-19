@@ -15,12 +15,12 @@ description: You can learn about the add-comment event in the documentation of t
 ~~~jsx {}
 "add-comment": ({
 	id?: string | number,
-    cardId: string | number,
-    comment: {
-        text?: string,
-        date?: Date,
-        html?: string
-    },
+	cardId: string | number,
+	comment: {
+		text?: string,
+		date?: Date,
+		html?: string
+	},
 	skipProvider?: boolean
 }) => void;
 ~~~
@@ -38,7 +38,7 @@ The callback of the **add-comment** event can take an object with the following 
 - `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/api_overview.md/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
