@@ -22,36 +22,36 @@ The method returns an object with the following parameters:
 
 ~~~jsx {}
 {
-	areasMeta: {
-		subscribe: any,
-		update: any,
-		set: any
-	},
-	before: {...},
-	cardHeight: {...},
-	cardShape: {...},
-	cards: {...},
-	cardsMap: {...},
-	cardsMeta: {...},
-	columnKey: {...},
-	columnShape: {...},
-	columns: {...},
-	currentUser: {...},
-	dragItemId: {...},
-	dragItemsCoords: {...},
-	edit: {...},
-	history: {...},
-	layout: {...},
-	links: {...},
-	overAreaId: {...},
-	readonly: {...},
-	rowKey: {...},
-	rowShape: {...},
-	rows: {...},
-	scroll: {...},
-	search: {...},
-	selected: {...},
-	sort: {...}
+    areasMeta: {
+        subscribe: any,
+        update: any,
+        set: any
+    },
+    before: {...},
+    cardHeight: {...},
+    cardShape: {...},
+    cards: {...},
+    cardsMap: {...},
+    cardsMeta: {...},
+    columnKey: {...},
+    columnShape: {...},
+    columns: {...},
+    currentUser: {...},
+    dragItemId: {...},
+    dragItemsCoords: {...},
+    edit: {...},
+    history: {...},
+    layout: {...},
+    links: {...},
+    overAreaId: {...},
+    readonly: {...},
+    rowKey: {...},
+    rowShape: {...},
+    rows: {...},
+    scroll: {...},
+    search: {...},
+    selected: {...},
+    sort: {...}
 }
 ~~~  
 
@@ -60,31 +60,31 @@ The method returns an object with the following parameters:
 ~~~jsx {7-37}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	rows
+    columns,
+    cards,
+    rows
 });
 // get the Reactive State of Kanban
 const state = board.api.getReactiveState();
 
 // subscribe on the columns changes and output the array of columns
 state.columns.subscribe((data) => {
-	console.log(data);
+    console.log(data);
 });
 
 // subscribe on the cards changes and output the array of cards
 state.cards.subscribe((data) => {
-	console.log(data);
+    console.log(data);
 });
 
 // subscribe on the rows changes and output the array of rows
 state.rows.subscribe((data) => {
-	console.log(data);
+    console.log(data);
 });
 
 // subscribe on the card selection and output the IDs of the selected cards
 state.selected.subscribe((data) => {
-	console.log(data);
+    console.log(data);
 });
 
 // set new selection 
@@ -92,8 +92,8 @@ state.selected.set([1, 2]);
 
 // update selection
 state.selected.update((data) => {
-	data.push(3);
-	return data;
+    data.push(3);
+    return data;
 });
 ~~~
 

@@ -14,10 +14,10 @@ description: You can learn about the moveCard method in the documentation of the
 
 ~~~jsx {}
 moveCard({
-	id: string | number,
-	columnId: string | number,
-	rowId?: string | number,
-	before?: string | number
+    id: string | number,
+    columnId: string | number,
+    rowId?: string | number,
+    before?: string | number
 }): void;
 ~~~
 
@@ -37,16 +37,16 @@ If you specify the **rowKey** property in the widget config, the **rowId** param
 ~~~jsx {9-14}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // move the card with an 1 ID
 // the item will be placed into the "inprogress" column and the "feature" row,  
 // before the card with 8 ID
 board.moveCard({
-	id: 1,
-	columnId: "inprogress",
-	rowId: "feature",
-	before: 8
+    id: 1,
+    columnId: "inprogress",
+    rowId: "feature",
+    before: 8
 });
 ~~~

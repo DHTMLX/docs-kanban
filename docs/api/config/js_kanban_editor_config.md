@@ -14,8 +14,8 @@ description: You can learn about the editor config in the documentation of the D
 
 ~~~jsx {}
 editor?: {
-	autoSave?: boolean,
-	debounce?: number
+    autoSave?: boolean,
+    debounce?: number
 }; 
 ~~~
 
@@ -28,8 +28,8 @@ editor?: {
 
 ~~~jsx {}
 editor: {
-	autoSave: true,
-	debounce: 100
+    autoSave: true,
+    debounce: 100
 }
 ~~~
 
@@ -37,13 +37,13 @@ editor: {
 
 ~~~jsx {4-7}
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	editor: {
-		autoSave: true,
-		debounce: 2000
-	}
-	// other parameters
+    columns,
+    cards,
+    editor: {
+        autoSave: true,
+        debounce: 2000
+    }
+    // other parameters
 });
 ~~~
 

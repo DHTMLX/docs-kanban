@@ -31,27 +31,27 @@ const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
 Promise.all([
-	restProvider.getCards(),
-	restProvider.getColumns(),
-	restProvider.getRows(),
-	restProvider.getUsers(),
+    restProvider.getCards(),
+    restProvider.getColumns(),
+    restProvider.getRows(),
+    restProvider.getUsers(),
 ]).then(([cards, columns, rows, users]) => {
-	const board = new kanban.Kanban("#root", {
-		cards,
-		columns,
-		rows,
+    const board = new kanban.Kanban("#root", {
+        cards,
+        columns,
+        rows,
         rowKey: "type",
-		editorShape: [
-			...kanban.defaultEditorShape,
-			{
-				type: "multiselect", 
-				key: "users",
-				label: "Users",
-				values: users
-			}
-		]
-	});
-	board.api.setNext(restProvider);
+        editorShape: [
+            ...kanban.defaultEditorShape,
+            {
+                type: "multiselect", 
+                key: "users",
+                label: "Users",
+                values: users
+            }
+        ]
+    });
+    board.api.setNext(restProvider);
 });
 ~~~
 

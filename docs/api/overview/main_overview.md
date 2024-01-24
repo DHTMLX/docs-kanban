@@ -10,7 +10,7 @@ description: You can have an API overview of JavaScript Kanban in the documentat
 
 ~~~js
 new kanban.Kanban("#root", {
-	// configuration parameters
+    // configuration parameters
 });
 ~~~
 
@@ -23,7 +23,7 @@ new kanban.Kanban("#root", {
 
 ~~~js
 new kanban.Toolbar("#toolbar", {
-	// configuration parameters
+    // configuration parameters
 });
 ~~~
 

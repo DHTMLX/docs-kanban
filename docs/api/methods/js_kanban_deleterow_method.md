@@ -25,8 +25,8 @@ deleteRow({ id: string | number }): void;
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // remove row by its id
 board.deleteRow({ id: "feature" });

@@ -14,12 +14,12 @@ description: You can learn about the set-sort event in the documentation of the 
 
 ~~~jsx {}
 "set-sort": (
-	{
-		by?: string | ((card: object) => any),
-		dir?: "asc" | "desc",
-		columnId?: string | number,
-		preserve?: boolean
-	} | null
+    {
+        by?: string | ((card: object) => any),
+        dir?: "asc" | "desc",
+        columnId?: string | number,
+        preserve?: boolean
+    } | null
 ) => void;
 ~~~
 
@@ -41,12 +41,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "set-sort" event
 board.api.on("set-sort", (obj) => {
-	console.log(obj);
+    console.log(obj);
 });
 ~~~
 

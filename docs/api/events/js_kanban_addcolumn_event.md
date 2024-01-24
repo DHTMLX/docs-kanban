@@ -14,10 +14,10 @@ description: You can learn about the add-column event in the documentation of th
 
 ~~~jsx {}
 "add-column": ({
-	id?: string | number,
-	column?: object,
-	before?: string | number,
-	skipProvider?: boolean,
+    id?: string | number,
+    column?: object,
+    before?: string | number,
+    skipProvider?: boolean,
 }) => void;
 ~~~
 
@@ -39,12 +39,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "add-column" event
 board.api.on("add-column", (obj) => {
-	console.log(obj.label);
+    console.log(obj.label);
 });
 ~~~
 

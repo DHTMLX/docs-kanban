@@ -27,17 +27,17 @@ const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
 Promise.all([
-	restProvider.getCards(),
-	restProvider.getColumns(),
-	restProvider.getRows()
+    restProvider.getCards(),
+    restProvider.getColumns(),
+    restProvider.getRows()
 ]).then(([cards, columns, rows]) => {
-	const board = new kanban.Kanban("#root", {
-		cards,
-		columns,
-		rows,
-		rowKey: "row"
-	});
-	board.api.setNext(restProvider);
+    const board = new kanban.Kanban("#root", {
+        cards,
+        columns,
+        rows,
+        rowKey: "row"
+    });
+    board.api.setNext(restProvider);
 });
 ~~~
 

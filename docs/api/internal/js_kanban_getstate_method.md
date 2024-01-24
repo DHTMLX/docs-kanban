@@ -21,39 +21,39 @@ api.getState(): object;
 The method returns an object with the following parameters:
 
 ~~~jsx {}
-{	
-	areasMeta: object, 
-	before: string | number, 
-	cardHeight: number | null, 
-	cards: array,
-	cardShape: object,
-	cardsMap: object,
-	cardsMeta: object,
-	columnKey: string,
-	columns: array,
-	columnShape: object,
-	currentUser: number | string | null,
-	dragItemId: string | number, 
-	dragItemsCoords: array, 
-	edit: object,
-	history: object,
-	layout: string,
-	links: array,
-	overAreaId: string | number, 
-	readonly: object,
-	rowKey: string,
-	rows: array,
-	rowShape: object,
-	scroll: object,
-	search: object,
-	selected: array, 
-	sort: object,
-	// deprecated options
-	fromAreaMeta: object, // deleted in v.1.2
-	editorShape: array, // deleted in v.1.4
-	dropAreaItemsCoords: array, // deprecated in v1.4
-	dropAreasCoords: array, // deprecated in v1.4 
-	overAreaMeta: object, // deprecated in v1.4
+{    
+    areasMeta: object, 
+    before: string | number, 
+    cardHeight: number | null, 
+    cards: array,
+    cardShape: object,
+    cardsMap: object,
+    cardsMeta: object,
+    columnKey: string,
+    columns: array,
+    columnShape: object,
+    currentUser: number | string | null,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
+    edit: object,
+    history: object,
+    layout: string,
+    links: array,
+    overAreaId: string | number, 
+    readonly: object,
+    rowKey: string,
+    rows: array,
+    rowShape: object,
+    scroll: object,
+    search: object,
+    selected: array, 
+    sort: object,
+    // deprecated options
+    fromAreaMeta: object, // deleted in v.1.2
+    editorShape: array, // deleted in v.1.4
+    dropAreaItemsCoords: array, // deprecated in v1.4
+    dropAreasCoords: array, // deprecated in v1.4 
+    overAreaMeta: object, // deprecated in v1.4
 }
 
 ### Example
@@ -61,9 +61,9 @@ The method returns an object with the following parameters:
 ~~~jsx {7-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	rows
+    columns,
+    cards,
+    rows
 });
 // get the State of Kanban
 const state = board.api.getState();

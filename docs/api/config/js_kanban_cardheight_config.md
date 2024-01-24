@@ -24,10 +24,10 @@ If you combine the [`renderType: "lazy"`](api/config/js_kanban_rendertype_config
 
 ~~~jsx {4}
 new kanban.Kanban("#root", {
-	cards,
-	columns,
-	cardHeight: 150, // px
-	// other parameters
+    cards,
+    columns,
+    cardHeight: 150, // px
+    // other parameters
 });
 ~~~
 

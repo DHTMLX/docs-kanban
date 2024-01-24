@@ -14,14 +14,14 @@ description: You can learn about the add-comment event in the documentation of t
 
 ~~~jsx {}
 "add-comment": ({
-	id?: string | number,
-	cardId: string | number,
-	comment: {
-		text?: string,
-		date?: Date,
-		html?: string
-	},
-	skipProvider?: boolean
+    id?: string | number,
+    cardId: string | number,
+    comment: {
+        text?: string,
+        date?: Date,
+        html?: string
+    },
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -32,9 +32,9 @@ The callback of the **add-comment** event can take an object with the following 
 - `id` -  (optional) the ID of the new comment
 - `cardId` - (required) the ID of the card, to which the comment to be added
 - `comment` - (required) the configuration object of the new comment. Here you can specify the following parameters:
-	- `text` - (optional) the text of the new comment
-	- `date` - (optional) the date of the new comment
-	- `html` - (optional) the HTML markup of the new comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
+    - `text` - (optional) the text of the new comment
+    - `date` - (optional) the date of the new comment
+    - `html` - (optional) the HTML markup of the new comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
 - `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
@@ -46,12 +46,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "add-comment" event
 board.api.on("add-comment", (obj) => {
-	console.log(obj.comment);
+    console.log(obj.comment);
 });
 ~~~
 

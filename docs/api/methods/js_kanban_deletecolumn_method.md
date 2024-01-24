@@ -25,8 +25,8 @@ deleteColumn({ id: string | number }): void;
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // remove column by its id
 board.deleteColumn({ id: "backlog" });

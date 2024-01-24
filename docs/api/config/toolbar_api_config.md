@@ -24,12 +24,12 @@ api: object;
 
 ~~~jsx {7}
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 
 new kanban.Toolbar("#toolbar", {
-	api: board.api
+    api: board.api
 });
 ~~~
 

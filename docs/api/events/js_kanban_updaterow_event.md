@@ -14,10 +14,10 @@ description: You can learn about the update-row event in the documentation of th
 
 ~~~jsx {}
 "update-row": ({
-	id: string | number,
-	row?: object,
-	replace?: boolean,
-	skipProvider?: boolean
+    id: string | number,
+    row?: object,
+    replace?: boolean,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -29,9 +29,9 @@ The callback of the **update-row** event can take an object with the following p
 - `row` - (optional) the new data object of the row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
 - `replace` - (optional) enables/disables fully data replacing
 
-	:::note
-	If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
-	:::
+    :::note
+    If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
+    :::
 
 - `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
@@ -44,12 +44,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "update-row" event
 board.api.on("update-row", (obj) => {
-	console.log(obj);
+    console.log(obj);
 });
 ~~~
 

@@ -22,7 +22,7 @@ The method returns an object with the **DataStore** parameters:
 
 ~~~jsx {}
 {
-	data: DataStore // ( object of parameters )
+    data: DataStore // ( object of parameters )
 }
 ~~~
 
@@ -31,8 +31,8 @@ The method returns an object with the **DataStore** parameters:
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // get the DataStore object of Kanban
 const store = board.api.getStores();

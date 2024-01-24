@@ -27,10 +27,10 @@ Unless you register a column key via the **columnKey** property, the widget will
 
 ~~~jsx {3}
 const cards = [
-	{
-		column: "backlog",
-		// other data
-	}
+    {
+        column: "backlog",
+        // other data
+    }
 ];
 ~~~
 :::
@@ -39,20 +39,20 @@ const cards = [
 
 ~~~jsx {4,8,15}
 const cards = [
-	{
-		label: "Backlog task",
-		column_custom_key: "backlog"
-	},
-	{
-		label: "In progress task",
-		column_custom_key: "inprogress"
-	}
+    {
+        label: "Backlog task",
+        column_custom_key: "backlog"
+    },
+    {
+        label: "In progress task",
+        column_custom_key: "inprogress"
+    }
 ];
 
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	columnKey: "column_custom_key",
-	// other parameters
+    columns,
+    cards,
+    columnKey: "column_custom_key",
+    // other parameters
 });
 ~~~

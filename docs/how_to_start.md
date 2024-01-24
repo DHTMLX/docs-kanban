@@ -22,16 +22,16 @@ There are two necessary files:
 ~~~html {5-6} title="index.html"
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>How to Start with Kanban</title>
-		<script src="./dist/kanban.js"></script>   
-		<link href="./dist/kanban.css" rel="stylesheet">
-	</head>
-	<body>
-		<script>
-		// your code will be here
-		</script>
-	</body>
+    <head>
+        <title>How to Start with Kanban</title>
+        <script src="./dist/kanban.js"></script>   
+        <link href="./dist/kanban.css" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+        // your code will be here
+        </script>
+    </body>
 </html>
 ~~~
 
@@ -71,25 +71,25 @@ As parameters, constructors take the IDs of HTML containers where the Kanban and
 ~~~html {9-10,13-15,17-19} title="index.html"
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>How to Start with Kanban</title>
-		<script src="./dist/kanban.js"></script>   
-		<link href="./dist/kanban.css" rel="stylesheet">  
-	</head>
-	<body>
-		<div id="toolbar"></div>
-		<div id="root"></div>
+    <head>
+        <title>How to Start with Kanban</title>
+        <script src="./dist/kanban.js"></script>   
+        <link href="./dist/kanban.css" rel="stylesheet">  
+    </head>
+    <body>
+        <div id="toolbar"></div>
+        <div id="root"></div>
 
-		<script>
-			const board = new kanban.Kanban("#root", {
-				// configuration properties
-			});
+        <script>
+            const board = new kanban.Kanban("#root", {
+                // configuration properties
+            });
 
-			new kanban.Toolbar("#toolbar",{
-				// configuration properties
-			});
-		</script>
-	</body>
+            new kanban.Toolbar("#toolbar",{
+                // configuration properties
+            });
+        </script>
+    </body>
 </html>
 ~~~
 
@@ -102,23 +102,23 @@ Beside the initial data, you can configure the [cards](../guides/configuration#c
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {
-	cards,
-	columns,
-	rows,
-	rowKey: "row",
-	cardShape,
-	editorShape
+    cards,
+    columns,
+    rows,
+    rowKey: "row",
+    cardShape,
+    editorShape
 });
 
 new kanban.Toolbar("#toolbar", {
-	api: board.api,
-	items: [
-		"search",
-		"spacer",
-		"sort",
-		"addColumn",
-		"addRow"
-	]
+    api: board.api,
+    items: [
+        "search",
+        "spacer",
+        "sort",
+        "addColumn",
+        "addRow"
+    ]
 });
 ~~~
 

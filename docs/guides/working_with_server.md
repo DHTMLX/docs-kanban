@@ -77,14 +77,14 @@ Promise.all([
         rows,
         rowKey: "type",
         editorShape: [
-			...kanban.defaultEditorShape,
-			{
-				type: "multiselect", 
-				key: "users",
-				label: "Users",
-				values: users
-			}
-		]
+            ...kanban.defaultEditorShape,
+            {
+                type: "multiselect", 
+                key: "users",
+                label: "Users",
+                values: users
+            }
+        ]
     });
     board.api.setNext(restProvider);
 });

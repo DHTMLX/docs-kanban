@@ -29,8 +29,8 @@ The method returns the data object of the card with the specified ID
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // get the data object of the card with the 1 ID
 board.getCard(1);

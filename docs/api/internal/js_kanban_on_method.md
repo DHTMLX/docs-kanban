@@ -14,8 +14,8 @@ description: You can learn about the on method in the documentation of the DHTML
 
 ~~~jsx {}
 api.on(
-	event: string,
-	handler: function
+    event: string,
+    handler: function
 ): void;
 ~~~
 
@@ -35,11 +35,11 @@ The full list of the Kanban internal events can be found [**here**](api/overview
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // output the card data in console when its moving
 board.api.on("move-card", ({ id, columnId }) => {
-	console.log({ id, columnId });
+    console.log({ id, columnId });
 });
 ~~~

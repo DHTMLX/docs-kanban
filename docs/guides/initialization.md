@@ -65,11 +65,11 @@ If you want to create the widget along with its *Toolbar*, you need to initializ
 ~~~jsx {6-8} title="index.html"
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	// configuration properties
+    // configuration properties
 });
 
 new kanban.Toolbar("#toolbar", {
-	// configuration properties
+    // configuration properties
 });
 ~~~
 

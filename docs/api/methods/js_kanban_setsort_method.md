@@ -14,12 +14,12 @@ description: You can learn about the setSort method in the documentation of the 
 
 ~~~jsx {}
 setSort(
-	{
-		by?: string, // by?: ((card: object) => any),
-		dir?: "asc" | "desc",
-		columnId?: string | number,
-		preserve?: boolean
-	} | null
+    {
+        by?: string, // by?: ((card: object) => any),
+        dir?: "asc" | "desc",
+        columnId?: string | number,
+        preserve?: boolean
+    } | null
 ): void;
 ~~~
 
@@ -41,15 +41,15 @@ If the **preserve** parameter is set to *false*, the sorting will be applied onc
 ~~~jsx {7-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // sort the cards in ascending order by the "label" parameter
 board.setSort({ 
-	by: (obj) => obj.label, // or by: "label"
-	dir: "asc",
-	columnId: "backlog",
-	preserve: false
+    by: (obj) => obj.label, // or by: "label"
+    dir: "asc",
+    columnId: "backlog",
+    preserve: false
 });
 ~~~
 

@@ -14,8 +14,8 @@ description: You can learn about the moveColumn method in the documentation of t
 
 ~~~jsx {}
 moveColumn({
-	id: string | number,
-	before: string | number
+    id: string | number,
+    before: string | number
 }): void;
 ~~~
 
@@ -29,13 +29,13 @@ moveColumn({
 ~~~jsx {7-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // move the "backlog" column and place it before the "done" one
 board.moveColumn({
-	id: "backlog",
-	before: "done"
+    id: "backlog",
+    before: "done"
 });
 ~~~
 

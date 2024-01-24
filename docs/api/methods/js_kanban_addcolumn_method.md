@@ -14,9 +14,9 @@ description: You can learn about the addColumn method in the documentation of th
 
 ~~~jsx {}
 addColumn({
-	id?: string | number,
-	column?: object,
-	before?: string | number
+    id?: string | number,
+    column?: object,
+    before?: string | number
 }): void;
 ~~~
 
@@ -35,19 +35,19 @@ The full list of the **column** parameters can be found [**here**](api/config/js
 ~~~jsx {7-16}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // add new column
 board.addColumn({
-	id: "extra_column",
-	column: {
-		label: "Extra column",
-		limit: 2,
-		strictLimit: 2,
-		collapsed: true
-	},
-	before: "column_2"
+    id: "extra_column",
+    column: {
+        label: "Extra column",
+        limit: 2,
+        strictLimit: 2,
+        collapsed: true
+    },
+    before: "column_2"
 });
 ~~~
 

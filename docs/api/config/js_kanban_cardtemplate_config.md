@@ -14,7 +14,7 @@ description: You can learn about the cardTemplate config in the documentation of
 
 ~~~jsx
 function cardTemplate ({ cardFields, selected, dragging, cardShape }){
-	return "HTML template of the card";
+    return "HTML template of the card";
 };
 ~~~
 
@@ -35,34 +35,34 @@ If you need to include a context menu into the card template, specify a custom i
 
 ~~~jsx {1-23,28}
 const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
-	const { label, color, id } = cardFields;
-	if (selected) {
-		return `
-			<div class="custom-card" style="padding:20px">
-				<div class="status-color" style="background:${color}"></div>
-				<div data-menu-id=${id} >
-					<i class="wxi-dots-v"></i>
-				</div>
-				Selected:${label}
-			</div>
-		`;
-	}
-	return `
-		<div class="custom-card" style="padding:20px">
-			<div class="status-color" style="background:${color}"></div>
-			<div data-menu-id=${id} >
-				<i class="wxi-dots-v"></i>
-			</div>
-			${label}
-		</div>
-	`;
+    const { label, color, id } = cardFields;
+    if (selected) {
+        return `
+            <div class="custom-card" style="padding:20px">
+                <div class="status-color" style="background:${color}"></div>
+                <div data-menu-id=${id} >
+                    <i class="wxi-dots-v"></i>
+                </div>
+                Selected:${label}
+            </div>
+        `;
+    }
+    return `
+        <div class="custom-card" style="padding:20px">
+            <div class="status-color" style="background:${color}"></div>
+            <div data-menu-id=${id} >
+                <i class="wxi-dots-v"></i>
+            </div>
+            ${label}
+        </div>
+    `;
 }
 
 new kanban.Kanban("#root", {
-	cards,
-	columns,
-	cardTemplate: kanban.template(card => cardTemplate(card)),
-	// other parameters
+    cards,
+    columns,
+    cardTemplate: kanban.template(card => cardTemplate(card)),
+    // other parameters
 });
 ~~~
 

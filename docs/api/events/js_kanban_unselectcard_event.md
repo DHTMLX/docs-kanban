@@ -31,11 +31,11 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "unselect-card" event
 board.api.on("unselect-card", (obj) => {
-	console.log(obj.id);
+    console.log(obj.id);
 });
 ~~~

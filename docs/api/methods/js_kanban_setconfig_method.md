@@ -33,8 +33,8 @@ The `setConfig()` method destroys the current component and initialize a new one
 ~~~jsx {10-18,20-23}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 
 // create Toolbar
@@ -42,16 +42,16 @@ const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
 
 // set new configuration parameters of Kanban
 board.setConfig({
-	editorAutoSave: false,
-	columnKey: "stage",
-	rowKey: "type",
-	cardShape,
-	editorShape,
-	/*other parameters*/
+    editorAutoSave: false,
+    columnKey: "stage",
+    rowKey: "type",
+    cardShape,
+    editorShape,
+    /*other parameters*/
 });
 
 // update configuration parameters of Toolbar
 toolbar.setConfig({
-	api: board.api
+    api: board.api
 });
 ~~~

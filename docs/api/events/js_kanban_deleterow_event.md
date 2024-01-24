@@ -14,8 +14,8 @@ description: You can learn about the delete-row event in the documentation of th
 
 ~~~jsx {}
 "delete-row": ({ 
-	id: string | number,
-	skipProvider?: boolean 
+    id: string | number,
+    skipProvider?: boolean 
 }) => void;
 ~~~
 
@@ -35,11 +35,11 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "delete-row" event
 board.api.on("delete-row", (obj) => {
-	console.log(obj.id);
+    console.log(obj.id);
 });
 ~~~

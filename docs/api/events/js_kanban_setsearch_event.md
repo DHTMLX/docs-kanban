@@ -35,11 +35,11 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "set-search" event
 board.api.on("set-search", (obj) => {
-	console.log(obj.value);
+    console.log(obj.value);
 });
 ~~~

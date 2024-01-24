@@ -34,10 +34,10 @@ history: true
 
 ~~~jsx {4}
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	history: false, // disable managing history
-	// other parameters
+    columns,
+    cards,
+    history: false, // disable managing history
+    // other parameters
 });
 ~~~
 

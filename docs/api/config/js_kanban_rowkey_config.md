@@ -24,22 +24,22 @@ rowKey?: string;
 
 ~~~jsx {4,8,16}
 const cards = [
-	{
-		label: "Backlog task",
-		row_custom_key: "feature"
-	},
-	{
-		label: "In progress task",
-		row_custom_key: "done"
-	}
+    {
+        label: "Backlog task",
+        row_custom_key: "feature"
+    },
+    {
+        label: "In progress task",
+        row_custom_key: "done"
+    }
 ];
 
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	rows,
-	rowKey: "row_custom_key",
-	// other parameters
+    columns,
+    cards,
+    rows,
+    rowKey: "row_custom_key",
+    // other parameters
 });
 ~~~
 

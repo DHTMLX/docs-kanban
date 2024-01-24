@@ -14,16 +14,16 @@ description: You can learn about the columns config in the documentation of the 
 
 ~~~jsx {}
 columns?: [
-	{
-		id: string,
-		label?: string,
-		collapsed?: boolean,
-		limit?: number | object,
-		strictLimit?: boolean,
-		css?: string,
-		overlay?: any
-	},
-	{...} // other columns data
+    {
+        id: string,
+        label?: string,
+        collapsed?: boolean,
+        limit?: number | object,
+        strictLimit?: boolean,
+        css?: string,
+        overlay?: any
+    },
+    {...} // other columns data
 ];
 ~~~
 
@@ -35,20 +35,20 @@ For each column you can specify the following parameters (data):
 - `label` - (optional) a column label. It is displayed in the column section
 - `collapsed` - (optional) a current state of the column. If ***true***, the column is collapsed initially. Default value is ***false*** (expanded state)
 - `limit` - (optional) this parameter may take one of the two types of values:
-	- `number` - a limit of cards in the current column
-	- `object` - an object with the limits of cards for each row (swimlane) by its ID
+    - `number` - a limit of cards in the current column
+    - `object` - an object with the limits of cards for each row (swimlane) by its ID
 - `strictLimit` - (optional) a strict limit mode. If ***true***, a user will not be able to create new cards over the specified number via the **limit** parameter. Default value is ***false*** 
 - `css` - (optional) defines css styles for a separate column
 - `overlay` - (optional) defines an overlay layer for a separate column. Here you can specify a template that covers a separate column in the following way:
 
-	~~~jsx {}
-	overlay: template(`
-		<div class="blockOverlay disable-drop">
-			<span class="disable-drop-header">Drop is not allowed</span>
-			<span class="disable-drop-description">Only testers can move cards to this
-				column</span>
-		</div>`)
-	~~~
+    ~~~jsx {}
+    overlay: template(`
+        <div class="blockOverlay disable-drop">
+            <span class="disable-drop-header">Drop is not allowed</span>
+            <span class="disable-drop-description">Only testers can move cards to this
+                column</span>
+        </div>`)
+    ~~~
 
 :::info
 If you want to load new data for columns dynamically, you can use the [`parse()`](../../methods/js_kanban_parse_method) method!
@@ -58,42 +58,42 @@ If you want to load new data for columns dynamically, you can use the [`parse()`
 
 ~~~jsx {1-31,34}
 const columns = [
-	{ 
-		label: "Backlog", 
-		id: "backlog",
-		collapsed: true,
-		limit: 3,
-		strictLimit: true,
-		css: "red" 
-	},
-	{ 
-		label: "In progress", 
-		id: "inprogress",
-		collapsed: false,
-		limit: {
-			// limit the number of cards for the "Feature" and "Task" rows of the "In progress" column
-			feature: 3, 
-			task: 2
-		},
-		strictLimit: false
-	},
-	{ 
-		label: "Done", 
-		id: "done",
-		overlay: template(`
-			<div class="blockOverlay disable-drop">
-				<span class="disable-drop-header">Drop is not allowed</span>
-				<span class="disable-drop-description">Only testers can move cards to this
-					column</span>
-			</div>`) 
-	}
+    { 
+        label: "Backlog", 
+        id: "backlog",
+        collapsed: true,
+        limit: 3,
+        strictLimit: true,
+        css: "red" 
+    },
+    { 
+        label: "In progress", 
+        id: "inprogress",
+        collapsed: false,
+        limit: {
+            // limit the number of cards for the "Feature" and "Task" rows of the "In progress" column
+            feature: 3, 
+            task: 2
+        },
+        strictLimit: false
+    },
+    { 
+        label: "Done", 
+        id: "done",
+        overlay: template(`
+            <div class="blockOverlay disable-drop">
+                <span class="disable-drop-header">Drop is not allowed</span>
+                <span class="disable-drop-description">Only testers can move cards to this
+                    column</span>
+            </div>`) 
+    }
 ];
 
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	rows,
-	// other parameters
+    columns,
+    cards,
+    rows,
+    // other parameters
 });
 ~~~
 

@@ -14,9 +14,9 @@ description: You can learn about the add-link event in the documentation of the 
 
 ~~~jsx {}
 "add-link": ({
-	id?: string | number,
-	link: object,
-	skipProvider?: boolean
+    id?: string | number,
+    link: object,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -37,13 +37,13 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {8-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	links
+    columns,
+    cards,
+    links
 });
 // subscribe on the "add-link" event
 board.api.on("add-link", (obj) => {
-	console.log(obj.link.masterId);
+    console.log(obj.link.masterId);
 });
 ~~~
 

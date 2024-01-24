@@ -14,9 +14,9 @@ description: You can learn about the move-column event in the documentation of t
 
 ~~~jsx {}
 "move-column": ({
-	id: string | number,
-	before: string | number,
-	skipProvider?: boolean
+    id: string | number,
+    before: string | number,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -37,12 +37,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "move-column" event
 board.api.on("move-column", (obj) => {
-	console.log(obj);
+    console.log(obj);
 });
 ~~~
 

@@ -22,68 +22,68 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 
 ~~~css
 .wx-material-theme {
-	/* WX library css variables */
-	--wx-field-width: 100%;
-	--wx-theme-name: material;
-	/* end of WX library css variables */
+    /* WX library css variables */
+    --wx-field-width: 100%;
+    --wx-theme-name: material;
+    /* end of WX library css variables */
 
-	/* Kanban  css variables*/
-	--wx-kanban-background: #f1f1f1;
+    /* Kanban  css variables*/
+    --wx-kanban-background: #f1f1f1;
 
-	/*  column styles */
-	--wx-kanban-column-width: 300px;
-	--wx-kanban-column-height: 300px;
+    /*  column styles */
+    --wx-kanban-column-width: 300px;
+    --wx-kanban-column-height: 300px;
 
-	/* toolbar styles */
-	--wx-kanban-toolbar-height: 56px;
-	--wx-kanban-toolbar-align: center;
-	--wx-kanban-toolbar-justify: flex-start;
-	--wx-kanban-toolbar-control-hover: rgba(0, 0, 0, 0.07);
-	--wx-kanban-toolbar-control-active: rgba(0, 0, 0, 0.15);
-	--wx-kanban-toolbar-border: var(--wx-border);
+    /* toolbar styles */
+    --wx-kanban-toolbar-height: 56px;
+    --wx-kanban-toolbar-align: center;
+    --wx-kanban-toolbar-justify: flex-start;
+    --wx-kanban-toolbar-control-hover: rgba(0, 0, 0, 0.07);
+    --wx-kanban-toolbar-control-active: rgba(0, 0, 0, 0.15);
+    --wx-kanban-toolbar-border: var(--wx-border);
 
-	/* card styles */
-	--wx-kanban-card-field-padding: 12px;
-	--wx-kanban-content-background: var(--wx-background);
-	--wx-kanban-card-border: var(--wx-border);
-	--wx-kanban-card-border-radius: 6px;
-	--wx-kanban-header-border-radius: var(--wx-kanban-card-border-radius);
+    /* card styles */
+    --wx-kanban-card-field-padding: 12px;
+    --wx-kanban-content-background: var(--wx-background);
+    --wx-kanban-card-border: var(--wx-border);
+    --wx-kanban-card-border-radius: 6px;
+    --wx-kanban-header-border-radius: var(--wx-kanban-card-border-radius);
 
-	/* row styles */
-	--wx-kanban-row-line: var(--wx-border);
+    /* row styles */
+    --wx-kanban-row-line: var(--wx-border);
 
-	/* user icon styles */
-	--wx-kanban-user-icon-size: 36px;
+    /* user icon styles */
+    --wx-kanban-user-icon-size: 36px;
 
-	/* editor styles */
-	--wx-kanban-header-height: 64px;
-	--wx-kanban-editor-width: 569px;
-	--wx-kanban-editor-height: auto;
-	--wx-kanban-editor-x-padding: 20px;
-	--wx-kanban-editor-background: var(--wx-kanban-content-background);
-	--wx-kanban-editor-top-border: none;
+    /* editor styles */
+    --wx-kanban-header-height: 64px;
+    --wx-kanban-editor-width: 569px;
+    --wx-kanban-editor-height: auto;
+    --wx-kanban-editor-x-padding: 20px;
+    --wx-kanban-editor-background: var(--wx-kanban-content-background);
+    --wx-kanban-editor-top-border: none;
 
-	/* column styles */
-	--wx-kanban-over-limit-color: var(--wx-color-danger);
-	--wx-kanban-collapsed-column-width: 44px;
-	--wx-kanban-z-index: 1;
+    /* column styles */
+    --wx-kanban-over-limit-color: var(--wx-color-danger);
+    --wx-kanban-collapsed-column-width: 44px;
+    --wx-kanban-z-index: 1;
 
-	/* progress control styles*/
-	--wx-progress-height: 4px;
-	--wx-kanban-progress-inactive-color: #dbdbdb;
+    /* progress control styles*/
+    --wx-progress-height: 4px;
+    --wx-kanban-progress-inactive-color: #dbdbdb;
 
-	/* menu styles */
-	--wx-kanban-menu-min-width: 100px;
+    /* menu styles */
+    --wx-kanban-menu-min-width: 100px;
 
-	/* box and shadow styles*/
-	--wx-kanban-shadow: none;
-	--wx-kanban-box-border: var(--wx-border);
+    /* box and shadow styles*/
+    --wx-kanban-shadow: none;
+    --wx-kanban-box-border: var(--wx-border);
 
-	/* collapsed column styles */
-	--wx-kanban-collapsed-padding: var(--wx-padding);
-	--wx-kanban-collapsed-margin: 0px;
-	--wx-kanban-collapsed-background: transparent;
-	--wx-kanban-collapsed-background-hover: #dfdfdf;
+    /* collapsed column styles */
+    --wx-kanban-collapsed-padding: var(--wx-padding);
+    --wx-kanban-collapsed-margin: 0px;
+    --wx-kanban-collapsed-background: transparent;
+    --wx-kanban-collapsed-background-hover: #dfdfdf;
 
 /* End of Kanban  CSS variables*/
 }
@@ -102,26 +102,26 @@ Besides using the `theme` property, you can also apply the needed theme via addi
 
 - **Material theme**
 ~~~html {}
-	<!-- Kanban toolbar -->
-	<div id="toolbar" class="wx-material-theme"></div>
-	<!-- Kanban container -->
-	<div id="root" class="wx-material-theme"></div>
+    <!-- Kanban toolbar -->
+    <div id="toolbar" class="wx-material-theme"></div>
+    <!-- Kanban container -->
+    <div id="root" class="wx-material-theme"></div>
 ~~~
 
 - **Willow theme**
 ~~~html {}
-	<!-- Kanban toolbar -->
-	<div id="toolbar" class="wx-willow-theme"></div>
-	<!-- Kanban container -->
-	<div id="root" class="wx-willow-theme"></div>
+    <!-- Kanban toolbar -->
+    <div id="toolbar" class="wx-willow-theme"></div>
+    <!-- Kanban container -->
+    <div id="root" class="wx-willow-theme"></div>
 ~~~
 
 - **Willow-Dark theme**
 ~~~html {}
-	<!-- Kanban toolbar -->
-	<div id="toolbar" class="wx-willow-dark-theme"></div>
-	<!-- Kanban container -->
-	<div id="root" class="wx-willow-dark-theme"></div>
+    <!-- Kanban toolbar -->
+    <div id="toolbar" class="wx-willow-dark-theme"></div>
+    <!-- Kanban container -->
+    <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
 or just include the needed theme on the page from the skins folder:

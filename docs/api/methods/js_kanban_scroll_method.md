@@ -14,9 +14,9 @@ description: You can learn about the scroll method in the documentation of the D
 
 ~~~jsx {}
 scroll({
-	id: string | number,
-	to: "column" | "row" | "card",
-	options?: object
+    id: string | number,
+    to: "column" | "row" | "card",
+    options?: object
 }): void;
 ~~~
 
@@ -31,18 +31,18 @@ scroll({
 ~~~jsx {7-15}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // scroll Kanban to the card with the 246 ID
 board.scroll({
-	id: 246,
-	to: "card",
-	options: {
-		behavior: "smooth",
-		block: "end",
-		inline: "nearest"
-	}
+    id: 246,
+    to: "card",
+    options: {
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+    }
 });
 ~~~
 

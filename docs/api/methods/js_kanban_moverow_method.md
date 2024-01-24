@@ -14,8 +14,8 @@ description: You can learn about the moveRow method in the documentation of the 
 
 ~~~jsx {}
 moveRow({
-	id: string | number,
-	before: string | number
+    id: string | number,
+    before: string | number
 }): void;
 ~~~
 
@@ -29,14 +29,14 @@ moveRow({
 ~~~jsx {8-11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	row
+    columns,
+    cards,
+    row
 });
 // move the "task" swimlane and place it before the "feature" one
 board.moveRow({
-	id: "task",
-	before: "feature"
+    id: "task",
+    before: "feature"
 });
 ~~~
 

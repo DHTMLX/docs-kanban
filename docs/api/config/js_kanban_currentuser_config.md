@@ -24,10 +24,10 @@ currentUser?: string | number;
 
 ~~~jsx {4}
 new kanban.Kanban("#root", {
-	cards,
-	columns,
-	currentUser: 1,
-	// other parameters
+    cards,
+    columns,
+    currentUser: 1,
+    // other parameters
 });
 ~~~
 
