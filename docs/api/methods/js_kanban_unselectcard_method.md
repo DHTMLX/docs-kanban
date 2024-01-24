@@ -29,8 +29,8 @@ To unselect all cards, call the **unselectCard()** method without parameters
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // unselect the card with the 1 ID
 board.unselectCard({ id: 1 });

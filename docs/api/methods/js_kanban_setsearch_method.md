@@ -14,8 +14,8 @@ description: You can learn about the setSearch method in the documentation of th
 
 ~~~jsx {}
 setSearch({
-	value: string,
-	by?: string
+    value: string,
+    by?: string
 }): void;
 ~~~
 
@@ -33,8 +33,8 @@ Using this method, you can search for the needed cards by the specified paramete
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // highlight the cards that match the parameters
 board.setSearch({ value: "Integration", by: "label" });

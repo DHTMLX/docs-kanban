@@ -25,9 +25,9 @@ deleteLink({ id: string | number }): void;
 ~~~jsx {8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	links,
+    columns,
+    cards,
+    links,
 });
 // remove link by its id
 board.deleteLink({ id: 5 });

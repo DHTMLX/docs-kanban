@@ -37,13 +37,13 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {8-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
+    columns,
+    cards,
     rows
 });
 // subscribe on the "move-row" event
 board.api.on("move-row", (obj) => {
-	console.log(obj);
+    console.log(obj);
 });
 ~~~
 

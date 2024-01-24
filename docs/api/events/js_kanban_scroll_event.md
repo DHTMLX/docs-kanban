@@ -14,9 +14,9 @@ description: You can learn about the scroll event in the documentation of the DH
 
 ~~~jsx {}
 "scroll": ({
-	id: string | number,
-	to: "column" | "row" | "card",
-	options?: object
+    id: string | number,
+    to: "column" | "row" | "card",
+    options?: object
 }) => void;
 ~~~
 
@@ -37,12 +37,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "scroll" event
 board.api.on("scroll", (obj) => {
-	console.log(obj);
+    console.log(obj);
 });
 ~~~
 

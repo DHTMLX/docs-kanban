@@ -14,13 +14,13 @@ description: You can learn about the rows config in the documentation of the DHT
 
 ~~~jsx {}
 rows?: [
-	{
-		id: string,
-		label?: string,
-		collapsed?: boolean,
-		css?: string,
-	},
-	{...} // other rows data
+    {
+        id: string,
+        label?: string,
+        collapsed?: boolean,
+        css?: string,
+    },
+    {...} // other rows data
 ];
 ~~~
 
@@ -45,15 +45,15 @@ If you want to load new data for rows (swimlanes) dynamically, you can use the [
 
 ~~~jsx {1-4,9}
 const rows = [
-	{ label: "Feature", id: "feature", collapsed: false, css: "red" },
-	{ label: "Task", id: "task", collapsed: true }
+    { label: "Feature", id: "feature", collapsed: false, css: "red" },
+    { label: "Task", id: "task", collapsed: true }
 ];
 
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	rows, // swimlanes data
-	// other parameters
+    columns,
+    cards,
+    rows, // swimlanes data
+    // other parameters
 });
 ~~~
 

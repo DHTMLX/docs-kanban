@@ -16,10 +16,10 @@ description: You can learn about the readonly config in the documentation of the
 readonly?: boolean;
 //or
 readonly?: {
-	edit?: boolean,
-	add?: boolean,
-	select?: boolean,
-	dnd?: boolean
+    edit?: boolean,
+    add?: boolean,
+    select?: boolean,
+    dnd?: boolean
 };
 ~~~
 
@@ -32,10 +32,10 @@ The **short** parameter:
 
 The **extended** parameters:
 - `readonly` - (optional) an object with extended settings. Here you can specify the following parameters:
-	- `edit` - (optional) enables/disables **editing** of the cards
-	- `add` - (optional) enables/disables **adding** of the new cards
-	- `select` - (optional) enables/disables **selecting** of the cards
-	- `dnd` - (optional) enables/disables **dragging** of the cards
+    - `edit` - (optional) enables/disables **editing** of the cards
+    - `add` - (optional) enables/disables **adding** of the new cards
+    - `select` - (optional) enables/disables **selecting** of the cards
+    - `dnd` - (optional) enables/disables **dragging** of the cards
 
 ### Default config
 
@@ -43,10 +43,10 @@ The **extended** parameters:
 readonly: false // readonly mode is disabled
 //or
 readonly: {
-	edit: true, // editing is enabled
-	add: true, // adding is enabled
-	select: true, // selecting is enabled
-	dnd: true // dragging is enabled
+    edit: true, // editing is enabled
+    add: true, // adding is enabled
+    select: true, // selecting is enabled
+    dnd: true // dragging is enabled
 }
 ~~~
 
@@ -54,15 +54,15 @@ readonly: {
 
 ~~~jsx {4-9}
 new kanban.Kanban("#root", {
-	cards,
-	columns,
-	readonly: {
-		edit: false, // disable editing
-		add: true, // enable adding
-		select: false, // disable selecting
-		dnd: true // enable dragging
-	},
-	// other parameters
+    cards,
+    columns,
+    readonly: {
+        edit: false, // disable editing
+        add: true, // enable adding
+        select: false, // disable selecting
+        dnd: true // enable dragging
+    },
+    // other parameters
 });
 ~~~
 

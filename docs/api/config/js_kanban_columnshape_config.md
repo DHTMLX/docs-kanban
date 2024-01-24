@@ -14,21 +14,21 @@ description: You can learn about the columnShape config in the documentation of 
 
 ~~~jsx {}
 columnShape?: {
-	menu?: {
-		show?: boolean,
-		items?: [
-			{
-				id?: string,
-				icon?: string,
-				text?: string,
-				disabled?: boolean,
-				onClick?: ({ id, item, column }) => void
-			}, 
-			{...}
-		] | ({ column, columnIndex, columns, store }) => array | boolean
-	},
-	fixedHeaders?: boolean,
-	css?: (column, cards) => string
+    menu?: {
+        show?: boolean,
+        items?: [
+            {
+                id?: string,
+                icon?: string,
+                text?: string,
+                disabled?: boolean,
+                onClick?: ({ id, item, column }) => void
+            }, 
+            {...}
+        ] | ({ column, columnIndex, columns, store }) => array | boolean
+    },
+    fixedHeaders?: boolean,
+    css?: (column, cards) => string
 };
 ~~~
 
@@ -37,48 +37,48 @@ columnShape?: {
 To configure the columns appearance, in the **columnShape** object you can specify the following parameters:
 
 - `menu` - (optional) an object of parameters of the columns context menu. Here you can specify the following parameters:
-	- `show` - (optional) - enables/disables a column context menu
-	- `items` - (optional) an array of objects containing parameters of items of the columns context menu. For each item you can specify the following parameters:
-		- `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
-			- ***"add-card"*** - defines the action to add a new card
-			- ***"set-edit"*** - defines the action to edit a column name
-			- ***"move-column:left"*** - defines the action to move a column left
-			- ***"move-column:right"*** - defines the action to move a column right
-			- ***"delete-column"*** - defines the action to delete a column
-		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
-		- `text` - (optional) a name of the menu item
-		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
-		- `onClick` - (optional) a custom callback function, that takes the following arguments:
-			- ***id*** - an ID of the current menu item
-			- ***item*** - a data object of the current menu item
-			- ***column*** - a data object of the target column
+    - `show` - (optional) - enables/disables a column context menu
+    - `items` - (optional) an array of objects containing parameters of items of the columns context menu. For each item you can specify the following parameters:
+        - `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
+            - ***"add-card"*** - defines the action to add a new card
+            - ***"set-edit"*** - defines the action to edit a column name
+            - ***"move-column:left"*** - defines the action to move a column left
+            - ***"move-column:right"*** - defines the action to move a column right
+            - ***"delete-column"*** - defines the action to delete a column
+        - `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+        - `text` - (optional) a name of the menu item
+        - `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
+        - `onClick` - (optional) a custom callback function, that takes the following arguments:
+            - ***id*** - an ID of the current menu item
+            - ***item*** - a data object of the current menu item
+            - ***column*** - a data object of the target column
 
-	:::info
-	You can also set the `items` parameter to a custom function, that takes the following arguments:
-	- ***column*** - a data object of a current column
-	- ***columnIndex*** - an index of a current column
-	- ***columns*** - an array of objects containing all columns data
-	- ***store*** - an object of *dataStore*
+    :::info
+    You can also set the `items` parameter to a custom function, that takes the following arguments:
+    - ***column*** - a data object of a current column
+    - ***columnIndex*** - an index of a current column
+    - ***columns*** - an array of objects containing all columns data
+    - ***store*** - an object of *dataStore*
 
-	This function allows customizing menu for any column or hide it for a specific one (by returning *null* or *false*):
+    This function allows customizing menu for any column or hide it for a specific one (by returning *null* or *false*):
 
-	~~~jsx {}
-	items: ({ column, columnIndex, columns, store }) => {
-		if(column.id === "inprogress")
-			return null
+    ~~~jsx {}
+    items: ({ column, columnIndex, columns, store }) => {
+        if(column.id === "inprogress")
+            return null
 
-		if (column.id === "backlog") 
-			return [
-				{ id: "set-edit", icon: "wxi-edit", text: "Rename" },
-				{
-					id: "delete-card",
-					icon: "wxi-delete",
-					text: "Remove card"
-				}
-			]
-	}
-	~~~
-	:::
+        if (column.id === "backlog") 
+            return [
+                { id: "set-edit", icon: "wxi-edit", text: "Rename" },
+                {
+                    id: "delete-card",
+                    icon: "wxi-delete",
+                    text: "Remove card"
+                }
+            ]
+    }
+    ~~~
+    :::
 
 - `fixedHeaders` - (optional) freezes column headers during vertical scroll (*true* by default). Scroll must be enabled in Kanban itself (height must be limited).
 - `css` - (optional) a function returns a css class that applies to columns conditionally
@@ -87,7 +87,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
 
 ~~~jsx {}
 const getDefaultColumnMenuItems = ({ column, columnIndex, columns, store }) => [
-	{ id: "add-card", icon: "wxi-plus", text: "Add new card" },
+    { id: "add-card", icon: "wxi-plus", text: "Add new card" },
     { id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
         id: "move-column:left",
@@ -104,11 +104,11 @@ const getDefaultColumnMenuItems = ({ column, columnIndex, columns, store }) => [
     { id: "delete-column", icon: "wxi-delete", text: "Delete" }
 ];
 const columnShape = {
-	menu: {
-		show: true,
-		items: getDefaultColumnMenuItems
-	},
-	fixedHeaders: true
+    menu: {
+        show: true,
+        items: getDefaultColumnMenuItems
+    },
+    fixedHeaders: true
 };
 ~~~
 
@@ -116,42 +116,42 @@ const columnShape = {
 
 ~~~jsx {1-30,36}
 const columnShape = {
-	menu: {
-		show: true,
-		items: [
-			{
-				id: "color",
-				text: "Color",
-				items: [
-					{ 
-						id:"yellow", 
-						text: "Yellow",
-						onClick: ({ column }) => changeColumnColor(column, "yellow")
-					},
-					{ 
-						id:"red", 
-						text: "Red",
-						onClick: ({ column }) => changeColumnColor(column, "red")
-					},
-					{ 
-						id:"green", 
-						text: "Green",
-						onClick: ({ column }) => changeColumnColor(column, "green")
-					}
-				]
-			}
-		]
-	},
-	fixedHeaders: false,
-	css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red"
+    menu: {
+        show: true,
+        items: [
+            {
+                id: "color",
+                text: "Color",
+                items: [
+                    { 
+                        id:"yellow", 
+                        text: "Yellow",
+                        onClick: ({ column }) => changeColumnColor(column, "yellow")
+                    },
+                    { 
+                        id:"red", 
+                        text: "Red",
+                        onClick: ({ column }) => changeColumnColor(column, "red")
+                    },
+                    { 
+                        id:"green", 
+                        text: "Green",
+                        onClick: ({ column }) => changeColumnColor(column, "green")
+                    }
+                ]
+            }
+        ]
+    },
+    fixedHeaders: false,
+    css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red"
 };
 
 new kanban.Kanban("#root", {
-	cards,
-	columns,
-	rows,
-	columnShape, 
-	// other parameters
+    cards,
+    columns,
+    rows,
+    columnShape, 
+    // other parameters
 });
 ~~~
 

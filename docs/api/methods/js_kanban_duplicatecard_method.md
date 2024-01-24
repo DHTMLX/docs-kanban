@@ -14,8 +14,8 @@ description: You can learn about the duplicateCard method in the documentation o
 
 ~~~jsx {}
 duplicateCard({
-	id: string | number,
-	card?: object
+    id: string | number,
+    card?: object
 }): void;
 ~~~
 
@@ -29,13 +29,13 @@ duplicateCard({
 ~~~jsx {7-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // duplicate a card with the 1 ID
 board.duplicateCard({
-	id: 1,
-	card: { label: "Duplicated card" }
+    id: 1,
+    card: { label: "Duplicated card" }
 });
 ~~~
 

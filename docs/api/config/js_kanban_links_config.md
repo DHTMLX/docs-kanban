@@ -14,13 +14,13 @@ description: You can learn about the links config in the documentation of the DH
 
 ~~~jsx {}
 links?: [
-	{
-		id: string | number,
-		masterId: string | number,
-		slaveId: string | number,
-		relation: "relatesTo" | "requiredFor" | "duplicate" | "parent",
-	},	
-	{...} // other links data
+    {
+        id: string | number,
+        masterId: string | number,
+        slaveId: string | number,
+        relation: "relatesTo" | "requiredFor" | "duplicate" | "parent",
+    },    
+    {...} // other links data
 ];
 ~~~
 
@@ -32,10 +32,10 @@ For each link you can specify the following parameters (data):
 - `masterId` - (required) the card ID which expresses a dominant role in the link (e.g. “Is required for”)
 - `slaveId` - (required) the card ID which expresses a passive role in the link (e.g. “Depends on”)
 - `relation` - (required) the type of link. Here you can specify the following types:
-	- ***"relatesTo"*** -  defines dependency between tasks where the current task is bound to other one
-	- ***"requiredFor"*** - defines dependency between tasks where one task requires the other one to be done
-	- ***"duplicate"*** - defines dependency between duplicated tasks
-	- ***"parent"*** - defines dependency between parent (master) and child (slave) tasks
+    - ***"relatesTo"*** -  defines dependency between tasks where the current task is bound to other one
+    - ***"requiredFor"*** - defines dependency between tasks where one task requires the other one to be done
+    - ***"duplicate"*** - defines dependency between duplicated tasks
+    - ***"parent"*** - defines dependency between parent (master) and child (slave) tasks
 
 :::info
 If you want to load new data for links dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
@@ -45,13 +45,13 @@ If you want to load new data for links dynamically, you can use the [**parse()**
 
 ~~~jsx {1-9,14}
 const links = [
-	{
-		id: 1,
-		masterId: 2,
-		slaveId: 5,
-		relation: "relatesTo",
-	},
-	{...}
+    {
+        id: 1,
+        masterId: 2,
+        slaveId: 5,
+        relation: "relatesTo",
+    },
+    {...}
 ];
 
 new kanban.Kanban("#root", {

@@ -33,6 +33,6 @@ const board = new kanban.Kanban("#root", {});
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
 // set new configuration parameters of Toolbar
 toolbar.setConfig({
-	items: ["search", "spacer", "sort"]
+    items: ["search", "spacer", "sort"]
 });
 ~~~

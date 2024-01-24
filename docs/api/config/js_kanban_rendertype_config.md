@@ -34,11 +34,11 @@ renderType: "default"
 
 ~~~jsx {5}
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	rows,
-	renderType: "lazy",
-	// other parameters
+    columns,
+    cards,
+    rows,
+    renderType: "lazy",
+    // other parameters
 });
 ~~~
 

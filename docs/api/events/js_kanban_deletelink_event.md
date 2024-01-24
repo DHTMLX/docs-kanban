@@ -14,8 +14,8 @@ description: You can learn about the delete-link event in the documentation of t
 
 ~~~jsx {}
 "delete-link": ({
-	id: string | number,
-	skipProvider?: boolean
+    id: string | number,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -35,13 +35,13 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {8-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	links
+    columns,
+    cards,
+    links
 });
 // subscribe on the "delete-link" event
 board.api.on("delete-link", (obj) => {
-	console.log(obj.id);
+    console.log(obj.id);
 });
 ~~~
 

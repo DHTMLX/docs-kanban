@@ -18,7 +18,7 @@ The `$meta` object includes an extra set of parameters used for configuring meth
 
 ~~~jsx {}
 $meta?: {
-	skipHistory?: boolean
+    skipHistory?: boolean
 };
 ~~~
 
@@ -33,17 +33,17 @@ The `$meta` object includs the following parameter:
 ~~~jsx {11-13}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // add new card and skip this action in history of Kanban
 board.addCard({
-	id: 1,
-	columnId: "backlog",
-	card: { label: "New card" },
-	$meta: { 
-		skipHistory: true 
-	}
+    id: 1,
+    columnId: "backlog",
+    card: { label: "New card" },
+    $meta: { 
+        skipHistory: true 
+    }
 });
 ~~~
 

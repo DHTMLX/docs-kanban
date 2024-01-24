@@ -31,14 +31,14 @@ const url = "https://some_backend_url";
 const restProvider = new kanban.RestDataProvider(url);
 
 Promise.all([
-	restProvider.getCards(),
-	restProvider.getColumns()
+    restProvider.getCards(),
+    restProvider.getColumns()
 ]).then(([cards, columns]) => {
-	const board = new kanban.Kanban("#root", {
-		cards,
-		columns
-	});
-	board.api.setNext(restProvider);
+    const board = new kanban.Kanban("#root", {
+        cards,
+        columns
+    });
+    board.api.setNext(restProvider);
 });
 ~~~
 

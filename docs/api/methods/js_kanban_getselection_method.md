@@ -25,8 +25,8 @@ The method returns an array with ID(s) of the selected card(s)
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // gets an array with IDs of the selected cards
 board.getSelection();

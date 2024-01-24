@@ -30,8 +30,8 @@ Using this method, you can apply a new locale to Kanban. To reset Kanban to the 
 ~~~jsx {7,9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
+    columns,
+    cards,
 });
 // apply the "de" locale to Kanban
 board.setLocale(de);

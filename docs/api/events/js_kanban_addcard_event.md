@@ -14,12 +14,12 @@ description: You can learn about the add-card event in the documentation of the 
 
 ~~~jsx {}
 "add-card": ({
-	columnId: string | number,
-	id?: string | number,
-	rowId?: string | number,
-	before?: string | number,
-	card?: object,
-	skipProvider?: boolean,
+    columnId: string | number,
+    id?: string | number,
+    rowId?: string | number,
+    before?: string | number,
+    card?: object,
+    skipProvider?: boolean,
 }) => void;
 ~~~
 
@@ -43,11 +43,11 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "add-card" event
 board.api.on("add-card", (obj) => {
-	console.log(obj.columnId);
+    console.log(obj.columnId);
 });
 ~~~

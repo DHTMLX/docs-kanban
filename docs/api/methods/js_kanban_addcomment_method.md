@@ -14,13 +14,13 @@ description: You can learn about the addComment method in the documentation of t
 
 ~~~jsx {}
 addComment({
-	id?: string | number,
-	cardId: string | number,
-	comment: {
-		text?: string,
-		date?: Date,
-		html?: string
-	}
+    id?: string | number,
+    cardId: string | number,
+    comment: {
+        text?: string,
+        date?: Date,
+        html?: string
+    }
 }): void;
 ~~~
 
@@ -29,25 +29,25 @@ addComment({
 - `id` -  (optional) the ID of the new comment
 - `cardId` - (required) the ID of the card, to which the comment to be added
 - `comment` - (required) the configuration object of the new comment. Here you can specify the following parameters:
-	- `text` - (optional) the text of the new comment
-	- `date` - (optional) the date of the new comment
-	- `html` - (optional) the HTML markup of the new comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
+    - `text` - (optional) the text of the new comment
+    - `date` - (optional) the date of the new comment
+    - `html` - (optional) the HTML markup of the new comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
 
 ### Example
 
 ~~~jsx {7-15}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // add new comment
 board.addComment({
-	id: 1,
-	cardId: 1,
-	comment: {
+    id: 1,
+    cardId: 1,
+    comment: {
         text: "", 
-		date: new Date("01/07/2021"),
+        date: new Date("01/07/2021"),
         html: "<b>Important comment</b>"
     }
 });

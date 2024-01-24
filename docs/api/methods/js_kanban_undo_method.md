@@ -25,8 +25,8 @@ undo(): void;
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // makes one step back in history of Kanban
 board.undo();

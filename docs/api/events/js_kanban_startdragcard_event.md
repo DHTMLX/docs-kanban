@@ -41,12 +41,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "start-drag-card" event
 board.api.on("start-drag-card", (obj) => {
-	console.log(obj.columnId);
+    console.log(obj.columnId);
 });
 ~~~
 

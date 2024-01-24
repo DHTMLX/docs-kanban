@@ -14,12 +14,12 @@ description: You can learn about the addCard method in the documentation of the 
 
 ~~~jsx {}
 addCard({
-	columnId: string | number,
-	id?: string | number,
-	rowId?: string | number,
-	before?: string | number,
-	select?: boolean,
-	card?: object
+    columnId: string | number,
+    id?: string | number,
+    rowId?: string | number,
+    before?: string | number,
+    select?: boolean,
+    card?: object
 }): void;
 ~~~
 
@@ -41,14 +41,14 @@ The full list of the **card** parameters can be found [**here**](api/config/js_k
 ~~~jsx {7-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // add new card into the "backlog" column
 board.addCard({
-	id: 1,
-	columnId: "backlog",
-	card: { label: "New card" }
+    id: 1,
+    columnId: "backlog",
+    card: { label: "New card" }
 });
 ~~~
 

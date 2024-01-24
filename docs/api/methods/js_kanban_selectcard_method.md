@@ -14,8 +14,8 @@ description: You can learn about the selectCard method in the documentation of t
 
 ~~~jsx {}
 selectCard({
-	id: string | number,
-	groupMode?: boolean
+    id: string | number,
+    groupMode?: boolean
 }): void;
 ~~~
 
@@ -33,12 +33,12 @@ If you set the **groupMode** parameter to **true**, the **selectCard()** method 
 ~~~jsx {7-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // select the card with the 1 ID
 board.selectCard({
-	id: 1,
-	groupMode: true
+    id: 1,
+    groupMode: true
 });
 ~~~

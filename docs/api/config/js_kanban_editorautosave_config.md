@@ -36,9 +36,9 @@ editorAutoSave: true
 
 ~~~jsx {4}
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	editorAutoSave: false, // disable autosaving
-	// other parameters
+    columns,
+    cards,
+    editorAutoSave: false, // disable autosaving
+    // other parameters
 });
 ~~~

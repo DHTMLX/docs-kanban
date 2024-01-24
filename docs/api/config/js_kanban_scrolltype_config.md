@@ -34,11 +34,11 @@ If you combine the [`renderType: "lazy"`](api/config/js_kanban_rendertype_config
 
 ~~~jsx {5}
 new kanban.Kanban("#root", {
-	columns,
-	cards,
-	rows,
-	scrollType: "column",
-	// other parameters
+    columns,
+    cards,
+    rows,
+    scrollType: "column",
+    // other parameters
 });
 ~~~
 

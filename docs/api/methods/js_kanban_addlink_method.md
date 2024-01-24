@@ -14,8 +14,8 @@ description: You can learn about the addLink method in the documentation of the 
 
 ~~~jsx {}
 addLink({
-	id?: string | number,
-	link: object
+    id?: string | number,
+    link: object
 }): void;
 ~~~
 
@@ -29,17 +29,17 @@ addLink({
 ~~~jsx {7-14}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // add new link 
 board.addLink({
-	id: 3,
-	link: {
-		masterId: 4,
-		slaveId: 6,
-		relation: "relatesTo",
-	}
+    id: 3,
+    link: {
+        masterId: 4,
+        slaveId: 6,
+        relation: "relatesTo",
+    }
 });
 ~~~
 

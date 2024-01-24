@@ -14,8 +14,8 @@ description: You can learn about the select-card event in the documentation of t
 
 ~~~jsx {}
 "select-card": ({
-	id: string | number,
-	groupMode?: boolean
+    id: string | number,
+    groupMode?: boolean
 }) => void;
 ~~~
 
@@ -35,11 +35,11 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "select-card" event
 board.api.on("select-card", (obj) => {
-	console.log(obj.id);
+    console.log(obj.id);
 });
 ~~~

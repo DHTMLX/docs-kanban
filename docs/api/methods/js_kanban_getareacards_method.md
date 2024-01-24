@@ -14,8 +14,8 @@ description: You can learn about the getAreaCards method in the documentation of
 
 ~~~jsx {}
 getAreaCards(
-	columnId: string | number,
-	rowId?: string | number
+    columnId: string | number,
+    rowId?: string | number
 ): array;
 ~~~
 
@@ -39,8 +39,8 @@ If Kanban includes **columns** and **rows**, the method requires both the ***col
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // get an array with the cards data objects of the specified column and row
 board.getAreaCards("column_id", "row_id");

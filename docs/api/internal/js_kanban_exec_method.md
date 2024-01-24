@@ -14,8 +14,8 @@ description: You can learn about the exec method in the documentation of the DHT
 
 ~~~jsx {}
 api.exec(
-	event: string,
-	config: object
+    event: string,
+    config: object
 ): void;
 ~~~
 
@@ -35,15 +35,15 @@ The full list of the Kanban internal events can be found [**here**](api/overview
 ~~~jsx {7,9-12}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // select the card with the 1 ID
 board.api.exec("select-card", { id: 1 });
 // add new card without sending changes to the server
 board.api.exec("add-card", { 
-	columnId: "backlog",
-	skipProvider: true, 
+    columnId: "backlog",
+    skipProvider: true, 
 });
 ~~~
 

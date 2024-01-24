@@ -14,9 +14,9 @@ description: You can learn about the delete-comment event in the documentation o
 
 ~~~jsx {}
 "delete-comment": ({
-	id?: string | number, 
-	cardId: string | number,
-	skipProvider?: boolean
+    id?: string | number, 
+    cardId: string | number,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -37,12 +37,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "delete-comment" event
 board.api.on("delete-comment", (obj) => {
-	console.log(obj.id);
+    console.log(obj.id);
 });
 ~~~
 

@@ -21,26 +21,26 @@ Besides using the `theme` property, you can also apply the needed theme via addi
 
 - **Material theme**
 ~~~html {}
-	<!-- Kanban toolbar -->
-	<div id="toolbar" class="wx-material-theme"></div>
-	<!-- Kanban container -->
-	<div id="root" class="wx-material-theme"></div>
+    <!-- Kanban toolbar -->
+    <div id="toolbar" class="wx-material-theme"></div>
+    <!-- Kanban container -->
+    <div id="root" class="wx-material-theme"></div>
 ~~~
 
 - **Willow theme**
 ~~~html {}
-	<!-- Kanban toolbar -->
-	<div id="toolbar" class="wx-willow-theme"></div>
-	<!-- Kanban container -->
-	<div id="root" class="wx-willow-theme"></div>
+    <!-- Kanban toolbar -->
+    <div id="toolbar" class="wx-willow-theme"></div>
+    <!-- Kanban container -->
+    <div id="root" class="wx-willow-theme"></div>
 ~~~
 
 - **Willow-Dark theme**
 ~~~html {}
-	<!-- Kanban toolbar -->
-	<div id="toolbar" class="wx-willow-dark-theme"></div>
-	<!-- Kanban container -->
-	<div id="root" class="wx-willow-dark-theme"></div>
+    <!-- Kanban toolbar -->
+    <div id="toolbar" class="wx-willow-dark-theme"></div>
+    <!-- Kanban container -->
+    <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
 or just include the needed theme on the page from the skins folder:
@@ -63,10 +63,10 @@ To change the current theme dynamically, you can use the [**setConfig()**](../..
 ~~~jsx {5,11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	theme: "willow-dark" // the "willow-dark" theme will be set initially
-	// other parameters
+    columns,
+    cards,
+    theme: "willow-dark" // the "willow-dark" theme will be set initially
+    // other parameters
 });
 // create Toolbar
 new Toolbar("#toolbar", {

@@ -14,8 +14,8 @@ description: You can learn about the intercept method in the documentation of th
 
 ~~~jsx {}
 api.intercept(
-	event: string,
-	callback: function
+    event: string,
+    callback: function
 ): void;
 ~~~
 
@@ -35,13 +35,13 @@ The full list of the Kanban internal events can be found [**here**](api/overview
 ~~~jsx {7-11}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // forbid moving cards to the column with the "done" ID
 board.api.intercept("move-card", ({ id, columnId }) => {
-	if(columnId !== "done" ){
-		return false;
-	}
+    if(columnId !== "done" ){
+        return false;
+    }
 });
 ~~~

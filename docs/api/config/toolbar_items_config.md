@@ -14,35 +14,35 @@ description: You can learn about the (Toolbar) items config in the documentation
 
 ~~~jsx {}
 items?: [
-	"search" | {
-		// search parameters
-		type: "search",
-		options?: [
-			{
-				id: string,
-				label: string,
-				searchRule?: (card, value, by) => {} // returns a boolean value 
-			}, {...}
-		]
-	},
-	"sort" | {
-		// sort parameters
-		type: "sort",
-		options?: [
-			{	
-				text: string,
-				by?: string, // by?: ((card: object) => any),
-				dir?: "asc" | "desc"
-			}, {...}
-		]
-		
-	},
-	"spacer",
-	"undo",
-	"redo",
-	"addColumn",
-	"addRow",
-	custom_control // string or function
+    "search" | {
+        // search parameters
+        type: "search",
+        options?: [
+            {
+                id: string,
+                label: string,
+                searchRule?: (card, value, by) => {} // returns a boolean value 
+            }, {...}
+        ]
+    },
+    "sort" | {
+        // sort parameters
+        type: "sort",
+        options?: [
+            {    
+                text: string,
+                by?: string, // by?: ((card: object) => any),
+                dir?: "asc" | "desc"
+            }, {...}
+        ]
+        
+    },
+    "spacer",
+    "undo",
+    "redo",
+    "addColumn",
+    "addRow",
+    custom_control // string or function
 ];
 ~~~
 
@@ -56,38 +56,38 @@ In the **items** array you can specify the following parameters:
 
 - `type` - (required) a type of control (*"search"*)
 - `options` - (optional) an array of objects, that define the search parameters. For each object (*search option*) you can specify the following parameters:
-	- `id` - (required) a key of card field, by which the cards will be searched
-	- `label` - (required) a name of option, used in  a dropdown list of the searchbar selector
-	- `searchRule` (optional) - a custom function that allows defining search rules. It takes the following arguments:
-		- ***card*** - an object of the card data
-		- ***value*** - a searched value, specified in the searchbar
-		- ***by*** - a key of card field, by which the cards will be searched
+    - `id` - (required) a key of card field, by which the cards will be searched
+    - `label` - (required) a name of option, used in  a dropdown list of the searchbar selector
+    - `searchRule` (optional) - a custom function that allows defining search rules. It takes the following arguments:
+        - ***card*** - an object of the card data
+        - ***value*** - a searched value, specified in the searchbar
+        - ***by*** - a key of card field, by which the cards will be searched
 
 ~~~jsx
 items: [
-	"search", // default searchbar
-	// other controls
+    "search", // default searchbar
+    // other controls
 ]
 // or 
 items: [
-	{ // custom searchbar
-		type: "search",
-		options: [
-			{
-				id: "label",
-				label: "By label"
-			},
-			{
-				id: "start_date",
-				label: "By date",
-				searchRule: (card, value, by) => {
-					const date = card[by];
-					return date?.toString().includes(value);
-				}
-			}
-		]
-	},
-	// other controls
+    { // custom searchbar
+        type: "search",
+        options: [
+            {
+                id: "label",
+                label: "By label"
+            },
+            {
+                id: "start_date",
+                label: "By date",
+                searchRule: (card, value, by) => {
+                    const date = card[by];
+                    return date?.toString().includes(value);
+                }
+            }
+        ]
+    },
+    // other controls
 ]
 ~~~
 :::
@@ -98,33 +98,33 @@ items: [
 
 - `type` - (required) a type of control (*"sort"*)
 - `options` - (optional) an array of objects, that define the sort parameters. For each object (*sort option*) you can specify the following parameters:
-	- `text` - (required) a name of option, used in a dropdown list of the sort selector
-	- `by` - (optional) a key of card field, by which the cards will be sorted. This parameter can be set to the *string* or *function* value. The function needs to return the card field for sorting
-	- `dir` - (optional) an order of sorting. The possible values are *"asc"* and *"desc"*
+    - `text` - (required) a name of option, used in a dropdown list of the sort selector
+    - `by` - (optional) a key of card field, by which the cards will be sorted. This parameter can be set to the *string* or *function* value. The function needs to return the card field for sorting
+    - `dir` - (optional) an order of sorting. The possible values are *"asc"* and *"desc"*
 
 ~~~jsx
 items: [
-	"sort", // default sort control
-	// other controls
+    "sort", // default sort control
+    // other controls
 ]
 // or 
 items: [
-	{ // custom sort control
-		type: "sort",
-		options: [
-			{
-				text: "Sort by label",
-				by: "label",
-				dir: "asc"
-			},
-			{
-				text: "Sort by description",
-				by: "description",
-				dir: "desc"
-			}
-		]
-	},
-	// other controls
+    { // custom sort control
+        type: "sort",
+        options: [
+            {
+                text: "Sort by label",
+                by: "label",
+                dir: "asc"
+            },
+            {
+                text: "Sort by description",
+                by: "description",
+                dir: "desc"
+            }
+        ]
+    },
+    // other controls
 ]
 ~~~
 :::
@@ -140,21 +140,21 @@ items: [
 
 ~~~jsx {8-16}
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 
 new kanban.Toolbar("#toolbar", {
-	api: board.api,
-	items: [
-		"search",
-		"spacer",
-		"sort",
-		"undo",
-		"redo", 
-		"addColumn",
-		"addRow"
-	],
+    api: board.api,
+    items: [
+        "search",
+        "spacer",
+        "sort",
+        "undo",
+        "redo", 
+        "addColumn",
+        "addRow"
+    ],
 });
 ~~~
 

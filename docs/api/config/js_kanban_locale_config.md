@@ -33,10 +33,10 @@ To change the current locale dynamically, you can use the [**setLocale()**](../.
 ~~~jsx {5}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards,
-	locale: cn // the "cn" locale will be set initially
-	// other parameters
+    columns,
+    cards,
+    locale: cn // the "cn" locale will be set initially
+    // other parameters
 });
 ~~~
 

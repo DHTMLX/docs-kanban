@@ -22,9 +22,9 @@ The method returns the object of Kanban data
 
 ~~~jsx {}
 {
-	cards: [{...}, {...}, ...],
-	rows: [{...}, {...}, ...],
-	columns: [{...}, {...}, ...]
+    cards: [{...}, {...}, ...],
+    rows: [{...}, {...}, ...],
+    columns: [{...}, {...}, ...]
 }
 ~~~
 
@@ -33,8 +33,8 @@ The method returns the object of Kanban data
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // get the object of the Kanban data
 board.serialize();

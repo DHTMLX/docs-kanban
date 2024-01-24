@@ -21,8 +21,8 @@ destructor(): void;
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // remove Kanban
 board.destructor();

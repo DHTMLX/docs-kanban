@@ -14,103 +14,103 @@ The **English** locale is used by default:
 
 ~~~jsx
 const en = {
-	kanban: { // translations of the Kanabn labels
-		Save: "Save",
-		Close: "Close",
-		Delete: "Delete",
-		Name: "Name",
-		Description: "Description",
-		Type: "Type",
-		"Start date": "Start date",
-		"End date": "End date",
+    kanban: { // translations of the Kanabn labels
+        Save: "Save",
+        Close: "Close",
+        Delete: "Delete",
+        Name: "Name",
+        Description: "Description",
+        Type: "Type",
+        "Start date": "Start date",
+        "End date": "End date",
 
-		Result: "Result",
-		"No results": "No results",
-		Search: "Search",
-		"Search in": "Search in",
-		"Add new row": "Add new row",
-		"Add new column": "Add new column",
-		"Add new card": "Add new card",
-		"Edit card": "Edit card",
-		Edit: "Edit",
+        Result: "Result",
+        "No results": "No results",
+        Search: "Search",
+        "Search in": "Search in",
+        "Add new row": "Add new row",
+        "Add new column": "Add new column",
+        "Add new card": "Add new card",
+        "Edit card": "Edit card",
+        Edit: "Edit",
 
-		Everywhere: "Everywhere",
-		Label: "Label",
-		Status: "Status",
-		Color: "Color",
-		Date: "Date",
-		Priority: "Priority",
-		Progress: "Progress",
-		Users: "Users",
+        Everywhere: "Everywhere",
+        Label: "Label",
+        Status: "Status",
+        Color: "Color",
+        Date: "Date",
+        Priority: "Priority",
+        Progress: "Progress",
+        Users: "Users",
 
-		Untitled: "Untitled",
-		Rename: "Rename",
-		"Move up": "Move up",
-		"Move down": "Move down",
-		"Move left": "Move left",
-		"Move right": "Move right",
-		Sort: "Sort",
-		"Label (a-z)": "Label (a-z)",
-		"Label (z-a)": "Label (z-a)",
-		"Description (a-z)": "Description (a-z)",
-		"Description (z-a)": "Description (z-a)",
+        Untitled: "Untitled",
+        Rename: "Rename",
+        "Move up": "Move up",
+        "Move down": "Move down",
+        "Move left": "Move left",
+        "Move right": "Move right",
+        Sort: "Sort",
+        "Label (a-z)": "Label (a-z)",
+        "Label (z-a)": "Label (z-a)",
+        "Description (a-z)": "Description (a-z)",
+        "Description (z-a)": "Description (z-a)",
 
-		Duplicate: "Duplicate",
-		"Duplicate of": "Duplicate of",
+        Duplicate: "Duplicate",
+        "Duplicate of": "Duplicate of",
 
-		"Relates to": "Relates to",
-		"Depends on": "Depends on",
-		"Is required for": "Is required for",
-		Duplicates: "Duplicates",
-		"Is duplicated by": "Is duplicated by",
-		"Parent for": "Parent for",
-		"SubTask of": "SubTask of",
+        "Relates to": "Relates to",
+        "Depends on": "Depends on",
+        "Is required for": "Is required for",
+        Duplicates: "Duplicates",
+        "Is duplicated by": "Is duplicated by",
+        "Parent for": "Parent for",
+        "SubTask of": "SubTask of",
 
-		Cancel: "Cancel",
-		"Link task": "Link task",
-		"Select a relation": "Select a relation",
-		"Select a task": "Select a task",
+        Cancel: "Cancel",
+        "Link task": "Link task",
+        "Select a relation": "Select a relation",
+        "Select a task": "Select a task",
 
-		"Would you like to delete this comment?":
-			"Would you like to delete this comment?",
-		"Would you like to delete this card?":
-			"Would you like to delete this card?",
-	},
-	calendar: { // translations and settings of the calendar
-		monthFull: [
-			"January", "February", "March", "April",
-			"May", "June", "July", "August", 
-			"September", "October", "November", "December"
-		],
-		monthShort: [
-			"Jan", "Feb", "Mar", "Apr",
-			"May", "Jun", "Jul", "Aug",
-			"Sep", "Oct", "Nov", "Dec"
-		],
-		dayFull: [
-			"Sunday",
-			"Monday",
-			"Tuesday",
-			"Wednesday",
-			"Thursday",
-			"Friday",
-			"Saturday"
-		],
-		dayShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-		hours: "Hours",
-		minutes: "Minutes",
-		done: "Done",
-		clear: "Clear",
-		today: "Today",
-		am: ["am", "AM"],
-		pm: ["pm", "PM"],
-		weekStart: 7,
-		timeFormat: 24
-	},
-	core: { // translations of the core elements
-		ok: "OK",
-		cancel: "Cancel"
-	}
+        "Would you like to delete this comment?":
+            "Would you like to delete this comment?",
+        "Would you like to delete this card?":
+            "Would you like to delete this card?",
+    },
+    calendar: { // translations and settings of the calendar
+        monthFull: [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August", 
+            "September", "October", "November", "December"
+        ],
+        monthShort: [
+            "Jan", "Feb", "Mar", "Apr",
+            "May", "Jun", "Jul", "Aug",
+            "Sep", "Oct", "Nov", "Dec"
+        ],
+        dayFull: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ],
+        dayShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        hours: "Hours",
+        minutes: "Minutes",
+        done: "Done",
+        clear: "Clear",
+        today: "Today",
+        am: ["am", "AM"],
+        pm: ["pm", "PM"],
+        weekStart: 7,
+        timeFormat: 24
+    },
+    core: { // translations of the core elements
+        ok: "OK",
+        cancel: "Cancel"
+    }
 };
 ~~~
 
@@ -130,8 +130,8 @@ import { de } from "@xbs/wx-kanban-locales"
 import { de as coreDe } from "@xbs/wx-core-locales"
 
 new kanban.Kanban({
-	// other properties
-	locale: { ...coreDe, ...de },
+    // other properties
+    locale: { ...coreDe, ...de },
 });
 ~~~
 :::

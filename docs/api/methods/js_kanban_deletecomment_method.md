@@ -14,8 +14,8 @@ description: You can learn about the deleteComment method in the documentation o
 
 ~~~jsx {}
 deleteComment({
-	id?: string | number, 
-	cardId: string | number
+    id?: string | number, 
+    cardId: string | number
 }): void;
 ~~~
 
@@ -29,13 +29,13 @@ deleteComment({
 ~~~jsx {7-10}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // delete comment
 board.deleteComment({
-	id: 1,
-	cardId: 1,
+    id: 1,
+    cardId: 1,
 });
 ~~~
 

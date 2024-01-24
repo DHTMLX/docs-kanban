@@ -14,9 +14,9 @@ description: You can learn about the parse method in the documentation of the DH
 
 ~~~jsx {}
 parse({
-	columns?: array,
-	rows?: array,
-	cards?: array
+    columns?: array,
+    rows?: array,
+    cards?: array
 }): void;
 ~~~
 
@@ -33,9 +33,9 @@ parse({
 const board = new kanban.Kanban("#root", {});
 // parse data into Kanban
 board.parse({
-	columns,
-	cards,
-	rows
+    columns,
+    cards,
+    rows
 });
 ~~~
 

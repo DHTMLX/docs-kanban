@@ -14,20 +14,20 @@ description: You can learn about the rowShape config in the documentation of the
 
 ~~~jsx {}
 rowShape?: {
-	menu?: {
-		show?: boolean, 
-		items?: [
-			{
-				id?: string,
-				icon?: string,
-				text?: string,
-				disabled? boolean,
-				onClick?: ({ id, item, row }) => void
-			}, 
-			{...}
-		] | ({ row, rowIndex, rows, store }) => array | boolean
-	},
-	css?: (row, cards) => string
+    menu?: {
+        show?: boolean, 
+        items?: [
+            {
+                id?: string,
+                icon?: string,
+                text?: string,
+                disabled? boolean,
+                onClick?: ({ id, item, row }) => void
+            }, 
+            {...}
+        ] | ({ row, rowIndex, rows, store }) => array | boolean
+    },
+    css?: (row, cards) => string
 };
 ~~~
 
@@ -36,51 +36,51 @@ rowShape?: {
 To configure the rows appearance, in the **rowShape** object you can specify the following parameters:
 
 - `menu` - (optional) an object of parameters of the rows context menu. Here you can specify the following parameters:
-	- `show` - (optional) enables/disables a row context menu
-	- `items` - (optional) an array of objects containing parameters of items of the rows context menu. For each item you can specify the following parameters:
-		- `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
-			- ***"set-edit"*** - defines the action to edit a row name
-			- ***"move-row:up"*** - defines the action to move a row up
-			- ***"move-row:down"*** - defines the action to move a row down
-			- ***"delete-row"*** - defines the action to delete a row
+    - `show` - (optional) enables/disables a row context menu
+    - `items` - (optional) an array of objects containing parameters of items of the rows context menu. For each item you can specify the following parameters:
+        - `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
+            - ***"set-edit"*** - defines the action to edit a row name
+            - ***"move-row:up"*** - defines the action to move a row up
+            - ***"move-row:down"*** - defines the action to move a row down
+            - ***"delete-row"*** - defines the action to delete a row
 
-		- `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
-		- `text` - (optional) a name of the menu item
-		- `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
-		- `onClick` - (optional) a custom callback function, that takes the following arguments:
-			- ***id*** - an ID of the current menu item
-			- ***item*** - a data object of the current menu item
-			- ***row*** - a data object of the target row
+        - `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+        - `text` - (optional) a name of the menu item
+        - `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
+        - `onClick` - (optional) a custom callback function, that takes the following arguments:
+            - ***id*** - an ID of the current menu item
+            - ***item*** - a data object of the current menu item
+            - ***row*** - a data object of the target row
 
-	:::info
-	You can also set the `items` parameter to a custom function, that takes the following arguments:
-	- ***row*** - a data object of a current row
-	- ***rowIndex*** - an index of a current row
-	- ***rows*** - an array of objects containing all rows data
-	- ***store*** - an object of *dataStore*
+    :::info
+    You can also set the `items` parameter to a custom function, that takes the following arguments:
+    - ***row*** - a data object of a current row
+    - ***rowIndex*** - an index of a current row
+    - ***rows*** - an array of objects containing all rows data
+    - ***store*** - an object of *dataStore*
 
-	This function allows customizing menu for any row or hide it for a specific one (by returning *null* or *false*):
+    This function allows customizing menu for any row or hide it for a specific one (by returning *null* or *false*):
 
-	~~~jsx {}
-	items: ({ row, rowIndex, rows, store }) => {
-		if(rowIndex == 0)
-			return null
-		return [
-			{ id: "set-edit", icon: "wxi-edit", text: "Rename" },
-			{
-				id: "custom-delete-row",
-				icon: "wxi-delete",
-				text: "Remove row",
-			},
-			{
-				id: "custom-move-row:up",
-				icon: "wxi-arrow-up",
-				text: "Move up",
-			}
-		]
-	}
-	~~~
-	:::
+    ~~~jsx {}
+    items: ({ row, rowIndex, rows, store }) => {
+        if(rowIndex == 0)
+            return null
+        return [
+            { id: "set-edit", icon: "wxi-edit", text: "Rename" },
+            {
+                id: "custom-delete-row",
+                icon: "wxi-delete",
+                text: "Remove row",
+            },
+            {
+                id: "custom-move-row:up",
+                icon: "wxi-arrow-up",
+                text: "Move up",
+            }
+        ]
+    }
+    ~~~
+    :::
 
 - `css` - a function returns a css class that applies to rows conditionally
 
@@ -88,7 +88,7 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 
 ~~~jsx {}
 const getDefaultRowMenuItems = ({ row, rowIndex, rows, store }) => [
-	{ id: "set-edit", icon: "wxi-edit", text: "Rename" },
+    { id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
         id: "move-row:up",
         icon: "wxi-arrow-up",
@@ -104,10 +104,10 @@ const getDefaultRowMenuItems = ({ row, rowIndex, rows, store }) => [
     { id: "delete-row", icon: "wxi-delete", text: "Delete" }
 ];
 const rowShape = {
-	menu: {
-		show: true,
-		items: getDefaultRowMenuItems
-	}
+    menu: {
+        show: true,
+        items: getDefaultRowMenuItems
+    }
 };
 ~~~
 
@@ -124,13 +124,13 @@ const changeRowColor = (row, cssClass) => board.updateRow({
 });
 
 const rowShape = {
-	menu: {
-		show: true,
-		items: ({ row, rowIndex, rows, store }) => {
-			if (rowIndex == 0) 
-				return false
-			return [
-				{
+    menu: {
+        show: true,
+        items: ({ row, rowIndex, rows, store }) => {
+            if (rowIndex == 0) 
+                return false
+            return [
+                {
                     id: "color",
                     text: "Color",
                     items: [
@@ -151,18 +151,18 @@ const rowShape = {
                         }
                     ]
                 }
-			]
-		}
-	},
-	css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red"
+            ]
+        }
+    },
+    css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red"
 };
 
 new kanban.Kanban("#root", {
-	cards,
-	rows,
-	rows,
-	rowShape, 
-	// other parameters
+    cards,
+    rows,
+    rows,
+    rowShape, 
+    // other parameters
 });
 ~~~
 

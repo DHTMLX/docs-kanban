@@ -20,9 +20,9 @@ export.json(): void;
 The method exports data of Kanban to a JSON file with the following structure:
 ~~~jsx {}
 {
-	"cards": [],
-	"columns": [],
-	"rows": []
+    "cards": [],
+    "columns": [],
+    "rows": []
 }
 ~~~
 :::
@@ -32,8 +32,8 @@ The method exports data of Kanban to a JSON file with the following structure:
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // export the Kanban data to JSON ()
 board.export.json(); // => { "cards": [...], "columns": [...], "rows": [] }

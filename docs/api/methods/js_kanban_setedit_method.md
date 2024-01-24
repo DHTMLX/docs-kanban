@@ -32,8 +32,8 @@ To close an editor, call the **setEdit()** method with the ***null*** value
 ~~~jsx {7}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // open an editor for the card by its ID
 board.setEdit({ cardId: 1 });

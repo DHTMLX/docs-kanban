@@ -14,10 +14,10 @@ description: You can learn about the add-row event in the documentation of the D
 
 ~~~jsx {}
 "add-row": ({
-	id?: string | number,
-	row?: object,
-	before?: string | number,
-	skipProvider?: boolean
+    id?: string | number,
+    row?: object,
+    before?: string | number,
+    skipProvider?: boolean
 }) => void;
 ~~~
 
@@ -39,12 +39,12 @@ For handling the inner events you can use the [**Event Bus methods**](api/overvi
 ~~~jsx {7-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // subscribe on the "add-row" event 
 board.api.on("add-row", (obj) => {
-	console.log(obj.id);
+    console.log(obj.id);
 });
 ~~~
 

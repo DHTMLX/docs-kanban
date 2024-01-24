@@ -33,12 +33,12 @@ To change the current locale dynamically, you can use the [**setLocale()**](../.
 ~~~jsx {8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	locale: cn
+    locale: cn
 });
 // create Toolbar
 new kanban.Toolbar("#toolbar", {
-	api: board.api,
-	locale: cn // apply the "cn" locale to Toolbar 
+    api: board.api,
+    locale: cn // apply the "cn" locale to Toolbar 
 });
 ~~~
 

@@ -14,15 +14,15 @@ description: You can learn about the updateComment method in the documentation o
 
 ~~~jsx {}
 updateComment({
-	id?: string | number, 
-	cardId: string | number, 
-	comment: {
-		id?: string | number, 
-		cardId?: string | number, 
-		text?: string, 
-		date?: Date, 
-		html?: string 
-	}
+    id?: string | number, 
+    cardId: string | number, 
+    comment: {
+        id?: string | number, 
+        cardId?: string | number, 
+        text?: string, 
+        date?: Date, 
+        html?: string 
+    }
 }): void;
 ~~~
 
@@ -31,29 +31,29 @@ updateComment({
 - `id` -  (optional) the ID of the comment to be updated
 - `cardId` - (required) the ID of the card which comment to be updated
 - `comment` - (required) the configuration object of the comment to be updated. Here you can specify the following parameters:
-	- `id` -  (optional) the ID of the updated comment
-	- `cardId` - (optional) the ID of the card, to which the updated comment to be added
-	- `text` - (optional) the text of the updated comment
-	- `date` - (optional) the date of the updated comment
-	- `html` - (optional) the HTML markup of the updated comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
+    - `id` -  (optional) the ID of the updated comment
+    - `cardId` - (optional) the ID of the card, to which the updated comment to be added
+    - `text` - (optional) the text of the updated comment
+    - `date` - (optional) the date of the updated comment
+    - `html` - (optional) the HTML markup of the updated comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
 
 ### Example
 
 ~~~jsx {7-17}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-	columns,
-	cards
+    columns,
+    cards
 });
 // update comment
 board.updateComment({
-	id: 1,
-	cardId: 1,
-	comment: {
+    id: 1,
+    cardId: 1,
+    comment: {
         id: 2,
-	    cardId: 4,
+        cardId: 4,
         text: "", 
-		date: new Date("01/08/2021"),
+        date: new Date("01/08/2021"),
         html: "<b>Updated comment</b>"
     }
 });
