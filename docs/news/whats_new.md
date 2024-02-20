@@ -8,6 +8,16 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.9
+
+Released on February 20, 2024
+
+### Fixes
+
+- Kanban affects other widget styles
+- Custom column submenu items with `disabled: true` are still active
+- Inability to set custom upload function for the **Uploader** control
+
 ## Version 1.5.8
 
 Released on November 28, 2023
