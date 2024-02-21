@@ -18,6 +18,7 @@ description: You can learn about the add-card event in the documentation of the 
     id?: string | number,
     rowId?: string | number,
     before?: string | number,
+    select?: boolean,
     card?: object,
     skipProvider?: boolean,
 }) => void;
@@ -31,6 +32,7 @@ The callback of the **add-card** event can take an object with the following par
 - `id` - (optional) the ID of the new card
 - `rowId` - (optional) the ID of the target row
 - `before` - (optional) the ID of the card, before which the new card will be placed
+- `select` - (optional) enables/disables selecting new added card
 - `card` - (optional) the data object of the new card. The full list of the card parameters can be found [here](api/config/js_kanban_cards_config.md)
 - `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
