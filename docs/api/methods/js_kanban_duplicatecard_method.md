@@ -37,7 +37,7 @@ const board = new kanban.Kanban("#root", {
 // duplicate a card with the 1 ID
 board.duplicateCard({
     id: 1,
-    card: { label: "Duplicated card" }
+    card: { label: "Duplicated card" },
     select: true
 });
 ~~~
