@@ -8,6 +8,17 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.10
+
+Released on February 29, 2024
+
+### Fixes
+
+- Broken build on npm server
+- Add the `select` parameter into the [`duplicate-card`](../../api/events/js_kanban_duplicatecard_event) event and the [`duplicateCard()`](../../api/methods/js_kanban_duplicatecard_method) method
+- Incorrect styles for the comment field in the Kanban editor
+- Regression in changing theme
+
 ## Version 1.5.9
 
 Released on February 20, 2024

@@ -16,6 +16,7 @@ description: You can learn about the duplicate-card event in the documentation o
 "duplicate-card": ({
     id: string | number,
     card?: object,
+    select?: boolean
 }) => void;
 ~~~
 
@@ -25,6 +26,7 @@ The callback of the **duplicate-card** event can take an object with the followi
 
 - `id` - (required) the ID of the card to be duplicated
 - `card` - (optional) the data object of the new card. The full list of the card parameters can be found [here](api/config/js_kanban_cards_config.md)
+- `select` - (optional) enables/disables selecting new added card
 
 :::info
 For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
@@ -44,4 +46,4 @@ board.api.on("duplicate-card", (obj) => {
 });
 ~~~
 
-**Change log:** The event was added in v1.3
+**Change log:** The `select` parameter was added in v1.5.10
