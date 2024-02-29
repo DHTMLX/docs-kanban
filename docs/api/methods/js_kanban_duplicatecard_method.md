@@ -15,7 +15,8 @@ description: You can learn about the duplicateCard method in the documentation o
 ~~~jsx {}
 duplicateCard({
     id: string | number,
-    card?: object
+    card?: object,
+    select?: boolean
 }): void;
 ~~~
 
@@ -23,6 +24,7 @@ duplicateCard({
 
 - `id` -  (required) the ID of the card to be duplicared
 - `card` - (optional) the data object of the new card. The full list of the card parameters can be found [**here**](api/config/js_kanban_cards_config.md)
+- `select` - (optional) enables/disables selecting new added card
 
 ### Example
 
@@ -36,7 +38,8 @@ const board = new kanban.Kanban("#root", {
 board.duplicateCard({
     id: 1,
     card: { label: "Duplicated card" }
+    select: true
 });
 ~~~
 
-**Change log:** The method was added in v1.3
+**Change log:** The `select` parameter was added in v1.5.10
