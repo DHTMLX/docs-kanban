@@ -12,7 +12,7 @@ description: You can learn about the PUT /columns REST route in the documentatio
 
 The route handles the **HTTP PUT** request made to the `/columns/{id}` path.
 
-### Query parameters
+### Path parameters
 
 The next parameter is sent in the request line:
 

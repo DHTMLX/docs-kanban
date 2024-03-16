@@ -8,7 +8,7 @@ description: You can learn about the POST /cards/{cardId}/vote REST route in the
 
 ### Description
 
-@short: Adds a new vote to the card and returns a json object with the card ID
+@short: Adds a new vote to the card and returns a json object with the voting user ID
 
 The route handles the **HTTP POST** request made to the `/cards/{cardId}/vote` path.
 
@@ -18,7 +18,7 @@ No payload is required.
 
 ### Response
 
-The route returns a json object with a card ID, to which the vote will be added to.
+The route returns a json object with the voting user ID.
 
 Example:
 

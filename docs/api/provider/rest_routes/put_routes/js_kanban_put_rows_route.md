@@ -12,7 +12,7 @@ description: You can learn about the PUT /rows REST route in the documentation o
 
 The route handles the **HTTP PUT** request made to the `/rows/{id}` path.
 
-### Query parameters
+### Path parameters
 
 The next parameter is sent in the request line:
 

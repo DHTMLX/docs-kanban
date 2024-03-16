@@ -12,9 +12,9 @@ description: You can learn about the PUT /rows/{id}/move REST route in the docum
 
 The route handles the **HTTP PUT** request made to the `rows/{id}/move` path.
 
-### Query parameters
+### Path parameters
 
-The query parameter is sent in the request line:
+The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
