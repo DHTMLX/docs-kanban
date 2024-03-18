@@ -12,10 +12,12 @@ description: You can have an Events overview of JavaScript Kanban in the documen
 | [](../events/js_kanban_addcolumn_event.md)                | @getshort(../events/js_kanban_addcolumn_event.md)       |
 | [](../events/js_kanban_addcomment_event.md)               | @getshort(../events/js_kanban_addcomment_event.md)      |
 | [](../events/js_kanban_addrow_event.md)                   | @getshort(../events/js_kanban_addrow_event.md)          |
+| [](../events/js_kanban_addvote_event.md)                  | @getshort(../events/js_kanban_addvote_event.md)         |
 | [](../events/js_kanban_deletecard_event.md)               | @getshort(../events/js_kanban_deletecard_event.md)      |
 | [](../events/js_kanban_deletecolumn_event.md)             | @getshort(../events/js_kanban_deletecolumn_event.md)    |
 | [](../events/js_kanban_deletecomment_event.md)            | @getshort(../events/js_kanban_deletecomment_event.md)   |
 | [](../events/js_kanban_deleterow_event.md)                | @getshort(../events/js_kanban_deleterow_event.md)       |
+| [](../events/js_kanban_deletevote_event.md)               | @getshort(../events/js_kanban_deletevote_event.md)      |
 | [](../events/js_kanban_dragcard_event.md)                 | @getshort(../events/js_kanban_dragcard_event.md)        |
 | [](../events/js_kanban_duplicatecard_event.md)            | @getshort(../events/js_kanban_duplicatecard_event.md)   |
 | [](../events/js_kanban_enddragcard_event.md)              | @getshort(../events/js_kanban_enddragcard_event.md)     |
