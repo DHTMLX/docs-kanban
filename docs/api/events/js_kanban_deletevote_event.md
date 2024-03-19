@@ -8,7 +8,7 @@ description: You can learn about the delete-vote event in the documentation of t
 
 ### Description
 
-@short: Fires when a user deletes his vote from a card
+@short: Fires when a user deletes a vote from a card
 
 ### Usage
 
