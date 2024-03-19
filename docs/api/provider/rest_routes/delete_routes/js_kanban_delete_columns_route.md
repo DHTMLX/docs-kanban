@@ -12,7 +12,7 @@ description: You can learn about the DELETE /columns REST route in the documenta
 
 The route handles the **HTTP DELETE** request made to the `/columns/{id}` path.
 
-### Query parameters
+### Path parameters
 
 The next parameter is sent in the request line:
 

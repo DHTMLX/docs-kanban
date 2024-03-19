@@ -8,7 +8,7 @@ description: You can learn about the POST /cards/{cardId}/comments REST route in
 
 ### Description
 
-@short: Adds a new comment(s) to the card and returns a json object with the card ID
+@short: Adds a new comment(s) to the card and returns a json object with the  ID of the new added comment
 
 The route handles the **HTTP POST** request made to the `/cards/{cardId}/comments` path.
 
@@ -32,7 +32,7 @@ Example:
 
 ### Response
 
-The route returns a json object with a card ID, to which the new comment(s) will be added to.
+The route returns a json object with the ID of the new added comment.
 
 Example:
 

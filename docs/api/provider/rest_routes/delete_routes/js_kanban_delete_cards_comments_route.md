@@ -4,17 +4,17 @@ title: DELETE /cards/{cardId}/comments/{commentId}
 description: You can learn about the DELETE /cards/{cardId}/comments/{commentId} REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
-# DELETE `/cards/{cardId}/comments/{cardId}`
+# DELETE `/cards/{cardId}/comments/{commentId}`
 
 ### Description
 
 @short: Removes a comment from a card
 
-The route handles the **HTTP DELETE** request made to the `cards/{cardId}/comments/{cardId}` path.
+The route handles the **HTTP DELETE** request made to the `cards/{cardId}/comments/{commentId}` path.
 
-### Query parameters
+### Path parameters
 
-The query parameter is sent in the request line:
+The next parameters are sent in the request line:
 
 | Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
@@ -27,7 +27,7 @@ No payload is required.
 
 ### Response
 
-The server returns a json object with a card ID.
+The server returns a json object with a user ID that removes a comment.
 
 Example:
 

@@ -12,7 +12,7 @@ description: You can learn about the GET /uploads REST route in the documentatio
 
 The route handles the **HTTP GET** request made to the `/uploads/{id}/{name}` path.
 
-### Query parameters
+### Path parameters
 
 The following parameters are sent in the request line:
 

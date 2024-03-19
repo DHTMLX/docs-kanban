@@ -12,9 +12,9 @@ description: You can learn about the PUT /cards REST route in the documentation 
 
 The route handles the **HTTP PUT** request made to the `/cards/{id}` path.
 
-### Query parameters
+### Path parameters
 
-The query parameter sent in the request line is the following:
+The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |

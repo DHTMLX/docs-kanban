@@ -12,7 +12,7 @@ description: You can learn about the DELETE /links REST route in the documentati
 
 The route handles the **HTTP DELETE** request made to the `/links/{id}` path.
 
-### Query parameters
+### Path parameters
 
 The next parameter is sent in the request line:
 

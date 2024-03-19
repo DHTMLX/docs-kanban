@@ -12,7 +12,7 @@ description: You can learn about the DELETE /rows REST route in the documentatio
 
 The route handles the **HTTP DELETE** request made to the `/rows/{id}` path.
 
-### Query parameters
+### Path parameters
 
 The next parameter is sent in the request line:
 
