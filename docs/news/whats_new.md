@@ -8,6 +8,18 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.11
+
+Released on March 26, 2024
+
+### Fixes
+
+- Kanban CSS variables of the *Dark willow* skin are lost for Toolbar and Portals
+- Comments and votes changes are not applied to form values when autosave is disabled
+- Custom column submenu receives `null` in **onClick** function argument
+- Unable to set editable mode for Datepickers in Editor
+- Console warnings in Kanban examples
+
 ## Version 1.5.10
 
 Released on February 29, 2024
