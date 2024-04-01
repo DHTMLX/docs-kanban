@@ -280,7 +280,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-#### Configuring Upload Url as Object
+#### Configuring Upload Url as Function
 
 ~~~jsx {9-31}
 const url = "https://docs.dhtmlx.com/kanban-backend";

@@ -168,7 +168,7 @@ To set the control for assigning one user, you need to use the ***"select"*** or
 
 #### - Parameters for a "files" type
 
-- `uploadURL` - (optional) an URL of the editor uploader. See the detail below
+- `uploadURL` - (optional) a URL of the editor uploader. See the detail below
 
 <details>
 
