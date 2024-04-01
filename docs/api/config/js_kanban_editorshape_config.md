@@ -63,7 +63,7 @@ editorShape?: [
         },
         
         // for a "files" type only
-        uploadURL?: string,
+        uploadURL?: string | function,
         config?: {
             accept?: string,
             disabled?: boolean,
@@ -168,7 +168,51 @@ To set the control for assigning one user, you need to use the ***"select"*** or
 
 #### - Parameters for a "files" type
 
-- `uploadURL` - (optional) an URL of the editor uploader
+- `uploadURL` - (optional) a URL of the editor uploader. See the detail below
+
+<details>
+
+The `uploadURL` property can be specified as **string** or **function**. The following example shows how to set upload URL via function:
+
+~~~jsx {}
+uploadURL: rec => {
+    const formData = new FormData();
+    formData.append("upload", rec.file);
+
+    const config = {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Authorization': 'Bearer ' + token  // token or other headers here
+        }
+    };
+
+    return fetch(url + "/uploads", config) // URL here
+        .then(res => res.json())
+        .then(
+            data => {
+                rec.id = data.id;
+                return data;
+            },
+            () => ({ id: rec.id, status: "error" })
+        )
+        .catch();
+}
+~~~
+
+where `rec` is the only parameter of the function and is an extended `PointerEvent` object (native type plus 4 our properties):
+
+~~~jsx {}
+interface UploadEvent extends PointerEvent {
+	id: number;
+	status: "client" | "server" | "error"; // which means in plain English "not sent yet", "sent successfully", "something went wrong, so not sent"
+	name: string; // the name of the file
+	file: string | Blob; // the file
+}
+~~~
+
+</details>
+
 - `config` - (optional) a configuration object of the **"files"** field. Here you can specify the following parameters:
     - `accept` - (optional) a file type to be uploaded (***"image/\*", "video/\*", "audio/\*"*** *and other*)
     - `disabled` - (optional) enables/disables uploading *files*

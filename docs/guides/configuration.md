@@ -257,6 +257,8 @@ new kanban.Kanban("#root", {
 
 The editor field of **files** type can be set in the following way:
 
+#### Configuring Upload Url as String
+
 ~~~jsx {4-15}
 const url = "https://docs.dhtmlx.com/kanban-backend";
 new kanban.Kanban("#root", {
@@ -265,7 +267,7 @@ new kanban.Kanban("#root", {
             type: "files", 
             key: "attached", // the "attached" key is used when configuring the "cardShape" property
             label: "Attachment",
-            uploadURL: url + "/uploads",
+            uploadURL: url + "/uploads", // specify url as string
             config: {
                 accept: "image/*", // "video/*", "audio/*"
                 disabled: false,
@@ -274,6 +276,45 @@ new kanban.Kanban("#root", {
             }
         },
         // settings of other fields
+    ]
+});
+~~~
+
+#### Configuring Upload Url as Function
+
+~~~jsx {9-31}
+const url = "https://docs.dhtmlx.com/kanban-backend";
+new kanban.Kanban("#root", {
+    editorShape: [
+        ...defaultEditorShape,
+        {
+            key: "attached",
+            type: "files",
+            label: "Files",
+            uploadURL: rec => {
+                const formData = new FormData();
+                formData.append("upload", rec.file);
+
+                const config = {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Authorization': 'Bearer ' + token  // token or other headers here
+                    }
+                };
+
+                return fetch(url + "/uploads", config) // URL here
+                    .then(res => res.json())
+                    .then(
+                        data => {
+                            rec.id = data.id;
+                            return data;
+                        },
+                        () => ({ id: rec.id, status: "error" })
+                    )
+                    .catch();
+            }
+        }
     ]
 });
 ~~~
