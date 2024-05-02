@@ -8,6 +8,15 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.12
+
+Released on May 2, 2024
+
+### Fixes
+
+- Intercept regression: return `false` does not prevent inner events
+- Disabled files allow files
+
 ## Version 1.5.11
 
 Released on March 25, 2024
