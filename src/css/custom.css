@@ -119,10 +119,9 @@
 /* for Code Snippet iframe */
 
 .snippet_iframe {
-  border: 1px solid var(--ifm-hr-border-color);
-  margin-bottom: var(--ifm-leading);
-
-  border-radius: 5px; 
+    border: 1px solid var(--ifm-hr-border-color);
+    margin-bottom: var(--ifm-leading);
+    border-radius: 5px; 
 }
 
 /* end for Code Snippet iframe */
@@ -130,9 +129,9 @@
 /* small code block */
 
 code {
-  border-radius: 5px;
-  padding: 6px 8px;
-  font-weight: 600;
+    border-radius: 5px;
+    padding: 6px 8px;
+    font-weight: 600;
 }
 
 /* end small code block */
@@ -146,24 +145,25 @@ code {
 }
   /* specify the comment text color */
 span.token.comment {
-  color: rgb(12, 121, 8) !important;
+    color: rgb(12, 121, 8) !important;
 }    
   /* specify the comment background color */
 span.token-line.theme-code-block-highlighted-line {
-  background-color: rgba(225, 212, 212, 0.075);
+    background-color: rgba(225, 212, 212, 0.075);
 }
 
 /* end styles for block of code */
 
 /* list */
 
-.markdown ul  {
-  margin-top: 10px;
-    line-height: 38px;
+.markdown ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 2;
 }
 
 ::marker {
-  color: #9c9c9c;
+    color: #9c9c9c;
 }
 
 /* end list */
@@ -171,24 +171,24 @@ span.token-line.theme-code-block-highlighted-line {
 /* buttons */
 
 .support_btn{
-  font-size: 16pt;
-  color: rgb(53, 148, 243);
-  background-color: transparent;
-  border: 1px solid rgba(53, 148, 243, 0.692);;
-  border-radius: 5px;
-  width: 280px;
-  height: 50px;
-  margin-bottom: 30px;
+    font-size: 16pt;
+    color: rgb(53, 148, 243);
+    background-color: transparent;
+    border: 1px solid rgba(53, 148, 243, 0.692);;
+    border-radius: 5px;
+    width: 280px;
+    height: 50px;
+    margin-bottom: 30px;
 }
 
 .support_btn:hover{
-  background-color: rgba(53, 148, 243, 0.692);
-  color: white;
+    background-color: rgba(53, 148, 243, 0.692);
+    color: white;
 }
 
 .support_btn > a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* buttons end */
@@ -197,11 +197,11 @@ span.token-line.theme-code-block-highlighted-line {
 /* styles for tables */
 
 table {
-  width: 100%;
-  display: inline-table;
+    width: 100%;
+    display: inline-table;
 }
 table th:first-child {
-  width: 25%;
+    width: 25%;
 }
 
 /* end styles for tables */
@@ -209,11 +209,15 @@ table th:first-child {
 /* styles for infoblock */
 
 .admonition-content > p {
-  line-height: 2.2;
+    line-height: 5;
 }
 
 .admonition {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 /* end styles for infoblock */
+
+p {
+    line-height: 2;
+}
