@@ -41,7 +41,7 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 - a end date via the `end_date: boolean` config
 
     :::tip
-    You can manage the **start date** and **end date** fields of any card via the corresponding controls of the Kanban editor. If you activate these fields, the corresponding controls will be displayed in the editor automatically. To configure these controls, you can use the [**date**](#date-type) type.
+    You can manage the **start date** and **end date** fields of any card via the corresponding controls of the Kanban editor. If you activate these fields, the corresponding controls will be displayed in the editor automatically. To configure these controls, you can use the [**date**](#date-and-daterange-types) type.
     :::
 
 - a card context menu via the `menu: boolean` config
