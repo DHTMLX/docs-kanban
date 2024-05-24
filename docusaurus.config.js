@@ -137,8 +137,10 @@ const config = {
 	tagline: 'DHTMLX JavaScript Kanban Docs',
 	url: 'https://docs.dhtmlx.com',
 	baseUrl: '/kanban/',
+
 	onBrokenLinks: 'warn',
 	onBrokenMarkdownLinks: 'warn',
+    onBrokenAnchors: 'warn',
 	favicon: 'img/favicon.ico',
 	organizationName: 'DHTMLX', // Usually your GitHub org/user name.
 	projectName: 'docs-kanban', // Usually your repo name.
@@ -151,17 +153,17 @@ const config = {
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
 					editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
-					routeBasePath: '/',
+					routeBasePath: '/'
 				},
 				theme: {
-					customCss: require.resolve('./src/css/custom.css'),
+					customCss: require.resolve('./src/css/custom.css')
 				},
 				sitemap: {
 					changefreq: 'daily',
-					priority: 0.5,
-				},
-			}),
-		],
+					priority: 0.5
+				}
+			})
+		]
 	],
 	plugins: [
 		'docusaurus-plugin-sass',
@@ -178,7 +180,7 @@ const config = {
 		[
 			require.resolve('docusaurus-gtm-plugin'),
 			{
-				id: 'GTM-5M5RCSJ',
+				id: 'GTM-5M5RCSJ'
 			}
 		]
 	],
@@ -301,11 +303,11 @@ const config = {
 			contextualSearch: true,
 
 			// Optional: Algolia search parameters
-			searchParameters: {},
+			searchParameters: {}
 
 			//... other Algolia params
-		},
-	}),
+		}
+	})
 };
 
 module.exports = config;
