@@ -36,23 +36,17 @@ There are two necessary files:
 ~~~
 
 :::info
-You can also import Kanban into your project using `yarn` or `npm` commands. To get the trial version of Kanban, run the following commands:
-
-~~~jsx {2-3,6-7}
-// npm
-npm config set @dhx:registry https://npm.dhtmlx.com
-npm i @dhx/trial-kanban
-
-// yarn
-yarn config set @dhx:registry https://npm.dhtmlx.com
-yarn add @dhx/trial-kanban
-~~~
+You can also import JavaScript Kanban into your project using `yarn` or `npm` commands. For this purpose, download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the *README* file. Note that trial Kanban is available 30 days only.
 
 To get Kanban under the proprietary license, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
 :::
 
 :::tip
-If you want to integrate JavaScript Kanban into React, Angular or Vue projects, refer to the corresponding [**Examples on CodeSandbox**](https://codesandbox.io/u/DHTMLX) for more information.
+If you want to integrate JavaScript Kanban into **React**, **Angular**, **Svelte** or **Vue** projects, refer to the following sections for details:
+- [Integration with Angular](/guides/integration_with_angular/)
+- [Integration with React](/guides/integration_with_react/)
+- [Integration with Svelte](/guides/integration_with_svelte/)
+- [Integration with Vue](/guides/integration_with_vue/)
 :::
 
 ## Step 2. Creating Kanban
