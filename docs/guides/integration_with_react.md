@@ -26,7 +26,7 @@ npx create-vite my-react-kanban-app --template react
 
 ### Installation of dependencies
 
-Go to the app directory. Let's call the project as **my-react-kanban-app** and run:
+Go to the app directory. Let's name the project as **my-react-kanban-app** and run:
 
 ~~~json
 cd my-react-kanban-app
@@ -34,25 +34,25 @@ cd my-react-kanban-app
 
 Install dependencies and start the dev server. For this, use a package manager:
 
-- if you use [**yarn**](https://yarnpkg.com/), call the following commands:
+- if you use [**yarn**](https://yarnpkg.com/), run the following commands:
 
 ~~~json
 yarn install
 yarn dev
 ~~~
 
-- if you use [**npm**](https://www.npmjs.com/), call the following commands:
+- if you use [**npm**](https://www.npmjs.com/), run the following commands:
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-The app should run on `http://localhost:3000`.
+The app should run on a localhost (for instance `http://localhost:3000`).
 
 ## Creating Kanban
 
-Now you should get the DHTMLX Kanban code. First of all, stop the app by pressing **Ctrl+C** in the command line. Then you can proceed with installing the Kanban package.
+Now you should get the DHTMLX Kanban code. First of all, stop the app and proceed with installing the Kanban package.
 
 ### Step 1. Package installation
 
@@ -130,7 +130,7 @@ export default KanbanComponent;
 
 #### Loading data
 
-To add data into the Kanban, you need to provide a data set. Let's create the ***data.js*** file in the ***src/*** directory and add some data into it:
+To add data into the Kanban, you need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
 
 ~~~jsx title="data.js"
 export function getData() {
@@ -247,6 +247,8 @@ function App() {
 
 export default App;
 ~~~
+
+After that, when you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 

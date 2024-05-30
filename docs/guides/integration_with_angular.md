@@ -37,14 +37,15 @@ cd my-angular-kanban-app
 Run the app with the following command:
 
 ~~~json
+yarn install
 yarn start
 ~~~
 
-The app should run on `http://localhost:3000`.
+The app should run on a localhost (for instance `http://localhost:3000`).
 
 ## Creating Kanban
 
-Now you should get the DHTMLX Kanban code. First of all, stop the app by pressing **Ctrl+C** in the command line. Then you can proceed with installing the Kanban package.
+Now you should get the DHTMLX Kanban code. First of all, stop the app and proceed with installing the Kanban package.
 
 ### Step 1. Package installation
 
@@ -52,7 +53,7 @@ Download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxK
   
 ### Step 2. Component creation
 
-Now you need to create a component, to add a Kanban into the application. Create  the **kanban** folder in the **src/app/** directory, add a new file into it and call it **kanban.component.ts**. Then complete the steps described below.
+Now you need to create a component, to add a Kanban into the application. Create  the **kanban** folder in the **src/app/** directory, add a new file into it and name it **kanban.component.ts**. Then complete the steps described below.
 
 #### Importing source files
 
@@ -98,7 +99,7 @@ export class KanbanComponent implements OnInit {
 
 Then we need to render our Kanban in the container. To do that, use the `ngOnInit()` method of Angular:
 
-~~~jsx {6-8} title="kanban.component.ts"
+~~~jsx {6-9} title="kanban.component.ts"
 export class KanbanComponent implements OnInit, OnDestroy {
     @ViewChild('container', { static: true }) container!: ElementRef;
 
@@ -106,7 +107,6 @@ export class KanbanComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.kanban = new Kanban(this.container.nativeElement,{});
-
         this._kanban = kanban;
     }
 
@@ -120,7 +120,7 @@ In the above code we also specified the `ngOnDestroy()` method that contains the
 
 #### Loading data
 
-To add data into Kanban, we need to provide a data set. Let's create the **data.ts** file in the **src/app/kanban/** directory and add some data into it:
+To add data into Kanban, you need to provide a data set. You can create the **data.ts** file in the **src/app/kanban/** directory and add some data into it:
 
 ~~~jsx title="data.ts"
 export function getData() {
@@ -224,11 +224,11 @@ Now it's time to add the component into our app. Open ***src/app/app.component.t
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "app-root",
-  template: `<kanban/>`,
+    selector: "app-root",
+    template: `<kanban/>`
 })
 export class AppComponent {
-  name = "";
+    name = "";
 }
 ~~~
 
@@ -242,10 +242,10 @@ import { AppComponent } from "./app.component";
 import { KanbanComponent } from "./kanban/kanban.component";
 
 @NgModule({
-  declarations: [AppComponent, KanbanComponent],
-  imports: [BrowserModule],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, KanbanComponent],
+    imports: [BrowserModule],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
 ~~~
