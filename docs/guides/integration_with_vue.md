@@ -196,16 +196,16 @@ Then open the ***App.vue*** file, import data, and initialize it via the inner `
 import { getData } from "./data";
 
 export default {
-  // ...
-  data() {
-    const { columns, cards } = getData();
-    return { columns, cards };
-  }
+    // ...
+    data() {
+        const { columns, cards } = getData();
+        return { columns, cards };
+    }
 };
 </script>
 
 <template>
-  <Kanban :columns="columns" :cards="cards" />
+    <Kanban :columns="columns" :cards="cards" />
 </template>
 ~~~
 
@@ -282,7 +282,7 @@ export default {
 </script>
 
 <template>
-  <Kanban :columns="columns" :cards="cards" />
+    <Kanban :columns="columns" :cards="cards" />
 </template>
 ~~~
 
@@ -290,4 +290,4 @@ After that, when you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 
-Now you know how to integrate DHTMLX Kanban with Vue. You can customize the code according to your specific requirements.
+Now you know how to integrate DHTMLX Kanban with Vue. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/vue-kanban-demo).

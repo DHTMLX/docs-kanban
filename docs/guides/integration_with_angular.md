@@ -280,4 +280,4 @@ After that, when you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 
-Now you know how to integrate DHTMLX Kanban with Angular. You can customize the code according to your specific requirements.
+Now you know how to integrate DHTMLX Kanban with Angular. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
