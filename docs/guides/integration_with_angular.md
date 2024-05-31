@@ -88,12 +88,10 @@ import { Component, ElementRef, OnInit, ViewChild, OnDestroy} from '@angular/cor
 
 @Component({
     selector: 'kanban',
-    template: '<div #container></div>',
+    template: '<div #container></div>'
 })
 export class KanbanComponent implements OnInit {
     @ViewChild('container', { static: true }) container!: ElementRef;
-
-    private kanban!: Kanban;
 }
 ~~~
 
@@ -103,15 +101,15 @@ Then we need to render our Kanban in the container. To do that, use the `ngOnIni
 export class KanbanComponent implements OnInit, OnDestroy {
     @ViewChild('container', { static: true }) container!: ElementRef;
 
-    private kanban!: Kanban;
+    private _board!: Kanban;
 
     ngOnInit() {
-        this.kanban = new Kanban(this.container.nativeElement,{});
-        this._kanban = kanban;
+        const board = new Kanban(this.container.nativeElement,{});
+        this._board = board;
     }
 
     ngOnDestroy() {
-        this._kanban.destructor();
+        this._board.destructor();
     }
 }
 ~~~
@@ -145,7 +143,7 @@ export function getData() {
             start_date: new Date("01/07/2021"),
             users: [3, 2],
             column: "backlog",
-            type: "feature",
+            type: "feature"
         },
         {
             label: "Archive the cards/boards ",
@@ -154,7 +152,7 @@ export function getData() {
             users: [4],
             progress: 1,
             column: "backlog",
-            type: "feature",
+            type: "feature"
         },
         // ...
     ];
@@ -168,13 +166,13 @@ export function getData() {
 
 Then open the ***kanban.component.ts*** file. Import the file with data and specify the corresponding data properties to the configuration object of Kanban within the `ngOnInit()` method, as shown below.
 
-~~~jsx title="kanban.component.ts"
+~~~jsx {2,6-9} title="kanban.component.ts"
 // importing the data file
 import { getData } from './data';
 
 ngOnInit() {
     const { cards, columns } = getData();
-    const kanban = new Kanban(this.container.nativeElement, {
+    const board = new Kanban(this.container.nativeElement, {
         columns,
         cards
     });
@@ -183,18 +181,18 @@ ngOnInit() {
 
 You can also use the `parse()` method inside the `ngOnInit()` method of Angular to load data into Kanban. It will reload data on each applied change.
 
-~~~jsx title="kanban.component.ts"
+~~~jsx {11} title="kanban.component.ts"
 // importing the data file
 import { getData } from './data';
 
 ngOnInit() {
     const { cards, columns } = getData();
-    const kanban = new Kanban(this.container.nativeElement, {
+    const board = new Kanban(this.container.nativeElement, {
         columns: [],
         cards: []
     });
 
-    kanban.parse({ columns, cards });
+    board.parse({ columns, cards });
 }
 ~~~
 
@@ -208,9 +206,9 @@ Open the **kanban.component.ts** file and complete the `ngOnInit()` method as in
 
 ~~~jsx {4-6} title="kanban.component.ts"
 ngOnInit() {
-    const kanban = new Kanban(this.container.nativeElement,{ /*...*/ });
+    const board = new Kanban(this.container.nativeElement,{ /*...*/ });
 
-    kanban.events.on("add-card", (obj) => {
+    board.events.on("add-card", (obj) => {
         console.log(obj.columnId);
     });
 }
@@ -280,4 +278,4 @@ After that, when you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 
-Now you know how to integrate DHTMLX Kanban with Angular. You can customize the code according to your specific requirements.
+Now you know how to integrate DHTMLX Kanban with Angular. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).

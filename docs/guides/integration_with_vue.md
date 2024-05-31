@@ -36,7 +36,7 @@ Go to the app directory:
 cd kanban-vue
 ~~~
 
-Install dependencies and start the dev server. For this, use of a package manager:
+Install dependencies and start the dev server. For this, use a package manager:
 
 - if you use [**yarn**](https://yarnpkg.com/), run the following commands:
 
@@ -90,7 +90,7 @@ In this tutorial you can see how to configure the **trial** version of Kanban.
 
 #### Setting the container and adding Kanban
 
-To display Kanban on the page, we need to set the container to render the component inside. Check the code below:
+To display Kanban on the page, you need to set the container to render the component inside. Check the code below:
 
 ~~~html {6-8} title="Kanban.vue"
 <script>
@@ -103,15 +103,15 @@ To display Kanban on the page, we need to set the container to render the compon
 </template>
 ~~~
 
-Then we need to render our Kanban in the container. Use the `new Kanban()` constructor inside the `mounted()` method of Vue.js to initialize Kanban inside of the container that you've set above:
+Then you need to render Kanban in the container. Use the `new Kanban()` constructor inside the `mounted()` method of Vue to initialize Kanban inside of the container:
 
 ~~~html title="Kanban.vue"
 <script>
-export default {
-    mounted: function() {
-        this.kanban = new Kanban(this.$refs.container, {});
-    }
-};
+    export default {
+        mounted: function() {
+            this.board = new Kanban(this.$refs.container, {});
+        }
+    };
 </script>
 
 <template>
@@ -123,16 +123,16 @@ To clear the component as it has unmounted, use the `kanban.destructor()` call a
 
 ~~~html {7-10} title="Kanban.vue"
 <script>
-export default {
-    mounted: function() {
-        this.kanban = new Kanban(this.$refs.container, {});
-    },
+    export default {
+        mounted: function() {
+            this.board = new Kanban(this.$refs.container, {});
+        },
 
-    unmounted() {
-        this.kanban.destructor();
-        this.$refs.container.innerHTML = "";
+        unmounted() {
+            this.board.destructor();
+            this.$refs.container.innerHTML = "";
+        }
     }
-}
 </script>
 
 <template>
@@ -192,20 +192,20 @@ Then open the ***App.vue*** file, import data, and initialize it via the inner `
 
 ~~~html {3,7-10,15} title="App.vue"
 <script>
-// ...
-import { getData } from "./data";
+    // ...
+    import { getData } from "./data";
 
-export default {
-  // ...
-  data() {
-    const { columns, cards } = getData();
-    return { columns, cards };
-  }
-};
+    export default {
+        // ...
+        data() {
+            const { columns, cards } = getData();
+            return { columns, cards };
+        }
+    };
 </script>
 
 <template>
-  <Kanban :columns="columns" :cards="cards" />
+    <Kanban :columns="columns" :cards="cards" />
 </template>
 ~~~
 
@@ -213,16 +213,16 @@ Open the ***Kanban.vue*** file and apply the passed **props** to the Kanban conf
 
 ~~~html {3,7-8} title="Kanban.vue"
 <script>
-export default {
-    props: ["cards", "columns"],
+    export default {
+        props: ["cards", "columns"],
 
-    mounted() {
-        this.kanban = new Kanban(this.$refs.container, {
-            cards: this.cards,
-            columns: this. columns
-        });
+        mounted() {
+            this.board = new Kanban(this.$refs.container, {
+                cards: this.cards,
+                columns: this. columns
+            });
+        }
     }
-}
 </script>
 ~~~
 
@@ -230,14 +230,14 @@ You can also use the `parse()` method inside the `mounted()` method of Vue to lo
 
 ~~~html {7} title="Kanban.vue"
 <script>
-export default {
-    props: ["cards", "columns"],
+    export default {
+        props: ["cards", "columns"],
 
-    mounted() {
-        this.kanban = new Kanban(this.$refs.cont, {});
-        this.kanban.parse({ columns: this.columns, cards: this.cards });
+        mounted() {
+            this.board = new Kanban(this.$refs.cont, {});
+            this.board.parse({ columns: this.columns, cards: this.cards });
+        }
     }
-}
 </script>
 ~~~
 
@@ -251,15 +251,15 @@ Open ***Kanban.vue*** and complete the `mounted()` method:
 
 ~~~html {6-8} title="Kanban.vue"
 <script>
-export default {
-    // ...
-    mounted() {
-        this.kanban = new Kanban(this.$refs.cont, {});
-        this.kanban.events.on("add-card", (obj) => {
-            console.log(obj.columnId);
-        });
+    export default {
+        // ...
+        mounted() {
+            this.board = new Kanban(this.$refs.cont, {});
+            this.board.events.on("add-card", (obj) => {
+                console.log(obj.columnId);
+            });
+        }
     }
-}
 </script>
 ~~~
 
@@ -269,20 +269,20 @@ To add the component into the app, open the **App.vue** file and replace the def
 
 ~~~html title="App.vue"
 <script>
-import Kanban from "./components/Kanban.vue";
-import { getData } from "./data";
+    import Kanban from "./components/Kanban.vue";
+    import { getData } from "./data";
 
-export default {
-    components: { Kanban },
-    data() {
-        const { columns, cards } = getData();
-        return { columns, cards };
-    }
-};
+    export default {
+        components: { Kanban },
+        data() {
+            const { columns, cards } = getData();
+            return { columns, cards };
+        }
+    };
 </script>
 
 <template>
-  <Kanban :columns="columns" :cards="cards" />
+    <Kanban :columns="columns" :cards="cards" />
 </template>
 ~~~
 
@@ -290,4 +290,4 @@ After that, when you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 
-Now you know how to integrate DHTMLX Kanban with Vue. You can customize the code according to your specific requirements.
+Now you know how to integrate DHTMLX Kanban with Vue. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/vue-kanban-demo).
