@@ -35,18 +35,20 @@ There are two necessary files:
 </html>
 ~~~
 
-:::info
-You can also import JavaScript Kanban into your project using `yarn` or `npm` commands. For this purpose, download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the *README* file. Note that trial Kanban is available 30 days only.
-
-To get Kanban under the proprietary license, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
+:::tip
+You can also import JavaScript Kanban into your project using `yarn` or `npm` commands.
 :::
 
-:::tip
-If you want to integrate JavaScript Kanban into **React**, **Angular**, **Svelte** or **Vue** projects, refer to the following sections for details:
-- [Integration with Angular](/guides/integration_with_angular/)
-- [Integration with React](/guides/integration_with_react/)
-- [Integration with Svelte](/guides/integration_with_svelte/)
-- [Integration with Vue](/guides/integration_with_vue/)
+### Installing trial Kanban via NPM and YARN
+
+:::info
+If you want to use trial version of Kanban, download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the *README* file. Note that trial Kanban is available 30 days only.
+:::
+
+### Installing PRO Kanban via NPM and YARN
+
+:::info
+If you have already own Kanban under the proprietary license, send your **license number** on the *contact@dhtmlx.com* email to receive *login* and *password* for private **npm** as well as detailed guide on how to install Kanban. Note that proprietary Kanban license is available 1 year only.
 :::
 
 ## Step 2. Creating Kanban
