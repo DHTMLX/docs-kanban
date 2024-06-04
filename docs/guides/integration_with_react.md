@@ -56,7 +56,7 @@ Now you should get the DHTMLX Kanban code. First of all, stop the app and procee
 
 ### Step 1. Package installation
 
-Download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the README file. Note that trial Kanban is available 30 days only.
+Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-and-yarn) and follow steps mentioned in the README file. Note that trial Kanban is available 30 days only.
 
 ### Step 2. Component creation
 
@@ -70,7 +70,7 @@ Open the ***Kanban.jsx*** file and import Kanban source files. Note that:
 
 ~~~jsx title="Kanban.jsx"
 import { Kanban } from 'dhx-kanban-package';
-import 'dhx-kanban-package/codebase/kanban.css'; // ??? /codebase/ or /dist/ TODO
+import 'dhx-kanban-package/dist/kanban.css';
 ~~~
 
 Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as **kanban.min.css**.

@@ -35,20 +35,20 @@ There are two necessary files:
 </html>
 ~~~
 
-:::tip
-You can also import JavaScript Kanban into your project using `yarn` or `npm` commands.
-:::
+### Installing Kanban via NPM and YARN
 
-### Installing trial Kanban via NPM and YARN
+You can import JavaScript Kanban into your project using `yarn` or `npm` package manager.
+
+#### Installing trial Kanban via NPM and YARN
 
 :::info
 If you want to use trial version of Kanban, download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the *README* file. Note that trial Kanban is available 30 days only.
 :::
 
-### Installing PRO Kanban via NPM and YARN
+#### Installing PRO Kanban via NPM and YARN
 
 :::info
-If you have already own Kanban under the proprietary license, send your **license number** on the *contact@dhtmlx.com* email to receive *login* and *password* for private **npm** as well as detailed guide on how to install Kanban. Note that proprietary Kanban license is available 1 year only.
+If you have already own Kanban under the proprietary license, send your **license number** on the *contact@dhtmlx.com* email to receive *login* and *password* for private **npm** as well as detailed guide on how to install Kanban. Note that private **npm** is available before the expiration of the proprietary Kanban license.
 :::
 
 ## Step 2. Creating Kanban
