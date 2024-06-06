@@ -26,14 +26,14 @@ npm create vue@latest
 
 This command installs and executes `create-vue`, the official **Vue** project scaffolding tool. Check the details in the [Vue.js Quick Start](https://vuejs.org/guide/quick-start.html#creating-a-vue-application).
 
-Let's name the project as **kanban-vue**.
+Let's name the project as **my-vue-kanban-app**.
 
 ### Installation of dependencies
 
 Go to the app directory:
 
 ~~~json
-cd kanban-vue
+cd my-vue-kanban-app
 ~~~
 
 Install dependencies and start the dev server. For this, use a package manager:
@@ -99,7 +99,7 @@ To display Kanban on the page, you need to set the container to render the compo
 </script>
 
 <template>
-    <div ref="container" style="width: 100%; height: 100%; "></div>
+    <div ref="container" style="width: 100%; height: 100%;"></div>
 </template>
 ~~~
 

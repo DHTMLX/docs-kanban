@@ -75,10 +75,6 @@ import 'dhx-kanban-package/dist/kanban.css';
 
 Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as **kanban.min.css**.
 
-:::note
-**In case you use *npm* with a local Kanban package**, the way of importing Kanban source files is different. [Check the details below](#using-npm-with-kanban-package)
-:::
-
 - if you use the trial version of Kanban, specify the following paths:
 
 ~~~jsx title="Kanban.jsx"

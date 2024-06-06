@@ -79,7 +79,7 @@ In this tutorial you can see how to configure the **trial** version of Kanban.
 
 #### Setting the container and adding Kanban
 
-To display Kanban on the page, we need to set the container to render the component inside. Use the code below:
+To display Kanban on the page, you need to set the container to render the component inside. Use the code below:
 
 ~~~jsx title="kanban.component.ts"
 import { Kanban } from '@dhx/trial-kanban';
@@ -95,7 +95,7 @@ export class KanbanComponent implements OnInit {
 }
 ~~~
 
-Then we need to render our Kanban in the container. To do that, use the `ngOnInit()` method of Angular:
+Then you need to render our Kanban in the container. To do that, use the `ngOnInit()` method of Angular:
 
 ~~~jsx {6-9} title="kanban.component.ts"
 export class KanbanComponent implements OnInit, OnDestroy {
@@ -114,7 +114,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-In the above code we also specified the `ngOnDestroy()` method that contains the `kanban.destructor()` expression to clear the component when it is no longer needed.
+In the above code you also specified the `ngOnDestroy()` method that contains the `_board.destructor()` expression to clear the component when it is no longer needed.
 
 #### Loading data
 
