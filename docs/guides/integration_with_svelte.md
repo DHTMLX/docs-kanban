@@ -205,7 +205,7 @@ Open the ***Kanban.svelte*** file and apply the passed **props** to the Kanban c
 <div bind:this={container} style="width: 100%; height: 100%;"></div>
 ~~~
 
-You can also use the [`parse()`](/api/methods/parse_method/) method inside the `onMount()` method of Svelte to load data into Kanban:
+You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `onMount()` method of Svelte to load data into Kanban:
 
 ~~~html {3-4,9} title="Kanban.svelte"
 <script>

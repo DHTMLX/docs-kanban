@@ -227,7 +227,7 @@ Open the ***Kanban.vue*** file and apply the passed **props** to the Kanban conf
 </script>
 ~~~
 
-You can also use the [`parse()`](/api/methods/parse_method/) method inside the `mounted()` method of Vue to load data into Kanban:
+You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `mounted()` method of Vue to load data into Kanban:
 
 ~~~html {7} title="Kanban.vue"
 <script>
