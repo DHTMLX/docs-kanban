@@ -205,9 +205,9 @@ Open the ***Kanban.svelte*** file and apply the passed **props** to the Kanban c
 <div bind:this={container} style="width: 100%; height: 100%;"></div>
 ~~~
 
-You can also use the `parse()` method inside the `onMount()` method of Svelte to load data into Kanban:
+You can also use the [`parse()`](/api/methods/parse_method/) method inside the `onMount()` method of Svelte to load data into Kanban:
 
-~~~html {3-4,8-11} title="Kanban.svelte"
+~~~html {3-4,9} title="Kanban.svelte"
 <script>
     // ...
     export let columns;
@@ -215,10 +215,7 @@ You can also use the `parse()` method inside the `onMount()` method of Svelte to
 
     let container;
     onMount(() => {
-        const board = new Kanban(container, {
-            columns: [], 
-            cards: []
-        });
+        const board = new Kanban(container, {});
         board.parse({columns, cards});
     });
 </script>
@@ -257,7 +254,7 @@ To add the component into the app, open the **App.svelte** file and replace the 
 <Kanban {cards} {columns} />
 ~~~
 
-After that, when we start the app, we should see Kanban loaded with data on a page.
+After that, you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 

@@ -10,7 +10,7 @@ description: You can learn about the integration with Angular in the documentati
 You should be familiar with basic concepts and patterns of **Angular** before reading this documentation. To refresh your knowledge, please refer to the [**Angular documentation**](https://angular.io/docs).
 :::
 
-DHTMLX Kanban is compatible with **Angular**. We have prepared code examples on how to use DHTMLX Kanabn with **Angular**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
+DHTMLX Kanban is compatible with **Angular**. We have prepared code examples on how to use DHTMLX Kanban with **Angular**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
 
 ## Creating a project
 
@@ -34,7 +34,7 @@ Go to the app directory:
 cd my-angular-kanban-app
 ~~~
 
-Run the app with the following command:
+Run the app with the following commands:
 
 ~~~json
 yarn install
@@ -63,16 +63,12 @@ Open the file and import Kanban source files. Note that:
 
 ~~~jsx
 import { Kanban } from 'dhx-kanban-package';
-import 'dhx-kanban-package/dist/kanban.css'; 
 ~~~
-
-Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as **kanban.min.css**.
 
 - if you use the trial version of Kanban, specify the following paths:
 
 ~~~jsx
 import { Kanban } from '@dhx/trial-kanban';
-import '@dhx/trial-kanban/dist/kanban.css';
 ~~~
 
 In this tutorial you can see how to configure the **trial** version of Kanban.
@@ -83,7 +79,6 @@ To display Kanban on the page, you need to set the container to render the compo
 
 ~~~jsx title="kanban.component.ts"
 import { Kanban } from '@dhx/trial-kanban';
-import '@dhx/trial-kanban/dist/kanban.css';
 import { Component, ElementRef, OnInit, ViewChild, OnDestroy} from '@angular/core';
 
 @Component({
@@ -101,7 +96,7 @@ Then you need to render our Kanban in the container. To do that, use the `ngOnIn
 export class KanbanComponent implements OnInit, OnDestroy {
     @ViewChild('container', { static: true }) container!: ElementRef;
 
-    private _board!: Kanban;
+    private _board!: any;
 
     ngOnInit() {
         const board = new Kanban(this.container.nativeElement,{});
@@ -179,7 +174,7 @@ ngOnInit() {
 }
 ~~~
 
-You can also use the `parse()` method inside the `ngOnInit()` method of Angular to load data into Kanban. It will reload data on each applied change.
+You can also use the [`parse()`](/api/methods/parse_method/) method inside the `ngOnInit()` method of Angular to load data into Kanban. It will reload data on each applied change.
 
 ~~~jsx {11} title="kanban.component.ts"
 // importing the data file
@@ -216,7 +211,7 @@ ngOnInit() {
 
 ### Step 3. Adding Kanban into the app
 
-Now it's time to add the component into our app. Open ***src/app/app.component.ts*** and use *KanbanComponent* instead of the default content by inserting the code below:
+Now it's time to add the component into your app. Open ***src/app/app.component.ts*** and use *KanbanComponent* instead of the default content by inserting the code below:
 
 ~~~jsx title="app.component.ts"
 import { Component } from "@angular/core";
@@ -248,22 +243,6 @@ import { KanbanComponent } from "./kanban/kanban.component";
 export class AppModule {}
 ~~~
 
-For correct rendering of fonts, open the ***angular.json*** file and complete the "assets" array in the following way (replace *kanban_package* with the name of your local folder that contains Kanban source files):
-
-~~~jsx {5-9} title="angular.json"
-...
-"assets": [
-    "src/favicon.ico",
-    "src/assets",
-    {
-        "input": "./kanban_package/dist/fonts",
-        "glob": "**/*",
-        "output": "assets"
-    }
-],
-...
-~~~
-
 The last step is to open the ***src/main.ts*** file and replace the existing code with the following one:
 
 ~~~jsx title="main.ts"
@@ -274,7 +253,7 @@ platformBrowserDynamic()
     .catch((err) => console.error(err));
 ~~~
 
-After that, when you can start the app to see Kanban loaded with data on a page.
+After that, you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 

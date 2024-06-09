@@ -107,6 +107,7 @@ Then you need to render Kanban in the container. Use the `new Kanban()` construc
 
 ~~~html title="Kanban.vue"
 <script>
+    // ...
     export default {
         mounted: function() {
             this.board = new Kanban(this.$refs.container, {});
@@ -119,7 +120,7 @@ Then you need to render Kanban in the container. Use the `new Kanban()` construc
 </template>
 ~~~
 
-To clear the component as it has unmounted, use the `kanban.destructor()` call and remove the container after that inside the `unmounted()` method of ***Vue.js***, as follows:
+To clear the component as it has unmounted, use the `kanban.destructor()` method and remove the container inside the `unmounted()` method of ***Vue.js***, as follows:
 
 ~~~html {7-10} title="Kanban.vue"
 <script>
@@ -226,7 +227,7 @@ Open the ***Kanban.vue*** file and apply the passed **props** to the Kanban conf
 </script>
 ~~~
 
-You can also use the `parse()` method inside the `mounted()` method of Vue to load data into Kanban:
+You can also use the [`parse()`](/api/methods/parse_method/) method inside the `mounted()` method of Vue to load data into Kanban:
 
 ~~~html {7} title="Kanban.vue"
 <script>
@@ -286,7 +287,7 @@ To add the component into the app, open the **App.vue** file and replace the def
 </template>
 ~~~
 
-After that, when you can start the app to see Kanban loaded with data on a page.
+After that, you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 

@@ -172,38 +172,62 @@ export function getData() {
 }
 ~~~
 
-Then open the ***Kanban.jsx*** file, pass the name of the data file to the component constructor function:
+Then open the ***App.js*** file and import data. After this you can pass data into the new created `<Kanban/>` components as **props**:
 
-~~~jsx {1,6-7} title="Kanban.jsx"
-const KanbanComponent = ({ data }) => {
+~~~jsx {2,5-6} title="App.jsx"
+import Kanban from "./Kanban";
+import { getData } from "./data";
+
+function App() {
+  const { columns, cards } = getData();
+  return <Kanban columns={columns} cards={cards} />;
+}
+
+export default App;
+~~~
+
+Open the ***Kanban.jsx*** file and apply the passed **props** to the Kanban configuration object:
+
+~~~jsx {4,8-9} title="Kanban.jsx"
+const KanbanComponent = ({ props }) => {
     let container = useRef();
+
+    const { columns, cards } = props;
 
     useEffect(() => {
         new Kanban(container.current, {
-            columns: data.columns,
-            cards: data.cards
+            columns,
+            cards
         });
         return () => (container.current.innerHTML = "");
     }, []);
     
     return <div ref={container}></div>;
 };
+
+export default KanbanComponent;
 ~~~
 
-You can also use the `parse()` method inside the `useEffect()` method of React to load data into Kanban:
+You can also use the [`parse()`](/api/methods/parse_method/) method inside the `useEffect()` method of React to load data into Kanban:
 
-~~~jsx {6} title="Kanban.jsx"
-const KanbanComponent = ({ data }) => {
+~~~jsx {4,9} title="Kanban.jsx"
+const KanbanComponent = ({ props }) => {
     let container = useRef();
+
+    const { columns, cards } = props;
 
     useEffect(() => {
         const board = new Kanban(container.current, {});
-        board.parse(data);
+
+        board.parse({ columns, cards });
+
         return () => (container.current.innerHTML = "");
     }, []);
     
     return <div ref={container}></div>;
 };
+
+export default KanbanComponent;
 ~~~
 
 The `board.parse(data);` line provides data reloading on each applied change.
@@ -244,7 +268,7 @@ function App() {
 export default App;
 ~~~
 
-After that, when you can start the app to see Kanban loaded with data on a page.
+After that, you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 
