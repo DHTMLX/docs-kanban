@@ -233,7 +233,7 @@ Open ***Kanban.svelte*** and complete the `onMount()` method as in:
 ~~~jsx title="Kanban.svelte"
 onMount(() => {
     const board = new Kanban(container, { columns, cards });
-    board.events.on("add-card", (obj) => {
+    board.api.on("add-card", (obj) => {
         console.log(obj.columnId);
     });
 });

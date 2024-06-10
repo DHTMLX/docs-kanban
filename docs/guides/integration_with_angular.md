@@ -203,7 +203,7 @@ Open the **kanban.component.ts** file and complete the `ngOnInit()` method as in
 ngOnInit() {
     const board = new Kanban(this.container.nativeElement,{ /*...*/ });
 
-    board.events.on("add-card", (obj) => {
+    board.api.on("add-card", (obj) => {
         console.log(obj.columnId);
     });
 }

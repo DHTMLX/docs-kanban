@@ -244,7 +244,7 @@ Open **Kanban.jsx** and complete the `useEffect()` method in the following way:
 useEffect(() => {
     const board = new Kanban(container.current, {});
 
-    board.events.on("add-card", (obj) => {
+    board.api.on("add-card", (obj) => {
         console.log(obj.columnId);
     });
     

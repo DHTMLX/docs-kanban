@@ -256,7 +256,7 @@ Open ***Kanban.vue*** and complete the `mounted()` method:
         // ...
         mounted() {
             this.board = new Kanban(this.$refs.cont, {});
-            this.board.events.on("add-card", (obj) => {
+            this.board.api.on("add-card", (obj) => {
                 console.log(obj.columnId);
             });
         }
