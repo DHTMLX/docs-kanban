@@ -217,7 +217,7 @@ export default function KanbanComponent(props) {
 
 You can also use the [`parse()`](/api/methods/js_board_parse_method/) method inside the `useEffect()` method of React to load data into Kanban:
 
-~~~jsx {17} title="Kanban.jsx"
+~~~jsx {9-10,20} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
 import { Kanban, Toolbar } from "@dhx/trial-kanban";
 import "@dhx/trial-kanban/dist/kanban.css";
@@ -225,6 +225,9 @@ import "@dhx/trial-kanban/dist/kanban.css";
 export default function KanbanComponent(props) {
     let kanban_container = useRef();
     let toolbar_container = useRef();
+
+    let columns = props.columns; // data for columns
+    let cards = props.cards; // data for cards
 
     useEffect(() => {
         const kanban = new Kanban(kanban_container.current, {});
