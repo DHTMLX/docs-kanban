@@ -69,66 +69,62 @@ Open the ***Kanban.jsx*** file and import Kanban source files. Note that:
 - if you use PRO version and install the Kanban package from a local folder, the import paths look like this:
 
 ~~~jsx title="Kanban.jsx"
-import { Kanban } from 'dhx-kanban-package';
+import { Kanban, Toolbar } from 'dhx-kanban-package';
 import 'dhx-kanban-package/dist/kanban.css';
 ~~~
 
-Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as **kanban.min.css**.
+Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as ***kanban.min.css***.
 
 - if you use the trial version of Kanban, specify the following paths:
 
 ~~~jsx title="Kanban.jsx"
-import { Kanban } from '@dhx/trial-kanban';
+import { Kanban, Toolbar } from '@dhx/trial-kanban';
 import "@dhx/trial-kanban/dist/kanban.css";
 ~~~
 
 In this tutorial you can see how to configure the **trial** version of Kanban.
 
-#### Setting the container and adding Kanban
+#### Setting containers and adding Kanban with Toolbar
 
-To display Kanban on the page, you need to set the container to render the component inside. Check the code below:
+To display Kanban with Toolbar on the page, you need to create containers for Kanban and Toolbar, and initialize this components using the corresponding constructors:
 
-~~~jsx title="Kanban.jsx"
-import { Kanban } from '@dhx/trial-kanban';
+~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
+import { useEffect, useRef } from "react";
+import { Kanban, Toolbar } from '@dhx/trial-kanban';
 import '@dhx/trial-kanban/dist/kanban.css';
 
-// eslint-disable-next-line react/prop-types
-const KanbanComponent = () => {
-    let container = useRef();
-
-    return <div ref={container} style={{ width: "100%", height: "100%" }}></div>;
-};
-
-export default KanbanComponent;
-~~~
-
-Then you need to add Kanban into the container. For this purpose, import the `useEffect()` method of React and use it to render the Kanban instance and destruct when it is no longer needed:
-
-~~~jsx {2,8-12} title="Kanban.jsx"
-// ...
-import { useEffect, useRef} from "react";
-
-// eslint-disable-next-line react/prop-types
-const KanbanComponent = () => {
-    let container = useRef();
+export default function KanbanComponent(props) {
+    let toolbar_container = useRef(); // initialize container for Toolbar
+    let kanban_container = useRef(); // initialize container for Kanban
 
     useEffect(() => {
-        new Kanban(container.current, {});
+        // initialize the Kanban component
+        const kanban = new Kanban(kanban_container.current, {});
 
-        return () => (container.current.innerHTML = "");
+        // initialize the Toolbar component
+        const toolbar = new Toolbar(toolbar_container.current, {
+            api: kanban.api, // provide Kanban inner API
+            // other configuration properties
+        });
+
+        return () => {
+            kanban.destructor(); // destruct Kanban
+            toolbar.destructor(); // destruct Toolbar
+        };
     }, []);
-    
-    return <div ref={container} style={{ width: "100%", height: "100%" }}></div>;
-};
 
-export default KanbanComponent;
+    return  <div>
+                <div ref={toolbar_container}></div>
+                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+            </div>
+}
 ~~~
 
 #### Loading data
 
 To add data into the Kanban, you need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
 
-~~~jsx title="data.js"
+~~~jsx {2,14,37} title="data.js"
 export function getData() {
     const columns = [
         {
@@ -165,10 +161,7 @@ export function getData() {
         // ...
     ];
 
-    return {
-        columns,
-        cards
-    };
+    return { columns, cards };
 }
 ~~~
 
@@ -186,51 +179,77 @@ function App() {
 export default App;
 ~~~
 
-Open the ***Kanban.jsx*** file and apply the passed **props** to the Kanban configuration object:
+Go to the ***Kanban.jsx*** file and apply the passed **props** to the Kanban configuration object:
 
-~~~jsx {4,8-9} title="Kanban.jsx"
-const KanbanComponent = ({ props }) => {
-    let container = useRef();
+~~~jsx {5,11-12} title="Kanban.jsx"
+import { useEffect, useRef } from "react";
+import { Kanban, Toolbar } from "@dhx/trial-kanban";
+import "@dhx/trial-kanban/dist/kanban.css";
 
-    const { columns, cards } = props;
+export default function KanbanComponent(props) {
+    let kanban_container = useRef();
+    let toolbar_container = useRef();
 
     useEffect(() => {
-        new Kanban(container.current, {
-            columns,
-            cards
+        const kanban = new Kanban(kanban_container.current, {
+            columns, // apply column data
+            cards, // apply card data
+            // other configuration properties
         });
-        return () => (container.current.innerHTML = "");
-    }, []);
-    
-    return <div ref={container}></div>;
-};
 
-export default KanbanComponent;
+        const toolbar = new Toolbar(toolbar_container.current, {
+            api: kanban.api,
+            // other configuration properties
+        });
+
+        return () => {
+            kanban.destructor();
+            toolbar.destructor();
+        };
+    }, []);
+
+    return  <div>
+                <div ref={toolbar_container}></div>
+                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+            </div>
+}
 ~~~
 
-You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `useEffect()` method of React to load data into Kanban:
+You can also use the [`parse()`](/api/methods/js_board_parse_method/) method inside the `useEffect()` method of React to load data into Kanban:
 
-~~~jsx {4,9} title="Kanban.jsx"
-const KanbanComponent = ({ props }) => {
-    let container = useRef();
+~~~jsx {17} title="Kanban.jsx"
+import { useEffect, useRef } from "react";
+import { Kanban, Toolbar } from "@dhx/trial-kanban";
+import "@dhx/trial-kanban/dist/kanban.css";
 
-    const { columns, cards } = props;
+export default function KanbanComponent(props) {
+    let kanban_container = useRef();
+    let toolbar_container = useRef();
 
     useEffect(() => {
-        const board = new Kanban(container.current, {});
+        const kanban = new Kanban(kanban_container.current, {});
 
-        board.parse({ columns, cards });
-
-        return () => (container.current.innerHTML = "");
-    }, []);
+        const toolbar = new Toolbar(toolbar_container.current, {
+            api: kanban.api,
+            // other configuration properties
+        });
     
-    return <div ref={container}></div>;
-};
+        kanban.parse({ columns, cards });
 
-export default KanbanComponent;
+        return () => {
+            kanban.destructor();
+            toolbar.destructor();
+        };
+    }, []);
+
+    return  <div>
+                <div ref={toolbar_container}></div>
+                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+            </div>
+}
 ~~~
 
-The `board.parse(data);` line provides data reloading on each applied change.
+The `kanban.parse(data)` method provides data reloading on each applied change.
 
 Now the Kanban component is ready. When the element will be added to the page, it will initialize the Kanban object with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
 
@@ -238,23 +257,27 @@ Now the Kanban component is ready. When the element will be added to the page, i
 
 When a user makes some action in the Kanban, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/events_overview/).
 
-Open **Kanban.jsx** and complete the `useEffect()` method in the following way:
+Open ***Kanban.jsx*** and complete the `useEffect()` method in the following way:
 
-~~~jsx {4-6} title="Kanban.jsx"
+~~~jsx {5-7} title="Kanban.jsx"
+// ...
 useEffect(() => {
-    const board = new Kanban(container.current, {});
+    const kanban = new Kanban(kanban_container.current, {});
 
-    board.api.on("add-card", (obj) => {
+    kanban.api.on("add-card", (obj) => {
         console.log(obj.columnId);
     });
     
-    return () => (container.current.innerHTML = "");
+    return () => {
+        kanban.destructor();
+    };
   }, []);
+// ...
 ~~~
 
 ### Step 3. Adding Kanban into the app
 
-To add the component into our app, open the **App.jsx** file and replace the default code with the following one:
+To add the component into our app, open the ***App.jsx*** file and replace the default code with the following one:
 
 ~~~jsx title="App.jsx"
 import Kanban from "./Kanban";
