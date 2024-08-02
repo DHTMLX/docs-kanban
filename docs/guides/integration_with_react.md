@@ -86,7 +86,7 @@ In this tutorial you can see how to configure the **trial** version of Kanban.
 
 #### Setting containers and adding Kanban with Toolbar
 
-To display Kanban with Toolbar on the page, you need to create containers for Kanban and Toolbar, and initialize this components using the corresponding constructors:
+To display Kanban with Toolbar on the page, you need to create containers for Kanban and Toolbar, and initialize these components using the corresponding constructors:
 
 ~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -280,7 +280,7 @@ useEffect(() => {
 
 ### Step 3. Adding Kanban into the app
 
-To add the component into our app, open the ***App.jsx*** file and replace the default code with the following one:
+To add the component into the app, open the ***App.jsx*** file and replace the default code with the following one:
 
 ~~~jsx title="App.jsx"
 import Kanban from "./Kanban";

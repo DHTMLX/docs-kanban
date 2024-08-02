@@ -14,7 +14,7 @@ The **English** locale is used by default:
 
 ~~~jsx
 const en = {
-    kanban: { // translations of the Kanabn labels
+    kanban: { // translations of the Kanban labels
         Save: "Save",
         Close: "Close",
         Delete: "Delete",
