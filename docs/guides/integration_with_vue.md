@@ -64,17 +64,19 @@ Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm
 
 ### Step 2. Component creation
 
-Now you need to create a Vue component, to add a Kanban into the application. Create a new file in the ***src/components/*** directory and name it ***Kanban.vue***.
+Now you need to create a Vue component, to add a Kanban with Toolbar into the application. Create a new file in the ***src/components/*** directory and name it ***Kanban.vue***.
 
-#### Importing source files
+#### Import source files
 
 Open the ***Kanban.vue*** file and import Kanban source files. Note that:
 
 - if you use PRO version and install the Kanban package from a local folder, the import paths look like this:
 
 ~~~html title="Kanban.vue"
-import { Kanban } from 'dhx-kanban-package';
+<script>
+import { Kanban, Toolbar } from 'dhx-kanban-package';
 import 'dhx-kanban-package/dist/kanban.css';
+</script>
 ~~~
 
 Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as **kanban.min.css**.
@@ -82,62 +84,47 @@ Note that depending on the used package, the source files can be minified. In th
 - if you use the trial version of Kanban, specify the following paths:
 
 ~~~html title="Kanban.vue"
-import { Kanban } from '@dhx/trial-kanban';
+<script>
+import { Kanban, Toolbar } from '@dhx/trial-kanban';
 import '@dhx/trial-kanban/dist/kanban.css';
+</script>
 ~~~
 
 In this tutorial you can see how to configure the **trial** version of Kanban.
 
-#### Setting the container and adding Kanban
+#### Setting containers and adding Kanban with Toolbar
 
-To display Kanban on the page, you need to set the container to render the component inside. Check the code below:
+To display Kanban with Toolbar on the page, you need to create containers for Kanban and Toolbar, and initialize these components using the corresponding constructors:
 
-~~~html {6-8} title="Kanban.vue"
+~~~html {2,7-8,10-14} title="Kanban.vue"
 <script>
-    import { Kanban } from "@dhx/trial-kanban";
-    import "@dhx/trial-kanban/dist/kanban.css";
-</script>
+import { Kanban, Toolbar } from "@dhx/trial-kanban";
+import "@dhx/trial-kanban/dist/kanban.css";
 
-<template>
-    <div ref="container" style="width: 100%; height: 100%;"></div>
-</template>
-~~~
+export default {
+    mounted() {
+        // initialize the Kanban component
+        this.kanban = new ToDo(this.$refs.kanban_container, {});
 
-Then you need to render Kanban in the container. Use the `new Kanban()` constructor inside the `mounted()` method of Vue to initialize Kanban inside of the container:
+        // initialize the Toolbar component
+        this.toolbar = new Toolbar(this.$refs.toolbar_container, {
+            api: this.kanban.api, // provide Kanban inner API
+            // other configuration properties
+        });
+    },
 
-~~~html title="Kanban.vue"
-<script>
-    // ...
-    export default {
-        mounted: function() {
-            this.board = new Kanban(this.$refs.container, {});
-        }
-    };
-</script>
-
-<template>
-    <div ref="container" style="width: 100%; height: 100%; "></div>
-</template>
-~~~
-
-To clear the component as it has unmounted, use the `kanban.destructor()` method and remove the container inside the `unmounted()` method of ***Vue.js***, as follows:
-
-~~~html {7-10} title="Kanban.vue"
-<script>
-    export default {
-        mounted: function() {
-            this.board = new Kanban(this.$refs.container, {});
-        },
-
-        unmounted() {
-            this.board.destructor();
-            this.$refs.container.innerHTML = "";
-        }
+    unmounted() {
+        this.kanban.destructor(); // destruct Kanban
+        this.toolbar.destructor(); // destruct Toolbar
     }
+};
 </script>
 
 <template>
-    <div ref="container" style="width: 100%; height: 100%; "></div>
+    <div class="component_container">
+        <div ref="toolbar_container"></div>
+        <div ref="kanban_container" style="height: calc(100% - 56px);"></div>
+    </div>
 </template>
 ~~~
 
@@ -145,7 +132,7 @@ To clear the component as it has unmounted, use the `kanban.destructor()` method
 
 To add data into the Kanban, you need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
 
-~~~jsx title="data.js"
+~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
     const columns = [
         {
@@ -171,7 +158,7 @@ export function getData() {
             type: "feature",
         },
         {
-            label: "Archive the cards/boards ",
+            label: "Archive the cards/kanbans ",
             priority: 3,
             color: "#58C3FE",
             users: [4],
@@ -182,65 +169,130 @@ export function getData() {
         // ...
     ];
 
-    return {
-        columns,
-        cards
-    };
+    const rows = [
+        {
+            label: "Feature",
+            id: "feature",
+        },
+        {
+            label: "Task",
+            id: "task",
+        }
+    ];
+
+    return { columns, cards, rows };
 }
 ~~~
 
 Then open the ***App.vue*** file, import data, and initialize it via the inner `data()` method. After this you can pass data into the new created `<Kanban/>` components as **props**:
 
-~~~html {3,7-10,15} title="App.vue"
+~~~html {3,8,10-12,19} title="App.vue"
 <script>
-    // ...
-    import { getData } from "./data";
+import Kanban from "./components/Kanban.vue";
+import { getData } from "./data";
 
-    export default {
-        // ...
-        data() {
-            const { columns, cards } = getData();
-            return { columns, cards };
-        }
-    };
+export default {
+    components: { Kanban },
+    data() {
+        const { columns, cards, rows } = getData();
+        return { 
+            columns, 
+            cards,
+            rows
+        };
+    }
+};
 </script>
 
 <template>
-    <Kanban :columns="columns" :cards="cards" />
+    <Kanban :columns="columns" :cards="cards" :rows="rows"/>
 </template>
 ~~~
 
-Open the ***Kanban.vue*** file and apply the passed **props** to the Kanban configuration object:
+Go to the ***Kanban.vue*** file and apply the passed **props** to the Kanban configuration object:
 
-~~~html {3,7-8} title="Kanban.vue"
+~~~html {6,10-12} title="Kanban.vue"
 <script>
-    export default {
-        props: ["cards", "columns"],
+import { Kanban, Toolbar } from "@dhx/trial-kanban";
+import "@dhx/trial-kanban/dist/kanban.css";
 
-        mounted() {
-            this.board = new Kanban(this.$refs.container, {
-                cards: this.cards,
-                columns: this. columns
-            });
-        }
+export default {
+    props: ["cards", "columns", "rows"],
+
+    mounted() {
+        this.kanban = new ToDo(this.$refs.kanban_container, {
+            cards: this.cards,
+            columns: this.columns,
+            rows: this.rows,
+            rowKey: "type",
+            // other configuration properties
+        });
+
+        this.toolbar = new Toolbar(this.$refs.toolbar_container, {
+            api: this.kanban.api, 
+            // other configuration properties
+        });
+    },
+
+    unmounted() {
+        this.kanban.destructor(); 
+        this.toolbar.destructor(); 
     }
+};
 </script>
+
+<template>
+    <div class="component_container">
+        <div ref="toolbar_container"></div>
+        <div ref="kanban_container" style="height: calc(100% - 56px);"></div>
+    </div>
+</template>
 ~~~
 
 You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `mounted()` method of Vue to load data into Kanban:
 
-~~~html {7} title="Kanban.vue"
+~~~html {6,19-23} title="Kanban.vue"
 <script>
-    export default {
-        props: ["cards", "columns"],
+import { Kanban, Toolbar } from "@dhx/trial-kanban";
+import "@dhx/trial-kanban/dist/kanban.css";
 
-        mounted() {
-            this.board = new Kanban(this.$refs.cont, {});
-            this.board.parse({ columns: this.columns, cards: this.cards });
-        }
+export default {
+    props: ["cards", "columns", "rows"],
+
+    mounted() {
+        this.kanban = new ToDo(this.$refs.kanban_container, {
+            rowKey: "type",
+            // other configuration properties
+        });
+
+        this.toolbar = new Toolbar(this.$refs.toolbar_container, {
+            api: this.kanban.api, 
+            // other configuration properties
+        });
+
+        this.kanban.parse({ 
+            cards: this.cards,
+            columns: this.columns,
+            rows: this.rows
+        });
+    },
+
+    unmounted() {
+        this.kanban.destructor(); 
+        this.toolbar.destructor(); 
     }
+};
 </script>
+
+<template>
+    <div class="component_container">
+        <div ref="toolbar_container"></div>
+        <div ref="kanban_container" style="height: calc(100% - 56px);"></div>
+    </div>
+</template>
 ~~~
+
+The `this.kanban.parse(data)` method provides data reloading on each applied change.
 
 Now the Kanban component is ready. When the element will be added to the page, it will initialize the Kanban object with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
 
@@ -250,18 +302,26 @@ When a user makes some action in the Kanban, it invokes an event. You can use th
 
 Open ***Kanban.vue*** and complete the `mounted()` method:
 
-~~~html {6-8} title="Kanban.vue"
+~~~html {8-10} title="Kanban.vue"
 <script>
-    export default {
-        // ...
-        mounted() {
-            this.board = new Kanban(this.$refs.cont, {});
-            this.board.api.on("add-card", (obj) => {
-                console.log(obj.columnId);
-            });
-        }
+// ...
+export default {
+    // ...
+    mounted() {
+        this.kanban = new Kanban(this.$refs.cont, {});
+
+        this.kanban.api.on("add-card", (obj) => {
+            console.log(obj.columnId);
+        });
+    },
+
+    unmounted() {
+        this.kanban.destructor();
     }
+}
 </script>
+
+<!--...-->
 ~~~
 
 ### Step 3. Adding Kanban into the app
@@ -270,20 +330,24 @@ To add the component into the app, open the **App.vue** file and replace the def
 
 ~~~html title="App.vue"
 <script>
-    import Kanban from "./components/Kanban.vue";
-    import { getData } from "./data";
+import Kanban from "./components/Kanban.vue";
+import { getData } from "./data";
 
-    export default {
-        components: { Kanban },
-        data() {
-            const { columns, cards } = getData();
-            return { columns, cards };
-        }
-    };
+export default {
+    components: { Kanban },
+    data() {
+        const { columns, cards, rows } = getData();
+        return { 
+            columns, 
+            cards, 
+            rows 
+        };
+    }
+};
 </script>
 
 <template>
-    <Kanban :columns="columns" :cards="cards" />
+    <Kanban :columns="columns" :cards="cards" :rows="rows" />
 </template>
 ~~~
 

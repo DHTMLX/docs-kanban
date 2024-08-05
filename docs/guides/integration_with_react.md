@@ -124,7 +124,7 @@ export default function KanbanComponent(props) {
 
 To add data into the Kanban, you need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
 
-~~~jsx {2,14,37} title="data.js"
+~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
     const columns = [
         {
@@ -161,7 +161,18 @@ export function getData() {
         // ...
     ];
 
-    return { columns, cards };
+    const rows = [
+        {
+            label: "Feature",
+            id: "feature",
+        },
+        {
+            label: "Task",
+            id: "task",
+        }
+    ];
+
+    return { columns, cards, rows };
 }
 ~~~
 
@@ -172,8 +183,8 @@ import Kanban from "./Kanban";
 import { getData } from "./data";
 
 function App() {
-  const { columns, cards } = getData();
-  return <Kanban columns={columns} cards={cards} />;
+    const { columns, cards, rows } = getData();
+    return <Kanban columns={columns} cards={cards} rows={rows} />;
 }
 
 export default App;
@@ -181,7 +192,7 @@ export default App;
 
 Go to the ***Kanban.jsx*** file and apply the passed **props** to the Kanban configuration object:
 
-~~~jsx {5,11-12} title="Kanban.jsx"
+~~~jsx {5,11-14} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
 import { Kanban, Toolbar } from "@dhx/trial-kanban";
 import "@dhx/trial-kanban/dist/kanban.css";
@@ -192,8 +203,10 @@ export default function KanbanComponent(props) {
 
     useEffect(() => {
         const kanban = new Kanban(kanban_container.current, {
-            columns, // apply column data
-            cards, // apply card data
+            columns: props.columns, // apply column data
+            cards: props.cards, // apply card data
+            rows: props.rows, // apply row data
+            rowKey: "type",
             // other configuration properties
         });
 
@@ -228,6 +241,7 @@ export default function KanbanComponent(props) {
 
     let columns = props.columns; // data for columns
     let cards = props.cards; // data for cards
+    let rows = props.rows; // data for rows
 
     useEffect(() => {
         const kanban = new Kanban(kanban_container.current, {});
@@ -237,7 +251,7 @@ export default function KanbanComponent(props) {
             // other configuration properties
         });
     
-        kanban.parse({ columns, cards });
+        kanban.parse({ columns, cards, rows });
 
         return () => {
             kanban.destructor();
@@ -274,7 +288,7 @@ useEffect(() => {
     return () => {
         kanban.destructor();
     };
-  }, []);
+}, []);
 // ...
 ~~~
 
@@ -288,7 +302,7 @@ import { getData } from "./data";
 
 function App() {
     const { columns, cards } = getData();
-    return <Kanban columns={columns} cards={cards} />;
+    return <Kanban columns={columns} cards={cards} rows={rows} />;
 }
 
 export default App;
