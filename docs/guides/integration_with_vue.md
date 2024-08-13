@@ -251,7 +251,7 @@ export default {
 
 You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `mounted()` method of Vue to load data into Kanban:
 
-~~~html {6,19-23} title="Kanban.vue"
+~~~html {6,22-26} title="Kanban.vue"
 <script>
 import { Kanban, Toolbar } from "@dhx/trial-kanban";
 import "@dhx/trial-kanban/dist/kanban.css";
@@ -261,6 +261,9 @@ export default {
 
     mounted() {
         this.kanban = new ToDo(this.$refs.kanban_container, {
+            columns: [],
+            cards: [],
+            rows: [],
             rowKey: "type",
             // other configuration properties
         });
@@ -321,7 +324,7 @@ export default {
 }
 </script>
 
-<!--...-->
+// ...
 ~~~
 
 ### Step 3. Adding Kanban into the app
