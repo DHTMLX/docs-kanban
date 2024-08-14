@@ -35,24 +35,20 @@ There are two necessary files:
 </html>
 ~~~
 
+### Installing Kanban via npm and yarn
+
+You can import JavaScript Kanban into your project using `yarn` or `npm` package manager.
+
+#### Installing trial Kanban via npm and yarn
+
 :::info
-You can also import Kanban into your project using `yarn` or `npm` commands. To get the trial version of Kanban, run the following commands:
-
-~~~jsx {2-3,6-7}
-// npm
-npm config set @dhx:registry https://npm.dhtmlx.com
-npm i @dhx/trial-kanban
-
-// yarn
-yarn config set @dhx:registry https://npm.dhtmlx.com
-yarn add @dhx/trial-kanban
-~~~
-
-To get Kanban under the proprietary license, refer to **[Support Center](https://dhtmlx.com/docs/technical-support.shtml)**!
+If you want to use trial version of Kanban, download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the *README* file. Note that trial Kanban is available 30 days only.
 :::
 
-:::tip
-If you want to integrate JavaScript Kanban into React, Angular or Vue projects, refer to the corresponding [**Examples on CodeSandbox**](https://codesandbox.io/u/DHTMLX) for more information.
+#### Installing PRO Kanban via npm and yarn
+
+:::info
+If you have already own Kanban under the proprietary license, send your **license number** on the *contact@dhtmlx.com* email to receive *login* and *password* for private **npm** as well as detailed guide on how to install Kanban. Note that private **npm** is available before the expiration of the proprietary Kanban license.
 :::
 
 ## Step 2. Creating Kanban
@@ -85,7 +81,7 @@ As parameters, constructors take the IDs of HTML containers where the Kanban and
                 // configuration properties
             });
 
-            new kanban.Toolbar("#toolbar",{
+            new kanban.Toolbar("#toolbar", {
                 // configuration properties
             });
         </script>
