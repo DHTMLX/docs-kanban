@@ -41,8 +41,8 @@ Install dependencies and start the dev server. For this, use a package manager:
 - if you use [**yarn**](https://yarnpkg.com/), run the following commands:
 
 ~~~json
-yarn install
-yarn dev
+yarn
+yarn start
 ~~~
 
 - if you use [**npm**](https://www.npmjs.com/), run the following commands:
@@ -56,7 +56,7 @@ The app should run on a localhost (for instance `http://localhost:3000`).
 
 ## Creating Kanban
 
-Now you should get the DHTMLX Kanban code. First of all, stop the app and proceed with installing the Kanban package.
+Now you should get the DHTMLX Kanban source code. First of all, stop the app and proceed with installing the Kanban package.
 
 ### Step 1. Package installation
 
@@ -64,7 +64,7 @@ Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm
 
 ### Step 2. Component creation
 
-Now you need to create a Vue component, to add a Kanban with Toolbar into the application. Create a new file in the ***src/components/*** directory and name it ***Kanban.vue***.
+Now you need to create a Vue component, to add Kanban with Toolbar into the application. Create a new file in the ***src/components/*** directory and name it ***Kanban.vue***.
 
 #### Import source files
 
@@ -104,7 +104,7 @@ import "@dhx/trial-kanban/dist/kanban.css";
 export default {
     mounted() {
         // initialize the Kanban component
-        this.kanban = new ToDo(this.$refs.kanban_container, {});
+        this.kanban = new Kanban(this.$refs.kanban_container, {});
 
         // initialize the Toolbar component
         this.toolbar = new Toolbar(this.$refs.toolbar_container, {
@@ -184,7 +184,7 @@ export function getData() {
 }
 ~~~
 
-Then open the ***App.vue*** file, import data, and initialize it via the inner `data()` method. After this you can pass data into the new created `<Kanban/>` components as **props**:
+Then open the ***App.vue*** file, import data, and initialize it via the inner `data()` method. After this you can pass data into the new created `<Kanban/>` component as **props**:
 
 ~~~html {3,8,10-12,19} title="App.vue"
 <script>
@@ -220,7 +220,7 @@ export default {
     props: ["cards", "columns", "rows"],
 
     mounted() {
-        this.kanban = new ToDo(this.$refs.kanban_container, {
+        this.kanban = new Kanban(this.$refs.kanban_container, {
             cards: this.cards,
             columns: this.columns,
             rows: this.rows,
@@ -260,7 +260,7 @@ export default {
     props: ["cards", "columns", "rows"],
 
     mounted() {
-        this.kanban = new ToDo(this.$refs.kanban_container, {
+        this.kanban = new Kanban(this.$refs.kanban_container, {
             columns: [],
             cards: [],
             rows: [],
@@ -295,9 +295,9 @@ export default {
 </template>
 ~~~
 
-The `this.kanban.parse(data)` method provides data reloading on each applied change.
+The `parse(data)` method provides data reloading on each applied change.
 
-Now the Kanban component is ready. When the element will be added to the page, it will initialize the Kanban object with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
+Now the Kanban component is ready to use. When the element will be added to the page, it will initialize the Kanban with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
 
 #### Handling events
 
@@ -358,4 +358,4 @@ After that, you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 
-Now you know how to integrate DHTMLX Kanban with Vue. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/vue-kanban-demo).
+Now you know how to integrate DHTMLX Kanban with Vue. You can customize the code according to your specific requirements. The final advanced example you can find on [**GitHub**](https://github.com/DHTMLX/vue-kanban-demo).

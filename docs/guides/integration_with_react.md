@@ -18,7 +18,7 @@ DHTMLX Kanban is compatible with **React**. We have prepared code examples on ho
 Before you start to create a new project, install [**Vite**](https://vitejs.dev/) (optional) and [**Node.js**](https://nodejs.org/en/).
 :::
 
-You can create a basic **React** project or use **React with Vite**:
+You can create a basic **React** project or use **React with Vite**. Let's name the project as **my-react-kanban-app**:
 
 ~~~json
 npx create-vite my-react-kanban-app --template react
@@ -26,7 +26,7 @@ npx create-vite my-react-kanban-app --template react
 
 ### Installation of dependencies
 
-Go to the app directory. Let's name the project as **my-react-kanban-app** and run:
+Go to the new created app directory:
 
 ~~~json
 cd my-react-kanban-app
@@ -37,8 +37,8 @@ Install dependencies and start the dev server. For this, use a package manager:
 - if you use [**yarn**](https://yarnpkg.com/), run the following commands:
 
 ~~~json
-yarn install
-yarn dev
+yarn
+yarn start
 ~~~
 
 - if you use [**npm**](https://www.npmjs.com/), run the following commands:
@@ -52,7 +52,7 @@ The app should run on a localhost (for instance `http://localhost:3000`).
 
 ## Creating Kanban
 
-Now you should get the DHTMLX Kanban code. First of all, stop the app and proceed with installing the Kanban package.
+Now you should get the DHTMLX Kanban source code. First of all, stop the app and proceed with installing the Kanban package.
 
 ### Step 1. Package installation
 
@@ -178,7 +178,7 @@ export function getData() {
 
 Then open the ***App.js*** file and import data. After this you can pass data into the new created `<Kanban/>` components as **props**:
 
-~~~jsx {2,5-6} title="App.jsx"
+~~~jsx {2,5-6} title="App.js"
 import Kanban from "./Kanban";
 import { getData } from "./data";
 
@@ -192,7 +192,7 @@ export default App;
 
 Go to the ***Kanban.jsx*** file and apply the passed **props** to the Kanban configuration object:
 
-~~~jsx {5,11-14} title="Kanban.jsx"
+~~~jsx {5,11-13} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
 import { Kanban, Toolbar } from "@dhx/trial-kanban";
 import "@dhx/trial-kanban/dist/kanban.css";
@@ -230,7 +230,7 @@ export default function KanbanComponent(props) {
 
 You can also use the [`parse()`](/api/methods/js_board_parse_method/) method inside the `useEffect()` method of React to load data into Kanban:
 
-~~~jsx {9-10,27} title="Kanban.jsx"
+~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
 import { Kanban, Toolbar } from "@dhx/trial-kanban";
 import "@dhx/trial-kanban/dist/kanban.css";
@@ -272,9 +272,9 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-The `kanban.parse(data)` method provides data reloading on each applied change.
+The `parse(data)` method provides data reloading on each applied change.
 
-Now the Kanban component is ready. When the element will be added to the page, it will initialize the Kanban object with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
+Now the Kanban component is ready. When the element will be added to the page, it will initialize the Kanban with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
 
 #### Handling events
 
@@ -300,9 +300,9 @@ useEffect(() => {
 
 ### Step 3. Adding Kanban into the app
 
-To add the component into the app, open the ***App.jsx*** file and replace the default code with the following one:
+To add the component into the app, open the ***App.js*** file and replace the default code with the following one:
 
-~~~jsx title="App.jsx"
+~~~jsx title="App.js"
 import Kanban from "./Kanban";
 import { getData } from "./data";
 
@@ -318,4 +318,4 @@ After that, you can start the app to see Kanban loaded with data on a page.
 
 ![Kanban initialization](../assets/trial_kanban.png)
 
-Now you know how to integrate DHTMLX Kanban with React. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/react-kanban-demo).
+Now you know how to integrate DHTMLX Kanban with React. You can customize the code according to your specific requirements. The final advanced example you can find on [**GitHub**](https://github.com/DHTMLX/react-kanban-demo).
