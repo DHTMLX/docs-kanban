@@ -15,7 +15,7 @@ Released on May 2, 2024
 ### Fixes
 
 - Intercept regression: return `false` does not prevent inner events
-- Disabled files allow files
+- Disabled files allow files 
 
 ## Version 1.5.11
 
