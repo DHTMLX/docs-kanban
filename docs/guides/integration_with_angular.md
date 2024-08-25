@@ -24,6 +24,10 @@ Create a new **my-angular-kanban-app** project using Angular CLI. Run the follow
 ng new my-angular-kanban-app
 ~~~
 
+:::note
+If you want to follow this guide, disable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering) when creating new Angular app!
+:::
+
 The command above installs all the necessary tools, so you don't need to run any additional commands.
 
 ### Installation of dependencies
@@ -115,6 +119,30 @@ export class KanbanComponent implements OnInit, OnDestroy {
         this._kanban.destructor(); // destruct Kanban
         this._toolbar.destructor(); // destruct Toolbar
     }
+}
+~~~
+
+#### Adding styles
+
+To display Kanban correctly, you need to provide the corresponding styles. For this purpose, you can create the **kanban.component.css** file in the **src/app/kanban/** directory and specify important styles for Kanban and its container:
+
+~~~css title="kanban.component.css"
+/* import Kanban styles */
+@import "@dhx/trial-kanban/dist/kanban.css";
+
+/* specify styles for initial page */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* specify styles for the Kanban container */
+.component_container {
+    height: 100%; 
+    width: 100%; 
+    margin: 0 auto;
 }
 ~~~
 
