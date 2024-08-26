@@ -21,7 +21,7 @@ Before you start to create a new project, install [**Vite**](https://vitejs.dev/
 You can create a basic **React** project or use **React with Vite**. Let's name the project as **my-react-kanban-app**:
 
 ~~~json
-npx create-vite my-react-kanban-app --template react
+npx create-react-app my-react-kanban-app
 ~~~
 
 ### Installation of dependencies
@@ -91,7 +91,7 @@ To display Kanban with Toolbar on the page, you need to create containers for Ka
 ~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
-import '@dhx/trial-kanban/dist/kanban.css';
+import '@dhx/trial-kanban/dist/kanban.css'; // include Kanban styles
 
 export default function KanbanComponent(props) {
     let toolbar_container = useRef(); // initialize container for Toolbar
