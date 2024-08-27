@@ -21,7 +21,7 @@ Before you start to create a new project, install [**Vite**](https://vitejs.dev/
 You can create a basic **React** project or use **React with Vite**. Let's name the project as **my-react-kanban-app**:
 
 ~~~json
-npx create-vite my-react-kanban-app --template react
+npx create-react-app my-react-kanban-app
 ~~~
 
 ### Installation of dependencies
@@ -91,7 +91,7 @@ To display Kanban with Toolbar on the page, you need to create containers for Ka
 ~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
-import '@dhx/trial-kanban/dist/kanban.css';
+import '@dhx/trial-kanban/dist/kanban.css'; // include Kanban styles
 
 export default function KanbanComponent(props) {
     let toolbar_container = useRef(); // initialize container for Toolbar
@@ -113,10 +113,36 @@ export default function KanbanComponent(props) {
         };
     }, []);
 
-    return  <div>
+    return  <div className="component_container">
                 <div ref={toolbar_container}></div>
-                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+                <div ref={kanban_container} className="widget"></div>
             </div>
+}
+~~~
+
+#### Adding styles
+
+To display Kanban correctly, you need to provide the corresponding styles. You can use the **index.css** file to specify important styles for Kanban and containers:
+
+~~~css title="index.css"
+/* specify styles for initial page */
+html,
+body,
+#root {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* specify styles for Kanban and Toolbar container */
+.component_container {
+    height: 100%; 
+    margin: 0 auto;
+}
+
+/* specify styles for Kanban container */
+.widget {
+    height: calc(100% - 56px);
 }
 ~~~
 
@@ -221,9 +247,9 @@ export default function KanbanComponent(props) {
         };
     }, []);
 
-    return  <div>
+    return  <div className="component_container">
                 <div ref={toolbar_container}></div>
-                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+                <div ref={kanban_container} className="widget"></div>
             </div>
 }
 ~~~
@@ -265,9 +291,9 @@ export default function KanbanComponent(props) {
         };
     }, []);
 
-    return  <div>
+    return  <div className="component_container">
                 <div ref={toolbar_container}></div>
-                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+                <div ref={kanban_container} className="widget"></div>
             </div>
 }
 ~~~
