@@ -113,10 +113,36 @@ export default function KanbanComponent(props) {
         };
     }, []);
 
-    return  <div>
+    return  <div className="component_container">
                 <div ref={toolbar_container}></div>
-                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+                <div ref={kanban_container} className="widget"></div>
             </div>
+}
+~~~
+
+#### Adding styles
+
+To display Kanban correctly, you need to provide the corresponding styles. You can use the **index.css** file to specify important styles for Kanban and containers:
+
+~~~css title="index.css"
+/* specify styles for initial page */
+html,
+body,
+#root {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* specify styles for Kanban and Toolbar container */
+.component_container {
+    height: 100%; 
+    margin: 0 auto;
+}
+
+/* specify styles for Kanban container */
+.widget {
+    height: calc(100% - 56px);
 }
 ~~~
 
@@ -221,9 +247,9 @@ export default function KanbanComponent(props) {
         };
     }, []);
 
-    return  <div>
+    return  <div className="component_container">
                 <div ref={toolbar_container}></div>
-                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+                <div ref={kanban_container} className="widget"></div>
             </div>
 }
 ~~~
@@ -265,9 +291,9 @@ export default function KanbanComponent(props) {
         };
     }, []);
 
-    return  <div>
+    return  <div className="component_container">
                 <div ref={toolbar_container}></div>
-                <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+                <div ref={kanban_container} className="widget"></div>
             </div>
 }
 ~~~

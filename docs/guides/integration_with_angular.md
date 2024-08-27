@@ -89,9 +89,9 @@ import { Component, ElementRef, OnInit, ViewChild, OnDestroy, ViewEncapsulation}
     encapsulation: ViewEncapsulation.None,
     selector: "kanban", // a template name used in the "app.component.ts" file as <kanban />
     styleUrls: ["./kanban.component.css"], // include the css file
-    template:  `<div class="component_container">
+    template:  `<div class = "component_container">
                     <div #toolbar_container></div>
-                    <div #kanban_container style="height: calc(100% - 56px);"></div>
+                    <div #kanban_container class = "widget"></div>
                 </div>`
 })
 
@@ -132,17 +132,21 @@ To display Kanban correctly, you need to provide the corresponding styles. For t
 
 /* specify styles for initial page */
 html,
-body {
-    margin: 0;
-    padding: 0;
+body{
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-/* specify styles for the Kanban container */
+/* specify styles for Kanban and Toolbar container*/
 .component_container {
     height: 100%; 
-    width: 100%; 
     margin: 0 auto;
+}
+
+/* specify styles for Kanban container */
+.widget {
+    height: calc(100% - 56px);
 }
 ~~~
 
@@ -213,9 +217,9 @@ import { Component, ElementRef, OnInit, ViewChild, OnDestroy, ViewEncapsulation}
     encapsulation: ViewEncapsulation.None,
     selector: "kanban", 
     styleUrls: ["./kanban.component.css"],
-    template:  `<div class="component_container">
+    template:  `<div class = "component_container">
                     <div #toolbar_container></div>
-                    <div #kanban_container style="height: calc(100% - 56px);"></div>
+                    <div #kanban_container class = "widget"></div>
                 </div>`
 })
 
@@ -260,9 +264,9 @@ import { Component, ElementRef, OnInit, ViewChild, OnDestroy, ViewEncapsulation}
     encapsulation: ViewEncapsulation.None,
     selector: "kanban", 
     styleUrls: ["./kanban.component.css"],
-    template:  `<div class="component_container">
+    template:  `<div class = "component_container">
                     <div #toolbar_container></div>
-                    <div #kanban_container style="height: calc(100% - 56px);"></div>
+                    <div #kanban_container class = "widget"></div>
                 </div>`
 })
 
