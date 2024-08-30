@@ -145,6 +145,15 @@ const config = {
 	organizationName: 'DHTMLX', // Usually your GitHub org/user name.
 	projectName: 'docs-kanban', // Usually your repo name.
 	trailingSlash: true,
+	scripts:[
+		{
+			src: 'https://dhtmlx.com/gtag/docs.js',
+			async: true
+		}
+	],
+	stylesheets: [
+		{ href:'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css' },
+	],
 	presets: [
 		[
 			'@docusaurus/preset-classic',
@@ -175,12 +184,6 @@ const config = {
 				onAtNotationFunctionMatch,
 				onEmptyLinkMatch,
 				onAfterDataTransformation
-			}
-		],
-		[
-			require.resolve('docusaurus-gtm-plugin'),
-			{
-				id: 'GTM-5M5RCSJ'
 			}
 		]
 	],
