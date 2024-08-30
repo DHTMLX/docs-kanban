@@ -122,7 +122,7 @@ export default function KanbanComponent(props) {
 
 #### Adding styles
 
-To display Kanban correctly, you need to provide the corresponding styles. You can use the **index.css** file to specify important styles for Kanban and containers:
+To display Kanban correctly, you need to specify important styles for Kanban and its container in the main css file of the project:
 
 ~~~css title="index.css"
 /* specify styles for initial page */
@@ -322,22 +322,6 @@ useEffect(() => {
     };
 }, []);
 // ...
-~~~
-
-### Step 3. Adding Kanban into the app
-
-To add the component into the app, open the ***App.js*** file and replace the default code with the following one:
-
-~~~jsx title="App.js"
-import Kanban from "./Kanban";
-import { getData } from "./data";
-
-function App() {
-    const { columns, cards } = getData();
-    return <Kanban columns={columns} cards={cards} rows={rows} />;
-}
-
-export default App;
 ~~~
 
 After that, you can start the app to see Kanban loaded with data on a page.
