@@ -40,9 +40,9 @@ Install dependencies and start the dev server. For this, use a package manager:
 
 - if you use [**yarn**](https://yarnpkg.com/), run the following commands:
 
-~~~json
+~~~jsx
 yarn
-yarn start
+yarn start // or yarn dev
 ~~~
 
 - if you use [**npm**](https://www.npmjs.com/), run the following commands:
@@ -123,9 +123,35 @@ export default {
 <template>
     <div class="component_container">
         <div ref="toolbar_container"></div>
-        <div ref="kanban_container" style="height: calc(100% - 56px);"></div>
+        <div ref="kanban_container" class="widget"></div>
     </div>
 </template>
+~~~
+
+#### Adding styles
+
+To display Kanban correctly, you need to specify important styles for Kanban and its container in the main css file of the project:
+
+~~~css title="main.css"
+/* specify styles for initial page */
+html,
+body,
+#app { /* make sure that you use the #app root container */
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* specify styles for Kanban and Toolbar container */
+.component_container {
+    height: 100%; 
+    margin: 0 auto;
+}
+
+/* specify styles for Kanban container */
+.widget {
+    height: calc(100% - 56px);
+}
 ~~~
 
 #### Loading data
@@ -244,7 +270,7 @@ export default {
 <template>
     <div class="component_container">
         <div ref="toolbar_container"></div>
-        <div ref="kanban_container" style="height: calc(100% - 56px);"></div>
+        <div ref="kanban_container" class="widget"></div>
     </div>
 </template>
 ~~~
@@ -290,7 +316,7 @@ export default {
 <template>
     <div class="component_container">
         <div ref="toolbar_container"></div>
-        <div ref="kanban_container" style="height: calc(100% - 56px);"></div>
+        <div ref="kanban_container" class="widget"></div>
     </div>
 </template>
 ~~~
@@ -325,33 +351,6 @@ export default {
 </script>
 
 // ...
-~~~
-
-### Step 3. Adding Kanban into the app
-
-To add the component into the app, open the **App.vue** file and replace the default code with the following one:
-
-~~~html title="App.vue"
-<script>
-import Kanban from "./components/Kanban.vue";
-import { getData } from "./data";
-
-export default {
-    components: { Kanban },
-    data() {
-        const { columns, cards, rows } = getData();
-        return { 
-            columns, 
-            cards, 
-            rows 
-        };
-    }
-};
-</script>
-
-<template>
-    <Kanban :columns="columns" :cards="cards" :rows="rows" />
-</template>
 ~~~
 
 After that, you can start the app to see Kanban loaded with data on a page.
