@@ -8,6 +8,18 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.5.13
+
+Released on September 9, 2024
+
+### Fixes
+
+- The "Make cover" button does not appear if the extention is uppercase
+- Clicking on a disabled Multiselect control occurs an error
+- Scrolling after the [`addCard()`](../../api/methods/js_kanban_addcard_method) method call throws an error with [column scroll](../../api/config/js_kanban_scrolltype_config) and [lazy rendering](../../api/config/js_kanban_rendertype_config)
+- No comments are saved as "" instead of []
+- Editor style is overridden by global styles with a same-name non-unique class selector
+
 ## Version 1.5.12
 
 Released on May 2, 2024
@@ -15,7 +27,7 @@ Released on May 2, 2024
 ### Fixes
 
 - Intercept regression: return `false` does not prevent inner events
-- Disabled files allow files 
+- Disabled files allow files
 
 ## Version 1.5.11
 
