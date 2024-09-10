@@ -132,7 +132,7 @@ const onAfterDataTransformation = (data) => {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	noIndex: false,
+	noIndex: true,
 	title: 'DHTMLX JavaScript Kanban Docs',
 	tagline: 'DHTMLX JavaScript Kanban Docs',
 	url: 'https://docs.dhtmlx.com',
@@ -161,7 +161,7 @@ const config = {
 			({
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
-					editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/master/',
+					editUrl: 'https://github.com/DHTMLX/docs-kanban/edit/next/',
 					routeBasePath: '/'
 				},
 				theme: {
