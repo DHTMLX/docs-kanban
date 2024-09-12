@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.5.13
 
-Released on September 10, 2024
+Released on September 12, 2024
 
 ### Fixes
 
