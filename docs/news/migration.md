@@ -6,6 +6,29 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
+## 1.5.12 -> 1.5.13
+
+CSS classes related to the editor was changed in the following way:
+
+~~~jsx
+    .modal -> .wx-modal
+    .window -> .wx-window
+    .modal .window .buttons -> .wx-modal .wx-window .wx-buttons
+    .combo -> .wx-combo
+    .combo -> .wx-multicombo
+    .item -> .wx-item
+    .color-picker -> .wx-colorselect
+    .colors -> .wx-colors
+    .slider -> .wx-slider
+    .datepicker -> .wx-datepicker
+    .calendar -> .wx-calendar
+    .calendar .days .day.out -> .wx-calendar .wx-days .wx-day.wx-out
+    .combo .tag -> .multicombo .wx-tag
+    .dropdown -> .wx-dropdown
+    .dropdown .item -> .wx-dropdown .wx-item
+    .clear -> .wx-clear
+~~~
+
 ## 1.5.6 -> 1.5.7
 
 ### Api
