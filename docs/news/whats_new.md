@@ -18,7 +18,7 @@ Released on September 12, 2024
 - Clicking on a disabled Multiselect control occurs an error
 - Scrolling after the [`addCard()`](../../api/methods/js_kanban_addcard_method) method call throws an error with [column scroll](../../api/config/js_kanban_scrolltype_config) and [lazy rendering](../../api/config/js_kanban_rendertype_config)
 - No comments are saved as "" instead of []
-- Editor style is overridden by global styles with a same-name non-unique class selector
+- Editor style is overridden by global styles with a same-name non-unique class selector. [See the migration section](news/migration.md/#1512---1513)
 
 ## Version 1.5.12
 
