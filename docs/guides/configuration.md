@@ -38,7 +38,7 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
     :::
 
 - a start date via the `start_date: boolean` config
-- a end date via the `end_date: boolean` config
+- an end date via the `end_date: boolean` config
 
     :::tip
     You can manage the **start date** and **end date** fields of any card via the corresponding controls of the Kanban editor. If you activate these fields, the corresponding controls will be displayed in the editor automatically. To configure these controls, you can use the [**date**](#date-and-daterange-types) type.
@@ -59,7 +59,8 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 
 - a card cover (*preview image*) via the `cover: boolean` config
 - a card comment(s) via the `comments: boolean` config
-- a card assignment (users) via the `users: { show: boolean, limit: number, showLimit: boolean, values: object }` config
+- a card vote(s) via the `votes: { show: boolean, clicable: true }` config
+- a card assignment (users) via the `users: { show: boolean, values: object, maxCount: number }` config
 
     :::tip
     You can assign one or several users to any card via the corresponding control of the Kanban editor. To configure the control for assigning a single user, use the [**combo** or **select**](#combo-select-and-multiselect-types) types of editor. To assign multiple users, use the [**multiselect**](#combo-select-and-multiselect-types) type.
@@ -125,7 +126,11 @@ Unless you specify the card settings via the [`cardShape`](api/config/js_kanban_
 
 ## Editor
 
-The *Editor* of Kanban consists of the fields for managing the cards data. To configure the editor fields (controls), you can use the [`editorShape`](api/config/js_kanban_editorshape_config.md) property. You can use the following types of the editor fields:
+:::info
+You can display the Editor as the **sidebar** or **modal window** using the [`editor.placement`](api/config/js_kanban_editor_config.md) property!
+:::
+
+The *Editor* of Kanban consists of the fields for managing the cards data. To configure the editor fields (controls), you can use the [`editorShape`](api/config/js_kanban_editorshape_config.md) property. You can use the following types of editor fields:
 
 - [**combo**, **select**, and **multiselect**](#combo-select-and-multiselect-types)
 - [**color**](#color-type)
@@ -508,11 +513,47 @@ const board = new kanban.Kanban("#root", {...});
 new kanban.Toolbar("#toolbar", {
     api: board.api,
     items: [
-        "search", // search bar
+        { // custom search bar
+            type: "search",
+            options: [
+                {
+                    id: "label",
+                    label: "By label"
+                },
+                {
+                    id: "start_date",
+                    label: "By date",
+                    searchRule: (card, value, by) => {
+                        const date = card[by];
+                        return date?.toString().includes(value);
+                    }
+                }
+            ],
+            resultTemplate: kanban.template(searchResult => {
+                return `<div class="list-item">
+                            <div class="list-item-text">${searchResult.result.label}</div>
+                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                        </div>`
+            })
+        },
         "spacer", // empty space
         "undo", // control to undo the card operations in the history
         "redo", // control to redo the card operations in the history
-        "sort", // control for sorting cards
+        { // custom sort control
+            type: "sort",
+            options: [
+                {
+                    text: "Sort by label",
+                    by: "label",
+                    dir: "asc"
+                },
+                {
+                    text: "Sort by description",
+                    by: "description",
+                    dir: "desc"
+                }
+            ]
+        },
         "addColumn", // control for adding new columns
         "addRow", // control for adding new rows
         // custom elements
