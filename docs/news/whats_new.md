@@ -8,6 +8,32 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 2.0
+
+Released on Month Day, 2024
+
+### New functionality
+
+- An ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property
+- An ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_columnshape_config) property
+- An ability to specify a custom template for a search result via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control
+- An ability to specify a max count of assigned users displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_columnshape_config) property
+- An ability to specify custom templates for column header in expanded and collapsed states via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property
+
+### Updates
+
+- #### Properties
+
+    - The [`cardShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***users.maxCount*** and ***votes.clickable*** parameters
+    - The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***headerTemplate*** and ***collapsedTemplate*** parameters
+    - The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the ***placement*** parameter
+    - The [`items`](../../api/config/toolbar_items_config) property of the Toolbar **search** control is extended by the ***searchResult*** parameter
+
+### Fixes
+
+- ...
+- ...
+
 ## Version 1.5.13
 
 Released on September 12, 2024
