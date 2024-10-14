@@ -15,7 +15,8 @@ description: You can learn about the editor config in the documentation of the D
 ~~~jsx {}
 editor?: {
     autoSave?: boolean,
-    debounce?: number
+    debounce?: number,
+    placement?: "sidebar" | "modal"
 }; 
 ~~~
 
@@ -23,6 +24,9 @@ editor?: {
 
 - `autoSave` - (optional) enables/disables an autosave mode of editor
 - `debounce` - (optional) time of delay of autosaving data (works with the ***autoSave: true*** parameter only)
+- `placement` - (optional) specifies the editor placement. You can set the following values:
+    - `"sidebar"` - displays the editor as a sidebar
+    - `"modal"` - displays the editor as a modal window
 
 ### Default config
 
@@ -30,21 +34,23 @@ editor?: {
 editor: {
     autoSave: true,
     debounce: 100
+    placement: "sidebar"
 }
 ~~~
 
 ### Example
 
-~~~jsx {4-7}
+~~~jsx {4-8}
 new kanban.Kanban("#root", {
     columns,
     cards,
     editor: {
         autoSave: true,
-        debounce: 2000
+        debounce: 2000,
+        placement: "modal"
     }
     // other parameters
 });
 ~~~
 
-**Change log:** The property was added in v1.3
+**Change log:** The `placement` parameter was added in v2.0
