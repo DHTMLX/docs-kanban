@@ -13,7 +13,7 @@ description: You can learn about the set-edit event in the documentation of the 
 ### Usage
 
 ~~~jsx {}
-"set-edit": ({ cardId: string | number, eventSource: "select-card" } | null) => void;
+"set-edit": ({ cardId: string | number, eventSource?: "select-card" } | null) => void;
 ~~~
 
 ### Parameters
@@ -21,7 +21,7 @@ description: You can learn about the set-edit event in the documentation of the 
 The callback of the **set-edit** event can take the *null* value or an object with the following parameter:
 
 - `cardId` - (required) the ID of the card to be edited
-- `eventSource` - (required) the ***"select-card"*** action that invokes the ***set-edit*** event
+- `eventSource` - (optional) the ***"select-card"*** action that invokes the ***set-edit*** event
 
 :::note
 The ***null*** value is used when closing editor
@@ -39,7 +39,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// prevent editing card when a user click the card once
+// prevent editing when a user clicks the card once
 board.api.intercept("set-edit", ({ eventSource }) => {
     return eventSource != "select-card";
 });

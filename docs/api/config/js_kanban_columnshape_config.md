@@ -153,20 +153,19 @@ const columnShape = {
     fixedHeaders: false,
     css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red",
     headerTemplate: template(column => {
-        return  `<div class="wx-collapse-icon" data-action=${"collapse"}>
+        return `<div class="wx-collapse-icon" data-action=${"collapse"}>
                     <i class=${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
                 </div>
                 ${
-                    !column.renaming && !column.column.collapsed
+                    !column.column.collapsed
                         ?   `<div class="wx-label" data-action="rename">
                                 ${escapeHTML(column.column.label)}
                                 (${column.columnState.cardsCount})
-                                ${column.column.limit ? `(${column.columnState.cardsCount}/${column.columnState.totalLimit})` : ""}
                             </div>`
                         : ""
                 }
                 ${
-                    column.isMenuVisible && !column.readonly && !column.renaming && !column.column.collapsed
+                    !column.column.collapsed
                         ?   `<div class="wx-menu" data-menu-id={column.id}>
                                 <i class="wxi-dots-h"></i>
                             </div>`
@@ -174,7 +173,7 @@ const columnShape = {
                 }`;
     }),
     collapsedTemplate: template(column => {
-        return  `<div class="wx-collapsed-label">
+        return `<div class="wx-collapsed-label">
                     <div class="wx-label-text">${escapeHTML(column.column.label)} (${
                         column.columnState?.cardsCount
                     })</div>

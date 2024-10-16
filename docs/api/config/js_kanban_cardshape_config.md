@@ -55,7 +55,7 @@ cardShape?: {
             },
             {...} // other users data
         ],
-        maxCount?: boolean | number
+        maxCount?: number | false
     },
     priority?: boolean | {
         show?: boolean,
@@ -155,11 +155,10 @@ To configure the card appearance, in the **cardShape** object you can specify th
         - `id` - (required) a user **ID**
         - `label` - (optional) a user name
         - `avatar` - (optional) a path to the user avatar
-    - `maxCount` - (optional) a maximum count of users displayed on the card
+    - `maxCount` - (optional) a maximum count of users displayed on the card (or ***false***)
 
-    If you set the `maxCount` property to `true`, you can see only the first assigned user on the card and the number of assigned users near the avatar.
+    You can set the `maxCount` property to the number of users to be displayed on the card.
     If you set the `maxCount` property to `false`, you can see all the assigned user on the card.
-    You can set the `maxCount` property to the number of users to be displayed on the card.  
 
     :::info
     The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding users data via the `values` parameter. To assign new users via the editor, you need to configure the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) property. Use the ***select*** type for assigning one or user or the ***multiselect*** type for assigning several users.
@@ -172,7 +171,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
                 { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
                 { id: 2, label: "Aaron Short" }
             ],
-            maxCount: 3 // only 3 users can be displayed on the card
+            maxCount: 4 // only 4 users can be displayed on the card
         }
     }
     ~~~
@@ -187,7 +186,6 @@ To configure the card appearance, in the **cardShape** object you can specify th
 - `votes` - (optional) specifies the **votes** functionality
     - `show` - (optional) shows/hides the vote icon on the card and in the editor
     - `clickable` - (optional) - makes the vote icon on the card clickable. If `true`, users can vote for the card using the vote icon on this card. Otherwise, users can vote for the card using the vote icon in the editor only
-shows/hides **votes** on cards. If **true**, the corresponding control will be displayed in the editor
 - `css` - a function returns a css class that applies to cards conditionally
 - `headerFields` - (optional) an array of objects with the **custom fields** data. Here you can specify the following parameters:
     - `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
@@ -237,13 +235,16 @@ const defaultCardShape = {
         show: false,
         values: defaultColors
     },
-    users: false,
+    users: {
+        show: false,
+        maxCount: 3
+    },
     priority: {
         show: false,
         values: defaultPriorities
     },
     comments: false,
-    votes: false,
+    votes: false
 };
 ~~~
 
@@ -280,7 +281,7 @@ const cardShape = { // card settings
     users: {
         show: true,
         values: users,
-        maxCount: 3
+        maxCount: false
     },
     priority: {
         show: true,

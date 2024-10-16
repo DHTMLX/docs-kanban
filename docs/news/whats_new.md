@@ -14,11 +14,11 @@ Released on Month Day, 2024
 
 ### New functionality
 
-- An ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property
-- An ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_columnshape_config) property
-- An ability to specify a custom template for a search result via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control
-- An ability to specify a max count of assigned users displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_columnshape_config) property
-- An ability to specify custom templates for column header in expanded and collapsed states via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property
+- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_columnshape_config) property
+- The ability to change the content of column headers via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control
+- The ability to change the view and content of search results  via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property
+- The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property
+- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_columnshape_config) property
 
 ### Updates
 
@@ -29,9 +29,13 @@ Released on Month Day, 2024
     - The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the ***placement*** parameter
     - The [`items`](../../api/config/toolbar_items_config) property of the Toolbar **search** control is extended by the ***searchResult*** parameter
 
+- #### Events
+
+    - The [`set-edit`](../../api/events/js_kanban_setedit_event) event is extended by the ***eventSource*** parameter
+
 ### Fixes
 
-- ...
+- Add missing localization strings
 - ...
 
 ## Version 1.5.13
