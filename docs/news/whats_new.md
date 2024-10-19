@@ -19,6 +19,7 @@ Released on Month Day, 2024
 - The ability to change the view and content of search results  via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property
 - The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property
 - The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_columnshape_config) property
+- The ability to apply a theme via the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method
 
 ### Updates
 
@@ -33,10 +34,21 @@ Released on Month Day, 2024
 
     - The [`set-edit`](../../api/events/js_kanban_setedit_event) event is extended by the ***eventSource*** parameter
 
+- #### Methods
+
+    - The [`setConfig()`](../../api/methods/js_kanban_setconfig_method) method functionality was updated in the following way:
+
+        - The method doesn't change history (you cannot change history at all)
+        - The method doesn't change themes (use the new [`setTheme()`](../../api/methods/js_kanban_settheme_method) method instead)
+        - The method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
+
 ### Fixes
 
+- A comment in progress of editing can be removed and text area for new comments disappears
 - Add missing localization strings
-- ...
+- Drag-n-drop does not work if you combine [`scrollType: "column"`](../../api/config/js_kanban_scrolltype_config) and [`renderType: "lazy"`](../../api/config/js_kanban_rendertype_config) settings
+- The editor cannot be closed via the close icon
+- The right part of the editor has same color as the progress bar background (in the Willow skin only)
 
 ## Version 1.5.13
 
