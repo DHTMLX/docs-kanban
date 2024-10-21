@@ -13,29 +13,33 @@ description: You can learn about the setTheme method in the documentation of the
 ### Usage
 
 ~~~jsx {}
-setTheme(theme?: string): void;
+setTheme({
+    name?: string, // "material" (default) | "willow" | "willow-dark"
+    fonts?: boolean
+}): void;
 ~~~
 
 ### Parameters
 
-- `theme` - (optional) a theme to be applied to Kanban. There are 3 available themes:
+- `name` - (optional) a theme name to be applied to Kanban. There are 3 available themes:
     - "material" (*default*)
     - "willow"
     - "willow-dark"
+- `fonts` - (optional) enables/disables fonts loading from the CDN (wxi font)
 
 :::tip
-To specify the initial theme, you can use the [**setTheme()**](../../config/js_kanban_theme_config) property.
+To specify the initial theme, you can use the [**theme**](../../config/js_kanban_theme_config) property.
 :::
 
 ### Example
 
 ~~~jsx {6}
 // create Kanban
-const board = new eventCalendar.EventCalendar("#root", {
+const board = new kanban.Kanban("#root", {
     // initial configuration parameters
 });
 // set the "willow" theme
-board.setTheme( "willow" );
+board.setTheme({ name: "willow", font: false });
 ~~~
 
 **Change log:** The method was added in v2.0

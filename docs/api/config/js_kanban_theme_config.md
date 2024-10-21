@@ -15,7 +15,7 @@ description: You can learn about the theme config in the documentation of the DH
 ~~~jsx {}
 theme?: {
     name: string, // "material" (default) | "willow" | "willow-dark"
-    fonts: boolean
+    fonts?: boolean
 };
 ~~~
 
