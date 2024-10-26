@@ -194,7 +194,7 @@ new kanban.Kanban("#root", {
 - The ***css*** parameter was added in v1.4
 - The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
 - The ***fixedHeaders*** parameter was added in v1.5
-- The ***headerTemplate*** and ***collapsedTemplate*** parameters were added in v2.0
+- The ***headerTemplate*** and ***collapsedTemplate*** parameters were added in v1.6
 
 **Related articles:** [Configuration](../../../guides/configuration)
 

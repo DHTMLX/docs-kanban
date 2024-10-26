@@ -8,17 +8,17 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
-## Version 2.0
+## Version 1.6
 
 Released on Month Day, 2024
 
 ### New functionality
 
-- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_columnshape_config) property
+- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_cardshape_config) property
 - The ability to change the content of column headers via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control
 - The ability to change the view and content of search results  via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property
 - The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property
-- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_columnshape_config) property
+- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_cardshape_config) property
 - The ability to apply a theme via the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method
 
 ### Updates

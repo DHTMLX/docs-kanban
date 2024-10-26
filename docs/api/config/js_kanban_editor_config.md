@@ -53,4 +53,4 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The `placement` parameter was added in v2.0
+**Change log:** The `placement` parameter was added in v1.6

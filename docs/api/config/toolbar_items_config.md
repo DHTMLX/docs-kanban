@@ -183,7 +183,7 @@ new kanban.Toolbar("#toolbar", {
 
 - The *"Undo"* and *"Redo"* controls were added in v1.3
 - The ***items.options[0].label*** parameter of the **sort** control was replaced by the ***items.options[0].text*** parameter in v1.4
-- The ***items.searchResult*** parameter of the **"search"** control was added in v2.0
+- The ***items.searchResult*** parameter of the **"search"** control was added in v1.6
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
 

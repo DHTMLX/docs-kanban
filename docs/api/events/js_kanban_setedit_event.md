@@ -47,4 +47,4 @@ board.api.intercept("set-edit", ({ eventSource }) => {
 
 **Change log:**
     - The event was added in v1.2
-    - The ***eventSource*** parameter was added in v2.0
+    - The ***eventSource*** parameter was added in v1.6

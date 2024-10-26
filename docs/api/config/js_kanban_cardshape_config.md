@@ -237,7 +237,7 @@ const defaultCardShape = {
     },
     users: {
         show: false,
-        maxCount: 3
+        maxCount: 2
     },
     priority: {
         show: false,
@@ -312,7 +312,7 @@ new kanban.Kanban("#root", {
 **Change log:**
 - The ***comments***, ***css*** and ***votes*** parameters were added in v1.4
 - The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
-- The ***users.maxCount*** and ***votes.clickable*** parameters were added in v2.0
+- The ***users.maxCount*** and ***votes.clickable*** parameters were added in v1.6
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
