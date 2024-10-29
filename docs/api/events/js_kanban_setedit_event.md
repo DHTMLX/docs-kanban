@@ -40,11 +40,13 @@ const board = new kanban.Kanban("#root", {
     cards
 });
 // prevent editing when a user clicks the card once
-board.api.intercept("set-edit", ({ eventSource }) => {
-    return eventSource != "select-card";
+board.api.intercept("set-edit", (ev) => {
+    return ev?.eventSource != "select-card";
 });
 ~~~
 
 **Change log:**
     - The event was added in v1.2
     - The ***eventSource*** parameter was added in v1.6
+
+**Related samples:** [Kanban. Open the editor by double-clicking on the task](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban)

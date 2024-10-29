@@ -317,7 +317,7 @@ new kanban.Kanban("#root", {
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
 **Related samples:**
-
 - [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
 - [Kanban. Highlighting outdated and active tasks](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
 - [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
+- [Kanban. Unlimited user assignments per task](https://snippet.dhtmlx.com/w205dvzg?tag=kanban)

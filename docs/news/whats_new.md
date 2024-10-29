@@ -14,11 +14,11 @@ Released on Month Day, 2024
 
 ### New functionality
 
-- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_cardshape_config) property
-- The ability to change the content of column headers via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control
-- The ability to change the view and content of search results  via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property
-- The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property
-- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_cardshape_config) property
+- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
+- The ability to change the content of column headers via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property (see the [**example**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
+- The ability to change the view and content of search results via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control (see the [**example**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
+- The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property (see the [**example**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
+- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
 - The ability to apply a theme via the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method
 
 ### Updates
@@ -32,7 +32,7 @@ Released on Month Day, 2024
 
 - #### Events
 
-    - The [`set-edit`](../../api/events/js_kanban_setedit_event) event is extended by the ***eventSource*** parameter
+    - The [`set-edit`](../../api/events/js_kanban_setedit_event) event is extended by the ***eventSource*** parameter  (see the [**example**](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban))
 
 - #### Methods
 

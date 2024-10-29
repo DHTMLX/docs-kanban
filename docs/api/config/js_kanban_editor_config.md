@@ -54,3 +54,5 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Change log:** The `placement` parameter was added in v1.6
+
+**Related samples:** [Kanban. Opening the editor in a modal window](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)

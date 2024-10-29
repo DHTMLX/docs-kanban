@@ -187,4 +187,6 @@ new kanban.Toolbar("#toolbar", {
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
 
-**Related sample:** [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+**Related sample:**
+- [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+- [Kanban. Customization of suggestions in search results](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)
