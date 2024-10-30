@@ -16,6 +16,7 @@ The **English** locale is used by default:
 const en = {
     kanban: { // translations of the Kanban labels
         Save: "Save",
+        Send: "Send",
         Close: "Close",
         Delete: "Delete",
         Name: "Name",
@@ -71,6 +72,7 @@ const en = {
         "Select a relation": "Select a relation",
         "Select a task": "Select a task",
 
+        "No comments yet": "No comments yet",
         "Would you like to delete this comment?":
             "Would you like to delete this comment?",
         "Would you like to delete this card?":

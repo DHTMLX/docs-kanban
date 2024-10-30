@@ -21,9 +21,14 @@ items?: [
             {
                 id: string,
                 label: string,
-                searchRule?: (card, value, by) => {} // returns a boolean value 
+                searchRule?: (card, value, by) => {
+                    return boolean
+                }
             }, {...}
-        ]
+        ],
+        resultTemplate?: template(searchResult => {
+            return "The HTML template of the search result";
+        }) 
     },
     "sort" | {
         // sort parameters
@@ -34,8 +39,7 @@ items?: [
                 by?: string, // by?: ((card: object) => any),
                 dir?: "asc" | "desc"
             }, {...}
-        ]
-        
+        ]  
     },
     "spacer",
     "undo",
@@ -57,18 +61,21 @@ In the **items** array you can specify the following parameters:
 - `type` - (required) a type of control (*"search"*)
 - `options` - (optional) an array of objects, that define the search parameters. For each object (*search option*) you can specify the following parameters:
     - `id` - (required) a key of card field, by which the cards will be searched
-    - `label` - (required) a name of option, used in  a dropdown list of the searchbar selector
+    - `label` - (required) a name of option, used in  a dropdown list of the search bar selector
     - `searchRule` (optional) - a custom function that allows defining search rules. It takes the following arguments:
         - ***card*** - an object of the card data
-        - ***value*** - a searched value, specified in the searchbar
+        - ***value*** - a searched value, specified in the search bar
         - ***by*** - a key of card field, by which the cards will be searched
+- `searchResult` - (optional) a template for displaying the custom search result
 
 ~~~jsx
 items: [
     "search", // default searchbar
     // other controls
 ]
+
 // or 
+
 items: [
     { // custom searchbar
         type: "search",
@@ -85,7 +92,13 @@ items: [
                     return date?.toString().includes(value);
                 }
             }
-        ]
+        ],
+        resultTemplate: kanban.template(searchResult => {
+            return `<div class="list-item">
+                <div class="list-item-text">${searchResult.result.label}</div>
+                ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+            </div>`
+        })
     },
     // other controls
 ]
@@ -138,7 +151,7 @@ items: [
 
 ### Example
 
-~~~jsx {8-16}
+~~~jsx {8-24}
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -147,21 +160,33 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", {
     api: board.api,
     items: [
-        "search",
+        {
+            type: "search",
+            resultTemplate: kanban.template(searchResult => {
+                return `<div class="list-item">
+                            <div class="list-item-text">${searchResult.result.label}</div>
+                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                        </div>`
+            })
+        },
         "spacer",
         "sort",
         "undo",
         "redo", 
         "addColumn",
         "addRow"
-    ],
+    ]
 });
 ~~~
 
 **Change log:**
+
 - The *"Undo"* and *"Redo"* controls were added in v1.3
 - The ***items.options[0].label*** parameter of the **sort** control was replaced by the ***items.options[0].text*** parameter in v1.4
+- The ***items.searchResult*** parameter of the **"search"** control was added in v1.6
 
 **Related articles:** [Configuration](../../../guides/configuration#toolbar) and [Customization](../../../guides/customization#custom-toolbar)
 
-**Related sample:** [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+**Related sample:**
+- [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+- [Kanban. Customization of suggestions in search results](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)

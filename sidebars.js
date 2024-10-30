@@ -86,6 +86,7 @@ module.exports = {
                         "api/methods/js_kanban_setlocale_method",
                         "api/methods/js_kanban_setsearch_method",
                         "api/methods/js_kanban_setsort_method",
+                        "api/methods/js_kanban_settheme_method",
                         // U
                         "api/methods/js_kanban_undo_method",
                         "api/methods/js_kanban_unselectcard_method",

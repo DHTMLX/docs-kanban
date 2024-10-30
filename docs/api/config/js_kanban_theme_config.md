@@ -15,7 +15,7 @@ description: You can learn about the theme config in the documentation of the DH
 ~~~jsx {}
 theme?: {
     name: string, // "material" (default) | "willow" | "willow-dark"
-    fonts: boolean
+    fonts?: boolean
 };
 ~~~
 
@@ -62,7 +62,7 @@ To configure the **theme**, you can use the following parameters.
     - `fonts` - (optional) enables/disables fonts loading from the CDN (wxi font)
 
 :::tip
-You can also apply the **Willow** and **Willow-Dark** themes as well. To change the current theme dynamically, you can use the [**setConfig()**](../../methods/js_kanban_setconfig_method) method.
+You can also apply the **Willow** and **Willow-Dark** themes as well. To change the current theme dynamically, you can use the [`setTheme()`](../../methods/js_kanban_settheme_method) method.
 :::
 
 ### Default config
