@@ -25,7 +25,7 @@ Released on Month Day, 2024
 
 - #### Properties
 
-    - The [`cardShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***users.maxCount*** and ***votes.clickable*** parameters
+    - The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***users.maxCount*** and ***votes.clickable*** parameters
     - The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***headerTemplate*** and ***collapsedTemplate*** parameters
     - The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the ***placement*** parameter
     - The [`items`](../../api/config/toolbar_items_config) property of the Toolbar **search** control is extended by the ***searchResult*** parameter
