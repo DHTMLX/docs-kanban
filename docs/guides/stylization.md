@@ -6,7 +6,7 @@ description: You can learn about the stylization in the documentation of the DHT
 
 # Stylization
 
-Using Kanban, you can stylize **columns**, **rows** and **cards** appearance via the [`columnShape.css`](../../api/config/js_kanban_columnshape_config), [`rowShape.css`](../../api/config/js_kanban_rowshape_config) and [`cardShape.css`](../../api/config/js_kanban_cardshape_config) properties. These properties allow you styles columns, rows and cards conditionally.
+Using Kanban, you can stylize **columns**, **rows** and **cards** appearance via the [`columnShape.css`](../../api/config/js_kanban_columnshape_config), [`rowShape.css`](../../api/config/js_kanban_rowshape_config) and [`cardShape.css`](../../api/config/js_kanban_cardshape_config) properties. These properties allow you to style columns, rows and cards conditionally.
 
 You can also apply a custom css class to a separate **column**, **row** and **card** via the [`columns.css`](../../api/config/js_kanban_columns_config), [`rows.css`](../../api/config/js_kanban_rows_config) and [`cards.css`](../../api/config/js_kanban_cards_config) properties.
 
@@ -95,7 +95,7 @@ Next versions of Kanban can bring some changes for the variables and their names
 
 ## Built-in themes
 
-You can use the [`theme`](../../api/config/js_kanban_theme_config) property to apply one of the following themes: **material**, **willow** and **willow-dark**.
+You can use the [`theme`](../../api/config/js_kanban_theme_config) property or the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method to apply one of the following themes: **material**, **willow** and **willow-dark**.
 
 :::important
 Besides using the `theme` property, you can also apply the needed theme via adding the corresponding *css* classes to the widget containers:

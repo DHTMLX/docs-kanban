@@ -8,6 +8,48 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.6
+
+Released on November 13, 2024
+
+### New functionality
+
+- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
+- The ability to change the content of column headers via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property (see the [**example**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
+- The ability to change the view and content of search results via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control (see the [**example**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
+- The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property (see the [**example**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
+- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clicable`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
+- The ability to apply a theme via the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method
+
+### Updates
+
+- #### Properties
+
+    - The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***users.maxCount*** and ***votes.clickable*** parameters
+    - The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***headerTemplate*** and ***collapsedTemplate*** parameters
+    - The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the ***placement*** parameter
+    - The [`items`](../../api/config/toolbar_items_config) property of the Toolbar **search** control is extended by the ***searchResult*** parameter
+
+- #### Events
+
+    - The [`set-edit`](../../api/events/js_kanban_setedit_event) event is extended by the ***eventSource*** parameter  (see the [**example**](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban))
+
+- #### Methods
+
+    - The [`setConfig()`](../../api/methods/js_kanban_setconfig_method) method functionality was updated in the following way:
+
+        - The method doesn't change history (you cannot change history at all)
+        - The method doesn't change themes (use the new [`setTheme()`](../../api/methods/js_kanban_settheme_method) method instead)
+        - The method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
+
+### Fixes
+
+- A comment in progress of editing can be removed and text area for new comments disappears
+- Add missing localization strings
+- Drag-n-drop does not work if you combine [`scrollType: "column"`](../../api/config/js_kanban_scrolltype_config) and [`renderType: "lazy"`](../../api/config/js_kanban_rendertype_config) settings
+- The editor cannot be closed via the close icon
+- The right part of the editor has same color as the progress bar background (in the Willow skin only)
+
 ## Version 1.5.13
 
 Released on September 12, 2024

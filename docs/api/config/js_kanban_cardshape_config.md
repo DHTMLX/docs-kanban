@@ -54,7 +54,8 @@ cardShape?: {
                 avatar?: string
             },
             {...} // other users data
-        ]
+        ],
+        maxCount?: number | false
     },
     priority?: boolean | {
         show?: boolean,
@@ -67,7 +68,10 @@ cardShape?: {
             {...} // other priorities data
         ]
     },    
-    votes?: boolean | { show?: boolean }, 
+    votes?: boolean | { 
+        show?: boolean,
+        clickable?: boolean
+    }, 
     css?: (card) => string,
     headerFields?: [
         {
@@ -151,6 +155,10 @@ To configure the card appearance, in the **cardShape** object you can specify th
         - `id` - (required) a user **ID**
         - `label` - (optional) a user name
         - `avatar` - (optional) a path to the user avatar
+    - `maxCount` - (optional) a maximum count of users displayed on the card (or ***false***)
+
+    You can set the `maxCount` property to the number of users to be displayed on the card.
+    If you set the `maxCount` property to `false`, you can see all the assigned user on the card.
 
     :::info
     The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding users data via the `values` parameter. To assign new users via the editor, you need to configure the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) property. Use the ***select*** type for assigning one or user or the ***multiselect*** type for assigning several users.
@@ -162,7 +170,8 @@ To configure the card appearance, in the **cardShape** object you can specify th
             values: [
                 { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
                 { id: 2, label: "Aaron Short" }
-            ]
+            ],
+            maxCount: 4 // only 4 users can be displayed on the card
         }
     }
     ~~~
@@ -174,7 +183,9 @@ To configure the card appearance, in the **cardShape** object you can specify th
         - `id` - (required) a priority **ID**
         - `label` - (optional) a priority name
         - `color` - (required) a valid HEX code
-- `votes` - (optional) shows/hides **votes** on cards. If **true**, the corresponding control will be displayed in the editor
+- `votes` - (optional) specifies the **votes** functionality
+    - `show` - (optional) shows/hides the vote icon on the card and in the editor
+    - `clickable` - (optional) - makes the vote icon on the card clickable. If `true`, users can vote for the card using the vote icon on this card. Otherwise, users can vote for the card using the vote icon in the editor only
 - `css` - a function returns a css class that applies to cards conditionally
 - `headerFields` - (optional) an array of objects with the **custom fields** data. Here you can specify the following parameters:
     - `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
@@ -224,19 +235,22 @@ const defaultCardShape = {
         show: false,
         values: defaultColors
     },
-    users: false,
+    users: {
+        show: false,
+        maxCount: 2
+    },
     priority: {
         show: false,
         values: defaultPriorities
     },
     comments: false,
-    votes: false,
+    votes: false
 };
 ~~~
 
 ### Example
 
-~~~jsx {14-45,50}
+~~~jsx {14-49,54}
 const users = [ // users data
     { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
     { id: 2, label: "Aaron Short" }
@@ -266,13 +280,17 @@ const cardShape = { // card settings
     },
     users: {
         show: true,
-        values: users
+        values: users,
+        maxCount: false
     },
     priority: {
         show: true,
         values: cardPriority
     },
-    votes: true,
+    votes: {
+        show: true,
+        clickable: true
+    },
     css: (card) => card.type == "feature" ? "green" : "red",
     headerFields: [
         { // custom field
@@ -294,11 +312,12 @@ new kanban.Kanban("#root", {
 **Change log:**
 - The ***comments***, ***css*** and ***votes*** parameters were added in v1.4
 - The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***users.maxCount*** and ***votes.clickable*** parameters were added in v1.6
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 
 **Related samples:**
-
 - [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
 - [Kanban. Highlighting outdated and active tasks](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
 - [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
+- [Kanban. Unlimited user assignments per task](https://snippet.dhtmlx.com/w205dvzg?tag=kanban)

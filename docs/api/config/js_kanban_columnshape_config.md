@@ -28,7 +28,13 @@ columnShape?: {
         ] | ({ column, columnIndex, columns, store }) => array | boolean
     },
     fixedHeaders?: boolean,
-    css?: (column, cards) => string
+    css?: (column, cards) => string,
+    headerTemplate?: template(column => {
+        return "The HTML template of the column header in the expanded state";
+    }),
+    collapsedTemplate?: template(column => {
+        return "The HTML template of the column header in the collapsed state";
+    })
 };
 ~~~
 
@@ -80,8 +86,10 @@ To configure the columns appearance, in the **columnShape** object you can speci
     ~~~
     :::
 
-- `fixedHeaders` - (optional) freezes column headers during vertical scroll (*true* by default). Scroll must be enabled in Kanban itself (height must be limited).
-- `css` - (optional) a function returns a css class that applies to columns conditionally
+- `fixedHeaders` - (optional) freezes column headers during vertical scroll (*true* by default). Scroll must be enabled in Kanban itself (height must be limited)
+- `css` - (optional) a function that returns a css class that applies to columns conditionally
+- `headerTemplate` - (optional) the HTML template of the column header in the expanded state
+- `collapsedTemplate` - (optional) the HTML template of the column header in the collapsed state
 
 ### Default config
 
@@ -114,7 +122,7 @@ const columnShape = {
 
 ### Example
 
-~~~jsx {1-30,36}
+~~~jsx {1-58,64}
 const columnShape = {
     menu: {
         show: true,
@@ -143,7 +151,34 @@ const columnShape = {
         ]
     },
     fixedHeaders: false,
-    css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red"
+    css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red",
+    headerTemplate: template(column => {
+        return `<div class="wx-collapse-icon" data-action=${"collapse"}>
+                    <i class=${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
+                </div>
+                ${
+                    !column.column.collapsed
+                        ?   `<div class="wx-label" data-action="rename">
+                                ${escapeHTML(column.column.label)}
+                                (${column.columnState.cardsCount})
+                            </div>`
+                        : ""
+                }
+                ${
+                    !column.column.collapsed
+                        ?   `<div class="wx-menu" data-menu-id={column.id}>
+                                <i class="wxi-dots-h"></i>
+                            </div>`
+                        : ""
+                }`;
+    }),
+    collapsedTemplate: template(column => {
+        return `<div class="wx-collapsed-label">
+                    <div class="wx-label-text">${escapeHTML(column.column.label)} (${
+                        column.columnState?.cardsCount
+                    })</div>
+                </div>`;
+    })
 };
 
 new kanban.Kanban("#root", {
@@ -159,9 +194,11 @@ new kanban.Kanban("#root", {
 - The ***css*** parameter was added in v1.4
 - The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
 - The ***fixedHeaders*** parameter was added in v1.5
+- The ***headerTemplate*** and ***collapsedTemplate*** parameters were added in v1.6
 
 **Related articles:** [Configuration](../../../guides/configuration)
 
 **Related samples:**
 - [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
 - [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
+- [Kanban. Template for column headers](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban)
