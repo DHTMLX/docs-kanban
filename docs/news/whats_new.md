@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.6
 
-Released on Month Day, 2024
+Released on November 13, 2024
 
 ### New functionality
 
