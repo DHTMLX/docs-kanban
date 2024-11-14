@@ -12,6 +12,8 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 Released on November 13, 2024
 
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-6/)
+
 ### New functionality
 
 - The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
