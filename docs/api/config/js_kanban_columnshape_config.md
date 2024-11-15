@@ -166,7 +166,7 @@ const columnShape = {
                 }
                 ${
                     !column.column.collapsed
-                        ?   `<div class="wx-menu" data-menu-id={column.id}>
+                        ?   `<div class="wx-menu" data-menu-id=${column.id}>
                                 <i class="wxi-dots-h"></i>
                             </div>`
                         : ""
