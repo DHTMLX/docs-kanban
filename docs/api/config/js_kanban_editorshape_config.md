@@ -12,7 +12,7 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Usage
 
-~~~jsx {3,8,14,17,27,34,43,50,59}
+~~~jsx {3,8,27,40,50,71,86,95,106,115}
 editorShape?: [
     {
         // common parameters for all types
@@ -20,16 +20,49 @@ editorShape?: [
         key: string, 
         label?: string, 
         
-        // for a "dateRange" type only
+        // for the "dateRange" type only
         key: {
             start: string,
             end: string
         },
+        config?: {
+            align?: "start" | "center" | "end",
+            buttons?: boolean,
+            css?: string,
+            disabled?: boolean,
+            done?: boolean,
+            error?: boolean,
+            format?: string,
+            months?: number,
+            placeholder?: string,
+            title?: string,
+            width?: string
+        },
 
-        // for "date" and "dateRange" types
-        format?: string, 
+        // for the "date" type only
+        config?: {
+            align?: "start" | "center" | "end",
+            buttons?: boolean,
+            css?: string,
+            disabled?: boolean,
+            error?: boolean,
+            format?: string,
+            placeholder?: string,
+            title?: string,
+            width?: string
+        }, 
 
-        // for "combo", "select" and "multiselect" types only
+        // for the "color" type only 
+        values?: array, 
+        config?: {
+            clear?: boolean,
+            disabled?: boolean,
+            error?: boolean,
+            placeholder?: string,
+            title?: string
+        },
+
+        // for "combo", "select", and "multiselect" types only
         values?: [ 
             {
                 id: string | number,
@@ -38,31 +71,54 @@ editorShape?: [
             },
             {...} // other options
         ],
-
-        // for a "color" type only
-        values?: array, 
         config?: {
+            clearButton?: boolean, // for a "combo" type only
+            label?: string, // for a "select" type only
+            checkboxes?: boolean, // for a "multiselect" type only 
+            // common parameters
+            disabled?: boolean,
+            error?: boolean,
             placeholder?: string,
-            clear?: boolean
+            textField?: string,
+            title?: string
         },
 
-        // for "text" and "textarea" types only
+        // for a "text" type only
         config?: {
+            css?: string,
+            disabled?: boolean,
+            error?: boolean,
+            focus?: boolean,
+            icon?: string,
+            inputStyle?: string,
             placeholder?: string,
             readonly?: boolean,
-            focus?: boolean,
-            disabled?: boolean,
-            inputStyle?: string
+            select?: boolean,
+            title?: string,
+            type?: string
         },
 
-        // for a "progress" type only
+        // for a "textarea" type only 
+        config? {
+            disabled?: boolean,
+            error?: boolean,
+            placeholder?: string,
+            title?: string,
+            readonly?: boolean
+        },
+
+        // for a "progress" type only 
         config?: {
-            min?: number,
+            disabled?: boolean,
+            label?: string,
             max?: number,
-            step?: number
+            min?: number,
+            step?: number,
+            title?: string,
+            width?: number
         },
         
-        // for a "files" type only
+        // for a "files" type only 
         uploadURL?: string | function,
         config?: {
             accept?: string,
@@ -71,14 +127,13 @@ editorShape?: [
             folder?: boolean
         },
 
-        // for a "comments" type only
+        // for a "comments" type only 
         config?: {
             format?: string,
             placement?: "page" | "editor",
             html?: boolean
-        };
-    },
-    {...} // other fields settings
+        }
+    }, { /* other control settings */ }
 ];
 ~~~
 
@@ -91,7 +146,7 @@ To configure the editor appearance and functionality, you can specify the follow
 - `type` - (required) an editor field type
 
 :::important
-In the Kanban editor you can use the following types of fields: **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **date**, **dateRange**, **comments** and **links**
+In the Kanban editor you can use the following types of fields: **dateRange**, **date**, **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **comments** and **links**
 :::
 
 - `key` - (required) an editor field key. Here you need to use the value specified in the [`cardShape`](../js_kanban_cardshape_config) property. See the example below:
@@ -130,7 +185,41 @@ In the Kanban editor you can use the following types of fields: **combo**, **sel
 The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config) property!
 :::
 
-- `format` - (optional) defines format of **"date"** and **"dateRange"** controls. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+- `config` - (optional) a configuration object of the **"dateRange"** field. Here you can specify the following parameters:
+    - `align` - (optional) specifies the alignment of a popup with calendars relative to the Date Range control
+    - `buttons` - (optional) shows/hides the Today and Clear buttons in the lower part of the popup with calendars
+    - `css` - (optional) changes the position of the icon in the Date Range control
+    - `disabled` - (optional) defines whether the Date Range control is disabled
+    - `done` - (optional) shows/hides the Done button in the Date Range control
+    - `error` - (optional) defines whether error styling is applied to the Date Range control
+    - `format` - (optional) sets the date format of the Date Range control. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+    - `months` - (optional) sets the number of calendars in the Date Range control
+    - `placeholder` - (optional) sets a placeholder for the Data Range control
+    - `title` - (optional) sets a title with additional info about the Data Range control
+    - `width` - (optional) sets the width of a popup with calendars
+
+#### - Parameters for a "date" type
+
+- `config` - (optional) a configuration object of the **"date"** field. Here you can specify the following parameters:
+    - `align` - (optional) specifies the alignment of a popup with calendars relative to the Date control
+    - `buttons` - (optional) shows/hides the Today and Clear buttons in the lower part of the popup with calendars
+    - `css` - (optional) changes the position of the icon in the Date control
+    - `disabled` - (optional) defines whether the Date control is disabled
+    - `error` - (optional) defines whether error styling is applied to the Date control
+    - `format` - (optional) sets the date format of the Date control. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+    - `placeholder` - (optional) sets a placeholder for the Data control
+    - `title` - (optional) sets a title with additional info about the Data control
+    - `width` - (optional) sets the width of a popup with calendars
+
+#### - Parameters for a "color" type
+
+- `values` - (optional) an array with valid HEX codes
+- `config` - (optional) a configuration object of the **"color"** field. Here you can specify the following parameters:
+    - `placeholder` - (optional) sets a placeholder for the Color control
+    - `clear` - (optional) shows/hides a "clear" icon for the Color control
+    - `disabled` - (optional) defines whether the Color control is disabled
+    - `error` - (optional) defines whether error styling is applied to the Color control
+    - `title` - (optional) sets a title with additional info related the Color control
 
 #### - Parameters for "combo", "select" and "multiselect" types
 
@@ -140,35 +229,58 @@ The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config
     - `avatar` - (optional) a path to the option preview image (for a **"multiselect"** type only)
 
 :::important
-To set the control for assigning one user, you need to use the ***"select"*** or ***"combo"*** types! For assigning several users, use the ***"multiselect"*** type.
+To set the control for assigning a single user, you need to use the ***"select"*** or ***"combo"*** types! For assigning several users, use the ***"multiselect"*** type.
 :::
 
-#### - Parameters for a "color" type
+- `config` - (optional) a configuration object for **"combo"**, **"select"**, and **"multiselect"** fields. Here you can specify the following parameters:
+    - `clearButton` - (optional) adds the Clear button into a combo input (**for a "combo" type only**)
+    - `label` - (optional) binds options to the input field by the specified key (**for a "select" type only**)
+    - `checkboxes` - (optional) defines whether options have checkboxes next to them (**for a "multiselect" type only**)
+    - `textField` - (optional) binds combo options to the input field by the specified key (**for "combo" and "multiselect" types only**)
 
-- `values` - (optional) an array with valid HEX codes
-- `config` - (optional) a configuration object of the **"color"** field. Here you can specify the following parameters:
-    - `placeholder` - (optional) a placeholder value
-    - `clear` - (optional) shows/hides a "clear" icon
+    - `disabled` - (optional) defines whether the control is disabled
+    - `error` - (optional) defines whether error styling is applied to the control
+    - `placeholder` - (optional) sets a placeholder for the control
+    - `title` - (optional) sets a title with additional info about the control
 
-#### - Parameters for "text" and "textarea" types
+#### - Parameters for a "text" type
 
-- `config` - (optional) a configuration object of the **"text"** and **"textarea"** fields. Here you can specify the following parameters:
-    - `placeholder` - (optional) a placeholder value
-    - `readonly` - (optional) enables/disables a readonly mode
-    - `focus` - (optional) enables/disables a focus
-    - `disabled` - (optional) enables/disables a field
-    - `inputStyle` - (optional) a custom css style
+- `config` - (optional) a configuration object of the **"text"** field. Here you can specify the following parameters:
+    - `css` - (optional) sets the position of the icon in the Text control
+    - `disabled` - (optional) defines whether the Text control is disabled
+    - `error` - (optional) defines whether error styling is applied to the Text control
+    - `focus` - (optional) sets focus in the Text control
+    - `icon` - (optional) adds an icon into the Text control
+    - `inputStyle` - (optional) applies a custom style to the Text control
+    - `placeholder` - (optional) sets a placeholder for the Text control
+    - `readonly` - (optional) defines whether the Text control is read-only
+    - `select` - (optional) selects the content of the Text control
+    - `title` - (optional) sets a title with additional info related the Text control
+    - `type` - (optional) sets the type of the Text control
+
+#### - Parameters for a "textarea" type
+
+- `config` - (optional) a configuration object of the **"textarea"** field. Here you can specify the following parameters:
+    - `disabled` - (optional) defines whether the Textarea control is disabled
+    - `error` - (optional) defines whether error styling is applied to the Textarea control
+    - `placeholder` - (optional) sets a placeholder for the Textarea control
+    - `title` - (optional) sets a title with additional info related the Text control
+    - `readonly` - (optional) defines whether the Text control is read-only
 
 #### - Parameters for a "progress" type
 
 - `config` - (optional) a configuration object of the **"progress"** field. Here you can specify the following parameters:
-    - `min` - (optional) a min value
-    - `max` - (optional) a max value
-    - `step` - (optional) a step of moving the progress bar slider
+    - `disabled` - (optional) defines whether the Progress control is disabled
+    - `label` - (optional) sets a label above the Progress control
+    - `max` - (optional) sets the maximal value of the Progress control
+    - `min` - (optional) sets the minimal value of the Progress control
+    - `step` - (optional) sets the jump between values of the Progress control
+    - `title` - (optional) sets a title with additional info related the Progress control
+    - `width` - (optional) sets the width of the Progress control
 
 #### - Parameters for a "files" type
 
-- `uploadURL` - (optional) a URL of the editor uploader. See the detail below
+- `uploadURL` - (optional) an URL of the editor uploader. See the details below
 
 <details>
 
@@ -222,8 +334,8 @@ interface UploadEvent extends PointerEvent {
 #### - Parameters for a "comments" type
 
 - `config` - (optional) a configuration object of the **"comments"** field. Here you can specify the following parameters:
-    - `format` - (optional) - a date format of the comments. The available formats can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
-    - `placement` - (optional) - a place the comments will be displayed. You can set this property to the following values:
+    - `format` - (optional) - a date format of comments. The available formats can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+    - `placement` - (optional) - a place where comments will be displayed. You can set this property to the following values:
         - `"editor"` - comments will be displayed in the editor
         - `"page"` - comments will be displayed in a separate panel
     - `html` - (optional) - enables/disables using of the HTML markup in comments
@@ -277,13 +389,13 @@ const editorShape = [ // editor settings
         config: {
             format: "%M %d",
             placement: "page",
-            html: true,
-        },
+            html: true
+        }
     },
     {
         type: "links",
         key:"links",
-        label: "Links",
+        label: "Links"
     }
 ];
 
