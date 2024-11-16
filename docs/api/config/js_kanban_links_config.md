@@ -18,9 +18,8 @@ links?: [
         id: string | number,
         masterId: string | number,
         slaveId: string | number,
-        relation: "relatesTo" | "requiredFor" | "duplicate" | "parent",
-    },    
-    {...} // other links data
+        relation: "relatesTo" | "requiredFor" | "duplicate" | "parent"
+    }, {...} // other links data
 ];
 ~~~
 
@@ -50,8 +49,7 @@ const links = [
         masterId: 2,
         slaveId: 5,
         relation: "relatesTo",
-    },
-    {...}
+    }, {...} // other link data
 ];
 
 new kanban.Kanban("#root", {
