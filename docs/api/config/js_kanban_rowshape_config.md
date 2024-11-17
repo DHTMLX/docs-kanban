@@ -23,8 +23,7 @@ rowShape?: {
                 text?: string,
                 disabled? boolean,
                 onClick?: ({ id, item, row }) => void
-            }, 
-            {...}
+            }, {...} // other item data
         ] | ({ row, rowIndex, rows, store }) => array | boolean
     },
     css?: (row, cards) => string
@@ -70,12 +69,12 @@ To configure the rows appearance, in the **rowShape** object you can specify the
             {
                 id: "custom-delete-row",
                 icon: "wxi-delete",
-                text: "Remove row",
+                text: "Remove row"
             },
             {
                 id: "custom-move-row:up",
                 icon: "wxi-arrow-up",
-                text: "Move up",
+                text: "Move up"
             }
         ]
     }
