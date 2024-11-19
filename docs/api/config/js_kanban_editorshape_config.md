@@ -189,7 +189,7 @@ The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config
 
 - `config` - (optional) a configuration object of the **"dateRange"** field. Here you can specify the following parameters:
     - `align` - (optional) specifies the alignment of a popup with calendars relative to the Date Range control
-    - `editable` - (optional) defines whether a date picker is editable or sets a custom format for editing a date
+    - `editable` - (optional) defines whether a date picker is editable and, optionally, sets a custom format for editing a date
     - `buttons` - (optional) shows/hides the Today and Clear buttons in the lower part of the popup with calendars
     - `css` - (optional) changes the position of the icon in the Date Range control
     - `disabled` - (optional) defines whether the Date Range control is disabled
@@ -205,7 +205,7 @@ The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config
 
 - `config` - (optional) a configuration object of the **"date"** field. Here you can specify the following parameters:
     - `align` - (optional) specifies the alignment of a popup with calendars relative to the Date control
-    - `editable` - (optional) defines whether a date picker is editable or sets a custom format for editing a date
+    - `editable` - (optional) defines whether a date picker is editable and, optionally, sets a custom format for editing a date
     - `buttons` - (optional) shows/hides the Today and Clear buttons in the lower part of the popup with calendars
     - `css` - (optional) changes the position of the icon in the Date control
     - `disabled` - (optional) defines whether the Date control is disabled
