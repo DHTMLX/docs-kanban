@@ -27,6 +27,7 @@ editorShape?: [
         },
         config?: {
             align?: "start" | "center" | "end",
+            editable?: boolean | function,
             buttons?: boolean,
             css?: string,
             disabled?: boolean,
@@ -42,6 +43,7 @@ editorShape?: [
         // for the "date" type only
         config?: {
             align?: "start" | "center" | "end",
+            editable?: boolean | function,
             buttons?: boolean,
             css?: string,
             disabled?: boolean,
@@ -187,6 +189,7 @@ The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config
 
 - `config` - (optional) a configuration object of the **"dateRange"** field. Here you can specify the following parameters:
     - `align` - (optional) specifies the alignment of a popup with calendars relative to the Date Range control
+    - `editable` - (optional) defines whether a date picker is editable and, optionally, sets a custom format for editing a date
     - `buttons` - (optional) shows/hides the Today and Clear buttons in the lower part of the popup with calendars
     - `css` - (optional) changes the position of the icon in the Date Range control
     - `disabled` - (optional) defines whether the Date Range control is disabled
@@ -202,6 +205,7 @@ The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config
 
 - `config` - (optional) a configuration object of the **"date"** field. Here you can specify the following parameters:
     - `align` - (optional) specifies the alignment of a popup with calendars relative to the Date control
+    - `editable` - (optional) defines whether a date picker is editable and, optionally, sets a custom format for editing a date
     - `buttons` - (optional) shows/hides the Today and Clear buttons in the lower part of the popup with calendars
     - `css` - (optional) changes the position of the icon in the Date control
     - `disabled` - (optional) defines whether the Date control is disabled
@@ -316,10 +320,10 @@ where `rec` is the only parameter of the function and is an extended `PointerEve
 
 ~~~jsx {}
 interface UploadEvent extends PointerEvent {
-	id: number;
-	status: "client" | "server" | "error"; // which means in plain English "not sent yet", "sent successfully", "something went wrong, so not sent"
-	name: string; // the name of the file
-	file: string | Blob; // the file
+    id: number;
+    status: "client" | "server" | "error"; // which means in plain English "not sent yet", "sent successfully", "something went wrong, so not sent"
+    name: string; // the name of the file
+    file: string | Blob; // the file
 }
 ~~~
 
@@ -348,21 +352,57 @@ Unless you specify the editor settings via the `editorShape` property, the widge
 
 ~~~jsx {}
 const defaultPriorities = [
-    { id: 1, color: "#FF5252", label: "high" },
-    { id: 2, color: "#FFC975", label: "medium" },
-    { id: 3, color: "#0AB169", label: "low" }
+    { id: 1, color: "#FE6158", label: "High" },
+    { id: 2, color: "#F1B941", label: "Medium" },
+    { id: 3, color: "#77D257", label: "Low" }
 ];
 
-const defaultColors = [ "#65D3B3", "#FFC975", "#58C3FE" ];
+const defaultColors = ["#33B0B4", "#0096FA", "#F1B941"];
 
 const defaultEditorShape = [
-    { key: "label", type: "text", label: "Label" },
-    { key: "description", type: "textarea", label: "Description" },
-    { key: "priority", type: "combo", label: "Priority", values: defaultPriorities },
-    { key: "color", type: "color", label: "Color", values: defaultColors },
-    { key: "progress", type: "progress", label: "Progress" },
-    { key: "start_date", type: "date", label: "Start date" },
-    { key: "end_date", type: "date", label: "End date" }
+    {
+        key: "label",
+        type: "text",
+        label: "Label"
+    },
+    {
+        key: "description",
+        type: "textarea",
+        label: "Description"
+    },
+    {
+        type: "combo",
+        label: "Priority",
+        key: "priority",
+        config: {
+            clearButton: true
+        }
+    },
+    {
+        type: "color",
+        label: "Color",
+        key: "color"
+    },
+    {
+        type: "progress",
+        key: "progress",
+        label: "Progress"
+    },
+    {
+        type: "date",
+        key: "start_date",
+        label: "Start date"
+    },
+    {
+        type: "date",
+        key: "end_date",
+        label: "End date"
+    },
+    {
+        type: "multiselect",
+        key: "users",
+        label: "Users"
+    }
 ];
 ~~~
 

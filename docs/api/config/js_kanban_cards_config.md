@@ -45,11 +45,10 @@ cards?: [
                 cardId: string | number,
                 text?: string,
                 date?: Date,
-            },{...}
+            }, {...}
         ], 
         [custom_key: string]?: any
-    },
-    {...} // other cards data
+    }, {...} // other cards data
 ];
 ~~~
 
@@ -125,7 +124,7 @@ const cards = [
                 cardId: 1,
                 text: "Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays. ",
                 date: new Date(),
-            }, {...}
+            }, {...} // other comments
         ],
         priority: 1,
         // custom field to place the card into the "feature" row 
@@ -135,7 +134,7 @@ const cards = [
         // the columnKey config needs to be set to the "stage" value
         stage: "backlog",
         css: "red",
-    },{...} // other cards data
+    }, {...} // other cards data
 ];
 
 new kanban.Kanban("#root", {

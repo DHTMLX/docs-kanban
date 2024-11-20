@@ -19,8 +19,7 @@ rows?: [
         label?: string,
         collapsed?: boolean,
         css?: string,
-    },
-    {...} // other rows data
+    }, {...} // other row data
 ];
 ~~~
 

@@ -200,51 +200,47 @@ Unless you specify the cards settings via the **cardShape** property, the widget
 
 ~~~jsx {}
 const defaultPriorities = [
-    { id: 1, color: "#FF5252", label: "high" },
-    { id: 2, color: "#FFC975", label: "medium" },
-    { id: 3, color: "#0AB169", label: "low" }
+    { id: 1, color: "#FE6158", label: "High" },
+    { id: 2, color: "#F1B941", label: "Medium" },
+    { id: 3, color: "#77D257", label: "Low" }
 ];
 
-const defaultColors = ["#65D3B3", "#FFC975", "#58C3FE"];
+const defaultColors = ["#33B0B4", "#0096FA", "#F1B941"];
 
-const getDefaultCardMenuItems = ({ card, store }) => {
-    const readonly = store.getState();
+export const getDefaultCardMenuItems = ({ store }: { store: DataStore }) => {
+    const { readonly } = store.getState();
+    const baseItems = [
+        { id: "duplicate-card", icon: "wxi-content-copy", text: "Duplicate" },
+        { id: "delete-card", icon: "wxi-delete-outline", text: "Delete" }
+    ];
+
     if (!readonly?.select && readonly?.edit) {
         return [
-            { id: "set-edit", icon: "wxi-edit", text: "Edit" },
-            { id: "delete-card", icon: "wxi-delete", text: "Delete" },
+            { id: "set-edit", icon: "wxi-edit-outline", text: "Edit" },
+            ...baseItems,
         ];
     }
-    return [{ id: "delete-card", icon: "wxi-delete", text: "Delete" }];
+    return baseItems;
 };
 
 const defaultCardShape = {
-    label: true,
-    description: false,
-    progress: false,
-    start_date: false,
-    end_date: false,
-    menu: {
-        show: true,
-        items: getDefaultCardMenuItems
-    },
-    attached: false,
-    cover: false,
-    comments: false,
-    color: {
-        show: false,
-        values: defaultColors
-    },
-    users: {
-        show: false,
-        maxCount: 2
-    },
-    priority: {
+    label: { show: true },
+    description: { show: false },
+    progress: { show: false },
+    start_date: { show: false },
+    end_date: { show: false },
+    users: { show: false },
+    priority: { 
         show: false,
         values: defaultPriorities
     },
-    comments: false,
-    votes: false
+    color: { 
+        show: false,
+        values: defaultColors
+    },
+    cover: { show: false },
+    attached: { show: false },
+    menu: { show: true }
 };
 ~~~
 
@@ -293,7 +289,7 @@ const cardShape = { // card settings
     },
     css: (card) => card.type == "feature" ? "green" : "red",
     headerFields: [
-        { // custom field
+        {   // custom field
             key: "sprint",
             css: "custom_style",
             label: "Sprint"

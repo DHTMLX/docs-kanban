@@ -136,8 +136,7 @@ items: [
                 dir: "desc"
             }
         ]
-    },
-    // other controls
+    }, {...} // other controls
 ]
 ~~~
 :::

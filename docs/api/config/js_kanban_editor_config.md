@@ -32,8 +32,8 @@ editor?: {
 
 ~~~jsx {}
 editor: {
+    debounce: 100,
     autoSave: true,
-    debounce: 100
     placement: "sidebar"
 }
 ~~~
