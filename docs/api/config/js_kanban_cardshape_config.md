@@ -20,6 +20,7 @@ cardShape?: {
     attached?: boolean | { show?: boolean },
     cover?: boolean | { show?: boolean },
     comments?: boolean | { show?: boolean },
+    confirmDeletion?: boolean | { show?: boolean },
     start_date?: boolean | { 
         show?: boolean,
         format?: string 
@@ -107,6 +108,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 - `attached` - (optional) shows/hides an **attachment** field
 - `cover` - (optional) shows/hides a **card picture**
 - `comments` - (optional) shows/hides **comments** on cards
+- `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the card deletion
 - `start_date` - (optional) an object of parameters of a **start date** field
     - `show` - (optional) shows/hides a card start date
     - `format` - (optional) defines format of a card start date. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
@@ -230,6 +232,7 @@ const defaultCardShape = {
     start_date: { show: false },
     end_date: { show: false },
     users: { show: false },
+    confirmDeletion: { show: false },
     priority: { 
         show: false,
         values: defaultPriorities
@@ -270,6 +273,7 @@ const cardShape = { // card settings
     attached: true,
     cover: false,
     comments: false,
+    confirmDeletion: true,
     color: {
         show: true,
         values: cardColors

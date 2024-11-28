@@ -59,6 +59,7 @@ The board of Kanban consists of the *cards* distributed into *columns* and *rows
 
 - a card cover (*preview image*) via the `cover: boolean` config
 - a card comment(s) via the `comments: boolean` config
+- a confirmation dialog to confirm or decline the card deletion via the `confirmDeletion: boolean` config
 - a card vote(s) via the `votes: boolean | { show: boolean, clicable: true }` config
 - a card assignment (users) via the `users: boolean | { show: boolean, values: object, maxCount: number | false }` config
 
