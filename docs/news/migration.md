@@ -6,9 +6,20 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
+## 1.5.13 -> 1.6.0
+
+CSS classes related to the menu were changed in the following way:
+
+~~~jsx
+    .menu -> .wx-menu
+    .item -> .wx-item
+    .icon -> .wx-icon
+    .value -> .wx-value
+~~~
+
 ## 1.5.12 -> 1.5.13
 
-CSS classes related to the editor was changed in the following way:
+CSS classes related to the editor were changed in the following way:
 
 ~~~jsx
     .modal -> .wx-modal
