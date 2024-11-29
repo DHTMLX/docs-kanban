@@ -8,6 +8,16 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.6.1
+
+Released on November 29, 2024
+
+### Fixes
+
+- Toolbar on narrow screens has a misaligned "more" icon
+- `RestDataProvider` ignores headers defined via `setHeaders()`
+- `RestDataProvider.getIDResolver` is not a function error
+
 ## Version 1.6
 
 Released on November 13, 2024
