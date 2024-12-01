@@ -34,7 +34,8 @@ columnShape?: {
     }),
     collapsedTemplate?: template(column => {
         return "The HTML template of the column header in the collapsed state";
-    })
+    }),
+    confirmDeletion?: boolean | { show?: boolean }
 };
 ~~~
 
@@ -90,6 +91,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
 - `css` - (optional) a function that returns a css class that applies to columns conditionally
 - `headerTemplate` - (optional) the HTML template of the column header in the expanded state
 - `collapsedTemplate` - (optional) the HTML template of the column header in the collapsed state
+- `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the column deletion
 
 ### Default config
 
@@ -116,7 +118,8 @@ const columnShape = {
         show: true,
         items: getDefaultColumnMenuItems
     },
-    fixedHeaders: true
+    fixedHeaders: true,
+    confirmDeletion: false
 };
 ~~~
 
@@ -178,7 +181,8 @@ const columnShape = {
                         column.columnState?.cardsCount
                     })</div>
                 </div>`;
-    })
+    }),
+    confirmDeletion: { show: true }
 };
 
 new kanban.Kanban("#root", {

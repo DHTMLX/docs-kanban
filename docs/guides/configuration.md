@@ -366,7 +366,7 @@ new kanban.Kanban("#root", {
 
 The editor field of **comments** type can be set in the following way:
 
-~~~jsx {3-12}
+~~~jsx {3-13}
 new kanban.Kanban("#root", {
     editorShape: [
        {
@@ -377,7 +377,8 @@ new kanban.Kanban("#root", {
                 dateFormat: "%M %d",
                 placement: "page", // or "editor"
                 html: true,
-            },
+                confirmDeletion: true
+            }
         },
         // settings of other fields
     ]
@@ -388,20 +389,23 @@ new kanban.Kanban("#root", {
 
 The editor field of **links** type can be set in the following way:
 
-~~~jsx {3-7}
+~~~jsx {3-10}
 new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "links",
             key: "links",
             label: "Links",
+            config: {
+                confirmDeletion: true
+            }
         },
         // settings of other fields
     ]
 });
 ~~~
 
-### Linking editor fields to card fields
+### Binding editor fields to card fields
 
 :::info
 To link the editor field to the corresponding card field, you need to provide special **key** in the object of [`editorShape`](api/config/js_kanban_editorshape_config.md) property (`key: "editor_field_key"`). The value of this key needs to be set to *true* in the [`cardShape`](api/config/js_kanban_cardshape_config.md) property (for built-in card fields) or specified in the **headerFields** array (for custom card fields). You can provide the initial data of any field via this key as well.
@@ -507,7 +511,7 @@ new kanban.Toolbar("#toolbar", { api: board.api });
 
 You can manage (*hide/show/customize*) the Toolbar controls using the **items** property:
 
-~~~jsx {6-15}
+~~~jsx {6-51}
 // create Kanban
 const board = new kanban.Kanban("#root", {...});
 

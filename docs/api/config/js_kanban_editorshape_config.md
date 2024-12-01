@@ -12,7 +12,7 @@ description: You can learn about the editorShape config in the documentation of 
 
 ### Usage
 
-~~~jsx {3,8,27,40,50,71,86,95,106,115}
+~~~jsx {3,8,28,42,52,73,88,97,108,117,125}
 editorShape?: [
     {
         // common parameters for all types
@@ -126,15 +126,21 @@ editorShape?: [
             accept?: string,
             disabled?: boolean,
             multiple?: boolean,
-            folder?: boolean
+            folder?: boolean,
         },
 
         // for a "comments" type only 
         config?: {
             format?: string,
             placement?: "page" | "editor",
-            html?: boolean
-        }
+            html?: boolean,
+            confirmDeletion?: boolean | { show?: boolean }
+        },
+
+        // for a "links" type only 
+        config?: {
+            confirmDeletion?: boolean | { show?: boolean }
+        },
     }, { /* other control settings */ }
 ];
 ~~~
@@ -343,6 +349,12 @@ interface UploadEvent extends PointerEvent {
         - `"editor"` - comments will be displayed in the editor
         - `"page"` - comments will be displayed in a separate panel
     - `html` - (optional) - enables/disables using of the HTML markup in comments
+    - `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the comment deletion
+
+#### - Parameters for a "links" type
+
+- `config` - (optional) a configuration object of the **"links"** field. Here you can specify the following parameters:
+    - `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the link deletion
 
 :::info
 Unless you specify the editor settings via the `editorShape` property, the widget will apply a **defaultEditorShape** set of parameters!
@@ -408,7 +420,7 @@ const defaultEditorShape = [
 
 ### Example
 
-~~~jsx {6-29,34}
+~~~jsx {6-35,40}
 const users = [ // user data
     { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
     { id: 2, label: "Aaron Short" }
@@ -429,13 +441,19 @@ const editorShape = [ // editor settings
         config: {
             format: "%M %d",
             placement: "page",
-            html: true
+            html: true,
+            config: {
+                confirmDeletion: true
+            }
         }
     },
     {
         type: "links",
         key:"links",
-        label: "Links"
+        label: "Links",
+        config: {
+            confirmDeletion: true
+        }
     }
 ];
 
