@@ -35,7 +35,7 @@ columnShape?: {
     collapsedTemplate?: template(column => {
         return "The HTML template of the column header in the collapsed state";
     }),
-    confirmDeletion?: boolean | { show?: boolean }
+    confirmDeletion?: boolean
 };
 ~~~
 
@@ -182,7 +182,7 @@ const columnShape = {
                     })</div>
                 </div>`;
     }),
-    confirmDeletion: { show: true }
+    confirmDeletion: true
 };
 
 new kanban.Kanban("#root", {

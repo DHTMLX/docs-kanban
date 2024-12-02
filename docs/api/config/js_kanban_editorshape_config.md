@@ -134,12 +134,12 @@ editorShape?: [
             format?: string,
             placement?: "page" | "editor",
             html?: boolean,
-            confirmDeletion?: boolean | { show?: boolean }
+            confirmDeletion?: boolean
         },
 
         // for a "links" type only 
         config?: {
-            confirmDeletion?: boolean | { show?: boolean }
+            confirmDeletion?: boolean
         },
     }, { /* other control settings */ }
 ];

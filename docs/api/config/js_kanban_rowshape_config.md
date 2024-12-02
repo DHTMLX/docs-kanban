@@ -27,7 +27,7 @@ rowShape?: {
         ] | ({ row, rowIndex, rows, store }) => array | boolean
     },
     css?: (row, cards) => string,
-    confirmDeletion?: boolean | { show?: boolean }
+    confirmDeletion?: boolean
 };
 ~~~
 
