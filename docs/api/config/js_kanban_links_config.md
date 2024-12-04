@@ -42,7 +42,7 @@ If you want to load new data for links dynamically, you can use the [**parse()**
 
 ### Example
 
-~~~jsx {1-9,14}
+~~~jsx {1-8,13}
 const links = [
     {
         id: 1,

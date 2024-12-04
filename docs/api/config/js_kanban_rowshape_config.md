@@ -26,7 +26,8 @@ rowShape?: {
             }, {...} // other item data
         ] | ({ row, rowIndex, rows, store }) => array | boolean
     },
-    css?: (row, cards) => string
+    css?: (row, cards) => string,
+    confirmDeletion?: boolean
 };
 ~~~
 
@@ -82,6 +83,7 @@ To configure the rows appearance, in the **rowShape** object you can specify the
     :::
 
 - `css` - a function returns a css class that applies to rows conditionally
+- `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the row deletion
 
 ### Default config
 
@@ -106,13 +108,14 @@ const rowShape = {
     menu: {
         show: true,
         items: getDefaultRowMenuItems
-    }
+    },
+    confirmDeletion: true
 };
 ~~~
 
 ### Example
 
-~~~jsx {10-42,48}
+~~~jsx {10-43,48}
 const changeRowColor = (row, cssClass) => board.updateRow({ 
     id: row.id,
     row: {
@@ -153,7 +156,8 @@ const rowShape = {
             ]
         }
     },
-    css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red"
+    css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red",
+    confirmDeletion: false
 };
 
 new kanban.Kanban("#root", {
