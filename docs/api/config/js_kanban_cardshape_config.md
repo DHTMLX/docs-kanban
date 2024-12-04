@@ -20,7 +20,7 @@ cardShape?: {
     attached?: boolean | { show?: boolean },
     cover?: boolean | { show?: boolean },
     comments?: boolean | { show?: boolean },
-    confirmDeletion?: boolean,
+    confirmDeletion?: boolean | { show?: boolean },
     start_date?: boolean | { 
         show?: boolean,
         format?: string 
@@ -232,7 +232,7 @@ const defaultCardShape = {
     start_date: { show: false },
     end_date: { show: false },
     users: { show: false },
-    confirmDeletion: false,
+    confirmDeletion: { show: true },
     priority: { 
         show: false,
         values: defaultPriorities
@@ -273,7 +273,7 @@ const cardShape = { // card settings
     attached: true,
     cover: false,
     comments: false,
-    confirmDeletion: true,
+    confirmDeletion: false,
     color: {
         show: true,
         values: cardColors

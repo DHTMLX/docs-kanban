@@ -109,7 +109,7 @@ const rowShape = {
         show: true,
         items: getDefaultRowMenuItems
     },
-    confirmDeletion: false
+    confirmDeletion: true
 };
 ~~~
 
@@ -157,7 +157,7 @@ const rowShape = {
         }
     },
     css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red",
-    confirmDeletion: true
+    confirmDeletion: false
 };
 
 new kanban.Kanban("#root", {

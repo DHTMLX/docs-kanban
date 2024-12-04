@@ -119,7 +119,7 @@ const columnShape = {
         items: getDefaultColumnMenuItems
     },
     fixedHeaders: true,
-    confirmDeletion: false
+    confirmDeletion: true
 };
 ~~~
 
