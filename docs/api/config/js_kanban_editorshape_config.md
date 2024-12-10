@@ -420,7 +420,7 @@ const defaultEditorShape = [
 
 ### Example
 
-~~~jsx {6-35,40}
+~~~jsx {6-33,38}
 const users = [ // user data
     { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
     { id: 2, label: "Aaron Short" }
@@ -442,9 +442,7 @@ const editorShape = [ // editor settings
             format: "%M %d",
             placement: "page",
             html: true,
-            config: {
-                confirmDeletion: true
-            }
+            confirmDeletion: true
         }
     },
     {
