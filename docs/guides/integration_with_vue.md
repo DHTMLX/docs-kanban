@@ -7,7 +7,7 @@ description: You can learn about the integration with Vue in the documentation o
 # Integration with Vue
 
 :::tip
-You should be familiar with the basic concepts and patterns of [**Vue**](https://vuejs.org/) before reading this documentation. To refresh your knowledge, please refer to the [**Vue 3 documentation**](https://v3.vuejs.org/guide/introduction.html#getting-started).
+You should be familiar with the basic concepts and patterns of [**Vue**](https://vuejs.org/) before reading this documentation. To refresh your knowledge, please refer to the [**Vue 3 documentation**](https://vuejs.org/guide/introduction.html#getting-started).
 :::
 
 DHTMLX Kanban is compatible with **Vue**. We have prepared code examples on how to use DHTMLX Kanban with **Vue 3**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/vue-kanban-demo).
