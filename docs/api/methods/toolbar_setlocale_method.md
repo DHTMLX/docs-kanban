@@ -13,16 +13,16 @@ description: You can learn about the setLocale method of Toolbar in the document
 ### Usage
 
 ~~~jsx {}
-setLocale(locale?: object, api?: object): void;
+setLocale(null | locale?: object): void;
 ~~~
 
 ### Parameters
 
-- `locale` - (optional) an object of the locale to be applied to the Toolbar of Kanban
-- `api` - (optional) an object with the internal API of Kanban
+- `null` - (optional) resets Toolbar to the default locale (*English*)
+- `locale` - (optional) the object of new locale data to be applied to the Toolbar
 
 :::info
-The **Toolbar** of Kanban is a separate component. Before changing its locale, be sure that you have already applied the [`setLocale()`](api/methods/toolbar_setlocale_method.md) method to the **Kanban** component
+The **Toolbar** of Kanban is a separate component. Use the `toolbar.setLocale()` method to apply a new locale to Toolbar only. To reset Toolbar to the default locale, call the `toolbar.setLocale()` method without arguments (or with a *null* value). Use the [`kanban.setLocale()`](api/methods/js_kanban_setlocale_method.md) method to apply a new locale to Kanban only.
 :::
 
 ### Example
@@ -35,9 +35,9 @@ const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
 // apply the "de" locale to Kanban
 board.setLocale(de);
 // apply the "de" locale to the Toolbar
-toolbar.setLocale(de, board.api);
+toolbar.setLocale(de);
 ~~~
 
-**Chande log:** The **api** parameter was added in v1.5.7
+**Change log:** The **api** parameter was deprecated in v1.6
 
 **Related articles:** [Localization](guides/localization.md)

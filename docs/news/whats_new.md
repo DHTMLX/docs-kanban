@@ -54,6 +54,9 @@ Released on November 13, 2024
         - The method doesn't change themes (use the new [`setTheme()`](../../api/methods/js_kanban_settheme_method) method instead)
         - The method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
 
+    - The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
+    - The `api` parameter of the Toolbar [`setLocale()`](../../api/methods/toolbar_setlocale_method) method was deprecated
+
 ### Fixes
 
 - A comment in progress of editing can be removed and text area for new comments disappears

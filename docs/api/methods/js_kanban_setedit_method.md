@@ -18,14 +18,13 @@ setEdit({ cardId: string | number } | null): void;
 
 ### Parameters
 
-The method can take a *null* value or an object with the fallowing parameter: 
+The method can take a *null* value or an object with the following parameter:
 
 - `cardId` - (required) the ID of the card to be edited
 
 :::note
 To close an editor, call the **setEdit()** method with the ***null*** value
 :::
-
 
 ### Example
 
