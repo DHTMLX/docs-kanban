@@ -32,6 +32,7 @@ const en = {
         "Add new row": "Add new row",
         "Add new column": "Add new column",
         "Add new card": "Add new card",
+        "Add new card...": "Add new card...",
         "Edit card": "Edit card",
         Edit: "Edit",
 
@@ -76,7 +77,7 @@ const en = {
         "Would you like to delete this comment?":
             "Would you like to delete this comment?",
         "Would you like to delete this card?":
-            "Would you like to delete this card?",
+            "Would you like to delete this card?"
     },
     calendar: { // translations and settings of the calendar
         monthFull: [
