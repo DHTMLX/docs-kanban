@@ -14,7 +14,7 @@ Released on February 14, 2025
 
 ### Fixes
 
-- Wrong valid expiration date in the trial package
+- Wrong expiration date in the trial package
 - Warning during drag and drop on touch devices
 - Readonly `add: false` configuration does not remove the **Add** option from the column menu
 - The editor is not rendered for cards with number IDs as strings
