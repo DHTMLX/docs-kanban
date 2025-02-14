@@ -8,6 +8,20 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.6.2
+
+Released on February 14, 2025
+
+### Fixes
+
+- Wrong valid expiration date in the trial package
+- Warning during drag and drop on touch devices
+- Readonly `add: false` configuration does not remove the **Add** option from the column menu
+- The editor is not rendered for cards with number IDs as strings
+- Outdated link to samples in the package
+- Column scroll with lazy rendering has drag and drop issues
+- The `setConfig()` method fails to update the fixed state of the column headers
+
 ## Version 1.6.1
 
 Released on November 29, 2024
