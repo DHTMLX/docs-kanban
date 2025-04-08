@@ -8,7 +8,7 @@ description: You can learn about the history config in the documentation of the 
 
 ### Description
 
-@short: Optional. Enables/disables managing history
+@short: Optional. Enables/disables managing history of changes
 
 :::info
 Using the `history` property you can enable/disable managing history of Kanban. If you set it to **false**, you will not be able to manage history via the API and controls on Toolbar.

@@ -8,13 +8,26 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.6.3
+
+Released on April 8, 2025
+
+### Fixes
+
+- Limit applies to the whole column incorrectly
+- Error occurs when moving a card after modal editor close
+- Confirm for deletion is shown below the modal editor
+- Toolbar "more" icon appears then disappears unexpectedly during slow window resizing
+- The `delete-card` event always closes the editor
+- The editor cannot be opened if the priority is set to ID outside of provided options
+
 ## Version 1.6.2
 
 Released on February 14, 2025
 
 ### Fixes
 
-- Wrong valid expiration date in the trial package
+- Wrong expiration date in the trial package
 - Warning during drag and drop on touch devices
 - Readonly `add: false` configuration does not remove the **Add** option from the column menu
 - The editor is not rendered for cards with number IDs as strings
