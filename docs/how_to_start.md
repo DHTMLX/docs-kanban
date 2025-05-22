@@ -48,7 +48,7 @@ If you want to use trial version of Kanban, download the [**trial Kanban package
 #### Installing PRO Kanban via npm and yarn
 
 :::info
-If you have already own Kanban under the proprietary license, send your **license number** on the *contact@dhtmlx.com* email to receive *login* and *password* for private **npm** as well as detailed guide on how to install Kanban. Note that private **npm** is available before the expiration of the proprietary Kanban license.
+You can access the DHTMLX private **npm** directly in the [Client's Area](https://dhtmlx.com/clients/) by generating your login and password for **npm**. A detailed installation guide is also available there. Please note that access to the private **npm** is available only while your proprietary Kanban license is active.
 :::
 
 ## Step 2. Creating Kanban
