@@ -53,7 +53,7 @@ Now you should get the DHTMLX Kanban source code. First of all, stop the app and
 
 ### Step 1. Package installation
 
-Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-and-yarn) and follow steps mentioned in the README file. Note that trial Kanban is available 30 days only.
+Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Kanban is available 30 days only.
   
 ### Step 2. Component creation
 
