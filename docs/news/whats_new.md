@@ -8,6 +8,16 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.6.4 
+
+Released on June 12, 2025
+
+### Fixes
+
+- Cards are lost when added to cols/rows that are removed and then restored
+- Missing locale labels for uploader list buttons
+- Missing readmes in commercial version packages
+
 ## Version 1.6.3
 
 Released on April 8, 2025
