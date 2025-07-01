@@ -8,7 +8,7 @@ description: Explore an overview of Internal Event Bus methods for JavaScript Ka
 
 | Name                                           | Description                                          |
 | ---------------------------------------------- | ---------------------------------------------------- |
-| [api.exec()](../../internal/js_kanban_exec_method/)      | @getshort(../internal/js_kanban_exec_method.md)      |
-| [api.intercept()](../../internal/js_kanban_intercept_method/) | @getshort(../internal/js_kanban_intercept_method.md) |
-| [api.on()](../../internal/js_kanban_on_method/)        | @getshort(../internal/js_kanban_on_method.md)        |
-| [api.setNext()](../../internal/js_kanban_setnext_method/)   | @getshort(../internal/js_kanban_setnext_method.md)   |
+| [api.exec()](/api/internal/js_kanban_exec_method)      | @getshort(../internal/js_kanban_exec_method.md)      |
+| [api.intercept()](/api/internal/js_kanban_intercept_method) | @getshort(../internal/js_kanban_intercept_method.md) |
+| [api.on()](/api/internal/js_kanban_on_method)        | @getshort(../internal/js_kanban_on_method.md)        |
+| [api.setNext()](/api/internal/js_kanban_setnext_method)   | @getshort(../internal/js_kanban_setnext_method.md)   |

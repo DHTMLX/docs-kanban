@@ -8,6 +8,6 @@ description: Here's a quick overview of the Internal State methods available in 
 
 | Name                                                  | Description                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------- |
-| [api.getReactiveState()](../../internal/js_kanban_getreactivestate_method/) | @getshort(../internal/js_kanban_getreactivestate_method.md) |
-| [api.getState()](../../internal/js_kanban_getstate_method/)         | @getshort(../internal/js_kanban_getstate_method.md)         |
-| [api.getStores()](../../internal/js_kanban_getstores_method/)        | @getshort(../internal/js_kanban_getstores_method.md)        |
+| [api.getReactiveState()](/api/internal/js_kanban_getreactivestate_method) | @getshort(../internal/js_kanban_getreactivestate_method.md) |
+| [api.getState()](/api/internal/js_kanban_getstate_method)         | @getshort(../internal/js_kanban_getstate_method.md)         |
+| [api.getStores()](/api/internal/js_kanban_getstores_method)        | @getshort(../internal/js_kanban_getstores_method.md)        |

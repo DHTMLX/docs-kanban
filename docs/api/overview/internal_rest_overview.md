@@ -8,9 +8,9 @@ description: This section provides an overview of the Internal RestDataProvider 
 
 | Name                                                         | Description                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------------ |
-| [getCards()](../../provider/rest_methods/js_kanban_getcards_method/)   | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
-| [getColumns()](../../provider/rest_methods/js_kanban_getcolumns_method/) | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
-| [getLinks()](../../provider/rest_methods/js_kanban_getlinks_method/)   | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |
-| [getRows()](../../provider/rest_methods/js_kanban_getrows_method/)    | @getshort(../provider/rest_methods/js_kanban_getrows_method.md)    |
-| [getUsers()](../../provider/rest_methods/js_kanban_getusers_method/)   | @getshort(../provider/rest_methods/js_kanban_getusers_method.md)   |
-| [send()](../../provider/rest_methods/js_kanban_send_method/)       | @getshort(../provider/rest_methods/js_kanban_send_method.md)       |
+| [getCards()](/api/provider/rest_methods/js_kanban_getcards_method)   | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
+| [getColumns()](/api/provider/rest_methods/js_kanban_getcolumns_method) | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
+| [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method)   | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |
+| [getRows()](/api/provider/rest_methods/js_kanban_getrows_method)    | @getshort(../provider/rest_methods/js_kanban_getrows_method.md)    |
+| [getUsers()](/api/provider/rest_methods/js_kanban_getusers_method)   | @getshort(../provider/rest_methods/js_kanban_getusers_method.md)   |
+| [send()](/api/provider/rest_methods/js_kanban_send_method)       | @getshort(../provider/rest_methods/js_kanban_send_method.md)       |

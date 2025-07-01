@@ -45,4 +45,4 @@ Promise.all([
 });
 ~~~
 
-**Related articles:** [Working with server](//guides/working_with_server)
+**Related articles:** [Working with server](/guides/working_with_server)

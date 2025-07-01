@@ -8,6 +8,6 @@ description: This section provides an overview of Toolbar methods in the JavaScr
 
 | Name                                         | Description                                        |
 | -------------------------------------------- | -------------------------------------------------- |
-| [destructor()](../../methods/toolbar_destructor_method/) | @getshort(../methods/toolbar_destructor_method.md) |
-| [setConfig()](../../methods/toolbar_setconfig_method/)  | @getshort(../methods/toolbar_setconfig_method.md)  |
-| [setLocale()](../../methods/toolbar_setlocale_method/)  | @getshort(../methods/toolbar_setlocale_method.md)  |
+| [destructor()](/api/methods/toolbar_destructor_method) | @getshort(../methods/toolbar_destructor_method.md) |
+| [setConfig()](/api/methods/toolbar_setconfig_method)  | @getshort(../methods/toolbar_setconfig_method.md)  |
+| [setLocale()](/api/methods/toolbar_setlocale_method)  | @getshort(../methods/toolbar_setlocale_method.md)  |

@@ -40,8 +40,5 @@ new kanban.Toolbar("#toolbar", {
     api: board.api,
     locale: zh // применяем локаль "zh" к Toolbar
 });
-~~~
-
-**Связанные статьи:** [Локализация](/guides/localization)
 
 **Связанный пример:** [Kanban. Локализация](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

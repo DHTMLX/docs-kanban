@@ -122,7 +122,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-If you don't define your own card settings through [`cardShape`](/api/config/js_kanban_cardshape_config), Kanban will use the [`defaultCardShape`](/api/config/js_kanban_cardshape_config/#default-config) settings!
+If you don't define your own card settings through [`cardShape`](/api/config/js_kanban_cardshape_config), Kanban will use the [**defaultCardShape**](/api/config/js_kanban_cardshape_config/#default-config) settings!
 :::
 
 ## Editor

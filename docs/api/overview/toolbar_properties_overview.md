@@ -10,7 +10,7 @@ For setting up the **Toolbar**, see the [Configuration](/guides/configuration/#t
 
 | Name                                    | Description                                   |
 | --------------------------------------- | --------------------------------------------- |
-| [api](../../config/toolbar_api_config/)    | @getshort(../config/toolbar_api_config.md)    |
-| [items](../../config/toolbar_items_config/)  | @getshort(../config/toolbar_items_config.md)  |
-| [locale](../../config/toolbar_locale_config/) | @getshort(../config/toolbar_locale_config.md) |
-| [theme](../../config/toolbar_theme_config/)  | @getshort(../config/toolbar_theme_config.md)  |
+| [api](/api/config/toolbar_api_config)    | @getshort(../config/toolbar_api_config.md)    |
+| [items](/api/config/toolbar_items_config)  | @getshort(../config/toolbar_items_config.md)  |
+| [locale](/api/config/toolbar_locale_config) | @getshort(../config/toolbar_locale_config.md) |
+| [theme](/api/config/toolbar_theme_config)  | @getshort(../config/toolbar_theme_config.md)  |

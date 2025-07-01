@@ -6,6 +6,7 @@ description: DHTMLX Kanban의 최신 기능과 업데이트, 릴리스 이력, �
 
 # 새로운 소식
 
+<<<<<<< HEAD
 Kanban을 이전 버전에서 업데이트하는 경우 [새 버전으로 마이그레이션](/news/migration.md) 안내를 참고하는 것이 좋습니다.
 
 ## 버전 1.6.5
@@ -26,6 +27,9 @@ Kanban을 이전 버전에서 업데이트하는 경우 [새 버전으로 마이
 - 카드가 제거된 열/행에 추가된 후 다시 복원된 경우 카드가 손실됨
 - 업로더 목록 버튼에 대한 지역화된 레이블이 누락됨
 - 상업 버전 패키지에 대한 README가 누락됨
+=======
+Kanban을 이전 버전에서 업데이트할 때는 [새 버전으로 마이그레이션](/news/migration.md)을 참고하는 것이 좋습니다.
+>>>>>>> 31ddc06 ([add] translations)
 
 ## 버전 1.6.3
 
@@ -435,7 +439,11 @@ Kanban을 이전 버전에서 업데이트하는 경우 [새 버전으로 마이
 
 [블로그 릴리스 리뷰](https://dhtmlx.com/blog/dhtmlx-kanban-1-2/)
 
+<<<<<<< HEAD
 ### 신규 기능
+=======
+### 신규 기능 
+>>>>>>> 31ddc06 ([add] translations)
 
 - 컬럼 메뉴에서 새 카드 추가 가능 ([**예제**](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban) 참고)
 - lazy 렌더링 지원 ([**예제**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban) 참고)
@@ -458,7 +466,11 @@ Kanban을 이전 버전에서 업데이트하는 경우 [새 버전으로 마이
 - **속성:**
     [`cardHeight`](/api/config/js_kanban_cardheight_config),
     [`columnShape`](/api/config/js_kanban_columnshape_config),
+<<<<<<< HEAD
     [`rowShape`](/api/config/js_kanban_rowshape_config),
+=======
+    [`rowShape`](/api/config/js_kanban_rowshape_config), 
+>>>>>>> 31ddc06 ([add] translations)
     [`renderType`](/api/config/js_kanban_rendertype_config),
     [`scrollType`](/api/config/js_kanban_scrolltype_config)
 

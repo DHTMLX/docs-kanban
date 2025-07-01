@@ -8,4 +8,4 @@ description: You can find an overview of the internal export methods for JavaScr
 
 | Name | Description |
 | -------------------------------------------- | -------------------------------------------------- |
-| [export.json()](../../internal/js_kanban_json_method/)    | @getshort(../internal/js_kanban_json_method.md)    |
+| [export.json()](/api/internal/js_kanban_json_method)    | @getshort(../internal/js_kanban_json_method.md)    |

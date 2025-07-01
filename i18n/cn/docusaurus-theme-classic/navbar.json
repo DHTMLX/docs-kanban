@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "JavaScript 看板文档",
+    "description": "导航栏中的标题"
+  },
+  "logo.alt": {
+    "message": "DHTMLX JavaScript 看板标志",
+    "description": "导航栏标志的替代文本"
+  },
+  "item.label.Examples": {
+    "message": "示例",
+    "description": "带有标签“示例”的导航栏项目"
+  },
+  "item.label.Forum": {
+    "message": "论坛",
+    "description": "带有标签“论坛”的导航栏项目"
+  },
+  "item.label.Support": {
+    "message": "支持",
+    "description": "带有标签“支持”的导航栏项目"
+  },
+  "item.label.Download": {
+    "message": "下载",
+    "description": "带有标签“下载”的导航栏项目"
+  }
+}
