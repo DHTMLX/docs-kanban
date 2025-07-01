@@ -119,6 +119,7 @@ description: Здесь вы можете узнать о последних ф�
 - Кнопка "Make cover" не отображается, если расширение файла в верхнем регистре
 - Клик по неактивному Multiselect вызывает ошибку
 - После использования [`addCard()`](/api/methods/js_kanban_addcard_method) прокрутка может привести к ошибкам при включённых прокрутке колонок и ленивом рендере
+
 ## Версия 1.5.12
 
 Релиз 2 мая 2024
@@ -458,7 +459,9 @@ description: Здесь вы можете узнать о последних ф�
     [`rowShape`](/api/config/js_kanban_rowshape_config),
     [`renderType`](/api/config/js_kanban_rendertype_config),
     [`scrollType`](/api/config/js_kanban_scrolltype_config)
+
 ### Обновления
+
     - [`api.getReactiveState()`](/api/internal/js_kanban_getreactivestate_method) обновлён
     - [`api.getState()`](/api/internal/js_kanban_getstate_method) обновлён
     - [`api.getStores()`](/api/internal/js_kanban_getstores_method) обновлён
