@@ -8,7 +8,7 @@ description: You can learn about the intercept method in the documentation of th
 
 ### Description
 
-@short: Allows intercepting and preventing the inner events
+@short: Enables catching and blocking internal events before they happen.
 
 ### Usage
 
@@ -21,13 +21,13 @@ api.intercept(
 
 ### Parameters
 
-- `event` - (required) an event to be fired 
-- `callback` - (required) a callback to be performed (the callback arguments will depend on the event to be fired)
+- `event` - (required) the event to listen for
+- `callback` - (required) the function to run (its arguments depend on the event being intercepted)
 
 ### Events
 
 :::info
-The full list of the Kanban internal events can be found [**here**](api/overview/main_overview.md/#kanban-events)
+You can check out the complete list of Kanban internal events [**here**](/api/overview/main_overview.md/#kanban-events)
 :::
 
 ### Example
@@ -38,7 +38,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// forbid moving cards to the column with the "done" ID
+// prevent cards from being moved to the column with the "done" ID
 board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;

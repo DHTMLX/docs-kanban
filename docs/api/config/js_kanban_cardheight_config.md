@@ -8,7 +8,7 @@ description: You can learn about the cardHeight config in the documentation of t
 
 ### Description
 
-@short: Optional. A height of cards
+@short: Optional. Defines the height of the cards.
 
 ### Usage
 
@@ -17,7 +17,7 @@ cardHeight?: number; // px
 ~~~
 
 :::important
-If you combine the [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) and [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md) settings, don't forget to specify a static height for cards via the `cardHeight` property. Unless you specify it, the cards will not be displayed.
+When using [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config.md) together with [`scrollType: "default"`](/api/config/js_kanban_scrolltype_config.md), it's important to set a fixed height for cards using the `cardHeight` property. Without this, the cards won't be visible.
 :::
 
 ### Example
@@ -31,8 +31,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The property was added in v1.2
+**Change log:** This property was introduced in version 1.2
 
-**Related articles:** [Configuration](../../../guides/configuration#cards)
+**Related articles:** [Configuration](/guides/configuration#cards)
 
 **Related sample:** [Kanban. Lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

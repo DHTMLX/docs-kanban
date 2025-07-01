@@ -1,14 +1,14 @@
 ---
 sidebar_label: move-column
 title: move-column Event
-description: You can learn about the move-column event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the move-column event in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # move-column
 
 ### Description
 
-@short: Fires when moving a column
+@short: Triggered when a column is moved
 
 ### Usage
 
@@ -22,14 +22,14 @@ description: You can learn about the move-column event in the documentation of t
 
 ### Parameters
 
-The callback of the **move-column** event can take an object with the following parameters:
+The callback for the **move-column** event receives an object with these properties:
 
-- `id` - (required) the ID of the column to be moved
-- `before` - (required) the ID of the column, the moved one will be placed before it
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `id` - (required) the ID of the column being moved
+- `before` - (required) the ID of the column before which the moved column will be placed
+- `skipProvider` - (optional) controls whether the request to the server is skipped or not
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -40,10 +40,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "move-column" event
+// listen for the "move-column" event
 board.api.on("move-column", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Change log:** This event was added in v1.1
+**Change log:** This event was introduced in v1.1

@@ -1,14 +1,14 @@
 ---
 sidebar_label: move-row
 title: move-row Event
-description: You can learn about the move-row event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the move-row event in the DHTMLX JavaScript Kanban library documentation. Find developer guides, API references, code examples, live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # move-row
 
 ### Description
 
-@short: Fires when moving a row
+@short: Triggered when a row is moved
 
 ### Usage
 
@@ -22,14 +22,14 @@ description: You can learn about the move-row event in the documentation of the 
 
 ### Parameters
 
-The callback of the **move-row** event can take an object with the following parameters:
+The callback for the **move-row** event receives an object with these properties:
 
-- `id` - (required) the ID of the row to be moved
-- `before` - (required) the ID of the row, the moved one will be placed before it
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `id` - (required) the ID of the row being moved
+- `before` - (required) the ID of the row that the moved row will be placed before
+- `skipProvider` - (optional) controls whether the request to the server is skipped
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -41,10 +41,10 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// subscribe on the "move-row" event
+// listen for the "move-row" event
 board.api.on("move-row", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Change log:** This event was added in v1.1
+**Change log:** This event was introduced in v1.1

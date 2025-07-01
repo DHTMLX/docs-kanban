@@ -8,10 +8,10 @@ description: You can learn about the $meta parameter in the documentation of the
 
 ### Description
 
-@short: An object of extra settings for configuring methods and events of Kanban
+@short: An object with extra settings to customize Kanban methods and events
 
 :::important
-The `$meta` object includes an extra set of parameters used for configuring methods based on the events of Kanban!
+The `$meta` object provides additional parameters that help configure methods linked to Kanban events!
 :::
 
 ### Usage
@@ -24,9 +24,9 @@ $meta?: {
 
 ### Parameters
 
-The `$meta` object includs the following parameter:
+The `$meta` object contains the following parameter:
 
-- `skipHistory` - (optional) enables/disables skipping the operations in a history of Kanban
+- `skipHistory` - (optional) controls whether an operation should be excluded from Kanban's history tracking
 
 ### Example
 
@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**Change log:** The `$meta` parameter was added in v1.3
+**Change log:** The `$meta` parameter was introduced in v1.3
 
-**Related article:** [`history`](api/config/js_kanban_history_config.md)
+**Related article:** [`history`](/api/config/js_kanban_history_config.md)

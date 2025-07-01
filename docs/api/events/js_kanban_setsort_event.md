@@ -8,7 +8,7 @@ description: You can learn about the set-sort event in the documentation of the 
 
 ### Description
 
-@short: Fires when sorting cards
+@short: Triggered whenever cards are sorted.
 
 ### Usage
 
@@ -25,15 +25,15 @@ description: You can learn about the set-sort event in the documentation of the 
 
 ### Parameters
 
-The callback of the **set-sort** event can take the *null* value or an object with the following parameters:
+The callback for the **set-sort** event can receive either *null* or an object containing the following properties:
 
-- `by` - (optional) the card field for sorting (*string* or *function*)
-- `dir` - (optional) the order of sorting. The possible values are *"asc"* and *"desc"*
-- `preserve` - (optional) enables/disables preserving of sorting state
-- `columnId` - (optional) the ID of column to be sorted
+- `by` - (optional) specifies the card field used for sorting (*string* or *function*)
+- `dir` - (optional) indicates the sorting direction, either *"asc"* or *"desc"*
+- `preserve` - (optional) determines whether to keep the current sorting state
+- `columnId` - (optional) identifies which column is being sorted
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To work with inner events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -44,10 +44,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "set-sort" event
+// listen for the "set-sort" event
 board.api.on("set-sort", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Change log:** The event was added in v1.2
+**Change log:** This event was introduced in v1.2

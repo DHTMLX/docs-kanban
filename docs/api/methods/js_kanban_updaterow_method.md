@@ -8,7 +8,7 @@ description: You can learn about the updateRow method in the documentation of th
 
 ### Description
 
-@short: Updates the row data by its ID
+@short: Modifies the data of a row based on its ID.
 
 ### Usage
 
@@ -22,13 +22,13 @@ updateRow({
 
 ### Parameters
 
-- `id` - (required) the ID of the row to be updated
-- `row` - (optional) the new data object of the row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
-- `replace` - (optional) enables/disables fully data replacing
+- `id` - (required) the identifier of the row to update
+- `row` - (optional) an object containing the new data for the row. The complete list of **row** parameters is available [**here**](/api/config/js_kanban_rows_config.md)
+- `replace` - (optional) controls whether to completely replace the existing data
 
-    :::note
-    If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
-    :::
+:::note
+Setting the `replace` parameter to *true* will overwrite the old data entirely with the new data. If not set or false, only the specified values will be updated.
+:::
 
 ### Example
 

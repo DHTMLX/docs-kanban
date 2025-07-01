@@ -7,74 +7,74 @@ description: You can learn about the integration with Svelte in the documentatio
 # Integration with Svelte
 
 :::tip
-You should be familiar with the basic concepts and patterns of **Svelte** before reading this documentation. To refresh your knowledge, please refer to the [**Svelte documentation**](https://svelte.dev/).
+It's helpful to have a basic understanding of **Svelte** before jumping into this guide. For a quick refresher, check out the [**Svelte documentation**](https://svelte.dev/).
 :::
 
-DHTMLX Kanban is compatible with **Svelte**. We have prepared code examples on how to use DHTMLX Kanban with **Svelte**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
+DHTMLX Kanban works smoothly with **Svelte**. There are code examples showing how DHTMLX Kanban can be used in a Svelte setup. For more details, take a look at the [**Example on GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
 
 ## Creating a project
 
 :::info
-Before you start to create a new project, install [**Vite**](https://vite.dev/) (optional) and [**Node.js**](https://nodejs.org/en/).
+Before starting a new project, make sure [**Vite**](https://vite.dev/) (optional) and [**Node.js**](https://nodejs.org/en/) are installed.
 :::
 
-There are several ways of creating a **Svelte** project:
+There are a couple of ways to set up a **Svelte** project:
 
-- you can use the [**SvelteKit**](https://kit.svelte.dev/)
+- Use [**SvelteKit**](https://kit.svelte.dev/)
 
 or
 
-- you can also use **Svelte with Vite** (but without SvelteKit):
+- Go with **Svelte and Vite** (without SvelteKit):
 
 ~~~json
 npm create vite@latest
 ~~~
 
-Check the details in the [related article](https://svelte.dev/docs/introduction#start-a-new-project-alternatives-to-sveltekit).
+More details are available in this [related article](https://svelte.dev/docs/introduction#start-a-new-project-alternatives-to-sveltekit).
 
 ### Installation of dependencies
 
-Let's name the project as **my-svelte-kanban-app** and go to the app directory:
+Let's call the project **my-svelte-kanban-app** and switch to its directory:
 
 ~~~json
 cd my-svelte-kanban-app
 ~~~
 
-Install dependencies and start the dev server. For this, use a package manager:
+To install dependencies and start the development server, pick your preferred package manager:
 
-- if you use [**yarn**](https://yarnpkg.com/), run the following commands:
+- With [**yarn**](https://yarnpkg.com/):
 
 ~~~json
 yarn
 yarn start
 ~~~
 
-- if you use [**npm**](https://www.npmjs.com/), run the following commands:
+- With [**npm**](https://www.npmjs.com/):
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-The app should run on a localhost (for instance `http://localhost:3000`).
+The app will then be available locally, usually at something like `http://localhost:3000`.
 
 ## Creating Kanban
 
-Now you should get the DHTMLX Kanban source code. First of all, stop the app and proceed with installing the Kanban package.
+Next, the DHTMLX Kanban source code needs to be available. Stop the app for now and install the Kanban package.
 
 ### Step 1. Package installation
 
-Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Kanban is available 30 days only.
+Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) and follow the README instructions. Just a heads up-the trial version works for 30 days.
 
 ### Step 2. Component creation
 
-Now you need to create a Svelte component, to add a Kanban with Toolbar into the application. Let's create a new file in the ***src/*** directory and name it ***Kanban.svelte***.
+Now it's time to set up a Svelte component that brings Kanban with a Toolbar into the app. Add a new file under ***src/*** and name it ***Kanban.svelte***.
 
 #### Importing source files
 
-Open the ***Kanban.svelte*** file and import Kanban source files. Note that:
+Open ***Kanban.svelte*** and bring in the Kanban source files. Keep in mind:
 
-- if you use PRO version and install the Kanban package from a local folder, the import paths look like this:
+- When using the PRO version and installing from a local package, import paths would look like:
 
 ~~~html title="Kanban.svelte"
 <script>
@@ -83,9 +83,9 @@ import 'dhx-kanban-package/dist/kanban.css';
 </script>
 ~~~
 
-Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as **kanban.min.css**.
+Depending on the package, source files might be minified. If that's the case, make sure to import **kanban.min.css**.
 
-- if you use the trial version of Kanban, specify the following paths:
+- When working with the trial version, the import paths are:
 
 ~~~html title="Kanban.svelte"
 <script>
@@ -94,11 +94,11 @@ import '@dhx/trial-kanban/dist/kanban.css';
 <script>
 ~~~
 
-In this tutorial you can see how to configure the **trial** version of Kanban.
+This guide uses the **trial** version for configuration examples.
 
 #### Setting containers and adding Kanban with Toolbar
 
-To display Kanban with Toolbar on the page, you need to create containers for Kanban and Toolbar, and initialize these components using the corresponding constructors:
+To show Kanban with Toolbar, set up containers for both components and initialize them with their constructors:
 
 ~~~html {3,6,10-11,13-17,27-28} title="Kanban.svelte"
 <script>
@@ -134,7 +134,7 @@ onDestroy(() => {
 
 #### Loading data
 
-To add data into the Kanban, we need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
+To get data into Kanban, a data set is needed. Create a ***data.js*** file in the ***src/*** directory and add some example data:
 
 ~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
@@ -188,7 +188,7 @@ export function getData() {
 }
 ~~~
 
-Then open the ***App.svelte*** file, import data, and pass it into the new created `<Kanban/>` components as **props**:
+Now, open ***App.svelte***, import the data, and pass it into the new `<Kanban/>` component as **props**:
 
 ~~~html {3,5,8} title="App.svelte"
 <script>
@@ -201,7 +201,7 @@ const { cards, columns, rows } = getData();
 <Kanban {cards} {columns} {rows} />
 ~~~
 
-Go to the ***Kanban.svelte*** file and apply the passed **props** to the Kanban configuration object:
+Head over to ***Kanban.svelte*** and use these **props** in the Kanban configuration:
 
 ~~~html {6-8,15-17} title="Kanban.svelte"
 <script>
@@ -243,7 +243,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `onMount()` method of Svelte to load data into Kanban:
+Alternatively, the [`parse()`](/api/methods/js_kanban_parse_method/) method can be used in Svelte's `onMount()` to load data into Kanban:
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -287,15 +287,15 @@ onDestroy(() => {
 </div>
 ~~~
 
-The `parse(data)` method provides data reloading on each applied change.
+Using the `parse(data)` method helps reload data every time something changes.
 
-Now the Kanban component is ready to use. When the element will be added to the page, it will initialize the Kanban with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
+At this point, the Kanban component is all set. Once it's added to the page, it will initialize with data. Any other required settings can be added freely. The [Kanban API docs](/api/overview/properties_overview/) have details on all available options.
 
 #### Handling events
 
-When a user makes some action in the Kanban, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/events_overview/).
+Whenever there's activity in Kanban, events get fired. These can be used to react to user actions and kick off custom logic. Check out the [full list of events](/api/overview/events_overview/).
 
-Open ***Kanban.svelte*** and complete the `onMount()` method in the following way:
+Add this to ***Kanban.svelte*** to handle an event inside `onMount()`:
 
 ~~~html {8-10} title="Kanban.svelte"
 <script>
@@ -320,7 +320,7 @@ onDestroy(() => {
 
 ### Step 3. Adding Kanban into the app
 
-To add the component into the app, open the **App.svelte** file and replace the default code with the following one:
+To display the component in the app, open **App.svelte** and update its code:
 
 ~~~html title="App.svelte"
 <script>
@@ -333,8 +333,8 @@ To add the component into the app, open the **App.svelte** file and replace the 
 <Kanban {cards} {columns} {rows} />
 ~~~
 
-After that, you can start the app to see Kanban loaded with data on a page.
+Now, start the app to see Kanban in action with the provided data.
 
-![Kanban initialization](../assets/trial_kanban.png)
+![Kanban initialization](/assets/trial_kanban.png)
 
-Now you know how to integrate DHTMLX Kanban with Svelte. You can customize the code according to your specific requirements. The final advanced example you can find on [**GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
+This covers integrating DHTMLX Kanban into a Svelte app. The code can be tweaked to fit any specific needs. For a more advanced example, take a look at [**GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).

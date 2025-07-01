@@ -1,0 +1,444 @@
+{
+  "theme.ErrorPageContent.title": {
+    "message": "Diese Seite ist abgestürzt.",
+    "description": "Der Titel der Ausweichseite, wenn die Seite abgestürzt ist"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Zurück nach oben scrollen",
+    "description": "Das ARIA-Label für den Zurück-zum-Anfang-Button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archiv",
+    "description": "Der Seiten- & Hero-Titel der Blog-Archivseite"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archiv",
+    "description": "Die Seiten- & Hero-Beschreibung der Blog-Archivseite"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Navigation der Blog-Listen-Seite",
+    "description": "Das ARIA-Label für die Blog-Paginierung"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Neuere Einträge",
+    "description": "Das Label zur Navigation zur Seite mit neueren Blogbeiträgen (vorherige Seite)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Ältere Einträge",
+    "description": "Das Label zur Navigation zur Seite mit älteren Blogbeiträgen (nächste Seite)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Navigation der Blog-Post-Seite",
+    "description": "Das ARIA-Label für die Blog-Post-Paginierung"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Neuerer Beitrag",
+    "description": "Das Label des Blogpost-Buttons zur Navigation zum neueren/vorherigen Beitrag"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Älterer Beitrag",
+    "description": "Das Label des Blogpost-Buttons zur Navigation zum älteren/nächsten Beitrag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Alle Tags anzeigen",
+    "description": "Das Label des Links zur Tag-Übersichtsseite"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Wechsel zwischen Dunkel- und Hellmodus (aktuell {mode})",
+    "description": "Das ARIA-Label für den Farbmodus-Umschalter in der Navigationsleiste"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "Dunkelmodus",
+    "description": "Der Name für den dunklen Farbmodus"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "Hellmodus",
+    "description": "Der Name für den hellen Farbmodus"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Brotkrumen",
+    "description": "Das ARIA-Label für die Brotkrumen-Navigation"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 Element|{count} Elemente",
+    "description": "Die Standardbeschreibung für eine Kategorie-Karte im generierten Index, wie viele Elemente diese Kategorie enthält"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Dokumentationsseiten",
+    "description": "Das ARIA-Label für die Dokumentations-Paginierung"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Zurück",
+    "description": "Das Label zum Navigieren zur vorherigen Dokumentation"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Weiter",
+    "description": "Das Label zum Navigieren zur nächsten Dokumentation"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Ein Dokument markiert|{count} Dokumente markiert",
+    "description": "Pluralisiertes Label für \"{count} Dokumente markiert\". Verwenden Sie so viele Pluralformen (getrennt durch \"|\") wie Ihre Sprache unterstützt (siehe https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} mit \"{tagName}\"",
+    "description": "Der Titel der Seite für einen Dokumentations-Tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Dies ist unreleased Dokumentation für {siteTitle} Version {versionLabel}.",
+    "description": "Das Label, das dem Benutzer mitteilt, dass er eine nicht veröffentlichte Dokumentationsversion durchsucht"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Dies ist die Dokumentation für {siteTitle} Version {versionLabel}, die nicht mehr aktiv gepflegt wird.",
+    "description": "Das Label, das dem Benutzer mitteilt, dass er eine nicht mehr gepflegte Dokumentationsversion durchsucht"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Für aktuelle Dokumentation siehe {latestVersionLink} ({versionLabel}).",
+    "description": "Das Label, das dem Benutzer empfiehlt, die neueste Version zu prüfen"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "neueste Version",
+    "description": "Das Label für den Link zur neuesten Version"
+  },
+  "theme.common.editThisPage": {
+    "message": "Diese Seite bearbeiten",
+    "description": "Das Link-Label zum Bearbeiten der aktuellen Seite"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Direktlink zu {heading}",
+    "description": "Titel für den Link zur Überschrift"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " am {date}",
+    "description": "Die Worte, die beschreiben, an welchem Datum eine Seite zuletzt aktualisiert wurde"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " von {user}",
+    "description": "Die Worte, die beschreiben, von wem die Seite zuletzt aktualisiert wurde"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Zuletzt aktualisiert{atDate}{byUser}",
+    "description": "Der Satz, der anzeigt, wann eine Seite zuletzt aktualisiert wurde und von wem"
+  },
+  "theme.NotFound.title": {
+    "message": "Seite nicht gefunden",
+    "description": "Der Titel der 404-Seite"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versionen",
+    "description": "Das Label für das Versions-Dropdown in der mobilen Navigationsleiste"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Tags:",
+    "description": "Das Label neben einer Tag-Liste"
+  },
+  "theme.admonition.caution": {
+    "message": "Vorsicht",
+    "description": "Das Standard-Label für die Warnung 'Vorsicht' (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "Gefahr",
+    "description": "Das Standard-Label für die Warnung 'Gefahr' (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "Info",
+    "description": "Das Standard-Label für die Warnung 'Info' (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "Hinweis",
+    "description": "Das Standard-Label für die Warnung 'Hinweis' (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "Tipp",
+    "description": "Das Standard-Label für die Warnung 'Tipp' (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "Warnung",
+    "description": "Das Standard-Label für die Warnung 'Warnung' (:::warning)"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Schließen",
+    "description": "Das ARIA-Label für den Schließen-Button der Ankündigungsleiste"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navigation der neuesten Blogbeiträge",
+    "description": "Das ARIA-Label für die neuesten Beiträge in der Blog-Seitenleiste"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Kopiert",
+    "description": "Das Label des Kopieren-Buttons in Codeblöcken"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Code in die Zwischenablage kopieren",
+    "description": "Das ARIA-Label für den Kopieren-Button von Codeblöcken"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Kopieren",
+    "description": "Das Label des Kopieren-Buttons in Codeblöcken"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Zeilenumbruch umschalten",
+    "description": "Das title-Attribut für den Button zum Umschalten des Zeilenumbruchs in Codeblöcken"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Seitenleisten-Kategorie '{label}' erweitern",
+    "description": "Das ARIA-Label zum Erweitern der Seitenleisten-Kategorie"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Seitenleisten-Kategorie '{label}' reduzieren",
+    "description": "Das ARIA-Label zum Reduzieren der Seitenleisten-Kategorie"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Hauptnavigation",
+    "description": "Das ARIA-Label für die Hauptnavigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Sprachen",
+    "description": "Das Label für das Sprach-Auswahl-Dropdown in der mobilen Ansicht"
+  },
+  "theme.NotFound.p1": {
+    "message": "Wir konnten nicht finden, wonach Sie gesucht haben.",
+    "description": "Der erste Absatz der 404-Seite"
+  },
+  "theme.NotFound.p2": {
+    "message": "Bitte kontaktieren Sie den Besitzer der Website, der Sie zum ursprünglichen URL verlinkt hat, und informieren Sie ihn, dass der Link defekt ist.",
+    "description": "Der zweite Absatz der 404-Seite"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Auf dieser Seite",
+    "description": "Das Label des Buttons für das einklappbare Inhaltsverzeichnis"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Weiterlesen",
+    "description": "Das Label in Blogbeitrags-Auszügen, um zum vollständigen Beitrag zu verlinken"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Mehr lesen über {title}",
+    "description": "Das ARIA-Label für den Link zum vollständigen Blogbeitrag aus Auszügen"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Eine Minute lesen|{readingTime} Minuten lesen",
+    "description": "Pluralisiertes Label für \"{readingTime} Minuten lesen\". Verwenden Sie so viele Pluralformen (getrennt durch \"|\") wie Ihre Sprache unterstützt (siehe https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Startseite",
+    "description": "Das ARIA-Label für die Startseite in den Brotkrumen"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Seitenleiste einklappen",
+    "description": "Das title-Attribut für den Einklappen-Button der Dokumentations-Seitenleiste"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Seitenleiste einklappen",
+    "description": "Das ARIA-Label für den Einklappen-Button der Dokumentations-Seitenleiste"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Dokumentations-Seitenleiste",
+    "description": "Das ARIA-Label für die Seitenleisten-Navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Navigationsleiste schließen",
+    "description": "Das ARIA-Label für den Schließen-Button der mobilen Seitenleiste"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Navigationsleiste umschalten",
+    "description": "Das ARIA-Label für den Hamburger-Menü-Button der mobilen Navigation"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Zurück zum Hauptmenü",
+    "description": "Das Label des Zurück-Buttons, um zum Hauptmenü zurückzukehren, innerhalb des sekundären Menüs der mobilen Navigationsseitenleiste (insbesondere für die Dokumentations-Seitenleiste)"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Seitenleiste erweitern",
+    "description": "Das ARIA-Label und title-Attribut für den Erweitern-Button der Dokumentations-Seitenleiste"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Seitenleiste erweitern",
+    "description": "Das ARIA-Label und title-Attribut für den Erweitern-Button der Dokumentations-Seitenleiste"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Ein Dokument gefunden|{count} Dokumente gefunden",
+    "description": "Pluralisiertes Label für \"{count} Dokumente gefunden\". Verwenden Sie so viele Pluralformen (getrennt durch \"|\") wie Ihre Sprache unterstützt (siehe https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Suchergebnisse für „{query}“",
+    "description": "Der Titel der Suchseite für eine nicht-leere Suche"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Dokumentation durchsuchen",
+    "description": "Der Titel der Suchseite für eine leere Suche"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Geben Sie hier Ihre Suche ein",
+    "description": "Der Platzhalter für das Suchfeld auf der Suchseite"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Suche",
+    "description": "Das ARIA-Label für das Suchfeld auf der Suchseite"
+  },
+  "theme.SearchPage.algoliaLabel": {
+    "message": "Suche mit Algolia",
+    "description": "Das ARIA-Label für den Algolia-Hinweis"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Keine Ergebnisse gefunden",
+    "description": "Der Absatz für leere Suchergebnisse"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Lade neue Ergebnisse...",
+    "description": "Der Absatz beim Laden neuer Suchergebnisse"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Alle {count} Ergebnisse anzeigen"
+  },
+  "theme.SearchBar.label": {
+    "message": "Suche",
+    "description": "Das ARIA-Label und Platzhalter für den Suchbutton"
+  },
+  "theme.SearchModal.searchBox.resetButtonTitle": {
+    "message": "Suchanfrage löschen",
+    "description": "Das Label und ARIA-Label für den Zurücksetzen-Button im Suchfeld"
+  },
+  "theme.SearchModal.searchBox.cancelButtonText": {
+    "message": "Abbrechen",
+    "description": "Das Label und ARIA-Label für den Abbrechen-Button im Suchfeld"
+  },
+  "theme.SearchModal.startScreen.recentSearchesTitle": {
+    "message": "Zuletzt",
+    "description": "Der Titel für die letzten Suchanfragen"
+  },
+  "theme.SearchModal.startScreen.noRecentSearchesText": {
+    "message": "Keine letzten Suchanfragen",
+    "description": "Der Text, wenn keine letzten Suchanfragen vorliegen"
+  },
+  "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+    "message": "Diese Suche speichern",
+    "description": "Das Label für den Button zum Speichern der letzten Suche"
+  },
+  "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+    "message": "Diese Suche aus dem Verlauf entfernen",
+    "description": "Das Label für den Button zum Entfernen der letzten Suche"
+  },
+  "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+    "message": "Favoriten",
+    "description": "Der Titel für die Favoriten-Suchen"
+  },
+  "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+    "message": "Diese Suche aus den Favoriten entfernen",
+    "description": "Das Label für den Button zum Entfernen einer Favoriten-Suche"
+  },
+  "theme.SearchModal.errorScreen.titleText": {
+    "message": "Ergebnisse konnten nicht geladen werden",
+    "description": "Der Titel für den Fehlerbildschirm des Such-Modals"
+  },
+  "theme.SearchModal.errorScreen.helpText": {
+    "message": "Bitte prüfen Sie Ihre Netzwerkverbindung.",
+    "description": "Der Hilfetext für den Fehlerbildschirm des Such-Modals"
+  },
+  "theme.SearchModal.footer.selectText": {
+    "message": "zum Auswählen",
+    "description": "Der erklärende Text zur Aktion der Enter-Taste"
+  },
+  "theme.SearchModal.footer.selectKeyAriaLabel": {
+    "message": "Enter-Taste",
+    "description": "Das ARIA-Label für den Enter-Tasten-Button, der die Auswahl bestätigt"
+  },
+  "theme.SearchModal.footer.navigateText": {
+    "message": "zum Navigieren",
+    "description": "Der erklärende Text zur Aktion der Pfeiltasten nach oben und unten"
+  },
+  "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+    "message": "Pfeil nach oben",
+    "description": "Das ARIA-Label für den Pfeil-nach-oben-Tasten-Button, der die Navigation steuert"
+  },
+  "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+    "message": "Pfeil nach unten",
+    "description": "Das ARIA-Label für den Pfeil-nach-unten-Tasten-Button, der die Navigation steuert"
+  },
+  "theme.SearchModal.footer.closeText": {
+    "message": "zum Schließen",
+    "description": "Der erklärende Text zur Aktion der Escape-Taste"
+  },
+  "theme.SearchModal.footer.closeKeyAriaLabel": {
+    "message": "Escape-Taste",
+    "description": "Das ARIA-Label für den Escape-Tasten-Button, der das Modal schließt"
+  },
+  "theme.SearchModal.footer.searchByText": {
+    "message": "Suche mit",
+    "description": "Der Text, der erklärt, dass die Suche mit Algolia erfolgt"
+  },
+  "theme.SearchModal.noResultsScreen.noResultsText": {
+    "message": "Keine Ergebnisse für",
+    "description": "Der Text, der erklärt, dass keine Ergebnisse für die folgende Suche gefunden wurden"
+  },
+  "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+    "message": "Versuchen Sie die Suche nach",
+    "description": "Der Text für den vorgeschlagenen Suchbegriff, wenn keine Ergebnisse gefunden wurden"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+    "message": "Glauben Sie, diese Suche sollte Ergebnisse liefern?",
+    "description": "Der Text für die Frage, ob der Benutzer fehlende Ergebnisse vermutet"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+    "message": "Lassen Sie es uns wissen.",
+    "description": "Der Linktext, um fehlende Ergebnisse zu melden"
+  },
+  "theme.SearchModal.placeholder": {
+    "message": "Dokumente durchsuchen",
+    "description": "Der Platzhalter im Eingabefeld des DocSearch-Popup-Modals"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Ein Beitrag|{count} Beiträge",
+    "description": "Pluralisiertes Label für \"{count} Beiträge\". Verwenden Sie so viele Pluralformen (getrennt durch \"|\") wie Ihre Sprache unterstützt (siehe https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} markiert mit „{tagName}“",
+    "description": "Der Titel der Seite für einen Blog-Tag"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "Der Titel der Seite für einen Blog-Autor"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Autoren",
+    "description": "Der Titel der Autoren-Seite"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "Alle Autoren anzeigen",
+    "description": "Das Label des Links zur Blog-Autoren-Seite"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "Dieser Autor hat noch keine Beiträge geschrieben.",
+    "description": "Der Text für Autoren mit 0 Blogbeiträgen"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Nicht gelistete Seite",
+    "description": "Der Titel des Banners für nicht gelistete Inhalte"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Diese Seite ist nicht gelistet. Suchmaschinen werden sie nicht indexieren, und nur Benutzer mit direktem Link können darauf zugreifen.",
+    "description": "Die Nachricht des Banners für nicht gelistete Inhalte"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Entwurfsseite",
+    "description": "Der Titel des Banners für Entwurfsinhalte"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Diese Seite ist ein Entwurf. Sie ist nur in der Entwicklungsumgebung sichtbar und wird im Produktions-Build ausgeschlossen.",
+    "description": "Die Nachricht des Banners für Entwurfsinhalte"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Erneut versuchen",
+    "description": "Das Label des Buttons, um das erneute Rendern zu versuchen, wenn die React-Fehlergrenze einen Fehler erfasst"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Zum Hauptinhalt springen",
+    "description": "Das Label zum Überspringen des Inhalts für Barrierefreiheit, ermöglicht schnelles Navigieren zum Hauptinhalt per Tastatur (Tab/Enter)"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "Der Titel der Tag-Übersichtsseite"
+  }
+}

@@ -1,36 +1,36 @@
 ---
 sidebar_label: DELETE /links
 title: DELETE /links
-description: You can learn about the DELETE /links REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: This section covers the DELETE /links REST route in the DHTMLX JavaScript Kanban library. It includes developer guides, API references, examples, live demos, and a free 30-day trial of DHTMLX Kanban.
 ---
 
 # DELETE `/links`
 
 ### Description
 
-@short: Deletes data on a link
+@short: Removes a link entry
 
-The route handles the **HTTP DELETE** request made to the `/links/{id}` path.
+This endpoint processes an **HTTP DELETE** request sent to `/links/{id}`.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request URL:
 
-| Name | Type    | Description |
+| Name | Type | Description |
 | ---- | ------- | ----------- |
-| `id` | number  | *Required*. The ID of the link to be deleted. |
+| `id` | number  | *Required*. The identifier of the link you want to delete. |
 
 ### Payload
 
-No payload is required.
+There is no payload needed for this request.
 
 ### Response
 
-No data is returned back. The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+No content is returned. The HTTP status code indicates success (response.status == 200) or failure (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](guides/working_with_server.md)
-- [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
-- [links](api/config/js_kanban_links_config.md)
+- [Working with server](/guides/working_with_server.md)
+- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method.md)
+- [links](/api/config/js_kanban_links_config.md)

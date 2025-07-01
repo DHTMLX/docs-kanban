@@ -8,25 +8,25 @@ description: You can learn about the PUT /rows/{id}/move REST route in the docum
 
 ### Description
 
-@short: Moves a row to a specified position
+@short: Changes the position of a row by moving it to a specified spot.
 
-The route handles the **HTTP PUT** request made to the `rows/{id}/move` path.
+This route processes an **HTTP PUT** request sent to the `rows/{id}/move` endpoint.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request URL:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the row to be moved.|
+| `id`       |  number     | *Required*. The identifier of the row that needs to be moved.|
 
 ### Payload
 
-The server expects to receive a json object with the next properties:
+The request body should contain a JSON object with the following property:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `before`   |  number     | *Optional*. The ID of the row before which the moved row should be placed.|
+| `before`   |  number     | *Optional*. The ID of the row that the moved row should be positioned before.|
 
 Example:
 
@@ -38,7 +38,7 @@ Example:
 
 ### Response
 
-The server returns a json object with the ID of the moved row.
+The response will be a JSON object containing the ID of the row that was moved.
 
 Example:
 
@@ -48,8 +48,8 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates whether the request was successful (response.status == 200) or if it failed (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

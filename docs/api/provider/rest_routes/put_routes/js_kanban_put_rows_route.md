@@ -8,26 +8,26 @@ description: You can learn about the PUT /rows REST route in the documentation o
 
 ### Description
 
-@short: Updates data on a specified row (swimlane) and returns an empty json object
+@short: Updates data for a specific row (swimlane) and returns an empty JSON object.
 
-The route handles the **HTTP PUT** request made to the `/rows/{id}` path.
+This route processes an **HTTP PUT** request sent to the `/rows/{id}` endpoint.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request URL:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `id`       | number      | *Required*. The ID of the row (swimlane) to be updated.|
+| `id`       | number      | *Required*. The ID of the row (swimlane) that needs to be updated.|
 
 ### Payload
 
-The server needs to receive a json object with all row properties (both unchanged and new/modified).
+The server expects a JSON object containing all properties of the row, including both unchanged and updated fields.
 
-| Name        | Type        | Description |
+| Name | Type | Description |
 | ----------- | ----------- | ----------- |
-| `label`     |  string     | *Required*. The name of the row to be updated.|
-| `collapsed` |  boolean    | *Optional*. The state of the row: **true** if the row is collapsed initially and **false** for the expanded state (default).|
+| `label`     |  string     | *Required*. The name of the row to update.|
+| `collapsed` |  boolean    | *Optional*. Indicates whether the row is collapsed initially (**true**) or expanded (**false**, which is the default).|
 
 Example:
 
@@ -40,14 +40,14 @@ Example:
 }
 ~~~
 
-You can find another example of the row object in the [**rows**](api/config/js_kanban_rows_config.md) section.
+For another example of the row object, see the [**rows**](/api/config/js_kanban_rows_config.md) section.
 
 ### Response
 
-In case of the success status, an empty json object is returned back.
-  
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+Upon a successful update, the server responds with an empty JSON object.
+
+The HTTP status code reflects the outcome: a status of 200 means the request was successful, while 500 indicates a failure.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

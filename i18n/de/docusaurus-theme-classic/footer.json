@@ -1,0 +1,62 @@
+{
+  "link.title.Development center": {
+    "message": "Entwicklungszentrum",
+    "description": "Der Titel der Fußzeilen-Linkspalte mit dem Titel=Entwicklungszentrum in der Fußzeile"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "Der Titel der Fußzeilen-Linkspalte mit dem Titel=Community in der Fußzeile"
+  },
+  "link.title.Company": {
+    "message": "Unternehmen",
+    "description": "Der Titel der Fußzeilen-Linkspalte mit dem Titel=Unternehmen in der Fußzeile"
+  },
+  "link.item.label.Download JS Kanban": {
+    "message": "JS Kanban herunterladen",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=JS Kanban herunterladen, der auf https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml verweist"
+  },
+  "link.item.label.Examples": {
+    "message": "Beispiele",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Beispiele, der auf https://snippet.dhtmlx.com/5hcx01h4?tag=kanban verweist"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Blog, der auf https://dhtmlx.com/blog/tag/kanban/ verweist"
+  },
+  "link.item.label.Forum": {
+    "message": "Forum",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Forum, der auf https://forum.dhtmlx.com/c/kanban/ verweist"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=GitHub, der auf https://github.com/DHTMLX verweist"
+  },
+  "link.item.label.Youtube": {
+    "message": "Youtube",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Youtube, der auf https://www.youtube.com/user/dhtmlx verweist"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Facebook, der auf https://www.facebook.com/dhtmlx verweist"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Twitter, der auf https://twitter.com/dhtmlx verweist"
+  },
+  "link.item.label.Linkedin": {
+    "message": "Linkedin",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Linkedin, der auf https://www.linkedin.com/groups/3345009/ verweist"
+  },
+  "link.item.label.About us": {
+    "message": "Über uns",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Über uns, der auf https://dhtmlx.com/docs/company.shtml verweist"
+  },
+  "link.item.label.Contact us": {
+    "message": "Kontakt",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Kontakt, der auf https://dhtmlx.com/docs/contact.shtml verweist"
+  },
+  "link.item.label.Licensing": {
+    "message": "Lizenzierung",
+    "description": "Das Label des Fußzeilen-Links mit dem Label=Lizenzierung, der auf https://dhtmlx.com/docs/products/dhtmlxKanban/#licensing verweist"
+  }
+}

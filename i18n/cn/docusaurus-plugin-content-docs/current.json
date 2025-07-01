@@ -1,0 +1,134 @@
+{
+  "version.label": {
+    "message": "下一个",
+    "description": "当前版本的标签"
+  },
+  "sidebar.docs.category.What's new and migration": {
+    "message": "新功能和迁移",
+    "description": "侧边栏文档中新功能和迁移类别的标签"
+  },
+  "sidebar.docs.category.What's new and migration.link.generated-index.title": {
+    "message": "新功能和迁移",
+    "description": "侧边栏文档中新功能和迁移类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.API": {
+    "message": "API",
+    "description": "侧边栏文档中API类别的标签"
+  },
+  "sidebar.docs.category.Kanban methods": {
+    "message": "看板方法",
+    "description": "侧边栏文档中看板方法类别的标签"
+  },
+  "sidebar.docs.category.Kanban internal API": {
+    "message": "看板内部API",
+    "description": "侧边栏文档中看板内部API类别的标签"
+  },
+  "sidebar.docs.category.Kanban internal API.link.generated-index.title": {
+    "message": "内部API概述",
+    "description": "侧边栏文档中看板内部API类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.Event Bus methods": {
+    "message": "事件总线方法",
+    "description": "侧边栏文档中事件总线方法类别的标签"
+  },
+  "sidebar.docs.category.Export methods": {
+    "message": "导出方法",
+    "description": "侧边栏文档中导出方法类别的标签"
+  },
+  "sidebar.docs.category.State methods": {
+    "message": "状态方法",
+    "description": "侧边栏文档中状态方法类别的标签"
+  },
+  "sidebar.docs.category.Kanban events": {
+    "message": "看板事件",
+    "description": "侧边栏文档中看板事件类别的标签"
+  },
+  "sidebar.docs.category.Kanban properties": {
+    "message": "看板属性",
+    "description": "侧边栏文档中看板属性类别的标签"
+  },
+  "sidebar.docs.category.Toolbar methods": {
+    "message": "工具栏方法",
+    "description": "侧边栏文档中工具栏方法类别的标签"
+  },
+  "sidebar.docs.category.Toolbar properties": {
+    "message": "工具栏属性",
+    "description": "侧边栏文档中工具栏属性类别的标签"
+  },
+  "sidebar.docs.category.Common settings": {
+    "message": "通用设置",
+    "description": "侧边栏文档中通用设置类别的标签"
+  },
+  "sidebar.docs.category.Backend API": {
+    "message": "后端API",
+    "description": "侧边栏文档中后端API类别的标签"
+  },
+  "sidebar.docs.category.Backend API.link.generated-index.title": {
+    "message": "后端API",
+    "description": "侧边栏文档中后端API类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.RestDataProvider API": {
+    "message": "RestDataProvider API",
+    "description": "侧边栏文档中RestDataProvider API类别的标签"
+  },
+  "sidebar.docs.category.RestDataProvider API.link.generated-index.title": {
+    "message": "RestDataProvider API",
+    "description": "侧边栏文档中RestDataProvider API类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.REST methods": {
+    "message": "REST方法",
+    "description": "侧边栏文档中REST方法类别的标签"
+  },
+  "sidebar.docs.category.REST routes": {
+    "message": "REST路由",
+    "description": "侧边栏文档中REST路由类别的标签"
+  },
+  "sidebar.docs.category.GET routes": {
+    "message": "GET路由",
+    "description": "侧边栏文档中GET路由类别的标签"
+  },
+  "sidebar.docs.category.GET routes.link.generated-index.title": {
+    "message": "GET路由",
+    "description": "侧边栏文档中GET路由类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.POST routes": {
+    "message": "POST路由",
+    "description": "侧边栏文档中POST路由类别的标签"
+  },
+  "sidebar.docs.category.POST routes.link.generated-index.title": {
+    "message": "POST路由",
+    "description": "侧边栏文档中POST路由类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.PUT routes": {
+    "message": "PUT路由",
+    "description": "侧边栏文档中PUT路由类别的标签"
+  },
+  "sidebar.docs.category.PUT routes.link.generated-index.title": {
+    "message": "PUT路由",
+    "description": "侧边栏文档中PUT路由类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.DELETE routes": {
+    "message": "DELETE路由",
+    "description": "侧边栏文档中DELETE路由类别的标签"
+  },
+  "sidebar.docs.category.DELETE routes.link.generated-index.title": {
+    "message": "DELETE路由",
+    "description": "侧边栏文档中DELETE路由类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.Backend and frameworks integration": {
+    "message": "后端和框架集成",
+    "description": "侧边栏文档中后端和框架集成类别的标签"
+  },
+  "sidebar.docs.category.Backend and frameworks integration.link.generated-index.title": {
+    "message": "后端和框架集成",
+    "description": "侧边栏文档中后端和框架集成类别的生成索引页面标题"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "指南",
+    "description": "侧边栏文档中指南类别的标签"
+  },
+  "sidebar.docs.category.Guides.link.generated-index.title": {
+    "message": "指南",
+    "description": "侧边栏文档中指南类别的生成索引页面标题"
+  }
+}

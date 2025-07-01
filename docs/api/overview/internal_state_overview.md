@@ -1,14 +1,13 @@
 ---
 sidebar_label: State methods
 title: State methods
-description: You can have an Internal State methods overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Here's a quick overview of the Internal State methods available in the JavaScript Kanban within the DHTMLX JavaScript Kanban library documentation. You can explore developer guides and API references, test code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # State methods
 
-| Name                                                     | Description                                                  |
-| ---------------------------------------------------------| -------------------------------------------------------------|
-| [](../internal/js_kanban_getreactivestate_method.md)     | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
-| [](../internal/js_kanban_getstate_method.md)             | @getshort(../internal/js_kanban_getstate_method.md)          |
-| [](../internal/js_kanban_getstores_method.md)            | @getshort(../internal/js_kanban_getstores_method.md)         |
-
+| Name                                                  | Description                                                 |
+| ----------------------------------------------------- | ----------------------------------------------------------- |
+| [api.getReactiveState()](../../internal/js_kanban_getreactivestate_method/) | @getshort(../internal/js_kanban_getreactivestate_method.md) |
+| [api.getState()](../../internal/js_kanban_getstate_method/)         | @getshort(../internal/js_kanban_getstate_method.md)         |
+| [api.getStores()](../../internal/js_kanban_getstores_method/)        | @getshort(../internal/js_kanban_getstores_method.md)        |

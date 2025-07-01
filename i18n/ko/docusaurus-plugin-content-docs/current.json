@@ -1,0 +1,134 @@
+{
+  "version.label": {
+    "message": "다음",
+    "description": "현재 버전의 레이블"
+  },
+  "sidebar.docs.category.What's new and migration": {
+    "message": "새로운 기능 및 마이그레이션",
+    "description": "사이드바 문서에서 '새로운 기능 및 마이그레이션' 카테고리의 레이블"
+  },
+  "sidebar.docs.category.What's new and migration.link.generated-index.title": {
+    "message": "새로운 기능 및 마이그레이션",
+    "description": "사이드바 문서에서 '새로운 기능 및 마이그레이션' 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.API": {
+    "message": "API",
+    "description": "사이드바 문서에서 API 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Kanban methods": {
+    "message": "칸반 메서드",
+    "description": "사이드바 문서에서 칸반 메서드 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Kanban internal API": {
+    "message": "칸반 내부 API",
+    "description": "사이드바 문서에서 칸반 내부 API 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Kanban internal API.link.generated-index.title": {
+    "message": "내부 API 개요",
+    "description": "사이드바 문서에서 칸반 내부 API 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.Event Bus methods": {
+    "message": "이벤트 버스 메서드",
+    "description": "사이드바 문서에서 이벤트 버스 메서드 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Export methods": {
+    "message": "내보내기 메서드",
+    "description": "사이드바 문서에서 내보내기 메서드 카테고리의 레이블"
+  },
+  "sidebar.docs.category.State methods": {
+    "message": "상태 메서드",
+    "description": "사이드바 문서에서 상태 메서드 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Kanban events": {
+    "message": "칸반 이벤트",
+    "description": "사이드바 문서에서 칸반 이벤트 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Kanban properties": {
+    "message": "칸반 속성",
+    "description": "사이드바 문서에서 칸반 속성 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Toolbar methods": {
+    "message": "툴바 메서드",
+    "description": "사이드바 문서에서 툴바 메서드 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Toolbar properties": {
+    "message": "툴바 속성",
+    "description": "사이드바 문서에서 툴바 속성 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Common settings": {
+    "message": "공통 설정",
+    "description": "사이드바 문서에서 공통 설정 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Backend API": {
+    "message": "백엔드 API",
+    "description": "사이드바 문서에서 백엔드 API 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Backend API.link.generated-index.title": {
+    "message": "백엔드 API",
+    "description": "사이드바 문서에서 백엔드 API 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.RestDataProvider API": {
+    "message": "RestDataProvider API",
+    "description": "사이드바 문서에서 RestDataProvider API 카테고리의 레이블"
+  },
+  "sidebar.docs.category.RestDataProvider API.link.generated-index.title": {
+    "message": "RestDataProvider API",
+    "description": "사이드바 문서에서 RestDataProvider API 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.REST methods": {
+    "message": "REST 메서드",
+    "description": "사이드바 문서에서 REST 메서드 카테고리의 레이블"
+  },
+  "sidebar.docs.category.REST routes": {
+    "message": "REST 경로",
+    "description": "사이드바 문서에서 REST 경로 카테고리의 레이블"
+  },
+  "sidebar.docs.category.GET routes": {
+    "message": "GET 경로",
+    "description": "사이드바 문서에서 GET 경로 카테고리의 레이블"
+  },
+  "sidebar.docs.category.GET routes.link.generated-index.title": {
+    "message": "GET 경로",
+    "description": "사이드바 문서에서 GET 경로 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.POST routes": {
+    "message": "POST 경로",
+    "description": "사이드바 문서에서 POST 경로 카테고리의 레이블"
+  },
+  "sidebar.docs.category.POST routes.link.generated-index.title": {
+    "message": "POST 경로",
+    "description": "사이드바 문서에서 POST 경로 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.PUT routes": {
+    "message": "PUT 경로",
+    "description": "사이드바 문서에서 PUT 경로 카테고리의 레이블"
+  },
+  "sidebar.docs.category.PUT routes.link.generated-index.title": {
+    "message": "PUT 경로",
+    "description": "사이드바 문서에서 PUT 경로 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.DELETE routes": {
+    "message": "DELETE 경로",
+    "description": "사이드바 문서에서 DELETE 경로 카테고리의 레이블"
+  },
+  "sidebar.docs.category.DELETE routes.link.generated-index.title": {
+    "message": "DELETE 경로",
+    "description": "사이드바 문서에서 DELETE 경로 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.Backend and frameworks integration": {
+    "message": "백엔드 및 프레임워크 통합",
+    "description": "사이드바 문서에서 백엔드 및 프레임워크 통합 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Backend and frameworks integration.link.generated-index.title": {
+    "message": "백엔드 및 프레임워크 통합",
+    "description": "사이드바 문서에서 백엔드 및 프레임워크 통합 카테고리의 생성된 인덱스 페이지 제목"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "가이드",
+    "description": "사이드바 문서에서 가이드 카테고리의 레이블"
+  },
+  "sidebar.docs.category.Guides.link.generated-index.title": {
+    "message": "가이드",
+    "description": "사이드바 문서에서 가이드 카테고리의 생성된 인덱스 페이지 제목"
+  }
+}

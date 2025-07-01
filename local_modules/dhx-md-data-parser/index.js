@@ -25,7 +25,7 @@ const AT_NOTATION_FUNCTION_MATCH_REGEXP = /@(\w+)\((.*)\)/g;
 const BRACE_NOTATION_REGEXP = /\{\{(\w+)[(?:\r?\n|\r)\s]+((?:.|(?:\r?\n|\r))+?)\}\}/g;
 
 // [](link)
-// e.g [Chart API Overview](api/api_overview.md)
+// e.g [Chart API Overview](/api/api_overview.md)
 const EMPTY_LINK_REGEXP = /\[\]\(.+?\)/g;
 
 class FileDataParser {
@@ -52,7 +52,7 @@ class FileDataParser {
     // const data = parse(this.#fileData);
     // TODO: Convert to jsx only the required html (which is not wrapped in js md markup e.g.).
     // TODO: Use node-html-parser to parse html in the string
-    // TODO: ~~~html <some_tags/> ~~~
+    // TODO:~~~html <some_tags/>~~~
     this.#fileData = convert(this.#fileData);
     this.#findAndReplaceStrong();
   }

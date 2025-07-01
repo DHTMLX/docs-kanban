@@ -10,23 +10,23 @@ description: You can learn about the DELETE /cards/{cardId}/vote REST route in t
 
 @short: Removes a vote from a card and returns a json object with a user ID that removes a vote
 
-The route handles the **HTTP DELETE** request made to the `/cards/{cardId}/vote` path.
+This route processes an **HTTP DELETE** request sent to `/cards/{cardId}/vote`.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request URL:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `cardId`   |  number     | *Required*. The ID of the card, from which the vote will be removed.|
+| `cardId`   |  number     | *Required*. The ID of the card from which the vote will be removed.|
 
 ### Payload
 
-No payload is required.
+No payload needs to be sent.
 
 ### Response
 
-The route returns a json object with a user ID that removes a vote.
+The response is a JSON object containing the user ID of the person who removed their vote.
 
 Example:
 
@@ -36,8 +36,8 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates whether the request was successful (response.status == 200) or if an error occurred (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

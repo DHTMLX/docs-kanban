@@ -8,7 +8,7 @@ description: You can learn about the unselectCard method in the documentation of
 
 ### Description
 
-@short: Unselects card(s) by its ID
+@short: Deselects the card(s) identified by their ID.
 
 ### Usage
 
@@ -17,12 +17,12 @@ unselectCard({ id: string | number }): void;
 ~~~
 
 :::info
-To unselect all cards, call the **unselectCard()** method without parameters
+Calling **unselectCard()** without any arguments will clear the selection from all cards.
 :::
 
 ### Parameters
 
-- `id` - (required) the ID of the card to be unselected 
+- `id` - (required) the unique identifier of the card to be deselected.
 
 ### Example
 
@@ -32,6 +32,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// unselect the card with the 1 ID
+// deselect the card with ID 1
 board.unselectCard({ id: 1 });
 ~~~

@@ -1,26 +1,26 @@
 ---
 sidebar_label: POST /links
 title: POST /links
-description: You can learn about the POST /links REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the POST /links REST route in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, sample code, live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # POST `/links`
 
 ### Description
 
-@short: Creates a new link and returns a json object with a new link ID
+@short: Adds a new link and returns a JSON object containing the new link ID
 
-The route handles the **HTTP POST** request made to the `/links` path.
+This route processes **HTTP POST** requests sent to the `/links` endpoint.
 
 ### Payload
 
-The server expects to receive a json object with the next properties:
+The server expects a JSON object with the following properties:
 
-| Name        | Type                   | Description |
+| Name | Type | Description |
 | ----------- | ---------------------- | ----------- |
-| `masterId`  |  *number* or *string*  | *Required*. The ID of a master link. |
-| `slaveId`   |  *number* or *string*  | *Required*. The ID of a slave link.  |
-| `relation`  |  *string*              | *Required*. The type of the relation created by the link. |
+| `masterId`  |  *number* or *string*  | *Required*. The ID of the master link. |
+| `slaveId`   |  *number* or *string*  | *Required*. The ID of the slave link.  |
+| `relation`  |  *string*              | *Required*. Defines the type of relation the link represents. |
 
 Example:
 
@@ -34,7 +34,7 @@ Example:
 
 ### Response
 
-The route returns a json object with a new link ID.
+The response returns a JSON object with the ID of the newly created link.
 
 Example:
 
@@ -44,11 +44,11 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates if the request was successful (response.status == 200) or if it failed (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](guides/working_with_server.md)
-- [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
-- [links](api/config/js_kanban_links_config.md)
+- [Working with server](/guides/working_with_server.md)
+- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method.md)
+- [links](/api/config/js_kanban_links_config.md)

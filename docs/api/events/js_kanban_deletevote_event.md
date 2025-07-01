@@ -8,7 +8,7 @@ description: You can learn about the delete-vote event in the documentation of t
 
 ### Description
 
-@short: Fires when a user deletes a vote from a card
+@short: Triggered when a user removes a vote from a card
 
 ### Usage
 
@@ -21,13 +21,13 @@ description: You can learn about the delete-vote event in the documentation of t
 
 ### Parameters
 
-The callback of the **delete-vote** event can take an object with the following parameters:
+The callback for the **delete-vote** event receives an object containing the following properties:
 
-- `cardId` - (required) the ID of the card, from which the vote to be deleted
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `cardId` - (required) the ID of the card from which the vote is being removed
+- `skipProvider` - (optional) controls whether the request to the server should be skipped or not
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -38,10 +38,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "delete-vote" event
+// listen to the "delete-vote" event
 board.api.on("delete-vote", (obj) => {
     console.log(obj.cardId);
 });
 ~~~
 
-**Change log:** The event was added in v1.4
+**Change log:** This event was introduced in v1.4

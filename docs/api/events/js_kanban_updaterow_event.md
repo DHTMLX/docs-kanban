@@ -1,14 +1,14 @@
 ---
 sidebar_label: update-row
 title: update-row Event
-description: You can learn about the update-row event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Discover the update-row event in the DHTMLX JavaScript Kanban library documentation. Explore developer guides, API references, try code samples, live demos, and get a free 30-day trial of DHTMLX Kanban.
 ---
 
 # update-row
 
 ### Description
 
-@short: Fires when updating row data
+@short: Triggered when a row's data is updated
 
 ### Usage
 
@@ -23,20 +23,20 @@ description: You can learn about the update-row event in the documentation of th
 
 ### Parameters
 
-The callback of the **update-row** event can take an object with the following parameters:
+The callback for the **update-row** event receives an object with these parameters:
 
-- `id` - (required) the ID of the row to be updated
-- `row` - (optional) the new data object of the row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
-- `replace` - (optional) enables/disables fully data replacing
+- `id` - (required) the identifier of the row being updated
+- `row` - (optional) the new data object for the row. Find the complete list of **row** parameters [**here**](/api/config/js_kanban_rows_config.md)
+- `replace` - (optional) controls whether the data is fully replaced or partially updated
 
-    :::note
-    If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
-    :::
+:::note
+Setting `replace` to *true* will completely overwrite the old data with the new one. If omitted or false, only the specified values will be updated.
+:::
 
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `skipProvider` - (optional) controls whether the request to the server is suppressed
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -47,12 +47,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "update-row" event
+// listen to the "update-row" event
 board.api.on("update-row", (obj) => {
     console.log(obj);
 });
 ~~~
 
 **Change log**:
-- The **id** and **row** parameters were added in v1.1
+- The **id** and **row** parameters were introduced in v1.1
 - The **replace** parameter was added in v1.3

@@ -1,14 +1,14 @@
 ---
 sidebar_label: moveCard()
 title: moveCard Method
-description: You can learn about the moveCard method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the moveCard method in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, code samples, live demos, and get a free 30-day trial of DHTMLX Kanban.
 ---
 
 # moveCard()
 
 ### Description
 
-@short: Moves a card to the specified column (and row)
+@short: Shifts a card to a specified column (and row).
 
 ### Usage
 
@@ -23,13 +23,13 @@ moveCard({
 
 ### Parameters
 
-- `id` - (required) the ID of the card that will be moved 
-- `columnId` - (required) the ID of the column the card will be placed into 
-- `rowId` - (optional) the ID of the row the card will be placed into
-- `before` - (optional) the ID of the card, before which the new card will be placed
+- `id` - (required) the card's ID that needs to be moved 
+- `columnId` - (required) the target column's ID where the card will be placed 
+- `rowId` - (optional) the target row's ID where the card will be positioned
+- `before` - (optional) the ID of the card before which the moved card will be inserted
 
 :::info
-If you specify the **rowKey** property in the widget config, the **rowId** parameter of the **moveCard()** method is *required*!
+When the **rowKey** property is set in the widget configuration, providing the **rowId** in the **moveCard()** method becomes *mandatory*!
 :::
 
 ### Example
@@ -40,9 +40,9 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// move the card with an 1 ID
-// the item will be placed into the "inprogress" column and the "feature" row,  
-// before the card with 8 ID
+// move the card with ID 1
+// it will be placed inside the "inprogress" column and the "feature" row,  
+// positioned before the card with ID 8
 board.moveCard({
     id: 1,
     columnId: "inprogress",

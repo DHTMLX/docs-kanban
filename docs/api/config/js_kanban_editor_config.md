@@ -1,14 +1,14 @@
 ---
 sidebar_label: editor
 title: editor Config
-description: You can learn about the editor config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the editor configuration in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # editor
 
 ### Description
 
-@short: Optional. An object of settings for configuring the Kanban editor
+@short: Optional. Contains settings for customizing the Kanban editor
 
 ### Usage
 
@@ -22,11 +22,11 @@ editor?: {
 
 ### Parameters
 
-- `autoSave` - (optional) enables/disables an autosave mode of editor
-- `debounce` - (optional) time of delay of autosaving data (works with the ***autoSave: true*** parameter only)
-- `placement` - (optional) specifies the editor placement. You can set the following values:
-    - `"sidebar"` - displays the editor as a sidebar
-    - `"modal"` - displays the editor as a modal window
+- `autoSave` - (optional) turns the autosave feature on or off
+- `debounce` - (optional) sets the delay time before autosaving data (effective only when ***autoSave: true***)
+- `placement` - (optional) defines where the editor appears. Possible values are:
+    - `"sidebar"` - shows the editor as a sidebar
+    - `"modal"` - shows the editor in a modal window
 
 ### Default config
 
@@ -53,6 +53,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The `placement` parameter was added in v1.6
+**Change log:** The `placement` option was introduced in v1.6
 
 **Related samples:** [Kanban. Opening the editor in a modal window](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)

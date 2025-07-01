@@ -8,7 +8,7 @@ description: You can learn about the add-vote event in the documentation of the 
 
 ### Description
 
-@short: Fires when a user adds a new vote
+@short: Triggered whenever a user adds a new vote
 
 ### Usage
 
@@ -21,13 +21,13 @@ description: You can learn about the add-vote event in the documentation of the 
 
 ### Parameters
 
-The callback of the **add-vote** event can take an object with the following parameters:
+The callback for the **add-vote** event receives an object containing the following properties:
 
-- `cardId` - (required) the ID of the card, to which the vote to be added
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `cardId` - (required) the ID of the card where the vote is being added
+- `skipProvider` - (optional) controls whether the request to the server is skipped or not
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To work with internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -38,10 +38,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "add-vote" event
+// listen for the "add-vote" event
 board.api.on("add-vote", (obj) => {
     console.log(obj.cardId);
 });
 ~~~
 
-**Change log:** The event was added in v1.4
+**Change log:** This event was introduced in v1.4

@@ -6,7 +6,7 @@ description: You can learn about the integration in the documentation of the DHT
 
 # Integration with DHTML widgets
 
-You can integrate DHTMLX Kanban with other DHTMLX widgets (for instance, [Gantt](https://docs.dhtmlx.com/gantt/), [Scheduler](https://docs.dhtmlx.com/scheduler/), [To Do List](https://docs.dhtmlx.com/todolist/)). Check the examples below.
+DHTMLX Kanban works well with other DHTMLX widgets, like [Gantt](https://docs.dhtmlx.com/gantt/), [Scheduler](https://docs.dhtmlx.com/scheduler/), and [To Do List](https://docs.dhtmlx.com/todolist/). Some examples are provided below.
 
 ## Integration with DHTMLX Gantt and Scheduler
 

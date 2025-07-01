@@ -8,26 +8,26 @@ description: You can learn about the DELETE /columns REST route in the documenta
 
 ### Description
 
-@short: Deletes data on a column
+@short: Removes a column's data
 
-The route handles the **HTTP DELETE** request made to the `/columns/{id}` path.
+This route processes **HTTP DELETE** requests sent to the `/columns/{id}` endpoint.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request URL:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the column to be deleted.|
+| `id`       |  number     | *Required*. Specifies the ID of the column to remove.|
 
 ### Payload
 
-No payload is required.
+No payload is needed.
 
 ### Response
 
-No data is returned back. The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+No content is returned. The status code indicates the outcome: success with response.status == 200, or failure with response.status == 500.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

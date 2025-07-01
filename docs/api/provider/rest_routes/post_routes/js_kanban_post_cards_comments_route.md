@@ -1,25 +1,25 @@
 ---
 sidebar_label: POST /cards/{id}/comments
 title: POST /cards/{cardId}/comments
-description: You can learn about the POST /cards/{cardId}/comments REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: This section covers the POST /cards/{cardId}/comments REST route from the DHTMLX JavaScript Kanban library documentation. It includes developer guides, API references, practical code samples, live demos, and offers a free 30-day trial of DHTMLX Kanban.
 ---
 
 # POST `/cards/{cardId}/comments`
 
 ### Description
 
-@short: Adds a new comment(s) to the card and returns a json object with the  ID of the new added comment
+@short: Adds one or more new comments to the specified card and returns a JSON object containing the ID of the newly added comment.
 
-The route handles the **HTTP POST** request made to the `/cards/{cardId}/comments` path.
+This endpoint processes **HTTP POST** requests sent to `/cards/{cardId}/comments`.
 
 ### Payload
 
-The server expects to receive a json object with the next properties:
+The server expects a JSON object with the following properties:
 
-| Name        | Type        | Description |
+| Name | Type | Description |
 | ----------- | ----------- | ----------- |
-| `text`      | string      | *Required*. The comment's text.|
-| `date`      | object      | *Required*. The comment's date.|
+| `text`      | string      | *Required*. The content of the comment.|
+| `date`      | object      | *Required*. The date of the comment.|
 
 Example:
 
@@ -32,7 +32,7 @@ Example:
 
 ### Response
 
-The route returns a json object with the ID of the new added comment.
+The response includes a JSON object containing the ID of the newly added comment.
 
 Example:
 
@@ -42,8 +42,8 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates the outcome of the request: a status of 200 means success, while 500 indicates an error.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

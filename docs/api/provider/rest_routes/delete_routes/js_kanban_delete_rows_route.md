@@ -8,26 +8,26 @@ description: You can learn about the DELETE /rows REST route in the documentatio
 
 ### Description
 
-@short: Deletes data on a row (swimlane)
+@short: Removes a row (swimlane) from the data.
 
-The route handles the **HTTP DELETE** request made to the `/rows/{id}` path.
+This route processes an **HTTP DELETE** request sent to the `/rows/{id}` endpoint.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request URL:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the row to be deleted.|
+| `id`       |  number     | *Required*. The unique identifier of the row to be removed.|
 
 ### Payload
 
-No payload is required.
+No payload needs to be sent with the request.
 
 ### Response
 
-No data is returned back. The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+No content is returned. The HTTP status code indicates the outcome: a status of 200 means the deletion was successful, while 500 indicates an error.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

@@ -1,14 +1,14 @@
 ---
 sidebar_label: rows
 title: rows Config
-description: You can learn about the rows config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the rows config in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code samples and live demos, and get a free 30-day trial of DHTMLX Kanban.
 ---
 
 # rows
 
 ### Description
 
-@short: Optional. An array of objects containing the rows (swimlanes) data
+@short: Optional. An array of objects that holds the rows (swimlanes) data
 
 ### Usage
 
@@ -24,20 +24,20 @@ rows?: [
 ~~~
 
 :::info
-To create Swimlanes you need to specify the corresponding data in the array of the **rows** property. You can collapse/expand, rename, delete and move swimlanes via UI or using [related API](../../../../kanban/howtos/#how-to-work-with-rows-swimlanes)
+To set up Swimlanes, provide the relevant data in the **rows** array. You can collapse/expand, rename, delete, and move swimlanes either through the UI or by using the [related API](/howtos/#how-to-work-with-rows-swimlanes).
 :::
 
 ### Parameters
 
-For each row (swimlane) you can specify the following parameters (data):
+Each row (swimlane) can include the following parameters:
 
-- `id` - (required) a row (swimlane) **ID**. It is used for managing the row via the corresponding methods
-- `label` - (optional) a row (swimlane) label. It is displayed in the row section
-- `collapsed` - (optional) a current state of the row (swimlane). If ***true***, the row is collapsed initially. Default value is ***false*** (expanded state)
-- `css` - (optional) defines css styles for a separate row
+- `id` - (required) the row (swimlane) **ID** used for handling the row through its methods
+- `label` - (optional) the label for the row (swimlane), shown in the row area
+- `collapsed` - (optional) indicates if the row (swimlane) starts collapsed. If ***true***, it's collapsed initially. The default is ***false*** (expanded)
+- `css` - (optional) applies CSS styles to an individual row
 
 :::info
-If you want to load new data for rows (swimlanes) dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
+To dynamically load new row (swimlane) data, the [**parse()**](../../methods/js_kanban_parse_method) method can be used.
 :::
 
 ### Example
@@ -51,15 +51,15 @@ const rows = [
 new kanban.Kanban("#root", {
     columns,
     cards,
-    rows, // swimlanes data
+    rows, // swimlane data
     // other parameters
 });
 ~~~
 
-**Change log:** The ***css*** parameter was added in v1.4
+**Change log:** The ***css*** parameter was introduced in v1.4
 
 **Related articles:**
-- [Working with data](../../../guides/working_with_data)
-- [updateRow()](api/methods/js_kanban_updaterow_method.md)
+- [Working with data](/guides/working_with_data)
+- [updateRow()](/api/methods/js_kanban_updaterow_method.md)
 
 **Related sample:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

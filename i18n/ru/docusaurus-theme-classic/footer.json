@@ -1,0 +1,62 @@
+{
+  "link.title.Development center": {
+    "message": "Центр разработки",
+    "description": "Заголовок колонки ссылок в подвале с title=Development center в футере"
+  },
+  "link.title.Community": {
+    "message": "Сообщество",
+    "description": "Заголовок колонки ссылок в подвале с title=Community в футере"
+  },
+  "link.title.Company": {
+    "message": "Компания",
+    "description": "Заголовок колонки ссылок в подвале с title=Company в футере"
+  },
+  "link.item.label.Download JS Kanban": {
+    "message": "Скачать JS Kanban",
+    "description": "Метка ссылки в футере с label=Download JS Kanban, ведущей на https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml"
+  },
+  "link.item.label.Examples": {
+    "message": "Примеры",
+    "description": "Метка ссылки в футере с label=Examples, ведущей на https://snippet.dhtmlx.com/5hcx01h4?tag=kanban"
+  },
+  "link.item.label.Blog": {
+    "message": "Блог",
+    "description": "Метка ссылки в футере с label=Blog, ведущей на https://dhtmlx.com/blog/tag/kanban/"
+  },
+  "link.item.label.Forum": {
+    "message": "Форум",
+    "description": "Метка ссылки в футере с label=Forum, ведущей на https://forum.dhtmlx.com/c/kanban/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Метка ссылки в футере с label=GitHub, ведущей на https://github.com/DHTMLX"
+  },
+  "link.item.label.Youtube": {
+    "message": "Youtube",
+    "description": "Метка ссылки в футере с label=Youtube, ведущей на https://www.youtube.com/user/dhtmlx"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "Метка ссылки в футере с label=Facebook, ведущей на https://www.facebook.com/dhtmlx"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Метка ссылки в футере с label=Twitter, ведущей на https://twitter.com/dhtmlx"
+  },
+  "link.item.label.Linkedin": {
+    "message": "Linkedin",
+    "description": "Метка ссылки в футере с label=Linkedin, ведущей на https://www.linkedin.com/groups/3345009/"
+  },
+  "link.item.label.About us": {
+    "message": "О нас",
+    "description": "Метка ссылки в футере с label=About us, ведущей на https://dhtmlx.com/docs/company.shtml"
+  },
+  "link.item.label.Contact us": {
+    "message": "Связаться с нами",
+    "description": "Метка ссылки в футере с label=Contact us, ведущей на https://dhtmlx.com/docs/contact.shtml"
+  },
+  "link.item.label.Licensing": {
+    "message": "Лицензирование",
+    "description": "Метка ссылки в футере с label=Licensing, ведущей на https://dhtmlx.com/docs/products/dhtmlxKanban/#licensing"
+  }
+ }

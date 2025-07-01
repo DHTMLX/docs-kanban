@@ -1,0 +1,134 @@
+{
+  "version.label": {
+    "message": "Следующий",
+    "description": "Метка для текущей версии"
+  },
+  "sidebar.docs.category.What's new and migration": {
+    "message": "Что нового и миграция",
+    "description": "Метка для категории 'Что нового и миграция' в боковой панели документации"
+  },
+  "sidebar.docs.category.What's new and migration.link.generated-index.title": {
+    "message": "Что нового и миграция",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'Что нового и миграция' в боковой панели документации"
+  },
+  "sidebar.docs.category.API": {
+    "message": "API",
+    "description": "Метка для категории API в боковой панели документации"
+  },
+  "sidebar.docs.category.Kanban methods": {
+    "message": "Методы Kanban",
+    "description": "Метка для категории 'Методы Kanban' в боковой панели документации"
+  },
+  "sidebar.docs.category.Kanban internal API": {
+    "message": "Внутренний API Kanban",
+    "description": "Метка для категории 'Внутренний API Kanban' в боковой панели документации"
+  },
+  "sidebar.docs.category.Kanban internal API.link.generated-index.title": {
+    "message": "Обзор внутреннего API",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'Внутренний API Kanban' в боковой панели документации"
+  },
+  "sidebar.docs.category.Event Bus methods": {
+    "message": "Методы Event Bus",
+    "description": "Метка для категории 'Методы Event Bus' в боковой панели документации"
+  },
+  "sidebar.docs.category.Export methods": {
+    "message": "Методы экспорта",
+    "description": "Метка для категории 'Методы экспорта' в боковой панели документации"
+  },
+  "sidebar.docs.category.State methods": {
+    "message": "Методы состояния",
+    "description": "Метка для категории 'Методы состояния' в боковой панели документации"
+  },
+  "sidebar.docs.category.Kanban events": {
+    "message": "События Kanban",
+    "description": "Метка для категории 'События Kanban' в боковой панели документации"
+  },
+  "sidebar.docs.category.Kanban properties": {
+    "message": "Свойства Kanban",
+    "description": "Метка для категории 'Свойства Kanban' в боковой панели документации"
+  },
+  "sidebar.docs.category.Toolbar methods": {
+    "message": "Методы панели инструментов",
+    "description": "Метка для категории 'Методы панели инструментов' в боковой панели документации"
+  },
+  "sidebar.docs.category.Toolbar properties": {
+    "message": "Свойства панели инструментов",
+    "description": "Метка для категории 'Свойства панели инструментов' в боковой панели документации"
+  },
+  "sidebar.docs.category.Common settings": {
+    "message": "Общие настройки",
+    "description": "Метка для категории 'Общие настройки' в боковой панели документации"
+  },
+  "sidebar.docs.category.Backend API": {
+    "message": "Backend API",
+    "description": "Метка для категории Backend API в боковой панели документации"
+  },
+  "sidebar.docs.category.Backend API.link.generated-index.title": {
+    "message": "Backend API",
+    "description": "Заголовок автосгенерированной страницы индекса для категории Backend API в боковой панели документации"
+  },
+  "sidebar.docs.category.RestDataProvider API": {
+    "message": "RestDataProvider API",
+    "description": "Метка для категории RestDataProvider API в боковой панели документации"
+  },
+  "sidebar.docs.category.RestDataProvider API.link.generated-index.title": {
+    "message": "RestDataProvider API",
+    "description": "Заголовок автосгенерированной страницы индекса для категории RestDataProvider API в боковой панели документации"
+  },
+  "sidebar.docs.category.REST methods": {
+    "message": "REST методы",
+    "description": "Метка для категории 'REST методы' в боковой панели документации"
+  },
+  "sidebar.docs.category.REST routes": {
+    "message": "REST маршруты",
+    "description": "Метка для категории 'REST маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.GET routes": {
+    "message": "GET маршруты",
+    "description": "Метка для категории 'GET маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.GET routes.link.generated-index.title": {
+    "message": "GET маршруты",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'GET маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.POST routes": {
+    "message": "POST маршруты",
+    "description": "Метка для категории 'POST маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.POST routes.link.generated-index.title": {
+    "message": "POST маршруты",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'POST маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.PUT routes": {
+    "message": "PUT маршруты",
+    "description": "Метка для категории 'PUT маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.PUT routes.link.generated-index.title": {
+    "message": "PUT маршруты",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'PUT маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.DELETE routes": {
+    "message": "DELETE маршруты",
+    "description": "Метка для категории 'DELETE маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.DELETE routes.link.generated-index.title": {
+    "message": "DELETE маршруты",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'DELETE маршруты' в боковой панели документации"
+  },
+  "sidebar.docs.category.Backend and frameworks integration": {
+    "message": "Интеграция с Backend и фреймворками",
+    "description": "Метка для категории 'Интеграция с Backend и фреймворками' в боковой панели документации"
+  },
+  "sidebar.docs.category.Backend and frameworks integration.link.generated-index.title": {
+    "message": "Интеграция с Backend и фреймворками",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'Интеграция с Backend и фреймворками' в боковой панели документации"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "Руководства",
+    "description": "Метка для категории 'Руководства' в боковой панели документации"
+  },
+  "sidebar.docs.category.Guides.link.generated-index.title": {
+    "message": "Руководства",
+    "description": "Заголовок автосгенерированной страницы индекса для категории 'Руководства' в боковой панели документации"
+  }
+ }

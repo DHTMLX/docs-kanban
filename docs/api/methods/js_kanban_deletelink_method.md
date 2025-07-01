@@ -8,7 +8,7 @@ description: You can learn about the deleteLink method in the documentation of t
 
 ### Description
 
-@short: Removes the specified link from datastore of Kanban
+@short: Deletes the specified link from the Kanban datastore.
 
 ### Usage
 
@@ -18,7 +18,7 @@ deleteLink({ id: string | number }): void;
 
 ### Parameters
 
-- `id` - (required) the ID of the link to be deleted
+- `id` - (required) the ID of the link that needs to be removed
 
 ### Example
 

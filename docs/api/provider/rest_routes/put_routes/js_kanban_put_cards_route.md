@@ -8,35 +8,35 @@ description: You can learn about the PUT /cards REST route in the documentation 
 
 ### Description
 
-@short: Updates data on a specified card and returns an empty json object
+@short: Updates the data of a specified card and returns an empty JSON object.
 
-The route handles the **HTTP PUT** request made to the `/cards/{id}` path.
+This route processes an **HTTP PUT** request sent to the `/cards/{id}` endpoint.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request path:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the card to be updated.|
+| `id`       |  number     | *Required*. The ID of the card to update.|
 
 ### Payload
 
-The server needs to receive a json object with the card object in it that contains all card properties (both unchanged and new/modified).
+The server expects a JSON object containing the card object with all its properties, including both unchanged and updated values.
 
-| Name          | Type        | Description |
+| Name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `label`       |  string     | *Required*. The name of the card to be updated.|
-| `description` |  string     | *Required*. The card description.|
-| `column`      | number      | *Required*. The ID of the column the card refers to.|
-| `row`         | number      | *Required*. The ID of the row the card refers to.|
-| `start_date`  |  string     | *Required*. The start date in the ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
-| `end_date`    |  string     | *Required*. The end date in the ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
-| `progress`    |  number     | *Required*. The progress bar value in the range from 0 to 100 points.|
-| `attached`    |  object     | *Required*. An array with data of the attached file(s). See the object example here [**cards**](api/config/js_kanban_cards_config.md)|
-| `color`       |  string     | *Required*. The color of the card top line in HEX.|
-| `priority`    |  number     | *Required*. The card priority ID. |
-| `users`       |  object     | *Required*. An array with the assigned users IDs. See the object example here [**cardShape**](api/config/js_kanban_cardshape_config.md) |
+| `label`       |  string     | *Required*. The name of the card to update.|
+| `description` |  string     | *Required*. The card's description.|
+| `column`      | number      | *Required*. The ID of the column the card belongs to.|
+| `row`         | number      | *Required*. The ID of the row the card belongs to.|
+| `start_date`  |  string     | *Required*. The start date in ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
+| `end_date`    |  string     | *Required*. The end date in ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
+| `progress`    |  number     | *Required*. The progress value, ranging from 0 to 100.|
+| `attached`    |  object     | *Required*. An array containing data about attached file(s). See the object example here [**cards**](/api/config/js_kanban_cards_config.md)|
+| `color`       |  string     | *Required*. The color of the card's top line in HEX format.|
+| `priority`    |  number     | *Required*. The priority ID of the card. |
+| `users`       |  object     | *Required*. An array of assigned user IDs. See the object example here [**cardShape**](/api/config/js_kanban_cardshape_config.md) |
 
 Example:
 
@@ -58,14 +58,14 @@ Example:
 }
 ~~~
 
-You can find another example of the card object in the [**cards**](api/config/js_kanban_cards_config.md) section.
+Another example of the card object is available in the [**cards**](/api/config/js_kanban_cards_config.md) section.
 
 ### Response
 
-In case of the success status, an empty json object is returned back.
-  
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+If the update is successful, the server returns an empty JSON object.
+
+The HTTP status code indicates the result of the request: success with status 200, or failure with status 500.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

@@ -8,7 +8,7 @@ description: You can learn about the moveColumn method in the documentation of t
 
 ### Description
 
-@short: Moves a column to the new position
+@short: Shifts a column to a new position within the board.
 
 ### Usage
 
@@ -21,8 +21,8 @@ moveColumn({
 
 ### Parameters
 
-- `id` - (required) the ID of the column to be moved
-- `before` - (required) the ID of the column, the moved one will be placed before it
+- `id` - (required) the ID of the column to be relocated
+- `before` - (required) the ID of the column before which the moved column will be inserted
 
 ### Example
 
@@ -39,4 +39,4 @@ board.moveColumn({
 });
 ~~~
 
-**Change log:** The method was added in v1.1
+**Change log:** The method was introduced in v1.1

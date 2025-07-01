@@ -11,7 +11,7 @@ description: You can learn about the undo method in the documentation of the DHT
 @short: Reverts the last operation in Kanban
 
 :::info
-The `undo()` method works with the [`history: true`](api/config/js_kanban_history_config.md) config only!
+The `undo()` method only works when the [`history: true`](/api/config/js_kanban_history_config.md) configuration is enabled!
 :::
 
 ### Usage
@@ -28,7 +28,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// makes one step back in history of Kanban
+// steps back one action in Kanban's history
 board.undo();
 ~~~
 

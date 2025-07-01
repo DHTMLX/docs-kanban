@@ -1,14 +1,14 @@
 ---
 sidebar_label: scroll()
 title: scroll Method
-description: You can learn about the scroll method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the scroll method in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, code samples, live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # scroll()
 
 ### Description
 
-@short: Scrolls Kanban to the specified element
+@short: Moves the Kanban view to a specific element
 
 ### Usage
 
@@ -22,9 +22,9 @@ scroll({
 
 ### Parameters
 
-- `id` - (required) the ID of the target element
-- `to` - (required) the type of the target element. The available values are "column", "row" and "card"
-- `options` - (optional) the object of scrolling options. The full list of the scrolling parameters can be found [here](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
+- `id` - (required) the ID of the element to scroll to
+- `to` - (required) specifies the element type to scroll to; can be "column", "row", or "card"
+- `options` - (optional) an object containing scrolling options. A full list of the available parameters is available [here](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
 
 ### Example
 
@@ -46,4 +46,4 @@ board.scroll({
 });
 ~~~
 
-**Change log:** The method was added in v1.2
+**Change log:** This method was introduced in version 1.2

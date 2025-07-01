@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.on()
 title: on Method
-description: You can learn about the on method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Learn about the on method in the DHTMLX JavaScript Kanban library documentation. Explore developer guides, API references, try code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # api.on()
 
 ### Description
 
-@short: Allows attaching a handler to the inner events
+@short: Enables the attachment of a handler to internal events
 
 ### Usage
 
@@ -21,13 +21,13 @@ api.on(
 
 ### Parameters
 
-- `event` - (required) an event to be fired 
-- `handler` - (required) a handler to be attached (the handler arguments will depend on the event to be fired)
+- `event` - (required) the event to listen for 
+- `handler` - (required) the function to handle the event (arguments depend on the triggered event)
 
 ### Events
 
 :::info
-The full list of the Kanban internal events can be found [**here**](api/overview/main_overview.md/#kanban-events)
+You can find the complete list of Kanban internal events [**here**](/api/overview/main_overview.md/#kanban-events)
 :::
 
 ### Example
@@ -38,7 +38,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// output the card data in console when its moving
+// log card data to the console when a card is moved
 board.api.on("move-card", ({ id, columnId }) => {
     console.log({ id, columnId });
 });

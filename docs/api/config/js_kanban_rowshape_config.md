@@ -1,21 +1,21 @@
 ---
 sidebar_label: rowShape
 title: rowShape Config
-description: You can learn about the rowShape config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: The rowShape config in the DHTMLX JavaScript Kanban library lets you adjust how rows look. Check out the developer guides and API reference, test code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # rowShape
 
 ### Description
 
-@short: Optional. An object of settings for managing the rows appearance
+@short: Optional. An object with settings to customize the appearance of rows
 
 ### Usage
 
-~~~jsx {}
+```jsx {}
 rowShape?: {
     menu?: {
-        show?: boolean, 
+        show?: boolean,
         items?: [
             {
                 id?: string,
@@ -29,150 +29,153 @@ rowShape?: {
     css?: (row, cards) => string,
     confirmDeletion?: boolean
 };
-~~~
+```
 
 ### Parameters
 
-To configure the rows appearance, in the **rowShape** object you can specify the following parameters:
+To control how rows appear, the **rowShape** object supports these options:
 
-- `menu` - (optional) an object of parameters of the rows context menu. Here you can specify the following parameters:
-    - `show` - (optional) enables/disables a row context menu
-    - `items` - (optional) an array of objects containing parameters of items of the rows context menu. For each item you can specify the following parameters:
-        - `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
-            - ***"set-edit"*** - defines the action to edit a row name
-            - ***"move-row:up"*** - defines the action to move a row up
-            - ***"move-row:down"*** - defines the action to move a row down
-            - ***"delete-row"*** - defines the action to delete a row
+- `menu` - (optional) settings for the row context menu. It includes:
+  - `show` - (optional) toggles the row context menu on or off
+  - `items` - (optional) an array of objects defining menu items for rows. Each item can have:
+    - `id` - (optional) menu item ID. Use these values for built-in actions:
+  - **_"set-edit"_** - allows editing the row name
+  - **_"move-row:up"_** - moves the row up
+  - **_"move-row:down"_** - moves the row down
+  - **_"delete-row"_** - deletes the row
 
-        - `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
-        - `text` - (optional) a name of the menu item
-        - `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
-        - `onClick` - (optional) a custom callback function, that takes the following arguments:
-            - ***id*** - an ID of the current menu item
-            - ***item*** - a data object of the current menu item
-            - ***row*** - a data object of the target row
+        - `icon` - (optional) icon class name for the menu item (e.g., *mdi-delete*)
+        - `text` - (optional) the menu item's label
+        - `disabled` - (optional) whether the menu item is active or disabled (boolean value)
+        - `onClick` - (optional) custom callback function receiving:
 
-    :::info
-    You can also set the `items` parameter to a custom function, that takes the following arguments:
-    - ***row*** - a data object of a current row
-    - ***rowIndex*** - an index of a current row
-    - ***rows*** - an array of objects containing all rows data
-    - ***store*** - an object of *dataStore*
+  - **_id_** - current menu item ID
+  - **_item_** - current menu item data
+  - **_row_** - target row data
 
-    This function allows customizing menu for any row or hide it for a specific one (by returning *null* or *false*):
+:::info
+The `items` parameter can also be a custom function with these arguments:
 
-    ~~~jsx {}
-    items: ({ row, rowIndex, rows, store }) => {
-        if(rowIndex == 0)
-            return null
-        return [
-            { id: "set-edit", icon: "wxi-edit", text: "Rename" },
-            {
-                id: "custom-delete-row",
-                icon: "wxi-delete",
-                text: "Remove row"
-            },
-            {
-                id: "custom-move-row:up",
-                icon: "wxi-arrow-up",
-                text: "Move up"
-            }
-        ]
-    }
-    ~~~
-    :::
+- **_row_** - current row data
+- **_rowIndex_** - current row's index
+- **_rows_** - array of all rows
+- **_store_** - the _dataStore_ object
 
-- `css` - a function returns a css class that applies to rows conditionally
-- `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the row deletion
+This function gives you the flexibility to customize the menu for specific rows or disable it entirely (by returning _null_ or _false_):
+
+```jsx {}
+items: ({ row, rowIndex, rows, store }) => {
+  if (rowIndex == 0) return null;
+  return [
+    { id: "set-edit", icon: "wxi-edit", text: "Rename" },
+    {
+      id: "custom-delete-row",
+      icon: "wxi-delete",
+      text: "Remove row",
+    },
+    {
+      id: "custom-move-row:up",
+      icon: "wxi-arrow-up",
+      text: "Move up",
+    },
+  ];
+};
+```
+
+:::
+
+- `css` - a function that returns a CSS class to apply conditionally to rows
+- `confirmDeletion` - (optional) enables or disables a confirmation dialog when deleting rows
 
 ### Default config
 
-~~~jsx {}
+```jsx {}
 const getDefaultRowMenuItems = ({ row, rowIndex, rows, store }) => [
-    { id: "set-edit", icon: "wxi-edit", text: "Rename" },
-    {
-        id: "move-row:up",
-        icon: "wxi-arrow-up",
-        text: "Move up",
-        disabled: rowIndex <= 0
-    },
-    {
-        id: "move-row:down",
-        icon: "wxi-arrow-down",
-        text: "Move down",
-        disabled: rowIndex >= rows.length - 1
-    },
-    { id: "delete-row", icon: "wxi-delete", text: "Delete" }
+  { id: "set-edit", icon: "wxi-edit", text: "Rename" },
+  {
+    id: "move-row:up",
+    icon: "wxi-arrow-up",
+    text: "Move up",
+    disabled: rowIndex <= 0,
+  },
+  {
+    id: "move-row:down",
+    icon: "wxi-arrow-down",
+    text: "Move down",
+    disabled: rowIndex >= rows.length - 1,
+  },
+  { id: "delete-row", icon: "wxi-delete", text: "Delete" },
 ];
 const rowShape = {
-    menu: {
-        show: true,
-        items: getDefaultRowMenuItems
-    },
-    confirmDeletion: true
+  menu: {
+    show: true,
+    items: getDefaultRowMenuItems,
+  },
+  confirmDeletion: true,
 };
-~~~
+```
 
 ### Example
 
-~~~jsx {10-43,48}
-const changeRowColor = (row, cssClass) => board.updateRow({ 
+```jsx {10-43,48}
+const changeRowColor = (row, cssClass) =>
+  board.updateRow({
     id: row.id,
     row: {
-        css: cssClass,
-        collapsed: false
+      css: cssClass,
+      collapsed: false,
     },
-    replace: false
-});
+    replace: false,
+  });
 
 const rowShape = {
-    menu: {
-        show: true,
-        items: ({ row, rowIndex, rows, store }) => {
-            if (rowIndex == 0) 
-                return false
-            return [
-                {
-                    id: "color",
-                    text: "Color",
-                    items: [
-                        { 
-                            id:"gray", 
-                            text: "Gray",
-                            onClick: ({ id, item, row }) => changeRowColor(row, "gray")
-                        },
-                        { 
-                            id:"yellow", 
-                            text: "Yellow",
-                            onClick: ({ id, item, row }) => changeRowColor(row, "yellow")
-                        },
-                        { 
-                            id:"red", 
-                            text: "Red",
-                            onClick: ({ id, item, row }) => changeRowColor(row, "red")
-                        }
-                    ]
-                }
-            ]
-        }
+  menu: {
+    show: true,
+    items: ({ row, rowIndex, rows, store }) => {
+      if (rowIndex == 0) return false;
+      return [
+        {
+          id: "color",
+          text: "Color",
+          items: [
+            {
+              id: "gray",
+              text: "Gray",
+              onClick: ({ id, item, row }) => changeRowColor(row, "gray"),
+            },
+            {
+              id: "yellow",
+              text: "Yellow",
+              onClick: ({ id, item, row }) => changeRowColor(row, "yellow"),
+            },
+            {
+              id: "red",
+              text: "Red",
+              onClick: ({ id, item, row }) => changeRowColor(row, "red"),
+            },
+          ],
+        },
+      ];
     },
-    css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red",
-    confirmDeletion: false
+  },
+  css: (row, cards) => (row.id == "task" && cards.length < 3 ? "green" : "red"),
+  confirmDeletion: false,
 };
 
 new kanban.Kanban("#root", {
-    cards,
-    rows,
-    rows,
-    rowShape, 
-    // other parameters
+  cards,
+  rows,
+  rows,
+  rowShape,
+  // other parameters
 });
-~~~
+```
 
 **Change log:**
-- The ***css*** parameter was added in v1.4
-- The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
 
-**Related articles:** [Configuration](../../../guides/configuration)
+- The **_css_** parameter was introduced in v1.4
+- The **_menu.items[0].label_** parameter was renamed to **_menu.items[0].text_** in v1.4
+
+**Related articles:** [Configuration](/guides/configuration)
 
 **Related sample:** [Kanban. Changing color of rows via custom menu](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban)

@@ -8,7 +8,7 @@ description: You can learn about the delete-link event in the documentation of t
 
 ### Description
 
-@short: Fires when removing a link
+@short: Triggered when a link is deleted
 
 ### Usage
 
@@ -21,13 +21,13 @@ description: You can learn about the delete-link event in the documentation of t
 
 ### Parameters
 
-The callback of the **delete-link** event can take an object with the following parameters:
+The callback for the **delete-link** event receives an object with the following properties:
 
-- `id` - (required) the ID of the link to be deleted
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `id` - (required) the ID of the link that is being deleted
+- `skipProvider` - (optional) controls whether the request to the server is suppressed
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To handle internal events, the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods) can be used
 :::
 
 ### Example
@@ -39,10 +39,10 @@ const board = new kanban.Kanban("#root", {
     cards,
     links
 });
-// subscribe on the "delete-link" event
+// listen for the "delete-link" event
 board.api.on("delete-link", (obj) => {
     console.log(obj.id);
 });
 ~~~
 
-**Change log:** The event was added in v1.4
+**Change log:** This event was introduced in v1.4

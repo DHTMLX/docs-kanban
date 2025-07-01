@@ -1,26 +1,26 @@
 ---
 sidebar_label: POST /cards
 title: POST /cards
-description: You can learn about the POST /cards REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the POST /cards REST endpoint in the DHTMLX JavaScript Kanban library documentation. Access developer guides, API references, code samples, live demos, and get a free 30-day trial of DHTMLX Kanban.
 ---
 
 # POST `/cards`
 
 ### Description
 
-@short: Creates a new card and returns a json object with a new card ID
+@short: Adds a new card and responds with a json object containing the card's ID.
 
-The route handles the **HTTP POST** request made to the `/cards` path.
+This endpoint processes **HTTP POST** requests sent to the `/cards` URL.
 
 ### Payload
 
-The server expects to receive a json object with the next properties:
+The server requires a json object with the following fields:
 
-| Name        | Type        | Description |
+| Name | Type | Description |
 | ----------- | ----------- | ----------- |
-| `label`     |  string     | *Required*. The name of a new card to be added.|
-| `column`    |  number     | *Required*. The target column ID.|
-| `row`       |  number     | *Required*. The target row ID.|
+| `label`     |  string     | *Required*. The title of the card to create.|
+| `column`    |  number     | *Required*. The ID of the column where the card will be placed.|
+| `row`       |  number     | *Required*. The ID of the row where the card will be positioned.|
 
 Example:
 
@@ -34,7 +34,7 @@ Example:
 
 ### Response
 
-The route returns a json object with a new card ID.
+The endpoint responds with a json object containing the ID of the newly created card.
 
 Example:
 
@@ -44,8 +44,8 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates if the request was successful (response.status == 200) or if there was an error (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

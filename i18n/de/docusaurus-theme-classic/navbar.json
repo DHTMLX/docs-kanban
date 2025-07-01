@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "JavaScript Kanban Dokumentation",
+    "description": "Der Titel in der Navigationsleiste"
+  },
+  "logo.alt": {
+    "message": "DHTMLX JavaScript Kanban Logo",
+    "description": "Der Alt-Text des Logos in der Navigationsleiste"
+  },
+  "item.label.Examples": {
+    "message": "Beispiele",
+    "description": "Navigationsleisten-Element mit der Bezeichnung Beispiele"
+  },
+  "item.label.Forum": {
+    "message": "Forum",
+    "description": "Navigationsleisten-Element mit der Bezeichnung Forum"
+  },
+  "item.label.Support": {
+    "message": "Support",
+    "description": "Navigationsleisten-Element mit der Bezeichnung Support"
+  },
+  "item.label.Download": {
+    "message": "Download",
+    "description": "Navigationsleisten-Element mit der Bezeichnung Download"
+  }
+}

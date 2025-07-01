@@ -8,7 +8,7 @@ description: You can learn about the setSort method in the documentation of the 
 
 ### Description
 
-@short: Sorts cards by the specified parameters
+@short: Sorts cards based on the specified criteria
 
 ### Usage
 
@@ -25,15 +25,15 @@ setSort(
 
 ### Parameters
 
-The method can take an object of the sorting parameters or the *null* value. In the object you can specify the following parameters:
+The method accepts either an object with sorting options or *null*. Within the object, you can define the following properties:
 
-- `by` - (optional) the card field for sorting. This parameter can be set to the *string* or *function* value. The function needs to return the card field for sorting
-- `dir` - (optional) the order of sorting. The possible values are *"asc"* and *"desc"*
-- `columnId` - (optional) the ID of column to be sorted
-- `preserve` - (optional) enables/disables preserving of sorting state (*false* by default)
+- `by` - (optional) the card field to use for sorting. This can be a *string* or a *function* that returns the value to sort by
+- `dir` - (optional) the sorting direction, which can be either *"asc"* or *"desc"*
+- `columnId` - (optional) the ID of the column to apply sorting to
+- `preserve` - (optional) controls whether the sorting state is maintained (*false* by default)
 
 :::info
-If the **preserve** parameter is set to *false*, the sorting will be applied once. It means that after adding or moving cards, the sorting state will not be preserved (the order will be changed). Otherwise, the sorting state will be preserved even after adding new cards or moving them. To reset preserving, call the **setSort()** method with the ***null*** parameter.
+When **preserve** is set to *false*, sorting is applied just once. This means that after cards are added or moved, the sorting order will not be maintained. If **preserve** is enabled, the sort order stays consistent even after cards are added or rearranged. To clear the preserved sorting, use **setSort()** with a ***null*** argument.
 :::
 
 ### Example
@@ -44,7 +44,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// sort the cards in ascending order by the "label" parameter
+// sort the cards in ascending order by the "label" property
 board.setSort({ 
     by: (obj) => obj.label, // or by: "label"
     dir: "asc",

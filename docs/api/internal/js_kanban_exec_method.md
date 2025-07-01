@@ -8,7 +8,7 @@ description: You can learn about the exec method in the documentation of the DHT
 
 ### Description
 
-@short: Allows triggering the inner events
+@short: This method lets you trigger internal events within the Kanban board.
 
 ### Usage
 
@@ -21,13 +21,13 @@ api.exec(
 
 ### Parameters
 
-- `event` - (required) an event to be fired 
-- `config` - (required) the config object with parameters (see the event to be fired)
+- `event` - (required) the event you want to trigger 
+- `config` - (required) an object containing parameters related to the event being triggered
 
 ### Events
 
 :::info
-The full list of the Kanban internal events can be found [**here**](api/overview/main_overview.md/#kanban-events)
+You can find the complete list of Kanban internal events [**here**](/api/overview/main_overview.md/#kanban-events)
 :::
 
 ### Example

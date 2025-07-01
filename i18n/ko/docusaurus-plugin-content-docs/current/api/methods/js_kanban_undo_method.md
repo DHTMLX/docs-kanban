@@ -1,0 +1,35 @@
+---
+sidebar_label: undo()
+title: undo 메서드
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 undo 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+---
+
+# undo()
+
+### 설명
+
+@short: Kanban에서 마지막 작업을 되돌립니다.
+
+:::info
+`undo()` 메서드는 [`history: true`](/api/config/js_kanban_history_config.md) 설정이 활성화되어 있을 때만 작동합니다!
+:::
+
+### 사용법
+
+~~~jsx {}
+undo(): void;
+~~~
+
+### 예제
+
+~~~jsx {7}
+// Kanban 생성
+const board = new kanban.Kanban("#root", {
+    columns,
+    cards
+});
+// Kanban의 이력에서 한 단계 뒤로 이동
+board.undo();
+~~~
+
+**변경 로그:** 이 메서드는 v1.3에 추가되었습니다.

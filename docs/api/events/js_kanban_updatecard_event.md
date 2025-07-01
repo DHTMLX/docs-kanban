@@ -1,14 +1,14 @@
 ---
 sidebar_label: update-card
 title: update-card Event
-description: You can learn about the update-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the update-card event in the DHTMLX JavaScript Kanban library documentation. Find developer guides, API references, code samples, live demos, and a free 30-day trial of DHTMLX Kanban.
 ---
 
 # update-card
 
 ### Description
 
-@short: Fires when updating card data
+@short: Triggered when card data is updated
 
 ### Usage
 
@@ -23,20 +23,20 @@ description: You can learn about the update-card event in the documentation of t
 
 ### Parameters
 
-The callback of the **update-card** event can take an object with the following parameters:
+The callback for the **update-card** event receives an object with these properties:
 
-- `id` - (required) the ID of the card to be updated
-- `card` - (optional) the new data object of the card. The full list of the **card** parameters can be found [**here**](api/config/js_kanban_cards_config.md)
-- `replace` - (optional) enables/disables fully data replacing
+- `id` - (required) the identifier of the card to update
+- `card` - (optional) an object containing the new card data. Check out the full list of **card** attributes [**here**](/api/config/js_kanban_cards_config.md)
+- `replace` - (optional) determines whether the existing data is fully replaced
 
-    :::note
-    If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
-    :::
+:::note
+When `replace` is set to *true*, the old data is completely overwritten by the new data. Otherwise, only the specified values are updated.
+:::
 
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `skipProvider` - (optional) controls whether the update is sent to the server or not
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -47,12 +47,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "update-card" event
+// listen to the "update-card" event
 board.api.on("update-card", (obj) => {
     console.log(obj);
 });
 ~~~
 
 **Change log**:
-- The **id** and **card** parameters were added in v1.1
-- The **replace** parameter was added in v1.3
+- Added **id** and **card** parameters in v1.1
+- Added **replace** parameter in v1.3

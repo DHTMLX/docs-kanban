@@ -8,25 +8,25 @@ description: You can learn about the PUT /columns/{id}/move REST route in the do
 
 ### Description
 
-@short: Moves a column to a specified position
+@short: Changes the position of a column by moving it to a specified spot.
 
-The route handles the **HTTP PUT** request made to the `columns/{id}/move` path.
+This route processes an **HTTP PUT** request sent to `columns/{id}/move`.
 
 ### Path parameters
 
-The next parameter is sent in the request line:
+The following parameter is included in the request URL:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the column to be moved.|
+| `id`       |  number     | *Required*. The identifier of the column to be moved.|
 
 ### Payload
 
-The server expects to receive a json object with the next properties:
+The server expects a JSON object containing the following property:
 
-| Name       | Type        | Description |
+| Name | Type | Description |
 | ---------- | ----------- | ----------- |
-| `before`   |  number     | *Optional*. The ID of the column before which the moved column should be placed.|
+| `before`   |  number     | *Optional*. The ID of the column that the moved column should be placed in front of.|
 
 Example:
 
@@ -38,7 +38,7 @@ Example:
 
 ### Response
 
-The server returns a json object with the ID of the moved column.
+The server responds with a JSON object indicating the ID of the column that was moved.
 
 Example:
 
@@ -48,8 +48,8 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates the outcome of the request: a status of 200 means it was successful, while 500 indicates an error.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

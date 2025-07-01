@@ -8,7 +8,7 @@ description: You can learn about the setEdit method in the documentation of the 
 
 ### Description
 
-@short: Toggles an editor of Kanban
+@short: Switches the Kanban card editor on or off
 
 ### Usage
 
@@ -18,12 +18,12 @@ setEdit({ cardId: string | number } | null): void;
 
 ### Parameters
 
-The method can take a *null* value or an object with the following parameter:
+This method accepts either *null* or an object with the following property:
 
-- `cardId` - (required) the ID of the card to be edited
+- `cardId` - (required) the ID of the card you want to edit
 
 :::note
-To close an editor, call the **setEdit()** method with the ***null*** value
+To close the editor, use the **setEdit()** method with a ***null*** argument
 :::
 
 ### Example
@@ -34,8 +34,8 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// open an editor for the card by its ID
+// open the editor for the specified card ID
 board.setEdit({ cardId: 1 });
 ~~~
 
-**Change log:** The method was added in v1.2
+**Change log:** The method was introduced in v1.2

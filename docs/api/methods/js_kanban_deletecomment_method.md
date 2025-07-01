@@ -8,7 +8,7 @@ description: You can learn about the deleteComment method in the documentation o
 
 ### Description
 
-@short: Delete a card comment by its ID
+@short: Remove a comment from a card using its ID
 
 ### Usage
 
@@ -21,8 +21,8 @@ deleteComment({
 
 ### Parameters
 
-- `id` -  (optional) the ID of the comment to be deleted
-- `cardId` - (required) the ID of the card which comment to be deleted
+- `id` -  (optional) the comment's ID that needs to be removed
+- `cardId` - (required) the ID of the card containing the comment
 
 ### Example
 

@@ -1,17 +1,17 @@
 ---
 sidebar_label: rowKey
 title: rowKey Config
-description: You can learn about the rowKey config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the rowKey configuration in the DHTMLX JavaScript Kanban library documentation. Find developer guides and API references, experiment with code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # rowKey
 
 ### Description
 
-@short: Optional. Defines belonging the card to the row
+@short: Optional. Specifies how a card is assigned to a row.
 
 :::info
-To distribute the cards into rows (swimlanes), you need to specify a **custom key** and set it to the **ID** of the desired row in the card data object. The **rowKey** property needs to be set to this *custom key* in the widget configuration object
+To organize cards into rows (swimlanes), you'll need to define a **custom key** that matches the **ID** of the row in each card's data. Then, set the **rowKey** property in the widget's configuration to this *custom key*.
 :::
 
 ### Usage

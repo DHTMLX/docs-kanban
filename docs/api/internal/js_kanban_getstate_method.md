@@ -8,7 +8,7 @@ description: You can learn about the getState method in the documentation of the
 
 ### Description
 
-@short: Gets an object with the StateStore properties of Kanban
+@short: Retrieves an object containing the StateStore properties of the Kanban.
 
 ### Usage
 
@@ -18,7 +18,7 @@ api.getState(): object;
 
 ### Returns
 
-The method returns an object with the following parameters:
+This method returns an object with the following properties:
 
 ~~~jsx {}
 {    
@@ -55,6 +55,7 @@ The method returns an object with the following parameters:
     dropAreasCoords: array, // deprecated in v1.4 
     overAreaMeta: object, // deprecated in v1.4
 }
+~~~
 
 ### Example
 
@@ -65,12 +66,12 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// get the State of Kanban
+// retrieve the current State of the Kanban
 const state = board.api.getState();
-console.log(state.cards); // output the cards data
-console.log(state.columns); // output the columns data
-console.log(state.rows); // output the rows data
-console.log(state.cardShape); // output the card configuration
+console.log(state.cards); // displays the cards data
+console.log(state.columns); // displays the columns data
+console.log(state.rows); // displays the rows data
+console.log(state.cardShape); // displays the card configuration
 //...
 ~~~
 
@@ -79,4 +80,4 @@ The method was updated in v1.4. The following parameters were deprecated:
 - ***dropAreaItemsCoords***
 - ***dropAreasCoords***
 - ***overAreaMeta***
-The ***editorShape*** parameter was deleted
+The ***editorShape*** parameter was removed

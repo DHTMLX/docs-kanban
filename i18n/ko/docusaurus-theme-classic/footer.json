@@ -1,0 +1,62 @@
+{
+  "link.title.Development center": {
+    "message": "개발 센터",
+    "description": "푸터에 있는 'Development center' 제목의 링크 열 제목"
+  },
+  "link.title.Community": {
+    "message": "커뮤니티",
+    "description": "푸터에 있는 'Community' 제목의 링크 열 제목"
+  },
+  "link.title.Company": {
+    "message": "회사",
+    "description": "푸터에 있는 'Company' 제목의 링크 열 제목"
+  },
+  "link.item.label.Download JS Kanban": {
+    "message": "JS 칸반 다운로드",
+    "description": "https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml 로 연결되는 'Download JS Kanban' 라벨의 푸터 링크"
+  },
+  "link.item.label.Examples": {
+    "message": "예제",
+    "description": "https://snippet.dhtmlx.com/5hcx01h4?tag=kanban 로 연결되는 'Examples' 라벨의 푸터 링크"
+  },
+  "link.item.label.Blog": {
+    "message": "블로그",
+    "description": "https://dhtmlx.com/blog/tag/kanban/ 로 연결되는 'Blog' 라벨의 푸터 링크"
+  },
+  "link.item.label.Forum": {
+    "message": "포럼",
+    "description": "https://forum.dhtmlx.com/c/kanban/ 로 연결되는 'Forum' 라벨의 푸터 링크"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "https://github.com/DHTMLX 로 연결되는 'GitHub' 라벨의 푸터 링크"
+  },
+  "link.item.label.Youtube": {
+    "message": "유튜브",
+    "description": "https://www.youtube.com/user/dhtmlx 로 연결되는 'Youtube' 라벨의 푸터 링크"
+  },
+  "link.item.label.Facebook": {
+    "message": "페이스북",
+    "description": "https://www.facebook.com/dhtmlx 로 연결되는 'Facebook' 라벨의 푸터 링크"
+  },
+  "link.item.label.Twitter": {
+    "message": "트위터",
+    "description": "https://twitter.com/dhtmlx 로 연결되는 'Twitter' 라벨의 푸터 링크"
+  },
+  "link.item.label.Linkedin": {
+    "message": "링크드인",
+    "description": "https://www.linkedin.com/groups/3345009/ 로 연결되는 'Linkedin' 라벨의 푸터 링크"
+  },
+  "link.item.label.About us": {
+    "message": "회사 소개",
+    "description": "https://dhtmlx.com/docs/company.shtml 로 연결되는 'About us' 라벨의 푸터 링크"
+  },
+  "link.item.label.Contact us": {
+    "message": "문의하기",
+    "description": "https://dhtmlx.com/docs/contact.shtml 로 연결되는 'Contact us' 라벨의 푸터 링크"
+  },
+  "link.item.label.Licensing": {
+    "message": "라이선스",
+    "description": "https://dhtmlx.com/docs/products/dhtmlxKanban/#licensing 로 연결되는 'Licensing' 라벨의 푸터 링크"
+  }
+}

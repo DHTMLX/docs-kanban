@@ -8,7 +8,7 @@ description: You can learn about the getCard method in the documentation of the 
 
 ### Description
 
-@short: Gets a data object of the card by the specified ID
+@short: Retrieves the data object of a card using its specified ID
 
 ### Usage
 
@@ -18,11 +18,11 @@ getCard(id: string | number): object;
 
 ### Parameters
 
-- `id` - (required) the ID of the target card 
+- `id` - (required) the ID of the card you want to access
 
 ### Returns
 
-The method returns the data object of the card with the specified ID
+This method returns the data object associated with the card identified by the given ID
 
 ### Example
 
@@ -32,6 +32,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// get the data object of the card with the 1 ID
+// retrieve the data object for the card with ID 1
 board.getCard(1);
 ~~~

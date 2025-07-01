@@ -8,7 +8,7 @@ description: You can learn about the move-card event in the documentation of the
 
 ### Description
 
-@short: Fires when moving a card
+@short: Triggered when a card is moved
 
 ### Usage
 
@@ -24,16 +24,16 @@ description: You can learn about the move-card event in the documentation of the
 
 ### Parameters
 
-The callback of the **move-card** event can take an object with the following parameters:
+The callback for the **move-card** event receives an object with the following properties:
 
-- `id` - (required) the ID of the card that will be moved
-- `columnId` - (required) the ID of the column the card will be placed into
-- `rowId` - (optional) the ID of the row the card will be placed into
-- `before` - (optional) the ID of the card, before which the new card will be placed
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `id` - (required) the ID of the card that is being moved
+- `columnId` - (required) the ID of the column where the card will be placed
+- `rowId` - (optional) the ID of the row where the card will be placed
+- `before` - (optional) the ID of the card before which the moved card will be inserted
+- `skipProvider` - (optional) controls whether the request to the server should be prevented
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example

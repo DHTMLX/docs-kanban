@@ -8,7 +8,7 @@ description: You can learn about the addRow method in the documentation of the D
 
 ### Description
 
-@short: Adds a new row into Kanban
+@short: Inserts a new row into the Kanban board
 
 ### Usage
 
@@ -22,12 +22,12 @@ addRow({
 
 ### Parameters
 
-- `id` - (optional) the ID of the new row
-- `row` - (optional) the data object of the new row
-- `before` - (optional) the ID of the row, before which the new row will be placed 
+- `id` - (optional) the identifier for the new row
+- `row` - (optional) the data object representing the new row
+- `before` - (optional) the ID of the row that the new row should be inserted before
 
 :::info
-The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
+A complete list of **row** parameters is available [**here**](/api/config/js_kanban_rows_config.md)
 :::
 
 ### Example
@@ -50,4 +50,4 @@ board.addRow({
 });
 ~~~
 
-**Change log**: The **id**,  **row** and **before** parameters were added in v1.1
+**Change log**: The **id**, **row**, and **before** parameters were introduced in v1.1

@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateCard()
 title: updateCard Method
-description: You can learn about the updateCard method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the updateCard method in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # updateCard()
 
 ### Description
 
-@short: Updates the card data by its ID
+@short: Updates a card's data by its ID
 
 ### Usage
 
@@ -23,12 +23,12 @@ updateCard({
 ### Parameters
 
 - `id` - (required) the ID of the card to be updated
-- `card` - (optional) the new data object of the card. The full list of the card parameters can be found [**here**](api/config/js_kanban_cards_config.md)
-- `replace` - (optional) enables/disables fully data replacing
+- `card` - (optional) an object containing the updated data for the card. A full list of card parameters is available [**here**](/api/config/js_kanban_cards_config.md)
+- `replace` - (optional) controls whether the existing data is fully replaced
 
-    :::note
-    If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
-    :::
+:::note
+Setting `replace` to *true* will completely overwrite the old data with the new data. Otherwise, only the properties you provide will be updated.
+:::
 
 ### Example
 
@@ -52,5 +52,5 @@ board.updateCard({
 ~~~
 
 **Change log**:
-- The **id** and **card** parameters were added in v1.1
+- The **id** and **card** parameters were introduced in v1.1
 - The **replace** parameter was added in v1.3

@@ -8,7 +8,7 @@ description: You can learn about the serialize method in the documentation of th
 
 ### Description
 
-@short: Serializes the Kanban data to JSON
+@short: Converts the Kanban data into a JSON format.
 
 ### Usage
 
@@ -18,7 +18,7 @@ serialize(): object;
 
 ### Returns
 
-The method returns the object of Kanban data  
+This method returns an object containing the Kanban data:
 
 ~~~jsx {}
 {
@@ -36,6 +36,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// get the object of the Kanban data
+// retrieve the Kanban data object
 board.serialize();
 ~~~

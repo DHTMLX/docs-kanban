@@ -1,14 +1,14 @@
 ---
 sidebar_label: add-comment
 title: add-comment Event
-description: You can learn about the add-comment event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the add-comment event in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try examples and live demos, and get a free 30-day trial of DHTMLX Kanban.
 ---
 
 # add-comment
 
 ### Description
 
-@short: Fires when adding a new comment
+@short: Triggered when a new comment is added
 
 ### Usage
 
@@ -27,18 +27,18 @@ description: You can learn about the add-comment event in the documentation of t
 
 ### Parameters
 
-The callback of the **add-comment** event can take an object with the following parameters:
+The callback for the **add-comment** event receives an object with these properties:
 
-- `id` -  (optional) the ID of the new comment
-- `cardId` - (required) the ID of the card, to which the comment to be added
-- `comment` - (required) the configuration object of the new comment. Here you can specify the following parameters:
-    - `text` - (optional) the text of the new comment
-    - `date` - (optional) the date of the new comment
-    - `html` - (optional) the HTML markup of the new comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `id` -  (optional) the ID assigned to the new comment
+- `cardId` - (required) the ID of the card where the comment is being added
+- `comment` - (required) an object defining the new comment details. It can include:
+    - `text` - (optional) the comment's text content
+    - `date` - (optional) the date when the comment was made
+    - `html` - (optional) the comment's HTML content. To enable rendering of HTML instead of text, activate the `html` property in the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) configuration
+- `skipProvider` - (optional) controls whether the request to the server is prevented or not
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal event handling, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -49,10 +49,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "add-comment" event
+// listen to the "add-comment" event
 board.api.on("add-comment", (obj) => {
     console.log(obj.comment);
 });
 ~~~
 
-**Change log:** The event was added in v1.4
+**Change log:** This event was introduced in v1.4

@@ -8,7 +8,7 @@ description: You can learn about the addComment method in the documentation of t
 
 ### Description
 
-@short: Adds a new comment to the specified card by its ID
+@short: Inserts a new comment into the specified card using its ID.
 
 ### Usage
 
@@ -26,12 +26,12 @@ addComment({
 
 ### Parameters
 
-- `id` -  (optional) the ID of the new comment
-- `cardId` - (required) the ID of the card, to which the comment to be added
-- `comment` - (required) the configuration object of the new comment. Here you can specify the following parameters:
-    - `text` - (optional) the text of the new comment
-    - `date` - (optional) the date of the new comment
-    - `html` - (optional) the HTML markup of the new comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
+- `id` -  (optional) the unique identifier for the new comment
+- `cardId` - (required) the identifier of the card where the comment will be added
+- `comment` - (required) an object defining the new comment. The available fields include:
+    - `text` - (optional) the content of the comment in plain text
+    - `date` - (optional) the timestamp for the comment
+    - `html` - (optional) the comment formatted in HTML. To show HTML content instead of plain text, the `html` option in the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) configuration must be enabled
 
 ### Example
 
@@ -53,4 +53,4 @@ board.addComment({
 });
 ~~~
 
-**Change log:** The method was added in v1.4
+**Change log:** This method was introduced in version 1.4

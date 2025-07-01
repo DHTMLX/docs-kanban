@@ -8,7 +8,7 @@ description: You can learn about the moveRow method in the documentation of the 
 
 ### Description
 
-@short: Moves a row to the new position
+@short: Shifts a row to a new spot within the board.
 
 ### Usage
 
@@ -21,8 +21,8 @@ moveRow({
 
 ### Parameters
 
-- `id` - (required) the ID of the row to be moved
-- `before` - (required) the ID of the row, the moved one will be placed before it
+- `id` - (required) the ID of the row that needs to be moved
+- `before` - (required) the ID of the row before which the moved row will be positioned
 
 ### Example
 

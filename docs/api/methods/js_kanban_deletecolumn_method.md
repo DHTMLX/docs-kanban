@@ -8,7 +8,7 @@ description: You can learn about the deleteColumn method in the documentation of
 
 ### Description
 
-@short: Removes the specified column from datastore of Kanban
+@short: Deletes a specified column from the Kanban datastore.
 
 ### Usage
 
@@ -18,7 +18,7 @@ deleteColumn({ id: string | number }): void;
 
 ### Parameters
 
-- `id` - (required) the ID of the column to be deleted
+- `id` - (required) the ID of the column to remove
 
 ### Example
 

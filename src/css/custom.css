@@ -221,3 +221,7 @@ table th:first-child {
 p {
     line-height: 2;
 }
+
+.custom-border-box {
+  border: 1px solid #F8F8F8;
+}

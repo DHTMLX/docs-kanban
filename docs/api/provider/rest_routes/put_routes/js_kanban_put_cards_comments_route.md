@@ -8,26 +8,26 @@ description: You can learn about the PUT /cards/{cardId}/comments/{cardId} REST 
 
 ### Description
 
-@short: Updates a comment in a card and returns a json object with the ID of the updated comment
+@short: This endpoint updates an existing comment within a card and returns a JSON object containing the ID of the updated comment.
 
-The route handles the **HTTP PUT** request made to the `cards/{cardId}/comments/{commentId}` path.
+This route processes the **HTTP PUT** request sent to `cards/{cardId}/comments/{commentId}`.
 
 ### Path parameters
 
-The next parameters are sent in the request line:
+The following parameters are included in the request URL:
 
-| Name        | Type        | Description |
+| Name | Type | Description |
 | ----------- | ----------- | ----------- |
-| `cardId`    |  number     | *Required*. The ID of the card, which comment is updated. |
-| `commentId` |  number     | *Required*. The ID of the comment to be updated. |
+| `cardId`    |  number     | *Required*. The ID of the card containing the comment to be updated. |
+| `commentId` |  number     | *Required*. The ID of the comment that needs updating. |
 
 ### Payload
 
-The server expects to receive a json object with the next properties:
+The server expects a JSON object with the following property:
 
-| Name        | Type        | Description |
+| Name | Type | Description |
 | ----------- | ----------- | ----------- |
-| `text`      | string      | *Required*. The comment's text.|
+| `text`      | string      | *Required*. The updated content of the comment.|
 
 Example:
 
@@ -39,7 +39,7 @@ Example:
 
 ### Response
 
-The server returns a json object with a card ID.
+The server responds with a JSON object containing the ID of the updated comment.
 
 Example:
 
@@ -49,8 +49,8 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates the result of the request: a status of 200 means success, while 500 indicates a failure.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

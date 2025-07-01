@@ -1,14 +1,14 @@
 ---
 sidebar_label: readonly
 title: readonly Config
-description: You can learn about the readonly config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the readonly config in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code examples and live demos, and get a free 30-day trial of DHTMLX Kanban.
 ---
 
 # readonly
 
 ### Description
 
-@short: Optional. Enables/disables editing, adding, selecting, dragging the cards
+@short: Optional. Controls whether editing, adding, selecting, and dragging cards are enabled or disabled.
 
 ### Usage
 
@@ -25,22 +25,22 @@ readonly?: {
 
 ### Parameters
 
-To configure the **readonly mode**, you can use the **short** or **extended** parameters.
+There are two ways to set up **readonly mode**: using the **short** or the **extended** format.
 
-The **short** parameter:
-- `readonly` - (optional) enables/disables **readonly mode** of Kanban
+The **short** format:
+- `readonly` - (optional) turns **readonly mode** on or off for the Kanban.
 
-The **extended** parameters:
-- `readonly` - (optional) an object with extended settings. Here you can specify the following parameters:
-    - `edit` - (optional) enables/disables **editing** of the cards
-    - `add` - (optional) enables/disables **adding** of the new cards
-    - `select` - (optional) enables/disables **selecting** of the cards
-    - `dnd` - (optional) enables/disables **dragging** of the cards
+The **extended** format:
+- `readonly` - (optional) an object with detailed settings. It accepts:
+    - `edit` - (optional) turns **card editing** on or off.
+    - `add` - (optional) turns **adding new cards** on or off.
+    - `select` - (optional) turns **card selection** on or off.
+    - `dnd` - (optional) turns **dragging cards** on or off.
 
 ### Default config
 
 ~~~jsx {}
-readonly: false // readonly mode is disabled
+readonly: false // readonly mode is off by default
 //or
 readonly: {
     edit: true, // editing is enabled
@@ -57,10 +57,10 @@ new kanban.Kanban("#root", {
     cards,
     columns,
     readonly: {
-        edit: false, // disable editing
-        add: true, // enable adding
-        select: false, // disable selecting
-        dnd: true // enable dragging
+        edit: false, // editing disabled
+        add: true, // adding enabled
+        select: false, // selecting disabled
+        dnd: true // dragging enabled
     },
     // other parameters
 });

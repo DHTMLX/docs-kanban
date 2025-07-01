@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Документация JavaScript Kanban",
+    "description": "Заголовок в навигационной панели"
+  },
+  "logo.alt": {
+    "message": "Логотип DHTMLX JavaScript Kanban",
+    "description": "Альтернативный текст логотипа навигационной панели"
+  },
+  "item.label.Examples": {
+    "message": "Примеры",
+    "description": "Элемент навигационной панели с меткой Examples"
+  },
+  "item.label.Forum": {
+    "message": "Форум",
+    "description": "Элемент навигационной панели с меткой Forum"
+  },
+  "item.label.Support": {
+    "message": "Поддержка",
+    "description": "Элемент навигационной панели с меткой Support"
+  },
+  "item.label.Download": {
+    "message": "Скачать",
+    "description": "Элемент навигационной панели с меткой Download"
+  }
+ }

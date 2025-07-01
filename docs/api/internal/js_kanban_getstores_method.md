@@ -8,7 +8,7 @@ description: You can learn about the getStores method in the documentation of th
 
 ### Description
 
-@short: Gets an object with the DataStore properties of Kanban
+@short: Retrieves an object containing the DataStore properties of the Kanban.
 
 ### Usage
 
@@ -18,7 +18,7 @@ api.getStores(): object;
 
 ### Returns
 
-The method returns an object with the **DataStore** parameters:
+This method returns an object that includes the **DataStore** parameters:
 
 ~~~jsx {}
 {

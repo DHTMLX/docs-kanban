@@ -1,14 +1,14 @@
 ---
 sidebar_label: delete-column
 title: delete-column Event
-description: You can learn about the delete-column event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the delete-column event in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # delete-column
 
 ### Description
 
-@short: Fires when removing a column
+@short: Triggers when a column is removed
 
 ### Usage
 
@@ -21,13 +21,13 @@ description: You can learn about the delete-column event in the documentation of
 
 ### Parameters
 
-The callback of the **delete-column** event can take an object with the following parameter:
+The callback for the **delete-column** event receives an object with these properties:
 
-- `id` - (required) the ID of the column to be deleted
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `id` - (required) the ID of the column being deleted
+- `skipProvider` - (optional) controls whether the request is sent to the server or not
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -38,7 +38,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "delete-column" event 
+// listen to the "delete-column" event 
 board.api.on("delete-column", (obj) => {
     console.log(obj.id);
 });

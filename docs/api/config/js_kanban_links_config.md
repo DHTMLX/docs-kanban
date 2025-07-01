@@ -1,14 +1,14 @@
 ---
 sidebar_label: links
 title: links Config
-description: You can learn about the links config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the links config in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # links
 
 ### Description
 
-@short: Optional. An array of objects containing the links data
+@short: Optional. This is an array of objects that holds the links data.
 
 ### Usage
 
@@ -25,19 +25,19 @@ links?: [
 
 ### Parameters
 
-For each link you can specify the following parameters (data):
+Each link includes the following data fields:
 
-- `id` - (required) the ID of the link
-- `masterId` - (required) the card ID which expresses a dominant role in the link (e.g. “Is required for”)
-- `slaveId` - (required) the card ID which expresses a passive role in the link (e.g. “Depends on”)
-- `relation` - (required) the type of link. Here you can specify the following types:
-    - ***"relatesTo"*** -  defines dependency between tasks where the current task is bound to other one
-    - ***"requiredFor"*** - defines dependency between tasks where one task requires the other one to be done
-    - ***"duplicate"*** - defines dependency between duplicated tasks
-    - ***"parent"*** - defines dependency between parent (master) and child (slave) tasks
+- `id` - (required) the unique ID for the link
+- `masterId` - (required) the card ID representing the dominant role in the link (e.g. "Is required for")
+- `slaveId` - (required) the card ID representing the passive role in the link (e.g. "Depends on")
+- `relation` - (required) the type of link. The available types are:
+  - ***"relatesTo"*** - indicates a dependency where the current task is connected to another one
+  - ***"requiredFor"*** - shows a dependency where one task needs the other to be completed first
+  - ***"duplicate"*** - marks a dependency between duplicated tasks
+  - ***"parent"*** - sets a dependency between a parent (master) task and its child (slave) task
 
 :::info
-If you want to load new data for links dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
+To dynamically load new links data, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
 :::
 
 ### Example
@@ -60,8 +60,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** The property was added in v1.4
+**Change log:** This property was introduced in v1.4
 
-**Related articles:** [Working with data](../../../guides/working_with_data)
+**Related articles:** [Working with data](/guides/working_with_data)
 
 **Related sample:** [Kanban. Links between tasks](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)

@@ -1,14 +1,14 @@
 ---
 sidebar_label: scroll
 title: scroll Event
-description: You can learn about the scroll event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the scroll event in the DHTMLX JavaScript Kanban library documentation. Find developer guides, API references, try out code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # scroll
 
 ### Description
 
-@short: Fires when scrolling to the specified elements
+@short: Triggered when scrolling to specified elements
 
 ### Usage
 
@@ -22,14 +22,14 @@ description: You can learn about the scroll event in the documentation of the DH
 
 ### Parameters
 
-The callback of the **scroll** event can take an object with the following parameters:
+The callback for the **scroll** event receives an object with these properties:
 
 - `id` - (required) the ID of the target element
-- `to` - (required) the type of the target element. The available values are *"column"*, *"row"* and *"card"*
-- `options` - (optional) the object of scrolling options. The full list of the scrolling parameters can be found [here](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
+- `to` - (required) specifies the target element type: *"column"*, *"row"*, or *"card"*
+- `options` - (optional) an object containing scrolling options. See the full list of parameters [here](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To handle inner events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -40,10 +40,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "scroll" event
+// subscribe to the "scroll" event
 board.api.on("scroll", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Change log:** The event was added in v1.2
+**Change log:** This event was introduced in v1.2

@@ -8,17 +8,17 @@ description: You can learn about the GET /cards REST route in the documentation 
 
 ### Description
 
-@short: Gets data on all cards and returns a json object with an array of cards objects
+@short: Retrieves information on all cards and returns a JSON object containing an array of card objects.
 
-The route handles the **HTTP GET** request made to the `/cards` path.
+This route processes an **HTTP GET** request sent to the `/cards` endpoint.
 
 ### Payload
 
-No payload is required.
+No payload is needed.
 
 ### Response
 
-The route returns a json object with an array of all cards objects.
+The response provides a JSON object with an array of all card objects.
 
 Example:
 
@@ -67,15 +67,15 @@ Example:
 ~~~
 
 :::note
-The event start and end dates should conform to the ISO format **yyyy-MM-dd'T'HH:mm:ss.SSSXXX**
+Event start and end dates should follow the ISO format **yyyy-MM-dd'T'HH:mm:ss.SSSXXX**
 :::
 
-For another example of the returned object, go to [**cards**](api/config/js_kanban_cards_config.md).
+For another example of the returned object, see [**cards**](/api/config/js_kanban_cards_config.md).
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates the outcome of the request: success (response.status == 200) or failure (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](guides/working_with_server.md)
-- [getCards()](api/provider/rest_methods/js_kanban_getcards_method.md)
+- [Working with server](/guides/working_with_server.md)
+- [getCards()](/api/provider/rest_methods/js_kanban_getcards_method.md)

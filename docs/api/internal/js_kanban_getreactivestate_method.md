@@ -8,7 +8,7 @@ description: You can learn about the getReactiveState method in the documentatio
 
 ### Description
 
-@short: Gets an object with the reactive properties of Kanban
+@short: Retrieves an object containing the reactive properties of the Kanban board.
 
 ### Usage
 
@@ -18,7 +18,7 @@ api.getReactiveState(): object;
 
 ### Returns
 
-The method returns an object with the following parameters:
+This method returns an object with the following properties:
 
 ~~~jsx {}
 {
@@ -64,37 +64,37 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// get the Reactive State of Kanban
+// access the Reactive State of the Kanban board
 const state = board.api.getReactiveState();
 
-// subscribe on the columns changes and output the array of columns
+// subscribe to changes in the columns and log the updated array
 state.columns.subscribe((data) => {
     console.log(data);
 });
 
-// subscribe on the cards changes and output the array of cards
+// subscribe to changes in the cards and log the updated array
 state.cards.subscribe((data) => {
     console.log(data);
 });
 
-// subscribe on the rows changes and output the array of rows
+// subscribe to changes in the rows and log the updated array
 state.rows.subscribe((data) => {
     console.log(data);
 });
 
-// subscribe on the card selection and output the IDs of the selected cards
+// subscribe to card selection changes and log the selected card IDs
 state.selected.subscribe((data) => {
     console.log(data);
 });
 
-// set new selection 
+// set a new selection 
 state.selected.set([1, 2]);
 
-// update selection
+// update the selection by adding another card ID
 state.selected.update((data) => {
     data.push(3);
     return data;
 });
 ~~~
 
-**Change log:** The method was updated in v1.4
+**Change log:** This method was updated in version 1.4

@@ -8,7 +8,7 @@ description: You can learn about the parse method in the documentation of the DH
 
 ### Description
 
-@short: Parses data into Kanban
+@short: Loads data into the Kanban board
 
 ### Usage
 
@@ -22,16 +22,16 @@ parse({
 
 ### Parameters
 
-- [`columns`](api/config/js_kanban_columns_config.md) - (optional) the array of objects of the columns data
-- [`rows`](api/config/js_kanban_rows_config.md) - (optional) the array of objects of the rows data
-- [`cards`](api/config/js_kanban_cards_config.md) - (optional) the array of objects of the cards data
+- [`columns`](/api/config/js_kanban_columns_config.md) - (optional) an array containing column data objects
+- [`rows`](/api/config/js_kanban_rows_config.md) - (optional) an array containing row data objects
+- [`cards`](/api/config/js_kanban_cards_config.md) - (optional) an array containing card data objects
 
 ### Example
 
 ~~~jsx {4-8}
 // create Kanban
 const board = new kanban.Kanban("#root", {});
-// parse data into Kanban
+// load data into Kanban
 board.parse({
     columns,
     cards,
@@ -39,6 +39,6 @@ board.parse({
 });
 ~~~
 
-**Change log:** Starting from v1.1 you don't need to reset initial data in constructor before parsing new data
+**Change log:** Starting from v1.1, it's no longer necessary to reset the initial data in the constructor before parsing new data
 
-**Related articles:** [Working with Data](../../../guides/working_with_data#loading-data-from-local-source)
+**Related articles:** [Working with Data](/guides/working_with_data#loading-data-from-local-source)

@@ -8,26 +8,26 @@ description: You can learn about the DELETE /cards/{cardId}/comments/{commentId}
 
 ### Description
 
-@short: Removes a comment from a card
+@short: Deletes a comment from a card
 
-The route handles the **HTTP DELETE** request made to the `cards/{cardId}/comments/{commentId}` path.
+This route processes an **HTTP DELETE** request sent to the `cards/{cardId}/comments/{commentId}` endpoint.
 
 ### Path parameters
 
-The next parameters are sent in the request line:
+The following parameters are included in the request URL:
 
-| Name        | Type        | Description |
+| Name | Type | Description |
 | ----------- | ----------- | ----------- |
-| `cardId`    |  number     | *Required*. The ID of the card, from which the comment will be deleted. |
-| `commentId` |  number     | *Required*. The ID of the comment to be removed. |
+| `cardId`    |  number     | *Required*. The identifier of the card from which the comment will be deleted. |
+| `commentId` |  number     | *Required*. The identifier of the comment to be deleted. |
 
 ### Payload
 
-No payload is required.
+No payload needs to be sent with this request.
 
 ### Response
 
-The server returns a json object with a user ID that removes a comment.
+The server responds with a JSON object containing the user ID who deleted the comment.
 
 Example:
 
@@ -37,8 +37,8 @@ Example:
 }
 ~~~
 
-The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
+The HTTP status code indicates the result: 200 means the request was successful, while 500 indicates an error.
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server.md)

@@ -1,16 +1,16 @@
 ---
 sidebar_label: RestDataProvider methods
 title: RestDataProvider methods
-description: You can have an Internal RestDataProvider methods overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: This section provides an overview of the Internal RestDataProvider methods for JavaScript Kanban within the DHTMLX JavaScript Kanban library documentation. Explore developer guides and API references, check out code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # RestDataProvider methods
 
 | Name                                                         | Description                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------------ |
-| [](../provider/rest_methods/js_kanban_getcards_method.md)    | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
-| [](../provider/rest_methods/js_kanban_getcolumns_method.md)  | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
-| [](../provider/rest_methods/js_kanban_getlinks_method.md)    | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |
-| [](../provider/rest_methods/js_kanban_getrows_method.md)     | @getshort(../provider/rest_methods/js_kanban_getrows_method.md)    |
-| [](../provider/rest_methods/js_kanban_getusers_method.md)    | @getshort(../provider/rest_methods/js_kanban_getusers_method.md)   |
-| [](../provider/rest_methods/js_kanban_send_method.md)        | @getshort(../provider/rest_methods/js_kanban_send_method.md)       |
+| [getCards()](../../provider/rest_methods/js_kanban_getcards_method/)   | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
+| [getColumns()](../../provider/rest_methods/js_kanban_getcolumns_method/) | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
+| [getLinks()](../../provider/rest_methods/js_kanban_getlinks_method/)   | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |
+| [getRows()](../../provider/rest_methods/js_kanban_getrows_method/)    | @getshort(../provider/rest_methods/js_kanban_getrows_method.md)    |
+| [getUsers()](../../provider/rest_methods/js_kanban_getusers_method/)   | @getshort(../provider/rest_methods/js_kanban_getusers_method.md)   |
+| [send()](../../provider/rest_methods/js_kanban_send_method/)       | @getshort(../provider/rest_methods/js_kanban_send_method.md)       |

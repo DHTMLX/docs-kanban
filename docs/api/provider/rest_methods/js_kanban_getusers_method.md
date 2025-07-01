@@ -8,10 +8,10 @@ description: You can learn about the getUsers REST method in the documentation o
 
 ### Description
 
-@short: Gets a promise with the users data
+@short: Retrieves a promise containing the users data
 
 :::info
-The **getUsers()** method is a part of the **RestDataProvider** service intended for working with server
+The **getUsers()** method is part of the **RestDataProvider** service designed for server communication
 :::
 
 ### Usage
@@ -22,7 +22,7 @@ getUsers(): promise;
 
 ### Returns
 
-The **getUsers()** method sends a request to the server by the **GET** method and returns a **promise** with the users data
+The **getUsers()** method makes a **GET** request to the server and returns a **promise** that resolves with the users data
 
 ### Example
 
@@ -55,6 +55,6 @@ Promise.all([
 });
 ~~~
 
-**Change log:** The method was added in v1.3
+**Change log:** This method was introduced in version 1.3
 
 **Related articles:** [Working with server](../../../../guides/working_with_server)

@@ -8,7 +8,7 @@ description: You can learn about the addLink method in the documentation of the 
 
 ### Description
 
-@short: Adds a new link into Kanban
+@short: Inserts a new link into the Kanban board.
 
 ### Usage
 
@@ -21,8 +21,8 @@ addLink({
 
 ### Parameters
 
-- `id` - (optional) the ID of the new link
-- `link` - (required) the data object of the new link. The full list of the link parameters can be found [here](api/config/js_kanban_links_config.md)
+- `id` - (optional) the identifier for the new link
+- `link` - (required) the data object representing the new link. The complete list of link parameters is available [here](/api/config/js_kanban_links_config.md)
 
 ### Example
 
@@ -43,4 +43,4 @@ board.addLink({
 });
 ~~~
 
-**Change log:** The method was added in v1.5
+**Change log:** This method was introduced in v1.5

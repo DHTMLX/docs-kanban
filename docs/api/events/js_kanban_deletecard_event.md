@@ -1,14 +1,14 @@
 ---
 sidebar_label: delete-card
 title: delete-card Event
-description: You can learn about the delete-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the delete-card event in the DHTMLX JavaScript Kanban library documentation. Find developer guides, API references, code samples, live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # delete-card
 
 ### Description
 
-@short: Fires when removing a card
+@short: Triggered when a card is removed
 
 ### Usage
 
@@ -21,13 +21,13 @@ description: You can learn about the delete-card event in the documentation of t
 
 ### Parameters
 
-The callback of the **delete-card** event can take an object with the following parameter:
+The callback for the **delete-card** event receives an object with these properties:
 
-- `id` - (required) the ID of the card to be deleted
-- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
+- `id` - (required) the identifier of the card being deleted
+- `skipProvider` - (optional) controls whether to block sending the request to the server
 
 :::info
-For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -38,7 +38,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// subscribe on the "delete-card" event 
+// listen for the "delete-card" event 
 board.api.on("delete-card", (obj) => {
     console.log(obj.id);
 });

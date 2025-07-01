@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateColumn()
 title: updateColumn Method
-description: You can learn about the updateColumn method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Explore the updateColumn method in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, code examples, live demos, and get a free 30-day trial of DHTMLX Kanban.
 ---
 
 # updateColumn()
 
 ### Description
 
-@short: Updates the column data by its ID
+@short: Modifies the data of a column using its ID
 
 ### Usage
 
@@ -22,13 +22,13 @@ updateColumn({
 
 ### Parameters
 
-- `id` - (required) the ID of the column to be updated
-- `column` - (optional) the new data object of the column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
-- `replace` - (optional) enables/disables fully data replacing
+- `id` - (required) specifies the ID of the column you want to update
+- `column` - (optional) an object containing the new data for the column. You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config.md)
+- `replace` - (optional) determines whether to completely replace the existing data
 
-    :::note
-    If you set the `replace` parameter to *true*, the old data will be fully replaced by the new ones. Otherwise, the method will update only the values you passed.
-    :::
+:::note
+When `replace` is set to *true*, the existing data will be fully replaced by the new data. If not, only the provided values will be updated.
+:::
 
 ### Example
 
@@ -51,6 +51,6 @@ board.updateColumn({
 });
 ~~~
 
-**Change log**: 
-- The **id** and **column** parameters were added in v1.1
+**Change log**:
+- The **id** and **column** parameters were introduced in v1.1
 - The **replace** parameter was added in v1.3
