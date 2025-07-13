@@ -8,6 +8,18 @@ description: Informieren Sie sich über die neuesten Funktionen und Updates von 
 
 Wenn Sie Kanban von einer älteren Version aktualisieren, empfiehlt es sich, [Migration zu neueren Versionen](/news/migration.md) für weitere Informationen zu prüfen.
 
+
+## Version 1.6.4
+
+Veröffentlicht am 12. Juni 2025
+
+### Fehlerbehebungen
+
+- Karten gehen verloren, wenn sie zu Spalten/Zeilen hinzugefügt werden, die entfernt und dann wiederhergestellt wurden
+- Fehlende Locale-Labels für Uploader-Listen-Buttons
+- Fehlende Readme-Dateien in kommerziellen Versionen der Pakete
+
+
 ## Version 1.6.3
 
 Veröffentlicht am 8. April 2025
@@ -439,7 +451,7 @@ Veröffentlicht am 29. Juni 2022
 - **Eigenschaften:**
     [`cardHeight`](/api/config/js_kanban_cardheight_config),
     [`columnShape`](/api/config/js_kanban_columnshape_config),
-    [`rowShape`](/api/config/js_kanban_rowshape_config), 
+    [`rowShape`](/api/config/js_kanban_rowshape_config),
     [`renderType`](/api/config/js_kanban_rendertype_config),
     [`scrollType`](/api/config/js_kanban_scrolltype_config)
 

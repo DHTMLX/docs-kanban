@@ -8,6 +8,17 @@ description: DHTMLX Kanban의 최신 기능과 업데이트, 릴리스 이력, �
 
 Kanban을 이전 버전에서 업데이트할 때는 [새 버전으로 마이그레이션](/news/migration.md)을 참고하는 것이 좋습니다.
 
+
+## 버전 1.6.4
+
+2025년 6월 12일 릴리스
+
+### 수정 사항
+
+- 카드가 제거된 열/행에 추가된 후 다시 복원된 경우 카드가 손실됨
+- 업로더 목록 버튼에 대한 지역화된 레이블이 누락됨
+- 상업 버전 패키지에 대한 README가 누락됨
+
 ## 버전 1.6.3
 
 2025년 4월 8일 릴리스
@@ -416,7 +427,7 @@ Kanban을 이전 버전에서 업데이트할 때는 [새 버전으로 마이그
 
 [블로그 릴리스 리뷰](https://dhtmlx.com/blog/dhtmlx-kanban-1-2/)
 
-### 신규 기능 
+### 신규 기능
 
 - 컬럼 메뉴에서 새 카드 추가 가능 ([**예제**](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban) 참고)
 - lazy 렌더링 지원 ([**예제**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban) 참고)
@@ -439,7 +450,7 @@ Kanban을 이전 버전에서 업데이트할 때는 [새 버전으로 마이그
 - **속성:**
     [`cardHeight`](/api/config/js_kanban_cardheight_config),
     [`columnShape`](/api/config/js_kanban_columnshape_config),
-    [`rowShape`](/api/config/js_kanban_rowshape_config), 
+    [`rowShape`](/api/config/js_kanban_rowshape_config),
     [`renderType`](/api/config/js_kanban_rendertype_config),
     [`scrollType`](/api/config/js_kanban_scrolltype_config)
 
@@ -501,10 +512,10 @@ Kanban을 이전 버전에서 업데이트할 때는 [새 버전으로 마이그
 
 ### 신규 API
 
-- 컬럼 이동, 행 이동을 위한 **이벤트**: 
+- 컬럼 이동, 행 이동을 위한 **이벤트**:
     [`move-column`](/api/events/js_kanban_movecolumn_event),
     [`move-row`](/api/events/js_kanban_moverow_event)
-- 컬럼 이동, 행 이동을 위한 **메소드**: 
+- 컬럼 이동, 행 이동을 위한 **메소드**:
     [`moveColumn()`](/api/methods/js_kanban_movecolumn_method),
     [`moveRow()`](/api/methods/js_kanban_moverow_method)
 

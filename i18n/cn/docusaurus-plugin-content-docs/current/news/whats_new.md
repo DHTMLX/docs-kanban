@@ -8,6 +8,18 @@ description: 您可以了解 DHTMLX Kanban 的最新特性和更新，查看其�
 
 如果您正在从旧版本升级 Kanban，建议查阅 [迁移到新版本](/news/migration.md) 以获取更多信息。
 
+
+## 版本 1.6.4
+
+发布日期：2025 年 6 月 12 日
+
+### 修复
+
+- 添加到已删除然后恢复的列/行中的卡片会丢失
+- 上传列表按钮缺少本地化标签
+- 商业版本包中缺少自述文件
+
+
 ## 版本 1.6.3
 
 发布日期:2025 年 4 月 8 日
@@ -416,7 +428,7 @@ description: 您可以了解 DHTMLX Kanban 的最新特性和更新，查看其�
 
 [博客发布评测](https://dhtmlx.com/blog/dhtmlx-kanban-1-2/)
 
-### 新功能 
+### 新功能
 
 - 现在可以通过列菜单添加新卡片（参见[**示例**](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban)）
 - 支持延迟渲染（参见[**示例**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)）
@@ -439,7 +451,7 @@ description: 您可以了解 DHTMLX Kanban 的最新特性和更新，查看其�
 - **属性:**
     [`cardHeight`](/api/config/js_kanban_cardheight_config),
     [`columnShape`](/api/config/js_kanban_columnshape_config),
-    [`rowShape`](/api/config/js_kanban_rowshape_config), 
+    [`rowShape`](/api/config/js_kanban_rowshape_config),
     [`renderType`](/api/config/js_kanban_rendertype_config),
     [`scrollType`](/api/config/js_kanban_scrolltype_config)
 
@@ -501,10 +513,10 @@ description: 您可以了解 DHTMLX Kanban 的最新特性和更新，查看其�
 
 ### 新 API
 
-- 新增列、行移动 **事件**: 
+- 新增列、行移动 **事件**:
     [`move-column`](/api/events/js_kanban_movecolumn_event),
     [`move-row`](/api/events/js_kanban_moverow_event)
-- 新增列、行移动 **方法**: 
+- 新增列、行移动 **方法**:
     [`moveColumn()`](/api/methods/js_kanban_movecolumn_method),
     [`moveRow()`](/api/methods/js_kanban_moverow_method)
 
