@@ -14,8 +14,8 @@ Released on July 14, 2025
 
 ### Fixes
 
-The `disabled: true` config does not work for menu items
-When you add a row to Kanban with no predefined row structure, row headers do not appear
+- The `disabled: true` config does not work for menu items
+- When you add a row to Kanban with no predefined row structure, row headers do not appear
 
 ## Version 1.6.4
 
