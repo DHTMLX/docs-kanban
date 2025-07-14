@@ -8,7 +8,16 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
-## Version 1.6.4 
+## Version 1.6.5
+
+Released on July 14, 2025
+
+### Fixes
+
+The `disabled: true` config does not work for menu items
+When you add a row to Kanban with no predefined row structure, row headers do not appear
+
+## Version 1.6.4
 
 Released on June 12, 2025
 
