@@ -8,6 +8,14 @@ description: Informieren Sie sich über die neuesten Funktionen und Updates von 
 
 Wenn Sie Kanban von einer älteren Version aktualisieren, empfiehlt es sich, [Migration zu neueren Versionen](/news/migration.md) für weitere Informationen zu prüfen.
 
+## Version 1.6.5
+
+Veröffentlicht am 14. Juli 2025
+
+### Fehlerbehebungen
+
+- Die `disabled: true` Konfiguration funktioniert nicht für Menüeinträge
+- Wenn Sie eine Zeile zu Kanban hinzufügen, ohne dass eine vordefinierte Zeilenstruktur vorhanden ist, erscheinen keine Zeilenköpfe
 
 ## Version 1.6.4
 
@@ -18,7 +26,6 @@ Veröffentlicht am 12. Juni 2025
 - Karten gehen verloren, wenn sie zu Spalten/Zeilen hinzugefügt werden, die entfernt und dann wiederhergestellt wurden
 - Fehlende Locale-Labels für Uploader-Listen-Buttons
 - Fehlende Readme-Dateien in kommerziellen Versionen der Pakete
-
 
 ## Version 1.6.3
 
