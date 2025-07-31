@@ -77,7 +77,17 @@ const en = {
         "Would you like to delete this comment?":
             "Would you like to delete this comment?",
         "Would you like to delete this card?":
-            "Would you like to delete this card?"
+            "Would you like to delete this card?",
+            
+        "Make cover": "Make cover",
+        "Remove cover": "Remove cover",
+        "B": "B",
+        "KB": "KB",
+        "MB": "MB",
+        "GB": "GB",
+        "TB": "TB",
+        "PB": "PB",
+        "EB": "EB"
     },
     calendar: { // translations and settings of the calendar
         monthFull: [
