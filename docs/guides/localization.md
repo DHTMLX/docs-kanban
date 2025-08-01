@@ -14,9 +14,8 @@ By default, the interface uses the **English** locale:
 
 ~~~jsx
 const en = {
-    kanban: { // translations of the Kanban labels
+    kanban: {
         Save: "Save",
-        Send: "Send",
         Close: "Close",
         Delete: "Delete",
         Name: "Name",
@@ -24,15 +23,26 @@ const en = {
         Type: "Type",
         "Start date": "Start date",
         "End date": "End date",
-
+        Files: "Files",
+        B: "B",
+        KB: "KB",
+        MB: "MB",
+        GB: "GB",
+        TB: "TB",
+        PB: "PB",
+        EB: "EB",
+        "Make cover": "Make cover",
+        "Remove cover": "Remove cover",
+        Comments: "Comments",
+        Links: "Links",
         Result: "Result",
         "No results": "No results",
         Search: "Search",
         "Search in": "Search in",
         "Add new row": "Add new row",
         "Add new column": "Add new column",
-        "Add new card": "Add new card",
         "Add new card...": "Add new card...",
+        "Add new card": "Add new card",
         "Edit card": "Edit card",
         Edit: "Edit",
 
@@ -73,21 +83,12 @@ const en = {
         "Select a relation": "Select a relation",
         "Select a task": "Select a task",
 
-        "No comments yet": "No comments yet",
+        Send: "Send",
         "Would you like to delete this comment?":
             "Would you like to delete this comment?",
+        "No comments yet": "No comments yet",
         "Would you like to delete this card?":
             "Would you like to delete this card?",
-            
-        "Make cover": "Make cover",
-        "Remove cover": "Remove cover",
-        "B": "B",
-        "KB": "KB",
-        "MB": "MB",
-        "GB": "GB",
-        "TB": "TB",
-        "PB": "PB",
-        "EB": "EB"
     },
     calendar: { // translations and settings of the calendar
         monthFull: [
