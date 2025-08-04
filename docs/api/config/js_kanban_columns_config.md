@@ -97,6 +97,22 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
+### Custom styling
+
+To apply custom styles to columns using the `css` parameter, add CSS rules for your custom class.
+
+```css
+.wx-header .wx-column.red,
+.wx-column.red {
+    background: #FFA29C;
+}
+```
+
+If styles are not applied, ensure that:
+
+- Your selector includes enough context (e.g., parent and internal DHTMLX classes)
+- If the property is overridden by an inline style, you you can use `!important`
+
 **Change log:** The **css** and **overlay** parameters were added in v1.4
 
 **Related article:**
