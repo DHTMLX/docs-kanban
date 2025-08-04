@@ -96,7 +96,7 @@ To enable data operations like adding or deleting items and sending requests to 
 
 ### Example
 
-Here's a snippet showing how to connect **RestDataProvider** to a **Go** backend and load data from the server:
+In this snippet you can see how to connect **RestDataProvider** to the **Go** backend and load server data:
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
