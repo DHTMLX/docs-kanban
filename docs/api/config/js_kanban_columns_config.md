@@ -111,7 +111,7 @@ To apply custom styles to columns using the `css` parameter, add CSS rules for y
 If styles are not applied, ensure that:
 
 - Your selector includes enough context (e.g., parent and internal DHTMLX classes)
-- You’re not being overridden by inline styles. In such cases, the `!important` may be required (but use it only for overriding inline styles).
+- If the property is overridden by an inline style, you you can use `!important`
 
 **Change log:** The **css** and **overlay** parameters were added in v1.4
 
