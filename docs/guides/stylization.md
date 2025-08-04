@@ -93,47 +93,6 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 Next versions of Kanban can bring some changes for the variables and their names. Please, do not forget to check the names after updating to the newer versions and modify them in your code to avoid problems with display of the component.
 :::
 
-## Built-in themes
-
-You can use the [`theme`](../../api/config/js_kanban_theme_config) property or the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method to apply one of the following themes: **material**, **willow** and **willow-dark**.
-
-:::important
-Besides using the `theme` property, you can also apply the needed theme via adding the corresponding *css* classes to the widget containers:
-
-- **Material theme**
-~~~html {}
-    <!-- Kanban toolbar -->
-    <div id="toolbar" class="wx-material-theme"></div>
-    <!-- Kanban container -->
-    <div id="root" class="wx-material-theme"></div>
-~~~
-
-- **Willow theme**
-~~~html {}
-    <!-- Kanban toolbar -->
-    <div id="toolbar" class="wx-willow-theme"></div>
-    <!-- Kanban container -->
-    <div id="root" class="wx-willow-theme"></div>
-~~~
-
-- **Willow-Dark theme**
-~~~html {}
-    <!-- Kanban toolbar -->
-    <div id="toolbar" class="wx-willow-dark-theme"></div>
-    <!-- Kanban container -->
-    <div id="root" class="wx-willow-dark-theme"></div>
-~~~
-
-or just include the needed theme on the page from the skins folder:
-
-~~~html {}
-<link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
-~~~
-:::
-
-In this snippet you can see how to apply the **willow-dark** theme to Kanban
-<iframe src="https://snippet.dhtmlx.com/k3iw6ti0?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
-
 ## Scroll style
 
 You can also apply a custom style to a scroll bar of Kanban. For this, you can use the `.wx-styled-scroll` CSS class. Before using it, check compatibility with the modern browsers [here](https://caniuse.com/css-scrollbar).
