@@ -288,11 +288,10 @@ Released March 21, 2023
 
 ### New functionality
 
-- Comments can now be added (see [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
-- The **material**, **willow**, and **willow-dark** themes are available (see [**example**](https://snippet.dhtmlx.com/jnw54xif?tag=kanban))
-- You can limit the number of users (see [**example**](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
-- Set links between cards (see [**example**](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
-- Cards can be voted for (see [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- An ability to add comments (see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- An ability to limit users (see the [**example**](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
+- An ability to set links between cards (see the [**example**](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
+- An ability to votes for a card (see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
 
 ### New API
 
