@@ -95,7 +95,4 @@ const board = new kanban.Kanban("#root", {
 
 **Related articles:** [Stylization](/guides/stylization)
 
-**Related sample:**
-- [Kanban. Using themes](https://snippet.dhtmlx.com/jnw54xif?tag=kanban)
-- [Kanban. Including a theme as a stylesheet](https://snippet.dhtmlx.com/k3iw6ti0?tag=kanban)
-- [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)
+**Related sample:** [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)
