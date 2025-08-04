@@ -99,7 +99,7 @@ new kanban.Kanban("#root", {
 
 ### Custom styling
 
-To apply custom styles to columns using the `css` parameter, add CSS rules for your custom class. Make sure your that selector is specific enough to override default styles.
+To apply custom styles to columns using the `css` parameter, add CSS rules for your custom class.
 
 ```css
 .wx-header .wx-column.red,
