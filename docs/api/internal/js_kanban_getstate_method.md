@@ -50,7 +50,7 @@ This method returns an object with the following properties:
     sort: object,
     // deprecated options
     fromAreaMeta: object, // deleted in v.1.2
-    editorShape: array, // deleted in v.1.4
+    editorShape: array,
     dropAreaItemsCoords: array, // deprecated in v1.4
     dropAreasCoords: array, // deprecated in v1.4 
     overAreaMeta: object, // deprecated in v1.4
@@ -80,4 +80,3 @@ The method was updated in v1.4. The following parameters were deprecated:
 - ***dropAreaItemsCoords***
 - ***dropAreasCoords***
 - ***overAreaMeta***
-The ***editorShape*** parameter was removed
