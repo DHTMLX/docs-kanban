@@ -7,7 +7,7 @@ description: You can learn about the integration with React in the documentation
 # Integration with React
 
 :::tip
-It's helpful to know the basics of [**React**](https://react.dev) before diving into this documentation. If you want to brush up on React, check out the [**React documentation**](https://reactjs.org/docs/getting-started.html).
+You should be familiar with the basic concepts and patterns of [**React**](https://react.dev) before reading this documentation. To refresh your knowledge, please refer to the [**React documentation**](https://react.dev/learn).
 :::
 
 DHTMLX Kanban works well with **React**. There are code samples showing how to use DHTMLX Kanban in React projects. For more details, check out the [**Example on GitHub**](https://github.com/DHTMLX/react-kanban-demo).

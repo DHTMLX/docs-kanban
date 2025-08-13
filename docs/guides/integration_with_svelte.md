@@ -7,7 +7,7 @@ description: You can learn about the integration with Svelte in the documentatio
 # Integration with Svelte
 
 :::tip
-It's helpful to have a basic understanding of **Svelte** before jumping into this guide. For a quick refresher, check out the [**Svelte documentation**](https://svelte.dev/).
+You should be familiar with the basic concepts and patterns of **Svelte** before reading this documentation. To refresh your knowledge, please refer to the [**Svelte documentation**](https://svelte.dev/docs/kit/introduction).
 :::
 
 DHTMLX Kanban works smoothly with **Svelte**. There are code examples showing how DHTMLX Kanban can be used in a Svelte setup. For more details, take a look at the [**Example on GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
