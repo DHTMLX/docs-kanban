@@ -35,7 +35,7 @@ Kanban по умолчанию использует [**английский**](/
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    locale: cn // изначально применяется locale "cn"
+    locale: zh // изначально применяется locale "zh"
     // другие параметры
 });
 ~~~

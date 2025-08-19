@@ -33,12 +33,12 @@ Um die locale dynamisch zu wechseln, können Sie die [**setLocale()**](../../met
 ~~~jsx {8}
 // Kanban erstellen
 const board = new kanban.Kanban("#root", {
-    locale: cn
+    locale: zh
 });
 // Toolbar erstellen
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: cn // wendet die "cn" locale auf die Toolbar an
+    locale: zh // wendet die "zh" locale auf die Toolbar an
 });
 ~~~
 

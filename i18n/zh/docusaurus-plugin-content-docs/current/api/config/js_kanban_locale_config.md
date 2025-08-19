@@ -35,7 +35,7 @@ locale?: object;
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    locale: cn // 初始应用 "cn" 语言环境
+    locale: zh // 初始应用 "zh" 语言环境
     // 其他参数
 });
 ~~~

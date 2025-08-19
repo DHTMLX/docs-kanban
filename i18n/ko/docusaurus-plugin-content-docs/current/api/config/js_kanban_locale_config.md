@@ -35,7 +35,7 @@ Kanban은 기본적으로 [**영어**](/guides/localization/#기본-로케일) �
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    locale: cn // 처음에 "cn" 로케일이 적용됩니다
+    locale: zh // 처음에 "zh" 로케일이 적용됩니다
     // 기타 매개변수
 });
 ~~~

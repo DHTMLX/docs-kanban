@@ -33,12 +33,12 @@ locale?: object;
 ~~~jsx {8}
 // Kanban 생성
 const board = new kanban.Kanban("#root", {
-    locale: cn
+    locale: zh
 });
 // Toolbar 생성
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: cn // Toolbar에 "cn" 로케일 적용
+    locale: zh // Toolbar에 "zh" 로케일 적용
 });
 ~~~
 

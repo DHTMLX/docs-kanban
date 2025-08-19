@@ -35,7 +35,7 @@ Um die Locale zur Laufzeit zu wechseln, steht in Kanban die Methode [**setLocale
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    locale: cn // die Locale "cn" wird anfänglich angewendet
+    locale: zh // die Locale "zh" wird anfänglich angewendet
     // weitere Parameter
 });
 ~~~

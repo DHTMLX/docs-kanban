@@ -33,12 +33,12 @@ locale?: object;
 ~~~jsx {8}
 // создаем Kanban
 const board = new kanban.Kanban("#root", {
-    locale: cn
+    locale: zh
 });
 // создаем Toolbar
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: cn // применяем локаль "cn" к Toolbar
+    locale: zh // применяем локаль "zh" к Toolbar
 });
 ~~~
 

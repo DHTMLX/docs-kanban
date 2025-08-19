@@ -35,7 +35,7 @@ To switch the locale on the fly, the [**setLocale()**](../../methods/js_kanban_s
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    locale: cn // the "cn" locale is applied initially
+    locale: zh // the "zh" locale is applied initially
     // other parameters
 });
 ~~~

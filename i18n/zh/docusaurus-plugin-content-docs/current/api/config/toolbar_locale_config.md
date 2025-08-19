@@ -33,12 +33,12 @@ locale?: object;
 ~~~jsx {8}
 // 创建看板
 const board = new kanban.Kanban("#root", {
-    locale: cn
+    locale: zh
 });
 // 创建 Toolbar
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: cn // 将 "cn" 语言环境应用到 Toolbar 
+    locale: zh // 将 "zh" 语言环境应用到 Toolbar 
 });
 ~~~
 
