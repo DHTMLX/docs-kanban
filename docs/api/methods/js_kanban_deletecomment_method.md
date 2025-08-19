@@ -14,15 +14,15 @@ description: You can learn about the deleteComment method in the documentation o
 
 ~~~jsx {}
 deleteComment({
-    id?: string | number, 
+    id: string | number, 
     cardId: string | number
 }): void;
 ~~~
 
 ### Parameters
 
-- `id` -  (optional) the comment's ID that needs to be removed
-- `cardId` - (required) the ID of the card containing the comment
+- `id` -  (required) the ID of the comment to be deleted
+- `cardId` - (required) the ID of the card which comment to be deleted
 
 ### Example
 
