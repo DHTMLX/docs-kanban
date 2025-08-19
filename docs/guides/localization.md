@@ -67,16 +67,16 @@ const en = {
         "Description (a-z)": "Description (a-z)",
         "Description (z-a)": "Description (z-a)",
 
+        "Add link": "Add link",
         Duplicate: "Duplicate",
         "Duplicate of": "Duplicate of",
-
         "Relates to": "Relates to",
         "Depends on": "Depends on",
         "Is required for": "Is required for",
         Duplicates: "Duplicates",
         "Is duplicated by": "Is duplicated by",
-        "Parent for": "Parent for",
-        "SubTask of": "SubTask of",
+        "Is parent for": "Is parent for",
+        "Is subtask of": "Is subtask of",
 
         Cancel: "Cancel",
         "Link task": "Link task",
