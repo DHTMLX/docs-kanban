@@ -139,10 +139,10 @@ const config = {
 	baseUrl: process.env.DOCUSAURUS_BASEURL || '/kanban/',
 	i18n: {
 		defaultLocale: 'en',
-		locales: ['en', 'de', 'ru', 'cn', 'ko'],
+		locales: ['en', 'de', 'ru', 'zh', 'ko'],
 		localeConfigs: {
-			cn: {
-				htmlLang: 'zh-CN',
+			zh: {
+				htmlLang: 'zh-ZH',
 				label: '中文'
 			},
 		}
