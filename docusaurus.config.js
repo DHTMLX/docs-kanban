@@ -142,7 +142,7 @@ const config = {
 		locales: ['en', 'de', 'ru', 'zh', 'ko'],
 		localeConfigs: {
 			zh: {
-				htmlLang: 'zh-ZH',
+				htmlLang: 'zh-CN',
 				label: '中文'
 			},
 		}
