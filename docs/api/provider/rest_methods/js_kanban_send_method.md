@@ -10,7 +10,7 @@ description: You can learn about the send() method in the documentation of the D
 
 @short: This method handles sending the necessary HTTP requests to the server and returns a promise that may include data, depending on the request type.
 
-All server requests are performed using the **send()** method, which is part of the [**RestDataProvider**](/guides/working_with_server.md/#restdataprovider) service.
+All server requests are performed using the **send()** method, which is part of the [**RestDataProvider**](/guides/working_with_server/#restdataprovider) service.
 
 ### Usage
 
@@ -109,4 +109,4 @@ board.api.setNext(new MyDataProvider(url));
 
 ---
 
-**Related articles:** [Working with server](../../../../guides/working_with_server)
+**Related articles:** [Working with server](//guides/working_with_server)

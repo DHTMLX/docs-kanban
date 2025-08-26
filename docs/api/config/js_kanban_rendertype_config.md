@@ -21,7 +21,7 @@ renderType?: "default" | "lazy";
 ~~~  
 
 :::important
-When using `renderType: "lazy"` together with [`scrollType: "default"`](/api/config/js_kanban_scrolltype_config.md), make sure to set a fixed height for cards using the [`cardHeight`](/api/config/js_kanban_cardheight_config.md) property. Without this, cards may not display properly.
+When using `renderType: "lazy"` together with [`scrollType: "default"`](/api/config/js_kanban_scrolltype_config), make sure to set a fixed height for cards using the [`cardHeight`](/api/config/js_kanban_cardheight_config) property. Without this, cards may not display properly.
 :::
 
 ### Default config
@@ -44,6 +44,6 @@ new kanban.Kanban("#root", {
 
 **Change log:** This property was introduced in v1.2
 
-**Related articles:** [Configuration](/guides/configuration#cards)
+**Related articles:** [Configuration](/guides/configuration/#cards)
 
 **Related sample:** [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

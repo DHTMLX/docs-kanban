@@ -8,21 +8,21 @@ description: You can learn about the configuration in the documentation of the D
 
 The *Kanban* widget can be customized in both look and features using its API. There are a variety of options you can tweak, such as:
 
-- Adjust how cards look with the [`cardShape`](/api/config/js_kanban_cardshape_config.md) property
-- Set up the editor fields using the [`editorShape`](/api/config/js_kanban_editorshape_config.md) property
-- Control the editor's behavior with the [`editor`](/api/config/js_kanban_editor_config.md) property
-- Manage rendering and scrolling through [`renderType`](/api/config/js_kanban_rendertype_config.md) and [`scrollType`](/api/config/js_kanban_scrolltype_config.md)
-- Keep track of changes with the [`history`](/api/config/js_kanban_history_config.md) property
-- Personalize card appearance using the [`cardTemplate`](/api/config/js_kanban_cardtemplate_config.md) property
-  - *(The [**Customization**](/guides/customization.md) section covers this in detail)*
-- Change the language with the [`locale`](/api/config/js_kanban_locale_config.md) property
-  - *(See [**Localization**](/guides/localization.md) for more info)*
-- Load data for cards, columns, rows, and links through the corresponding [`cards`](/api/config/js_kanban_cards_config.md), [`columns`](/api/config/js_kanban_columns_config.md), [`rows`](/api/config/js_kanban_rows_config.md), and [`links`](/api/config/js_kanban_links_config.md) properties
-  - *(Check out [**Working with data**](/guides/working_with_data.md) for more details)*
+- Adjust how cards look with the [`cardShape`](/api/config/js_kanban_cardshape_config) property
+- Set up the editor fields using the [`editorShape`](/api/config/js_kanban_editorshape_config) property
+- Control the editor's behavior with the [`editor`](/api/config/js_kanban_editor_config) property
+- Manage rendering and scrolling through [`renderType`](/api/config/js_kanban_rendertype_config) and [`scrollType`](/api/config/js_kanban_scrolltype_config)
+- Keep track of changes with the [`history`](/api/config/js_kanban_history_config) property
+- Personalize card appearance using the [`cardTemplate`](/api/config/js_kanban_cardtemplate_config) property
+  - *(The [**Customization**](/guides/customization) section covers this in detail)*
+- Change the language with the [`locale`](/api/config/js_kanban_locale_config) property
+  - *(See [**Localization**](/guides/localization) for more info)*
+- Load data for cards, columns, rows, and links through the corresponding [`cards`](/api/config/js_kanban_cards_config), [`columns`](/api/config/js_kanban_columns_config), [`rows`](/api/config/js_kanban_rows_config), and [`links`](/api/config/js_kanban_links_config) properties
+  - *(Check out [**Working with data**](/guides/working_with_data) for more details)*
 
 ## Cards
 
-In Kanban, cards are organized into columns and rows. You can control how cards look and what info they display using the [`cardShape`](/api/config/js_kanban_cardshape_config.md) property. There are several built-in fields you can choose to show or hide, including:
+In Kanban, cards are organized into columns and rows. You can control how cards look and what info they display using the [`cardShape`](/api/config/js_kanban_cardshape_config) property. There are several built-in fields you can choose to show or hide, including:
 
 - Card label using the `label: boolean` option
 - Card description using the `description: boolean` option
@@ -122,16 +122,16 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-If you don't define your own card settings through [`cardShape`](/api/config/js_kanban_cardshape_config.md), Kanban will use the [**defaultCardShape**](/api/config/js_kanban_cardshape_config.md#default-config) settings!
+If you don't define your own card settings through [`cardShape`](/api/config/js_kanban_cardshape_config), Kanban will use the [`defaultCardShape`](/api/config/js_kanban_cardshape_config/#default-config) settings!
 :::
 
 ## Editor
 
 :::info
-You can have the Editor show up as a **sidebar** or **modal window** by setting the [`editor.placement`](/api/config/js_kanban_editor_config.md) property!
+You can have the Editor show up as a **sidebar** or **modal window** by setting the [`editor.placement`](/api/config/js_kanban_editor_config) property!
 :::
 
-The Kanban *Editor* is where card details get managed. You can set up which fields show in the editor by using the [`editorShape`](/api/config/js_kanban_editorshape_config.md) property. The available field types include:
+The Kanban *Editor* is where card details get managed. You can set up which fields show in the editor by using the [`editorShape`](/api/config/js_kanban_editorshape_config) property. The available field types include:
 
 - [**combo**, **select**, and **multiselect**](#combo-select-and-multiselect-types)
 - [**color**](#color-type)
@@ -408,7 +408,7 @@ new kanban.Kanban("#root", {
 ### Binding editor fields to card fields
 
 :::info
-To connect an editor field to a card field, set the **key** in the [`editorShape`](/api/config/js_kanban_editorshape_config.md) object (`key: "editor_field_key"`). For built-in card fields, make sure this key is set to *true* in [`cardShape`](/api/config/js_kanban_cardshape_config.md). For custom fields, add it to the **headerFields** array. You can also set the initial value for any field with this key.
+To connect an editor field to a card field, set the **key** in the [`editorShape`](/api/config/js_kanban_editorshape_config) object (`key: "editor_field_key"`). For built-in card fields, make sure this key is set to *true* in [`cardShape`](/api/config/js_kanban_cardshape_config). For custom fields, add it to the **headerFields** array. You can also set the initial value for any field with this key.
 
 ~~~jsx {5,13,22,25,33-34,38-39,45-47}
 // editor settings
@@ -465,12 +465,12 @@ new kanban.Kanban("#root", {
 :::
 
 :::note
-If no editor settings are defined via [`editorShape`](/api/config/js_kanban_editorshape_config.md), the widget falls back to [**defaultEditorShape**](/api/config/js_kanban_editorshape_config.md#default-config). The default inputs and controls will then only appear if you turn on the matching card fields in [`cardShape`](/api/config/js_kanban_cardshape_config.md).
+If no editor settings are defined via [`editorShape`](/api/config/js_kanban_editorshape_config), the widget falls back to [**defaultEditorShape**](/api/config/js_kanban_editorshape_config/#default-config). The default inputs and controls will then only appear if you turn on the matching card fields in [`cardShape`](/api/config/js_kanban_cardshape_config).
 :::
 
 ### Configuring the editor
 
-You can tweak editor behavior using the [`editor`](/api/config/js_kanban_editor_config.md) property:
+You can tweak editor behavior using the [`editor`](/api/config/js_kanban_editor_config) property:
 
 - Turn autosave on or off with *`editor.autoSave`*
 - Set the autosave delay using *`editor.debounce`* (only works if ***autoSave: true*** is on)

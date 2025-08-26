@@ -51,7 +51,7 @@ Each column can be configured using the following properties (data):
 ~~~
 
 :::info
-To update column data dynamically, you can use the [`parse()`](../../methods/js_kanban_parse_method) method.
+To update column data dynamically, you can use the [`parse()`](/api/methods/js_kanban_parse_method) method.
 :::
 
 ### Example
@@ -101,7 +101,7 @@ new kanban.Kanban("#root", {
 
 **Related article:**
 - [Working with data](/guides/working_with_data)
-- [updateColumn()](/api/methods/js_kanban_updatecolumn_method.md)
+- [updateColumn()](/api/methods/js_kanban_updatecolumn_method)
 
 **Related samples:**
 - [Kanban. Limits for columns and swimlanes](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban)

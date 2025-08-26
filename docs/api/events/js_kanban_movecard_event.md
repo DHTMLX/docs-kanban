@@ -33,7 +33,7 @@ The callback for the **move-card** event receives an object with the following p
 - `skipProvider` - (optional) controls whether the request to the server should be prevented
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

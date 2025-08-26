@@ -25,7 +25,7 @@ locale?: object;
 By default, Toolbar is set to the [**English**](/guides/localization/#default-locale) locale. You can also specify your own custom locale.
 
 :::tip
-To switch the locale on the fly, you can use the Toolbar's [**setLocale()**](../../methods/toolbar_setlocale_method) method.
+To switch the locale on the fly, you can use the Toolbar's [**setLocale()**](/api/methods/toolbar_setlocale_method) method.
 :::
 
 ### Example

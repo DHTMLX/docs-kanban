@@ -29,7 +29,7 @@ The callback for the **delete-comment** event receives an object with these prop
 - `skipProvider` - (optional) controls whether the request is prevented from being sent to the server
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

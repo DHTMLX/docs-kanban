@@ -40,7 +40,7 @@ Example:
 }
 ~~~
 
-For another example of the row object, see the [**rows**](/api/config/js_kanban_rows_config.md) section.
+For another example of the row object, see the [**rows**](/api/config/js_kanban_rows_config) section.
 
 ### Response
 
@@ -50,4 +50,4 @@ The HTTP status code reflects the outcome: a status of 200 means the request was
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

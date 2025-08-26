@@ -46,4 +46,4 @@ The HTTP status code signals whether the request was successful (**200**) or enc
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

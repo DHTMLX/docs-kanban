@@ -28,7 +28,7 @@ setTheme({
 - `fonts` - (optional) controls whether fonts are loaded from the CDN (wxi font).
 
 :::tip
-You can set the initial theme using the [`theme`](../../config/js_kanban_theme_config) property.
+You can set the initial theme using the [`theme`](/api/config/js_kanban_theme_config) property.
 :::
 
 ### Example

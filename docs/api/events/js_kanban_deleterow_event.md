@@ -27,7 +27,7 @@ The callback for the **delete-row** event accepts an object containing the follo
 - `skipProvider` - (optional) controls whether the request is sent to the server or not
 
 :::info
-To work with internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To work with internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

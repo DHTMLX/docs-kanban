@@ -27,7 +27,7 @@ The callback for the **delete-column** event receives an object with these prope
 - `skipProvider` - (optional) controls whether the request is sent to the server or not
 
 :::info
-To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

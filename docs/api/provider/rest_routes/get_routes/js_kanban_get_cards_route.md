@@ -70,12 +70,12 @@ Example:
 Event start and end dates should follow the ISO format **yyyy-MM-dd'T'HH:mm:ss.SSSXXX**
 :::
 
-For another example of the returned object, see [**cards**](/api/config/js_kanban_cards_config.md).
+For another example of the returned object, see [**cards**](/api/config/js_kanban_cards_config).
 
 The HTTP status code indicates the outcome of the request: success (response.status == 200) or failure (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](/guides/working_with_server.md)
-- [getCards()](/api/provider/rest_methods/js_kanban_getcards_method.md)
+- [Working with server](/guides/working_with_server)
+- [getCards()](/api/provider/rest_methods/js_kanban_getcards_method)

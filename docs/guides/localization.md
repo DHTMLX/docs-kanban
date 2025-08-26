@@ -123,8 +123,8 @@ If you want your own locale, here's what you need to do:
 
 - Make a custom locale (or update the default one) and fill in translations for all the labels you want to use (any language works)
 
-- Set the new locale in **Kanban** using the [`locale`](/api/config/js_kanban_locale_config.md) property or the [`setLocale()`](/api/methods/js_kanban_setlocale_method.md) method
-- Set the new locale in **Toolbar** using its [`locale`](/api/config/toolbar_locale_config.md) property or the [`setLocale()`](/api/methods/toolbar_setlocale_method.md) method
+- Set the new locale in **Kanban** using the [`locale`](/api/config/js_kanban_locale_config) property or the [`setLocale()`](/api/methods/js_kanban_setlocale_method) method
+- Set the new locale in **Toolbar** using its [`locale`](/api/config/toolbar_locale_config) property or the [`setLocale()`](/api/methods/toolbar_setlocale_method) method
 
 :::info
 Since v1.2, Kanban doesn't export built-in locales anymore. If you need more locales, check out the [**github page**](https://github.com/web-widgets/wx-kanban-locales). You can also install the locale you want via *npm* and use it like this:

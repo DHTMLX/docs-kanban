@@ -27,7 +27,7 @@ addColumn({
 - `before` - (optional) indicates the ID of the column before which the new one will be inserted 
 
 :::info
-You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config.md)
+You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config)
 :::
 
 ### Example

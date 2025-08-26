@@ -22,7 +22,7 @@ addLink({
 ### Parameters
 
 - `id` - (optional) the identifier for the new link
-- `link` - (required) the data object representing the new link. The complete list of link parameters is available [here](/api/config/js_kanban_links_config.md)
+- `link` - (required) the data object representing the new link. The complete list of link parameters is available [here](/api/config/js_kanban_links_config)
 
 ### Example
 

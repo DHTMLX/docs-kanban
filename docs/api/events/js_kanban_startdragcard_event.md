@@ -33,7 +33,7 @@ The callback for the **start-drag-card** event receives an object with the follo
 - `source` - (optional) an array containing the IDs of the cards being moved
 
 :::info
-To work with internal events, the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods) can be used.
+To work with internal events, the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods) can be used.
 :::
 
 ### Example

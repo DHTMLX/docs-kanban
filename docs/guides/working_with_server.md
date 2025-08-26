@@ -38,11 +38,11 @@ JavaScript Kanban offers the **RestDataProvider** service, which fully supports 
 
 The **RestDataProvider** service includes several REST methods for loading data dynamically:
 
-- [`getCards()`](/api/provider/rest_methods/js_kanban_getcards_method.md) - returns a promise with the ***cards data***
-- [`getColumns()`](/api/provider/rest_methods/js_kanban_getcolumns_method.md) - returns a promise with the ***columns data***
-- [`getLinks()`](/api/provider/rest_methods/js_kanban_getlinks_method.md) - returns a promise with the ***links data***
-- [`getRows()`](/api/provider/rest_methods/js_kanban_getrows_method.md) - returns a promise with the ***rows data***
-- [`getUsers()`](/api/provider/rest_methods/js_kanban_getusers_method.md) - returns a promise with the ***users data***
+- [`getCards()`](/api/provider/rest_methods/js_kanban_getcards_method) - returns a promise with the ***cards data***
+- [`getColumns()`](/api/provider/rest_methods/js_kanban_getcolumns_method) - returns a promise with the ***columns data***
+- [`getLinks()`](/api/provider/rest_methods/js_kanban_getlinks_method) - returns a promise with the ***links data***
+- [`getRows()`](/api/provider/rest_methods/js_kanban_getrows_method) - returns a promise with the ***rows data***
+- [`getUsers()`](/api/provider/rest_methods/js_kanban_getusers_method) - returns a promise with the ***users data***
 
 ## Interacting with backend
 
@@ -91,7 +91,7 @@ Promise.all([
 ~~~
 
 :::info
-To enable data operations like adding or deleting items and sending requests to the server, **RestDataProvider** needs to be included in the **Event Bus** chain using [**api.setNext()**](/api/internal/js_kanban_setnext_method.md).
+To enable data operations like adding or deleting items and sending requests to the server, **RestDataProvider** needs to be included in the **Event Bus** chain using [**api.setNext()**](/api/internal/js_kanban_setnext_method).
 :::
 
 ### Example

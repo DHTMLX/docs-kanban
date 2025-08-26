@@ -26,7 +26,7 @@ description: Explore the update-column event in the DHTMLX JavaScript Kanban lib
 The callback for the **update-column** event receives an object with the following properties:
 
 - `id` - (required) identifies the column to update
-- `column` - (optional) provides the new data object for the column. You can find the full list of **column** properties [**here**](/api/config/js_kanban_columns_config.md)
+- `column` - (optional) provides the new data object for the column. You can find the full list of **column** properties [**here**](/api/config/js_kanban_columns_config)
 - `replace` - (optional) determines whether to replace the entire data set or just update specified fields
 
 :::note
@@ -36,7 +36,7 @@ Setting `replace` to *true* means the existing data will be completely replaced 
 - `skipProvider` - (optional) controls whether the request to update the server is sent or skipped
 
 :::info
-To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

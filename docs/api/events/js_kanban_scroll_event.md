@@ -29,7 +29,7 @@ The callback for the **scroll** event receives an object with these properties:
 - `options` - (optional) an object containing scrolling options. See the full list of parameters [here](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
 
 :::info
-To handle inner events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To handle inner events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

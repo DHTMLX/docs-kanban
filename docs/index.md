@@ -13,13 +13,13 @@ JavaScript Kanban is a handy tool for visualizing workflows. It makes it easier 
 
 ### Toolbar
 
-The **Toolbar** in Kanban sits as a separate area of the interface. It comes with a search bar for finding cards, a control to sort cards by different options, undo/redo buttons for managing history, plus controls for adding new columns and rows. You can tweak how searching and sorting work, and it's easy to customize the Toolbar by adding your own elements or changing the order of the built-in ones. Details are in the [Configuration](./guides/configuration#toolbar) section.
+The **Toolbar** in Kanban sits as a separate area of the interface. It comes with a search bar for finding cards, a control to sort cards by different options, undo/redo buttons for managing history, plus controls for adding new columns and rows. You can tweak how searching and sorting work, and it's easy to customize the Toolbar by adding your own elements or changing the order of the built-in ones. Details are in the [Configuration](/guides/configuration/#toolbar) section.
 
 ![Kanban Toolbar](/assets/js_kanban_toolbar.png)
 
 ### Board
 
-The **Board** is where all the main action happens in Kanban. Here, cards are arranged into columns and rows (swimlanes). You can easily adjust how cards look or use your own templates. More on that in the [Configuration](./guides/configuration#cards) section.
+The **Board** is where all the main action happens in Kanban. Here, cards are arranged into columns and rows (swimlanes). You can easily adjust how cards look or use your own templates. More on that in the [Configuration](/guides/configuration/#cards) section.
 
 On the **Board** panel, you can interact with ***cards***, ***columns***, and ***rows*** in several ways:
 
@@ -46,7 +46,7 @@ On the **Board** panel, you can interact with ***cards***, ***columns***, and **
 
 ### Editor
 
-The **Editor** pops up as a modal and gives you fields and controls to update details for the card you picked. Just click any card to bring it up. You can also set up the editor however you want by adding new fields or controls. Check out more info in the [Configuration](./guides/configuration#editor) section.
+The **Editor** pops up as a modal and gives you fields and controls to update details for the card you picked. Just click any card to bring it up. You can also set up the editor however you want by adding new fields or controls. Check out more info in the [Configuration](/guides/configuration/#editor) section.
 
 ![Kanban Editor](/assets/js_kanban_editor.png)
 

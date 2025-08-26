@@ -52,4 +52,4 @@ The HTTP status code indicates whether the request was successful (response.stat
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

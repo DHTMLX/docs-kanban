@@ -33,4 +33,4 @@ The HTTP status code indicates success (response.status == 200) or failure (resp
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

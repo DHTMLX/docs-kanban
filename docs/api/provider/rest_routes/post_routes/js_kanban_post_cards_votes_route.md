@@ -32,4 +32,4 @@ The HTTP status code indicates the outcome: a status of 200 means the request wa
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

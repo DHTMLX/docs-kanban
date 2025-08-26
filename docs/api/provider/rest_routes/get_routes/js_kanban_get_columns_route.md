@@ -47,12 +47,12 @@ Example:
 ]
 ~~~
 
-A different example of the returned object can be found in [**columns**](/api/config/js_kanban_columns_config.md).
+A different example of the returned object can be found in [**columns**](/api/config/js_kanban_columns_config).
 
 The HTTP status code indicates if the request was successful (response.status == 200) or if it failed (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](/guides/working_with_server.md)
-- [getColumns()](/api/provider/rest_methods/js_kanban_getcolumns_method.md)
+- [Working with server](/guides/working_with_server)
+- [getColumns()](/api/provider/rest_methods/js_kanban_getcolumns_method)

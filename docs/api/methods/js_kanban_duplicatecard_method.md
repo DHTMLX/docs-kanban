@@ -23,7 +23,7 @@ duplicateCard({
 ### Parameters
 
 - `id` -  (required) the ID of the card to be duplicated
-- `card` - (optional) the data object for the new card. You can find the full list of card parameters [**here**](/api/config/js_kanban_cards_config.md)
+- `card` - (optional) the data object for the new card. You can find the full list of card parameters [**here**](/api/config/js_kanban_cards_config)
 - `select` - (optional) determines whether the newly added card will be selected
 
 ### Example

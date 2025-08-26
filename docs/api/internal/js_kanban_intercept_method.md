@@ -27,7 +27,7 @@ api.intercept(
 ### Events
 
 :::info
-You can check out the complete list of Kanban internal events [**here**](/api/overview/main_overview.md/#kanban-events)
+You can check out the complete list of Kanban internal events [**here**](/api/overview/main_overview/#kanban-events)
 :::
 
 ### Example

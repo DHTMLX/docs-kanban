@@ -27,7 +27,7 @@ The callback for the **delete-card** event receives an object with these propert
 - `skipProvider` - (optional) controls whether to block sending the request to the server
 
 :::info
-To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

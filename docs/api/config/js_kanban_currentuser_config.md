@@ -11,7 +11,7 @@ description: You can learn about the currentUser config in the documentation of 
 @short: Optional. Represents the ID of the current user
 
 :::note
-The current user ID should match one of the IDs listed in the [`cardShape.users`](/api/config/js_kanban_cardshape_config.md) property. If this ID isn't provided, comments will be accessible only in read-only mode.
+The current user ID should match one of the IDs listed in the [`cardShape.users`](/api/config/js_kanban_cardshape_config) property. If this ID isn't provided, comments will be accessible only in read-only mode.
 :::
 
 ### Usage

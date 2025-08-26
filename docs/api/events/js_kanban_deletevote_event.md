@@ -27,7 +27,7 @@ The callback for the **delete-vote** event receives an object containing the fol
 - `skipProvider` - (optional) controls whether the request to the server should be skipped or not
 
 :::info
-To manage internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

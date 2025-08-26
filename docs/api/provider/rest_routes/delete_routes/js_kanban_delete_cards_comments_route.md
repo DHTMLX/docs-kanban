@@ -41,4 +41,4 @@ The HTTP status code indicates the result: 200 means the request was successful,
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

@@ -30,4 +30,4 @@ No content is returned. The HTTP status code indicates if the request was succes
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

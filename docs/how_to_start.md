@@ -94,7 +94,7 @@ The constructors take the IDs of the HTML containers where Kanban and the Toolba
 Now you can set up the configuration properties for how Kanban should look and work when it starts.
 
 To get things running, add the initial data for **cards** and **columns** (and *rows* if needed).
-Along with the data, it's possible to adjust how [cards](/guides/configuration#cards), the [editor](/guides/configuration#editor), and [toolbar](/guides/configuration#toolbar) will look.
+Along with the data, it's possible to adjust how [cards](/guides/configuration/#cards), the [editor](/guides/configuration/#editor), and [toolbar](/guides/configuration/#toolbar) will look.
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {

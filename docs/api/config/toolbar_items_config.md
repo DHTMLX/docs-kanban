@@ -146,7 +146,7 @@ items: [
 - `"redo"` - control to redo actions (one click steps forward)
 - `"addColumn"` - control to add new columns
 - `"addRow"` - control to add new rows
-- `custom_control` - (optional) a custom control, which can be a **string** or **function**. For details, see the [Customization](/guides/customization#custom-toolbar) section.
+- `custom_control` - (optional) a custom control, which can be a **string** or **function**. For details, see the [Customization](/guides/customization/#custom-toolbar) section.
 
 ### Example
 
@@ -184,7 +184,7 @@ new kanban.Toolbar("#toolbar", {
 - The ***items.options[0].label*** parameter in the **sort** control was renamed to ***items.options[0].text*** in v1.4
 - The ***items.searchResult*** parameter for the **"search"** control was added in v1.6
 
-**Related articles:** [Configuration](/guides/configuration#toolbar) and [Customization](/guides/customization#custom-toolbar)
+**Related articles:** [Configuration](/guides/configuration/#toolbar) and [Customization](/guides/customization/#custom-toolbar)
 
 **Related sample:**
 - [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

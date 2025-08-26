@@ -28,7 +28,7 @@ A ***null*** value means the editor is being closed
 :::
 
 :::info
-To manage internal events, the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods) can be used
+To manage internal events, the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods) can be used
 :::
 
 ### Example

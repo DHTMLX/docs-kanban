@@ -33,10 +33,10 @@ The server expects a JSON object containing the card object with all its propert
 | `start_date`  |  string     | *Required*. The start date in ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
 | `end_date`    |  string     | *Required*. The end date in ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
 | `progress`    |  number     | *Required*. The progress value, ranging from 0 to 100.|
-| `attached`    |  object     | *Required*. An array containing data about attached file(s). See the object example here [**cards**](/api/config/js_kanban_cards_config.md)|
+| `attached`    |  object     | *Required*. An array containing data about attached file(s). See the object example here [**cards**](/api/config/js_kanban_cards_config)|
 | `color`       |  string     | *Required*. The color of the card's top line in HEX format.|
 | `priority`    |  number     | *Required*. The priority ID of the card. |
-| `users`       |  object     | *Required*. An array of assigned user IDs. See the object example here [**cardShape**](/api/config/js_kanban_cardshape_config.md) |
+| `users`       |  object     | *Required*. An array of assigned user IDs. See the object example here [**cardShape**](/api/config/js_kanban_cardshape_config) |
 
 Example:
 
@@ -58,7 +58,7 @@ Example:
 }
 ~~~
 
-Another example of the card object is available in the [**cards**](/api/config/js_kanban_cards_config.md) section.
+Another example of the card object is available in the [**cards**](/api/config/js_kanban_cards_config) section.
 
 ### Response
 
@@ -68,4 +68,4 @@ The HTTP status code indicates the result of the request: success with status 20
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

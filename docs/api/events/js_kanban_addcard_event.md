@@ -33,11 +33,11 @@ The callback for the **add-card** event receives an object with these properties
 - `rowId` - (optional) the ID of the row where the card should be placed
 - `before` - (optional) the ID of the card that the new card will be inserted before
 - `select` - (optional) determines if the newly added card should be selected
-- `card` - (optional) the data object representing the new card. Complete details of card parameters are available [here](/api/config/js_kanban_cards_config.md)
+- `card` - (optional) the data object representing the new card. Complete details of card parameters are available [here](/api/config/js_kanban_cards_config)
 - `skipProvider` - (optional) controls whether the request to the server should be skipped
 
 :::info
-To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

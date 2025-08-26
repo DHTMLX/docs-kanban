@@ -25,11 +25,11 @@ description: Get to know the duplicate-card event from the DHTMLX JavaScript Kan
 The callback for the **duplicate-card** event receives an object with these properties:
 
 - `id` - (required) the ID of the card being duplicated
-- `card` - (optional) the data object for the new card. You can find the full list of card parameters [here](/api/config/js_kanban_cards_config.md)
+- `card` - (optional) the data object for the new card. You can find the full list of card parameters [here](/api/config/js_kanban_cards_config)
 - `select` - (optional) controls whether the newly added card is selected or not
 
 :::info
-To work with internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To work with internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

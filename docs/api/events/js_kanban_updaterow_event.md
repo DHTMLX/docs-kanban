@@ -26,7 +26,7 @@ description: Discover the update-row event in the DHTMLX JavaScript Kanban libra
 The callback for the **update-row** event receives an object with these parameters:
 
 - `id` - (required) the identifier of the row being updated
-- `row` - (optional) the new data object for the row. Find the complete list of **row** parameters [**here**](/api/config/js_kanban_rows_config.md)
+- `row` - (optional) the new data object for the row. Find the complete list of **row** parameters [**here**](/api/config/js_kanban_rows_config)
 - `replace` - (optional) controls whether the data is fully replaced or partially updated
 
 :::note
@@ -36,7 +36,7 @@ Setting `replace` to *true* will completely overwrite the old data with the new 
 - `skipProvider` - (optional) controls whether the request to the server is suppressed
 
 :::info
-To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

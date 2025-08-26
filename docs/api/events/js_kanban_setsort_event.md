@@ -33,7 +33,7 @@ The callback for the **set-sort** event can receive either *null* or an object c
 - `columnId` - (optional) identifies which column is being sorted
 
 :::info
-To work with inner events, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To work with inner events, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

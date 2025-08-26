@@ -37,7 +37,7 @@ Each row (swimlane) can include the following parameters:
 - `css` - (optional) applies CSS styles to an individual row
 
 :::info
-To dynamically load new row (swimlane) data, the [**parse()**](../../methods/js_kanban_parse_method) method can be used.
+To dynamically load new row (swimlane) data, the [`parse()`](/api/methods/js_kanban_parse_method) method can be used.
 :::
 
 ### Example
@@ -60,6 +60,6 @@ new kanban.Kanban("#root", {
 
 **Related articles:**
 - [Working with data](/guides/working_with_data)
-- [updateRow()](/api/methods/js_kanban_updaterow_method.md)
+- [updateRow()](/api/methods/js_kanban_updaterow_method)
 
 **Related sample:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

@@ -29,7 +29,7 @@ The callback for the **move-row** event receives an object with these properties
 - `skipProvider` - (optional) controls whether the request to the server is skipped
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

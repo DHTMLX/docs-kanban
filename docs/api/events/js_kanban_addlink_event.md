@@ -25,11 +25,11 @@ description: You can learn about the add-link event in the documentation of the 
 The callback for the **add-link** event receives an object with these properties:
 
 - `id` - (optional) the ID assigned to the new link
-- `link` - (required) the data object representing the new link. You can find the full list of link parameters [here](/api/config/js_kanban_links_config.md)
+- `link` - (required) the data object representing the new link. You can find the full list of link parameters [here](/api/config/js_kanban_links_config)
 - `skipProvider` - (optional) controls whether the request to the server is prevented or not
 
 :::info
-To manage internal events, you can make use of the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can make use of the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

@@ -22,9 +22,9 @@ parse({
 
 ### Parameters
 
-- [`columns`](/api/config/js_kanban_columns_config.md) - (optional) an array containing column data objects
-- [`rows`](/api/config/js_kanban_rows_config.md) - (optional) an array containing row data objects
-- [`cards`](/api/config/js_kanban_cards_config.md) - (optional) an array containing card data objects
+- [`columns`](/api/config/js_kanban_columns_config) - (optional) an array containing column data objects
+- [`rows`](/api/config/js_kanban_rows_config) - (optional) an array containing row data objects
+- [`cards`](/api/config/js_kanban_cards_config) - (optional) an array containing card data objects
 
 ### Example
 

@@ -74,14 +74,14 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 :::info
-More details on setting up the Kanban Toolbar can be found in the [**Configuration**](/guides/configuration.md/#toolbar) section.
+More details on setting up the Kanban Toolbar can be found in the [**Configuration**](/guides/configuration/#toolbar) section.
 :::
 
 ### Configuration properties
 
 :::note
-A complete list of configuration options for **Kanban** is available [**here**](/api/overview/properties_overview.md). <br />
-The full list of properties for the **Toolbar of Kanban** is [**here**](/api/overview/toolbar_properties_overview.md).
+A complete list of configuration options for **Kanban** is available [**here**](/api/overview/properties_overview). <br />
+The full list of properties for the **Toolbar of Kanban** is [**here**](/api/overview/toolbar_properties_overview).
 :::
 
 ## Example

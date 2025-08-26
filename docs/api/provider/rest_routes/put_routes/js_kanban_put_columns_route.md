@@ -40,7 +40,7 @@ Example:
 }
 ~~~
 
-Another example of the column object can be found in the [**columns**](/api/config/js_kanban_columns_config.md) section.
+Another example of the column object can be found in the [**columns**](/api/config/js_kanban_columns_config) section.
 
 ### Response
 
@@ -50,4 +50,4 @@ The HTTP status code indicates the result: success with status 200, or failure w
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

@@ -23,7 +23,7 @@ updateColumn({
 ### Parameters
 
 - `id` - (required) specifies the ID of the column you want to update
-- `column` - (optional) an object containing the new data for the column. You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config.md)
+- `column` - (optional) an object containing the new data for the column. You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config)
 - `replace` - (optional) determines whether to completely replace the existing data
 
 :::note

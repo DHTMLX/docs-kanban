@@ -56,4 +56,4 @@ The HTTP status code indicates whether the request was successful (`response.sta
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

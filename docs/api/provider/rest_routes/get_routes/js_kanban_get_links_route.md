@@ -39,12 +39,12 @@ Example:
 ]
 ~~~
 
-For another example of the returned object, see [**links**](/api/config/js_kanban_links_config.md).
+For another example of the returned object, see [**links**](/api/config/js_kanban_links_config).
 
 The HTTP status code indicates whether the request was successful (response.status == 200) or encountered an error (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](/guides/working_with_server.md)
-- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method.md)
+- [Working with server](/guides/working_with_server)
+- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method)

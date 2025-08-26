@@ -23,7 +23,7 @@ updateCard({
 ### Parameters
 
 - `id` - (required) the ID of the card to be updated
-- `card` - (optional) an object containing the updated data for the card. A full list of card parameters is available [**here**](/api/config/js_kanban_cards_config.md)
+- `card` - (optional) an object containing the updated data for the card. A full list of card parameters is available [**here**](/api/config/js_kanban_cards_config)
 - `replace` - (optional) controls whether the existing data is fully replaced
 
 :::note

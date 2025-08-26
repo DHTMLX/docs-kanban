@@ -52,4 +52,4 @@ The HTTP status code indicates the outcome of the request: a status of 200 means
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

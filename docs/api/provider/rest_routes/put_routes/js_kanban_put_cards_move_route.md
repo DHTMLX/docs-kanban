@@ -90,4 +90,4 @@ The HTTP status code indicates the success of the request (response.status == 20
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

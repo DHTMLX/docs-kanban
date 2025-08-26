@@ -15,7 +15,7 @@ The `history` property lets you turn history management on or off for Kanban. Se
 :::
 
 :::tip
-It's also possible to exclude certain operations from the Kanban history by using the [`$meta`](/api/common/js_kanban_meta_parameter.md) parameter with methods and events!
+It's also possible to exclude certain operations from the Kanban history by using the [`$meta`](/api/common/js_kanban_meta_parameter) parameter with methods and events!
 :::
 
 ### Usage
@@ -43,4 +43,4 @@ new kanban.Kanban("#root", {
 
 **Change log:** This property was introduced in version 1.3
 
-**Related articles:** [`undo()`](/api/methods/js_kanban_undo_method.md) and [`redo()`](/api/methods/js_kanban_redo_method.md)
+**Related articles:** [`undo()`](/api/methods/js_kanban_undo_method) and [`redo()`](/api/methods/js_kanban_redo_method)

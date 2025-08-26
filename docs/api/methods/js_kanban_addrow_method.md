@@ -27,7 +27,7 @@ addRow({
 - `before` - (optional) the ID of the row that the new row should be inserted before
 
 :::info
-A complete list of **row** parameters is available [**here**](/api/config/js_kanban_rows_config.md)
+A complete list of **row** parameters is available [**here**](/api/config/js_kanban_rows_config)
 :::
 
 ### Example

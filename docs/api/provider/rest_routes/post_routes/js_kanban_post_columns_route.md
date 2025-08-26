@@ -44,4 +44,4 @@ The HTTP status code indicates if the request was successful (response.status ==
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

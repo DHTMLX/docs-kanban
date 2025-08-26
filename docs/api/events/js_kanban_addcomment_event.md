@@ -38,7 +38,7 @@ The callback for the **add-comment** event receives an object with these propert
 - `skipProvider` - (optional) controls whether the request to the server is prevented or not
 
 :::info
-To manage internal event handling, refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal event handling, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

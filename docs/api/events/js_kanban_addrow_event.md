@@ -26,12 +26,12 @@ description: You can learn about the add-row event in the documentation of the D
 The callback for the **add-row** event accepts an object with the following optional properties:
 
 - `id` - the identifier for the new row
-- `row` - the data object representing the new row. You can find the complete list of **row** parameters [**here**](/api/config/js_kanban_rows_config.md)
+- `row` - the data object representing the new row. You can find the complete list of **row** parameters [**here**](/api/config/js_kanban_rows_config)
 - `before` - the ID of the row before which the new row will be inserted
 - `skipProvider` - controls whether the request to the server should be prevented or allowed
 
 :::info
-To manage internal events, consider using the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, consider using the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

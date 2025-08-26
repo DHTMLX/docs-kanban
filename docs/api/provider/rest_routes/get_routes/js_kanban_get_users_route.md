@@ -42,12 +42,12 @@ Example:
 ]
 ~~~
 
-For another example of the returned object, see [**cardShape**](/api/config/js_kanban_cardshape_config.md).
+For another example of the returned object, see [**cardShape**](/api/config/js_kanban_cardshape_config).
 
 The HTTP status code indicates whether the request was successful (response.status == 200) or encountered an error (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](/guides/working_with_server.md)
-- [getUsers()](/api/provider/rest_methods/js_kanban_getusers_method.md)
+- [Working with server](/guides/working_with_server)
+- [getUsers()](/api/provider/rest_methods/js_kanban_getusers_method)

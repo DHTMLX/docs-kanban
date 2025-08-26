@@ -30,4 +30,4 @@ No content is returned. The status code indicates the outcome: success with resp
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server.md)
+**Related articles**: [Working with server](/guides/working_with_server)

@@ -49,6 +49,6 @@ The HTTP status code indicates if the request was successful (response.status ==
 ---
 
 **Related articles**:
-- [Working with server](/guides/working_with_server.md)
-- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method.md)
-- [links](/api/config/js_kanban_links_config.md)
+- [Working with server](/guides/working_with_server)
+- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method)
+- [links](/api/config/js_kanban_links_config)

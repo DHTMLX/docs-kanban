@@ -22,7 +22,7 @@ setLocale(null | locale?: object): void;
 - `locale` - (optional) an object containing the new locale data to apply to the Toolbar
 
 :::info
-The **Toolbar** in Kanban is an independent component. Use the `toolbar.setLocale()` method when you want to change the locale for the Toolbar only. Calling `toolbar.setLocale()` without any arguments (or with *null*) will reset it to the default locale. To update the locale for Kanban itself, use the [`kanban.setLocale()`](/api/methods/js_kanban_setlocale_method.md) method.
+The **Toolbar** in Kanban is an independent component. Use the `toolbar.setLocale()` method when you want to change the locale for the Toolbar only. Calling `toolbar.setLocale()` without any arguments (or with *null*) will reset it to the default locale. To update the locale for Kanban itself, use the [`kanban.setLocale()`](/api/methods/js_kanban_setlocale_method) method.
 :::
 
 ### Example
@@ -40,4 +40,4 @@ toolbar.setLocale(de);
 
 **Change log:** The **api** parameter was deprecated in v1.6
 
-**Related articles:** [Localization](/guides/localization.md)
+**Related articles:** [Localization](/guides/localization)

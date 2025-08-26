@@ -11,7 +11,7 @@ description: You can learn about the redo method in the documentation of the DHT
 @short: Re-executes the action that was undone by the undo method
 
 :::info
-The `redo()` method is only functional when [`history: true`](/api/config/js_kanban_history_config.md) is set in the configuration!
+The `redo()` method is only functional when [`history: true`](/api/config/js_kanban_history_config) is set in the configuration!
 :::
 
 ### Usage

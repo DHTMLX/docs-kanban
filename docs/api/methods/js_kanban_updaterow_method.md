@@ -23,7 +23,7 @@ updateRow({
 ### Parameters
 
 - `id` - (required) the identifier of the row to update
-- `row` - (optional) an object containing the new data for the row. The complete list of **row** parameters is available [**here**](/api/config/js_kanban_rows_config.md)
+- `row` - (optional) an object containing the new data for the row. The complete list of **row** parameters is available [**here**](/api/config/js_kanban_rows_config)
 - `replace` - (optional) controls whether to completely replace the existing data
 
 :::note

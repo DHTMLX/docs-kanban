@@ -62,7 +62,7 @@ Here are the parameters you can use to configure the **theme**:
     - `fonts` - (optional) controls whether fonts are loaded from the CDN (wxi font)
 
 :::tip
-The **Willow** and **Willow-Dark** themes are also available. To switch themes dynamically, the [`setTheme()`](../../methods/js_kanban_settheme_method) method can be used.
+The **Willow** and **Willow-Dark** themes are also available. To switch themes dynamically, the [`setTheme()`](/api/methods/js_kanban_settheme_method) method can be used.
 :::
 
 ### Default config

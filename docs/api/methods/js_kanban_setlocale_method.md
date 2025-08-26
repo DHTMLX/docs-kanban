@@ -22,7 +22,7 @@ setLocale(null | locale?: object): void;
 - `locale` - (optional) an object defining the new locale data to apply
 
 :::info
-The `setLocale()` method is designed to update the locale specifically for Kanban. To revert Kanban to its default locale, just call `setLocale()` without any arguments (or pass *null*). If you need to change the locale for the Toolbar alone, use the [`toolbar.setLocale()`](/api/methods/toolbar_setlocale_method.md) method.
+The `setLocale()` method is designed to update the locale specifically for Kanban. To revert Kanban to its default locale, just call `setLocale()` without any arguments (or pass *null*). If you need to change the locale for the Toolbar alone, use the [`toolbar.setLocale()`](/api/methods/toolbar_setlocale_method) method.
 :::
 
 ### Example
@@ -41,4 +41,4 @@ board.setLocale(); // or board.setLocale(null);
 
 **Change log:** This method was updated in version 1.2
 
-**Related articles:** [Localization](/guides/localization.md)
+**Related articles:** [Localization](/guides/localization)

@@ -33,7 +33,7 @@ addCard({
 - `card` - (optional) the data object representing the new card  
 
 :::info
-A complete list of **card** parameters is available [**here**](/api/config/js_kanban_cards_config.md)
+A complete list of **card** parameters is available [**here**](/api/config/js_kanban_cards_config)
 :::
 
 ### Example

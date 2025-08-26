@@ -26,12 +26,12 @@ description: Explore the add-column event in the DHTMLX JavaScript Kanban librar
 The callback for the **add-column** event receives an object with these optional properties:
 
 - `id` - the ID assigned to the new column
-- `column` - the data object representing the new column. You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config.md)
+- `column` - the data object representing the new column. You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config)
 - `before` - the ID of the column before which the new column will be inserted
 - `skipProvider` - controls whether the request to the server is prevented or not
 
 :::info
-To work with internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To work with internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

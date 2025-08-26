@@ -27,7 +27,7 @@ The callback for the **set-search** event receives an object containing these pa
 - `by` - (optional) the card field to search by
 
 :::info
-To handle internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To handle internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

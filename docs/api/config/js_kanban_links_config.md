@@ -37,7 +37,7 @@ Each link includes the following data fields:
   - ***"parent"*** - sets a dependency between a parent (master) task and its child (slave) task
 
 :::info
-To dynamically load new links data, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
+To dynamically load new links data, you can use the [`parse()`](/api/methods/js_kanban_parse_method) method!
 :::
 
 ### Example

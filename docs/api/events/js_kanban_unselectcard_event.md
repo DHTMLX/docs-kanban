@@ -23,7 +23,7 @@ The callback for the **unselect-card** event receives an object containing the f
 - `id` - (required) the ID of the card that was unselected
 
 :::info
-To manage internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

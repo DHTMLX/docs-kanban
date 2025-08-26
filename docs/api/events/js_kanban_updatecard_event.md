@@ -26,7 +26,7 @@ description: Explore the update-card event in the DHTMLX JavaScript Kanban libra
 The callback for the **update-card** event receives an object with these properties:
 
 - `id` - (required) the identifier of the card to update
-- `card` - (optional) an object containing the new card data. Check out the full list of **card** attributes [**here**](/api/config/js_kanban_cards_config.md)
+- `card` - (optional) an object containing the new card data. Check out the full list of **card** attributes [**here**](/api/config/js_kanban_cards_config)
 - `replace` - (optional) determines whether the existing data is fully replaced
 
 :::note
@@ -36,7 +36,7 @@ When `replace` is set to *true*, the old data is completely overwritten by the n
 - `skipProvider` - (optional) controls whether the update is sent to the server or not
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

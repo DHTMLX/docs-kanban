@@ -55,7 +55,7 @@ Alternatively, simply include the desired theme stylesheet from the skins folder
 The Toolbar defaults to the **Material** theme. You can also switch to the **Willow** or **Willow-Dark** themes.
 
 :::tip
-To update the theme on the fly, use the [**setConfig()**](../../methods/toolbar_setconfig_method) method.
+To update the theme on the fly, use the [**setConfig()**](/api/methods/toolbar_setconfig_method) method.
 :::
 
 ### Example

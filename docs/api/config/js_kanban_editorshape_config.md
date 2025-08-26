@@ -157,7 +157,7 @@ The editor appearance and features can be customized by setting the following pa
 Supported field types in the Kanban editor are: **dateRange**, **date**, **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **comments**, and **links**.
 :::
 
-- `key` - (required) the key for the editor field. This should match the value set in the [`cardShape`](../js_kanban_cardshape_config) property. Example:
+- `key` - (required) the key for the editor field. This should match the value set in the [`cardShape`](/api/config/js_kanban_cardshape_config) property. Example:
 
 ~~~js {8,17}
     // card appearance settings
@@ -190,7 +190,7 @@ Supported field types in the Kanban editor are: **dateRange**, **date**, **combo
     - `end` - (required) key for the end date
 
 :::important
-These keys correspond to those used in the [`cardShape`](../js_kanban_cardshape_config) property.
+These keys correspond to those used in the [`cardShape`](/api/config/js_kanban_cardshape_config) property.
 :::
 
 - `config` - (optional) configuration object for the **"dateRange"** field with the following options:
@@ -468,4 +468,4 @@ new kanban.Kanban("#root", {
 - Added the ***dateRange*** type in v1.3
 - Added the ***comments*** and ***links*** editor types, along with ***format*** parameters in v1.4
 
-**Related articles:** [Configuration](/guides/configuration#editor)
+**Related articles:** [Configuration](/guides/configuration/#editor)

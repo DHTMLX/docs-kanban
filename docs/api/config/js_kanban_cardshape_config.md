@@ -160,7 +160,7 @@ items: ({ card, store }) => {
   Setting `maxCount` controls how many assigned users appear on the card. Setting it to `false` displays all assigned users.
 
 :::info
-The **_users_** field is off by default. To enable it, set `show` to `true` and provide user data in `values`. To assign users via the editor, configure the appropriate control in [`editorShape`](/api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types). Use **_select_** for single user or **_multiselect_** for multiple users.
+The **_users_** field is off by default. To enable it, set `show` to `true` and provide user data in `values`. To assign users via the editor, configure the appropriate control in [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-combo-select-and-multiselect-types). Use **_select_** for single user or **_multiselect_** for multiple users.
 
 ```jsx {}
   cardShape: {
@@ -188,7 +188,7 @@ The **_users_** field is off by default. To enable it, set `show` to `true` and 
   - `clickable` - (optional) if `true`, users can vote by clicking the icon on the card; otherwise, voting is only possible via the editor
 - `css` - function returning a CSS class to conditionally style cards
 - `headerFields` - (optional) array of objects defining **custom fields**
-  - `key` - (required) custom field key, used when configuring the editor via [editorShape](../js_kanban_editorshape_config)
+  - `key` - (required) custom field key, used when configuring the editor via [editorShape](/api/config/js_kanban_editorshape_config)
   - `label` - (optional) custom field label
   - `css` - (optional) CSS class for the custom field
 
@@ -317,7 +317,7 @@ new kanban.Kanban("#root", {
 - The **_menu.items[0].label_** option was renamed to **_menu.items[0].text_** in v1.4
 - The **_users.maxCount_** and **_votes.clickable_** options were added in v1.6
 
-**Related articles:** [Configuration](/guides/configuration#cards)
+**Related articles:** [Configuration](/guides/configuration/#cards)
 
 **Related samples:**
 

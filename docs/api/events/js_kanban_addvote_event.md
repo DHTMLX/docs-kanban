@@ -27,7 +27,7 @@ The callback for the **add-vote** event receives an object containing the follow
 - `skipProvider` - (optional) controls whether the request to the server is skipped or not
 
 :::info
-To work with internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To work with internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

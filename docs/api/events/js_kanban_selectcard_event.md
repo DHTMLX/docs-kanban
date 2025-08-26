@@ -27,7 +27,7 @@ The callback for the **select-card** event receives an object with these propert
 - `groupMode` - (optional) indicates multiselect mode (defaults to false)
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

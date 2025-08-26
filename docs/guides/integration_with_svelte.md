@@ -30,7 +30,7 @@ or
 npm create vite@latest
 ~~~
 
-More details are available in this [related article](https://svelte.dev/docs/introduction#start-a-new-project-alternatives-to-sveltekit).
+More details are available in this [related article](https://svelte.dev/docs/introduction/#start-a-new-project-alternatives-to-sveltekit).
 
 ### Installation of dependencies
 

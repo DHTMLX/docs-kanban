@@ -42,7 +42,7 @@ The callback for the **update-comment** event receives an object with these para
 - `skipProvider` - (optional) controls whether the update request should be sent to the server or not
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods)
+To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
 :::
 
 ### Example

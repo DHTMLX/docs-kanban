@@ -27,7 +27,7 @@ The callback for the **delete-link** event receives an object with the following
 - `skipProvider` - (optional) controls whether the request to the server is suppressed
 
 :::info
-To handle internal events, the [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methods) can be used
+To handle internal events, the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods) can be used
 :::
 
 ### Example

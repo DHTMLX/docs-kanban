@@ -10,19 +10,19 @@ Along with configuration options, Kanban gives plenty of ways to tweak how it lo
 
 ## Custom cards
 
-For displaying cards with a custom look, the [`cardTemplate`](/api/config/js_kanban_cardtemplate_config.md) property comes in handy. This property lets you use a callback function for adding your own styles and logic to Kanban. Check out the snippet below to see how it works:
+For displaying cards with a custom look, the [`cardTemplate`](/api/config/js_kanban_cardtemplate_config) property comes in handy. This property lets you use a callback function for adding your own styles and logic to Kanban. Check out the snippet below to see how it works:
 
 <iframe src="https://snippet.dhtmlx.com/8rhdq81d?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Custom context menu
 
-If you want to change the context menu for cards, columns, or rows, you can use the [`cardShape`](/api/config/js_kanban_cardshape_config.md), [`columnShape`](/api/config/js_kanban_columnshape_config.md), and [`rowShape`](/api/config/js_kanban_rowshape_config.md) properties. The example below shows how to set these up:
+If you want to change the context menu for cards, columns, or rows, you can use the [`cardShape`](/api/config/js_kanban_cardshape_config), [`columnShape`](/api/config/js_kanban_columnshape_config), and [`rowShape`](/api/config/js_kanban_rowshape_config) properties. The example below shows how to set these up:
 
 <iframe src="https://snippet.dhtmlx.com/8eo65gr5?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Custom toolbar
 
-The Toolbar can be adjusted as needed by using the [`items`](/api/config/toolbar_items_config.md) property. Inside its array, add the controls you want, put them in any order, and update how they work to fit your needs.
+The Toolbar can be adjusted as needed by using the [`items`](/api/config/toolbar_items_config) property. Inside its array, add the controls you want, put them in any order, and update how they work to fit your needs.
 
 Take a look at the snippet below to see how to customize things like:
 
@@ -35,7 +35,7 @@ Take a look at the snippet below to see how to customize things like:
 
 ## Custom styles
 
-If you want to change how Kanban looks, try adjusting the relevant *CSS variables*. For more details, check out the [**Stylization**](../stylization) section.
+If you want to change how Kanban looks, try adjusting the relevant *CSS variables*. For more details, check out the [**Stylization**](/guides/stylization) section.
 
 The snippet here shows how custom styles can be applied to Kanban:
 
