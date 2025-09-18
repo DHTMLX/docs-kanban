@@ -24,7 +24,8 @@ The method returns the object of Kanban data
 {
     cards: [{...}, {...}, ...],
     rows: [{...}, {...}, ...],
-    columns: [{...}, {...}, ...]
+    columns: [{...}, {...}, ...],
+    links: [{...}, {...}, ...]
 }
 ~~~
 

@@ -29,6 +29,7 @@ cards?: [
                 coverURL?: string,
                 name?: string,
                 isCover?: boolean
+                size?: number
             }, {...}
         ],
         color?: string,
@@ -69,6 +70,7 @@ For each card you can specify the following parameters (data):
     - `coverURL` - (optional) a path to the image to be set as a cover
     - `name` - (optional) a file name
     - `isCover` - (optional) enables a cover image. If **true**, the cover image will be downloaded via the "coverURL" url
+    - `size` - (optional) a size of the attached file
 - `color` - (optional) a valid HEX color code. It is the color of the card top line
 - `users` - (optional) an **array** with **ID**s for multiple assigned users or **string | number**  for a single assigned user. To specify the assigned users, you need to define an array with users data in the [cardShape.users](../js_kanban_cardshape_config) property. The users are displayed in the **Users** field
 
@@ -95,7 +97,7 @@ If you want to load new data for cards dynamically, you can use the [**parse()**
 
 ### Example
 
-~~~jsx {1-40,44}
+~~~jsx {1-41,45}
 const cards = [
     {
         id: 1,
@@ -111,7 +113,8 @@ const cards = [
                 previewURL: "../assets/img-1.jpg",
                 coverURL: "../assets/img-1.jpg",
                 name: "img-1.jpg",
-                isCover: true
+                isCover: true,
+                size: 11979
             }, {...} // other attached files data
         ],
         color: "#65D3B3",

@@ -22,38 +22,47 @@ The method returns an object with the following parameters:
 
 ~~~jsx {}
 {
-    areasMeta: {
-        subscribe: any,
-        update: any,
-        set: any
-    },
-    before: {...},
     cardHeight: {...},
     cardShape: {...},
     cards: {...},
-    cardsMap: {...},
-    cardsMeta: {...},
     columnKey: {...},
     columnShape: {...},
     columns: {...},
     currentUser: {...},
-    dragItemId: {...},
-    dragItemsCoords: {...},
-    edit: {...},
     history: {...},
-    layout: {...},
     links: {...},
-    overAreaId: {...},
     readonly: {...},
     rowKey: {...},
     rowShape: {...},
+    editorShape: {...},
     rows: {...},
     scroll: {...},
     search: {...},
     selected: {...},
-    sort: {...}
+    sort: {...},
+
+    // deprecated parameters
+    /*
+        areasMeta: {...},
+        before: {...},
+        cardsMap: {...},
+        cardsMeta: {...},
+        dragItemId: {...},
+        dragItemsCoords: {...},
+        edit: {...},
+        layout: {...},
+        overAreaId: {...},
+        fromAreaMeta: {...},
+        dropAreaItemsCoords: {...},
+        dropAreasCoords: {...},
+        overAreaMeta: {...},
+    /*
 }
 ~~~  
+
+:::warning
+These state properties are readonly. Do not change them to avoid unexpected behavior!
+:::
 
 ### Example
 
@@ -86,15 +95,6 @@ state.rows.subscribe((data) => {
 state.selected.subscribe((data) => {
     console.log(data);
 });
-
-// set new selection 
-state.selected.set([1, 2]);
-
-// update selection
-state.selected.update((data) => {
-    data.push(3);
-    return data;
-});
 ~~~
 
-**Change log:** The method was updated in v1.4
+**Change log:** The method was updated in v1.7

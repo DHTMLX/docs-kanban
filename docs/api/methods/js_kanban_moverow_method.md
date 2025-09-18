@@ -15,14 +15,14 @@ description: You can learn about the moveRow method in the documentation of the 
 ~~~jsx {}
 moveRow({
     id: string | number,
-    before: string | number
+    before?: string | number
 }): void;
 ~~~
 
 ### Parameters
 
 - `id` - (required) the ID of the row to be moved
-- `before` - (required) the ID of the row, the moved one will be placed before it
+- `before` - (optional) the ID of the row, the moved one will be placed before it
 
 ### Example
 

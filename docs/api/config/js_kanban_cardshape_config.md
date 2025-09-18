@@ -44,7 +44,7 @@ cardShape?: {
                 onClick?: ({ id, item, card }) => void
             }, 
             {...}
-        ] | ({ card, store }) => array | boolean
+        ] | ({ card, readonly }) => array | boolean
     },
     users?: boolean | {
         show?: boolean,
@@ -135,12 +135,12 @@ To configure the card appearance, in the **cardShape** object you can specify th
     :::info
     You can also set the `items` parameter to a custom function, that takes the following arguments:
     - ***card*** - a data object of a current card
-    - ***store*** - an object of *dataStore*
+    - ***readonly*** - a readonly state
 
     This function allows customizing menu for any card or hide it for a specific one (by returning *null* or *false*):
 
     ~~~jsx {}
-    items: ({ card, store }) => {
+    items: ({ card, readonly }) => {
         if(card.id === 1)
             return false
         return [

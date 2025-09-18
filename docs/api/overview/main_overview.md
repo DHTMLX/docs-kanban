@@ -50,6 +50,7 @@ new kanban.Toolbar("#toolbar", {
 | [](../methods/js_kanban_duplicatecard_method.md)         | @getshort(../methods/js_kanban_duplicatecard_method.md) |
 | [](../methods/js_kanban_getareacards_method.md)          | @getshort(../methods/js_kanban_getareacards_method.md)  |
 | [](../methods/js_kanban_getcard_method.md)               | @getshort(../methods/js_kanban_getcard_method.md)       |
+| [](../methods/js_kanban_getcolumncards_method.md)        | @getshort(../methods/js_kanban_getcolumncards_method.md)|
 | [](../methods/js_kanban_getselection_method.md)          | @getshort(../methods/js_kanban_getselection_method.md)  |
 | [](../methods/js_kanban_movecard_method.md)              | @getshort(../methods/js_kanban_movecard_method.md)      |
 | [](../methods/js_kanban_movecolumn_method.md)            | @getshort(../methods/js_kanban_movecolumn_method.md)    |
@@ -78,6 +79,7 @@ new kanban.Toolbar("#toolbar", {
 
 | Name                                                       | Description                                                  |
 | -----------------------------------------------------------| ------------------------------------------------------------ |
+| [](../internal/js_kanban_detach_method.md)                | @getshort(../internal/js_kanban_detach_method.md)           |
 | [](../internal/js_kanban_exec_method.md)                  | @getshort(../internal/js_kanban_exec_method.md)             |
 | [](../internal/js_kanban_intercept_method.md)             | @getshort(../internal/js_kanban_intercept_method.md)        |
 | [](../internal/js_kanban_on_method.md)                    | @getshort(../internal/js_kanban_on_method.md)               |
@@ -119,12 +121,14 @@ new kanban.Toolbar("#toolbar", {
 | [](../events/js_kanban_movecard_event.md)                 | @getshort(../events/js_kanban_movecard_event.md)        |
 | [](../events/js_kanban_movecolumn_event.md)               | @getshort(../events/js_kanban_movecolumn_event.md)      |
 | [](../events/js_kanban_moverow_event.md)                  | @getshort(../events/js_kanban_moverow_event.md)         |
+| [](../events/js_kanban_redo_event.md)                     | @getshort(../events/js_kanban_redo_event.md)            |
 | [](../events/js_kanban_scroll_event.md)                   | @getshort(../events/js_kanban_scroll_event.md)          |
 | [](../events/js_kanban_selectcard_event.md)               | @getshort(../events/js_kanban_selectcard_event.md)      |
 | [](../events/js_kanban_setedit_event.md)                  | @getshort(../events/js_kanban_setedit_event.md)         |
 | [](../events/js_kanban_setsearch_event.md)                | @getshort(../events/js_kanban_setsearch_event.md)       |
 | [](../events/js_kanban_setsort_event.md)                  | @getshort(../events/js_kanban_setsort_event.md)         |
 | [](../events/js_kanban_startdragcard_event.md)            | @getshort(../events/js_kanban_startdragcard_event.md)   |
+| [](../events/js_kanban_undo_event.md)                     | @getshort(../events/js_kanban_undo_event.md)            |
 | [](../events/js_kanban_unselectcard_event.md)             | @getshort(../events/js_kanban_unselectcard_event.md)    |
 | [](../events/js_kanban_updatecard_event.md)               | @getshort(../events/js_kanban_updatecard_event.md)      |
 | [](../events/js_kanban_updatecolumn_event.md)             | @getshort(../events/js_kanban_updatecolumn_event.md)    |
@@ -144,7 +148,6 @@ new kanban.Toolbar("#toolbar", {
 | [](../config/js_kanban_columnshape_config.md)             | @getshort(../config/js_kanban_columnshape_config.md)    |
 | [](../config/js_kanban_currentuser_config.md)             | @getshort(../config/js_kanban_currentuser_config.md)    |
 | [](../config/js_kanban_editor_config.md)                  | @getshort(../config/js_kanban_editor_config.md)         |
-| [~~editorAutoSave~~](api/config/js_kanban_editorautosave_config.md) | Deprecated! ~~Optional. Enables/disables an autosave mode~~ |
 | [](../config/js_kanban_editorshape_config.md)             | @getshort(../config/js_kanban_editorshape_config.md)    |
 | [](../config/js_kanban_history_config.md)                 | @getshort(../config/js_kanban_history_config.md)        |
 | [](../config/js_kanban_links_config.md)                   | @getshort(../config/js_kanban_links_config.md)          |

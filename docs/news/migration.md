@@ -6,6 +6,144 @@ description: You can learn about the Migration to Newer Versions in the document
 
 # Migration to newer versions
 
+## 1.6.5 -> 1.7.0
+
+### Api
+
+#### Properties
+
+- The [`editorShape`](api/config/js_kanban_editorshape_config.md) property was updated. The `clearButton` parameter was replaced with the `clear` one:
+
+~~~jsx {8} title="Before v1.7.0"
+new kanban.Kanban("#root", {
+    editorShape: [
+        {
+            type: "combo",
+            label: "Priority",
+            key: "priority",
+            config: {
+                clearButton: true // legacy
+            }
+        }, { /* ... */ }
+    ]
+    // other parameters
+});
+~~~
+
+~~~jsx {8} title="From v1.7.0"
+new kanban.Kanban("#root", {
+    editorShape: [
+        {
+            type: "combo",
+            label: "Priority",
+            key: "priority",
+            config: {
+                clear: true // new
+            }
+        }, { /* ... */ }
+    ]
+    // other parameters
+});
+~~~
+
+- The [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) function was updated. The **store** parameter was replaced with the **readonly** one:
+
+~~~jsx {3-4} title="Before v1.7.0"
+menu: {
+    show: true,
+    items: ({ card, store }) => {
+        const defaultMenuItems = getDefaultCardMenuItems({ card, store }); // the "store" paramater is legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="From v1.7.0"
+menu: {
+    show: true,
+    items: ({ card, readonly }) => {
+        const defaultMenuItems = getDefaultCardMenuItems({ card, readonly }); // the "readonly" paramater is new
+        ...
+    }
+}
+~~~
+
+- The `editorAutoSave` property was removed in v1.7.0. Use the [`editor.autoSave`](api/config/js_kanban_editor_config.md) property instead:
+
+~~~jsx {2} title="Before v1.7.0"
+new kanban.Kanban("#root", {
+    editorAutoSave: true, // legacy
+    // other parameters
+});
+~~~
+
+~~~jsx {3} title="From v1.7.0"
+new kanban.Kanban("#root", {
+    editor: {
+        autoSave: true // new
+    }
+    // other parameters
+});
+~~~
+
+- The [`links`](api/config/js_kanban_links_config.md) property was updated in the following way:
+        - The **masterId** parameter was replaced with the **source** parameter
+        - The **slaveId** parameter was replaced with the **target** parameter
+
+~~~jsx {5-6,10} title="Before v1.7.0"
+const links = [
+    {
+        id: 1,
+        // legacy
+        masterId: 2,
+        slaveId: 5
+    }, {...} // other link data
+];
+
+new kanban.Kanban("#root", {
+    links,
+    // other parameters
+});
+~~~
+
+~~~jsx {5-6,10} title="From v1.7.0"
+const links = [
+    {
+        id: 1,
+        // new
+        source: 2,
+        target: 5
+    }, {...} // other link data
+];
+
+new kanban.Kanban("#root", {
+    links,
+    // other parameters
+});
+~~~
+
+#### Methods
+
+- The `undo` and `redo` methods were remove from store methods:
+
+~~~jsx {1} title="Before v1.7.0"
+kanban.getStores().data.undo() // legacy
+// or
+kanban.undo();
+// or
+kanban.api.exec("undo");
+~~~
+
+~~~jsx {5-6,10} title="From v1.7.0"
+kanban.undo();
+// or
+kanban.api.exec("undo");
+~~~
+
+#### Events
+
+- The `dragItemsCoords` and `dropAreasCoords` parameters were removed from the [`start-drag-card`](api/events/js_kanban_startdragcard_event.md) event
+
 ## 1.5.13 -> 1.6.0
 
 CSS classes related to the menu were changed in the following way:

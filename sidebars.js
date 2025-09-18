@@ -68,6 +68,7 @@ module.exports = {
                         // G
                         "api/methods/js_kanban_getareacards_method",
                         "api/methods/js_kanban_getcard_method",
+                        "api/methods/js_kanban_getcolumncards_method",
                         "api/methods/js_kanban_getselection_method",
                         // M
                         "api/methods/js_kanban_movecard_method",
@@ -119,6 +120,7 @@ module.exports = {
                                 id: "api/overview/internal_eventbus_overview"
                             },
                             items: [
+                                "api/internal/js_kanban_detach_method",
                                 "api/internal/js_kanban_exec_method",
                                 "api/internal/js_kanban_intercept_method",
                                 "api/internal/js_kanban_on_method",
@@ -184,12 +186,14 @@ module.exports = {
                         "api/events/js_kanban_movecard_event",
                         "api/events/js_kanban_movecolumn_event",
                         "api/events/js_kanban_moverow_event",
+                        "api/events/js_kanban_redo_event",
                         "api/events/js_kanban_scroll_event",
                         "api/events/js_kanban_selectcard_event",
                         "api/events/js_kanban_setedit_event",
                         "api/events/js_kanban_setsearch_event",
                         "api/events/js_kanban_setsort_event",
                         "api/events/js_kanban_startdragcard_event",
+                        "api/events/js_kanban_undo_event",
                         "api/events/js_kanban_unselectcard_event",
                         "api/events/js_kanban_updatecard_event",
                         "api/events/js_kanban_updatecolumn_event",
@@ -219,7 +223,7 @@ module.exports = {
                         "api/config/js_kanban_currentuser_config",
                         // E
                         "api/config/js_kanban_editor_config",
-                        "api/config/js_kanban_editorautosave_config",
+                        //"api/config/js_kanban_editorautosave_config", REMOVED
                         "api/config/js_kanban_editorshape_config",
                         // H
                         "api/config/js_kanban_history_config",

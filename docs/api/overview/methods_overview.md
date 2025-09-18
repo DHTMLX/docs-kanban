@@ -22,6 +22,7 @@ description: You can have a Methods overview of JavaScript Kanban in the documen
 | [](../methods/js_kanban_duplicatecard_method.md)         | @getshort(../methods/js_kanban_duplicatecard_method.md) |
 | [](../methods/js_kanban_getareacards_method.md)          | @getshort(../methods/js_kanban_getareacards_method.md)  |
 | [](../methods/js_kanban_getcard_method.md)               | @getshort(../methods/js_kanban_getcard_method.md)       |
+| [](../methods/js_kanban_getcolumncards_method.md)        | @getshort(../methods/js_kanban_getcolumncards_method.md)|
 | [](../methods/js_kanban_getselection_method.md)          | @getshort(../methods/js_kanban_getselection_method.md)  |
 | [](../methods/js_kanban_movecard_method.md)              | @getshort(../methods/js_kanban_movecard_method.md)      |
 | [](../methods/js_kanban_movecolumn_method.md)            | @getshort(../methods/js_kanban_movecolumn_method.md)    |

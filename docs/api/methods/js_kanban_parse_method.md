@@ -16,7 +16,8 @@ description: You can learn about the parse method in the documentation of the DH
 parse({
     columns?: array,
     rows?: array,
-    cards?: array
+    cards?: array,
+    links?: array
 }): void;
 ~~~
 
@@ -25,17 +26,19 @@ parse({
 - [`columns`](api/config/js_kanban_columns_config.md) - (optional) the array of objects of the columns data
 - [`rows`](api/config/js_kanban_rows_config.md) - (optional) the array of objects of the rows data
 - [`cards`](api/config/js_kanban_cards_config.md) - (optional) the array of objects of the cards data
+- [`links`](api/config/js_kanban_linkss_config.md) - (optional) the array of objects of the links data
 
 ### Example
 
-~~~jsx {4-8}
+~~~jsx {4-9}
 // create Kanban
 const board = new kanban.Kanban("#root", {});
 // parse data into Kanban
 board.parse({
     columns,
     cards,
-    rows
+    rows,
+    links
 });
 ~~~
 

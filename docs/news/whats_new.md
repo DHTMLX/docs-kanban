@@ -10,6 +10,54 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.6.5
 
+Released on September Day, 2025
+
+### New API
+
+- #### Events
+
+    - [`undo`](api/events/js_kanban_undo_event.md)
+    - [`redo`](api/events/js_kanban_redo_event.md)
+
+- #### Methods
+
+    - [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md)
+    - [`detach()`](api/internal/js_kanban_detach_method.md)
+
+### Updates
+
+- #### Methods
+
+    - The [`on`](api/internal/js_kanban_on_method.md) internal method was extended by the `tag` parameter
+    - The [`intercept`](api/internal/js_kanban_intercept_method.md) internal method was extended by the `tag` parameter
+
+- #### Properties
+
+    - The [`links`](api/config/js_kanban_links_config.md) property was updated in the following way:
+        - The `masterId` parameter was replaced with the `source` parameter
+        - The `slaveId` parameter was replaced with the `target` parameter
+
+    - The [`editorShape`](api/config/js_kanban_editorshape_config.md) property was updated. The `clearButton` parameter was replaced with the `clear` one
+
+    - The [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) function was updated. The `store` parameter was replaced with the `readonly` one
+
+    - The [`cards[i].attached[i]`](api/config/js_kanban_cards_config.md) property was extended by the `size` parameter
+
+### Removed API
+
+- The `editorAutoSave` property was removed. Use the [`editor.autoSave`](api/config/js_kanban_editor_config.md) property instead
+
+- The `dragItemsCoords` and `dropAreasCoords` parameters were removed from the [`start-drag-card`](api/events/js_kanban_startdragcard_event.md)
+
+### Fixes
+
+- File uploader issues
+- File size shown only for newly loaded files
+- Year and month values are not updated after a user clicks the **Done** button
+- The expandable textarea of comments moves button out of click zone
+
+## Version 1.6.5
+
 Released on July 14, 2025
 
 ### Fixes

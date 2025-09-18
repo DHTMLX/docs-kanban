@@ -18,17 +18,17 @@ The server expects to receive a json object with the next properties:
 
 | Name        | Type                   | Description |
 | ----------- | ---------------------- | ----------- |
-| `masterId`  |  *number* or *string*  | *Required*. The ID of a master link. |
-| `slaveId`   |  *number* or *string*  | *Required*. The ID of a slave link.  |
+| `source`    |  *number* or *string*  | *Required*. The ID of a master link. |
+| `target`    |  *number* or *string*  | *Required*. The ID of a slave link.  |
 | `relation`  |  *string*              | *Required*. The type of the relation created by the link. |
 
 Example:
 
 ~~~json
 {
-    "masterId": 1,
-    "slaveId": 2,
-    "relation": "relatesTo",
+    "source": 1,
+    "target": 2,
+    "relation": "relatesTo"
 }
 ~~~
 

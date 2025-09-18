@@ -8,6 +8,7 @@ description: You can have an Internal Event Bus methods overview of JavaScript K
 
 | Name                                                     | Description                                                 |
 | ---------------------------------------------------------| ----------------------------------------------------------- |
+| [](../internal/js_kanban_detach_method.md)               | @getshort(../internal/js_kanban_detach_method.md)           |
 | [](../internal/js_kanban_exec_method.md)                 | @getshort(../internal/js_kanban_exec_method.md)             |
 | [](../internal/js_kanban_intercept_method.md)            | @getshort(../internal/js_kanban_intercept_method.md)        |
 | [](../internal/js_kanban_on_method.md)                   | @getshort(../internal/js_kanban_on_method.md)               |

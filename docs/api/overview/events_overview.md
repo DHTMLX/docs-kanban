@@ -24,12 +24,14 @@ description: You can have an Events overview of JavaScript Kanban in the documen
 | [](../events/js_kanban_movecard_event.md)                 | @getshort(../events/js_kanban_movecard_event.md)        |
 | [](../events/js_kanban_movecolumn_event.md)               | @getshort(../events/js_kanban_movecolumn_event.md)      |
 | [](../events/js_kanban_moverow_event.md)                  | @getshort(../events/js_kanban_moverow_event.md)         |
+| [](../events/js_kanban_redo_event.md)                     | @getshort(../events/js_kanban_redo_event.md)          |
 | [](../events/js_kanban_scroll_event.md)                   | @getshort(../events/js_kanban_scroll_event.md)          |
 | [](../events/js_kanban_selectcard_event.md)               | @getshort(../events/js_kanban_selectcard_event.md)      |
 | [](../events/js_kanban_setedit_event.md)                  | @getshort(../events/js_kanban_setedit_event.md)         |
 | [](../events/js_kanban_setsearch_event.md)                | @getshort(../events/js_kanban_setsearch_event.md)       |
 | [](../events/js_kanban_setsort_event.md)                  | @getshort(../events/js_kanban_setsort_event.md)         |
 | [](../events/js_kanban_startdragcard_event.md)            | @getshort(../events/js_kanban_startdragcard_event.md)   |
+| [](../events/js_kanban_undo_event.md)                     | @getshort(../events/js_kanban_undo_event.md)            |
 | [](../events/js_kanban_unselectcard_event.md)             | @getshort(../events/js_kanban_unselectcard_event.md)    |
 | [](../events/js_kanban_updatecard_event.md)               | @getshort(../events/js_kanban_updatecard_event.md)      |
 | [](../events/js_kanban_updatecolumn_event.md)             | @getshort(../events/js_kanban_updatecolumn_event.md)    |

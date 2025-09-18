@@ -15,7 +15,7 @@ description: You can learn about the move-column event in the documentation of t
 ~~~jsx {}
 "move-column": ({
     id: string | number,
-    before: string | number,
+    before?: string | number,
     skipProvider?: boolean
 }) => void;
 ~~~
@@ -25,7 +25,7 @@ description: You can learn about the move-column event in the documentation of t
 The callback of the **move-column** event can take an object with the following parameters:
 
 - `id` - (required) the ID of the column to be moved
-- `before` - (required) the ID of the column, the moved one will be placed before it
+- `before` - (optional) the ID of the column, the moved one will be placed before it
 - `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info

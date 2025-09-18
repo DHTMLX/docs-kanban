@@ -16,13 +16,15 @@ description: You can learn about the on method in the documentation of the DHTML
 api.on(
     event: string,
     handler: function
+    config?: {tag?: number | string }
 ): void;
 ~~~
 
 ### Parameters
 
-- `event` - (required) an event to be fired 
+- `event` - (required) an event to be fired
 - `handler` - (required) a handler to be attached (the handler arguments will depend on the event to be fired)
+- `config` - (optional) an object that stores an action `tag` name. You can use the tag name to remove an action handler via the [`detach`](api/internal/js_kanban_detach_method.md) method
 
 ### Events
 
@@ -41,5 +43,7 @@ const board = new kanban.Kanban("#root", {
 // output the card data in console when its moving
 board.api.on("move-card", ({ id, columnId }) => {
     console.log({ id, columnId });
-});
+}, {tag: "move"});
 ~~~
+
+**Change log**: The **tag** parameter was added in v1.7

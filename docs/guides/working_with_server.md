@@ -250,13 +250,14 @@ const remoteEvents = new kanban.RemoteEvents(remoteEventsURL, token);
 remoteEvents.on(handlers);
 ~~~
 
-The `RestDataProvider.getIDResolver()` method returns a function that is necessary to synchronize client IDs with server IDs. When a new object (*card/column/row*) is created on the client side, the resulting object will have a temporary ID and a corresponding server ID in the store. The `idResolver()` function allows synchronizing the client ID with the server ID. This function has the following format: `idResolver(id: TID, type: number)`
+The `RestDataProvider.getIDResolver()` method returns a function that is necessary to synchronize client IDs with server IDs. When a new object (*card/column/row/link*) is created on the client side, the resulting object will have a temporary ID and a corresponding server ID in the store. The `idResolver()` function allows synchronizing the client ID with the server ID. This function has the following format: `idResolver(id: TID, type: number)`
 
 The `type` argument is the type of model that takes the following values:
 
 - `CardID` - 1,
 - `RowID` - 2,
 - `ColumnID` - 3
+- `LinkID` - 4
 
 To prevent the request from being sent to the server, you need to use the `skipProvider: true` flag when calling the `board.api.exec()` method.
 

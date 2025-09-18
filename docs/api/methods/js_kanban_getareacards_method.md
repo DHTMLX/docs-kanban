@@ -21,7 +21,7 @@ getAreaCards(
 
 ### Parameters
 
-- `columnId` - (required) the ID of the target column 
+- `columnId` - (required) the ID of the target column
 - `rowId` - (optional) the ID of the target row
 
 ### Returns
@@ -29,9 +29,9 @@ getAreaCards(
 The method returns an array with the data objects of the cards
 
 :::info
-If Kanban includes **columns** without **rows**, the method requires only the ***columnId*** parameter. In this case, the method returns the array with the data objects of all cards of the specified column.
+If Kanban includes **columns** without **rows**, you can pass only the ***columnId*** parameter. In this case, the method returns the array with the data objects of all cards of the specified column.
 
-If Kanban includes **columns** and **rows**, the method requires both the ***columnId*** and ***rowId*** parameters. In this case, the method returns the array with the data objects of the cards of only these column and row.
+If Kanban includes **columns** and **rows**, you can pass both the ***columnId*** and ***rowId*** parameters. In this case, the method returns the array with the data objects of the cards of only specific column and row.
 :::
 
 ### Example
