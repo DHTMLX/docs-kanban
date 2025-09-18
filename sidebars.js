@@ -87,7 +87,7 @@ module.exports = {
                         "api/methods/js_kanban_setlocale_method",
                         "api/methods/js_kanban_setsearch_method",
                         "api/methods/js_kanban_setsort_method",
-                        "api/methods/js_kanban_settheme_method",
+                        // "api/methods/js_kanban_settheme_method",
                         // U
                         "api/methods/js_kanban_undo_method",
                         "api/methods/js_kanban_unselectcard_method",
@@ -239,7 +239,7 @@ module.exports = {
                         // S
                         "api/config/js_kanban_scrolltype_config",
                         // T
-                        "api/config/js_kanban_theme_config"     
+                        // "api/config/js_kanban_theme_config"     
                     ]
                 },
                 {
@@ -272,7 +272,7 @@ module.exports = {
                         "api/config/toolbar_api_config",
                         "api/config/toolbar_items_config",
                         "api/config/toolbar_locale_config",
-                        "api/config/toolbar_theme_config"
+                        // "api/config/toolbar_theme_config"
                     ]
                 },
                 {

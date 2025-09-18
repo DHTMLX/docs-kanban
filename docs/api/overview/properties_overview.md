@@ -29,4 +29,3 @@ To configure the **Kanban**, refer to the [Configuration](../../../guides/config
 | [](../config/js_kanban_rows_config.md)                    | @getshort(../config/js_kanban_rows_config.md)           |
 | [](../config/js_kanban_rowshape_config.md)                | @getshort(../config/js_kanban_rowshape_config.md)       |
 | [](../config/js_kanban_scrolltype_config.md)              | @getshort(../config/js_kanban_scrolltype_config.md)     |
-| [](../config/js_kanban_theme_config.md)                   | @getshort(../config/js_kanban_theme_config.md)          |

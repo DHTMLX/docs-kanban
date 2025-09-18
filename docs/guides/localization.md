@@ -128,6 +128,35 @@ const en = {
 };
 ~~~
 
+## Built-in locales
+
+The Kanban exports the following locales:
+
+**en** - english
+**de** - german
+**cn** - chinese
+**es** - spanish
+**fr** - french
+**it** - italian
+**jp** - japanese
+**pt** - portugese
+**ru** - russian
+
+You can export and apply the built-in locale in the following way:
+
+```jsx {5}
+// create Kanban
+const board = new kanban.Kanban("#root", {
+    columns,
+    cards,
+    locale: kanban.locales["cn"] // the built-it "cn" locale will be set initially
+    // other parameters
+});
+
+// apply the built-in "de" locale to Kanban
+board.setLocale(kanban.locales["de"]);
+```
+
 ## Custom locale
 
 To apply a custom locale you need to:

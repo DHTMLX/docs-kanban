@@ -37,7 +37,6 @@ description: You can have a Methods overview of JavaScript Kanban in the documen
 | [](../methods/js_kanban_setlocale_method.md)             | @getshort(../methods/js_kanban_setlocale_method.md)     |
 | [](../methods/js_kanban_setsearch_method.md)             | @getshort(../methods/js_kanban_setsearch_method.md)     |
 | [](../methods/js_kanban_setsort_method.md)               | @getshort(../methods/js_kanban_setsort_method.md)       |
-| [](../methods/js_kanban_settheme_method.md)              | @getshort(../methods/js_kanban_settheme_method.md)      |
 | [](../methods/js_kanban_undo_method.md)                  | @getshort(../methods/js_kanban_undo_method.md)          |
 | [](../methods/js_kanban_unselectcard_method.md)          | @getshort(../methods/js_kanban_unselectcard_method.md)  |
 | [](../methods/js_kanban_updatecard_method.md)            | @getshort(../methods/js_kanban_updatecard_method.md)    |

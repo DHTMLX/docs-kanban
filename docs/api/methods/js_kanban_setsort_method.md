@@ -15,7 +15,7 @@ description: You can learn about the setSort method in the documentation of the 
 ~~~jsx {}
 setSort(
     {
-        by?: string, // by?: ((card: object) => any),
+        by?: string | function, // by?: ((card: object) => any),
         dir?: "asc" | "desc",
         columnId?: string | number,
         preserve?: boolean

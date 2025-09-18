@@ -34,8 +34,8 @@ new kanban.Toolbar("#toolbar", {
 
 ## Kanban methods
 
-| Name                                                      | Description                                              |
-| ----------------------------------------------------------| ---------------------------------------------------------|
+| Name                                                     | Description                                             |
+| -------------------------------------------------------- | ------------------------------------------------------- |
 | [](../methods/js_kanban_addcard_method.md)               | @getshort(../methods/js_kanban_addcard_method.md)       |
 | [](../methods/js_kanban_addcolumn_method.md)             | @getshort(../methods/js_kanban_addcolumn_method.md)     |
 | [](../methods/js_kanban_addcomment_method.md)            | @getshort(../methods/js_kanban_addcomment_method.md)    |
@@ -65,7 +65,6 @@ new kanban.Toolbar("#toolbar", {
 | [](../methods/js_kanban_setlocale_method.md)             | @getshort(../methods/js_kanban_setlocale_method.md)     |
 | [](../methods/js_kanban_setsearch_method.md)             | @getshort(../methods/js_kanban_setsearch_method.md)     |
 | [](../methods/js_kanban_setsort_method.md)               | @getshort(../methods/js_kanban_setsort_method.md)       |
-| [](../methods/js_kanban_settheme_method.md)              | @getshort(../methods/js_kanban_settheme_method.md)      |
 | [](../methods/js_kanban_undo_method.md)                  | @getshort(../methods/js_kanban_undo_method.md)          |
 | [](../methods/js_kanban_unselectcard_method.md)          | @getshort(../methods/js_kanban_unselectcard_method.md)  |
 | [](../methods/js_kanban_updatecard_method.md)            | @getshort(../methods/js_kanban_updatecard_method.md)    |
@@ -77,8 +76,8 @@ new kanban.Toolbar("#toolbar", {
 
 ### Event Bus methods
 
-| Name                                                       | Description                                                  |
-| -----------------------------------------------------------| ------------------------------------------------------------ |
+| Name                                                      | Description                                                 |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
 | [](../internal/js_kanban_detach_method.md)                | @getshort(../internal/js_kanban_detach_method.md)           |
 | [](../internal/js_kanban_exec_method.md)                  | @getshort(../internal/js_kanban_exec_method.md)             |
 | [](../internal/js_kanban_intercept_method.md)             | @getshort(../internal/js_kanban_intercept_method.md)        |
@@ -89,12 +88,12 @@ new kanban.Toolbar("#toolbar", {
 
 | Name                                         | Description                                        |
 | -------------------------------------------- | -------------------------------------------------- |
-| [](../internal/js_kanban_json_method.md)    | @getshort(../internal/js_kanban_json_method.md)   |
+| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |
 
 ### State methods
 
-| Name                                                       | Description                                                   |
-| -----------------------------------------------------------| ------------------------------------------------------------- |
+| Name                                                      | Description                                                  |
+| --------------------------------------------------------- | ------------------------------------------------------------ |
 | [](../internal/js_kanban_getreactivestate_method.md)      | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
 | [](../internal/js_kanban_getstate_method.md)              | @getshort(../internal/js_kanban_getstate_method.md)          |
 | [](../internal/js_kanban_getstores_method.md)             | @getshort(../internal/js_kanban_getstores_method.md)         |
@@ -158,7 +157,6 @@ new kanban.Toolbar("#toolbar", {
 | [](../config/js_kanban_rows_config.md)                    | @getshort(../config/js_kanban_rows_config.md)           |
 | [](../config/js_kanban_rowshape_config.md)                | @getshort(../config/js_kanban_rowshape_config.md)       |
 | [](../config/js_kanban_scrolltype_config.md)              | @getshort(../config/js_kanban_scrolltype_config.md)     |
-| [](../config/js_kanban_theme_config.md)                   | @getshort(../config/js_kanban_theme_config.md)          |
 
 ## Toolbar methods
 
@@ -175,7 +173,6 @@ new kanban.Toolbar("#toolbar", {
 | [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
 | [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
 | [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |
-| [](../config/toolbar_theme_config.md)                     | @getshort(../config/toolbar_theme_config.md)            |
 
 ## Common settings
 
@@ -187,8 +184,8 @@ new kanban.Toolbar("#toolbar", {
 
 ### RestDataProvider methods
 
-| Name                                                           | Description                                                         |
-| -------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Name                                                          | Description                                                        |
+| ------------------------------------------------------------- | ------------------------------------------------------------------ |
 | [](../provider/rest_methods/js_kanban_getcards_method.md)     | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
 | [](../provider/rest_methods/js_kanban_getcolumns_method.md)   | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
 | [](../provider/rest_methods/js_kanban_getlinks_method.md)     | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |

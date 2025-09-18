@@ -8,7 +8,7 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
-## Version 1.6.5
+## Version 1.7.0
 
 Released on September Day, 2025
 
@@ -125,7 +125,7 @@ Released on November 13, 2024
 - The ability to change the view and content of search results via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control (see the [**example**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
 - The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property (see the [**example**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
 - The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clickable`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
-- The ability to apply a theme via the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method
+- The ability to apply a theme via the `setTheme()` method
 
 ### Updates
 
@@ -145,7 +145,7 @@ Released on November 13, 2024
     - The [`setConfig()`](../../api/methods/js_kanban_setconfig_method) method functionality was updated in the following way:
 
         - The method doesn't change history (you cannot change history at all)
-        - The method doesn't change themes (use the new [`setTheme()`](../../api/methods/js_kanban_settheme_method) method instead)
+        - The method doesn't change themes (use the new `setTheme()` method instead)
         - The method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
 
     - The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
@@ -365,8 +365,8 @@ Released on March 21, 2023
 
     - [`currentUser`](../../api/config/js_kanban_currentuser_config)
     - [`links`](../../api/config/js_kanban_links_config)
-    - [`theme`](../../api/config/js_kanban_theme_config) (Kanban)
-    - [`theme`](../../api/config/toolbar_items_config) (Toolbar)
+    - `theme` (Kanban)
+    - `theme` (Toolbar)
 
 ### Updates
 
