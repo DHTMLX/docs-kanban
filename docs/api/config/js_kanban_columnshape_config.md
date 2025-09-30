@@ -22,10 +22,11 @@ columnShape?: {
                 icon?: string,
                 text?: string,
                 disabled?: boolean,
-                onClick?: ({ id, item, column }) => void
+                onClick?: ({ id, item, column }) => void,
+                data?: array // an array of menu subitems
             }, 
             {...}
-        ] | ({ column, columnIndex, columns, store }) => array | boolean
+        ] | ({ column, columnIndex, columns, readonly }) => array | null
     },
     fixedHeaders?: boolean,
     css?: (column, cards) => string,
@@ -52,6 +53,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
             - ***"move-column:left"*** - defines the action to move a column left
             - ***"move-column:right"*** - defines the action to move a column right
             - ***"delete-column"*** - defines the action to delete a column
+
         - `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
         - `text` - (optional) a name of the menu item
         - `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
@@ -60,21 +62,23 @@ To configure the columns appearance, in the **columnShape** object you can speci
             - ***item*** - a data object of the current menu item
             - ***column*** - a data object of the target column
 
+        - `data` - (optional) an array of objects that represent menu subitems
+
     :::info
-    You can also set the `items` parameter to a custom function, that takes the following arguments:
+    You can also set the `menu.items` parameter to a custom function, that takes the following arguments:
     - ***column*** - a data object of a current column
     - ***columnIndex*** - an index of a current column
     - ***columns*** - an array of objects containing all columns data
-    - ***store*** - an object of *dataStore*
+    - ***readonly*** - an object of readonly [state properties](api/internal/js_kanban_getstate_method.md)
 
     This function allows customizing menu for any column or hide it for a specific one (by returning *null* or *false*):
 
     ~~~jsx {}
-    items: ({ column, columnIndex, columns, store }) => {
-        if(column.id === "inprogress")
-            return null
-
-        if (column.id === "backlog") 
+    items: ({ column }) => {
+        if(column.id === "inprogress"){
+            return null;
+        } 
+        if (column.id === "backlog"){
             return [
                 { id: "set-edit", icon: "wxi-edit", text: "Rename" },
                 {
@@ -82,7 +86,8 @@ To configure the columns appearance, in the **columnShape** object you can speci
                     icon: "wxi-delete",
                     text: "Remove card"
                 }
-            ]
+            ];
+        }       
     }
     ~~~
     :::
@@ -96,7 +101,7 @@ To configure the columns appearance, in the **columnShape** object you can speci
 ### Default config
 
 ~~~jsx {}
-const getDefaultColumnMenuItems = ({ column, columnIndex, columns, store }) => [
+const getDefaultColumnMenuItems = ({ column, columnIndex, columns, readonly }) => [
     { id: "add-card", icon: "wxi-plus", text: "Add new card" },
     { id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
@@ -133,7 +138,7 @@ const columnShape = {
             {
                 id: "color",
                 text: "Color",
-                items: [
+                data: [
                     { 
                         id:"yellow", 
                         text: "Yellow",
@@ -196,9 +201,12 @@ new kanban.Kanban("#root", {
 
 **Change log:**
 - The ***css*** parameter was added in v1.4
-- The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].label*** parameter was deprecated and replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].items*** parameter was deprecated and replaced by the ***menu.items[0].data*** parameter in v1.4
 - The ***fixedHeaders*** parameter was added in v1.5
 - The ***headerTemplate*** and ***collapsedTemplate*** parameters were added in v1.6
+- The ***menu.items[0].label*** and ***menu.items[0].items*** parameters were removed in v1.7
+- The ***menu.items*** function was updated. The **store** parameter was replaced with the **readonly** one in v1.7
 
 **Related articles:** [Configuration](../../../guides/configuration)
 

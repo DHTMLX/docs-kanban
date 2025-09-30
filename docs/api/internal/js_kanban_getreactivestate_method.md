@@ -36,27 +36,35 @@ The method returns an object with the following parameters:
     rowShape: {...},
     editorShape: {...},
     rows: {...},
-    scroll: {...},
     search: {...},
     selected: {...},
     sort: {...},
 
     // deprecated parameters
     /*
-        areasMeta: {...},
-        before: {...},
-        cardsMap: {...},
-        cardsMeta: {...},
-        dragItemId: {...},
-        dragItemsCoords: {...},
-        edit: {...},
-        layout: {...},
-        overAreaId: {...},
         fromAreaMeta: {...},
         dropAreaItemsCoords: {...},
         dropAreasCoords: {...},
         overAreaMeta: {...},
+    */
+
+    // removed parameters
+    /*    
+        before: {...},
+        dragItemId: {...},
+        dragItemsCoords: {...},
+        overAreaId: {...},
     /*
+
+    // private parameters
+    /*
+        edit -> _edit: {...},
+        layout -> layout: {...},
+        cardsMap -> _cardsMap: {...},
+        cardsMeta -> _cardsMeta: {...},
+        areasMeta _areasMeta: {...},
+        scroll -> _scroll: {...},
+    */
 }
 ~~~  
 

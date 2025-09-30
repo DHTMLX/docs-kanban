@@ -125,7 +125,7 @@ new kanban.Kanban("#root", {
 
 ## Loading data from local source
 
-To load data for ***columns***, ***rows*** and ***cards*** from a local source, you can use the [`parse()`](api/methods/js_kanban_parse_method.md) method. It takes an object with the needed data as a parameter.
+To load data for ***columns***, ***rows***, ***cards***, and ***links*** from a local source, you can use the [`parse()`](api/methods/js_kanban_parse_method.md) method. It takes an object with the needed data as a parameter.
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});

@@ -24,7 +24,9 @@ api.on(
 
 - `event` - (required) an event to be fired
 - `handler` - (required) a handler to be attached (the handler arguments will depend on the event to be fired)
-- `config` - (optional) an object that stores an action `tag` name. You can use the tag name to remove an action handler via the [`detach`](api/internal/js_kanban_detach_method.md) method
+- `config` - (optional) an object that stores the following parameters:
+    - `intercept` - (optional) if you set `intercept: true` during event listener creation, this event listener will run before all others
+    - `tag` - (optional) an action tag. You can use the tag name to remove an action handler via the [`detach`](api/internal/js_kanban_detach_method.md) method
 
 ### Events
 
@@ -46,4 +48,4 @@ board.api.on("move-card", ({ id, columnId }) => {
 }, {tag: "move"});
 ~~~
 
-**Change log**: The **tag** parameter was added in v1.7
+**Change log**: The **config.tag** and **config.intercept** parameters were added in v1.7

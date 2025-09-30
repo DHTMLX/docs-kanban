@@ -18,8 +18,8 @@ The server expects to receive a json object with the next properties:
 
 | Name        | Type                   | Description |
 | ----------- | ---------------------- | ----------- |
-| `source`    |  *number* or *string*  | *Required*. The ID of a master link. |
-| `target`    |  *number* or *string*  | *Required*. The ID of a slave link.  |
+| `source`    |  *number* or *string*  | *Required*. The ID of the start link. |
+| `target`    |  *number* or *string*  | *Required*. The ID of the end link.  |
 | `relation`  |  *string*              | *Required*. The type of the relation created by the link. |
 
 Example:

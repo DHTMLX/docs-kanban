@@ -74,7 +74,7 @@ editorShape?: [
             {...} // other options
         ],
         config?: {
-            clear?: boolean, // for a "combo" type only
+            clear?: boolean, // for "combo" and "color" types
             label?: string, // for a "select" type only
             checkboxes?: boolean, // for a "multiselect" type only 
             // common parameters
@@ -243,7 +243,7 @@ To set the control for assigning a single user, you need to use the ***"select"*
 :::
 
 - `config` - (optional) a configuration object for **"combo"**, **"select"**, and **"multiselect"** fields. Here you can specify the following parameters:
-    - `clear` - (optional) adds the Clear button into a combo input (**for a "combo" type only**)
+    - `clear` - (optional) adds the Clear button into a combo input (**for "combo" and "color" types only**)
     - `label` - (optional) binds options to the input field by the specified key (**for a "select" type only**)
     - `checkboxes` - (optional) defines whether options have checkboxes next to them (**for a "multiselect" type only**)
     - `textField` - (optional) binds combo options to the input field by the specified key (**for "combo" and "multiselect" types only**)

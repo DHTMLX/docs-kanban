@@ -41,10 +41,11 @@ cardShape?: {
                 icon?: string,
                 text?: string,
                 disabled? boolean,
-                onClick?: ({ id, item, card }) => void
+                onClick?: ({ id, item, card }) => void,
+                data?: array // an array of menu subitems
             }, 
             {...}
-        ] | ({ card, readonly }) => array | boolean
+        ] | ({ card, readonly }) => array | null
     },
     users?: boolean | {
         show?: boolean,
@@ -131,22 +132,35 @@ To configure the card appearance, in the **cardShape** object you can specify th
             - ***id*** - an ID of the current menu item
             - ***item*** - a data object of the current menu item
             - ***card*** - a data object of the target card
+        - `data` - (optional) an array of objects that represent menu subitems
 
     :::info
-    You can also set the `items` parameter to a custom function, that takes the following arguments:
+    You can also set the `menu.items` parameter to a custom function, that takes the following arguments:
     - ***card*** - a data object of a current card
-    - ***readonly*** - a readonly state
+    - ***readonly*** - an object of readonly [state properties](api/internal/js_kanban_getstate_method.md)
 
     This function allows customizing menu for any card or hide it for a specific one (by returning *null* or *false*):
 
     ~~~jsx {}
     items: ({ card, readonly }) => {
-        if(card.id === 1)
-            return false
-        return [
-            { id: "set-edit", icon: "wxi-edit", label: "Edit" },
-            { id: "delete-card", icon: "wxi-delete", label: "Delete" }
-        ]
+        if (card.id === 1){
+            return false;
+        }  
+
+        const menu = [];
+
+        if (!readonly.delete){
+            menu.push({ 
+                id: "delete-card", icon: "wxi-delete", label: "Delete"
+            });
+        }
+            
+        if (!readonly.edit){
+            menu.push({ 
+                id: "set-edit", icon: "wxi-edit", label: "Edit"
+            });
+        }
+        return menu.length ? menu : null;
     }
     ~~~
     :::
@@ -209,8 +223,8 @@ const defaultPriorities = [
 
 const defaultColors = ["#33B0B4", "#0096FA", "#F1B941"];
 
-export const getDefaultCardMenuItems = ({ store }: { store: DataStore }) => {
-    const { readonly } = store.getState();
+export const getDefaultCardMenuItems = ({ readonly }: { readonly: DataStore }) => {
+    const { readonly } = readonly.getState();
     const baseItems = [
         { id: "duplicate-card", icon: "wxi-content-copy", text: "Duplicate" },
         { id: "delete-card", icon: "wxi-delete-outline", text: "Delete" }
@@ -311,8 +325,11 @@ new kanban.Kanban("#root", {
 
 **Change log:**
 - The ***comments***, ***css*** and ***votes*** parameters were added in v1.4
-- The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].label*** parameter was deprecated and replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].items*** parameter was deprecated and replaced by the ***menu.items[0].data*** parameter in v1.4
 - The ***users.maxCount*** and ***votes.clickable*** parameters were added in v1.6
+- The ***menu.items[0].label*** and ***menu.items[0].items*** parameters were removed in v1.7
+- The ***menu.items*** function was updated. The **store** parameter was replaced with the **readonly** one in v1.7
 
 **Related articles:** [Configuration](../../../guides/configuration#cards)
 

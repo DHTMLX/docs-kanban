@@ -22,7 +22,7 @@ moveRow({
 ### Parameters
 
 - `id` - (required) the ID of the row to be moved
-- `before` - (optional) the ID of the row, the moved one will be placed before it
+- `before` - (optional) the ID of the row before which the moved row will be placed. If you do not not specify the `before` parameter, the row will be placed at the end of board
 
 ### Example
 
@@ -33,7 +33,7 @@ const board = new kanban.Kanban("#root", {
     cards,
     row
 });
-// move the "task" swimlane and place it before the "feature" one
+// move the "task" swimlane and place it before (upper) the "feature" one
 board.moveRow({
     id: "task",
     before: "feature"

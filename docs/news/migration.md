@@ -52,7 +52,7 @@ new kanban.Kanban("#root", {
 menu: {
     show: true,
     items: ({ card, store }) => {
-        const defaultMenuItems = getDefaultCardMenuItems({ card, store }); // the "store" paramater is legacy
+        const defaultMenuItems = getDefaultCardMenuItems({ card, store }); // the "store" parameter is legacy
         ...
     }
 }
@@ -62,13 +62,59 @@ menu: {
 menu: {
     show: true,
     items: ({ card, readonly }) => {
-        const defaultMenuItems = getDefaultCardMenuItems({ card, readonly }); // the "readonly" paramater is new
+        const defaultMenuItems = getDefaultCardMenuItems({ card, readonly }); // the "readonly" parameter is new
         ...
     }
 }
 ~~~
 
-- The `editorAutoSave` property was removed in v1.7.0. Use the [`editor.autoSave`](api/config/js_kanban_editor_config.md) property instead:
+- The [`columnShape.menu.items`](api/config/js_kanban_columnshape_config.md) function was updated. The **store** parameter was replaced with the **readonly** one:
+
+~~~jsx {3-4} title="Before v1.7.0"
+menu: {
+    show: true,
+    items: ({ column, columnIndex, columns, store }) => {
+        const defaultMenuItems = getDefaultColumnMenuItems({ column, columnIndex, columns, store }); // the "store" parameter is legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="From v1.7.0"
+menu: {
+    show: true,
+    items: ({ column, columnIndex, columns, readonly }) => {
+        const defaultMenuItems = getDefaultColumnMenuItems({ column, columnIndex, columns, readonly }); // the "readonly" parameter is new
+        ...
+    }
+}
+~~~
+
+- The [`rowShape.menu.items`](api/config/js_kanban_rowshape_config.md) function was updated. The **store** parameter was replaced with the **readonly** one:
+
+~~~jsx {3-4} title="Before v1.7.0"
+menu: {
+    show: true,
+    items: ({ row, rowIndex, rows, store }) => {
+        const defaultMenuItems = getDefaultRowMenuItems({ row, rowIndex, rows, store }); // the "store" parameter is legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="From v1.7.0"
+menu: {
+    show: true,
+    items: ({ row, rowIndex, rows, readonly }) => {
+        const defaultMenuItems = getDefaultRowMenuItems({ row, rowIndex, rows, readonly }); // the "readonly" parameter is new
+        ...
+    }
+}
+~~~
+
+- The ***menu.items[0].label*** and ***menu.items[0].items*** deprecated parameters were removed in v1.7 for [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu.items`](api/config/js_kanban_columnshape_config.md), and [`rowShape.menu.items`](api/config/js_kanban_rowshape_config.md) properties
+
+- The `editorAutoSave` property was removed in v1.7. Use the [`editor.autoSave`](api/config/js_kanban_editor_config.md) property instead:
 
 ~~~jsx {2} title="Before v1.7.0"
 new kanban.Kanban("#root", {
@@ -87,8 +133,8 @@ new kanban.Kanban("#root", {
 ~~~
 
 - The [`links`](api/config/js_kanban_links_config.md) property was updated in the following way:
-        - The **masterId** parameter was replaced with the **source** parameter
-        - The **slaveId** parameter was replaced with the **target** parameter
+    - The **masterId** parameter was replaced with the **source** parameter
+    - The **slaveId** parameter was replaced with the **target** parameter
 
 ~~~jsx {5-6,10} title="Before v1.7.0"
 const links = [
@@ -124,14 +170,10 @@ new kanban.Kanban("#root", {
 
 #### Methods
 
-- The `undo` and `redo` methods were remove from store methods:
+- The `undo` and `redo` methods were removed from store methods:
 
 ~~~jsx {1} title="Before v1.7.0"
-kanban.getStores().data.undo() // legacy
-// or
-kanban.undo();
-// or
-kanban.api.exec("undo");
+kanban.api.getStores().data.undo() // legacy
 ~~~
 
 ~~~jsx {5-6,10} title="From v1.7.0"
@@ -139,6 +181,27 @@ kanban.undo();
 // or
 kanban.api.exec("undo");
 ~~~
+
+- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) and [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) methods were updated in the following way:
+    - The following parameters are removed in v1.7.0:
+
+    ```js
+    before,
+    dragItemId,
+    dragItemsCoords,
+    overAreaId
+    ```
+
+    - The following parameters are private in v1.7.0:
+
+    ```js
+    edit -> _edit: object,
+    layout -> layout: string,
+    cardsMap -> _cardsMap: object,
+    cardsMeta -> _cardsMeta: object,
+    areasMeta _areasMeta: object,
+    scroll -> _scroll: object
+    ```
 
 #### Events
 

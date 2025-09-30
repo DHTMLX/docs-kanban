@@ -13,12 +13,12 @@ description: You can learn about the detach method in the documentation of the D
 ## Usage
 
 ~~~jsx
-api.detach(tag: number | string ): void;
+api.detach(tag: number | string | symbol ): void;
 ~~~
 
 ## Parameters
 
-- `tag` - the name of the action tag
+- `tag` - the tag used to identify an event handler during its creation
 
 ### Example
 

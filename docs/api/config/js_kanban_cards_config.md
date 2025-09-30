@@ -70,7 +70,7 @@ For each card you can specify the following parameters (data):
     - `coverURL` - (optional) a path to the image to be set as a cover
     - `name` - (optional) a file name
     - `isCover` - (optional) enables a cover image. If **true**, the cover image will be downloaded via the "coverURL" url
-    - `size` - (optional) a size of the attached file
+    - `size` - (optional) a size of the attached file (in bytes)
 - `color` - (optional) a valid HEX color code. It is the color of the card top line
 - `users` - (optional) an **array** with **ID**s for multiple assigned users or **string | number**  for a single assigned user. To specify the assigned users, you need to define an array with users data in the [cardShape.users](../js_kanban_cardshape_config) property. The users are displayed in the **Users** field
 

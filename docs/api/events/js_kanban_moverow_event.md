@@ -25,7 +25,7 @@ description: You can learn about the move-row event in the documentation of the 
 The callback of the **move-row** event can take an object with the following parameters:
 
 - `id` - (required) the ID of the row to be moved
-- `before` - (optional) the ID of the row, the moved one will be placed before it
+- `before` - (optional) the ID of the row before which the moved row will be placed. If you do not not specify the `before` parameter, the row will be placed at the end of board
 - `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info

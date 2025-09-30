@@ -132,15 +132,15 @@ const en = {
 
 The Kanban exports the following locales:
 
-**en** - english
-**de** - german
-**cn** - chinese
-**es** - spanish
-**fr** - french
-**it** - italian
-**jp** - japanese
-**pt** - portugese
-**ru** - russian
+**"en"** - English
+**"de"** - German
+**"cn"** - Chinese
+**"es"** - Spanish
+**"fr"** - French
+**"it"** - Italian
+**"jp"** - Japanese
+**"pt"** - Portugese
+**"ru"** - Russian
 
 You can export and apply the built-in locale in the following way:
 
