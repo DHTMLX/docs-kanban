@@ -1,17 +1,17 @@
 ---
 sidebar_label: columnKey
 title: columnKey Config
-description: Explore the columnKey configuration in the DHTMLX JavaScript Kanban library documentation. Find developer guides, API references, code samples, live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the columnKey config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # columnKey
 
 ### Description
 
-@short: Optional. Specifies which column a card belongs to.
+@short: Optional. Defines belonging the card to the column
 
 :::info
-To assign cards to specific columns, it's necessary to use a key (**column** or a *custom* one) and set it to the corresponding column's **ID** within the card data object. The **columnKey** property should be set to this key in the widget's configuration.
+To distribute the cards into columns, you need to specify a key (**column** or *custom* one) and set it to the **ID** of the desired column in the card data object. The **columnKey** property needs to be set to this key in the widget configuration object
 :::
 
 ### Usage
@@ -23,7 +23,7 @@ columnKey?: string;
 ### Default config
 
 :::note
-If you don't provide a custom column key using the **columnKey** property, the widget defaults to using the **"column"** key! In this scenario, the card data object should have the **column** key set to the appropriate column **ID**.
+Unless you register a column key via the **columnKey** property, the widget will use the **"column"** key by default! In this case, you need to set the **column** key to the needed column **ID** in the card data object
 
 ~~~jsx {3}
 const cards = [

@@ -8,7 +8,7 @@ description: You can learn about the setLocale method of Toolbar in the document
 
 ### Description
 
-@short: Updates the Toolbar of Kanban with a new locale
+@short: Applies a new locale to the Toolbar of Kanban
 
 ### Usage
 
@@ -18,11 +18,11 @@ setLocale(null | locale?: object): void;
 
 ### Parameters
 
-- `null` - (optional) resets the Toolbar back to its default locale (*English*)
-- `locale` - (optional) an object containing the new locale data to apply to the Toolbar
+- `null` - (optional) resets Toolbar to the default locale (*English*)
+- `locale` - (optional) the object of new locale data to be applied to the Toolbar
 
 :::info
-The **Toolbar** in Kanban is an independent component. Use the `toolbar.setLocale()` method when you want to change the locale for the Toolbar only. Calling `toolbar.setLocale()` without any arguments (or with *null*) will reset it to the default locale. To update the locale for Kanban itself, use the [`kanban.setLocale()`](/api/methods/js_kanban_setlocale_method) method.
+The **Toolbar** of Kanban is a separate component. Use the `toolbar.setLocale()` method to apply a new locale to Toolbar only. To reset Toolbar to the default locale, call the `toolbar.setLocale()` method without arguments (or with a *null* value). Use the [`kanban.setLocale()`](api/methods/js_kanban_setlocale_method.md) method to apply a new locale to Kanban only.
 :::
 
 ### Example
@@ -32,12 +32,12 @@ The **Toolbar** in Kanban is an independent component. Use the `toolbar.setLocal
 const board = new kanban.Kanban("#root", {});
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-// set the "de" locale for Kanban
+// apply the "de" locale to Kanban
 board.setLocale(de);
-// set the "de" locale for the Toolbar
+// apply the "de" locale to the Toolbar
 toolbar.setLocale(de);
 ~~~
 
 **Change log:** The **api** parameter was deprecated in v1.6
 
-**Related articles:** [Localization](/guides/localization)
+**Related articles:** [Localization](guides/localization.md)

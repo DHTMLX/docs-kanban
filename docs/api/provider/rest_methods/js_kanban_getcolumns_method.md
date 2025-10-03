@@ -8,10 +8,10 @@ description: You can learn about the getColumns REST method in the documentation
 
 ### Description
 
-@short: Retrieves a promise containing the columns data
+@short: Gets a promise with the columns data
 
 :::info
-The **getColumns()** method is part of the **RestDataProvider** service designed for server interactions.
+The **getColumns()** method is a part of the **RestDataProvider** service intended for working with server
 :::
 
 ### Usage
@@ -22,7 +22,7 @@ getColumns(): promise;
 
 ### Returns
 
-The **getColumns()** method makes a **GET** request to the server and returns a **promise** that resolves with the columns data.
+The **getColumns()** method sends a request to the server by the **GET** method and returns a **promise** with the columns data
 
 ### Example
 
@@ -42,4 +42,4 @@ Promise.all([
 });
 ~~~
 
-**Related articles:** [Working with server](/guides/working_with_server)
+**Related articles:** [Working with server](../../../../guides/working_with_server)

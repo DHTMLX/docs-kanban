@@ -1,16 +1,15 @@
 ---
 sidebar_label: Toolbar properties overview
 title: Toolbar Properties Overview
-description: Explore the Toolbar Properties for JavaScript Kanban in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, test code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can have a Toolbar Properties overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # Toolbar properties overview
 
-For setting up the **Toolbar**, see the [Configuration](/guides/configuration/#toolbar) section.
+To configure the **Toolbar**, refer to the [Configuration](../../../guides/configuration/#toolbar) section.
 
-| Name                                    | Description                                   |
-| --------------------------------------- | --------------------------------------------- |
-| [api](/api/config/toolbar_api_config)    | @getshort(../config/toolbar_api_config.md)    |
-| [items](/api/config/toolbar_items_config)  | @getshort(../config/toolbar_items_config.md)  |
-| [locale](/api/config/toolbar_locale_config) | @getshort(../config/toolbar_locale_config.md) |
-| [theme](/api/config/toolbar_theme_config)  | @getshort(../config/toolbar_theme_config.md)  |
+| Name                                                      | Description                                             |
+| --------------------------------------------------------- | ------------------------------------------------------- |
+| [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
+| [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
+| [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |

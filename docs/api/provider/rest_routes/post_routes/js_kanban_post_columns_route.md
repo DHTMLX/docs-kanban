@@ -8,17 +8,17 @@ description: You can learn about the POST /columns REST route in the documentati
 
 ### Description
 
-@short: Adds a new column and returns a JSON object with the column ID.
+@short: Adds a new column and returns a json object with the column id
 
-This route processes an **HTTP POST** request sent to the `/columns` endpoint.
+The route handles the **HTTP POST** request made to the `/columns` path.
 
 ### Payload
 
-The server expects a JSON object containing the following property:
+The server expects to receive a json object with the next properties:
 
-| Name | Type | Description |
+| Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
-| `label`     |  string     | *Required*. The name for the new column to be created.|
+| `label`     |  string     | *Required*. The name of a new column to be added.|
 
 Example:
 
@@ -30,7 +30,7 @@ Example:
 
 ### Response
 
-The response includes a JSON object with the ID of the newly created column.
+The route returns a json object with a new column id.
 
 Example:
 
@@ -40,8 +40,8 @@ Example:
 }
 ~~~
 
-The HTTP status code indicates if the request was successful (response.status == 200) or encountered an error (response.status == 500).
+The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server)
+**Related articles**: [Working with server](guides/working_with_server.md)

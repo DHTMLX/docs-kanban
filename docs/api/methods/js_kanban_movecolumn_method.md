@@ -8,21 +8,21 @@ description: You can learn about the moveColumn method in the documentation of t
 
 ### Description
 
-@short: Shifts a column to a new position within the board.
+@short: Moves a column to the new position
 
 ### Usage
 
 ~~~jsx {}
 moveColumn({
     id: string | number,
-    before: string | number
+    before?: string | number
 }): void;
 ~~~
 
 ### Parameters
 
-- `id` - (required) the ID of the column to be relocated
-- `before` - (required) the ID of the column before which the moved column will be inserted
+- `id` - (required) the ID of the column to be moved
+- `before` - (optional) the ID of the column before which the moved column will be placed. If you do not not specify the `before` parameter, the column will be placed at the end of board
 
 ### Example
 
@@ -39,4 +39,4 @@ board.moveColumn({
 });
 ~~~
 
-**Change log:** The method was introduced in v1.1
+**Change log:** The method was added in v1.1

@@ -8,7 +8,7 @@ description: You can learn about the getAreaCards method in the documentation of
 
 ### Description
 
-@short: Retrieves an array containing data objects for all cards within the specified column (and row).
+@short: Gets an array with data objects of all cards of the specified column (and row)
 
 ### Usage
 
@@ -21,27 +21,28 @@ getAreaCards(
 
 ### Parameters
 
-- `columnId` - (required) the ID of the column to target  
-- `rowId` - (optional) the ID of the row to target
+- `columnId` - (required) the ID of the target column
+- `rowId` - (optional) the ID of the target row
 
 ### Returns
 
-This method returns an array of data objects representing the cards.
+The method returns an array with data objects of the cards
 
 :::info
-When the Kanban board has **columns** without **rows**, only the ***columnId*** parameter is needed. In this scenario, the method returns an array containing all card data objects in that column.
+If Kanban includes only **columns** without **rows**, you need to pass only the ***columnId*** parameter. In this case, the method returns an array with data objects that include all cards of the specified column.
 
-If the Kanban board includes both **columns** and **rows**, both the ***columnId*** and ***rowId*** parameters must be provided. The method then returns an array of data objects for cards located in the specified column and row.
+If Kanban includes **columns** and **rows**, you can pass both ***columnId*** and ***rowId*** parameters. In this case, the method returns an array with data objects that include all cards of the specific column and row.
 :::
 
 ### Example
 
-~~~jsx {7}
+~~~jsx {8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
     columns,
-    cards
+    cards,
+    rows
 });
-// retrieve an array of card data objects from the specified column and row
+// get an array with the cards data objects of the specified column and row
 board.getAreaCards("column_id", "row_id");
 ~~~

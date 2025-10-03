@@ -1,35 +1,35 @@
 ---
 sidebar_label: move-column
 title: move-column Event
-description: Explore the move-column event in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the move-column event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # move-column
 
 ### Description
 
-@short: Triggered when a column is moved
+@short: Fires when moving a column
 
 ### Usage
 
 ~~~jsx {}
 "move-column": ({
     id: string | number,
-    before: string | number,
+    before?: string | number,
     skipProvider?: boolean
 }) => void;
 ~~~
 
 ### Parameters
 
-The callback for the **move-column** event receives an object with these properties:
+The callback of the **move-column** event can take an object with the following parameters:
 
-- `id` - (required) the ID of the column being moved
-- `before` - (required) the ID of the column before which the moved column will be placed
-- `skipProvider` - (optional) controls whether the request to the server is skipped or not
+- `id` - (required) the ID of the column to be moved
+- `before` - (optional) the ID of the column before which the moved column will be placed. If you do not not specify the `before` parameter, the column will be placed at the end of board
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-To manage internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -40,10 +40,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// listen for the "move-column" event
+// subscribe on the "move-column" event
 board.api.on("move-column", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Change log:** This event was introduced in v1.1
+**Change log:** This event was added in v1.1

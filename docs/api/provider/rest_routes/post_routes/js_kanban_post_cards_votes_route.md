@@ -10,15 +10,15 @@ description: You can learn about the POST /cards/{cardId}/vote REST route in the
 
 @short: Adds a new vote to the card and returns a json object with the voting user ID
 
-This route accepts an **HTTP POST** request at the `/cards/{cardId}/vote` endpoint.
+The route handles the **HTTP POST** request made to the `/cards/{cardId}/vote` path.
 
 ### Payload
 
-No payload needs to be sent with this request.
+No payload is required.
 
 ### Response
 
-The response includes a JSON object containing the ID of the user who voted.
+The route returns a json object with the voting user ID.
 
 Example:
 
@@ -28,8 +28,8 @@ Example:
 }
 ~~~
 
-The HTTP status code indicates the outcome: a status of 200 means the request was successful, while 500 indicates an error.
+The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server)
+**Related articles**: [Working with server](guides/working_with_server.md)

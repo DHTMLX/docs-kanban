@@ -1,17 +1,17 @@
 ---
 sidebar_label: locale
 title: locale Config
-description: Discover how to configure the (Toolbar) locale in the DHTMLX JavaScript Kanban library. Explore developer guides and API references, experiment with code samples and live demos, and get a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the (Toolbar) locale config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # locale
 
 ### Description
 
-@short: Optional. An object that defines a custom locale for the Toolbar.
+@short: Optional. An object of a custom locale of Toolbar
 
 :::info
-The **locale** object should include all labels for both Kanban and Toolbar along with their translations.
+The **locale** object needs to include all labels of Kanban and Toolbar with the corresponding translations.
 :::
 
 ### Usage
@@ -22,10 +22,10 @@ locale?: object;
 
 ### Default config
 
-By default, Toolbar is set to the [**English**](/guides/localization/#default-locale) locale. You can also specify your own custom locale.
+By default, Toolbar uses the [**English**](../../../guides/localization/#default-locale) locale. You can set it to the custom locale as well
 
 :::tip
-To switch the locale on the fly, you can use the Toolbar's [**setLocale()**](/api/methods/toolbar_setlocale_method) method.
+To change the current locale dynamically, you can use the [**setLocale()**](../../methods/toolbar_setlocale_method) method of Toolbar
 :::
 
 ### Example
@@ -33,15 +33,15 @@ To switch the locale on the fly, you can use the Toolbar's [**setLocale()**](/ap
 ~~~jsx {8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-    locale: zh
+    locale: cn
 });
 // create Toolbar
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: zh // apply the "zh" locale to Toolbar 
+    locale: cn // apply the "cn" locale to Toolbar 
 });
 ~~~
 
-**Related articles:** [Localization](/guides/localization)
+**Related articles:** [Localization](../../../guides/localization)
 
 **Related sample:** [Kanban. Localization](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

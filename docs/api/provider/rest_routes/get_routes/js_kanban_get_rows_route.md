@@ -1,24 +1,24 @@
 ---
 sidebar_label: GET /rows
 title: GET /rows
-description: Explore the GET /rows REST route in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try live demos and code samples, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the GET /rows REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # GET `/rows`
 
 ### Description
 
-@short: Retrieves data for all rows and returns a JSON object containing an array of row (swimlane) data objects.
+@short: Gets data on all rows and returns a json object with an array of objects with rows (swimlanes) data
 
-This route responds to **HTTP GET** requests sent to the `/rows` endpoint.
+The route handles the **HTTP GET** request made to the `/rows` path.
 
 ### Payload
 
-No payload needs to be sent with the request.
+No payload is required.
 
 ### Response
 
-The response is a JSON object that includes an array of row data objects.
+The route returns a json object with an array of objects with rows data.
 
 Example:
 
@@ -37,12 +37,12 @@ Example:
 ]
 ~~~
 
-For another example of the returned object, see [**rows**](/api/config/js_kanban_rows_config).
+For another example of the returned object, go to [**rows**](api/config/js_kanban_rows_config.md).
 
-The HTTP status code indicates if the request was successful (response.status == 200) or encountered an error (response.status == 500).
+The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](/guides/working_with_server)
-- [getRows()](/api/provider/rest_methods/js_kanban_getrows_method)
+- [Working with server](guides/working_with_server.md)
+- [getRows()](api/provider/rest_methods/js_kanban_getrows_method.md)

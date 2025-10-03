@@ -8,7 +8,7 @@ description: You can learn about the setConfig method in the documentation of th
 
 ### Description
 
-@short: Updates the Kanban with new configuration settings
+@short: Sets new configuration parameters of Kanban
 
 ### Usage
 
@@ -18,10 +18,10 @@ setConfig(config: object): void;
 
 ### Parameters
 
-- `config` - (required) an object containing the Kanban configuration options. Check the full list of properties [here](/api/overview/main_overview/#kanban-properties)
+- `config` - (required) the object of the Kanban configuration. See the full list of properties [here](api/overview/main_overview.md#kanban-properties)
 
 :::tip
-This method allows you to adjust the Kanban widget settings and load data into it. Note that it doesn't affect history (modifying history is not supported) or themes (use the [`setTheme()`](/api/methods/js_kanban_settheme_method) method for that).
+Using this method, you can configure the Kanban widget as well as load data to it. The method doesn't change history (you cannot change history at all).
 :::
 
 ### Example
@@ -36,7 +36,7 @@ const board = new kanban.Kanban("#root", {
 // create Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
 
-// update Kanban configuration with new parameters
+// specify new configuration parameters of Kanban
 board.setConfig({
     columnKey: "stage",
     rowKey: "type",
@@ -48,6 +48,6 @@ board.setConfig({
     /* other parameters */
 });
                         
-// update Toolbar configuration with new items
+// specify new configuration parameters of Toolbar
 toolbar.setConfig({ items: ["search", "spacer", "sort"] });
 ~~~

@@ -8,7 +8,7 @@ description: You can learn about the setLocale method in the documentation of th
 
 ### Description
 
-@short: Sets a new locale for the Kanban component
+@short: Applies a new locale to Kanban
 
 ### Usage
 
@@ -18,11 +18,11 @@ setLocale(null | locale?: object): void;
 
 ### Parameters
 
-- `null` - (optional) resets the locale back to the default (*English*)
-- `locale` - (optional) an object defining the new locale data to apply
+- `null` - (optional) resets to the default locale (*English*)
+- `locale` - (optional) the object of data of the new locale to be applied
 
 :::info
-The `setLocale()` method is designed to update the locale specifically for Kanban. To revert Kanban to its default locale, just call `setLocale()` without any arguments (or pass *null*). If you need to change the locale for the Toolbar alone, use the [`toolbar.setLocale()`](/api/methods/toolbar_setlocale_method) method.
+Use the `setLocale()` method to apply a new locale to Kanban only. To reset Kanban to the default locale, call the `setLocale()` method without arguments (or with a *null* value). Use the [`toolbar.setLocale()`](api/methods/toolbar_setlocale_method.md) method to apply a new locale to Toolbar only.
 :::
 
 ### Example
@@ -33,12 +33,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards,
 });
-// set the "de" locale for Kanban
-board.setLocale(de);
-// reset Kanban to the default locale
+// apply the "de" locale to Kanban
+board.setLocale(kanban.locales["de"]);
+// apply the default locale to Kanban
 board.setLocale(); // or board.setLocale(null);
 ~~~
 
-**Change log:** This method was updated in version 1.2
+**Change log:** The method was updated in v1.2
 
-**Related articles:** [Localization](/guides/localization)
+**Related articles:** [Localization](guides/localization.md)

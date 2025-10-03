@@ -8,7 +8,7 @@ description: You can learn about the setSearch method in the documentation of th
 
 ### Description
 
-@short: Finds cards based on the given search criteria
+@short: Looks for cards by the specified parameters
 
 ### Usage
 
@@ -20,13 +20,13 @@ setSearch({
 ~~~
 
 :::info
-This method allows you to find cards according to specified search criteria. Calling **setSearch()** without any arguments will reset the search input and remove any highlighted cards.
+Using this method, you can search for the needed cards by the specified parameters. If you call the **setSearch()** method without parameters, it will clear the search bar and highlighting of the cards
 :::
 
 ### Parameters
 
-- `value` - (required) the text to search for
-- `by` - (optional) the specific card field to search within
+- `value` - (required) the value to search 
+- `by` - (optional) the card field for searching
 
 ### Example
 

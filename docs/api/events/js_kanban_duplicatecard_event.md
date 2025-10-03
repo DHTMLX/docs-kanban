@@ -1,14 +1,14 @@
 ---
 sidebar_label: duplicate-card
 title: duplicate-card Event
-description: Get to know the duplicate-card event from the DHTMLX JavaScript Kanban library documentation. Explore developer guides, API references, try code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the duplicate-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # duplicate-card
 
 ### Description
 
-@short: Triggered when a card is duplicated
+@short: Fires when duplicating a card
 
 ### Usage
 
@@ -22,14 +22,14 @@ description: Get to know the duplicate-card event from the DHTMLX JavaScript Kan
 
 ### Parameters
 
-The callback for the **duplicate-card** event receives an object with these properties:
+The callback of the **duplicate-card** event can take an object with the following parameters:
 
-- `id` - (required) the ID of the card being duplicated
-- `card` - (optional) the data object for the new card. You can find the full list of card parameters [here](/api/config/js_kanban_cards_config)
-- `select` - (optional) controls whether the newly added card is selected or not
+- `id` - (required) the ID of the card to be duplicated
+- `card` - (optional) the data object of the new card. The full list of the card parameters can be found [here](api/config/js_kanban_cards_config.md)
+- `select` - (optional) enables/disables selecting new added card
 
 :::info
-To work with internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -40,10 +40,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// listen for the "duplicate-card" event
+// subscribe on the "duplicate-card" event
 board.api.on("duplicate-card", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Change log:** The `select` parameter was introduced in v1.5.10
+**Change log:** The `select` parameter was added in v1.5.10

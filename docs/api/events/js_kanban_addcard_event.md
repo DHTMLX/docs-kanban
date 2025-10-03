@@ -1,14 +1,14 @@
 ---
 sidebar_label: add-card
 title: add-card Event
-description: Discover how the add-card event works in the DHTMLX JavaScript Kanban library. Explore developer guides, API references, test code samples, check out live demos, and get a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the add-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # add-card
 
 ### Description
 
-@short: Triggered when a new card is added
+@short: Fires when adding a new card
 
 ### Usage
 
@@ -26,18 +26,18 @@ description: Discover how the add-card event works in the DHTMLX JavaScript Kanb
 
 ### Parameters
 
-The callback for the **add-card** event receives an object with these properties:
+The callback of the **add-card** event can take an object with the following parameters:
 
-- `columnId` - (required) the ID of the column where the card will be added
-- `id` - (optional) the ID assigned to the new card
-- `rowId` - (optional) the ID of the row where the card should be placed
-- `before` - (optional) the ID of the card that the new card will be inserted before
-- `select` - (optional) determines if the newly added card should be selected
-- `card` - (optional) the data object representing the new card. Complete details of card parameters are available [here](/api/config/js_kanban_cards_config)
-- `skipProvider` - (optional) controls whether the request to the server should be skipped
+- `columnId` - (required) the ID of the target column
+- `id` - (optional) the ID of the new card
+- `rowId` - (optional) the ID of the target row
+- `before` - (optional) the ID of the card, before which the new card will be placed
+- `select` - (optional) enables/disables selecting new added card
+- `card` - (optional) the data object of the new card. The full list of the card parameters can be found [here](api/config/js_kanban_cards_config.md)
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-To manage internal events, refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -48,7 +48,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// listen for the "add-card" event
+// subscribe on the "add-card" event
 board.api.on("add-card", (obj) => {
     console.log(obj.columnId);
 });

@@ -1,14 +1,14 @@
 ---
 sidebar_label: theme
 title: theme Config
-description: Explore the theme configuration options in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, live demos, and get a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the theme config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # theme
 
 ### Description
 
-@short: Optional. Defines a theme to apply to the Kanban board
+@short: Optional. A theme to be applied to Kanban
 
 ### Usage
 
@@ -20,7 +20,7 @@ theme?: {
 ~~~
 
 :::important
-Besides setting the `theme` property, it's also possible to apply a theme by adding the appropriate *css* classes directly to the widget containers:
+Besides using the `theme` property, you can also apply the needed theme via adding the corresponding *css* classes to the widget containers:
 
 - **Material theme**
 ~~~html {}
@@ -46,7 +46,7 @@ Besides setting the `theme` property, it's also possible to apply a theme by add
     <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
-Alternatively, you can include the desired theme by linking its stylesheet from the skins folder:
+or just include the needed theme on the page from the skins folder:
 
 ~~~html {}
 <link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
@@ -55,19 +55,19 @@ Alternatively, you can include the desired theme by linking its stylesheet from 
 
 ### Parameters
 
-Here are the parameters you can use to configure the **theme**:
+To configure the **theme**, you can use the following parameters.
 
-- `theme` - (optional) an object holding theme settings. It supports:
-    - `name` - (required) the name of the theme to apply to the Kanban
-    - `fonts` - (optional) controls whether fonts are loaded from the CDN (wxi font)
+- `theme` - (optional) an object with theme settings. Here you can specify the following parameters:
+    - `name` - (required) a theme name to be applied to Kanban
+    - `fonts` - (optional) enables/disables fonts loading from the CDN (wxi font)
 
 :::tip
-The **Willow** and **Willow-Dark** themes are also available. To switch themes dynamically, the [`setTheme()`](/api/methods/js_kanban_settheme_method) method can be used.
+You can also apply the **Willow** and **Willow-Dark** themes as well. To change the current theme dynamically, you can use the [`setTheme()`](../../methods/js_kanban_settheme_method) method.
 :::
 
 ### Default config
 
-The Kanban board defaults to the **Material** theme.
+By default, Kanban uses the **Material** theme.
 
 ~~~jsx {}
 theme: {
@@ -84,15 +84,15 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards,
     theme: {
-        name: "willow-dark", // sets the "willow-dark" theme initially
+        name: "willow-dark", // the "willow-dark" theme will be set initially
         fonts: false
     }
     // other parameters
 });
 ~~~
 
-**Change log:** This property was introduced in v1.4
+**Change log:** The property was added in v1.4
 
-**Related articles:** [Stylization](/guides/stylization)
+**Related articles:** [Stylization](../../../guides/stylization)
 
 **Related sample:** [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

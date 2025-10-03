@@ -8,10 +8,10 @@ description: You can learn about the currentUser config in the documentation of 
 
 ### Description
 
-@short: Optional. Represents the ID of the current user
+@short: Optional. An ID of the current user
 
 :::note
-The current user ID should match one of the IDs listed in the [`cardShape.users`](/api/config/js_kanban_cardshape_config) property. If this ID isn't provided, comments will be accessible only in read-only mode.
+The current user ID needs to correspond to one of the IDs specified in the [`cardShape.users`](api/config/js_kanban_cardshape_config.md) property. If you do not specify this ID, the comments will be available only for reading.
 :::
 
 ### Usage
@@ -31,6 +31,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** This property was introduced in version 1.4
+**Change log:** The property was added in v1.4
 
 **Related sample:** [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

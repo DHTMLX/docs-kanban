@@ -8,10 +8,10 @@ description: You can learn about the renderType config in the documentation of t
 
 ### Description
 
-@short: Optional. Specifies the way cards are rendered.
+@short: Optional. Defines a type of cards rendering
 
 :::info
-This setting is useful when handling a large number of cards. Setting it to *"lazy"* makes the widget render only the cards that are currently visible on the board, which can greatly improve performance.
+This property is used when working with a big number of cards. If set it to *"lazy"*, the widget will render only the visual part of cards you can view on the board. It can significantly enhance the widget performance.
 :::
 
 ### Usage
@@ -21,7 +21,7 @@ renderType?: "default" | "lazy";
 ~~~  
 
 :::important
-When using `renderType: "lazy"` together with [`scrollType: "default"`](/api/config/js_kanban_scrolltype_config), make sure to set a fixed height for cards using the [`cardHeight`](/api/config/js_kanban_cardheight_config) property. Without this, cards may not display properly.
+If you combine the `renderType: "lazy"` and [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md) settings, don't forget to specify a static height for cards via the [`cardHeight`](api/config/js_kanban_cardheight_config.md) property. Unless you specify it, the cards will not be displayed correctly.
 :::
 
 ### Default config
@@ -42,8 +42,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** This property was introduced in v1.2
+**Change log:** The property was added in v1.2
 
-**Related articles:** [Configuration](/guides/configuration/#cards)
+**Related articles:** [Configuration](../../../guides/configuration#cards)
 
 **Related sample:** [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

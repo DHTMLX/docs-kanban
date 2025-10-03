@@ -1,24 +1,24 @@
 ---
 sidebar_label: GET /columns
 title: GET /columns
-description: This section covers the GET /columns REST route in the DHTMLX JavaScript Kanban library documentation. It includes developer guides, API references, code examples, live demos, and offers a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the GET /columns REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # GET `/columns`
 
 ### Description
 
-@short: Retrieves information about all columns and returns a JSON object containing an array of column data.
+@short: Gets data on all columns and returns a json object with an array of objects with columns data
 
-This route processes **HTTP GET** requests sent to the `/columns` endpoint.
+The route handles the **HTTP GET** request made to the `/columns` path.
 
 ### Payload
 
-No payload needs to be sent.
+No payload is required.
 
 ### Response
 
-The response includes a JSON object with an array of column data objects.
+The route returns a json object with an array of objects with columns data.
 
 Example:
 
@@ -47,12 +47,12 @@ Example:
 ]
 ~~~
 
-A different example of the returned object can be found in [**columns**](/api/config/js_kanban_columns_config).
+For another example of the returned object, go to [**columns**](api/config/js_kanban_columns_config.md).
 
-The HTTP status code indicates if the request was successful (response.status == 200) or if it failed (response.status == 500).
+The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
 ---
 
 **Related articles**:
-- [Working with server](/guides/working_with_server)
-- [getColumns()](/api/provider/rest_methods/js_kanban_getcolumns_method)
+- [Working with server](guides/working_with_server.md)
+- [getColumns()](api/provider/rest_methods/js_kanban_getcolumns_method.md)

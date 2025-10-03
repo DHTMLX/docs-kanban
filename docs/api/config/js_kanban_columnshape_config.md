@@ -1,18 +1,18 @@
 ---
 sidebar_label: columnShape
 title: columnShape Config
-description: Discover the columnShape config in the DHTMLX JavaScript Kanban library docs. Explore developer guides and API references, test code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the columnShape config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # columnShape
 
 ### Description
 
-@short: Optional. Settings object to customize the look of columns
+@short: Optional. An object of settings for managing the columns appearance
 
 ### Usage
 
-```jsx {}
+~~~jsx {}
 columnShape?: {
     menu?: {
         show?: boolean,
@@ -22,10 +22,11 @@ columnShape?: {
                 icon?: string,
                 text?: string,
                 disabled?: boolean,
-                onClick?: ({ id, item, column }) => void
-            },
+                onClick?: ({ id, item, column }) => void,
+                data?: array // an array of menu subitems
+            }, 
             {...}
-        ] | ({ column, columnIndex, columns, store }) => array | boolean
+        ] | ({ column, columnIndex, columns, readonly }) => array | null
     },
     fixedHeaders?: boolean,
     css?: (column, cards) => string,
@@ -37,172 +38,179 @@ columnShape?: {
     }),
     confirmDeletion?: boolean
 };
-```
+~~~
 
 ### Parameters
 
-To style the columns, the **columnShape** object supports these options:
+To configure the columns appearance, in the **columnShape** object you can specify the following parameters:
 
-- `menu` - (optional) settings for the column context menu. This includes:
-  - `show` - (optional) toggles the column context menu on or off
-  - `items` - (optional) an array defining menu items. Each item can have:
-    - `id` - (optional) menu item ID. Use these values for built-in actions:
-  - **_"add-card"_** - adds a new card
-  - **_"set-edit"_** - edits the column name
-  - **_"move-column:left"_** - moves the column left
-  - **_"move-column:right"_** - moves the column right
-  - **_"delete-column"_** - deletes the column - `icon` - (optional) icon class for the menu item, e.g., _mdi-delete_ - `text` - (optional) label for the menu item - `disabled` - (optional) sets if the menu item is active or disabled - `onClick` - (optional) callback with these arguments:
-  - **_id_** - current menu item ID
-  - **_item_** - current menu item data object
-  - **_column_** - target column data object
+- `menu` - (optional) an object of parameters of the columns context menu. Here you can specify the following parameters:
+    - `show` - (optional) - enables/disables a column context menu
+    - `items` - (optional) an array of objects containing parameters of items of the columns context menu. For each item you can specify the following parameters:
+        - `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
+            - ***"add-card"*** - defines the action to add a new card
+            - ***"set-edit"*** - defines the action to edit a column name
+            - ***"move-column:left"*** - defines the action to move a column left
+            - ***"move-column:right"*** - defines the action to move a column right
+            - ***"delete-column"*** - defines the action to delete a column
 
-:::info
-You can also set `items` to a function receiving:
+        - `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+        - `text` - (optional) a name of the menu item
+        - `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
+        - `onClick` - (optional) a custom callback function, that takes the following arguments:
+            - ***id*** - an ID of the current menu item
+            - ***item*** - a data object of the current menu item
+            - ***column*** - a data object of the target column
 
-- **_column_** - current column data
-- **_columnIndex_** - index of the current column
-- **_columns_** - array of all columns data
-- **_store_** - _dataStore_ object
+        - `data` - (optional) an array of objects that represent menu subitems
 
-This enables custom menus per column or hiding menus for certain columns by returning _null_ or _false_:
+    :::info
+    You can also set the `menu.items` parameter to a custom function, that takes the following arguments:
+    - ***column*** - a data object of a current column
+    - ***columnIndex*** - an index of a current column
+    - ***columns*** - an array of objects containing all columns data
+    - ***readonly*** - an object of readonly [state properties](api/internal/js_kanban_getstate_method.md)
 
-```jsx {}
-items: ({ column, columnIndex, columns, store }) => {
-  if (column.id === "inprogress") return null;
+    This function allows customizing menu for any column or hide it for a specific one (by returning *null* or *false*):
 
-  if (column.id === "backlog")
-    return [
-      { id: "set-edit", icon: "wxi-edit", text: "Rename" },
-      {
-        id: "delete-card",
-        icon: "wxi-delete",
-        text: "Remove card",
-      },
-    ];
-};
-```
+    ~~~jsx {}
+    items: ({ column }) => {
+        if(column.id === "inprogress"){
+            return null;
+        } 
+        if (column.id === "backlog"){
+            return [
+                { id: "set-edit", icon: "wxi-edit", text: "Rename" },
+                {
+                    id: "delete-card",
+                    icon: "wxi-delete",
+                    text: "Remove card"
+                }
+            ];
+        }       
+    }
+    ~~~
+    :::
 
-:::
-
-- `fixedHeaders` - (optional) keeps column headers visible during vertical scrolling (_true_ by default). Note: scrolling must be enabled in Kanban (height limited).
-- `css` - (optional) function returning a CSS class for conditional column styling
-- `headerTemplate` - (optional) HTML template for column headers when expanded
-- `collapsedTemplate` - (optional) HTML template for column headers when collapsed
-- `confirmDeletion` - (optional) toggles the confirmation dialog for deleting a column
+- `fixedHeaders` - (optional) freezes column headers during vertical scroll (*true* by default). Scroll must be enabled in Kanban itself (height must be limited)
+- `css` - (optional) a function that returns a css class that applies to columns conditionally
+- `headerTemplate` - (optional) the HTML template of the column header in the expanded state
+- `collapsedTemplate` - (optional) the HTML template of the column header in the collapsed state
+- `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the column deletion
 
 ### Default config
 
-```jsx {}
-const getDefaultColumnMenuItems = ({ column, columnIndex, columns, store }) => [
-  { id: "add-card", icon: "wxi-plus", text: "Add new card" },
-  { id: "set-edit", icon: "wxi-edit", text: "Rename" },
-  {
-    id: "move-column:left",
-    icon: "wxi-arrow-left",
-    text: "Move left",
-    disabled: columnIndex <= 0,
-  },
-  {
-    id: "move-column:right",
-    icon: "wxi-arrow-right",
-    text: "Move right",
-    disabled: columnIndex >= columns.length - 1,
-  },
-  { id: "delete-column", icon: "wxi-delete", text: "Delete" },
+~~~jsx {}
+const getDefaultColumnMenuItems = ({ column, columnIndex, columns, readonly }) => [
+    { id: "add-card", icon: "wxi-plus", text: "Add new card" },
+    { id: "set-edit", icon: "wxi-edit", text: "Rename" },
+    {
+        id: "move-column:left",
+        icon: "wxi-arrow-left",
+        text: "Move left",
+        disabled: columnIndex <= 0
+    },
+    {
+        id: "move-column:right",
+        icon: "wxi-arrow-right",
+        text: "Move right",
+        disabled: columnIndex >= columns.length - 1
+    },
+    { id: "delete-column", icon: "wxi-delete", text: "Delete" }
 ];
 const columnShape = {
-  menu: {
-    show: true,
-    items: getDefaultColumnMenuItems,
-  },
-  fixedHeaders: true,
-  confirmDeletion: true,
+    menu: {
+        show: true,
+        items: getDefaultColumnMenuItems
+    },
+    fixedHeaders: true,
+    confirmDeletion: true
 };
-```
+~~~
 
 ### Example
 
-```jsx {1-58,64}
+~~~jsx {1-58,64}
 const columnShape = {
-  menu: {
-    show: true,
-    items: [
-      {
-        id: "color",
-        text: "Color",
+    menu: {
+        show: true,
         items: [
-          {
-            id: "yellow",
-            text: "Yellow",
-            onClick: ({ column }) => changeColumnColor(column, "yellow"),
-          },
-          {
-            id: "red",
-            text: "Red",
-            onClick: ({ column }) => changeColumnColor(column, "red"),
-          },
-          {
-            id: "green",
-            text: "Green",
-            onClick: ({ column }) => changeColumnColor(column, "green"),
-          },
-        ],
-      },
-    ],
-  },
-  fixedHeaders: false,
-  css: (column, cards) =>
-    column.id == "inprogress" && cards.length < 5 ? "green" : "red",
-  headerTemplate: template((column) => {
-    return `<div class="wx-collapse-icon" data-action=${"collapse"}>
+            {
+                id: "color",
+                text: "Color",
+                data: [
+                    { 
+                        id:"yellow", 
+                        text: "Yellow",
+                        onClick: ({ column }) => changeColumnColor(column, "yellow")
+                    },
+                    { 
+                        id:"red", 
+                        text: "Red",
+                        onClick: ({ column }) => changeColumnColor(column, "red")
+                    },
+                    { 
+                        id:"green", 
+                        text: "Green",
+                        onClick: ({ column }) => changeColumnColor(column, "green")
+                    }
+                ]
+            }
+        ]
+    },
+    fixedHeaders: false,
+    css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red",
+    headerTemplate: template(column => {
+        return `<div class="wx-collapse-icon" data-action=${"collapse"}>
                     <i class=${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
                 </div>
                 ${
-                  !column.column.collapsed
-                    ? `<div class="wx-label" data-action="rename">
+                    !column.column.collapsed
+                        ?   `<div class="wx-label" data-action="rename">
                                 ${escapeHTML(column.column.label)}
                                 (${column.columnState.cardsCount})
                             </div>`
-                    : ""
+                        : ""
                 }
                 ${
-                  !column.column.collapsed
-                    ? `<div class="wx-menu" data-menu-id=${column.id}>
+                    !column.column.collapsed
+                        ?   `<div class="wx-menu" data-menu-id=${column.id}>
                                 <i class="wxi-dots-h"></i>
                             </div>`
-                    : ""
+                        : ""
                 }`;
-  }),
-  collapsedTemplate: template((column) => {
-    return `<div class="wx-collapsed-label">
+    }),
+    collapsedTemplate: template(column => {
+        return `<div class="wx-collapsed-label">
                     <div class="wx-label-text">${escapeHTML(column.column.label)} (${
-                      column.columnState?.cardsCount
+                        column.columnState?.cardsCount
                     })</div>
                 </div>`;
-  }),
-  confirmDeletion: true,
+    }),
+    confirmDeletion: true
 };
 
 new kanban.Kanban("#root", {
-  cards,
-  columns,
-  rows,
-  columnShape,
-  // other parameters
+    cards,
+    columns,
+    rows,
+    columnShape, 
+    // other parameters
 });
-```
+~~~
 
 **Change log:**
+- The ***css*** parameter was added in v1.4
+- The ***menu.items[0].label*** parameter was deprecated and replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].items*** parameter was deprecated and replaced by the ***menu.items[0].data*** parameter in v1.4
+- The ***fixedHeaders*** parameter was added in v1.5
+- The ***headerTemplate*** and ***collapsedTemplate*** parameters were added in v1.6
+- The ***menu.items[0].label*** and ***menu.items[0].items*** parameters were removed in v1.7
+- The ***menu.items*** function was updated. The **store** parameter was replaced with the **readonly** one in v1.7
 
-- The **_css_** option was added in v1.4
-- The **_menu.items[0].label_** was renamed to **_menu.items[0].text_** in v1.4
-- The **_fixedHeaders_** option was added in v1.5
-- The **_headerTemplate_** and **_collapsedTemplate_** options were added in v1.6
-
-**Related articles:** [Configuration](/guides/configuration)
+**Related articles:** [Configuration](../../../guides/configuration)
 
 **Related samples:**
-
 - [Kanban. Changing color of column via custom menu](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
 - [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
 - [Kanban. Template for column headers](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban)

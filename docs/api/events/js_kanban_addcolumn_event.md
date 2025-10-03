@@ -1,14 +1,14 @@
 ---
 sidebar_label: add-column
 title: add-column Event
-description: Explore the add-column event in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API reference, try demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the add-column event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # add-column
 
 ### Description
 
-@short: Triggered when a new column is added
+@short: Fires when adding a new column
 
 ### Usage
 
@@ -23,15 +23,15 @@ description: Explore the add-column event in the DHTMLX JavaScript Kanban librar
 
 ### Parameters
 
-The callback for the **add-column** event receives an object with these optional properties:
+The callback of the **add-column** event can take an object with the following parameters:
 
-- `id` - the ID assigned to the new column
-- `column` - the data object representing the new column. You can find the complete list of **column** parameters [**here**](/api/config/js_kanban_columns_config)
-- `before` - the ID of the column before which the new column will be inserted
-- `skipProvider` - controls whether the request to the server is prevented or not
+- `id` - (optional) the ID of the new column
+- `column` - (optional) the data object of the new column. The full list of the **column** parameters can be found [**here**](api/config/js_kanban_columns_config.md)
+- `before` - (optional) the ID of the column, before which the new column will be placed
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-To work with internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -42,10 +42,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// listen for the "add-column" event
+// subscribe on the "add-column" event
 board.api.on("add-column", (obj) => {
     console.log(obj.label);
 });
 ~~~
 
-**Change log**: The **id**, **before**, and **column** parameters were introduced in v1.1
+**Change log**: The **id**, **before** and **column** parameters were added in v1.1

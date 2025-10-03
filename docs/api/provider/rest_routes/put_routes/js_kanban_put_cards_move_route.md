@@ -10,31 +10,31 @@ description: You can learn about the PUT /cards/{id}/move REST route in the docu
 
 @short: Moves cards to a specified position
 
-This route deals with the **HTTP PUT** request sent to the `cards/{id}/move` endpoint.
+The route handles the **HTTP PUT** request made to the `cards/{id}/move` path.
 
 ### Path parameters
 
-The following parameter should be included in the request URL:
+The next parameter is sent in the request line:
 
-| Name | Type | Description |
+| Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number   | *Required*. The ID of the card to be moved. For moving multiple cards, set the id to 0.|
+| `id`       |  number   | *Required*. The ID of the card to be moved. In case multiple cards are requested to be moved, the id should be set to 0|
 
 :::info
-If moving multiple cards, the `id` must be set to 0; otherwise, if any other value is used, only the card with that specific id will be moved.
+When you move multiple cards, make sure that the `id` is set to 0, otherwise (if set to another value), only one card (with this specified id value) will be moved.
 :::
 
 ### Payload
 
-The server expects a JSON object with these properties:
+The server expects to receive a json object with the next properties:
 
-| Name | Type | Description |
+| Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
-| `id`        | number      |*Required*. The ID of the card being moved. |
-| `columnId`  |  number     | *Required*. The ID of the column where the card is placed.|
-| `rowId`     |  number     | *Required*. The ID of the row where the card is placed.|
-| `before`    |  number     | *Optional*. The ID of the card that the moved card should be positioned before.|
-| `batch`     |  object     | *Required for multiselect*. An array of card objects being moved.|
+| `id`        | number      |*Required*. The ID of the moved card. |
+| `columnId`  |  number     | *Required*. The ID of the column where the card is moved to.|
+| `rowId`     |  number     | *Required*. The ID of the row where the card is moved to.|
+| `before`    |  number     | *Optional*. The ID of the card before which the moved card should be placed.|
+| `batch`     |  object     | *Required for multiselect*. An array of cards objects that are moved.|
 
 Example:
 
@@ -47,7 +47,7 @@ Example:
 }
 ~~~
 
-When moving multiple cards, the `batch` property should include an array of all the card objects being moved:
+In case multiple cards are moved, the `batch` property should contain an array of all cards objects that are moved:
 
 ~~~json
 {
@@ -70,7 +70,7 @@ When moving multiple cards, the `batch` property should include an array of all 
 
 ### Response
 
-The server responds with a JSON object containing the card ID (for single card moves) or with the ID set to 0 when multiple cards are moved.
+The server returns a json object with a card ID (if one card is moved) or with the ID set to 0 for the operation on multiple cards.
 
 Example:
 
@@ -86,8 +86,8 @@ Example:
 }
 ~~~
 
-The HTTP status code indicates the success of the request (response.status == 200) or an error (response.status == 500).
+The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server)
+**Related articles**: [Working with server](guides/working_with_server.md)

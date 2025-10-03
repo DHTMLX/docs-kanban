@@ -1,14 +1,14 @@
 ---
 sidebar_label: theme
 title: theme Config
-description: Explore the (Toolbar) theme config within the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code samples and live demos, and download a free 30-day trial version of DHTMLX Kanban.
+description: You can learn about the (Toolbar) theme config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # theme
 
 ### Description
 
-@short: Optional. Specifies the theme applied to the Toolbar.
+@short: Optional. A theme to be applied to Toolbar
 
 ### Usage
 
@@ -17,7 +17,7 @@ theme?: string; // "material" | "willow" | "willow-dark"
 ~~~
 
 :::important
-In addition to setting the `theme` property, you can apply the desired theme by adding the corresponding *css* classes to the widget containers:
+Besides using the `theme` property, you can also apply the needed theme via adding the corresponding *css* classes to the widget containers:
 
 - **Material theme**
 ~~~html {}
@@ -43,7 +43,7 @@ In addition to setting the `theme` property, you can apply the desired theme by 
     <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
-Alternatively, simply include the desired theme stylesheet from the skins folder:
+or just include the needed theme on the page from the skins folder:
 
 ~~~html {}
 <link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
@@ -52,10 +52,10 @@ Alternatively, simply include the desired theme stylesheet from the skins folder
 
 ### Default config
 
-The Toolbar defaults to the **Material** theme. You can also switch to the **Willow** or **Willow-Dark** themes.
+By default, Toolbar uses the **Material** theme. You can set it to the **Willow** and **Willow-Dark** themes as well.
 
 :::tip
-To update the theme on the fly, use the [**setConfig()**](/api/methods/toolbar_setconfig_method) method.
+To change the current theme dynamically, you can use the [**setConfig()**](../../methods/toolbar_setconfig_method) method.
 :::
 
 ### Example
@@ -65,18 +65,18 @@ To update the theme on the fly, use the [**setConfig()**](/api/methods/toolbar_s
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    theme: "willow-dark" // sets the initial theme to "willow-dark"
+    theme: "willow-dark" // the "willow-dark" theme will be set initially
     // other parameters
 });
 // create Toolbar
 new Toolbar("#toolbar", {
     api: board.api,
-    theme: "willow-dark", // sets the initial theme to "willow-dark"
+    theme: "willow-dark", // the "willow-dark" theme will be set initially
 });
 ~~~
 
-**Change log:** This property was introduced in v1.4
+**Change log:** The property was added in v1.4
 
-**Related articles:** [Stylization](/guides/stylization)
+**Related articles:** [Stylization](../../../guides/stylization)
 
 **Related sample:** [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

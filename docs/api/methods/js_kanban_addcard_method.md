@@ -8,7 +8,7 @@ description: You can learn about the addCard method in the documentation of the 
 
 ### Description
 
-@short: Inserts a new card into the Kanban board
+@short: Adds a new card into Kanban
 
 ### Usage
 
@@ -25,15 +25,15 @@ addCard({
 
 ### Parameters
 
-- `columnId` - (required) the ID of the column where the card will be added  
-- `id` - (optional) the identifier for the new card  
-- `rowId` - (optional) the ID of the row where the card should be placed  
-- `before` - (optional) the ID of the card before which the new card will be inserted  
-- `select` - (optional) determines whether the new card will be selected upon addition  
-- `card` - (optional) the data object representing the new card  
+- `columnId` - (required) the ID of the target column 
+- `id` -  (optional) the ID of the new card
+- `rowId` - (optional) the ID of the target row
+- `before` - (optional) the ID of the card, before which the new card will be placed  
+- `select` - (optional) enables/disables selecting new added card
+- `card` - (optional) the data object of the new card
 
 :::info
-A complete list of **card** parameters is available [**here**](/api/config/js_kanban_cards_config)
+The full list of the **card** parameters can be found [**here**](api/config/js_kanban_cards_config.md)
 :::
 
 ### Example
@@ -53,5 +53,5 @@ board.addCard({
 ~~~
 
 :::tip
-It's also possible to include the card ID inside the **card** object
+You can also specify the ID of the new card in the **card** object
 :::

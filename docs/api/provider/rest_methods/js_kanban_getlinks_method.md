@@ -8,10 +8,10 @@ description: You can learn about the getLinks REST method in the documentation o
 
 ### Description
 
-@short: Retrieves a promise containing the links data
+@short: Gets a promise with the links data
 
 :::info
-The **getLinks()** method belongs to the **RestDataProvider** service, designed for server interactions.
+The **getLinks()** method is a part of the **RestDataProvider** service intended for working with server
 :::
 
 ### Usage
@@ -22,7 +22,7 @@ getLinks(): promise;
 
 ### Returns
 
-The **getLinks()** method makes a **GET** request to the server and returns a **promise** that resolves with the links data.
+The **getLinks()** method sends a request to the server by the **GET** method and returns a **promise** with the links data.
 
 ### Example
 
@@ -44,6 +44,6 @@ Promise.all([
 });
 ~~~
 
-**Change log:** This method was introduced in version 1.5
+**Change log:** The method was added in v1.5
 
-**Related articles:** [Working with server](/guides/working_with_server)
+**Related articles:** [Working with server](../../../../guides/working_with_server)

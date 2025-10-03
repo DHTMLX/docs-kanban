@@ -8,7 +8,7 @@ description: You can learn about the getSelection method in the documentation of
 
 ### Description
 
-@short: Retrieves an array containing the ID(s) of the selected card(s)
+@short: Gets an array with ID(s) of the selected card(s)
 
 ### Usage
 
@@ -18,7 +18,7 @@ getSelection(): array;
 
 ### Returns
 
-This method returns an array with the ID(s) of the card(s) that are currently selected.
+The method returns an array with ID(s) of the selected card(s)
 
 ### Example
 
@@ -28,6 +28,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// retrieves an array with the IDs of the selected cards
+// gets an array with IDs of the selected cards
 board.getSelection();
 ~~~

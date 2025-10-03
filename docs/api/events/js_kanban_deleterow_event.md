@@ -1,14 +1,14 @@
 ---
 sidebar_label: delete-row
 title: delete-row Event
-description: Discover how the delete-row event works in the DHTMLX JavaScript Kanban library. Explore developer guides, check out the API reference, test code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the delete-row event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # delete-row
 
 ### Description
 
-@short: Triggered when a row is removed
+@short: Fires when removing a row
 
 ### Usage
 
@@ -21,13 +21,13 @@ description: Discover how the delete-row event works in the DHTMLX JavaScript Ka
 
 ### Parameters
 
-The callback for the **delete-row** event accepts an object containing the following parameters:
+The callback of the **delete-row** event can take an object with the following parameter:
 
-- `id` - (required) the ID of the row that is being deleted
-- `skipProvider` - (optional) controls whether the request is sent to the server or not
+- `id` - (required) the ID of the row to be deleted
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-To work with internal events, you can refer to the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -38,7 +38,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// listen for the "delete-row" event
+// subscribe on the "delete-row" event
 board.api.on("delete-row", (obj) => {
     console.log(obj.id);
 });

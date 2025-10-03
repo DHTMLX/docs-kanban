@@ -1,14 +1,14 @@
 ---
 sidebar_label: cardTemplate
 title: cardTemplate Config
-description: Learn all about the cardTemplate config in the DHTMLX JavaScript Kanban library docs. Explore developer guides and API references, experiment with code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the cardTemplate config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # cardTemplate
 
 ### Description
 
-@short: Optional. Generates and applies a custom HTML template for the card.
+@short: Optional. Returns and applies a new HTML template of the card
 
 ### Usage
 
@@ -20,15 +20,15 @@ function cardTemplate ({ cardFields, selected, dragging, cardShape }){
 
 ### Parameters
 
-The callback function receives an object with these properties:
+The callback function takes an object with the following parameters:
 
-- `cardFields` - contains the card's data
-- `selected` - indicates if the card is selected
-- `dragging` - indicates if the card is being dragged
-- `cardShape` - the card's configuration object
+- `cardFields` - the data object of the card
+- `selected` - the selecting state of the card
+- `dragging` - the dragging state of the card
+- `cardShape` - the configuration object of the card
 
 :::important
-To add a context menu to the card template, include a custom icon in the markup and use the `data-menu-id=${cardFields.id}` attribute as shown in the example below.
+If you need to include a context menu into the card template, specify a custom icon in the template markup and provide the `data-menu-id=${cardFields.id}` expression as shown in the example below.
 :::
 
 ### Example
@@ -66,8 +66,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** Context menu support was introduced in v1.4
+**Change log:** The ability to display context menu was added in v1.4
 
-**Related articles:** [Customization](/guides/customization/#custom-cards)
+**Related articles:** [Customization](../../../guides/customization#custom-cards)
 
 **Related sample:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban)

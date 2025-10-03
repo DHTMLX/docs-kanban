@@ -8,7 +8,7 @@ description: You can learn about the json method in the documentation of the DHT
 
 ### Description
 
-@short: Saves the Kanban data as a JSON file
+@short: Exports Kanban data into a JSON file
 
 ### Usage
 
@@ -17,7 +17,7 @@ export.json(): void;
 ~~~
 
 :::info
-This method saves the Kanban board data into a JSON file with the following format:
+The method exports data of Kanban to a JSON file with the following structure:
 ~~~jsx {}
 {
     "cards": [],

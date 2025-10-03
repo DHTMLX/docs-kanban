@@ -8,7 +8,7 @@ description: You can learn about the add-link event in the documentation of the 
 
 ### Description
 
-@short: Triggered when a new link is added
+@short: Fires when adding a new link
 
 ### Usage
 
@@ -22,14 +22,14 @@ description: You can learn about the add-link event in the documentation of the 
 
 ### Parameters
 
-The callback for the **add-link** event receives an object with these properties:
+The callback of the **add-link** event can take an object with the following parameters:
 
-- `id` - (optional) the ID assigned to the new link
-- `link` - (required) the data object representing the new link. You can find the full list of link parameters [here](/api/config/js_kanban_links_config)
-- `skipProvider` - (optional) controls whether the request to the server is prevented or not
+- `id` - (optional) the ID of the new link
+- `link` - (required) the data object of the new link. The full list of the link parameters can be found [here](api/config/js_kanban_links_config.md)
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-To manage internal events, you can make use of the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -47,4 +47,4 @@ board.api.on("add-link", (obj) => {
 });
 ~~~
 
-**Change log:** This event was introduced in v1.4
+**Change log:** The event was added in v1.4

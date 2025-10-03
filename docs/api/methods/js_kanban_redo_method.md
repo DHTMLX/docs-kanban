@@ -8,10 +8,10 @@ description: You can learn about the redo method in the documentation of the DHT
 
 ### Description
 
-@short: Re-executes the action that was undone by the undo method
+@short: Repeats the action that was reverted by the undo action
 
 :::info
-The `redo()` method is only functional when [`history: true`](/api/config/js_kanban_history_config) is set in the configuration!
+The `redo()` method works with the [`history: true`](api/config/js_kanban_history_config.md) config only!
 :::
 
 ### Usage
@@ -28,8 +28,8 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// redoes the last undone action in Kanban's history
+// makes one step back in history of Kanban
 board.redo();
 ~~~
 
-**Change log:** This method was introduced in v1.3
+**Change log:** The method was added in v1.3

@@ -8,7 +8,7 @@ description: You can learn about the deleteComment method in the documentation o
 
 ### Description
 
-@short: Remove a comment from a card using its ID
+@short: Delete a card comment by its ID
 
 ### Usage
 

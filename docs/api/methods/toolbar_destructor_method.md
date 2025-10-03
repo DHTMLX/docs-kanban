@@ -8,7 +8,7 @@ description: You can learn about the destructor method of Toolbar in the documen
 
 ### Description
 
-@short: Cleans up by removing all Toolbar HTML elements and detaching any associated events.
+@short: Removes all HTML elements of Toolbar, and detaches all related events
 
 ### Usage
 

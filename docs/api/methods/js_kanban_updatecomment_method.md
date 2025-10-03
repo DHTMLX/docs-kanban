@@ -8,7 +8,7 @@ description: You can learn about the updateComment method in the documentation o
 
 ### Description
 
-@short: Modify a card comment by specifying its ID
+@short: Update a card comment by its ID
 
 ### Usage
 
@@ -28,14 +28,14 @@ updateComment({
 
 ### Parameters
 
-- `id` -  (optional) the identifier of the comment to be modified
-- `cardId` - (required) the identifier of the card containing the comment to update
-- `comment` - (required) an object describing the updated comment details. It can include:
-    - `id` -  (optional) the identifier of the comment being updated
-    - `cardId` - (optional) the identifier of the card where the updated comment will be placed
-    - `text` - (optional) the new text content of the comment
-    - `date` - (optional) the new date associated with the comment
-    - `html` - (optional) the new HTML content for the comment. To display HTML instead of plain text, enable the `html` property in the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) configuration
+- `id` -  (optional) the ID of the comment to be updated
+- `cardId` - (required) the ID of the card which comment to be updated
+- `comment` - (required) the configuration object of the comment to be updated. Here you can specify the following parameters:
+    - `id` -  (optional) the ID of the updated comment
+    - `cardId` - (optional) the ID of the card, to which the updated comment to be added
+    - `text` - (optional) the text of the updated comment
+    - `date` - (optional) the date of the updated comment
+    - `html` - (optional) the HTML markup of the updated comment. Enable the `html` property of the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config, to display the HTML markup instead of text
 
 ### Example
 
@@ -59,4 +59,4 @@ board.updateComment({
 });
 ~~~
 
-**Change log:** This method was introduced in version 1.4
+**Change log:** The method was added in v1.4

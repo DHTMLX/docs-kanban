@@ -8,7 +8,7 @@ description: You can learn about the start-drag-card event in the documentation 
 
 ### Description
 
-@short: Triggered when a card begins to be dragged
+@short: Fires when start dragging a card
 
 ### Usage
 
@@ -24,16 +24,16 @@ description: You can learn about the start-drag-card event in the documentation 
 
 ### Parameters
 
-The callback for the **start-drag-card** event receives an object with the following properties:
+The callback of the **start-drag-card** event can take an object with the following parameters:
 
-- `id` - (required) the ID of the card being dragged
-- `columnId` - (required) the ID of the column where the card is currently located
-- `rowId` - (optional) the ID of the row where the card is currently positioned
-- `before` - (optional) the ID of the card that follows the dragged card in the column
-- `source` - (optional) an array containing the IDs of the cards being moved
+- `id` - (required) the ID of the dragged card
+- `columnId` - (required) the ID of the column where the card currently is
+- `rowId` - (optional)  the ID of the row where the card currently is
+- `before` - (optional) the ID of a card that is currently after the dragged card in the column
+- `source` - (optional) the array of moved cards' IDs
 
 :::info
-To work with internal events, the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods) can be used.
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -50,6 +50,6 @@ board.api.on("start-drag-card", (obj) => {
 });
 ~~~
 
-**Change log:** This event was introduced in version 1.4
+**Change log:** The event was added in v1.4
 
 **Related sample:** [Kanban. Disabling drag and drop to specific columns](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

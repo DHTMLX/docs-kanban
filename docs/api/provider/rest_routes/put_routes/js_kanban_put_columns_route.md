@@ -8,26 +8,26 @@ description: You can learn about the PUT /columns REST route in the documentatio
 
 ### Description
 
-@short: Updates the details of a specific column and returns an empty JSON object.
+@short: Updates data on a specified column and returns an empty json object
 
-This route processes an **HTTP PUT** request sent to the `/columns/{id}` endpoint.
+The route handles the **HTTP PUT** request made to the `/columns/{id}` path.
 
 ### Path parameters
 
-The following parameter is included in the request URL:
+The next parameter is sent in the request line:
 
-| Name | Type | Description |
+| Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the column that needs to be updated.|
+| `id`       |  number     | *Required*. The ID of the column to be updated.|
 
 ### Payload
 
-The server expects a JSON object containing all properties of the column, including those that remain unchanged and those that are new or modified.
+The server needs to receive a json object with all column properties (both unchanged and new/modified). 
 
-| Name | Type | Description |
+| Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `label`    |  string     | *Required*. The updated name of the column.|
-| `collapsed`|  boolean    | *Optional*. Indicates if the column is initially collapsed (**true**) or expanded (**false**, default).|
+| `label`    |  string     | *Required*. The name of the column to be updated.|
+| `collapsed`|  boolean    | *Optional*. The state of the column: **true** if the column is collapsed initially and **false** for the expanded state (default).|
 
 Example:
 
@@ -40,14 +40,14 @@ Example:
 }
 ~~~
 
-Another example of the column object can be found in the [**columns**](/api/config/js_kanban_columns_config) section.
+You can find another example of the column object in the [**columns**](api/config/js_kanban_columns_config.md) section.
 
 ### Response
 
-When the request is successful, an empty JSON object is returned.
-
-The HTTP status code indicates the result: success with status 200, or failure with status 500.
+In case of the success status, an empty json object is returned back.
+  
+The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server)
+**Related articles**: [Working with server](guides/working_with_server.md)

@@ -10,7 +10,7 @@ description: You can learn about the integration with Angular in the documentati
 You should be familiar with basic concepts and patterns of **Angular** before reading this documentation. To refresh your knowledge, please refer to the [**Angular documentation**](https://v17.angular.io/docs).
 :::
 
-DHTMLX Kanban works smoothly with **Angular**. There are code examples available that show how to use DHTMLX Kanban together with **Angular**. More details can be found in this [**Example on GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
+DHTMLX Kanban is compatible with **Angular**. We have prepared code examples on how to use DHTMLX Kanban with **Angular**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
 
 ## Creating a project
 
@@ -18,68 +18,68 @@ DHTMLX Kanban works smoothly with **Angular**. There are code examples available
 Before you start to create a new project, install [**Angular CLI**](https://v17.angular.io/cli) and [**Node.js**](https://nodejs.org/en/).
 :::
 
-To set up a new project called **my-angular-kanban-app** with Angular CLI, just run:
+Create a new **my-angular-kanban-app** project using Angular CLI. Run the following command for this purpose:
 
 ~~~json
 ng new my-angular-kanban-app
 ~~~
 
 :::note
-If you're following this guide, remember to turn off Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering) when creating your Angular app!
+If you want to follow this guide, disable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering) when creating new Angular app!
 :::
 
-This command will set up everything you need, so no extra commands are required.
+The command above installs all the necessary tools, so you don't need to run any additional commands.
 
 ### Installation of dependencies
 
-Head over to your new app's directory:
+Go to the new created app directory:
 
 ~~~json
 cd my-angular-kanban-app
 ~~~
 
-Next, install dependencies and launch the development server. Here's how, using [**yarn**](https://yarnpkg.com/):
+Install dependencies and start the dev server. For this, use the [**yarn**](https://yarnpkg.com/) package manager:
 
 ~~~json
 yarn
 yarn start
 ~~~
 
-Your app should be running locally (for example, at `http://localhost:3000`).
+The app should run on a localhost (for instance `http://localhost:3000`).
 
 ## Creating Kanban
 
-At this point, you'll want to get the DHTMLX Kanban source code. First, stop your app and install the Kanban package.
+Now you should get the DHTMLX Kanban source code. First of all, stop the app and proceed with installing the Kanban package.
 
 ### Step 1. Package installation
 
-Grab the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) and follow the steps in the README. Keep in mind the trial version is good for 30 days.
-
+Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Kanban is available 30 days only.
+  
 ### Step 2. Component creation
 
-Next, create an Angular component to add Kanban with a Toolbar to your app. Make a **kanban** folder in **src/app/**, then add a new file named **kanban.component.ts**.
+Now you need to create an Angular component, to add Kanban with Toolbar into the application. Create  the **kanban** folder in the **src/app/** directory, add a new file into it and name it **kanban.component.ts**. 
 
 #### Import source files
 
-Open **kanban.component.ts** and import the Kanban source files. Here's what the import paths look like:
+Open the **kanban.component.ts** file and import Kanban source files. Note that:
 
-- For the PRO version installed from a local folder:
+- if you use PRO version and install the Kanban package from a local folder, the imported path looks like this:
 
 ~~~jsx
 import { Kanban, Toolbar } from 'dhx-kanban-package';
 ~~~
 
-- For the trial version:
+- if you use the trial version of Kanban, specify the following path:
 
 ~~~jsx
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
 ~~~
 
-The examples here use the **trial** version.
+In this tutorial you can see how to configure the **trial** version of Kanban.
 
 #### Set containers and initialize the Kanban with Toolbar
 
-To show Kanban with a Toolbar, set up containers for both and initialize the components using their constructors:
+To display Kanban with Toolbar on the page, you need to set containers for Kanban and Toolbar, and initialize these components using the corresponding constructors:
 
 ~~~jsx {1,8-11,15-18,24-31} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -124,7 +124,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 
 #### Adding styles
 
-To make sure Kanban displays properly, add the necessary styles. You can do this by creating a **kanban.component.css** file in **src/app/kanban/** and including these styles:
+To display Kanban correctly, you need to provide the corresponding styles. For this purpose, you can create the **kanban.component.css** file in the **src/app/kanban/** directory and specify important styles for Kanban and its container:
 
 ~~~css title="kanban.component.css"
 /* import Kanban styles */
@@ -152,7 +152,7 @@ body{
 
 #### Loading data
 
-To get data into Kanban, put together a data set. You can create a **data.ts** file in **src/app/kanban/** and add your data there:
+To add data into Kanban, you need to provide a data set. You can create the **data.ts** file in the **src/app/kanban/** directory and add some data into it:
 
 ~~~jsx {2,14,37,48} title="data.ts"
 export function getData() {
@@ -206,7 +206,7 @@ export function getData() {
 }
 ~~~
 
-Now, open ***kanban.component.ts***. Import your data file and plug the data properties into the Kanban config inside the `ngOnInit()` method like so:
+Then open the ***kanban.component.ts*** file. Import the file with data and specify the corresponding data properties to the configuration object of Kanban within the `ngOnInit()` method, as shown below:
 
 ~~~jsx {2,23,25-27} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-Another way to load data into Kanban is by using the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `ngOnInit()` method.
+You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `ngOnInit()` method of Angular to load data into Kanban.
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -307,15 +307,15 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-Using `parse(data)` lets you reload data anytime you need.
+The `parse(data)` method provides data reloading on each applied change.
 
-With this in place, the Kanban component is good to go. Once you add the element to the page, Kanban will be initialized with the data set. You can also adjust any configuration settings you need. The [Kanban API docs](/api/overview/properties_overview/) have a complete list of available properties.
+Now the Kanban component is ready to use. When the element will be added to the page, it will initialize the Kanban with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
 
 #### Handling events
 
-Whenever someone interacts with Kanban, an event fires. You can use these events to track actions and run your own code. Check out the [full list of events](/api/overview/events_overview/).
+When a user makes some action in the Kanban, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/events_overview/).
 
-Open **kanban.component.ts** and update the `ngOnInit()` method like this:
+Open the **kanban.component.ts** file and complete the `ngOnInit()` method in the following way:
 
 ~~~jsx {5-7} title="kanban.component.ts"
 // ...
@@ -334,7 +334,7 @@ ngOnDestroy(): void {
 
 ### Step 3. Adding Kanban into the app
 
-To hook up the ***KanbanComponent*** in your app, open ***src/app/app.component.ts*** and swap the default code with this:
+To add the ***KanbanComponent*** component into your app, open the ***src/app/app.component.ts*** file and replace the default code with the following one:
 
 ~~~jsx {5} title="app.component.ts"
 import { Component } from "@angular/core";
@@ -348,7 +348,7 @@ export class AppComponent {
 }
 ~~~
 
-Next, create ***app.module.ts*** in ***src/app/*** and declare *KanbanComponent* as shown:
+Then create the ***app.module.ts*** file in the ***src/app/*** directory and specify the *KanbanComponent* as shown below:
 
 ~~~jsx {4-5,8} title="app.module.ts"
 import { NgModule } from "@angular/core";
@@ -365,7 +365,7 @@ import { KanbanComponent } from "./kanban/kanban.component";
 export class AppModule {}
 ~~~
 
-Finally, open ***src/main.ts*** and use this code:
+The last step is to open the ***src/main.ts*** file and replace the existing code with the following one:
 
 ~~~jsx title="main.ts"
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
@@ -375,8 +375,8 @@ platformBrowserDynamic()
     .catch((err) => console.error(err));
 ~~~
 
-At this point, you can start your app and see Kanban loaded with data on the page.
+After that, you can start the app to see Kanban loaded with data on a page.
 
-![Kanban initialization](/assets/trial_kanban.png)
+![Kanban initialization](../assets/trial_kanban.png)
 
-That's the basic setup for integrating DHTMLX Kanban with Angular. The code can be tweaked to fit your needs. For a more advanced example, check out [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
+Now you know how to integrate DHTMLX Kanban with Angular. You can customize the code according to your specific requirements. The final advanced example you can find on [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).

@@ -6,11 +6,11 @@ description: You can learn about the localization in the documentation of the DH
 
 # Localization
 
-All the labels in the JavaScript Kanban interface can be localized. Just set up a new locale or tweak the existing one, then set it for Kanban and Toolbar (these have to be done separately).
+You can localize all labels in the interface of JavaScript Kanban. For this you need to create a new locale or modify a built-in one and apply it to Kanban and Toolbar (*separately*).
 
 ## Default locale
 
-By default, the interface uses the **English** locale:
+The **English** locale is used by default:
 
 ~~~jsx
 const en = {
@@ -128,30 +128,46 @@ const en = {
 };
 ~~~
 
+## Built-in locales
+
+The Kanban exports the following locales:
+
+**"en"** - English
+**"de"** - German
+**"cn"** - Chinese
+**"es"** - Spanish
+**"fr"** - French
+**"it"** - Italian
+**"jp"** - Japanese
+**"pt"** - Portugese
+**"ru"** - Russian
+
+You can export and apply the built-in locale in the following way:
+
+```jsx {5}
+// create Kanban
+const board = new kanban.Kanban("#root", {
+    columns,
+    cards,
+    locale: kanban.locales["cn"] // the built-it "cn" locale will be set initially
+    // other parameters
+});
+
+// apply the built-in "de" locale to Kanban
+board.setLocale(kanban.locales["de"]);
+```
+
 ## Custom locale
 
-If you want your own locale, here's what you need to do:
+To apply a custom locale you need to:
 
-- Make a custom locale (or update the default one) and fill in translations for all the labels you want to use (any language works)
+- create a custom locale (or modify the default one) and provide translations for all text labels (it can be any language you need)
 
-- Set the new locale in **Kanban** using the [`locale`](/api/config/js_kanban_locale_config) property or the [`setLocale()`](/api/methods/js_kanban_setlocale_method) method
-- Set the new locale in **Toolbar** using its [`locale`](/api/config/toolbar_locale_config) property or the [`setLocale()`](/api/methods/toolbar_setlocale_method) method
-
-:::info
-Since v1.2, Kanban doesn't export built-in locales anymore. If you need more locales, check out the [**github page**](https://github.com/web-widgets/wx-kanban-locales). You can also install the locale you want via *npm* and use it like this:
-~~~js
-import { de } from "@xbs/wx-kanban-locales"
-import { de as coreDe } from "@xbs/wx-core-locales"
-
-new kanban.Kanban({
-    // other properties
-    locale: { ...coreDe, ...de },
-});
-~~~
-:::
+- apply the new locale to **Kanban** via its [`locale`](api/config/js_kanban_locale_config.md) property or use the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method
+- apply the new locale to **Toolbar** via its [`locale`](api/config/toolbar_locale_config.md) property or use the [`setLocale()`](api/methods/toolbar_setlocale_method.md) method
 
 ## Example
 
-This code snippet shows how to switch between different locales:
+In this snippet you can see how to switch through several locales:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

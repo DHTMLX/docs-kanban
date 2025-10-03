@@ -6,16 +6,16 @@ description: You can learn about the stylization in the documentation of the DHT
 
 # Stylization
 
-With Kanban, it's pretty easy to customize how **columns**, **rows**, and **cards** look by using the [`columnShape.css`](/api/config/js_kanban_columnshape_config), [`rowShape.css`](/api/config/js_kanban_rowshape_config), and [`cardShape.css`](/api/config/js_kanban_cardshape_config) properties. These options let you add conditional styles to columns, rows, and cards.
+Using Kanban, you can stylize **columns**, **rows** and **cards** appearance via the [`columnShape.css`](../../api/config/js_kanban_columnshape_config), [`rowShape.css`](../../api/config/js_kanban_rowshape_config) and [`cardShape.css`](../../api/config/js_kanban_cardshape_config) properties. These properties allow you to style columns, rows and cards conditionally.
 
-If you want to go further, you can add your own CSS classes to any specific **column**, **row**, or **card** using the [`columns.css`](/api/config/js_kanban_columns_config), [`rows.css`](/api/config/js_kanban_rows_config), and [`cards.css`](/api/config/js_kanban_cards_config) properties.
+You can also apply a custom css class to a separate **column**, **row** and **card** via the [`columns.css`](../../api/config/js_kanban_columns_config), [`rows.css`](../../api/config/js_kanban_rows_config) and [`cards.css`](../../api/config/js_kanban_cards_config) properties.
 
-You also have the flexibility to style any part of the Kanban interface to match your project's needs. There are lots of CSS variables available for this. Kanban has two main types of variables:
-- CSS variables for **Kanban** styling
-- CSS variables from the **WX** library (these cover things like controls, calendars, and other UI elements)
+Besides, you can apply custom styles to any part of the Kanban interface to meet your project requirements. For this, the library provides a wide range of CSS variables. Note, that Kanban includes two types of variables:
+- CSS variables related to **Kanban** style
+- CSS variables related to the **WX** library style (*controls, calendars etc*)
 
 :::info
-The **WX** library is used behind the scenes for some internal pieces. It handles small parts of the UI in Kanban, like controls and calendars.
+Note, that **WX** library is used for inner processes only. It provides some small elements used in Kanban (*controls, calendars etc*)
 :::
 
 ## Default style
@@ -90,30 +90,30 @@ The **WX** library is used behind the scenes for some internal pieces. It handle
 ~~~
 
 :::tip Note
-Future releases of Kanban might tweak or rename some variables. It's a good idea to double-check variable names after an update and make sure your styles still work as expected.
+Next versions of Kanban can bring some changes for the variables and their names. Please, do not forget to check the names after updating to the newer versions and modify them in your code to avoid problems with display of the component.
 :::
 
 ## Scroll style
 
-Kanban's scroll bar can be styled too. To do this, just use the `.wx-styled-scroll` CSS class. Make sure to check [browser support](https://caniuse.com/css-scrollbar) for custom scrollbars before you rely on this feature.
+You can also apply a custom style to a scroll bar of Kanban. For this, you can use the `.wx-styled-scroll` CSS class. Before using it, check compatibility with the modern browsers [here](https://caniuse.com/css-scrollbar).
 
 ~~~html {4} title="index.html"
 <!--container for Toolbar-->
 <div id="toolbar"></div> //
 <!--container for Kanban-->
-<div id="root" class="wx-styled-scroll"></div>
+<div id="root" class="wx-styled-scroll"></div> 
 ~~~
 
 ## Custom style
 
-Here's an example that shows how to add your own custom style to Kanban:
+In this snippet you can see how to apply a custom style to Kanban
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Adaptivity
 
-This example demonstrates how Kanban can be made adaptive with the help of custom CSS styles:
+In this snippet you can see how to create adaptive version of Kanban using custom CSS styles
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Related articles:** [Customization](/guides/customization)
+**Related articles:** [Customization](../customization)

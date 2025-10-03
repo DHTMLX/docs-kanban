@@ -8,7 +8,7 @@ description: You can learn about the duplicateCard method in the documentation o
 
 ### Description
 
-@short: Creates a duplicate of a card based on the given ID
+@short: Duplicates a card by the specified ID
 
 ### Usage
 
@@ -22,9 +22,9 @@ duplicateCard({
 
 ### Parameters
 
-- `id` -  (required) the ID of the card to be duplicated
-- `card` - (optional) the data object for the new card. You can find the full list of card parameters [**here**](/api/config/js_kanban_cards_config)
-- `select` - (optional) determines whether the newly added card will be selected
+- `id` -  (required) the ID of the card to be duplicared
+- `card` - (optional) the data object of the new card. The full list of the card parameters can be found [**here**](api/config/js_kanban_cards_config.md)
+- `select` - (optional) enables/disables selecting new added card
 
 ### Example
 

@@ -1,14 +1,14 @@
 ---
 sidebar_label: select-card
 title: select-card Event
-description: Discover how the select-card event works in the DHTMLX JavaScript Kanban library. Explore developer guides and API references, check out code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the select-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # select-card
 
 ### Description
 
-@short: Triggered when a card is selected
+@short: Fires when selecting a card
 
 ### Usage
 
@@ -21,13 +21,13 @@ description: Discover how the select-card event works in the DHTMLX JavaScript K
 
 ### Parameters
 
-The callback for the **select-card** event receives an object with these properties:
+The callback of the **select-card** event can take an object with the following parameters:
 
-- `id` - (required) the ID of the card that was selected
-- `groupMode` - (optional) indicates multiselect mode (defaults to false)
+- `id` - (required) the ID of the selected card
+- `groupMode` - (optional) multiselecting (false by default)
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example

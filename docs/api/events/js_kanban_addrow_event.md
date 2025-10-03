@@ -8,7 +8,7 @@ description: You can learn about the add-row event in the documentation of the D
 
 ### Description
 
-@short: Triggered whenever a new row is added
+@short: Fires when adding a new row
 
 ### Usage
 
@@ -23,15 +23,15 @@ description: You can learn about the add-row event in the documentation of the D
 
 ### Parameters
 
-The callback for the **add-row** event accepts an object with the following optional properties:
+The callback of the **add-row** event can take an object with the the following parameters:
 
-- `id` - the identifier for the new row
-- `row` - the data object representing the new row. You can find the complete list of **row** parameters [**here**](/api/config/js_kanban_rows_config)
-- `before` - the ID of the row before which the new row will be inserted
-- `skipProvider` - controls whether the request to the server should be prevented or allowed
+- `id` - (optional) the ID of the new row
+- `row` - (optional) the data object of the new row. The full list of the **row** parameters can be found [**here**](api/config/js_kanban_rows_config.md)
+- `before` - (optional) the ID of the row, before which the new row will be placed
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-To manage internal events, consider using the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -42,10 +42,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// listen for the "add-row" event 
+// subscribe on the "add-row" event 
 board.api.on("add-row", (obj) => {
     console.log(obj.id);
 });
 ~~~
 
-**Change log**: The **id**, **before**, and **row** parameters were introduced in v1.1
+**Change log**: The **id**, **before** and **row** parameters were added in v1.1

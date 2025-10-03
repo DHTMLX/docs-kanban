@@ -8,26 +8,26 @@ description: You can learn about the DELETE /cards REST route in the documentati
 
 ### Description
 
-@short: Removes data from a card
+@short: Deletes data on a card
 
-This route processes the **HTTP DELETE** request sent to the `/cards/{id}` endpoint.
+The route handles the **HTTP DELETE** request made to the `/cards/{id}` path. 
 
 ### Path parameters
 
-The following parameter is included in the request URL:
+The next parameter is sent in the request line:
 
-| Name | Type | Description |
+| Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the card to be removed.|
+| `id`       |  number     | *Required*. The ID of the card to be deleted.|
 
 ### Payload
 
-No payload needs to be sent.
+No payload is required.
 
 ### Response
 
-No content is returned. The HTTP status code indicates if the request was successful (response.status == 200) or encountered an error (response.status == 500).
+No data is returned back. The HTTP status code shows whether the request succeeds (response.status == 200) or fails (response.status == 500).
 
 ---
 
-**Related articles**: [Working with server](/guides/working_with_server)
+**Related articles**: [Working with server](guides/working_with_server.md)

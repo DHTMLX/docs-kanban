@@ -8,26 +8,30 @@ description: You can learn about the intercept method in the documentation of th
 
 ### Description
 
-@short: Enables catching and blocking internal events before they happen.
+@short: Allows intercepting and preventing the inner events
 
 ### Usage
 
 ~~~jsx {}
 api.intercept(
     event: string,
-    callback: function
+    callback: function,
+    config?: { intercept?: boolean, tag?: number | string | symbol }
 ): void;
 ~~~
 
 ### Parameters
 
-- `event` - (required) the event to listen for
-- `callback` - (required) the function to run (its arguments depend on the event being intercepted)
+- `event` - (required) an event to be fired
+- `callback` - (required) a callback to be performed (the callback arguments will depend on the event to be fired)
+- `config` - (optional) an object that stores the following parameters:
+    - `intercept` - (optional) if you set `intercept: true` during event listener creation, this event listener will run before all others
+    - `tag` - (optional) an action tag. You can use the tag name to remove an action handler via the [`detach`](api/internal/js_kanban_detach_method.md) method
 
 ### Events
 
 :::info
-You can check out the complete list of Kanban internal events [**here**](/api/overview/main_overview/#kanban-events)
+The full list of the Kanban internal events can be found [**here**](api/overview/main_overview.md/#kanban-events)
 :::
 
 ### Example
@@ -38,10 +42,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// prevent cards from being moved to the column with the "done" ID
+// forbid moving cards to the column with the "done" ID
 board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;
     }
-});
+}, {tag: "move"});
 ~~~
+
+**Change log**: The **config.tag** and **config.intercept** parameters were added in v1.7

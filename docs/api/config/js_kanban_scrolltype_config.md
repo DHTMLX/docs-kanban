@@ -1,14 +1,14 @@
 ---
 sidebar_label: scrollType
 title: scrollType Config
-description: Explore the scrollType config in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, code examples, live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the scrollType config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # scrollType
 
 ### Description
 
-@short: Optional. Specifies how scrolling behaves.
+@short: Optional. Defines a type of scrolling
 
 ### Usage
 
@@ -17,7 +17,7 @@ scrollType?: "default" | "column";
 ~~~  
 
 :::note
-When `scrollType` is set to `"column"`, each column can be scrolled independently.
+If you use the `scrollType: "column"` setting, you will be able to scroll each column separately.
 :::
 
 ### Default config
@@ -27,7 +27,7 @@ scrollType: "default"
 ~~~
 
 :::important
-If you use [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config) together with `scrollType: "default"`, make sure to set a fixed card height using the [`cardHeight`](/api/config/js_kanban_cardheight_config) property. Without this, cards won't appear.
+If you combine the [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) and `scrollType: "default"` settings, don't forget to specify a static height for cards via the [`cardHeight`](api/config/js_kanban_cardheight_config.md) property. Unless you specify it, the cards will not be displayed.
 :::
 
 ### Example
@@ -42,8 +42,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Change log:** This property was introduced in v1.2
+**Change log:** The property was added in v1.2
 
-**Related articles:** [Configuration](/guides/configuration/#cards)
+**Related articles:** [Configuration](../../../guides/configuration#cards)
 
 **Related sample:** [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

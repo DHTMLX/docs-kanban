@@ -8,7 +8,7 @@ description: You can learn about the end-drag-card event in the documentation of
 
 ### Description
 
-@short: Triggered when a card dragging action ends
+@short: Fires when stop dragging a card
 
 ### Usage
 
@@ -24,16 +24,16 @@ description: You can learn about the end-drag-card event in the documentation of
 
 ### Parameters
 
-The callback for the **end-drag-card** event receives an object with the following details:
+The callback of the **end-drag-card** event can take an object with the following parameters:
 
-- `id` - (required) the ID of the card that was dragged
-- `columnId` - (required) the ID of the column where the card is now located
-- `rowId` - (optional) the ID of the row where the card is placed
-- `before` - (optional) the ID of the card that follows the dragged card in the column
-- `source` - (optional) an array containing the IDs of the moved cards
+- `id` - (required) the ID of the dragged card
+- `columnId` - (required) the ID of the column where the card currently is
+- `rowId` - (optional)  the ID of the row where the card currently is
+- `before` - (optional) the ID of a card that is currently after the dragged card in the column
+- `source` - (optional) the array of moved cards' IDs
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -44,12 +44,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// listen to the "end-drag-card" event
+// subscribe on the "end-drag-card" event
 board.api.on("end-drag-card", (obj) => {
     console.log(obj.columnId);
 });
 ~~~
 
-**Change log:** This event has been available since v1.4
+**Change log:** The event was added in v1.4
 
 **Related sample:** [Kanban. Disabling drag and drop to specific columns](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

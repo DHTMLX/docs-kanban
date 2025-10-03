@@ -1,11 +1,11 @@
 ---
 sidebar_label: Common settings
 title: Common settings
-description: Here's a quick overview of the common settings for JavaScript Kanban, found in the DHTMLX JavaScript Kanban library documentation. You can explore developer guides, check out the API reference, test code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can have a Common settings overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # Common settings
 
-| Name | Description |
+| Name                                         | Description                                        |
 | -------------------------------------------- | -------------------------------------------------- |
-| [$meta](/api/common/js_kanban_meta_parameter)| @getshort(../common/js_kanban_meta_parameter.md)   |
+| [](../common/js_kanban_meta_parameter.md)    | @getshort(../common/js_kanban_meta_parameter.md)   |

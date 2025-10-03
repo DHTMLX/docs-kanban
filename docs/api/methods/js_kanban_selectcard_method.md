@@ -8,7 +8,7 @@ description: You can learn about the selectCard method in the documentation of t
 
 ### Description
 
-@short: Highlights a card based on the given ID.
+@short: Selects a card by the specified ID
 
 ### Usage
 
@@ -21,11 +21,11 @@ selectCard({
 
 ### Parameters
 
-- `id` - (required) the ID of the card to be selected 
-- `groupMode` - (optional) toggles the ability to select multiple cards at once (defaults to **false**)
+- `id` - (required) the ID of the selected card 
+- `groupMode` - (optional) enables/disables multiselecting of cards (**false** by default)
 
 :::info
-When **groupMode** is set to **true**, the **selectCard()** method keeps the current selection intact while adding the new card to the selection.
+If you set the **groupMode** parameter to **true**, the **selectCard()** method will not reset selecting of the other elements
 :::
 
 ### Example

@@ -8,10 +8,10 @@ description: You can learn about the getCards REST method in the documentation o
 
 ### Description
 
-@short: Retrieves a promise containing the cards data
+@short: Gets a promise with the cards data
 
 :::info
-The **getCards()** method belongs to the **RestDataProvider** service, which is designed to handle server interactions.
+The **getCards()** method is a part of the **RestDataProvider** service intended for working with server
 :::
 
 ### Usage
@@ -22,7 +22,7 @@ getCards(): promise;
 
 ### Returns
 
-The **getCards()** method makes a **GET** request to the server and returns a **promise** with the cards data.
+The **getCards()** method sends a request to the server by the **GET** method and returns a **promise** with the cards data
 
 ### Example
 
@@ -42,4 +42,4 @@ Promise.all([
 });
 ~~~
 
-**Related articles:** [Working with server](/guides/working_with_server)
+**Related articles:** [Working with server](../../../../guides/working_with_server)

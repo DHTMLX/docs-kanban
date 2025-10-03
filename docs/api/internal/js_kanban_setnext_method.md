@@ -8,7 +8,7 @@ description: You can learn about the setNext method in the documentation of the 
 
 ### Description
 
-@short: Enables inserting a specific action into the Event Bus sequence.
+@short: Allows adding some action into the Event Bus order
 
 ### Usage
 
@@ -18,7 +18,7 @@ api.setNext(next: any): void;
 
 ### Parameters
 
-- `next` - (required) the action to be added into the **Event Bus** sequence  
+- `next` - (required) the action to be included into the **Event Bus** order  
 
 ### Example
 
@@ -42,5 +42,5 @@ Promise.all([
 ~~~
 
 :::info
-Including **RestDataProvider** in the **Event Bus** sequence is necessary to handle data operations like **adding**, **deleting**, and to send the related requests to the server.
+You need to include **RestDataProvider** into the **Event Bus** order to perform operations with data (**adding**, **deleting** etc) and send the corresponding requests to the server
 :::

@@ -1,18 +1,18 @@
 ---
 sidebar_label: cardShape
 title: cardShape Config
-description: Explore the cardShape config in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, try code samples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the cardShape config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # cardShape
 
 ### Description
 
-@short: Optional. Settings object that controls how cards look.
+@short: Optional. An object of settings for managing the cards appearance
 
 ### Usage
 
-```jsx {}
+~~~jsx {}
 cardShape?: {
     label?: boolean | { show?: boolean },
     description?: boolean | { show?: boolean },
@@ -21,30 +21,31 @@ cardShape?: {
     cover?: boolean | { show?: boolean },
     comments?: boolean | { show?: boolean },
     confirmDeletion?: boolean | { show?: boolean },
-    start_date?: boolean | {
+    start_date?: boolean | { 
+        show?: boolean,
+        format?: string 
+    },
+    end_date?: boolean | { 
         show?: boolean,
         format?: string
     },
-    end_date?: boolean | {
+    color?: boolean | { 
         show?: boolean,
-        format?: string
-    },
-    color?: boolean | {
-        show?: boolean,
-        values?: array
+        values?: array  
     },
     menu?: boolean | {
-        show?: boolean,
+        show?: boolean, 
         items?: [
             {
                 id?: string,
                 icon?: string,
                 text?: string,
                 disabled? boolean,
-                onClick?: ({ id, item, card }) => void
-            },
+                onClick?: ({ id, item, card }) => void,
+                data?: array // an array of menu subitems
+            }, 
             {...}
-        ] | ({ card, store }) => array | boolean
+        ] | ({ card, readonly }) => array | null
     },
     users?: boolean | {
         show?: boolean,
@@ -68,11 +69,11 @@ cardShape?: {
             },
             {...} // other priorities data
         ]
-    },
-    votes?: boolean | {
+    },    
+    votes?: boolean | { 
         show?: boolean,
         clickable?: boolean
-    },
+    }, 
     css?: (card) => string,
     headerFields?: [
         {
@@ -83,122 +84,137 @@ cardShape?: {
         {...} // other fields data
     ]
 };
-```
+~~~
 
 ### Parameters
 
 :::info
-Sometimes, parameters can be set using a **short** or **extended** form. For example:
+In some cases, you can set the parameter to the **short** or **extended** value. See the code below:
 
-```jsx {3,6}
+~~~jsx {3,6}
     label: boolean | { show?: boolean }
-    // short form
+    // short value
     label: true
     // or
-    // extended form
+    // full value
     label: { show: true }
-```
-
+~~~
 :::
 
-The **cardShape** object lets you control how cards appear by configuring these fields:
+To configure the card appearance, in the **cardShape** object you can specify the following parameters (fields):
 
-- `label` - (optional) toggles the **label** field visibility
-- `description` - (optional) toggles the **description** field visibility
-- `progress` - (optional) toggles the **progress** field visibility
-- `attached` - (optional) toggles the **attachment** field visibility
-- `cover` - (optional) toggles the **card picture** visibility
-- `comments` - (optional) toggles displaying **comments** on cards
-- `confirmDeletion` - (optional) toggles the **confirmation dialog** for card deletion
-- `start_date` - (optional) configures the **start date** field
-  - `show` - (optional) toggles the start date visibility
-  - `format` - (optional) sets the date format. See available options [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
-- `end_date` - (optional) configures the **end date** field
-  - `show` - (optional) toggles the end date visibility
-  - `format` - (optional) sets the date format. See available options [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
-- `color` - (optional) configures the **top color line** of the card
-  - `show` - (optional) toggles the color line visibility
-  - `values` - (optional) an array of HEX color codes
-- `menu` - (optional) configures the **card context menu**
-  - `show` - (optional) enables or disables the context menu
-  - `items` - (optional) an array of menu item objects with these properties:
-    - `id` - (optional) menu item ID. Use these for built-in actions:
-  - **_"set-edit"_** - edit card name
-  - **_"delete-card"_** - delete card - `icon` - (optional) icon class name (e.g., _mdi-delete_) - `text` - (optional) menu item label - `disabled` - (optional) enables or disables the menu item - `onClick` - (optional) callback function receiving:
-  - **_id_** - menu item ID
-  - **_item_** - menu item data
-  - **_card_** - target card data
+- `label` - (optional) shows/hides a **label** field
+- `description` - (optional) shows/hides a **description** field
+- `progress` - (optional) shows/hides a **progress** field
+- `attached` - (optional) shows/hides an **attachment** field
+- `cover` - (optional) shows/hides a **card picture**
+- `comments` - (optional) shows/hides **comments** on cards
+- `confirmDeletion` - (optional) shows/hides the **confirmation dialog** that allows users to confirm or decline the card deletion
+- `start_date` - (optional) an object of parameters of a **start date** field
+    - `show` - (optional) shows/hides a card start date
+    - `format` - (optional) defines format of a card start date. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+- `end_date` - (optional) an object of parameters of an **end date** field
+    - `show` - (optional) shows/hides a card end date
+    - `format` - (optional) defines format of a card end date. The available parameters can be found [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+- `color` - (optional) an object of parameters of a **top color line** of card
+    - `show` - (optional) shows/hides a top color line
+    - `values` - (optional) an array of valid HEX codes
+- `menu` - (optional) an object of parameters of a **card context menu**. Here you can specify the following parameters:
+    - `show` - (optional) - enables/disables a card context menu
+    - `items` - (optional) an array of objects containing parameters of items of the cards context menu. For each item you can specify the following parameters:
+        - `id` - (optional) an ID of the menu item. To implement the built-in actions, you need to specify the following values:
+            - ***"set-edit"*** - defines the action to edit a card name
+            - ***"delete-card"*** - defines the action to delete a card
+        - `icon` - (optional) a class name of icon of the menu item. Here you can specify any icon related to the icon fonts (*mdi-delete*)
+        - `text` - (optional) a name of the menu item
+        - `disabled` - (optional) a state of the menu item (*active* or *disabled* depending on the *boolean* value)
+        - `onClick` - (optional) a custom callback function, that takes the following arguments:
+            - ***id*** - an ID of the current menu item
+            - ***item*** - a data object of the current menu item
+            - ***card*** - a data object of the target card
+        - `data` - (optional) an array of objects that represent menu subitems
+
+    :::info
+    You can also set the `menu.items` parameter to a custom function, that takes the following arguments:
+    - ***card*** - a data object of a current card
+    - ***readonly*** - an object of readonly [state properties](api/internal/js_kanban_getstate_method.md)
+
+    This function allows customizing menu for any card or hide it for a specific one (by returning *null* or *false*):
+
+    ~~~jsx {}
+    items: ({ card, readonly }) => {
+        if (card.id === 1){
+            return false;
+        }  
+
+        const menu = [];
+
+        if (!readonly.delete){
+            menu.push({ 
+                id: "delete-card", icon: "wxi-delete", label: "Delete"
+            });
+        }
+            
+        if (!readonly.edit){
+            menu.push({ 
+                id: "set-edit", icon: "wxi-edit", label: "Edit"
+            });
+        }
+        return menu.length ? menu : null;
+    }
+    ~~~
+    :::
+
+- `users` - (optional) an object of parameters of a **users** field
+    - `show` - (optional) shows/hides the assigned users
+    - `values` - (required) an array of objects with users data. For each user you can specify the following parameters:
+        - `id` - (required) a user **ID**
+        - `label` - (optional) a user name
+        - `avatar` - (optional) a path to the user avatar
+    - `maxCount` - (optional) a maximum count of users displayed on the card (or ***false***)
+
+    You can set the `maxCount` property to the number of users to be displayed on the card.
+    If you set the `maxCount` property to `false`, you can see all the assigned user on the card.
+
+    :::info
+    The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding users data via the `values` parameter. To assign new users via the editor, you need to configure the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) property. Use the ***select*** type for assigning one or user or the ***multiselect*** type for assigning several users.
+
+    ~~~jsx {}
+    cardShape: {
+        users: {
+            show: true,
+            values: [
+                { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
+                { id: 2, label: "Aaron Short" }
+            ],
+            maxCount: 4 // only 4 users can be displayed on the card
+        }
+    }
+    ~~~
+    :::
+
+- `priority` - (optional) an object of parameters of a **priority** field
+    - `show` - (optional) shows/hides a card priority
+    - `values` - (optional) an array of objects with priorities data. For each priority you can specify the following parameters:
+        - `id` - (required) a priority **ID**
+        - `label` - (optional) a priority name
+        - `color` - (required) a valid HEX code
+- `votes` - (optional) specifies the **votes** functionality
+    - `show` - (optional) shows/hides the vote icon on the card and in the editor
+    - `clickable` - (optional) - makes the vote icon on the card clickable. If `true`, users can vote for the card using the vote icon on this card. Otherwise, users can vote for the card using the vote icon in the editor only
+- `css` - a function returns a css class that applies to cards conditionally
+- `headerFields` - (optional) an array of objects with the **custom fields** data. Here you can specify the following parameters:
+    - `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
+    - `label` - (optional) a label of the custom field
+    - `css` - (optional) a css class of the custom field
 
 :::info
-You can also provide a custom function for `items` that receives:
-
-- **_card_** - current card data
-- **_store_** - _dataStore_ object
-
-This lets you customize or hide the menu for specific cards by returning _null_ or _false_:
-
-```jsx {}
-items: ({ card, store }) => {
-  if (card.id === 1) return false;
-  return [
-    { id: "set-edit", icon: "wxi-edit", label: "Edit" },
-    { id: "delete-card", icon: "wxi-delete", label: "Delete" },
-  ];
-};
-```
-
-:::
-
-- `users` - (optional) configures the **users** field
-  - `show` - (optional) toggles assigned users visibility
-  - `values` - (required) array of user objects:
-    - `id` - (required) user ID
-    - `label` - (optional) user name
-    - `avatar` - (optional) path to user avatar
-  - `maxCount` - (optional) max number of users shown on a card or **_false_** for unlimited
-
-  Setting `maxCount` controls how many assigned users appear on the card. Setting it to `false` displays all assigned users.
-
-:::info
-The **_users_** field is off by default. To enable it, set `show` to `true` and provide user data in `values`. To assign users via the editor, configure the appropriate control in [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-combo-select-and-multiselect-types). Use **_select_** for single user or **_multiselect_** for multiple users.
-
-```jsx {}
-  cardShape: {
-    users: {
-      show: true,
-      values: [
-        { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
-        { id: 2, label: "Aaron Short" }
-      ],
-  maxCount: 4 // limits display to 4 users per card
-  }
-  }
-```
-
-:::
-
-- `priority` - (optional) configures the **priority** field
-  - `show` - (optional) toggles priority visibility
-  - `values` - (optional) array of priority objects:
-    - `id` - (required) priority ID
-    - `label` - (optional) priority name
-    - `color` - (required) HEX color code
-- `votes` - (optional) configures **votes** feature
-  - `show` - (optional) toggles vote icon on cards and in editor
-  - `clickable` - (optional) if `true`, users can vote by clicking the icon on the card; otherwise, voting is only possible via the editor
-- `css` - function returning a CSS class to conditionally style cards
-- `headerFields` - (optional) array of objects defining **custom fields**
-  - `key` - (required) custom field key, used when configuring the editor via [editorShape](/api/config/js_kanban_editorshape_config)
-  - `label` - (optional) custom field label
-  - `css` - (optional) CSS class for the custom field
-
-:::info
-If you don't set card options via **cardShape**, default parameters from **defaultCardShape** will apply.
+Unless you specify the cards settings via the **cardShape** property, the widget will apply a **defaultCardShape** set of parameters!
 :::
 
 ### Default config
 
-```jsx {}
+~~~jsx {}
 const defaultPriorities = [
     { id: 1, color: "#FE6158", label: "High" },
     { id: 2, color: "#F1B941", label: "Medium" },
@@ -207,8 +223,8 @@ const defaultPriorities = [
 
 const defaultColors = ["#33B0B4", "#0096FA", "#F1B941"];
 
-export const getDefaultCardMenuItems = ({ store }: { store: DataStore }) => {
-    const { readonly } = store.getState();
+export const getDefaultCardMenuItems = ({ readonly }: { readonly: DataStore }) => {
+    const { readonly } = readonly.getState();
     const baseItems = [
         { id: "duplicate-card", icon: "wxi-content-copy", text: "Duplicate" },
         { id: "delete-card", icon: "wxi-delete-outline", text: "Delete" }
@@ -231,11 +247,11 @@ const defaultCardShape = {
     end_date: { show: false },
     users: { show: false },
     confirmDeletion: { show: true },
-    priority: {
+    priority: { 
         show: false,
         values: defaultPriorities
     },
-    color: {
+    color: { 
         show: false,
         values: defaultColors
     },
@@ -243,84 +259,81 @@ const defaultCardShape = {
     attached: { show: false },
     menu: { show: true }
 };
-```
+~~~
 
 ### Example
 
-```jsx {14-49,54}
-const users = [
-  // sample users data
-  { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
-  { id: 2, label: "Aaron Short" },
+~~~jsx {14-49,54}
+const users = [ // users data
+    { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
+    { id: 2, label: "Aaron Short" }
 ];
 
-const cardPriority = [
-  // sample priority data
-  { id: 1, color: "#FF5252", label: "high" },
-  { id: 2, color: "#FFC975", label: "medium" },
-  { id: 3, color: "#0AB169", label: "low" },
+const  cardPriority = [ // card priority data
+    { id: 1, color: "#FF5252", label: "high" },
+    { id: 2, color: "#FFC975", label: "medium" },
+    { id: 3, color: "#0AB169", label: "low" }
 ];
 
 const cardColors = ["#65D3B3", "#FFC975", "#58C3FE"];
 
-const cardShape = {
-  // card display settings
-  label: true,
-  description: true,
-  progress: true,
-  start_date: true,
-  end_date: true,
-  menu: true,
-  attached: true,
-  cover: false,
-  comments: false,
-  confirmDeletion: false,
-  color: {
-    show: true,
-    values: cardColors,
-  },
-  users: {
-    show: true,
-    values: users,
-    maxCount: false,
-  },
-  priority: {
-    show: true,
-    values: cardPriority,
-  },
-  votes: {
-    show: true,
-    clickable: true,
-  },
-  css: (card) => (card.type == "feature" ? "green" : "red"),
-  headerFields: [
-    {
-      // custom field example
-      key: "sprint",
-      css: "custom_style",
-      label: "Sprint",
+const cardShape = { // card settings
+    label: true,
+    description: true,
+    progress: true,
+    start_date: true,
+    end_date: true,
+    menu: true,
+    attached: true,
+    cover: false,
+    comments: false,
+    confirmDeletion: false,
+    color: {
+        show: true,
+        values: cardColors
     },
-  ],
+    users: {
+        show: true,
+        values: users,
+        maxCount: false
+    },
+    priority: {
+        show: true,
+        values: cardPriority
+    },
+    votes: {
+        show: true,
+        clickable: true
+    },
+    css: (card) => card.type == "feature" ? "green" : "red",
+    headerFields: [
+        {   // custom field
+            key: "sprint",
+            css: "custom_style",
+            label: "Sprint"
+        }
+    ]
 };
 
 new kanban.Kanban("#root", {
-  cards,
-  columns,
-  cardShape,
-  // other parameters
+    cards,
+    columns,
+    cardShape,
+    // other parameters
 });
-```
+~~~
 
 **Change log:**
+- The ***comments***, ***css*** and ***votes*** parameters were added in v1.4
+- The ***menu.items[0].label*** parameter was deprecated and replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].items*** parameter was deprecated and replaced by the ***menu.items[0].data*** parameter in v1.4
+- The ***users.maxCount*** and ***votes.clickable*** parameters were added in v1.6
+- The ***menu.items[0].label*** and ***menu.items[0].items*** parameters were removed in v1.7
+- The ***menu.items*** function was updated. The **store** parameter was replaced with the **readonly** one in v1.7
 
-- The **_comments_**, **_css_**, and **_votes_** options were added in v1.4
-- The **_menu.items[0].label_** option was renamed to **_menu.items[0].text_** in v1.4
-- The **_users.maxCount_** and **_votes.clickable_** options were added in v1.6
-
-**Related articles:** [Configuration](/guides/configuration/#cards)
+**Related articles:** [Configuration](../../../guides/configuration#cards)
 
 **Related samples:**
-
 - [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
 - [Kanban. Highlighting outdated and active tasks](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
 - [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)

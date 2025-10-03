@@ -6,7 +6,7 @@ description: You can learn about the initialization in the documentation of the 
 
 # Initialization
 
-Here's how to quickly set up Kanban on a page and add all the board features to your app. Just follow these steps to get the component working:
+This guide will give you detailed instructions on how to create Kanban on a page to enrich your application with features of the Kanban board. Take the following steps to get a ready-to-use component:
 
 1. [Include the Kanban source files on a page](#including-source-files).
 2. [Create a container for Kanban](#creating-container).
@@ -14,14 +14,14 @@ Here's how to quickly set up Kanban on a page and add all the board features to 
 
 ## Including source files
 
-First, [download the package](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and unpack it somewhere in your project folder.
+[Download the package](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and unpack it into a folder of your project.
 
-For Kanban to work, just add these two files to your page:
+To create Kanban, you need to include 2 source files on your page:
 
 - *kanban.js*
 - *kanban.css*
 
-Make sure the paths to those files are correct:
+Make sure that you set correct relative paths to the source files:
 
 ~~~html title="index.html"
 <script type="text/javascript" src="./dist/kanban.js"></script>  
@@ -30,13 +30,13 @@ Make sure the paths to those files are correct:
 
 ## Creating container
 
-Add a container element for Kanban and assign it an ID, like *"root"*:
+Add a container for Kanban and give it an ID, for example *"root"*:
 
 ~~~jsx title="index.html"
 <div id="root"></div>
 ~~~
 
-If you want the Kanban board to have a *Toolbar*, add a separate container for it as well:
+If you want to create the widget along with its *Toolbar*, you need to add a separate container for it:
 
 ~~~jsx {1} title="index.html"
 <div id="toolbar"></div> // container for Toolbar
@@ -45,7 +45,7 @@ If you want the Kanban board to have a *Toolbar*, add a separate container for i
 
 ## Initializing Kanban
 
-Kanban gets initialized using the **kanban.Kanban** constructor. It expects two arguments:
+Initialize Kanban with the **kanban.Kanban** constructor. It takes two parameters:
 
 - an HTML container (the ID of the HTML container)
 - an object with configuration properties. [See the full list here](#configuration-properties)
@@ -57,7 +57,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-If you're adding a *Toolbar* as well, initialize it separately with the **kanban.Toolbar** constructor. It also needs two arguments:
+If you want to create the widget along with its *Toolbar*, you need to initialize it separately using the **kanban.Toolbar** constructor. It also takes two parameters:
 
 - an HTML container (the ID of the HTML container)
 - an object with configuration properties
@@ -74,18 +74,18 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 :::info
-More details on setting up the Kanban Toolbar can be found in the [**Configuration**](/guides/configuration/#toolbar) section.
+To learn more about configuring the Toolbar of Kanban, read the [**Configuration**](guides/configuration.md/#toolbar) section
 :::
 
 ### Configuration properties
 
 :::note
-A complete list of configuration options for **Kanban** is available [**here**](/api/overview/properties_overview). <br />
-The full list of properties for the **Toolbar of Kanban** is [**here**](/api/overview/toolbar_properties_overview).
+The full list of properties to configure **Kanban** can be found [**here**](api/overview/properties_overview.md). <br> 
+The full list of properties to configure **Toolbar of Kanban** can be found [**here**](api/overview/toolbar_properties_overview.md).
 :::
 
 ## Example
 
-Here's a snippet that shows Kanban being initialized with some starting data:
+In this snippet you can see how to initialize **Kanban** with the initial data:
 
 <iframe src="https://snippet.dhtmlx.com/gb50vyip?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

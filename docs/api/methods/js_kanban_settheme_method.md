@@ -1,14 +1,14 @@
 ---
 sidebar_label: setTheme()
 title: setTheme Method
-description: Learn about the setTheme method in the DHTMLX JavaScript Kanban library documentation. Explore developer guides and API references, experiment with code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the setTheme method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # setTheme()
 
 ### Description
 
-@short: Dynamically applies a new theme to the Kanban board (reinitializing it).
+@short: Applies a new theme to Kanban dynamically (with reinitialization)
 
 ### Usage
 
@@ -21,14 +21,14 @@ setTheme({
 
 ### Parameters
 
-- `name` - (optional) specifies the theme to apply to the Kanban board. The available options are:
-  - "material" (*default*)
-  - "willow"
-  - "willow-dark"
-- `fonts` - (optional) controls whether fonts are loaded from the CDN (wxi font).
+- `name` - (optional) a theme name to be applied to Kanban. There are 3 available themes:
+    - "material" (*default*)
+    - "willow"
+    - "willow-dark"
+- `fonts` - (optional) enables/disables fonts loading from the CDN (wxi font)
 
 :::tip
-You can set the initial theme using the [`theme`](/api/config/js_kanban_theme_config) property.
+To specify the initial theme, you can use the [`theme`](../../config/js_kanban_theme_config) property.
 :::
 
 ### Example
@@ -38,12 +38,12 @@ You can set the initial theme using the [`theme`](/api/config/js_kanban_theme_co
 const board = new kanban.Kanban("#root", {
     // initial configuration parameters
 });
-// apply the "willow" theme
+// set the "willow" theme
 board.setTheme({ name: "willow", font: false });
 ~~~
 
-**Change log:** This method was introduced in v1.6
+**Change log:** The method was added in v1.6
 
-**Related articles:** [Stylization](/guides/stylization)
+**Related articles:** [Stylization](../../../guides/stylization)
 
 **Related sample:** [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

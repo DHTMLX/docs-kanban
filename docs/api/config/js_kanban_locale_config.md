@@ -1,17 +1,17 @@
 ---
 sidebar_label: locale
 title: locale Config
-description: Explore the locale configuration in the DHTMLX JavaScript Kanban library documentation. Check out developer guides, API references, code examples, live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the locale config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # locale
 
 ### Description
 
-@short: Optional. An object defining a custom locale for Kanban
+@short: Optional. An object of a custom locale of Kanban
 
 :::info
-The **locale** object should contain all the Kanban and Toolbar labels along with their translated versions.
+The **locale** object needs to include all labels of Kanban and Toolbar with the corresponding translations.
 :::
 
 ### Usage
@@ -22,10 +22,10 @@ locale?: object;
 
 ### Default config
 
-Kanban uses the [**English**](/guides/localization/#default-locale) locale by default. You can also specify a custom locale if needed.
+By default, Kanban uses the [**English**](../../../guides/localization/#default-locale) locale. You can set it to the custom locale as well
 
 :::tip
-To switch the locale on the fly, the [**setLocale()**](/api/methods/js_kanban_setlocale_method) method is available in Kanban.
+To change the current locale dynamically, you can use the [**setLocale()**](../../methods/js_kanban_setlocale_method) method of Kanban
 :::
 
 ### Example
@@ -35,11 +35,11 @@ To switch the locale on the fly, the [**setLocale()**](/api/methods/js_kanban_se
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    locale: zh // the "zh" locale is applied initially
+    locale: kanban.locales["cn"] // the "cn" locale will be set initially
     // other parameters
 });
 ~~~
 
-**Related articles:** [Localization](/guides/localization)
+**Related articles:** [Localization](../../../guides/localization)
 
 **Related sample:** [Kanban. Localization](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

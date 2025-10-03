@@ -1,35 +1,35 @@
 ---
 sidebar_label: move-row
 title: move-row Event
-description: Explore the move-row event in the DHTMLX JavaScript Kanban library documentation. Find developer guides, API references, code examples, live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: You can learn about the move-row event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 
 # move-row
 
 ### Description
 
-@short: Triggered when a row is moved
+@short: Fires when moving a row
 
 ### Usage
 
 ~~~jsx {}
 "move-row": ({
     id: string | number,
-    before: string | number,
+    before?: string | number,
     skipProvider?: boolean
 }) => void;
 ~~~
 
 ### Parameters
 
-The callback for the **move-row** event receives an object with these properties:
+The callback of the **move-row** event can take an object with the following parameters:
 
-- `id` - (required) the ID of the row being moved
-- `before` - (required) the ID of the row that the moved row will be placed before
-- `skipProvider` - (optional) controls whether the request to the server is skipped
+- `id` - (required) the ID of the row to be moved
+- `before` - (optional) the ID of the row before which the moved row will be placed. If you do not not specify the `before` parameter, the row will be placed at the end of board
+- `skipProvider` - (optional) enables/disables preventing the request from being sent to the server
 
 :::info
-To manage internal events, you can use the [**Event Bus methods**](/api/overview/main_overview/#event-bus-methods)
+For handling the inner events you can use the [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### Example
@@ -41,10 +41,10 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// listen for the "move-row" event
+// subscribe on the "move-row" event
 board.api.on("move-row", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Change log:** This event was introduced in v1.1
+**Change log:** This event was added in v1.1
