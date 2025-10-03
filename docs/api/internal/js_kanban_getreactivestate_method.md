@@ -40,16 +40,12 @@ The method returns an object with the following parameters:
     selected: {...},
     sort: {...},
 
-    // deprecated parameters
-    /*
+    // removed parameters
+    /*  
         fromAreaMeta: {...},
         dropAreaItemsCoords: {...},
         dropAreasCoords: {...},
-        overAreaMeta: {...},
-    */
-
-    // removed parameters
-    /*    
+        overAreaMeta: {...},  
         before: {...},
         dragItemId: {...},
         dragItemsCoords: {...},
@@ -62,7 +58,7 @@ The method returns an object with the following parameters:
         layout -> layout: {...},
         cardsMap -> _cardsMap: {...},
         cardsMeta -> _cardsMeta: {...},
-        areasMeta _areasMeta: {...},
+        areasMeta -> _areasMeta: {...},
         scroll -> _scroll: {...},
     */
 }

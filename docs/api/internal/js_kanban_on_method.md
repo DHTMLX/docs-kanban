@@ -16,7 +16,7 @@ description: You can learn about the on method in the documentation of the DHTML
 api.on(
     event: string,
     handler: function
-    config?: {tag?: number | string }
+    config?: { intercept?: boolean, tag?: number | string | symbol }
 ): void;
 ~~~
 

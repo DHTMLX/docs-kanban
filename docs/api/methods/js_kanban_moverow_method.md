@@ -33,7 +33,7 @@ const board = new kanban.Kanban("#root", {
     cards,
     row
 });
-// move the "task" swimlane and place it before (upper) the "feature" one
+// move the "task" swimlane and place it before (above) the "feature" one
 board.moveRow({
     id: "task",
     before: "feature"

@@ -186,6 +186,10 @@ kanban.api.exec("undo");
     - The following parameters are removed in v1.7.0:
 
     ```js
+    fromAreaMeta,
+    dropAreaItemsCoords,
+    dropAreasCoords,
+    overAreaMeta,
     before,
     dragItemId,
     dragItemsCoords,
@@ -196,10 +200,10 @@ kanban.api.exec("undo");
 
     ```js
     edit -> _edit: object,
-    layout -> layout: string,
+    layout -> _layout: string,
     cardsMap -> _cardsMap: object,
     cardsMeta -> _cardsMeta: object,
-    areasMeta _areasMeta: object,
+    areasMeta -> _areasMeta: object,
     scroll -> _scroll: object
     ```
 
