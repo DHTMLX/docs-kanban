@@ -21,3 +21,4 @@ yarn-error.log*
 .yarn
 .pnp.cjs
 .pnp.loader.mjs
+.yarnrc.yml
