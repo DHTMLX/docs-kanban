@@ -26,7 +26,7 @@ parse({
 - [`columns`](api/config/js_kanban_columns_config.md) - (optional) the array of objects of the columns data
 - [`rows`](api/config/js_kanban_rows_config.md) - (optional) the array of objects of the rows data
 - [`cards`](api/config/js_kanban_cards_config.md) - (optional) the array of objects of the cards data
-- [`links`](api/config/js_kanban_linkss_config.md) - (optional) the array of objects of the links data
+- [`links`](api/config/js_kanban_links_config.md) - (optional) the array of objects of the links data
 
 ### Example
 
