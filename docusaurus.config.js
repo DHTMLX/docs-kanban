@@ -148,12 +148,16 @@ const config = {
 		}
 	},
 	onBrokenLinks: 'warn',
-	onBrokenMarkdownLinks: 'warn',
     onBrokenAnchors: 'warn',
 	favicon: 'img/favicon.ico',
 	organizationName: 'DHTMLX', // Usually your GitHub org/user name.
 	projectName: 'docs-kanban', // Usually your repo name.
 	trailingSlash: true,
+	markdown: {
+		hooks: {
+			onBrokenMarkdownLinks: 'warn',
+		}
+	},
 	scripts:[
 		{
 			src: 'https://dhtmlx.com/gtag/docs.js',
