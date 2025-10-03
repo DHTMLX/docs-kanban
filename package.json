@@ -33,7 +33,7 @@
     "docusaurus-plugin-sass": "^0.2.5"
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=20.0"
   },
   "browserslist": {
     "production": [
