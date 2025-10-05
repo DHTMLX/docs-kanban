@@ -22,10 +22,10 @@ locale?: object;
 
 ### Default config
 
-By default, Toolbar uses the [**English**](../../../guides/localization/#default-locale) locale. You can set it to the custom locale as well
+By default, Toolbar uses the [**English**](guides/localization.md#default-locale) locale. You can set it to the custom locale as well
 
 :::tip
-To change the current locale dynamically, you can use the [**setLocale()**](../../methods/toolbar_setlocale_method) method of Toolbar
+To change the current locale dynamically, you can use the [**setLocale()**](api/methods/toolbar_setlocale_method.md) method of Toolbar
 :::
 
 ### Example
@@ -42,6 +42,6 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Related articles:** [Localization](../../../guides/localization)
+**Related articles:** [Localization](guides/localization.md)
 
 **Related sample:** [Kanban. Localization](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

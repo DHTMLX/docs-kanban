@@ -182,7 +182,7 @@ kanban.undo();
 kanban.api.exec("undo");
 ~~~
 
-- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) and [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) methods were updated in the following way:
+- The [`api.getState()`](api/internal/js_kanban_getstate_method.md) and [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) methods were updated in the following way:
     - The following parameters are removed in v1.7.0:
 
     ```js
@@ -251,7 +251,7 @@ CSS classes related to the editor were changed in the following way:
 
 #### Methods
 
-- The [`setLocale`](../../api/methods/toolbar_setlocale_method) method of the Kanban toolbar was updated in the following way:
+- The [`setLocale`](api/methods/toolbar_setlocale_method.md) method of the Kanban toolbar was updated in the following way:
 
 ~~~jsx {6} title="Before v1.5.7"
     // create Kanban
@@ -277,7 +277,7 @@ CSS classes related to the editor were changed in the following way:
 
 #### Properties
 
-- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property of Kanban was updated in the following way:
+- The [`columnShape`](api/config/js_kanban_columnshape_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.5"
         {
@@ -314,7 +314,7 @@ CSS classes related to the editor were changed in the following way:
 
 #### Properties
 
-- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property of Kanban was updated in the following way:
+- The [`editorShape`](api/config/js_kanban_editorshape_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         {
@@ -350,7 +350,7 @@ CSS classes related to the editor were changed in the following way:
         // other parameters
     ~~~
 
-- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property of Kanban was updated in the following way:
+- The [`cardShape`](api/config/js_kanban_cardshape_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         {
@@ -385,7 +385,7 @@ CSS classes related to the editor were changed in the following way:
         } 
     ~~~
 
-- The [`columnShape`](../../api/config/js_kanban_columnshape_config) property of Kanban was updated in the following way:
+- The [`columnShape`](api/config/js_kanban_columnshape_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         {
@@ -416,7 +416,7 @@ CSS classes related to the editor were changed in the following way:
         } 
     ~~~
 
-- The [`rowShape`](../../api/config/js_kanban_rowshape_config) property of Kanban was updated in the following way:
+- The [`rowShape`](api/config/js_kanban_rowshape_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         {
@@ -447,7 +447,7 @@ CSS classes related to the editor were changed in the following way:
         } 
     ~~~
 
-- The [`cards`](../../api/config/js_kanban_cards_config) property of Kanban was updated in the following way:
+- The [`cards`](api/config/js_kanban_cards_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         [
@@ -482,7 +482,7 @@ CSS classes related to the editor were changed in the following way:
         ]
     ~~~
 
-- The [`columns`](../../api/config/js_kanban_columns_config) property of Kanban was updated in the following way:
+- The [`columns`](api/config/js_kanban_columns_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         [
@@ -511,7 +511,7 @@ CSS classes related to the editor were changed in the following way:
         ]
     ~~~
 
-- The [`rows`](../../api/config/js_kanban_rows_config) property of Kanban was updated in the following way:
+- The [`rows`](api/config/js_kanban_rows_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         [
@@ -534,7 +534,7 @@ CSS classes related to the editor were changed in the following way:
         ]
     ~~~
 
-- The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property of Kanban was updated in the following way:
+- The [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property of Kanban was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
@@ -578,7 +578,7 @@ CSS classes related to the editor were changed in the following way:
         });
     ~~~
 
-- The **sort** control in the [`items`](../../api/config/toolbar_items_config) property of Kanban Toolbar was updated in the following way:
+- The **sort** control in the [`items`](api/config/toolbar_items_config.md) property of Kanban Toolbar was updated in the following way:
 
     ~~~jsx {} title="Before v1.4"
         [
@@ -622,7 +622,7 @@ CSS classes related to the editor were changed in the following way:
 
 #### Methods
 
-- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method of Kanban was updated:
+- The [`api.getState()`](api/internal/js_kanban_getstate_method.md) method of Kanban was updated:
 
 ~~~jsx {25-27} title="Before v1.4"
 api.getState();
@@ -689,7 +689,7 @@ api.getState();
 
 #### Properties
 
-- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property of Kanban was updated in the following way:
+- The [`editorShape`](api/config/js_kanban_editorshape_config.md) property of Kanban was updated in the following way:
 
     - the ***dateRange*** parameter
 
@@ -714,7 +714,7 @@ api.getState();
         // other parameters
     ~~~
 
-- The [`items`](../../api/config/toolbar_items_config) property of Toolbar was updated in the following way:
+- The [`items`](api/config/toolbar_items_config.md) property of Toolbar was updated in the following way:
 
 ~~~jsx {} title="Before v1.3"
 items: [
@@ -740,7 +740,7 @@ items: [
 
 #### Methods
 
-- The [`updateCard()`](../../api/methods/js_kanban_updatecard_method) method of Kanban was updated:
+- The [`updateCard()`](api/methods/js_kanban_updatecard_method.md) method of Kanban was updated:
 
 ~~~jsx {} title="Before v1.3"
 updateCard({
@@ -767,7 +767,7 @@ updateCard({
 });
 ~~~
 
-- The [`updateColumn()`](../../api/methods/js_kanban_updatecolumn_method) method of Kanban was updated:
+- The [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) method of Kanban was updated:
 
 ~~~jsx {} title="Before v1.3"
 updateColumn({
@@ -794,7 +794,7 @@ updateColumn({
 });
 ~~~
 
-- The [`updateRow()`](../../api/methods/js_kanban_updaterow_method) method of Kanban was updated:
+- The [`updateRow()`](api/methods/js_kanban_updaterow_method.md) method of Kanban was updated:
 
 ~~~jsx {} title="Before v1.3"
 updateRow({
@@ -823,7 +823,7 @@ updateColumn({
 
 #### Properties
 
-- The [`cardShape`](../../api/config/js_kanban_cardshape_config) property of Kanban was updated in the following way:
+- The [`cardShape`](api/config/js_kanban_cardshape_config.md) property of Kanban was updated in the following way:
 
     - the ***menu*** parameter
 
@@ -883,7 +883,7 @@ updateColumn({
     // other parameters
     ~~~
 
-    - the ***start_date*** and ***end_date*** parameters 
+    - the ***start_date*** and ***end_date*** parameters
 
     ~~~jsx {} title="Before v1.2"
     start_date: true,
@@ -903,7 +903,7 @@ updateColumn({
     // other parameters
     ~~~
 
-- The [`editorShape`](../../api/config/js_kanban_editorshape_config) property of Kanban was updated in the following way:
+- The [`editorShape`](api/config/js_kanban_editorshape_config.md) property of Kanban was updated in the following way:
 
 ~~~jsx {8} title="Before v1.2"
 {
@@ -935,7 +935,7 @@ updateColumn({
 // settings of other fields
 ~~~
 
-- The [`items`](../../api/config/toolbar_items_config) property of Toolbar was updated in the following way:
+- The [`items`](api/config/toolbar_items_config.md) property of Toolbar was updated in the following way:
 
 ~~~jsx {} title="Before v1.2"
 items: [
@@ -986,7 +986,7 @@ items: [
 
 #### Methods
 
-- The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method of Kanban and [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar were updated:
+- The [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method of Kanban and [`setLocale()`](api/methods/toolbar_setlocale_method.md) method of Toolbar were updated:
 
 ~~~jsx {} title="Before v1.2"
 setLocale(kanban.en); // reset to default locale
@@ -996,7 +996,7 @@ setLocale(kanban.en); // reset to default locale
 setLocale(null); // reset to default locale
 ~~~
 
-- The [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) method of Kanban was updated:
+- The [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) method of Kanban was updated:
 
 ~~~jsx {} title="Before v1.2"
 api.getReactiveState();
@@ -1052,7 +1052,7 @@ api.getReactiveState();
 }*/
 ~~~
 
-- The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method of Kanban was updated:
+- The [`api.getState()`](api/internal/js_kanban_getstate_method.md) method of Kanban was updated:
 
 ~~~jsx {} title="Before v1.2"
 api.getState();
@@ -1100,7 +1100,7 @@ api.getState();
 }*/
 ~~~
 
-- The [`api.getStores()`](../../api/internal/js_kanban_getstores_method) method of Kanban was updated:
+- The [`api.getStores()`](api/internal/js_kanban_getstores_method.md) method of Kanban was updated:
 
 ~~~jsx {} title="Before v1.2"
 api.getStores();
@@ -1282,7 +1282,7 @@ const en = {
 
 #### Properties
 
-- The [`columns`](../../api/config/js_kanban_columns_config) property was extended by the new parameters. Starting from v1.1, you can use the ***collapsed, limit*** and ***strictLimit*** configurations.
+- The [`columns`](api/config/js_kanban_columns_config.md) property was extended by the new parameters. Starting from v1.1, you can use the ***collapsed, limit*** and ***strictLimit*** configurations.
 
 ~~~jsx title="Before v1.1"
 const columns = [
@@ -1310,7 +1310,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-- The ***color*** parameter of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property was updated.
+- The ***color*** parameter of the [`cardShape`](api/config/js_kanban_cardshape_config.md) property was updated.
 
 ~~~jsx {4-7} title="Before v1.1"
 const cardShape = {
@@ -1340,7 +1340,7 @@ new kanban.Kanban("#root", {
 
 #### Methods
 
-- The [`addColumn`](../../api/methods/js_kanban_addcolumn_method) method (and [`add-column`](../../api/events/js_kanban_addcolumn_event) event) was updated:
+- The [`addColumn`](api/methods/js_kanban_addcolumn_method.md) method (and [`add-column`](api/events/js_kanban_addcolumn_event.md) event.md) was updated:
 
 ~~~jsx {} title="Before v1.1"
 addColumn(column_data_object);
@@ -1357,7 +1357,7 @@ addColumn({
 });
 ~~~
 
-- The [`addRow`](../../api/methods/js_kanban_addrow_method) method (and [`add-row`](../../api/events/js_kanban_addrow_event) event) was updated:
+- The [`addRow`](api/methods/js_kanban_addrow_method.md) method (and [`add-row`](api/events/js_kanban_addrow_event.md) event.md) was updated:
 
 ~~~jsx {} title="Before v1.1"
 addRow(row_data_object);
@@ -1374,7 +1374,7 @@ addRow({
 });
 ~~~
 
-- The [`updateColumn`](../../api/methods/js_kanban_updatecolumn_method) method (and [`update-column`](../../api/events/js_kanban_updatecolumn_event) event) was updated:
+- The [`updateColumn`](api/methods/js_kanban_updatecolumn_method.md) method (and [`update-column`](api/events/js_kanban_updatecolumn_event.md) event.md) was updated:
 
 ~~~jsx {} title="Before v1.1"
 updateColumn(column_data_object);
@@ -1391,7 +1391,7 @@ updateColumn({
 });
 ~~~
 
-- The [`updateRow`](../../api/methods/js_kanban_updaterow_method) method (and [`update-row`](../../api/events/js_kanban_updaterow_event) event)  was updated:
+- The [`updateRow`](api/methods/js_kanban_updaterow_method.md) method (and [`update-row`](api/events/js_kanban_updaterow_event.md) event.md)  was updated:
 
 ~~~jsx {} title="Before v1.1"
 updateRow(row_data_object);
@@ -1408,7 +1408,7 @@ updateRow({
 });
 ~~~
 
-- The [`updateCard`](../../api/methods/js_kanban_updatecard_method) method (and [`update-card`](../../api/events/js_kanban_updatecard_event) event) was updated:
+- The [`updateCard`](api/methods/js_kanban_updatecard_method.md) method (and [`update-card`](api/events/js_kanban_updatecard_event.md) event.md) was updated:
 
 ~~~jsx {} title="Before v1.1"
 updateCard(card_data_object);
@@ -1425,7 +1425,7 @@ updateCard({
 });
 ~~~
 
-- The [`parse`](../../api/methods/js_kanban_parse_method) method  was updated:
+- The [`parse`](api/methods/js_kanban_parse_method.md) method  was updated:
 
 ~~~jsx {3-5,8-12} title="Before v1.1"
 // you need to reset initial data befor parsing new one

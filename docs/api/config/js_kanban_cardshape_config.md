@@ -204,7 +204,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
     - `clickable` - (optional) - makes the vote icon on the card clickable. If `true`, users can vote for the card using the vote icon on this card. Otherwise, users can vote for the card using the vote icon in the editor only
 - `css` - a function returns a css class that applies to cards conditionally
 - `headerFields` - (optional) an array of objects with the **custom fields** data. Here you can specify the following parameters:
-    - `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](../js_kanban_editorshape_config) property
+    - `key` - (required) a key of the custom field. It is used when configuring the Editor via the [editorShape](api/config/js_kanban_editorshape_config.md) property
     - `label` - (optional) a label of the custom field
     - `css` - (optional) a css class of the custom field
 
@@ -331,7 +331,7 @@ new kanban.Kanban("#root", {
 - The ***menu.items[0].label*** and ***menu.items[0].items*** parameters were removed in v1.7
 - The ***menu.items*** function was updated. The **store** parameter was replaced with the **readonly** one in v1.7
 
-**Related articles:** [Configuration](../../../guides/configuration#cards)
+**Related articles:** [Configuration](guides/configuration.md#cards)
 
 **Related samples:**
 - [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

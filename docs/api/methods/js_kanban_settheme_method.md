@@ -28,7 +28,7 @@ setTheme({
 - `fonts` - (optional) enables/disables fonts loading from the CDN (wxi font)
 
 :::tip
-To specify the initial theme, you can use the [`theme`](../../config/js_kanban_theme_config) property.
+To specify the initial theme, you can use the [`theme`](api/config/js_kanban_theme_config.md) property.
 :::
 
 ### Example
@@ -44,6 +44,6 @@ board.setTheme({ name: "willow", font: false });
 
 **Change log:** The method was added in v1.6
 
-**Related articles:** [Stylization](../../../guides/stylization)
+**Related articles:** [Stylization](guides/stylization.md)
 
 **Related sample:** [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

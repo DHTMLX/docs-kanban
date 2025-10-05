@@ -90,8 +90,8 @@ In this section you can find out how to work with a card editor
 | Topic                                                        | Description                                            |
 | ------------------------------------------------------------ | -------------------------------------------------------|
 | [Autosaving mode](api/config/js_kanban_editorautosave_config.md)| Learn how to enable/disable an editor autosave mode |
-| [Configuring editor fields](../guides/configuration/#editor)| Learn how to configure editor fields         |
-| [Configuring the editor](../guides/configuration/#configuring-the-editor)| Learn how to configure the editor |
+| [Configuring editor fields](guides/configuration.md#editor)| Learn how to configure editor fields                     |
+| [Configuring the editor](guides/configuration.md#configuring-the-editor)| Learn how to configure the editor           |
 | [Updating editor settings](api/methods/js_kanban_setconfig_method.md)| Learn how to update editor settings            |
 
 ## How to work with columns

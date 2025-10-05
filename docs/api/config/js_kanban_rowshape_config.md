@@ -183,6 +183,6 @@ new kanban.Kanban("#root", {
 - The ***menu.items[0].label*** and ***menu.items[0].items*** parameters were removed in v1.7
 - The ***menu.items*** function was updated. The **store** parameter was replaced with the **readonly** one in v1.7
 
-**Related articles:** [Configuration](../../../guides/configuration)
+**Related articles:** [Configuration](guides/configuration.md)
 
 **Related sample:** [Kanban. Changing color of rows via custom menu](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban)

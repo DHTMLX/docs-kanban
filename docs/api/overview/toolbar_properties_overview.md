@@ -6,10 +6,10 @@ description: You can have a Toolbar Properties overview of JavaScript Kanban in 
 
 # Toolbar properties overview
 
-To configure the **Toolbar**, refer to the [Configuration](../../../guides/configuration/#toolbar) section.
+To configure the **Toolbar**, refer to the [Configuration](guides/configuration.md#toolbar) section.
 
-| Name                                                      | Description                                             |
-| --------------------------------------------------------- | ------------------------------------------------------- |
-| [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
-| [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
-| [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |
+| Name                                                       | Description                                             |
+| ---------------------------------------------------------- | ------------------------------------------------------- |
+| [](api/config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
+| [](api/config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
+| [](api/config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |

@@ -62,7 +62,7 @@ To configure the **theme**, you can use the following parameters.
     - `fonts` - (optional) enables/disables fonts loading from the CDN (wxi font)
 
 :::tip
-You can also apply the **Willow** and **Willow-Dark** themes as well. To change the current theme dynamically, you can use the [`setTheme()`](../../methods/js_kanban_settheme_method) method.
+You can also apply the **Willow** and **Willow-Dark** themes as well. To change the current theme dynamically, you can use the [`setTheme()`](api/methods/js_kanban_settheme_method.md) method.
 :::
 
 ### Default config
@@ -93,6 +93,6 @@ const board = new kanban.Kanban("#root", {
 
 **Change log:** The property was added in v1.4
 
-**Related articles:** [Stylization](../../../guides/stylization)
+**Related articles:** [Stylization](guides/stylization.md)
 
 **Related sample:** [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

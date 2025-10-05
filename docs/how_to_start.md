@@ -94,7 +94,7 @@ As parameters, constructors take the IDs of HTML containers where the Kanban and
 Next you can specify configuration properties you want the Kanban component to have when initialized.
 
 To start working with Kanban, first you need to provide the initial data for **cards** and **columns** (and *rows*).
-Beside the initial data, you can configure the [cards](../guides/configuration#cards), [editor](../guides/configuration#editor) and [toolbar](../guides/configuration#toolbar) appearance.
+Beside the initial data, you can configure the [cards](guides/configuration.md#cards), [editor](guides/configuration.md#editor) and [toolbar](guides/configuration.md#toolbar) appearance.
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {

@@ -18,7 +18,7 @@ The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `cardId`   |  number     | *Required*. The ID of the card, from which the vote will be removed.|
+| `cardId`   | number      | *Required*. The ID of the card, from which the vote will be removed.|
 
 ### Payload
 

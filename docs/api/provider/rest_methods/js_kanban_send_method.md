@@ -25,12 +25,12 @@ send(
 
 ### Parameters
 
-| Name       | Type        | Description |
+| Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
-| `url`         |  string     | *Required*. A path to the server where a request is sent to.            |
-| `method`            |string             | *Required*. An HTTP method type (Get, Post, Put, Delete)            |
-| `data`  | object        | *Optional*. Parameters that are sent to the server. By default, parameters of the fired event are sent.  But you are free to add additional parameters with the custom object. See the [Example](#examples) below. |
-| `headers`  |object       | *Optional*. A default header is the **Content-Type** header set to *application/json*. More optional headers can be added with the **customHeaders** parameter. See the [Example](#examples) below. |
+| `url`       | string      | *Required*. A path to the server where a request is sent to.|
+| `method`    | string      | *Required*. An HTTP method type (Get, Post, Put, Delete)|
+| `data`      | object      | *Optional*. Parameters that are sent to the server. By default, parameters of the fired event are sent.  But you are free to add additional parameters with the custom object. See the [Example](#examples) below. |
+| `headers`   | object      | *Optional*. A default header is the **Content-Type** header set to *application/json*. More optional headers can be added with the **customHeaders** parameter. See the [Example](#examples) below. |
 
 ### Response
 
@@ -110,4 +110,4 @@ board.api.setNext(new MyDataProvider(url));
 
 ---
 
-**Related articles:** [Working with server](../../../../guides/working_with_server)
+**Related articles:** [Working with server](guides/working_with_server.md)
