@@ -449,6 +449,7 @@ module.exports = {
                 "guides/integration_with_react",
                 "guides/integration_with_vue",
                 "guides/integration_with_svelte",
+                "guides/integration_with_salesforce",
                 "guides/integration"
             ]
         },
