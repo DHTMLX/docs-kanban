@@ -6,6 +6,6 @@ description: You can have an Internal Export methods overview of JavaScript Kanb
 
 # Export methods
 
-| Name                                          | Description                                        |
-| --------------------------------------------- | -------------------------------------------------- |
-| [](api/internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |
+| Name                                         | Description                                        |
+| -------------------------------------------- | -------------------------------------------------- |
+| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |

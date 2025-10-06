@@ -6,8 +6,8 @@ description: You can have a Toolbar methods overview of JavaScript Kanban in the
 
 # Toolbar methods overview
 
-| Name                                                      | Description                                             |
-| --------------------------------------------------------- | ------------------------------------------------------- |
-| [](api/methods/toolbar_destructor_method.md)              | @getshort(../methods/toolbar_destructor_method.md)      |
-| [](api/methods/toolbar_setconfig_method.md)               | @getshort(../methods/toolbar_setconfig_method.md)       |
-| [](api/methods/toolbar_setlocale_method.md)               | @getshort(../methods/toolbar_setlocale_method.md)       |
+| Name                                                     | Description                                             |
+| -------------------------------------------------------- | ------------------------------------------------------- |
+| [](../methods/toolbar_destructor_method.md)              | @getshort(../methods/toolbar_destructor_method.md)      |
+| [](../methods/toolbar_setconfig_method.md)               | @getshort(../methods/toolbar_setconfig_method.md)       |
+| [](../methods/toolbar_setlocale_method.md)               | @getshort(../methods/toolbar_setlocale_method.md)       |

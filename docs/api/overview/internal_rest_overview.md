@@ -6,11 +6,11 @@ description: You can have an Internal RestDataProvider methods overview of JavaS
 
 # RestDataProvider methods
 
-| Name                                                          | Description                                                        |
-| ------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [](api/provider/rest_methods/js_kanban_getcards_method.md)    | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
-| [](api/provider/rest_methods/js_kanban_getcolumns_method.md)  | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
-| [](api/provider/rest_methods/js_kanban_getlinks_method.md)    | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |
-| [](api/provider/rest_methods/js_kanban_getrows_method.md)     | @getshort(../provider/rest_methods/js_kanban_getrows_method.md)    |
-| [](api/provider/rest_methods/js_kanban_getusers_method.md)    | @getshort(../provider/rest_methods/js_kanban_getusers_method.md)   |
-| [](api/provider/rest_methods/js_kanban_send_method.md)        | @getshort(../provider/rest_methods/js_kanban_send_method.md)       |
+| Name                                                         | Description                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| [](../provider/rest_methods/js_kanban_getcards_method.md)    | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
+| [](../provider/rest_methods/js_kanban_getcolumns_method.md)  | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
+| [](../provider/rest_methods/js_kanban_getlinks_method.md)    | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |
+| [](../provider/rest_methods/js_kanban_getrows_method.md)     | @getshort(../provider/rest_methods/js_kanban_getrows_method.md)    |
+| [](../provider/rest_methods/js_kanban_getusers_method.md)    | @getshort(../provider/rest_methods/js_kanban_getusers_method.md)   |
+| [](../provider/rest_methods/js_kanban_send_method.md)        | @getshort(../provider/rest_methods/js_kanban_send_method.md)       |
