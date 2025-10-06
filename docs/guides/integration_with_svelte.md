@@ -335,6 +335,12 @@ To add the component into the app, open the **App.svelte** file and replace the 
 
 After that, you can start the app to see Kanban loaded with data on a page.
 
-![Kanban initialization](../assets/trial_kanban.png)
+import trial from '@site/static/img/trial_kanban.png';
+
+<img
+    src={trial}
+    alt="Kanban with Svelte"
+    className="img_border"
+/>
 
 Now you know how to integrate DHTMLX Kanban with Svelte. You can customize the code according to your specific requirements. The final advanced example you can find on [**GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
