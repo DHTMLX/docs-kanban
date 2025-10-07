@@ -68,6 +68,6 @@ new kanban.Kanban("#root", {
 
 **Change log:** The ability to display context menu was added in v1.4
 
-**Related articles:** [Customization](../../../guides/customization#custom-cards)
+**Related articles:** [Customization](guides/customization.md#custom-cards)
 
 **Related sample:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban)

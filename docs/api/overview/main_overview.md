@@ -161,7 +161,7 @@ new kanban.Toolbar("#toolbar", {
 ## Toolbar methods
 
 | Name                                                      | Description                                             |
-| :---------------------------------------------------------| :-------------------------------------------------------|
+| :-------------------------------------------------------- | :------------------------------------------------------ |
 | [](../methods/toolbar_destructor_method.md)               | @getshort(../methods/toolbar_destructor_method.md)      |
 | [](../methods/toolbar_setconfig_method.md)                | @getshort(../methods/toolbar_setconfig_method.md)       |
 | [](../methods/toolbar_setlocale_method.md)                | @getshort(../methods/toolbar_setlocale_method.md)       |
@@ -169,7 +169,7 @@ new kanban.Toolbar("#toolbar", {
 ## Toolbar properties
 
 | Name                                                      | Description                                             |
-| :---------------------------------------------------------| :-------------------------------------------------------|
+| :-------------------------------------------------------- | :------------------------------------------------------ |
 | [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
 | [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
 | [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |
@@ -196,7 +196,7 @@ new kanban.Toolbar("#toolbar", {
 ### RestDataProvider routes
 
 | Name                                                        | Description                                            |
-| ----------------------------------------------------------- | -------------------------------------------------------|
+| ----------------------------------------------------------- | ------------------------------------------------------ |
 | [GET `/cards`](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md) | @getshort(../provider/rest_routes/get_routes/js_kanban_get_cards_route.md) |
 | [GET `/columns`](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_columns_route.md) |
 | [GET `/links`](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_links_route.md) |

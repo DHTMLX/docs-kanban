@@ -18,7 +18,7 @@ The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the card to be updated.|
+| `id`       | number      | *Required*. The ID of the card to be updated.|
 
 ### Payload
 
@@ -26,17 +26,17 @@ The server needs to receive a json object with the card object in it that contai
 
 | Name          | Type        | Description |
 | ------------- | ----------- | ----------- |
-| `label`       |  string     | *Required*. The name of the card to be updated.|
-| `description` |  string     | *Required*. The card description.|
+| `label`       | string      | *Required*. The name of the card to be updated.|
+| `description` | string      | *Required*. The card description.|
 | `column`      | number      | *Required*. The ID of the column the card refers to.|
 | `row`         | number      | *Required*. The ID of the row the card refers to.|
-| `start_date`  |  string     | *Required*. The start date in the ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
-| `end_date`    |  string     | *Required*. The end date in the ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
-| `progress`    |  number     | *Required*. The progress bar value in the range from 0 to 100 points.|
-| `attached`    |  object     | *Required*. An array with data of the attached file(s). See the object example here [**cards**](api/config/js_kanban_cards_config.md)|
-| `color`       |  string     | *Required*. The color of the card top line in HEX.|
-| `priority`    |  number     | *Required*. The card priority ID. |
-| `users`       |  object     | *Required*. An array with the assigned users IDs. See the object example here [**cardShape**](api/config/js_kanban_cardshape_config.md) |
+| `start_date`  | string      | *Required*. The start date in the ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
+| `end_date`    | string      | *Required*. The end date in the ISO format yyyy-MM-dd'T'HH:mm:ss.SSSXXX |
+| `progress`    | number      | *Required*. The progress bar value in the range from 0 to 100 points.|
+| `attached`    | object      | *Required*. An array with data of the attached file(s). See the object example here [**cards**](api/config/js_kanban_cards_config.md)|
+| `color`       | string      | *Required*. The color of the card top line in HEX.|
+| `priority`    | number      | *Required*. The card priority ID. |
+| `users`       | object      | *Required*. An array with the assigned users IDs. See the object example here [**cardShape**](api/config/js_kanban_cardshape_config.md)|
 
 Example:
 

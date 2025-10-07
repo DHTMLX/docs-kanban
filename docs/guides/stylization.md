@@ -6,9 +6,9 @@ description: You can learn about the stylization in the documentation of the DHT
 
 # Stylization
 
-Using Kanban, you can stylize **columns**, **rows** and **cards** appearance via the [`columnShape.css`](../../api/config/js_kanban_columnshape_config), [`rowShape.css`](../../api/config/js_kanban_rowshape_config) and [`cardShape.css`](../../api/config/js_kanban_cardshape_config) properties. These properties allow you to style columns, rows and cards conditionally.
+Using Kanban, you can stylize **columns**, **rows** and **cards** appearance via the [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) and [`cardShape.css`](api/config/js_kanban_cardshape_config.md) properties. These properties allow you to style columns, rows and cards conditionally.
 
-You can also apply a custom css class to a separate **column**, **row** and **card** via the [`columns.css`](../../api/config/js_kanban_columns_config), [`rows.css`](../../api/config/js_kanban_rows_config) and [`cards.css`](../../api/config/js_kanban_cards_config) properties.
+You can also apply a custom css class to a separate **column**, **row** and **card** via the [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md) and [`cards.css`](api/config/js_kanban_cards_config.md) properties.
 
 Besides, you can apply custom styles to any part of the Kanban interface to meet your project requirements. For this, the library provides a wide range of CSS variables. Note, that Kanban includes two types of variables:
 - CSS variables related to **Kanban** style
@@ -116,4 +116,4 @@ In this snippet you can see how to create adaptive version of Kanban using custo
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Related articles:** [Customization](../customization)
+**Related articles:** [Customization](guides/customization.md)

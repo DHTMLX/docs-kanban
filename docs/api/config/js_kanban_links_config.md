@@ -37,7 +37,7 @@ For each link you can specify the following parameters (data):
     - ***"parent"*** - defines dependency between parent (master) and child (slave) tasks
 
 :::info
-If you want to load new data for links dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
+If you want to load new data for links dynamically, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method!
 :::
 
 ### Example
@@ -64,6 +64,6 @@ new kanban.Kanban("#root", {
     - The **masterId** parameter was replaced with the **source** parameter
     - The **slaveId** parameter was replaced with the **target** parameter
 
-**Related articles:** [Working with data](../../../guides/working_with_data)
+**Related articles:** [Working with data](guides/working_with_data.md)
 
 **Related sample:** [Kanban. Links between tasks](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)

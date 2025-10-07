@@ -55,7 +55,7 @@ or just include the needed theme on the page from the skins folder:
 By default, Toolbar uses the **Material** theme. You can set it to the **Willow** and **Willow-Dark** themes as well.
 
 :::tip
-To change the current theme dynamically, you can use the [**setConfig()**](../../methods/toolbar_setconfig_method) method.
+To change the current theme dynamically, you can use the [**setConfig()**](api/methods/toolbar_setconfig_method.md) method.
 :::
 
 ### Example
@@ -77,6 +77,6 @@ new Toolbar("#toolbar", {
 
 **Change log:** The property was added in v1.4
 
-**Related articles:** [Stylization](../../../guides/stylization)
+**Related articles:** [Stylization](guides/stylization.md)
 
 **Related sample:** [Kanban. Changing a theme via the CSS class](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

@@ -44,6 +44,6 @@ new kanban.Kanban("#root", {
 
 **Change log:** The property was added in v1.2
 
-**Related articles:** [Configuration](../../../guides/configuration#cards)
+**Related articles:** [Configuration](guides/configuration.md#cards)
 
 **Related sample:** [Kanban. Fixed headers, lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

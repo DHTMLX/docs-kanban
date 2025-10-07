@@ -6,7 +6,7 @@ description: You can have a Toolbar Properties overview of JavaScript Kanban in 
 
 # Toolbar properties overview
 
-To configure the **Toolbar**, refer to the [Configuration](../../../guides/configuration/#toolbar) section.
+To configure the **Toolbar**, refer to the [Configuration](guides/configuration.md#toolbar) section.
 
 | Name                                                      | Description                                             |
 | --------------------------------------------------------- | ------------------------------------------------------- |

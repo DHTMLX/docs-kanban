@@ -46,4 +46,4 @@ Promise.all([
 
 **Change log:** The method was added in v1.5
 
-**Related articles:** [Working with server](../../../../guides/working_with_server)
+**Related articles:** [Working with server](guides/working_with_server.md)

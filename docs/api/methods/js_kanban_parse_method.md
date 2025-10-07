@@ -44,4 +44,4 @@ board.parse({
 
 **Change log:** Starting from v1.1 you don't need to reset initial data in constructor before parsing new data
 
-**Related articles:** [Working with Data](../../../guides/working_with_data#loading-data-from-local-source)
+**Related articles:** [Working with Data](guides/working_with_data.md#loading-data-from-local-source)

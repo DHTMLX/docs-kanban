@@ -18,7 +18,7 @@ The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number   | *Required*. The ID of the card to be moved. In case multiple cards are requested to be moved, the id should be set to 0|
+| `id`       | number      | *Required*. The ID of the card to be moved. In case multiple cards are requested to be moved, the id should be set to 0|
 
 :::info
 When you move multiple cards, make sure that the `id` is set to 0, otherwise (if set to another value), only one card (with this specified id value) will be moved.
@@ -31,10 +31,10 @@ The server expects to receive a json object with the next properties:
 | Name        | Type        | Description |
 | ----------- | ----------- | ----------- |
 | `id`        | number      |*Required*. The ID of the moved card. |
-| `columnId`  |  number     | *Required*. The ID of the column where the card is moved to.|
-| `rowId`     |  number     | *Required*. The ID of the row where the card is moved to.|
-| `before`    |  number     | *Optional*. The ID of the card before which the moved card should be placed.|
-| `batch`     |  object     | *Required for multiselect*. An array of cards objects that are moved.|
+| `columnId`  | number      | *Required*. The ID of the column where the card is moved to.|
+| `rowId`     | number      | *Required*. The ID of the row where the card is moved to.|
+| `before`    | number      | *Optional*. The ID of the card before which the moved card should be placed.|
+| `batch`     | object      | *Required for multiselect*. An array of cards objects that are moved.|
 
 Example:
 

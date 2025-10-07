@@ -13,13 +13,19 @@ JavaScript Kanban is an effective solution for the workflow visualization. The w
 
 ### Toolbar
 
-**Toolbar** of Kanban is a separate part of the interface. It includes a search bar for *searching* cards, a control for *sorting* cards by the specified parameters, two controls for managing history (*undo/redo*) and controls for *adding new columns and rows*. You can flexibly manage the searching and sorting logic as well as change the Toolbar structure by adding custom elements or changing the order of the built-in ones. Read more in the [Configuration](./guides/configuration#toolbar) section.
+**Toolbar** of Kanban is a separate part of the interface. It includes a search bar for *searching* cards, a control for *sorting* cards by the specified parameters, two controls for managing history (*undo/redo*) and controls for *adding new columns and rows*. You can flexibly manage the searching and sorting logic as well as change the Toolbar structure by adding custom elements or changing the order of the built-in ones. Read more in the [Configuration](guides/configuration.md#toolbar) section.
 
-![Kanban Toolbar](assets/js_kanban_toolbar.png)
+import toolbar from '@site/static/img/js_kanban_toolbar.png';
+
+<img
+    src={toolbar}
+    alt="Kanban Toolbar"
+    className="img_border"
+/>
 
 ### Board
 
-The **Board** is main part of Kanban. It consists of the cards distributed into columns and rows (swimlanes). You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](./guides/configuration#cards) section.
+The **Board** is main part of Kanban. It consists of the cards distributed into columns and rows (swimlanes). You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](guides/configuration.md#cards) section.
 
 On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
 
@@ -42,14 +48,26 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
     - `Shift` +  clicking on the corresponding cards, to select multiple cards in the same column
     - `Ctrl (Command)` + clicking on the corresponding cards, to select multiple cards in different columns
 
-![Kanban Board](assets/js_kanban_board.png)
+import board from '@site/static/img/js_kanban_board.png';
+
+<img
+    src={board}
+    alt="Kanban Board"
+    className="img_border"
+/>
 
 ### Editor
 
-The **Editor** is a modal panel that consists of the fields and controls for managing the selected card data. To display the editor, click on the card you want to change. You can flexibly configure the editor structure by adding new fields and controls. Read more in the [Configuration](./guides/configuration#editor) section.
+The **Editor** is a modal panel that consists of the fields and controls for managing the selected card data. To display the editor, click on the card you want to change. You can flexibly configure the editor structure by adding new fields and controls. Read more in the [Configuration](guides/configuration.md#editor) section.
 
-![Kanban Editor](assets/js_kanban_editor.png)
+import editor from '@site/static/img/js_kanban_editor.png';
+
+<img
+    src={editor}
+    alt="Kanban Editor"
+    className="img_border"
+/>
 
 ## What's next
 
-Now you can get down to using Kanban in your application. Follow the directions of the [How to start](./how_to_start) tutorial for guidance.
+Now you can get down to using Kanban in your application. Follow the directions of the [How to start](how_to_start.md) tutorial for guidance.

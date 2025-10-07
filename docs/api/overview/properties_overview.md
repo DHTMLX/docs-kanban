@@ -6,7 +6,7 @@ description: You can have a Properties overview of JavaScript Kanban in the docu
 
 # Kanban properties overview
 
-To configure the **Kanban**, refer to the [Configuration](../../../guides/configuration) section.
+To configure the **Kanban**, refer to the [Configuration](guides/configuration.md) section.
 
 | Name                                                      | Description                                             |
 | --------------------------------------------------------- | ------------------------------------------------------- |
