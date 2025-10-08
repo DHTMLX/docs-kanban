@@ -73,6 +73,17 @@ salesForceEnv.detect();
 | :------------------- | :-------------------------------------------------------------------------------- |
 | `enableSalesForce()` | Manually sets the Salesforce environment when automatic detection is unavailable  |
 
+```jsx {5,8}
+import { 
+    Kanban, 
+    Toolbar, 
+    salesForceEnv,
+    enableSalesForce
+} from "@dhx/trial-kanban";
+
+enableSalesForce();
+```
+
 ## Workflow steps
 
 1. Add the `data-wx-root="true"` attribute to your LWC container
