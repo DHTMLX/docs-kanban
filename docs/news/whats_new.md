@@ -10,11 +10,13 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.7.0
 
-Released on October Day, 2025
+Released on October 14, 2025
 
-### New functionality
+### Salesforce Integration
 
-Starting from v1.7 you can leverage JavaScript Kanban within Salesforce environment. Refer to the following guide for more information: [Integration with Selesforce](guides/integration_with_salesforce.md). You can also explore our [GitHub example](https://github.com/DHTMLX/salesforce-lwc-demo) or run [Online demo](https://dhtmlx-dev-ed.develop.lightning.force.com/) (*Login*: ***user***, *Password*: ***demo***).
+Starting from v1.7 you can leverage JavaScript Kanban within Salesforce environment. Refer to the following guide for more information: [**Integration with Salesforce**](guides/integration_with_salesforce.md).
+
+You can also explore our [**GitHub example**](https://github.com/DHTMLX/salesforce-lwc-demo) or run [**Online demo**](https://dhtmlx-dev-ed.develop.lightning.force.com/) (*Login*: ***user***, *Password*: ***demo***).
 
 ### New API
 
