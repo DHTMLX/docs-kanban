@@ -10,7 +10,7 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 ## Version 1.7.0
 
-Released on October Day, 2025
+Released on October 14, 2025
 
 ### Salesforce Integration
 
