@@ -12,6 +12,8 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 Released on October 14, 2025
 
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+
 ### Salesforce Integration
 
 Starting from v1.7 you can leverage JavaScript Kanban within Salesforce environment. Refer to the following guide for more information: [**Integration with Salesforce**](guides/integration_with_salesforce.md).
