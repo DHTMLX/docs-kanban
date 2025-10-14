@@ -34,7 +34,7 @@ const board = new kanban.Kanban("#root", {
     cards,
 });
 // apply the "de" locale to Kanban
-board.setLocale(de);
+board.setLocale(kanban.locales["de"]);
 // apply the default locale to Kanban
 board.setLocale(); // or board.setLocale(null);
 ~~~

@@ -8,6 +8,60 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
+## Version 1.7.0
+
+Released on October 14, 2025
+
+### Salesforce Integration
+
+Starting from v1.7 you can leverage JavaScript Kanban within Salesforce environment. Refer to the following guide for more information: [**Integration with Salesforce**](guides/integration_with_salesforce.md).
+
+You can also explore our [**GitHub example**](https://github.com/DHTMLX/salesforce-lwc-demo) or run [**Online demo**](https://dhtmlx-dev-ed.develop.lightning.force.com/) (*Login*: ***user***, *Password*: ***demo***).
+
+### New API
+
+- #### Events
+
+    - [`undo`](api/events/js_kanban_undo_event.md)
+    - [`redo`](api/events/js_kanban_redo_event.md)
+
+- #### Methods
+
+    - [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md)
+    - [`detach()`](api/internal/js_kanban_detach_method.md)
+
+### Updates
+
+- #### Methods
+
+    - The [`on`](api/internal/js_kanban_on_method.md) internal method was extended by `config.tag` and `config.intercept` parameters
+    - The [`intercept`](api/internal/js_kanban_intercept_method.md) internal method was extended by `config.tag` and `config.intercept` parameters
+
+- #### Properties
+
+    - The [`links`](api/config/js_kanban_links_config.md) property was updated in the following way:
+        - The `masterId` parameter was replaced with the `source` parameter
+        - The `slaveId` parameter was replaced with the `target` parameter
+
+    - The [`editorShape`](api/config/js_kanban_editorshape_config.md) property was updated. The `clearButton` parameter was replaced with the `clear` one
+
+    - The [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) function was updated. The `store` parameter was replaced with the `readonly` one
+
+    - The [`cards[i].attached[i]`](api/config/js_kanban_cards_config.md) property was extended by the `size` parameter
+
+### Removed API
+
+- The `editorAutoSave` property was removed. Use the [`editor.autoSave`](api/config/js_kanban_editor_config.md) property instead
+
+- The `dragItemsCoords` and `dropAreasCoords` parameters were removed from the [`start-drag-card`](api/events/js_kanban_startdragcard_event.md)
+
+### Fixes
+
+- When a user uploads a batch of files or multiple big files, the form is updated before all the files are fully loaded to the server. In this case cards data sent to the server is incorrect
+- File size shown only for newly loaded files
+- Year and month values are not updated after a user clicks the **Done** button in the editor
+- The expandable textarea of comments moves button out of click zone
+
 ## Version 1.6.5
 
 Released on July 14, 2025
@@ -72,42 +126,40 @@ Released on November 13, 2024
 
 ### New functionality
 
-- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
-- The ability to change the content of column headers via the [`columnShape`](../../api/config/js_kanban_columnshape_config) property (see the [**example**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
-- The ability to change the view and content of search results via the [`items.searchResult`](../../api/config/toolbar_items_config) property of the Toolbar **search** control (see the [**example**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
-- The ability to display the editor as a modal window via the [`editor.placement`](../../api/config/js_kanban_editor_config) property (see the [**example**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
-- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clickable`](../../api/config/js_kanban_cardshape_config) property (see the [**example**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
-- The ability to apply a theme via the [`setTheme()`](../../api/methods/js_kanban_settheme_method) method
+- The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) property (see the [**example**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
+- The ability to change the content of column headers via the [`columnShape`](api/config/js_kanban_columnshape_config.md) property (see the [**example**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
+- The ability to change the view and content of search results via the [`items.searchResult`](api/config/toolbar_items_config.md) property of the Toolbar **search** control (see the [**example**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
+- The ability to display the editor as a modal window via the [`editor.placement`](api/config/js_kanban_editor_config.md) property (see the [**example**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
+- The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) property (see the [**example**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
 
 ### Updates
 
 - #### Properties
 
-    - The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***users.maxCount*** and ***votes.clickable*** parameters
-    - The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***headerTemplate*** and ***collapsedTemplate*** parameters
-    - The [`editor`](../../api/config/js_kanban_editor_config) property is extended by the ***placement*** parameter
-    - The [`items`](../../api/config/toolbar_items_config) property of the Toolbar **search** control is extended by the ***searchResult*** parameter
+    - The [`cardShape`](api/config/js_kanban_cardshape_config.md) property is extended by the ***users.maxCount*** and ***votes.clickable*** parameters
+    - The [`columnShape`](api/config/js_kanban_columnshape_config.md) property is extended by the ***headerTemplate*** and ***collapsedTemplate*** parameters
+    - The [`editor`](api/config/js_kanban_editor_config.md) property is extended by the ***placement*** parameter
+    - The [`items`](api/config/toolbar_items_config.md) property of the Toolbar **search** control is extended by the ***searchResult*** parameter
 
 - #### Events
 
-    - The [`set-edit`](../../api/events/js_kanban_setedit_event) event is extended by the ***eventSource*** parameter  (see the [**example**](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban))
+    - The [`set-edit`](api/events/js_kanban_setedit_event.md) event is extended by the ***eventSource*** parameter  (see the [**example**](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban))
 
 - #### Methods
 
-    - The [`setConfig()`](../../api/methods/js_kanban_setconfig_method) method functionality was updated in the following way:
+    - The [`setConfig()`](api/methods/js_kanban_setconfig_method.md) method functionality was updated in the following way:
 
         - The method doesn't change history (you cannot change history at all)
-        - The method doesn't change themes (use the new [`setTheme()`](../../api/methods/js_kanban_settheme_method) method instead)
         - The method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
 
-    - The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
-    - The `api` parameter of the Toolbar [`setLocale()`](../../api/methods/toolbar_setlocale_method) method was deprecated
+    - The [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method doesn't destroy Kanban datastore. You don't need to recreate event listeners and reattach Toolbar to Kanban
+    - The `api` parameter of the Toolbar [`setLocale()`](api/methods/toolbar_setlocale_method.md) method was deprecated
 
 ### Fixes
 
 - A comment in progress of editing can be removed and text area for new comments disappears
 - Add missing localization strings
-- Drag-n-drop does not work if you combine [`scrollType: "column"`](../../api/config/js_kanban_scrolltype_config) and [`renderType: "lazy"`](../../api/config/js_kanban_rendertype_config) settings
+- Drag-n-drop does not work if you combine [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md) and [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) settings
 - The editor cannot be closed via the close icon
 - The right part of the editor has same color as the progress bar background (in the Willow skin only)
 
@@ -119,7 +171,7 @@ Released on September 12, 2024
 
 - The "Make cover" button does not appear if the extention is uppercase
 - Clicking on a disabled Multiselect control occurs an error
-- Scrolling after the [`addCard()`](../../api/methods/js_kanban_addcard_method) method call throws an error with [column scroll](../../api/config/js_kanban_scrolltype_config) and [lazy rendering](../../api/config/js_kanban_rendertype_config)
+- Scrolling after the [`addCard()`](api/methods/js_kanban_addcard_method.md) method call throws an error with [column scroll](api/config/js_kanban_scrolltype_config.md) and [lazy rendering](api/config/js_kanban_rendertype_config.md)
 - No comments are saved as "" instead of []
 - Editor style is overridden by global styles with a same-name non-unique class selector. [See the migration section](news/migration.md/#1512---1513)
 
@@ -151,9 +203,8 @@ Released on February 29, 2024
 ### Fixes
 
 - Broken build on npm server
-- Add the `select` parameter into the [`duplicate-card`](../../api/events/js_kanban_duplicatecard_event) event and the [`duplicateCard()`](../../api/methods/js_kanban_duplicatecard_method) method
+- Add the `select` parameter into the [`duplicate-card`](api/events/js_kanban_duplicatecard_event.md) event and the [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) method
 - Incorrect styles for the comment field in the Kanban editor
-- Regression in changing theme
 
 ## Version 1.5.9
 
@@ -179,7 +230,7 @@ Released on November 14, 2023
 
 ### Updates
 
-- The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar was extended by the ***api*** parameter
+- The [`setLocale()`](api/methods/toolbar_setlocale_method.md) method of Toolbar was extended by the ***api*** parameter
 
 ### Fixes
 
@@ -234,21 +285,21 @@ Released on June 15, 2023
 
 - #### Methods
 
-    - [`addLink()`](../../api/methods/js_kanban_addlink_method)
-    - [`deleteLink()`](../../api/methods/js_kanban_deletelink_method)
-    - [`getLinks()`](../../api/provider/rest_methods/js_kanban_getlinks_method)
+    - [`addLink()`](api/methods/js_kanban_addlink_method.md)
+    - [`deleteLink()`](api/methods/js_kanban_deletelink_method.md)
+    - [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md)
 
 - #### Routes
 
-    - [`DELETE /links`](../../api/provider/rest_routes/delete_routes/js_kanban_delete_links_route)
-    - [`GET /links`](../../api/provider/rest_routes/get_routes/js_kanban_get_links_route)
-    - [`POST /links`](../../api/provider/rest_routes/post_routes/js_kanban_post_links_route)
+    - [`DELETE /links`](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)
+    - [`GET /links`](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)
+    - [`POST /links`](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)
 
 ### Updates
 
 - #### Properties
 
-    - The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***fixedHeaders*** parameter.
+    - The [`columnShape`](api/config/js_kanban_columnshape_config.md) property is extended by the ***fixedHeaders*** parameter.
 
 ### Fixes
 
@@ -298,44 +349,42 @@ Released on March 21, 2023
 
 - #### Events
 
-    - [`add-comment`](../../api/events/js_kanban_addcomment_event)
-    - [`add-link`](../../api/events/js_kanban_addlink_event)
-    - [`delete-comment`](../../api/events/js_kanban_deletecomment_event)
-    - [`delete-link`](../../api/events/js_kanban_deletelink_event)
-    - [`drag-card`](../../api/events/js_kanban_dragcard_event)
-    - [`end-drag-card`](../../api/events/js_kanban_enddragcard_event)
-    - [`start-drag-card`](../../api/events/js_kanban_startdragcard_event)
-    - [`update-comment`](../../api/events/js_kanban_updatecomment_event)
+    - [`add-comment`](api/events/js_kanban_addcomment_event.md)
+    - [`add-link`](api/events/js_kanban_addlink_event.md)
+    - [`delete-comment`](api/events/js_kanban_deletecomment_event.md)
+    - [`delete-link`](api/events/js_kanban_deletelink_event.md)
+    - [`drag-card`](api/events/js_kanban_dragcard_event.md)
+    - [`end-drag-card`](api/events/js_kanban_enddragcard_event.md)
+    - [`start-drag-card`](api/events/js_kanban_startdragcard_event.md)
+    - [`update-comment`](api/events/js_kanban_updatecomment_event.md)
 
 - #### Methods
 
-    - [`addComment()`](../../api/methods/js_kanban_addcomment_method)
-    - [`deleteComment()`](../../api/methods/js_kanban_deletecomment_method)
-    - [`updateComment()`](../../api/methods/js_kanban_updatecomment_method)
+    - [`addComment()`](api/methods/js_kanban_addcomment_method.md)
+    - [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md)
+    - [`updateComment()`](api/methods/js_kanban_updatecomment_method.md)
 
 - #### Properties
 
-    - [`currentUser`](../../api/config/js_kanban_currentuser_config)
-    - [`links`](../../api/config/js_kanban_links_config)
-    - [`theme`](../../api/config/js_kanban_theme_config) (Kanban)
-    - [`theme`](../../api/config/toolbar_items_config) (Toolbar)
+    - [`currentUser`](api/config/js_kanban_currentuser_config.md)
+    - [`links`](api/config/js_kanban_links_config.md)
 
 ### Updates
 
 - #### Methods
 
-    - The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
+    - The [`api.getState()`](api/internal/js_kanban_getstate_method.md) method is updated
 
 - #### Properties
 
-    - The [`cards`](../../api/config/js_kanban_cards_config) property is extended by the ***css***, ***comments*** and ***votes*** parameters
-    - The [`cardShape`](../../api/config/js_kanban_cardshape_config) property is extended by the ***comments***, ***votes*** (see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) and ***css*** (see the [**example**](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) parameters.
-    - The [`cardTemplate`](../../api/config/js_kanban_cardtemplate_config) property has an ability to display context menu
-    - The [`columns`](../../api/config/js_kanban_columns_config) property is extended by the ***css*** (see the [**example**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) and ***overlay*** (see the [**example**](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)) parameters
-    - The [`columnShape`](../../api/config/js_kanban_columnshape_config) property is extended by the ***css*** parameter (see the [**example**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
-    - The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the [***comments***](../../guides/configuration/#comments-type) and [***links***](../../guides/configuration/#links-type) types, and ***format*** parameter for *date/dateRange* types
-    - The [`rows`](../../api/config/js_kanban_rows_config) property is extended by the ***css***  parameter (see the [**example**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
-    - The [`rowShape`](../../api/config/js_kanban_rowshape_config) property is extended by the ***css*** parameter (see the [**example**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
+    - The [`cards`](api/config/js_kanban_cards_config.md) property is extended by the ***css***, ***comments*** and ***votes*** parameters
+    - The [`cardShape`](api/config/js_kanban_cardshape_config.md) property is extended by the ***comments***, ***votes*** (see the [**example**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) and ***css*** (see the [**example**](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) parameters.
+    - The [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property has an ability to display context menu
+    - The [`columns`](api/config/js_kanban_columns_config.md) property is extended by the ***css*** (see the [**example**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) and ***overlay*** (see the [**example**](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)) parameters
+    - The [`columnShape`](api/config/js_kanban_columnshape_config.md) property is extended by the ***css*** parameter (see the [**example**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
+    - The [`editorShape`](api/config/js_kanban_editorshape_config.md) property is extended by the [***comments***](guides/configuration.md#comments-type) and [***links***](guides/configuration.md#links-type) types, and ***format*** parameter for *date/dateRange* types
+    - The [`rows`](api/config/js_kanban_rows_config.md) property is extended by the ***css***  parameter (see the [**example**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
+    - The [`rowShape`](api/config/js_kanban_rowshape_config.md) property is extended by the ***css*** parameter (see the [**example**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
 
 ### Deprecated API
 
@@ -371,45 +420,45 @@ Released on September 29, 2022
 ### New API
 
 - **Events:**
-    [`duplicate-card`](../../api/events/js_kanban_duplicatecard_event)
+    [`duplicate-card`](api/events/js_kanban_duplicatecard_event.md)
 
 - **Methods:**
-    [`duplicateCard()`](../../api/methods/js_kanban_duplicatecard_method),
-    [`export.json()`](../../api/internal/js_kanban_json_method),
-    [`getUsers()`](../../api/provider/rest_methods/js_kanban_getusers_method),
-    [`redo()`](../../api/methods/js_kanban_redo_method) and
-    [`undo()`](../../api/methods/js_kanban_undo_method)
+    [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md),
+    [`export.json()`](api/internal/js_kanban_json_method.md),
+    [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md),
+    [`redo()`](api/methods/js_kanban_redo_method.md) and
+    [`undo()`](api/methods/js_kanban_undo_method.md)
 
 - **Properties:**
-    [`editor`](../../api/config/js_kanban_editor_config) and
-    [`history`](../../api/config/js_kanban_history_config)
+    [`editor`](api/config/js_kanban_editor_config.md) and
+    [`history`](api/config/js_kanban_history_config.md)
 
 - **Common settings:**
-    [`$meta`](../../api/common/js_kanban_meta_parameter)
+    [`$meta`](api/common/js_kanban_meta_parameter.md)
 
 ### Deprecated API
 
 - **Properties:**
-    [`editorAutoSave`](../../api/config/js_kanban_editorautosave_config)
+    [`editorAutoSave`](api/config/js_kanban_editorautosave_config.md)
 
 ### Updates
 
 - #### Events
 
-    - The [`update-card`](../../api/events/js_kanban_updatecard_event) event of Kanban is updated
-    - The [`update-column`](../../api/events/js_kanban_updatecolumn_event) event of Kanban is updated
-    - The [`update-row`](../../api/events/js_kanban_updaterow_event) event of Kanban is updated
+    - The [`update-card`](api/events/js_kanban_updatecard_event.md) event of Kanban is updated
+    - The [`update-column`](api/events/js_kanban_updatecolumn_event.md) event of Kanban is updated
+    - The [`update-row`](api/events/js_kanban_updaterow_event.md) event of Kanban is updated
 
 - #### Methods
 
-    - The [`updateCard()`](../../api/methods/js_kanban_updatecard_method) method of Kanban is updated
-    - The [`updateColumn()`](../../api/methods/js_kanban_updatecolumn_method) method of Kanban is updated
-    - The [`updateRow()`](../../api/methods/js_kanban_updaterow_method) method of Kanban is updated
+    - The [`updateCard()`](api/methods/js_kanban_updatecard_method.md) method of Kanban is updated
+    - The [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) method of Kanban is updated
+    - The [`updateRow()`](api/methods/js_kanban_updaterow_method.md) method of Kanban is updated
 
 - #### Properties
 
-    - The [`items`](../../api/config/toolbar_items_config) property of Toolbar is extended by the ***"undo"*** and ***"redo"*** parameters (controls)
-    - The [`editorShape`](../../api/config/js_kanban_editorshape_config) property is extended by the ***dateRange*** type
+    - The [`items`](api/config/toolbar_items_config.md) property of Toolbar is extended by the ***"undo"*** and ***"redo"*** parameters (controls)
+    - The [`editorShape`](api/config/js_kanban_editorshape_config.md) property is extended by the ***dateRange*** type
 
 ## Version 1.2.2
 
@@ -446,49 +495,49 @@ Released on June 29, 2022
 ### New API
 
 - **Events:**
-    [`scroll`](../../api/events/js_kanban_scroll_event),
-    [`set-edit`](../../api/events/js_kanban_setedit_event), and
-    [`set-sort`](../../api/events/js_kanban_setsort_event)
+    [`scroll`](api/events/js_kanban_scroll_event.md),
+    [`set-edit`](api/events/js_kanban_setedit_event.md), and
+    [`set-sort`](api/events/js_kanban_setsort_event.md)
 
 - **Methods:**
-    [`scroll()`](../../api/methods/js_kanban_scroll_method),
-    [`setEdit()`](../../api/methods/js_kanban_setedit_method) and
-    [`setSort()`](../../api/methods/js_kanban_setsort_method)
+    [`scroll()`](api/methods/js_kanban_scroll_method.md),
+    [`setEdit()`](api/methods/js_kanban_setedit_method.md) and
+    [`setSort()`](api/methods/js_kanban_setsort_method.md)
 
 - **Properties:**
-    [`cardHeight`](../../api/config/js_kanban_cardheight_config),
-    [`columnShape`](../../api/config/js_kanban_columnshape_config),
-    [`rowShape`](../../api/config/js_kanban_rowshape_config), 
-    [`renderType`](../../api/config/js_kanban_rendertype_config), and
-    [`scrollType`](../../api/config/js_kanban_scrolltype_config)
+    [`cardHeight`](api/config/js_kanban_cardheight_config.md),
+    [`columnShape`](api/config/js_kanban_columnshape_config.md),
+    [`rowShape`](api/config/js_kanban_rowshape_config.md), 
+    [`renderType`](api/config/js_kanban_rendertype_config.md), and
+    [`scrollType`](api/config/js_kanban_scrolltype_config.md)
 
 ### Updates
 
 - #### Methods
 
-    - The [`api.getReactiveState()`](../../api/internal/js_kanban_getreactivestate_method) method is updated
-    - The [`api.getState()`](../../api/internal/js_kanban_getstate_method) method is updated
-    - The [`api.getStores()`](../../api/internal/js_kanban_getstores_method) method is updated
-    - The [`setLocale()`](../../api/methods/js_kanban_setlocale_method) method of Kanban is updated
-    - The [`setLocale()`](../../api/methods/toolbar_setlocale_method) method of Toolbar is updated
+    - The [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) method is updated
+    - The [`api.getState()`](api/internal/js_kanban_getstate_method.md) method is updated
+    - The [`api.getStores()`](api/internal/js_kanban_getstores_method.md) method is updated
+    - The [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method of Kanban is updated
+    - The [`setLocale()`](api/methods/toolbar_setlocale_method.md) method of Toolbar is updated
 
 - #### Properties
 
-    - The [`items`](../../api/config/toolbar_items_config) property of Toolbar is updated
-    - The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property are updated
-    - The ***multiselect*** type of the [`editorShape`](../../api/config/js_kanban_editorshape_config) property is updated
+    - The [`items`](api/config/toolbar_items_config.md) property of Toolbar is updated
+    - The ***start_date***, ***end_date***, ***menu*** and ***users*** parameters (fields) of the [`cardShape`](api/config/js_kanban_cardshape_config.md) property are updated
+    - The ***multiselect*** type of the [`editorShape`](api/config/js_kanban_editorshape_config.md) property is updated
 
 #### Common
 
-- Prefixes of CSS classes (*see the [Stylization](../../guides/stylization) section*)
-- Locale structure (*see the [Localization](../../guides/localization) section*)
+- Prefixes of CSS classes (*see the [Stylization](guides/stylization.md) section*)
+- Locale structure (*see the [Localization](guides/localization.md) section*)
 
 ### Fixes
 
 - Binding cards to swimlanes via the `rowKey` config works incorrectly
 - Clicking on card menu opens editor
 - Dragging several cards works incorrectly
-- Editing cards when `select: false` (**readonly** config) works incorrectly
+- Editing cards when `select: false` (**readonly** config.md) works incorrectly
 - Selecting new added cards via the `addCard()` method works incorrectly
 - The `label: false` and `menu: false` parameters of the `cardShape` property work incorrectly
 
@@ -516,48 +565,48 @@ Released on February 15, 2022
 - The ability to *move* columns via the context menu (a 3 dots icon)
 - The ability to *move* rows via the context menu (a 3 dots icon)
 - The ability to *select multiple cards* of the same column using the familiar **Shift** + **click** combination
-- The ability to use [TypeScript definitions](../../guides/typescript_support) of Kanban
+- The ability to use [TypeScript definitions](guides/typescript_support.md) of Kanban
 
 ### New API
 
 - New **events** for moving columns and rows: 
-    [`move-column`](../../api/events/js_kanban_movecolumn_event)
+    [`move-column`](api/events/js_kanban_movecolumn_event.md)
     and
-    [`move-row`](../../api/events/js_kanban_moverow_event)
+    [`move-row`](api/events/js_kanban_moverow_event.md)
 - New **methods** for moving columns and rows: 
-    [`moveColumn()`](../../api/methods/js_kanban_movecolumn_method) 
+    [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) 
     and
-    [`moveRow()`](../../api/methods/js_kanban_moverow_method)
+    [`moveRow()`](api/methods/js_kanban_moverow_method.md)
 
 ### Updates
 
 #### Properties
 
-- The [`cards`](../../api/config/js_kanban_cards_config) property is became optional
+- The [`cards`](api/config/js_kanban_cards_config.md) property is became optional
 
-- The [`columns`](../../api/config/js_kanban_columns_config) property is became optional and extended by the following parameters:
+- The [`columns`](api/config/js_kanban_columns_config.md) property is became optional and extended by the following parameters:
     - ***collapsed***
     - ***limit***
     - ***strictLimit***
 
-- The ***color*** parameter of the [`cardShape`](../../api/config/js_kanban_cardshape_config) property is updated
+- The ***color*** parameter of the [`cardShape`](api/config/js_kanban_cardshape_config.md) property is updated
 
 #### Methods
 
-- The [`addColumn`](../../api/methods/js_kanban_addcolumn_method) method is updated
-- The [`addRow`](../../api/methods/js_kanban_addrow_method) method is updated
-- The [`updateCard`](../../api/methods/js_kanban_updatecard_method) method is updated
-- The [`updateColumn`](../../api/methods/js_kanban_updatecolumn_method) method is updated
-- The [`updateRow`](../../api/methods/js_kanban_updaterow_method) method is updated
-- The [`parse`](../../api/methods/js_kanban_parse_method) method is updated
+- The [`addColumn`](api/methods/js_kanban_addcolumn_method.md) method is updated
+- The [`addRow`](api/methods/js_kanban_addrow_method.md) method is updated
+- The [`updateCard`](api/methods/js_kanban_updatecard_method.md) method is updated
+- The [`updateColumn`](api/methods/js_kanban_updatecolumn_method.md) method is updated
+- The [`updateRow`](api/methods/js_kanban_updaterow_method.md) method is updated
+- The [`parse`](api/methods/js_kanban_parse_method.md) method is updated
 
 #### Events
 
-- The [`add-column`](../../api/events/js_kanban_addcolumn_event) event is updated
-- The [`add-row`](../../api/events/js_kanban_addrow_event) event is updated
-- The [`update-card`](../../api/events/js_kanban_updatecard_event) event is updated
-- The [`update-column`](../../api/events/js_kanban_updatecolumn_event) event is updated
-- The [`update-row`](../../api/events/js_kanban_updaterow_event) event is updated
+- The [`add-column`](api/events/js_kanban_addcolumn_event.md) event is updated
+- The [`add-row`](api/events/js_kanban_addrow_event.md) event is updated
+- The [`update-card`](api/events/js_kanban_updatecard_event.md) event is updated
+- The [`update-column`](api/events/js_kanban_updatecolumn_event.md) event is updated
+- The [`update-row`](api/events/js_kanban_updaterow_event.md) event is updated
 
 ## Version 1.0
 
@@ -590,7 +639,7 @@ Released on November 23, 2021
     - rename columns and rows
     - collapse/expand rows
 
-- [Localization](../../guides/localization)
-- [Integration with backend](../../guides/working_with_server) (Go and Node)
+- [Localization](guides/localization.md)
+- [Integration with backend](guides/working_with_server.md) (Go and Node)
 - Cross browser compatibility
 - Touch support

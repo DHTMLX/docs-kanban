@@ -21,7 +21,7 @@ setConfig(config: object): void;
 - `config` - (required) the object of the Kanban configuration. See the full list of properties [here](api/overview/main_overview.md#kanban-properties)
 
 :::tip
-Using this method, you can configure the Kanban widget as well as load data to it. The method doesn't change history (you cannot change history at all) and themes (use the [`setTheme()`](api/methods/js_kanban_settheme_method.md) method instead).
+Using this method, you can configure the Kanban widget as well as load data to it. The method doesn't change history (you cannot change history at all).
 :::
 
 ### Example

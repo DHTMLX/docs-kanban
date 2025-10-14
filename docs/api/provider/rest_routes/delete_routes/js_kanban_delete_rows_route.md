@@ -18,7 +18,7 @@ The next parameter is sent in the request line:
 
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *Required*. The ID of the row to be deleted.|
+| `id`       | number      | *Required*. The ID of the row to be deleted.|
 
 ### Payload
 

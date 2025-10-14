@@ -116,7 +116,7 @@ If styles are not applied, ensure that:
 **Change log:** The **css** and **overlay** parameters were added in v1.4
 
 **Related article:**
-- [Working with data](../../../guides/working_with_data)
+- [Working with data](guides/working_with_data.md)
 - [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 
 **Related samples:**

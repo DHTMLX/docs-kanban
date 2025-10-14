@@ -26,14 +26,14 @@ Example:
 [
     {
         "id": 1,
-        "masterId": 2,
-        "slaveId": 5,
+        "source": 2,
+        "target": 5,
         "relation": "relatesTo",
     },
     {
         "id": 2,
-        "masterId": 4,
-        "slaveId": 9,
+        "source": 4,
+        "target": 9,
         "relation": "relatesTo",
     },
 ]

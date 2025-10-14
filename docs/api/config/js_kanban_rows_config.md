@@ -24,7 +24,7 @@ rows?: [
 ~~~
 
 :::info
-To create Swimlanes you need to specify the corresponding data in the array of the **rows** property. You can collapse/expand, rename, delete and move swimlanes via UI or using [related API](../../../../kanban/howtos/#how-to-work-with-rows-swimlanes)
+To create Swimlanes you need to specify the corresponding data in the array of the **rows** property. You can collapse/expand, rename, delete and move swimlanes via UI or using [related API](howtos.md#how-to-work-with-rows-swimlanes)
 :::
 
 ### Parameters
@@ -37,7 +37,7 @@ For each row (swimlane) you can specify the following parameters (data):
 - `css` - (optional) defines css styles for a separate row
 
 :::info
-If you want to load new data for rows (swimlanes) dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
+If you want to load new data for rows (swimlanes) dynamically, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method!
 :::
 
 ### Example
@@ -59,7 +59,7 @@ new kanban.Kanban("#root", {
 **Change log:** The ***css*** parameter was added in v1.4
 
 **Related articles:**
-- [Working with data](../../../guides/working_with_data)
+- [Working with data](guides/working_with_data.md)
 - [updateRow()](api/methods/js_kanban_updaterow_method.md)
 
 **Related sample:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

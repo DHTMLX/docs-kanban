@@ -29,6 +29,7 @@ cards?: [
                 coverURL?: string,
                 name?: string,
                 isCover?: boolean
+                size?: number
             }, {...}
         ],
         color?: string,
@@ -69,16 +70,17 @@ For each card you can specify the following parameters (data):
     - `coverURL` - (optional) a path to the image to be set as a cover
     - `name` - (optional) a file name
     - `isCover` - (optional) enables a cover image. If **true**, the cover image will be downloaded via the "coverURL" url
+    - `size` - (optional) a size of the attached file (in bytes)
 - `color` - (optional) a valid HEX color code. It is the color of the card top line
-- `users` - (optional) an **array** with **ID**s for multiple assigned users or **string | number**  for a single assigned user. To specify the assigned users, you need to define an array with users data in the [cardShape.users](../js_kanban_cardshape_config) property. The users are displayed in the **Users** field
+- `users` - (optional) an **array** with **ID**s for multiple assigned users or **string | number**  for a single assigned user. To specify the assigned users, you need to define an array with users data in the [cardShape.users](api/config/js_kanban_cardshape_config.md) property. The users are displayed in the **Users** field
 
 :::info
-`users?: array` - specify **array** with users **ID**s, if you use the [**multiselect**](../js_kanban_editorshape_config/#--parameters-for-combo-select-and-multiselect-types) editor type to assign multiple users
+`users?: array` - specify **array** with users **ID**s, if you use the [**multiselect**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) editor type to assign multiple users
 
-`users?: string | number` - specify a single **ID**, if you use the [**combo** or **select**](../js_kanban_editorshape_config/#--parameters-for-combo-select-and-multiselect-types) editor types to assign a single user
+`users?: string | number` - specify a single **ID**, if you use the [**combo** or **select**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) editor types to assign a single user
 :::
 
-- `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape.priority](../js_kanban_cardshape_config) property. It is displayed in the **Priority** field
+- `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape.priority](api/config/js_kanban_cardshape_config.md) property. It is displayed in the **Priority** field
 - `css` - (optional) defines css styles for a separate card
 - `votes` - (optional) an array of user IDs
 - `comments` - (optional) an array of objects with data of comments. For each comment's object you can specify the following parameters:
@@ -87,15 +89,15 @@ For each card you can specify the following parameters (data):
     - `cardId` - (required) an **ID** of the card that the comment belongs to
     - `text` - (optional) a text of the comment. It also can contain html markup
     - `date` - (optional) a Date object (do not specify a string date). The date when the comment was posted. It is not updated after editing
-- `custom_key` - (optional) a custom key of the card. You can specify the custom keys to place the card into column and row. See the [columnKey](../js_kanban_columnkey_config) and [rowKey](../js_kanban_rowkey_config) properties
+- `custom_key` - (optional) a custom key of the card. You can specify the custom keys to place the card into column and row. See the [columnKey](../js_kanban_columnkey_config) and [rowKey](api/config/js_kanban_rowkey_config.md) properties
 
 :::info
-If you want to load new data for cards dynamically, you can use the [**parse()**](../../methods/js_kanban_parse_method) method!
+If you want to load new data for cards dynamically, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method!
 :::
 
 ### Example
 
-~~~jsx {1-40,44}
+~~~jsx {1-41,45}
 const cards = [
     {
         id: 1,
@@ -111,7 +113,8 @@ const cards = [
                 previewURL: "../assets/img-1.jpg",
                 coverURL: "../assets/img-1.jpg",
                 name: "img-1.jpg",
-                isCover: true
+                isCover: true,
+                size: 11979
             }, {...} // other attached files data
         ],
         color: "#65D3B3",
@@ -147,7 +150,7 @@ new kanban.Kanban("#root", {
 **Change log:** The ***css***, ***comments*** and ***votes*** parameters were added in v1.4
 
 **Related articles:**
-- [Working with data](../../../guides/working_with_data)
+- [Working with data](guides/working_with_data.md)
 - [updateCard()](api/methods/js_kanban_updatecard_method.md)
 
 **Related sample:** [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)

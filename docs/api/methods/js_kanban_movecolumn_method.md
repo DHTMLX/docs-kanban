@@ -15,14 +15,14 @@ description: You can learn about the moveColumn method in the documentation of t
 ~~~jsx {}
 moveColumn({
     id: string | number,
-    before: string | number
+    before?: string | number
 }): void;
 ~~~
 
 ### Parameters
 
 - `id` - (required) the ID of the column to be moved
-- `before` - (required) the ID of the column, the moved one will be placed before it
+- `before` - (optional) the ID of the column before which the moved column will be placed. If you do not not specify the `before` parameter, the column will be placed at the end of board
 
 ### Example
 

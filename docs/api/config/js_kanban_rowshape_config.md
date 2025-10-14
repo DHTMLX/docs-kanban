@@ -22,9 +22,10 @@ rowShape?: {
                 icon?: string,
                 text?: string,
                 disabled? boolean,
-                onClick?: ({ id, item, row }) => void
+                onClick?: ({ id, item, row }) => void,
+                data?: array // an array of menu subitems
             }, {...} // other item data
-        ] | ({ row, rowIndex, rows, store }) => array | boolean
+        ] | ({ row, rowIndex, rows, readonly }) => array | null
     },
     css?: (row, cards) => string,
     confirmDeletion?: boolean
@@ -52,32 +53,36 @@ To configure the rows appearance, in the **rowShape** object you can specify the
             - ***item*** - a data object of the current menu item
             - ***row*** - a data object of the target row
 
+        - `data` - (optional) an array of objects that represent menu subitems
+
     :::info
-    You can also set the `items` parameter to a custom function, that takes the following arguments:
+    You can also set the `menu.items` parameter to a custom function, that takes the following arguments:
     - ***row*** - a data object of a current row
     - ***rowIndex*** - an index of a current row
     - ***rows*** - an array of objects containing all rows data
-    - ***store*** - an object of *dataStore*
+    - ***readonly*** - an object of readonly [state properties](api/internal/js_kanban_getstate_method.md)
 
     This function allows customizing menu for any row or hide it for a specific one (by returning *null* or *false*):
 
     ~~~jsx {}
-    items: ({ row, rowIndex, rows, store }) => {
-        if(rowIndex == 0)
-            return null
-        return [
-            { id: "set-edit", icon: "wxi-edit", text: "Rename" },
-            {
-                id: "custom-delete-row",
-                icon: "wxi-delete",
-                text: "Remove row"
-            },
-            {
-                id: "custom-move-row:up",
-                icon: "wxi-arrow-up",
-                text: "Move up"
-            }
-        ]
+    items: ({ rowIndex }) => {
+        if(rowIndex == 0){
+            return null;
+        } else {
+            return [
+                { id: "set-edit", icon: "wxi-edit", text: "Rename" },
+                {
+                    id: "custom-delete-row",
+                    icon: "wxi-delete",
+                    text: "Remove row"
+                },
+                {
+                    id: "custom-move-row:up",
+                    icon: "wxi-arrow-up",
+                    text: "Move up"
+                }
+            ];
+        }
     }
     ~~~
     :::
@@ -88,7 +93,7 @@ To configure the rows appearance, in the **rowShape** object you can specify the
 ### Default config
 
 ~~~jsx {}
-const getDefaultRowMenuItems = ({ row, rowIndex, rows, store }) => [
+const getDefaultRowMenuItems = ({ row, rowIndex, rows, readonly }) => [
     { id: "set-edit", icon: "wxi-edit", text: "Rename" },
     {
         id: "move-row:up",
@@ -128,32 +133,34 @@ const changeRowColor = (row, cssClass) => board.updateRow({
 const rowShape = {
     menu: {
         show: true,
-        items: ({ row, rowIndex, rows, store }) => {
-            if (rowIndex == 0) 
-                return false
-            return [
-                {
-                    id: "color",
-                    text: "Color",
-                    items: [
-                        { 
-                            id:"gray", 
-                            text: "Gray",
-                            onClick: ({ id, item, row }) => changeRowColor(row, "gray")
-                        },
-                        { 
-                            id:"yellow", 
-                            text: "Yellow",
-                            onClick: ({ id, item, row }) => changeRowColor(row, "yellow")
-                        },
-                        { 
-                            id:"red", 
-                            text: "Red",
-                            onClick: ({ id, item, row }) => changeRowColor(row, "red")
-                        }
-                    ]
-                }
-            ]
+        items: ({ row, rowIndex, rows, readonly }) => {
+            if (rowIndex == 0){
+                return false;
+            } else {
+                return [
+                    {
+                        id: "color",
+                        text: "Color",
+                        data: [
+                            { 
+                                id:"gray", 
+                                text: "Gray",
+                                onClick: ({ id, item, row }) => changeRowColor(row, "gray")
+                            },
+                            { 
+                                id:"yellow", 
+                                text: "Yellow",
+                                onClick: ({ id, item, row }) => changeRowColor(row, "yellow")
+                            },
+                            { 
+                                id:"red", 
+                                text: "Red",
+                                onClick: ({ id, item, row }) => changeRowColor(row, "red")
+                            }
+                        ]
+                    }
+                ];
+            }     
         }
     },
     css: (row, cards) => row.id == "task" && cards.length < 3 ? "green" : "red",
@@ -171,8 +178,11 @@ new kanban.Kanban("#root", {
 
 **Change log:**
 - The ***css*** parameter was added in v1.4
-- The ***menu.items[0].label*** parameter was replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].label*** parameter was deprecated and replaced by the ***menu.items[0].text*** parameter in v1.4
+- The ***menu.items[0].items*** parameter was deprecated and replaced by the ***menu.items[0].data*** parameter in v1.4
+- The ***menu.items[0].label*** and ***menu.items[0].items*** parameters were removed in v1.7
+- The ***menu.items*** function was updated. The **store** parameter was replaced with the **readonly** one in v1.7
 
-**Related articles:** [Configuration](../../../guides/configuration)
+**Related articles:** [Configuration](guides/configuration.md)
 
 **Related sample:** [Kanban. Changing color of rows via custom menu](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban)

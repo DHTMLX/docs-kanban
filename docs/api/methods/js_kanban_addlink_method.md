@@ -36,8 +36,8 @@ const board = new kanban.Kanban("#root", {
 board.addLink({
     id: 3,
     link: {
-        masterId: 4,
-        slaveId: 6,
+        source: 4,
+        target: 6,
         relation: "relatesTo",
     }
 });

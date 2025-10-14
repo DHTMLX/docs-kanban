@@ -34,8 +34,8 @@ new kanban.Toolbar("#toolbar", {
 
 ## Kanban methods
 
-| Name                                                      | Description                                              |
-| ----------------------------------------------------------| ---------------------------------------------------------|
+| Name                                                     | Description                                             |
+| -------------------------------------------------------- | ------------------------------------------------------- |
 | [](../methods/js_kanban_addcard_method.md)               | @getshort(../methods/js_kanban_addcard_method.md)       |
 | [](../methods/js_kanban_addcolumn_method.md)             | @getshort(../methods/js_kanban_addcolumn_method.md)     |
 | [](../methods/js_kanban_addcomment_method.md)            | @getshort(../methods/js_kanban_addcomment_method.md)    |
@@ -50,6 +50,7 @@ new kanban.Toolbar("#toolbar", {
 | [](../methods/js_kanban_duplicatecard_method.md)         | @getshort(../methods/js_kanban_duplicatecard_method.md) |
 | [](../methods/js_kanban_getareacards_method.md)          | @getshort(../methods/js_kanban_getareacards_method.md)  |
 | [](../methods/js_kanban_getcard_method.md)               | @getshort(../methods/js_kanban_getcard_method.md)       |
+| [](../methods/js_kanban_getcolumncards_method.md)        | @getshort(../methods/js_kanban_getcolumncards_method.md)|
 | [](../methods/js_kanban_getselection_method.md)          | @getshort(../methods/js_kanban_getselection_method.md)  |
 | [](../methods/js_kanban_movecard_method.md)              | @getshort(../methods/js_kanban_movecard_method.md)      |
 | [](../methods/js_kanban_movecolumn_method.md)            | @getshort(../methods/js_kanban_movecolumn_method.md)    |
@@ -64,7 +65,6 @@ new kanban.Toolbar("#toolbar", {
 | [](../methods/js_kanban_setlocale_method.md)             | @getshort(../methods/js_kanban_setlocale_method.md)     |
 | [](../methods/js_kanban_setsearch_method.md)             | @getshort(../methods/js_kanban_setsearch_method.md)     |
 | [](../methods/js_kanban_setsort_method.md)               | @getshort(../methods/js_kanban_setsort_method.md)       |
-| [](../methods/js_kanban_settheme_method.md)              | @getshort(../methods/js_kanban_settheme_method.md)      |
 | [](../methods/js_kanban_undo_method.md)                  | @getshort(../methods/js_kanban_undo_method.md)          |
 | [](../methods/js_kanban_unselectcard_method.md)          | @getshort(../methods/js_kanban_unselectcard_method.md)  |
 | [](../methods/js_kanban_updatecard_method.md)            | @getshort(../methods/js_kanban_updatecard_method.md)    |
@@ -76,8 +76,9 @@ new kanban.Toolbar("#toolbar", {
 
 ### Event Bus methods
 
-| Name                                                       | Description                                                  |
-| -----------------------------------------------------------| ------------------------------------------------------------ |
+| Name                                                      | Description                                                 |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
+| [](../internal/js_kanban_detach_method.md)                | @getshort(../internal/js_kanban_detach_method.md)           |
 | [](../internal/js_kanban_exec_method.md)                  | @getshort(../internal/js_kanban_exec_method.md)             |
 | [](../internal/js_kanban_intercept_method.md)             | @getshort(../internal/js_kanban_intercept_method.md)        |
 | [](../internal/js_kanban_on_method.md)                    | @getshort(../internal/js_kanban_on_method.md)               |
@@ -87,12 +88,12 @@ new kanban.Toolbar("#toolbar", {
 
 | Name                                         | Description                                        |
 | -------------------------------------------- | -------------------------------------------------- |
-| [](../internal/js_kanban_json_method.md)    | @getshort(../internal/js_kanban_json_method.md)   |
+| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |
 
 ### State methods
 
-| Name                                                       | Description                                                   |
-| -----------------------------------------------------------| ------------------------------------------------------------- |
+| Name                                                      | Description                                                  |
+| --------------------------------------------------------- | ------------------------------------------------------------ |
 | [](../internal/js_kanban_getreactivestate_method.md)      | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
 | [](../internal/js_kanban_getstate_method.md)              | @getshort(../internal/js_kanban_getstate_method.md)          |
 | [](../internal/js_kanban_getstores_method.md)             | @getshort(../internal/js_kanban_getstores_method.md)         |
@@ -119,12 +120,14 @@ new kanban.Toolbar("#toolbar", {
 | [](../events/js_kanban_movecard_event.md)                 | @getshort(../events/js_kanban_movecard_event.md)        |
 | [](../events/js_kanban_movecolumn_event.md)               | @getshort(../events/js_kanban_movecolumn_event.md)      |
 | [](../events/js_kanban_moverow_event.md)                  | @getshort(../events/js_kanban_moverow_event.md)         |
+| [](../events/js_kanban_redo_event.md)                     | @getshort(../events/js_kanban_redo_event.md)            |
 | [](../events/js_kanban_scroll_event.md)                   | @getshort(../events/js_kanban_scroll_event.md)          |
 | [](../events/js_kanban_selectcard_event.md)               | @getshort(../events/js_kanban_selectcard_event.md)      |
 | [](../events/js_kanban_setedit_event.md)                  | @getshort(../events/js_kanban_setedit_event.md)         |
 | [](../events/js_kanban_setsearch_event.md)                | @getshort(../events/js_kanban_setsearch_event.md)       |
 | [](../events/js_kanban_setsort_event.md)                  | @getshort(../events/js_kanban_setsort_event.md)         |
 | [](../events/js_kanban_startdragcard_event.md)            | @getshort(../events/js_kanban_startdragcard_event.md)   |
+| [](../events/js_kanban_undo_event.md)                     | @getshort(../events/js_kanban_undo_event.md)            |
 | [](../events/js_kanban_unselectcard_event.md)             | @getshort(../events/js_kanban_unselectcard_event.md)    |
 | [](../events/js_kanban_updatecard_event.md)               | @getshort(../events/js_kanban_updatecard_event.md)      |
 | [](../events/js_kanban_updatecolumn_event.md)             | @getshort(../events/js_kanban_updatecolumn_event.md)    |
@@ -144,7 +147,6 @@ new kanban.Toolbar("#toolbar", {
 | [](../config/js_kanban_columnshape_config.md)             | @getshort(../config/js_kanban_columnshape_config.md)    |
 | [](../config/js_kanban_currentuser_config.md)             | @getshort(../config/js_kanban_currentuser_config.md)    |
 | [](../config/js_kanban_editor_config.md)                  | @getshort(../config/js_kanban_editor_config.md)         |
-| [~~editorAutoSave~~](api/config/js_kanban_editorautosave_config.md) | Deprecated! ~~Optional. Enables/disables an autosave mode~~ |
 | [](../config/js_kanban_editorshape_config.md)             | @getshort(../config/js_kanban_editorshape_config.md)    |
 | [](../config/js_kanban_history_config.md)                 | @getshort(../config/js_kanban_history_config.md)        |
 | [](../config/js_kanban_links_config.md)                   | @getshort(../config/js_kanban_links_config.md)          |
@@ -155,12 +157,11 @@ new kanban.Toolbar("#toolbar", {
 | [](../config/js_kanban_rows_config.md)                    | @getshort(../config/js_kanban_rows_config.md)           |
 | [](../config/js_kanban_rowshape_config.md)                | @getshort(../config/js_kanban_rowshape_config.md)       |
 | [](../config/js_kanban_scrolltype_config.md)              | @getshort(../config/js_kanban_scrolltype_config.md)     |
-| [](../config/js_kanban_theme_config.md)                   | @getshort(../config/js_kanban_theme_config.md)          |
 
 ## Toolbar methods
 
 | Name                                                      | Description                                             |
-| :---------------------------------------------------------| :-------------------------------------------------------|
+| :-------------------------------------------------------- | :------------------------------------------------------ |
 | [](../methods/toolbar_destructor_method.md)               | @getshort(../methods/toolbar_destructor_method.md)      |
 | [](../methods/toolbar_setconfig_method.md)                | @getshort(../methods/toolbar_setconfig_method.md)       |
 | [](../methods/toolbar_setlocale_method.md)                | @getshort(../methods/toolbar_setlocale_method.md)       |
@@ -168,11 +169,10 @@ new kanban.Toolbar("#toolbar", {
 ## Toolbar properties
 
 | Name                                                      | Description                                             |
-| :---------------------------------------------------------| :-------------------------------------------------------|
+| :-------------------------------------------------------- | :------------------------------------------------------ |
 | [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
 | [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
 | [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |
-| [](../config/toolbar_theme_config.md)                     | @getshort(../config/toolbar_theme_config.md)            |
 
 ## Common settings
 
@@ -184,8 +184,8 @@ new kanban.Toolbar("#toolbar", {
 
 ### RestDataProvider methods
 
-| Name                                                           | Description                                                         |
-| -------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Name                                                          | Description                                                        |
+| ------------------------------------------------------------- | ------------------------------------------------------------------ |
 | [](../provider/rest_methods/js_kanban_getcards_method.md)     | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)   |
 | [](../provider/rest_methods/js_kanban_getcolumns_method.md)   | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md) |
 | [](../provider/rest_methods/js_kanban_getlinks_method.md)     | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)   |
@@ -196,30 +196,30 @@ new kanban.Toolbar("#toolbar", {
 ### RestDataProvider routes
 
 | Name                                                        | Description                                            |
-| ----------------------------------------------------------- | -------------------------------------------------------|
-| [GET `/cards`](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md) | @getshort(../provider/rest_routes/get_routes/js_kanban_get_cards_route.md) |
-| [GET `/columns`](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_columns_route.md) |
-| [GET `/links`](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_links_route.md) |
-| [GET `/rows`](api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_rows_route.md) |
-| [GET `/users`](api/provider/rest_routes/get_routes/js_kanban_get_users_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_users_route.md) |
-| [GET `/uploads`](api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_uploads_route.md) |
-| [POST `/cards`](api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_cards_route.md) |
-| [POST `/cards/{cardId}/comments`](api/provider/rest_routes/post_routes/js_kanban_post_cards_comments_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_cards_comments_route.md) |
-| [POST `/cards/{cardId}/vote`](api/provider/rest_routes/post_routes/js_kanban_post_cards_votes_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_cards_votes_route.md) |
-| [POST `/columns`](api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_columns_route.md) |
-| [POST `/links`](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_links_route.md) |
-| [POST `/rows`](api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_rows_route.md) |
-| [POST `/uploads`](api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_uploads_route.md) |
-| [PUT `/cards`](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_cards_route.md) |
-| [PUT `/cards/{id}/move`](api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md) |
-| [PUT `/cards/{cardId}/comments/{cardId}`](api/provider/rest_routes/put_routes/js_kanban_put_cards_comments_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_cards_comments_route.md) |
-| [PUT `/columns`](api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_columns_route.md) |
-| [PUT `/columns/{id}/move`](api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md) |
-| [PUT `/rows`](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_rows_route.md) |
-| [PUT `/rows/{id}/move`](api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md) |
-| [DELETE `/cards`](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md) |
-| [DELETE `/cards/{cardId}/comments/{cardId}`](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route.md) |
-| [DELETE `/cards/{cardId}/vote`](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route.md) |
-| [DELETE `/columns`](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md) |
-| [DELETE `/links`](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_links_route.md) |
-| [DELETE `/rows`](api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md) |
+| ----------------------------------------------------------- | ------------------------------------------------------ |
+| [GET `/cards`](../provider/rest_routes/get_routes/js_kanban_get_cards_route.md) | @getshort(../provider/rest_routes/get_routes/js_kanban_get_cards_route.md) |
+| [GET `/columns`](../provider/rest_routes/get_routes/js_kanban_get_columns_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_columns_route.md) |
+| [GET `/links`](../provider/rest_routes/get_routes/js_kanban_get_links_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_links_route.md) |
+| [GET `/rows`](../provider/rest_routes/get_routes/js_kanban_get_rows_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_rows_route.md) |
+| [GET `/users`](../provider/rest_routes/get_routes/js_kanban_get_users_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_users_route.md) |
+| [GET `/uploads`](../provider/rest_routes/get_routes/js_kanban_get_uploads_route.md)| @getshort(../provider/rest_routes/get_routes/js_kanban_get_uploads_route.md) |
+| [POST `/cards`](../provider/rest_routes/post_routes/js_kanban_post_cards_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_cards_route.md) |
+| [POST `/cards/{cardId}/comments`](../provider/rest_routes/post_routes/js_kanban_post_cards_comments_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_cards_comments_route.md) |
+| [POST `/cards/{cardId}/vote`](../provider/rest_routes/post_routes/js_kanban_post_cards_votes_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_cards_votes_route.md) |
+| [POST `/columns`](../provider/rest_routes/post_routes/js_kanban_post_columns_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_columns_route.md) |
+| [POST `/links`](../provider/rest_routes/post_routes/js_kanban_post_links_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_links_route.md) |
+| [POST `/rows`](../provider/rest_routes/post_routes/js_kanban_post_rows_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_rows_route.md) |
+| [POST `/uploads`](../provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)| @getshort(../provider/rest_routes/post_routes/js_kanban_post_uploads_route.md) |
+| [PUT `/cards`](../provider/rest_routes/put_routes/js_kanban_put_cards_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_cards_route.md) |
+| [PUT `/cards/{id}/move`](../provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md) |
+| [PUT `/cards/{cardId}/comments/{cardId}`](../provider/rest_routes/put_routes/js_kanban_put_cards_comments_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_cards_comments_route.md) |
+| [PUT `/columns`](../provider/rest_routes/put_routes/js_kanban_put_columns_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_columns_route.md) |
+| [PUT `/columns/{id}/move`](../provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md) |
+| [PUT `/rows`](../provider/rest_routes/put_routes/js_kanban_put_rows_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_rows_route.md) |
+| [PUT `/rows/{id}/move`](../provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)| @getshort(../provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md) |
+| [DELETE `/cards`](../provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md) |
+| [DELETE `/cards/{cardId}/comments/{cardId}`](../provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_cards_comments_route.md) |
+| [DELETE `/cards/{cardId}/vote`](../provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_cards_votes_route.md) |
+| [DELETE `/columns`](../provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md) |
+| [DELETE `/links`](../provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_links_route.md) |
+| [DELETE `/rows`](../provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)| @getshort(../provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md) |

@@ -54,7 +54,7 @@ To interact with the server, you need to connect **RestDataProvider** to the cor
 or you can create a custom one.
 
 :::tip
-If you use custom backend, refer to the [**REST API routes**](../../api/overview/rest_routes_overview/) topic for more information!
+If you use custom backend, refer to the [**REST API routes**](api/overview/rest_routes_overview.md) topic for more information!
 :::
 
 To connect **RestDataProvider** to the backend, you need to call the **kanban.RestDataProvider** constructor by passing the corresponding **URL** as a parameter.
@@ -250,13 +250,14 @@ const remoteEvents = new kanban.RemoteEvents(remoteEventsURL, token);
 remoteEvents.on(handlers);
 ~~~
 
-The `RestDataProvider.getIDResolver()` method returns a function that is necessary to synchronize client IDs with server IDs. When a new object (*card/column/row*) is created on the client side, the resulting object will have a temporary ID and a corresponding server ID in the store. The `idResolver()` function allows synchronizing the client ID with the server ID. This function has the following format: `idResolver(id: TID, type: number)`
+The `RestDataProvider.getIDResolver()` method returns a function that is necessary to synchronize client IDs with server IDs. When a new object (*card/column/row/link*) is created on the client side, the resulting object will have a temporary ID and a corresponding server ID in the store. The `idResolver()` function allows synchronizing the client ID with the server ID. This function has the following format: `idResolver(id: TID, type: number)`
 
 The `type` argument is the type of model that takes the following values:
 
 - `CardID` - 1,
 - `RowID` - 2,
 - `ColumnID` - 3
+- `LinkID` - 4
 
 To prevent the request from being sent to the server, you need to use the `skipProvider: true` flag when calling the `board.api.exec()` method.
 

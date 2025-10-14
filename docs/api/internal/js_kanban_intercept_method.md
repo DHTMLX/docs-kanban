@@ -15,14 +15,18 @@ description: You can learn about the intercept method in the documentation of th
 ~~~jsx {}
 api.intercept(
     event: string,
-    callback: function
+    callback: function,
+    config?: { intercept?: boolean, tag?: number | string | symbol }
 ): void;
 ~~~
 
 ### Parameters
 
-- `event` - (required) an event to be fired 
+- `event` - (required) an event to be fired
 - `callback` - (required) a callback to be performed (the callback arguments will depend on the event to be fired)
+- `config` - (optional) an object that stores the following parameters:
+    - `intercept` - (optional) if you set `intercept: true` during event listener creation, this event listener will run before all others
+    - `tag` - (optional) an action tag. You can use the tag name to remove an action handler via the [`detach`](api/internal/js_kanban_detach_method.md) method
 
 ### Events
 
@@ -43,5 +47,7 @@ board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;
     }
-});
+}, {tag: "move"});
 ~~~
+
+**Change log**: The **config.tag** and **config.intercept** parameters were added in v1.7

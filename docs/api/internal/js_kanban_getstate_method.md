@@ -21,40 +21,52 @@ api.getState(): object;
 The method returns an object with the following parameters:
 
 ~~~jsx {}
-{    
-    areasMeta: object, 
-    before: string | number, 
-    cardHeight: number | null, 
+{
+    cardHeight: number | null,
     cards: array,
     cardShape: object,
-    cardsMap: object,
-    cardsMeta: object,
     columnKey: string,
     columns: array,
     columnShape: object,
     currentUser: number | string | null,
-    dragItemId: string | number, 
-    dragItemsCoords: array, 
-    edit: object,
-    history: object,
-    layout: string,
     links: array,
-    overAreaId: string | number, 
     readonly: object,
     rowKey: string,
     rows: array,
     rowShape: object,
-    scroll: object,
-    search: object,
-    selected: array, 
-    sort: object,
-    // deprecated options
-    fromAreaMeta: object, // deleted in v.1.2
     editorShape: array,
-    dropAreaItemsCoords: array, // deprecated in v1.4
-    dropAreasCoords: array, // deprecated in v1.4 
-    overAreaMeta: object, // deprecated in v1.4
+    history: object,
+    search: object,
+    selected: array,
+    sort: object,
+
+    // removed parameters
+    /*    
+        fromAreaMeta: object,
+        dropAreaItemsCoords: array,
+        dropAreasCoords: array,
+        overAreaMeta: object,
+        before: string | number,
+        dragItemId: string | number,
+        dragItemsCoords: array,
+        overAreaId: string | number,
+    /*
+
+    // private parameters
+    /*
+        edit -> _edit: object,
+        layout -> layout: string,
+        cardsMap -> _cardsMap: object,
+        cardsMeta -> _cardsMeta: object,
+        areasMeta -> _areasMeta: object,
+        scroll -> _scroll: object,
+    */
 }
+~~~
+
+:::warning
+These state properties are readonly. Do not change them to avoid unexpected behavior!
+:::
 
 ### Example
 
@@ -74,8 +86,4 @@ console.log(state.cardShape); // output the card configuration
 //...
 ~~~
 
-**Change log:**
-The method was updated in v1.4. The following parameters were deprecated:
-- ***dropAreaItemsCoords***
-- ***dropAreasCoords***
-- ***overAreaMeta***
+**Change log:** The method was updated in v1.7

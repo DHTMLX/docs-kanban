@@ -35,7 +35,7 @@ In the snippet below you can see how to customize the following:
 
 ## Custom styles
 
-You can customize the appearance of Kanban by changing values of the corresponding *CSS variables*. Refer to the [**Stylization**](../stylization) section for details.
+You can customize the appearance of Kanban by changing values of the corresponding *CSS variables*. Refer to the [**Stylization**](guides/stylization.md) section for details.
 
 In this snippet you can see how to apply custom styles to Kanban:
 

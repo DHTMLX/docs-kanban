@@ -74,7 +74,7 @@ editorShape?: [
             {...} // other options
         ],
         config?: {
-            clearButton?: boolean, // for a "combo" type only
+            clear?: boolean, // for "combo" and "color" types
             label?: string, // for a "select" type only
             checkboxes?: boolean, // for a "multiselect" type only 
             // common parameters
@@ -157,7 +157,7 @@ To configure the editor appearance and functionality, you can specify the follow
 In the Kanban editor you can use the following types of fields: **dateRange**, **date**, **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **comments** and **links**
 :::
 
-- `key` - (required) an editor field key. Here you need to use the value specified in the [`cardShape`](../js_kanban_cardshape_config) property. See the example below:
+- `key` - (required) an editor field key. Here you need to use the value specified in the [`cardShape`](api/config/js_kanban_cardshape_config.md) property. See the example below:
 
 ~~~js {8,17}
     // card appearance settings
@@ -190,7 +190,7 @@ In the Kanban editor you can use the following types of fields: **dateRange**, *
     - `end` - (required) an end date key
 
 :::important
-The values of these keys used in the [`cardShape`](../js_kanban_cardshape_config) property!
+The values of these keys used in the [`cardShape`](api/config/js_kanban_cardshape_config.md) property!
 :::
 
 - `config` - (optional) a configuration object of the **"dateRange"** field. Here you can specify the following parameters:
@@ -243,7 +243,7 @@ To set the control for assigning a single user, you need to use the ***"select"*
 :::
 
 - `config` - (optional) a configuration object for **"combo"**, **"select"**, and **"multiselect"** fields. Here you can specify the following parameters:
-    - `clearButton` - (optional) adds the Clear button into a combo input (**for a "combo" type only**)
+    - `clear` - (optional) adds the Clear button into a combo input (**for "combo" and "color" types only**)
     - `label` - (optional) binds options to the input field by the specified key (**for a "select" type only**)
     - `checkboxes` - (optional) defines whether options have checkboxes next to them (**for a "multiselect" type only**)
     - `textField` - (optional) binds combo options to the input field by the specified key (**for "combo" and "multiselect" types only**)
@@ -387,7 +387,7 @@ const defaultEditorShape = [
         label: "Priority",
         key: "priority",
         config: {
-            clearButton: true
+            clear: true
         }
     },
     {
@@ -467,5 +467,6 @@ new kanban.Kanban("#root", {
 
 - The ***dateRange*** type was added in v1.3
 - The ***comments*** and ***links*** types of editor, and ***format*** parameters were added in v1.4
+- The ***clearButton*** parameter was replaced with the ***clear*** parameter
 
-**Related articles:** [Configuration](../../../guides/configuration#editor)
+**Related articles:** [Configuration](guides/configuration.md/#editor)

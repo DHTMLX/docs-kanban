@@ -33,5 +33,6 @@ const board = new kanban.Kanban("#root", {
     cards
 });
 // get the data object of the card with the 1 ID
-board.getCard(1);
+const card_data = board.getCard(1);
+console.log(card_data);
 ~~~
