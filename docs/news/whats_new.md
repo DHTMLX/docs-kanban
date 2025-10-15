@@ -63,6 +63,7 @@ You can also explore our [**GitHub example**](https://github.com/DHTMLX/salesfor
 - File size shown only for newly loaded files
 - Year and month values are not updated after a user clicks the **Done** button in the editor
 - The expandable textarea of comments moves button out of click zone
+- Script error occurs when opening the card linked to the deleted card
 
 ## Version 1.6.5
 
