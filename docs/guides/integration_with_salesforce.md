@@ -13,7 +13,7 @@ You should be familiar with the basic concepts and patterns of [**Salesforce**](
 DHTMLX Kanban is compatible with [Salesforce](https://www.salesforce.com/) platform. We have prepared code examples on how to add DHTMLX Kanban into Salesforce environment. For more information, refer to the corresponding [Example on GitHub](https://github.com/DHTMLX/salesforce-lwc-demo).
 
 :::note
-The JavaScript Kanban widget automatically detects that it operates within a [Salesforce](https://www.salesforce.com/) environment and configures the integration logic internally. In most cases, you do not need to call any [Salesforce-specific methods](#selesforce-specific-methods) manually.
+The JavaScript Kanban widget automatically detects that it operates within a [Salesforce](https://www.salesforce.com/) environment and configures the integration logic internally. In most cases, you do not need to call any [Salesforce-specific methods](#salesforce-specific-methods) manually.
 :::
 
 ## Preparing environment
