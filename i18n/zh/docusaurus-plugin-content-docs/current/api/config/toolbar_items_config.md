@@ -1,14 +1,14 @@
 ---
 sidebar_label: items
 title: items 配置
-description: 探索 DHTMLX JavaScript 看板库中（Toolbar）items 配置。查看开发者指南、API 参考、代码示例、在线演示，并免费下载 30 天试用版的 DHTMLX 看板。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 (Toolbar) items 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
 ---
 
 # items
 
 ### 描述
 
-@short: 可选。一个数组，包含排列在看板工具栏上的控件。
+@short: 可选。一个数组，包含排列在看板工具栏上的控件
 
 ### 用法
 
@@ -52,21 +52,21 @@ items?: [
 
 ### 参数
 
-在 **items** 数组中，可以包含以下参数:
+在 **items** 数组中，您可以指定以下参数：
 
 :::info
-#### 添加 *默认搜索栏*，只需使用字符串 `"search"`。
-#### 配置 *自定义搜索栏*，需提供包含以下参数的对象:
+#### 若要设置*默认搜索栏*，可以指定字符串 `"search"`。
+#### 若要设置*自定义搜索栏*，可以指定包含以下参数的对象：
 
-- `type` - （必需）指定控件类型（*"search"*）
-- `options` - （可选）定义搜索参数的数组。每个对象（*搜索选项*）可以包含:
-    - `id` - （必需）用于搜索的卡片字段键
-    - `label` - （必需）搜索栏下拉中显示的选项名称
-    - `searchRule`（可选）- 自定义函数，用于定义搜索规则。接收参数:
+- `type` - （必需）控件类型 (*"search"*)
+- `options` - （可选）一个对象数组，定义搜索参数。每个对象（*搜索选项*）可以指定以下参数：
+    - `id` - （必需）卡片字段的键，用于搜索卡片
+    - `label` - （必需）选项名称，用于搜索栏选择器的下拉列表中
+    - `searchRule` （可选）- 自定义函数，用于定义搜索规则。该函数接收以下参数：
         - ***card*** - 卡片数据对象
-        - ***value*** - 搜索输入值
-        - ***by*** - 用于搜索的卡片字段键
-- `searchResult` - （可选）自定义搜索结果显示的模板
+        - ***value*** - 搜索栏中指定的搜索值
+        - ***by*** - 用于搜索卡片的字段键
+- `searchResult` - （可选）用于显示自定义搜索结果的模板
 
 ~~~jsx
 items: [
@@ -106,14 +106,14 @@ items: [
 :::
 
 :::info
-#### 添加 *默认排序控件*，只需使用字符串 `"sort"`。
-#### 配置 *自定义排序控件*，需提供包含以下参数的对象:
+#### 若要设置*默认排序控件*，可以指定字符串 `"sort"`。
+#### 若要设置*自定义排序控件*，可以指定包含以下参数的对象：
 
-- `type` - （必需）指定控件类型（*"sort"*）
-- `options` - （可选）定义排序参数的数组。每个对象（*排序选项*）可以包含:
-    - `text` - （必需）排序下拉中显示的选项名称
-    - `by` - （可选）用于排序的卡片字段键或函数
-    - `dir` - （可选）排序方向，可为 *"asc"* 或 *"desc"*
+- `type` - （必需）控件类型 (*"sort"*)
+- `options` - （可选）一个对象数组，定义排序参数。每个对象（*排序选项*）可以指定以下参数：
+    - `text` - （必需）选项名称，用于排序选择器的下拉列表中
+    - `by` - （可选）用于排序卡片的字段键。此参数可以是*字符串*或*函数*。函数需返回用于排序的卡片字段
+    - `dir` - （可选）排序顺序。可选值为 *"asc"* 和 *"desc"*
 
 ~~~jsx
 items: [
@@ -141,12 +141,12 @@ items: [
 ~~~
 :::
 
-- `"spacer"` - 在控件间插入空白间隔
-- `"undo"` - 撤销操作控件（单击回退一步）
-- `"redo"` - 重做操作控件（单击前进一步）
-- `"addColumn"` - 添加新列控件
-- `"addRow"` - 添加新行控件
-- `custom_control` - （可选）自定义控件，可以是**字符串**或**函数**。详情参见[自定义](/guides/customization#自定义工具栏)章节。
+- `"spacer"` - 控件间的空白间隔
+- `"undo"` - 历史管理控件（单击执行一步撤销）
+- `"redo"` - 历史管理控件（单击执行一步重做）
+- `"addColumn"` - 添加新列的控件
+- `"addRow"` - 添加新行的控件
+- `custom_control` - （可选）自定义控件。此处可指定自定义控件，支持 **字符串** 或 **函数**。详见 [Customization](guides/customization.md#custom-toolbar) 章节
 
 ### 示例
 
@@ -178,14 +178,14 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**更新日志:**
+**更新日志：**
 
-- *"Undo"* 和 *"Redo"* 控件在 v1.3 版本引入
-- **sort** 控件中 ***items.options[0].label*** 参数在 v1.4 版本重命名为 ***items.options[0].text***
-- **"search"** 控件新增了 ***items.searchResult*** 参数，始于 v1.6 版本
+- 在 v1.3 版本中新增了 *"Undo"* 和 *"Redo"* 控件
+- 在 v1.4 版本中，**sort** 控件的 ***items.options[0].label*** 参数被替换为 ***items.options[0].text***
+- 在 v1.6 版本中，**"search"** 控件新增了 ***items.searchResult*** 参数
 
-**相关文档:** [配置](/guides/configuration#工具栏) 和 [自定义](/guides/customization#自定义工具栏)
+**相关文档：** [配置](guides/configuration.md#toolbar) 和 [自定义](guides/customization.md#custom-toolbar)
 
-**相关示例:**
-- [看板。自定义工具栏](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
-- [看板。搜索结果建议的自定义](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)
+**相关示例：**
+- [看板. 自定义工具栏](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+- [看板. 搜索结果中建议项的自定义](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)

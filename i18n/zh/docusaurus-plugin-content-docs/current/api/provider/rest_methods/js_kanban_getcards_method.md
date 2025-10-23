@@ -1,7 +1,7 @@
 ---
 sidebar_label: getCards()
 title: getCards REST 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getCards REST 方法。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getCards REST 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
 ---
 
 # getCards()
@@ -11,7 +11,7 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getCards
 @short: 获取包含卡片数据的 promise
 
 :::info
-**getCards()** 方法属于 **RestDataProvider** 服务，该服务用于处理与服务器的交互。
+**getCards()** 方法是 **RestDataProvider** 服务的一部分，用于与服务器进行交互
 :::
 
 ### 用法
@@ -22,7 +22,7 @@ getCards(): promise;
 
 ### 返回值
 
-**getCards()** 方法向服务器发起 **GET** 请求，并返回包含卡片数据的 **promise**。
+**getCards()** 方法通过 **GET** 请求向服务器发送请求，并返回一个包含卡片数据的 **promise**
 
 ### 示例
 
@@ -42,4 +42,4 @@ Promise.all([
 });
 ~~~
 
-**相关文档:** [Working with server](../../../../guides/working_with_server)
+**相关文档：** [与服务器交互](guides/working_with_server.md)

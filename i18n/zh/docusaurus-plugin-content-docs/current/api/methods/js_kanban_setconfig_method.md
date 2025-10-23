@@ -1,14 +1,14 @@
 ---
 sidebar_label: setConfig()
 title: setConfig 方法
-description: 你可以在 DHTMLX JavaScript 看板库的文档中了解 setConfig 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 setConfig 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
 ---
 
 # setConfig()
 
 ### 描述
 
-@short: 使用新的配置设置更新看板
+@short: 设置看板的新配置参数
 
 ### 用法
 
@@ -18,10 +18,10 @@ setConfig(config: object): void;
 
 ### 参数
 
-- `config` - （必填）一个包含看板配置选项的对象。查看完整属性列表请访问[这里](/api/overview/main_overview.md#kanban-属性)
+- `config` - （必需）看板配置对象。完整属性列表请参见 [这里](api/overview/main_overview.md#kanban-properties)
 
 :::tip
-此方法允许你调整看板控件的设置并加载数据。请注意，它不会影响历史记录（修改历史记录不被支持）或主题（请使用[`setTheme()`](/api/methods/js_kanban_settheme_method.md)方法来设置主题）。
+使用此方法，您可以配置看板控件并加载数据。该方法不会更改历史记录（您无法更改历史记录）。
 :::
 
 ### 示例
@@ -36,7 +36,7 @@ const board = new kanban.Kanban("#root", {
 // 创建工具栏
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
 
-// 使用新参数更新看板配置
+// 指定看板的新配置参数
 board.setConfig({
     columnKey: "stage",
     rowKey: "type",
@@ -48,6 +48,6 @@ board.setConfig({
     /* 其他参数 */
 });
                         
-// 使用新项目更新工具栏配置
+// 指定工具栏的新配置参数
 toolbar.setConfig({ items: ["search", "spacer", "sort"] });
 ~~~

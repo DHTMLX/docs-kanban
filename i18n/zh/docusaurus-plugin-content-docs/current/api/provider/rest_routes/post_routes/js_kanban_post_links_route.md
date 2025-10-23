@@ -1,42 +1,42 @@
 ---
 sidebar_label: POST /links
 title: POST /links
-description: 探索 DHTMLX JavaScript 看板库文档中的 POST /links REST 路由。查看开发者指南、API 参考、示例代码、在线演示，并免费下载 30 天试用版的 DHTMLX 看板。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 POST /links REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # POST `/links`
 
 ### 描述
 
-@short: 添加一个新的链接并返回包含新链接 ID 的 JSON 对象
+@short: 创建一个新的链接并返回包含新链接 ID 的 json 对象
 
-此路由处理发送到 `/links` 端点的 **HTTP POST** 请求。
+该路由处理对 `/links` 路径发起的 **HTTP POST** 请求。
 
 ### 请求体
 
-服务器期望接收一个包含以下属性的 JSON 对象:
+服务器期望接收包含以下属性的 json 对象：
 
-| 名称        | 类型                   | 描述 |
-| ----------- | ---------------------- | ----------- |
-| `masterId`  |  *number* 或 *string*  | *必需*。主链接的 ID。 |
-| `slaveId`   |  *number* 或 *string*  | *必需*。从链接的 ID。  |
-| `relation`  |  *string*              | *必需*。定义链接所表示的关系类型。 |
+| 名称        | 类型                   | 描述               |
+| ----------- | ---------------------- | ------------------ |
+| `source`    | *number* 或 *string*   | *必需*。起始链接的 ID。 |
+| `target`    | *number* 或 *string*   | *必需*。结束链接的 ID。 |
+| `relation`  | *string*               | *必需*。链接创建的关系类型。 |
 
-示例:
+示例：
 
 ~~~json
 {
-    "masterId": 1,
-    "slaveId": 2,
-    "relation": "relatesTo",
+    "source": 1,
+    "target": 2,
+    "relation": "relatesTo"
 }
 ~~~
 
 ### 响应
 
-响应返回一个包含新创建链接 ID 的 JSON 对象。
+路由返回一个包含新链接 ID 的 json 对象。
 
-示例:
+示例：
 
 ~~~json
 { 
@@ -44,11 +44,11 @@ description: 探索 DHTMLX JavaScript 看板库文档中的 POST /links REST 路
 }
 ~~~
 
-HTTP 状态码指示请求是否成功（response.status == 200）或失败（response.status == 500）。
+HTTP 状态码表示请求是否成功（response.status == 200）或失败（response.status == 500）。
 
 ---
 
-**相关文档**:
-- [Working with server](/guides/working_with_server.md)
-- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method.md)
-- [links](/api/config/js_kanban_links_config.md)
+**相关文档**：
+- [Working with server](guides/working_with_server.md)
+- [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
+- [links](api/config/js_kanban_links_config.md)

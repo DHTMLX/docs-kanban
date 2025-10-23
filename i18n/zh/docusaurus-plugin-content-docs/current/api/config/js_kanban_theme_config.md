@@ -1,14 +1,14 @@
 ---
-sidebar_label: theme
-title: theme
-description: 探索 DHTMLX JavaScript 看板库中的主题配置选项。查看开发者指南、API 参考、在线演示，并获取 DHTMLX 看板的免费 30 天试用。
+sidebar_label: 主题
+title: 主题配置
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解主题配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费的 30 天评估版本 DHTMLX 看板。
 ---
 
 # 主题
 
 ### 描述
 
-@short: 可选。定义应用于看板的主题
+@short: 可选。应用于看板的主题
 
 ### 用法
 
@@ -20,7 +20,7 @@ theme?: {
 ~~~
 
 :::important
-除了设置 `theme` 属性外，还可以通过直接向组件容器添加相应的 *css* 类来应用主题:
+除了使用 `theme` 属性外，您还可以通过向控件容器添加相应的 *css* 类来应用所需的主题：
 
 - **Material 主题**
 ~~~html {}
@@ -46,7 +46,7 @@ theme?: {
     <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
-或者，你也可以通过从 skins 文件夹链接所需主题的样式表来包含该主题:
+或者直接从 skins 文件夹在页面中引入所需的主题：
 
 ~~~html {}
 <link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
@@ -55,19 +55,19 @@ theme?: {
 
 ### 参数
 
-以下是可用于配置 **theme** 的参数:
+要配置 **theme**，您可以使用以下参数。
 
-- `theme` - （可选）包含主题设置的对象，支持:
+- `theme` - （可选）包含主题设置的对象。您可以指定以下参数：
     - `name` - （必需）要应用于看板的主题名称
-    - `fonts` - （可选）控制是否从 CDN 加载字体（wxi 字体）
+    - `fonts` - （可选）启用或禁用从 CDN 加载字体（wxi 字体）
 
 :::tip
-**Willow** 和 **Willow-Dark** 主题也可用。要动态切换主题，可以使用 [`setTheme()`](../../methods/js_kanban_settheme_method) 方法。
+您也可以应用 **Willow** 和 **Willow-Dark** 主题。要动态更改当前主题，可以使用 [`setTheme()`](api/methods/js_kanban_settheme_method.md) 方法。
 :::
 
 ### 默认配置
 
-看板默认使用 **Material** 主题。
+默认情况下，看板使用 **Material** 主题。
 
 ~~~jsx {}
 theme: {
@@ -91,11 +91,8 @@ const board = new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志:** 该属性从 v1.4 版本引入
+**更新日志：** 此属性在 v1.4 版本中添加
 
-**相关文档:** [样式定制](/guides/stylization)
+**相关文档：** [样式设置](guides/stylization.md)
 
-**相关示例:**
-- [看板。使用主题](https://snippet.dhtmlx.com/jnw54xif?tag=kanban)
-- [看板。以样式表形式引入主题](https://snippet.dhtmlx.com/k3iw6ti0?tag=kanban)
-- [看板。通过 CSS 类切换主题](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)
+**相关示例：** [通过 CSS 类更改看板主题](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

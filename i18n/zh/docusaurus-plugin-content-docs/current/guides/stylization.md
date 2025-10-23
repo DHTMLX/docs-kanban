@@ -1,21 +1,21 @@
 ---
 sidebar_label: 样式化
 title: 样式化
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解样式化相关内容。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并免费下载 DHTMLX Kanban 的 30 天试用版。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解样式化内容。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版。
 ---
 
 # 样式化
 
-借助 Kanban，您可以非常轻松地通过 [`columnShape.css`](/api/config/js_kanban_columnshape_config)、[`rowShape.css`](/api/config/js_kanban_rowshape_config) 和 [`cardShape.css`](/api/config/js_kanban_cardshape_config) 属性自定义**列**、**行**和**卡片**的外观。这些选项允许您为列、行和卡片添加条件样式。
+使用 Kanban，您可以通过 [`columnShape.css`](api/config/js_kanban_columnshape_config.md)、[`rowShape.css`](api/config/js_kanban_rowshape_config.md) 和 [`cardShape.css`](api/config/js_kanban_cardshape_config.md) 属性对**列**、**行**和**卡片**的外观进行样式化。这些属性允许您有条件地对列、行和卡片进行样式设置。
 
-如果您需要更进一步的自定义，也可以通过 [`columns.css`](/api/config/js_kanban_columns_config)、[`rows.css`](/api/config/js_kanban_rows_config) 和 [`cards.css`](/api/config/js_kanban_cards_config) 属性，为任意特定的**列**、**行**或**卡片**添加自定义 CSS 类。
+您还可以通过 [`columns.css`](api/config/js_kanban_columns_config.md)、[`rows.css`](api/config/js_kanban_rows_config.md) 和 [`cards.css`](api/config/js_kanban_cards_config.md) 属性为单独的**列**、**行**和**卡片**应用自定义 css 类。
 
-您还可以灵活地对 Kanban 界面的任何部分进行样式调整，以满足项目需求。Kanban 提供了大量 CSS 变量用于样式设置。主要有两类变量:
-- 用于**Kanban** 样式化的 CSS 变量
-- 来源于 **WX** 库的 CSS 变量（涵盖控件、日历等 UI 元素）
+此外，您可以根据项目需求自定义 Kanban 界面的任意部分的样式。为此，库提供了丰富的 CSS 变量。请注意，Kanban 包含两类变量：
+- 与**Kanban**样式相关的 CSS 变量
+- 与**WX**库样式相关的 CSS 变量（*控件、日历等*）
 
 :::info
-**WX** 库在内部用于部分功能。它负责 Kanban 中诸如控件和日历等小型 UI 组件的实现。
+请注意，**WX** 库仅用于内部处理。它为 Kanban 提供了一些小型元素（*控件、日历等*）
 :::
 
 ## 默认样式
@@ -90,71 +90,30 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解样式�
 ~~~
 
 :::tip 注意
-未来 Kanban 的版本可能会调整或重命名某些变量。建议您在升级后检查变量名称，确保您的样式依然生效。
+后续版本的 Kanban 可能会对变量及其名称进行调整。请在升级到新版本后，务必检查变量名称并在您的代码中进行相应修改，以避免组件显示出现问题。
 :::
-
-## 内置主题
-
-您可以通过设置 [`theme`](/api/config/js_kanban_theme_config) 属性或调用 [`setTheme()`](/api/methods/js_kanban_settheme_method) 方法，使用内置主题。目前可用的主题有 **material**、**willow** 和 **willow-dark**。
-
-:::important
-除了通过 `theme` 属性切换主题外，您也可以直接为 Kanban 容器添加对应的 *css* 类名来切换主题:
-
-- **Material 主题**
-~~~html {}
-    <!-- Kanban 工具栏 -->
-    <div id="toolbar" class="wx-material-theme"></div>
-    <!-- Kanban 容器 -->
-    <div id="root" class="wx-material-theme"></div>
-~~~
-
-- **Willow 主题**
-~~~html {}
-    <!-- Kanban 工具栏 -->
-    <div id="toolbar" class="wx-willow-theme"></div>
-    <!-- Kanban 容器 -->
-    <div id="root" class="wx-willow-theme"></div>
-~~~
-
-- **Willow-Dark 主题**
-~~~html {}
-    <!-- Kanban 工具栏 -->
-    <div id="toolbar" class="wx-willow-dark-theme"></div>
-    <!-- Kanban 容器 -->
-    <div id="root" class="wx-willow-dark-theme"></div>
-~~~
-
-另外，您也可以直接引入 skins 目录下的对应主题 CSS 文件:
-
-~~~html {}
-<link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
-~~~
-:::
-
-下面是一个展示 **willow-dark** 主题效果的示例:
-<iframe src="https://snippet.dhtmlx.com/k3iw6ti0?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## 滚动条样式
 
-Kanban 的滚动条也可以自定义样式。只需为相应容器添加 `.wx-styled-scroll` CSS 类即可。在依赖此功能前，请确保查阅 [浏览器支持情况](https://caniuse.com/css-scrollbar)。
+您还可以为 Kanban 的滚动条应用自定义样式。为此，可以使用 `.wx-styled-scroll` CSS 类。在使用前，请在[这里](https://caniuse.com/css-scrollbar)检查与现代浏览器的兼容性。
 
 ~~~html {4} title="index.html"
 <!--工具栏容器-->
 <div id="toolbar"></div> //
 <!--Kanban 容器-->
-<div id="root" class="wx-styled-scroll"></div>
+<div id="root" class="wx-styled-scroll"></div> 
 ~~~
 
 ## 自定义样式
 
-下面示例展示了如何为 Kanban 添加自定义样式:
+在下面的代码片段中，您可以看到如何为 Kanban 应用自定义样式
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## 响应式设计
+## 自适应
 
-此示例展示了如何通过自定义 CSS 样式让 Kanban 实现响应式布局:
+在下面的代码片段中，您可以看到如何通过自定义 CSS 样式创建 Kanban 的自适应版本
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**相关文档:** [自定义](../customization)
+**相关文章：** [定制化](guides/customization.md)

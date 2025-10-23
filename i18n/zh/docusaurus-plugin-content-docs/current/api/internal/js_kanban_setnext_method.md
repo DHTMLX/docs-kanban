@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.setNext()
 title: setNext 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 setNext 方法。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天试用版。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 setNext 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
 ---
 
 # api.setNext()
 
 ### 描述
 
-@short: 允许将特定操作插入到事件总线（Event Bus）序列中。
+@short: 允许将某个操作添加到事件总线（Event Bus）的执行顺序中
 
 ### 用法
 
@@ -18,7 +18,7 @@ api.setNext(next: any): void;
 
 ### 参数
 
-- `next` - （必需）要添加到**事件总线**序列中的操作  
+- `next` - （必需）要包含在**事件总线**执行顺序中的操作  
 
 ### 示例
 
@@ -42,5 +42,5 @@ Promise.all([
 ~~~
 
 :::info
-将 **RestDataProvider** 包含在**事件总线**序列中是处理诸如**添加**、**删除**等数据操作，以及向服务器发送相关请求所必需的。
+您需要将 **RestDataProvider** 包含到**事件总线**的执行顺序中，以便对数据执行操作（如**添加**、**删除**等）并向服务器发送相应请求
 :::

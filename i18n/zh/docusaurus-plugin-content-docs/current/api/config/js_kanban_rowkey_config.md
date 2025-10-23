@@ -1,17 +1,17 @@
 ---
 sidebar_label: rowKey
 title: rowKey 配置
-description: 探索 DHTMLX JavaScript 看板库中的 rowKey 配置。查找开发者指南和 API 参考，试验代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天试用版。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 rowKey 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
 ---
 
 # rowKey
 
 ### 描述
 
-@short: 可选。指定卡片如何分配到某一行。
+@short: 可选。定义卡片所属的行
 
 :::info
-要将卡片组织到行（泳道）中，您需要定义一个 **自定义键**，该键对应每张卡片数据中行的 **ID**。然后，在组件配置中将 **rowKey** 属性设置为该 *自定义键*。
+要将卡片分配到不同的行（泳道）中，您需要指定一个**自定义键**，并将其设置为卡片数据对象中目标行的**ID**。在组件配置对象中，**rowKey** 属性需要设置为该*自定义键*。
 :::
 
 ### 用法
@@ -39,8 +39,8 @@ new kanban.Kanban("#root", {
     cards,
     rows,
     rowKey: "row_custom_key",
-    // 其他参数
+    // other parameters
 });
 ~~~
 
-**相关示例:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
+**相关示例：** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

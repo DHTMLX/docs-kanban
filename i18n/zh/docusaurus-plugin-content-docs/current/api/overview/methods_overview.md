@@ -1,45 +1,45 @@
 ---
 sidebar_label: 方法概览
 title: 方法概览
-description: DHTMLX JavaScript 看板库的文档包含其方法的全面概览。浏览开发者指南、API 参考，试用代码示例和实时演示，并免费下载 DHTMLX 看板的 30 天免费试用版。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的 方法概览。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
 ---
 
 # 方法概览
 
-| 名称                                                     | 描述                                                     |
-| -------------------------------------------------------- | -------------------------------------------------------- |
-| [addCard()](../../methods/js_kanban_addcard_method/)               | @getshort(../methods/js_kanban_addcard_method.md)        |
-| [addColumn()](../../methods/js_kanban_addcolumn_method/)             | @getshort(../methods/js_kanban_addcolumn_method.md)      |
-| [addComment()](../../methods/js_kanban_addcomment_method/)            | @getshort(../methods/js_kanban_addcomment_method.md)     |
-| [addLink()](../../methods/js_kanban_addlink_method/)               | @getshort(../methods/js_kanban_addlink_method.md)        |
-| [addRow()](../../methods/js_kanban_addrow_method/)                | @getshort(../methods/js_kanban_addrow_method.md)         |
-| [deleteCard()](../../methods/js_kanban_deletecard_method/)            | @getshort(../methods/js_kanban_deletecard_method.md)     |
-| [deleteColumn()](../../methods/js_kanban_deletecolumn_method/)          | @getshort(../methods/js_kanban_deletecolumn_method.md)   |
-| [deleteComment()](../../methods/js_kanban_deletecomment_method/)         | @getshort(../methods/js_kanban_deletecomment_method.md)  |
-| [deleteLink()](../../methods/js_kanban_deletelink_method/)            | @getshort(../methods/js_kanban_deletelink_method.md)     |
-| [deleteRow()](../../methods/js_kanban_deleterow_method/)             | @getshort(../methods/js_kanban_deleterow_method.md)      |
-| [destructor()](../../methods/js_kanban_destructor_method/)            | @getshort(../methods/js_kanban_destructor_method.md)     |
-| [duplicateCard()](../../methods/js_kanban_duplicatecard_method/)         | @getshort(../methods/js_kanban_duplicatecard_method.md)  |
-| [getAreaCards()](../../methods/js_kanban_getareacards_method/)          | @getshort(../methods/js_kanban_getareacards_method.md)   |
-| [getCard()](../../methods/js_kanban_getcard_method/)               | @getshort(../methods/js_kanban_getcard_method.md)        |
-| [getSelection()](../../methods/js_kanban_getselection_method/)          | @getshort(../methods/js_kanban_getselection_method.md)   |
-| [moveCard()](../../methods/js_kanban_movecard_method/)              | @getshort(../methods/js_kanban_movecard_method.md)       |
-| [moveColumn()](../../methods/js_kanban_movecolumn_method/)            | @getshort(../methods/js_kanban_movecolumn_method.md)     |
-| [moveRow()](../../methods/js_kanban_moverow_method/)               | @getshort(../methods/js_kanban_moverow_method.md)        |
-| [parse()](../../methods/js_kanban_parse_method/)                 | @getshort(../methods/js_kanban_parse_method.md)          |
-| [redo()](../../methods/js_kanban_redo_method/)                  | @getshort(../methods/js_kanban_redo_method.md)           |
-| [scroll()](../../methods/js_kanban_scroll_method/)                | @getshort(../methods/js_kanban_scroll_method.md)         |
-| [selectCard()](../../methods/js_kanban_selectcard_method/)            | @getshort(../methods/js_kanban_selectcard_method.md)     |
-| [serialize()](../../methods/js_kanban_serialize_method/)             | @getshort(../methods/js_kanban_serialize_method.md)      |
-| [setConfig()](../../methods/js_kanban_setconfig_method/)             | @getshort(../methods/js_kanban_setconfig_method.md)      |
-| [setEdit()](../../methods/js_kanban_setedit_method/)               | @getshort(../methods/js_kanban_setedit_method.md)        |
-| [setLocale()](../../methods/js_kanban_setlocale_method/)             | @getshort(../methods/js_kanban_setlocale_method.md)      |
-| [setSearch()](../../methods/js_kanban_setsearch_method/)             | @getshort(../methods/js_kanban_setsearch_method.md)      |
-| [setSort()](../../methods/js_kanban_setsort_method/)               | @getshort(../methods/js_kanban_setsort_method.md)        |
-| [setTheme()](../../methods/js_kanban_settheme_method/)              | @getshort(../methods/js_kanban_settheme_method.md)       |
-| [undo()](../../methods/js_kanban_undo_method/)                  | @getshort(../methods/js_kanban_undo_method.md)           |
-| [unselectCard()](../../methods/js_kanban_unselectcard_method/)          | @getshort(../methods/js_kanban_unselectcard_method.md)   |
-| [updateCard()](../../methods/js_kanban_updatecard_method/)            | @getshort(../methods/js_kanban_updatecard_method.md)     |
-| [updateColumn()](../../methods/js_kanban_updatecolumn_method/)          | @getshort(../methods/js_kanban_updatecolumn_method.md)   |
-| [updateComment()](../../methods/js_kanban_updatecomment_method/)         | @getshort(../methods/js_kanban_updatecomment_method.md)  |
-| [updateRow()](../../methods/js_kanban_updaterow_method/)             | @getshort(../methods/js_kanban_updaterow_method.md)      |
+| 名称                                                     | 描述                                                   |
+| -------------------------------------------------------- | ------------------------------------------------------- |
+| [](../methods/js_kanban_addcard_method.md)               | @getshort(../methods/js_kanban_addcard_method.md)       |
+| [](../methods/js_kanban_addcolumn_method.md)             | @getshort(../methods/js_kanban_addcolumn_method.md)     |
+| [](../methods/js_kanban_addcomment_method.md)            | @getshort(../methods/js_kanban_addcomment_method.md)    |
+| [](../methods/js_kanban_addlink_method.md)               | @getshort(../methods/js_kanban_addlink_method.md)       |
+| [](../methods/js_kanban_addrow_method.md)                | @getshort(../methods/js_kanban_addrow_method.md)        |
+| [](../methods/js_kanban_deletecard_method.md)            | @getshort(../methods/js_kanban_deletecard_method.md)    |
+| [](../methods/js_kanban_deletecolumn_method.md)          | @getshort(../methods/js_kanban_deletecolumn_method.md)  |
+| [](../methods/js_kanban_deletecomment_method.md)         | @getshort(../methods/js_kanban_deletecomment_method.md) |
+| [](../methods/js_kanban_deletelink_method.md)            | @getshort(../methods/js_kanban_deletelink_method.md)    |
+| [](../methods/js_kanban_deleterow_method.md)             | @getshort(../methods/js_kanban_deleterow_method.md)     |
+| [](../methods/js_kanban_destructor_method.md)            | @getshort(../methods/js_kanban_destructor_method.md)    |
+| [](../methods/js_kanban_duplicatecard_method.md)         | @getshort(../methods/js_kanban_duplicatecard_method.md) |
+| [](../methods/js_kanban_getareacards_method.md)          | @getshort(../methods/js_kanban_getareacards_method.md)  |
+| [](../methods/js_kanban_getcard_method.md)               | @getshort(../methods/js_kanban_getcard_method.md)       |
+| [](../methods/js_kanban_getcolumncards_method.md)        | @getshort(../methods/js_kanban_getcolumncards_method.md)|
+| [](../methods/js_kanban_getselection_method.md)          | @getshort(../methods/js_kanban_getselection_method.md)  |
+| [](../methods/js_kanban_movecard_method.md)              | @getshort(../methods/js_kanban_movecard_method.md)      |
+| [](../methods/js_kanban_movecolumn_method.md)            | @getshort(../methods/js_kanban_movecolumn_method.md)    |
+| [](../methods/js_kanban_moverow_method.md)               | @getshort(../methods/js_kanban_moverow_method.md)       |
+| [](../methods/js_kanban_parse_method.md)                 | @getshort(../methods/js_kanban_parse_method.md)         |
+| [](../methods/js_kanban_redo_method.md)                  | @getshort(../methods/js_kanban_redo_method.md)          |
+| [](../methods/js_kanban_scroll_method.md)                | @getshort(../methods/js_kanban_scroll_method.md)        |
+| [](../methods/js_kanban_selectcard_method.md)            | @getshort(../methods/js_kanban_selectcard_method.md)    |
+| [](../methods/js_kanban_serialize_method.md)             | @getshort(../methods/js_kanban_serialize_method.md)     |
+| [](../methods/js_kanban_setconfig_method.md)             | @getshort(../methods/js_kanban_setconfig_method.md)     |
+| [](../methods/js_kanban_setedit_method.md)               | @getshort(../methods/js_kanban_setedit_method.md)       |
+| [](../methods/js_kanban_setlocale_method.md)             | @getshort(../methods/js_kanban_setlocale_method.md)     |
+| [](../methods/js_kanban_setsearch_method.md)             | @getshort(../methods/js_kanban_setsearch_method.md)     |
+| [](../methods/js_kanban_setsort_method.md)               | @getshort(../methods/js_kanban_setsort_method.md)       |
+| [](../methods/js_kanban_undo_method.md)                  | @getshort(../methods/js_kanban_undo_method.md)          |
+| [](../methods/js_kanban_unselectcard_method.md)          | @getshort(../methods/js_kanban_unselectcard_method.md)  |
+| [](../methods/js_kanban_updatecard_method.md)            | @getshort(../methods/js_kanban_updatecard_method.md)    |
+| [](../methods/js_kanban_updatecolumn_method.md)          | @getshort(../methods/js_kanban_updatecolumn_method.md)  |
+| [](../methods/js_kanban_updatecomment_method.md)         | @getshort(../methods/js_kanban_updatecomment_method.md) |
+| [](../methods/js_kanban_updaterow_method.md)             | @getshort(../methods/js_kanban_updaterow_method.md)     |

@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.getReactiveState()
 title: getReactiveState 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getReactiveState 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费的 30 天评估版 DHTMLX 看板。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getReactiveState 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并免费下载 DHTMLX 看板的 30 天试用版。
 ---
 
 # api.getReactiveState()
 
 ### 描述
 
-@short: 获取一个包含看板板块响应式属性的对象。
+@short: 获取包含看板响应式属性的对象
 
 ### 用法
 
@@ -18,42 +18,55 @@ api.getReactiveState(): object;
 
 ### 返回值
 
-该方法返回一个包含以下属性的对象:
+该方法返回一个包含以下参数的对象：
 
 ~~~jsx {}
 {
-    areasMeta: {
-        subscribe: any,
-        update: any,
-        set: any
-    },
-    before: {...},
     cardHeight: {...},
     cardShape: {...},
     cards: {...},
-    cardsMap: {...},
-    cardsMeta: {...},
     columnKey: {...},
     columnShape: {...},
     columns: {...},
     currentUser: {...},
-    dragItemId: {...},
-    dragItemsCoords: {...},
-    edit: {...},
     history: {...},
-    layout: {...},
     links: {...},
-    overAreaId: {...},
     readonly: {...},
     rowKey: {...},
     rowShape: {...},
+    editorShape: {...},
     rows: {...},
-    scroll: {...},
     search: {...},
     selected: {...},
-    sort: {...}
+    sort: {...},
+
+    // 移除的参数
+    /*  
+        fromAreaMeta: {...},
+        dropAreaItemsCoords: {...},
+        dropAreasCoords: {...},
+        overAreaMeta: {...},  
+        before: {...},
+        dragItemId: {...},
+        dragItemsCoords: {...},
+        overAreaId: {...},
+    /*
+
+    // 私有参数
+    /*
+        edit -> _edit: {...},
+        layout -> layout: {...},
+        cardsMap -> _cardsMap: {...},
+        cardsMeta -> _cardsMeta: {...},
+        areasMeta -> _areasMeta: {...},
+        scroll -> _scroll: {...},
+    */
 }
 ~~~  
+
+:::warning
+这些状态属性是只读的。请勿修改它们，以避免出现意外行为！
+:::
 
 ### 示例
 
@@ -64,37 +77,28 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// 访问看板的响应式状态
+// 获取看板的响应式状态
 const state = board.api.getReactiveState();
 
-// 订阅 columns 的变化，并打印更新后的数组
+// 订阅 columns 变化并输出 columns 数组
 state.columns.subscribe((data) => {
     console.log(data);
 });
 
-// 订阅 cards 的变化，并打印更新后的数组
+// 订阅 cards 变化并输出 cards 数组
 state.cards.subscribe((data) => {
     console.log(data);
 });
 
-// 订阅 rows 的变化，并打印更新后的数组
+// 订阅 rows 变化并输出 rows 数组
 state.rows.subscribe((data) => {
     console.log(data);
 });
 
-// 订阅卡片选择变化，并打印所选卡片的 ID
+// 订阅卡片选择变化并输出选中卡片的 ID
 state.selected.subscribe((data) => {
     console.log(data);
 });
-
-// 设置新的选择
-state.selected.set([1, 2]);
-
-// 通过添加另一个卡片 ID 更新选择
-state.selected.update((data) => {
-    data.push(3);
-    return data;
-});
 ~~~
 
-**更新日志:** 该方法在版本 1.4 中进行了更新
+**更新日志：** 此方法在 v1.7 版本中进行了更新

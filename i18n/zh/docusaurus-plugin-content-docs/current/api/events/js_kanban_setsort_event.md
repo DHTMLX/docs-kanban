@@ -1,14 +1,14 @@
 ---
 sidebar_label: set-sort
 title: set-sort 事件
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 set-sort 事件。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 set-sort 事件。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # set-sort
 
 ### 描述
 
-@short: 当卡片被排序时触发。
+@short: 当卡片排序时触发
 
 ### 用法
 
@@ -25,15 +25,15 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 set-sort
 
 ### 参数
 
-**set-sort** 事件的回调函数可以接收 *null* 或包含以下属性的对象:
+**set-sort** 事件的回调函数可以接受 *null* 值或包含以下参数的对象：
 
-- `by` - （可选）指定用于排序的卡片字段（*字符串* 或 *函数*）
-- `dir` - （可选）排序方向，取值为 *"asc"* 或 *"desc"*
-- `preserve` - （可选）是否保持当前排序状态
-- `columnId` - （可选）标识正在排序的列
+- `by` - （可选）用于排序的卡片字段（*string* 或 *function*）
+- `dir` - （可选）排序顺序。可选值为 *"asc"* 和 *"desc"*
+- `preserve` - （可选）启用或禁用排序状态的保留
+- `columnId` - （可选）要排序的列的 ID
 
 :::info
-有关内部事件的操作，请参阅 [**事件总线方法**](/api/overview/main_overview.md/#事件总线方法)
+处理内部事件时，您可以使用 [**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
@@ -44,10 +44,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 监听 "set-sort" 事件
+// 订阅 "set-sort" 事件
 board.api.on("set-sort", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**更新日志:** 此事件自 v1.2 版本引入
+**更新日志：** 该事件在 v1.2 版本中添加

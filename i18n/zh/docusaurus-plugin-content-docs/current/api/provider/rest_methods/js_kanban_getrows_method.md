@@ -1,17 +1,17 @@
 ---
 sidebar_label: getRows()
 title: getRows REST 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getRows REST 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getRows REST 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天试用版本。
 ---
 
 # getRows()
 
 ### 描述
 
-@short: 获取一个包含行数据的 promise
+@short: 获取包含行数据的 promise
 
 :::info
-**getRows()** 方法是用于服务器交互的 **RestDataProvider** 服务的一部分
+**getRows()** 方法是用于与服务器交互的 **RestDataProvider** 服务的一部分
 :::
 
 ### 用法
@@ -22,7 +22,7 @@ getRows(): promise;
 
 ### 返回值
 
-**getRows()** 方法向服务器发送 **GET** 请求，并返回一个解析为行数据的 **promise**
+**getRows()** 方法通过 **GET** 请求向服务器发送请求，并返回包含行数据的 **promise**
 
 ### 示例
 
@@ -45,4 +45,4 @@ Promise.all([
 });
 ~~~
 
-**相关文档:** [与服务器交互](../../../../guides/working_with_server)
+**相关内容：** [与服务器交互](guides/working_with_server.md)

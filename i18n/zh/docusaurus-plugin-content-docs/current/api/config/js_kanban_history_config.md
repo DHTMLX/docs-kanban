@@ -1,21 +1,21 @@
 ---
 sidebar_label: history
 title: history 配置
-description: 本节介绍 DHTMLX JavaScript 看板库中的 history 配置。您可以查看开发者指南、API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 history 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并免费下载 DHTMLX Kanban 的 30 天评估版本。
 ---
 
 # history
 
 ### 描述
 
-@short: 可选。控制是否跟踪变更历史
+@short: 可选。启用或禁用变更历史的管理
 
 :::info
-`history` 属性允许您开启或关闭看板的历史管理。将其设置为 **false** 表示无法通过 API 或工具栏控件来控制历史。
+通过使用 `history` 属性，您可以启用或禁用 Kanban 的历史管理。如果将其设置为 **false**，则无法通过 API 和工具栏控件管理历史。
 :::
 
 :::tip
-您还可以通过在方法和事件中使用 [`$meta`](/api/common/js_kanban_meta_parameter.md) 参数，将某些操作排除在看板历史之外！
+您还可以使用方法和事件中的 [`$meta`](api/common/js_kanban_meta_parameter.md) 参数跳过 Kanban 历史中的某些操作！
 :::
 
 ### 用法
@@ -41,6 +41,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志:** 此属性从版本 1.3 引入
+**更新日志：** 此属性在 v1.3 版本中新增
 
-**相关内容:** [`undo()`](/api/methods/js_kanban_undo_method.md) 和 [`redo()`](/api/methods/js_kanban_redo_method.md)
+**相关文档：** [`undo()`](api/methods/js_kanban_undo_method.md) 和 [`redo()`](api/methods/js_kanban_redo_method.md)

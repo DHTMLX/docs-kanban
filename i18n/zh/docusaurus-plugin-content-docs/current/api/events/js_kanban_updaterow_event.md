@@ -1,14 +1,14 @@
 ---
 sidebar_label: update-row
 title: update-row 事件
-description: 了解 DHTMLX JavaScript 看板库中的 update-row 事件。浏览开发者指南、API 参考，尝试代码示例和在线演示，并获取 DHTMLX 看板的免费 30 天试用。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 update-row 事件。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
 ---
 
 # update-row
 
 ### 描述
 
-@short: 当行数据更新时触发
+@short: 当更新行数据时触发
 
 ### 用法
 
@@ -23,20 +23,20 @@ description: 了解 DHTMLX JavaScript 看板库中的 update-row 事件。浏览
 
 ### 参数
 
-**update-row** 事件的回调函数接收一个包含以下参数的对象:
+**update-row** 事件的回调函数可以接收一个包含以下参数的对象：
 
-- `id` - （必需）正在更新的行的标识符
-- `row` - （可选）该行的新数据对象。完整的 **row** 参数列表请查看[**这里**](/api/config/js_kanban_rows_config.md)
-- `replace` - （可选）控制数据是完全替换还是部分更新
+- `id` - （必需）要更新的行的 ID
+- `row` - （可选）行的新数据对象。完整的 **row** 参数列表请参见 [**这里**](api/config/js_kanban_rows_config.md)
+- `replace` - （可选）启用/禁用完全替换数据
 
-:::note
-将 `replace` 设置为 *true* 会用新数据完全覆盖旧数据。如果省略或设置为 false，则只更新指定的值。
-:::
+    :::note
+    如果将 `replace` 参数设置为 *true*，旧数据将被新数据完全替换。否则，方法只会更新您传入的值。
+    :::
 
-- `skipProvider` - （可选）控制是否抑制向服务器的请求
+- `skipProvider` - （可选）启用/禁用阻止请求发送到服务器
 
 :::info
-有关内部事件的管理，请参阅[**事件总线方法**](/api/overview/main_overview.md/#事件总线方法)
+处理内部事件时，您可以使用 [**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
@@ -47,12 +47,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 监听 "update-row" 事件
+// 订阅 "update-row" 事件
 board.api.on("update-row", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**更新日志**:
-- **id** 和 **row** 参数于 v1.1 版本引入
-- **replace** 参数于 v1.3 版本新增
+**更新日志**：
+- **id** 和 **row** 参数在 v1.1 中新增
+- **replace** 参数在 v1.3 中新增

@@ -1,20 +1,20 @@
 ---
 sidebar_label: 与服务器协作
 title: 与服务器协作
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解如何与服务器协作。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并免费下载 DHTMLX Kanban 的 30 天评估版。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解如何与服务器协作。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并免费下载 DHTMLX Kanban 30 天试用版。
 ---
 
 # 与服务器协作
 
-JavaScript Kanban 能够处理客户端和服务器端的数据。它没有特殊的后端要求，因此可连接到任何支持 REST API 的后端平台。
+JavaScript Kanban 支持同时处理客户端和服务器端数据。该组件对后端没有特殊要求，可以轻松连接任何支持 REST API（RESTful API）的后端平台。
 
 :::info
-该组件内置了 **Go** 和 **Node** 后端选项，同时也支持自定义服务器脚本。
+默认情况下，该组件自带内置的 **Go** 和 **Node** 后端。但您同样可以使用自定义的服务器脚本。
 :::
 
 ## RestDataProvider
 
-JavaScript Kanban 提供了 **RestDataProvider** 服务，完全支持后端 REST API 操作。该服务便于与服务器通信，并可执行以下数据操作:
+JavaScript Kanban 提供了 **RestDataProvider** 服务，完全支持与后端交互的 REST API。它允许与服务器进行交互并执行以下数据操作：
 
 - ***"add-card"***
 - ***"add-column"***
@@ -36,28 +36,28 @@ JavaScript Kanban 提供了 **RestDataProvider** 服务，完全支持后端 RES
 
 ## REST 方法
 
-**RestDataProvider** 服务包含多个用于动态加载数据的 REST 方法:
+**RestDataProvider** 服务包含用于动态数据加载的特殊 REST 方法：
 
-- [`getCards()`](/api/provider/rest_methods/js_kanban_getcards_method.md) - 返回 ***cards data*** 的 promise
-- [`getColumns()`](/api/provider/rest_methods/js_kanban_getcolumns_method.md) - 返回 ***columns data*** 的 promise
-- [`getLinks()`](/api/provider/rest_methods/js_kanban_getlinks_method.md) - 返回 ***links data*** 的 promise
-- [`getRows()`](/api/provider/rest_methods/js_kanban_getrows_method.md) - 返回 ***rows data*** 的 promise
-- [`getUsers()`](/api/provider/rest_methods/js_kanban_getusers_method.md) - 返回 ***users data*** 的 promise
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - 获取 ***cards data*** 的 Promise
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - 获取 ***columns data*** 的 Promise
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - 获取 ***links data*** 的 Promise
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - 获取 ***rows data*** 的 Promise
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - 获取 ***users data*** 的 Promise
 
 ## 与后端交互
 
-要连接服务器，只需将 **RestDataProvider** 关联到您的服务器脚本。如果使用内置后端，可在以下位置找到:
+要与服务器交互，您需要将 **RestDataProvider** 连接到相应的服务器脚本。如果您希望使用内置后端，可以在以下仓库中找到所需脚本：
 
 - [**Go**](https://github.com/web-widgets/kanban-go) 后端
 - [**Node**](https://github.com/web-widgets/kanban-node) 后端
 
-您也可以自行搭建后端。
+或者，您也可以创建自定义后端。
 
 :::tip
-如有自定义后端，请参阅 [**REST API routes**](/api/overview/rest_routes_overview/) 部分以获取更多信息。
+如果您使用自定义后端，请参考 [**REST API routes**](api/overview/rest_routes_overview.md) 主题获取更多信息！
 :::
 
-连接 **RestDataProvider** 到后端非常简单:只需使用 **kanban.RestDataProvider** 构造函数，并传入服务器的 **URL**。
+要将 **RestDataProvider** 连接到后端，需要调用 **kanban.RestDataProvider** 构造函数，并将相应的 **URL** 作为参数传入。
 
 ~~~js {1-2,27}
 const url = "https://some_backend_url";
@@ -91,20 +91,20 @@ Promise.all([
 ~~~
 
 :::info
-要实现添加、删除等数据操作并将请求发送到服务器，**RestDataProvider** 需要通过 [**api.setNext()**](/api/internal/js_kanban_setnext_method.md) 加入 **Event Bus** 链。
+您需要通过 [**api.setNext()**](api/internal/js_kanban_setnext_method.md) 方法将 **RestDataProvider** 包含到 **Event Bus** 顺序中，以便执行数据操作（*添加*、*删除*等）并向服务器发送相应请求。
 :::
 
 ### 示例
 
-下面的代码片段演示如何将 **RestDataProvider** 连接到 **Go** 后端，并从服务器加载数据:
+在以下代码片段中，您可以看到如何将 **RestDataProvider** 连接到 **Go** 后端并加载服务器数据：
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
 ## 多用户后端
 
-Kanban 看板广泛应用于各类企业，多用户支持可显著提升协作体验。启用该功能后，多个用户可实时管理同一个看板上的卡片，无需刷新页面。这样可以让协作更加流畅，所有人都能及时看到变更。
+诸如我们的 Kanban 这样的项目管理工具，受到各类企业的高度青睐。考虑到这一点，提供无缝的多用户体验非常重要。我们的新特性允许多个用户实时高效地管理同一看板上的卡片，无需刷新页面。因此，终端用户可以协作并实时了解彼此的操作，从而提升生产力和整体满意度。
 
-要设置多用户后端，首先需在初始化看板前在服务器上完成授权。可以使用一个简单的 `login(url: string)` 方法实现:
+要实现多用户后端，需要在 Kanban 初始化前在服务器上完成授权。为此，您可以创建 `login(url: string)` 函数：
 
 ~~~js {}
 const login = (url) => {
@@ -122,13 +122,13 @@ const login = (url) => {
 };
 ~~~
 
-该方法仅为授权演示--所有用户都以 ID 为 1 登录。登录后，服务器返回一个 token，后续请求都需携带该 token。为自动完成此操作，可以使用 `RestDataProvider.setHeaders()` 方法，为每个请求添加自定义请求头。默认情况下，服务器期望 token 在 `"Remote-Token":<value>` 头部:
+该函数仅用于模拟授权，所有用户都将以 ID 1 进行授权。授权成功后，服务器会发送一个 token，后续每次请求服务器都需要使用该 token。为了自动发送 token，可以使用 `RestDataProvider.setHeaders()` 方法。该方法能为请求添加自定义 header。默认情况下，服务器将 token 存储在 `"Remote-Token":<value>` header 中：
 
 ~~~js {}
 login(url).then(token => {
     // rest provider 初始化
     const restProvider = new kanban.RestDataProvider(url);
-    // 设置自定义请求头
+    // 设置 token 为自定义 header
     restProvder.setHeaders({
         "Remote-Token": "eyJpZCI6IjEzMzciLCJ1c2VybmFtZSI6ImJpem9uZSIsImlhdC...",
     });
@@ -137,7 +137,7 @@ login(url).then(token => {
 });
 ~~~
 
-获得 token 后，可以如下初始化 Kanban 组件:
+获取 token 后，您应初始化组件。可以按如下方式实现：
 
 ~~~js {}
 // 组件初始化...
@@ -157,44 +157,44 @@ Promise.all([
         editorShape,
     });
 
-    // 将客户端变更保存到服务器
+    // 将客户端数据保存到服务器
     board.api.setNext(restProvider);
     
     // 多用户初始化...
 });
 ~~~
 
-组件设置完毕后，需要添加 WebSocket 监听服务器事件。用法如下:
+组件初始化后，需要添加 WebSocket，用于监听来自服务器的事件。可按如下方式实现：
 
 ~~~js {}
 // 多用户初始化...
 
-// 获取服务器事件的客户端处理器
+// 获取服务器事件的客户端处理函数
 const handlers = kanbanUpdates(
     board.api,
     restProvider.getIDResolver()
 );
 // 连接服务器事件
 const events = new RemoteEvents(url + "/api/v1", token);
-// 将处理器绑定到服务器事件
+// 绑定客户端处理函数到服务器事件
 events.on(handlers);
 ~~~
 
-- `handlers` - 客户端用于响应服务器事件的处理函数
-- `events` - 该对象连接服务器并监听事件
-- `RemoteEvents.on(handlers)` - 将处理器绑定到服务器事件
+- `handlers` - 处理服务器事件的客户端处理函数
+- `events` - 连接服务器并监听所有事件的对象
+- `RemoteEvents.on(handlers)` - 将客户端处理函数应用到服务器事件
 
-通过这种方式实现多用户后端，可极大提升协作效率，并让所有用户即时在界面中看到最新更改。
+集成多用户后端后，您可以简化用户间的协作，并让他们通过 UI 实时了解所有变更。
 
 ### 示例
 
-如下代码片段展示如何配置多用户后端，实现用户间实时同步变更:
+以下代码片段演示了如何配置多用户后端，以实时跟踪其他用户的变更：
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
 ## 服务器事件自定义
 
-您可以自定义服务器事件的处理方式。只需将自定义 **handlers** 对象传递给 `RemoteEvents.on(handlers)` 方法即可。**handlers** 对象结构如下:
+您可以自定义服务器事件的处理逻辑。为此，需将 **handlers** 对象传递给 `RemoteEvents.on(handlers)` 方法。**handlers** 对象应具有如下结构：
 
 ~~~js {}
 {
@@ -205,16 +205,16 @@ events.on(handlers);
 }
 ~~~
 
-每当服务器有变更时，会返回被修改元素的名称，该名称可能因后端逻辑不同而变化。
+当服务器发生变更时，会返回被修改元素的名称。这些名称可能因服务器逻辑而异。
 
-客户端的变更通过 `function(obj: any)` 的 **obj** 参数传递。操作类型通过 `type: string` 字段指定，可能的取值包括:
+客户端更新的数据会作为 **obj** 参数传递给 `function(obj: any)`。为了指定操作类型，存在一个 `type: string` 字段。其可能取值如下：
 
-- **cards**: `"add-card"`, `"update-card"`, `"delete-card"`, `"move-card"`
-- **columns**: `"add-column"`, `"update-column"`, `"delete-column"`, `"move-column"`
-- **links**: `"add-link"`, `"delete-link"`
-- **rows**: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
+- 对于 **cards**: `"add-card"`, `"update-card"`, `"delete-card"`, `"move-card"`
+- 对于 **columns**: `"add-column"`, `"update-column"`, `"delete-column"`, `"move-column"`
+- 对于 **links**: `"add-link"`, `"delete-link"`
+- 对于 **rows**: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
 
-参考以下代码示例:
+以下代码片段展示了实现细节：
 
 ~~~js {}
 // 初始化 kanban
@@ -234,14 +234,14 @@ const cardsHandler = (obj: any) => {
             board.api.exec("add-card", {
                 card: obj.card,
                 select: false,
-                skipProvider: true, // 防止客户端再向服务器发送请求
+                skipProvider: true, // 防止客户端再次向服务器发送请求
             })
             break;
         // 其他操作
     }
 }
 
-// 添加自定义处理器
+// 添加自定义处理函数
 const handlers = {
    cards: cardsHandler,
 };
@@ -250,40 +250,41 @@ const remoteEvents = new kanban.RemoteEvents(remoteEventsURL, token);
 remoteEvents.on(handlers);
 ~~~
 
-`RestDataProvider.getIDResolver()` 方法返回一个函数，用于同步客户端和服务器的 ID。当在客户端新建对象（*card/column/row*）时，先分配一个临时 ID，服务器返回的真实 ID 存储在数据中。`idResolver()` 用于保持 ID 的一致，方法签名为 `idResolver(id: TID, type: number)`。
+`RestDataProvider.getIDResolver()` 方法返回一个函数，用于同步客户端 ID 与服务器 ID。当在客户端新建一个对象（*card/column/row/link*）时，结果对象会有一个临时 ID，并在存储中有对应的服务器 ID。`idResolver()` 函数用于同步客户端 ID 与服务器 ID。其格式为：`idResolver(id: TID, type: number)`
 
-`type` 与实体的对应关系如下:
+`type` 参数为模型类型，取值如下：
 
 - `CardID` - 1,
 - `RowID` - 2,
 - `ColumnID` - 3
+- `LinkID` - 4
 
-如需禁止向服务器发送新请求，可在调用 `board.api.exec()` 时加上 `skipProvider: true` 标志。
+为避免再次向服务器发送请求，调用 `board.api.exec()` 方法时需使用 `skipProvider: true` 标志。
 
-自定义处理器挂载后，您将完全掌控客户端对服务器事件的处理逻辑。
+最后一步是将自定义处理函数应用到服务器事件。通过这种方式，您可以自定义服务器事件处理逻辑。
 
-## 将多个状态分组到同一列
+## 将两个或更多状态归为同一列
 
-有时您可能希望在一列中展示不同状态的卡片（例如，将 *To do* 和 *Unassigned* 状态的卡片归为一列）。
+本节介绍如何将来自不同列的卡片显示在同一列中（例如，将 *To do* 和 *Unassigned* 状态的卡片归为一个公共列）。
 
-此时，可以添加一个自定义字段（如 **status**）用于存储卡片当前状态，**column** 字段则用于存储公共状态。
+要实现此类分组，您需要添加一个自定义字段（如 **status**），用于存储卡片当前状态。**column** 字段则存储公共状态。
 
-然后，定义卡片分组规则。例如，可以将以下状态分组到不同列:
+接下来，需为卡片分组制定特定规则。如下所示，不同状态的卡片会被分组到特定列：
 
-- *todo*, *unassigned* - 显示在 **Open** 列
-- *dev*, *testing* - 显示在 **Inprogress** 列
-- *merged*, *released* - 显示在 **Done** 列
+- *todo*, *unassigned* - 属于 **Open** 列
+- *dev*, *testing* - 属于 **Inprogress** 列
+- *merged*, *released* - 属于 **Done** 列
 
-实现方式有两种:
+实现将两个或更多状态的卡片归为同一列有两种方式：
 
-- [服务器端分组](#服务器端分组)
-- [服务器端 + 客户端分组](#服务器端--客户端分组)
+- [服务器端分组](#server-side-grouping)
+- [服务器端 + 客户端分组](#server-side--client-side-grouping)
 
 ### 服务器端分组
 
-如需在服务器端实现分组，后端需支持通过 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) 向客户端推送数据（参见 [多用户后端](#多用户后端)）。
+如需实现服务器端分组，您的服务器应支持通过 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) 向客户端发送数据（见 [多用户后端](#multiuser-backend)）。
 
-当服务器收到卡片更新请求时，需检查 **status** 字段。例如，使用 [Go](https://go.dev/) 可这样写:
+在服务器处理更新卡片请求时，需要检查 **status** 字段。在本例中我们使用 [Go](https://go.dev/) 语言，您也可以使用其他后端技术。
 
 ~~~go
 func Update(id int, c Card) error {
@@ -301,8 +302,8 @@ func Update(id int, c Card) error {
    db.Save(&c)
 
    if oldColumn != c.Column {
-      // 如果状态字段导致列发生变化
-      // 通知客户端将卡片移动到对应列
+      // 如果因 status 字段更新了 column，
+      // 需通知客户端将卡片移动到对应列
 
       // 需更新卡片索引
       updateCardIndex(&c)
@@ -314,17 +315,17 @@ func Update(id int, c Card) error {
 }
 ~~~
 
-因此，当卡片状态变更时，服务器逻辑会将其分配到正确的列，并通过 WebSocket 通知客户端移动到相应列。
+因此，当用户更改 status 字段值时，服务器逻辑会检查其值，并将卡片放入相应列。之后，服务器会通过 WebSocket 通知客户端该卡片需要移动到其他列。
 
 ### 服务器端 + 客户端分组
 
-采用组合方式时，服务器提供分组规则，客户端根据规则和卡片状态判断归属列。
+对于混合方案，您应从服务器获取分组规则。客户端根据这些规则，依据 status 字段的值判断卡片应归入哪一列。
 
 ~~~js
 const groupingRules = await fetch("http://server.com/rules");
 ~~~
 
-示例规则如下:
+例如，可以指定如下规则：
 
 ~~~json
 {
@@ -334,7 +335,7 @@ const groupingRules = await fetch("http://server.com/rules");
 }
 ~~~
 
-接下来，在客户端添加逻辑，根据卡片状态自动归入正确列:
+然后，您需要定义逻辑，检测卡片变更并将其移动到目标列：
 
 ~~~js
 const updateColumn = card => {
@@ -358,10 +359,10 @@ kanban.api.intercept("update-card", ev => {
 });
 ~~~
 
-通过这种方式，可以根据其它字段灵活控制卡片所属列。
+通过这种方式，您可以根据其他字段为卡片指定特定列。
 
 ### 示例
 
-以下代码片段展示如何用服务器端逻辑实时合并多个状态到同一列:
+以下代码片段展示了如何配置服务器端，将两个或更多状态实时分组到同一列：
 
 <iframe src="https://snippet.dhtmlx.com/habbz6mf?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

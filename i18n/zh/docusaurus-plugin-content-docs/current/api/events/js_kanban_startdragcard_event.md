@@ -1,14 +1,14 @@
 ---
 sidebar_label: start-drag-card
 title: start-drag-card 事件
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 start-drag-card 事件。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并免费下载 DHTMLX Kanban 的 30 天免费评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 start-drag-card 事件。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
 ---
 
 # start-drag-card
 
 ### 描述
 
-@short: 当卡片开始被拖动时触发
+@short: 当开始拖动卡片时触发
 
 ### 用法
 
@@ -24,16 +24,16 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 start-d
 
 ### 参数
 
-**start-drag-card** 事件的回调函数接收一个包含以下属性的对象:
+**start-drag-card** 事件的回调函数可以接收一个包含以下参数的对象：
 
 - `id` - （必需）被拖动卡片的 ID
 - `columnId` - （必需）卡片当前所在列的 ID
 - `rowId` - （可选）卡片当前所在行的 ID
-- `before` - （可选）卡片在列中紧随被拖动卡片之后的卡片 ID
-- `source` - （可选）包含被移动卡片 ID 的数组
+- `before` - （可选）当前位于被拖动卡片之后的卡片 ID
+- `source` - （可选）被移动卡片 ID 组成的数组
 
 :::info
-要操作内部事件，可以使用 [**Event Bus 方法**](/api/overview/main_overview.md/#事件总线方法)。
+要处理内部事件，您可以使用 [**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
@@ -50,6 +50,6 @@ board.api.on("start-drag-card", (obj) => {
 });
 ~~~
 
-**更新日志:** 本事件自版本 1.4 起引入
+**更新日志：** 该事件自 v1.4 版本起添加
 
-**相关示例:** [Kanban. 禁用特定列的拖放功能](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)
+**相关示例：** [Kanban. 禁用对特定列的拖放](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

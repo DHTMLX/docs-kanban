@@ -1,35 +1,35 @@
 ---
 sidebar_label: DELETE /cards/{id}/comments/{id}
 title: DELETE /cards/{cardId}/comments/{commentId}
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 DELETE /cards/{cardId}/comments/{commentId} REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并免费下载 DHTMLX 看板的30天试用版本。
+description: 您可以在DHTMLX JavaScript看板库的文档中了解DELETE /cards/{cardId}/comments/{commentId} REST路由。浏览开发者指南和API参考，尝试代码示例和在线演示，并下载DHTMLX Kanban的免费30天试用版。
 ---
 
 # DELETE `/cards/{cardId}/comments/{commentId}`
 
 ### 描述
 
-@short: 删除卡片上的评论
+@short: 从卡片中删除评论
 
-此路由处理发送到 `cards/{cardId}/comments/{commentId}` 端点的 **HTTP DELETE** 请求。
+此路由处理对路径 `cards/{cardId}/comments/{commentId}` 发起的**HTTP DELETE**请求。
 
 ### 路径参数
 
-请求 URL 中包含以下参数:
+以下参数通过请求行传递：
 
-| 名称        | 类型        | 说明 |
-| ----------- | ----------- | ---- |
-| `cardId`    |  number     | *必需*。要删除评论的卡片标识符。 |
-| `commentId` |  number     | *必需*。要删除的评论标识符。 |
+| 名称        | 类型        | 描述 |
+| ----------- | ----------- | ----------- |
+| `cardId`    |  number     | *必填*。要删除评论的卡片ID。 |
+| `commentId` |  number     | *必填*。要删除的评论ID。 |
 
 ### 请求体
 
-此请求无需发送请求体。
+无需请求体。
 
 ### 响应
 
-服务器会返回一个 JSON 对象，包含删除该评论的用户 ID。
+服务器返回一个包含删除评论用户ID的json对象。
 
-示例:
+示例：
 
 ~~~json
 {
@@ -37,8 +37,8 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 DELETE /
 }
 ~~~
 
-HTTP 状态码表示请求结果:200 表示请求成功，500 表示发生错误。
+HTTP状态码表示请求是否成功（response.status == 200）或失败（response.status == 500）。
 
 ---
 
-**相关文档**: [与服务器交互](/guides/working_with_server.md)
+**相关文档**: [Working with server](guides/working_with_server.md)

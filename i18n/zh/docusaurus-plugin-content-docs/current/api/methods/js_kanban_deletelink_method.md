@@ -8,7 +8,7 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 deleteLi
 
 ### 描述
 
-@short: 从看板数据存储中删除指定的链接。
+@short: 从看板的数据存储中移除指定的链接
 
 ### 用法
 
@@ -18,7 +18,7 @@ deleteLink({ id: string | number }): void;
 
 ### 参数
 
-- `id` - （必需）需要删除的链接的 ID
+- `id` - （必需）要删除的链接的 ID
 
 ### 示例
 
@@ -29,8 +29,8 @@ const board = new kanban.Kanban("#root", {
     cards,
     links,
 });
-// 通过 ID 删除链接
+// 通过链接的 ID 删除链接
 board.deleteLink({ id: 5 });
 ~~~
 
-**更新日志:** 该方法在 v1.5 版本中添加
+**更新日志：** 此方法自 v1.5 版本起添加

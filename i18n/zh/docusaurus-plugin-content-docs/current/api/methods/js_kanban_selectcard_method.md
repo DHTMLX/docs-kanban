@@ -1,14 +1,14 @@
 ---
 sidebar_label: selectCard()
 title: selectCard 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 selectCard 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 免费的 30 天评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 selectCard 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
 ---
 
 # selectCard()
 
 ### 描述
 
-@short: 根据给定的 ID 高亮显示卡片。
+@short: 通过指定的 ID 选择卡片
 
 ### 用法
 
@@ -21,11 +21,11 @@ selectCard({
 
 ### 参数
 
-- `id` - （必填）要选择的卡片的 ID 
-- `groupMode` - （可选）切换是否允许一次选择多张卡片（默认为 **false**）
+- `id` - （必需）被选择卡片的 ID
+- `groupMode` - （可选）启用/禁用卡片多选（默认值为 **false**）
 
 :::info
-当 **groupMode** 设置为 **true** 时，**selectCard()** 方法会保持当前选择不变，同时将新卡片添加到选择中。
+如果将 **groupMode** 参数设置为 **true**，则 **selectCard()** 方法不会重置其他元素的选择状态
 :::
 
 ### 示例

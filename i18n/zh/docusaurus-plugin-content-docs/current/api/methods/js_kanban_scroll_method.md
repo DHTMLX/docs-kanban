@@ -1,14 +1,14 @@
 ---
 sidebar_label: scroll()
 title: scroll 方法
-description: 探索 DHTMLX JavaScript Kanban 库中的 scroll 方法文档。查看开发者指南、API 参考、代码示例、在线演示，并免费下载 DHTMLX Kanban 30 天试用版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 scroll 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # scroll()
 
 ### 描述
 
-@short: 将看板视图移动到指定元素
+@short: 将看板滚动到指定元素
 
 ### 用法
 
@@ -22,9 +22,9 @@ scroll({
 
 ### 参数
 
-- `id` - （必填）要滚动到的元素 ID
-- `to` - （必填）指定要滚动到的元素类型；可选值为 "column"、"row" 或 "card"
-- `options` - （可选）包含滚动选项的对象。完整的可用参数列表见 [这里](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
+- `id` - （必需）目标元素的 ID
+- `to` - （必需）目标元素的类型。可用值为 "column"、"row" 和 "card"
+- `options` - （可选）滚动选项对象。完整的滚动参数列表可见于 [这里](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
 
 ### 示例
 
@@ -46,4 +46,4 @@ board.scroll({
 });
 ~~~
 
-**更新日志:** 该方法自版本 1.2 起引入
+**更新日志：** 此方法在 v1.2 版本中添加

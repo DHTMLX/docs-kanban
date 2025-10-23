@@ -1,35 +1,35 @@
 ---
 sidebar_label: PUT /rows
 title: PUT /rows
-description: 您可以在DHTMLX JavaScript看板库的文档中了解PUT /rows REST路由。浏览开发者指南和API参考，尝试代码示例和在线演示，并下载DHTMLX看板的免费30天评估版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 PUT /rows REST 路由。浏览开发者指南和 API 参考，试用代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # PUT `/rows`
 
 ### 描述
 
-@short: 更新特定行（泳道）的数据，并返回一个空的JSON对象。
+@short: 更新指定行（泳道）上的数据并返回一个空的 json 对象
 
-此路由处理发送到`/rows/{id}`端点的**HTTP PUT**请求。
+该路由处理对 `/rows/{id}` 路径发起的 **HTTP PUT** 请求。
 
 ### 路径参数
 
-请求URL中包含以下参数:
+以下参数在请求行中传递：
 
 | 名称       | 类型        | 描述 |
 | ---------- | ----------- | ----------- |
-| `id`       | number      | *必填*。需要更新的行（泳道）的ID。|
+| `id`       | number      | *必需*。要更新的行（泳道）的 ID。|
 
 ### 请求负载
 
-服务器期望接收一个包含该行所有属性的JSON对象，包括未更改和已更新的字段。
+服务器需要接收一个包含所有行属性（包括未改变的和新的/修改过的）的 json 对象。
 
 | 名称        | 类型        | 描述 |
 | ----------- | ----------- | ----------- |
-| `label`     |  string     | *必填*。要更新的行名称。|
-| `collapsed` |  boolean    | *可选*。指示该行初始是否折叠，值为**true**表示折叠，**false**表示展开（默认值）。|
+| `label`     |  string     | *必需*。要更新的行名称。|
+| `collapsed` |  boolean    | *可选*。行的状态：如果行初始折叠则为 **true**，如果展开则为 **false**（默认）。|
 
-示例:
+示例：
 
 ~~~json
 {
@@ -40,14 +40,14 @@ description: 您可以在DHTMLX JavaScript看板库的文档中了解PUT /rows R
 }
 ~~~
 
-有关行对象的其他示例，请参见[**rows**](/api/config/js_kanban_rows_config.md)部分。
+您可以在 [**rows**](api/config/js_kanban_rows_config.md) 部分找到另一个行对象示例。
 
 ### 响应
 
-更新成功时，服务器返回一个空的JSON对象。
+成功时，返回一个空的 json 对象。
 
-HTTP状态码反映请求的结果:状态码200表示请求成功，500表示失败。
+HTTP 状态码显示请求是否成功（response.status == 200）或失败（response.status == 500）。
 
 ---
 
-**相关文档**:[与服务器交互](/guides/working_with_server.md)
+**相关文档**: [与服务器交互](guides/working_with_server.md)

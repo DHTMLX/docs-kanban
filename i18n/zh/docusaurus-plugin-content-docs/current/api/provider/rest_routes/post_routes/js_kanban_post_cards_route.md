@@ -1,28 +1,28 @@
 ---
 sidebar_label: POST /cards
 title: POST /cards
-description: 浏览 DHTMLX JavaScript 看板库文档中的 POST /cards REST 端点。访问开发者指南、API 参考、代码示例、在线演示，并获得 DHTMLX 看板的免费 30 天试用。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 POST /cards REST 路由。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # POST `/cards`
 
 ### 描述
 
-@short: 添加一张新卡片，并返回包含该卡片 ID 的 json 对象。
+@short: 创建一个新卡片并返回包含新卡片 ID 的 json 对象
 
-此端点处理发送到 `/cards` URL 的 **HTTP POST** 请求。
+该路由处理发送到 `/cards` 路径的 **HTTP POST** 请求。
 
-### 请求负载
+### 请求体
 
-服务器需要一个包含以下字段的 json 对象:
+服务器期望接收一个包含以下属性的 json 对象：
 
-| 名称        | 类型        | 描述 |
-| ----------- | ----------- | ----------- |
-| `label`     |  string     | *必填*。要创建的卡片标题。|
-| `column`    |  number     | *必填*。卡片将被放置的列的 ID。|
-| `row`       |  number     | *必填*。卡片将被定位的行的 ID。|
+| 名称        | 类型        | 描述               |
+| ----------- | ----------- | ------------------ |
+| `label`     |  string     | *必填*。要添加的新卡片名称。|
+| `column`    |  number     | *必填*。目标列的 ID。|
+| `row`       |  number     | *必填*。目标行的 ID。|
 
-示例:
+示例：
 
 ~~~json
 {
@@ -34,9 +34,9 @@ description: 浏览 DHTMLX JavaScript 看板库文档中的 POST /cards REST 端
 
 ### 响应
 
-该端点返回一个包含新创建卡片 ID 的 json 对象。
+该路由返回一个包含新卡片 ID 的 json 对象。
 
-示例:
+示例：
 
 ~~~json
 { 
@@ -44,8 +44,8 @@ description: 浏览 DHTMLX JavaScript 看板库文档中的 POST /cards REST 端
 }
 ~~~
 
-HTTP 状态码指示请求是否成功（response.status == 200）或是否发生错误（response.status == 500）。
+HTTP 状态码表示请求是否成功（response.status == 200）或失败（response.status == 500）。
 
 ---
 
-**相关文档**: [Working with server](/guides/working_with_server.md)
+**相关文档**: [Working with server](guides/working_with_server.md)

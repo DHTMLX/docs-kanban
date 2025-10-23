@@ -1,14 +1,14 @@
 ---
 sidebar_label: addColumn()
 title: addColumn 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 addColumn 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费30天试用版的 DHTMLX 看板。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 addColumn 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版。
 ---
 
 # addColumn()
 
 ### 描述
 
-@short: 在看板中插入一个新的列
+@short: 向看板中添加一个新列
 
 ### 用法
 
@@ -22,12 +22,12 @@ addColumn({
 
 ### 参数
 
-- `id` - （可选）指定新列的 ID
-- `column` - （可选）提供定义新列的数据对象
-- `before` - （可选）指定新列插入位置之前的列的 ID
+- `id` - （可选）新列的 ID
+- `column` - （可选）新列的数据对象
+- `before` - （可选）指定新列将插入到哪个列之前的 ID
 
 :::info
-您可以在[**这里**](/api/config/js_kanban_columns_config.md)找到完整的 **column** 参数列表
+完整的 **column** 参数列表请参见 [**这里**](api/config/js_kanban_columns_config.md)
 :::
 
 ### 示例
@@ -42,7 +42,7 @@ const board = new kanban.Kanban("#root", {
 board.addColumn({
     id: "extra_column",
     column: {
-        label: "额外列",
+        label: "Extra column",
         limit: 2,
         strictLimit: 2,
         collapsed: true
@@ -51,4 +51,4 @@ board.addColumn({
 });
 ~~~
 
-**更新日志**:参数 **id**、**column** 和 **before** 于 v1.1 版本引入
+**更新日志**：从 v1.1 版本开始，新增了 **id**、**column** 和 **before** 参数

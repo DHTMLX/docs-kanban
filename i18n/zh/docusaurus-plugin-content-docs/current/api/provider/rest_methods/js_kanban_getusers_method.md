@@ -1,7 +1,7 @@
 ---
 sidebar_label: getUsers()
 title: getUsers REST 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getUsers REST 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getUsers REST 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
 ---
 
 # getUsers()
@@ -11,7 +11,7 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getUsers
 @short: 获取包含用户数据的 promise
 
 :::info
-**getUsers()** 方法是用于服务器通信的 **RestDataProvider** 服务的一部分
+**getUsers()** 方法是 **RestDataProvider** 服务的一部分，用于与服务器交互
 :::
 
 ### 用法
@@ -22,7 +22,7 @@ getUsers(): promise;
 
 ### 返回值
 
-**getUsers()** 方法向服务器发送一个 **GET** 请求，并返回一个解析为用户数据的 **promise**
+**getUsers()** 方法通过 **GET** 请求向服务器发送请求，并返回一个包含用户数据的 **promise**
 
 ### 示例
 
@@ -55,6 +55,6 @@ Promise.all([
 });
 ~~~
 
-**更新日志:** 此方法在版本 1.3 中引入
+**更新日志：** 该方法在 v1.3 版本中添加
 
-**相关文档:** [与服务器交互](../../../../guides/working_with_server)
+**相关文档：** [与服务器交互](guides/working_with_server.md)

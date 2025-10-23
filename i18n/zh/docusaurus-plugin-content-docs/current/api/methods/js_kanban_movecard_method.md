@@ -1,14 +1,14 @@
 ---
 sidebar_label: moveCard()
 title: moveCard 方法
-description: 探索 DHTMLX JavaScript 看板库中的 moveCard 方法。查看开发者指南、API 参考、代码示例、实时演示，并获得 DHTMLX Kanban 免费 30 天试用。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 moveCard 方法。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天试用版。
 ---
 
 # moveCard()
 
 ### 描述
 
-@short: 将卡片移动到指定的列（以及行）。
+@short: 将卡片移动到指定的列（和行）
 
 ### 用法
 
@@ -23,13 +23,13 @@ moveCard({
 
 ### 参数
 
-- `id` - （必需）需要移动的卡片 ID
-- `columnId` - （必需）卡片将放置的目标列 ID
-- `rowId` - （可选）卡片将定位的目标行 ID
-- `before` - （可选）在该卡片 ID 之前插入被移动卡片
+- `id` - （必填）将要移动的卡片的 ID
+- `columnId` - （必填）卡片将被放置到的列的 ID
+- `rowId` - （可选）卡片将被放置到的行的 ID
+- `before` - （可选）在该卡片 ID 之前插入新卡片
 
 :::info
-当组件配置中设置了 **rowKey** 属性时，调用 **moveCard()** 方法时必须提供 **rowId**！
+如果在组件配置中指定了 **rowKey** 属性，则 **moveCard()** 方法的 **rowId** 参数为*必填*！
 :::
 
 ### 示例
@@ -41,8 +41,8 @@ const board = new kanban.Kanban("#root", {
     cards
 });
 // 移动 ID 为 1 的卡片
-// 它将被放置到 "inprogress" 列和 "feature" 行中，
-// 并定位在 ID 为 8 的卡片之前
+// 该项将被放置到 "inprogress" 列和 "feature" 行，
+// 并插入到 ID 为 8 的卡片之前
 board.moveCard({
     id: 1,
     columnId: "inprogress",

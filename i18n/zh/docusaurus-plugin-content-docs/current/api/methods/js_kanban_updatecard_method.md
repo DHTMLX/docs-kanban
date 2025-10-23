@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateCard()
 title: updateCard 方法
-description: 探索 DHTMLX JavaScript 看板库文档中的 updateCard 方法。查看开发者指南、API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 免费 30 天试用版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 updateCard 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # updateCard()
 
 ### 描述
 
-@short: 通过卡片的 ID 更新卡片数据
+@short: 通过卡片 ID 更新卡片数据
 
 ### 用法
 
@@ -22,13 +22,13 @@ updateCard({
 
 ### 参数
 
-- `id` - （必填）要更新的卡片的 ID
-- `card` - （可选）包含卡片更新数据的对象。卡片参数的完整列表请查看 [**这里**](/api/config/js_kanban_cards_config.md)
-- `replace` - （可选）控制是否完全替换已有数据
+- `id` - （必填）要更新的卡片 ID
+- `card` - （可选）卡片的新数据对象。卡片参数的完整列表可在[**此处**](api/config/js_kanban_cards_config.md)找到
+- `replace` - （可选）启用/禁用完全替换数据
 
-:::note
-将 `replace` 设置为 *true* 会用新数据完全覆盖旧数据。否则，只会更新您提供的属性。
-:::
+    :::note
+    如果将 `replace` 参数设置为 *true*，旧数据将被新数据完全替换。否则，该方法只会更新您传递的值。
+    :::
 
 ### 示例
 
@@ -51,6 +51,6 @@ board.updateCard({
 });
 ~~~
 
-**更新日志**:
-- **id** 和 **card** 参数在 v1.1 中引入
-- **replace** 参数在 v1.3 中添加
+**更新日志**：
+- v1.1 版本新增了 **id** 和 **card** 参数
+- v1.3 版本新增了 **replace** 参数

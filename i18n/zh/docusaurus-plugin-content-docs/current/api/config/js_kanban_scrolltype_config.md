@@ -1,14 +1,14 @@
 ---
 sidebar_label: scrollType
 title: scrollType 配置
-description: 了解 DHTMLX JavaScript 看板库中的 scrollType 配置。查看开发者指南、API 参考、代码示例、在线演示，并免费下载 30 天试用版的 DHTMLX 看板。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 scrollType 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
 ---
 
 # scrollType
 
 ### 描述
 
-@short: 可选。指定滚动行为的方式。
+@short: 可选。定义滚动类型
 
 ### 用法
 
@@ -17,7 +17,7 @@ scrollType?: "default" | "column";
 ~~~  
 
 :::note
-当 `scrollType` 设置为 `"column"` 时，每个列可以独立滚动。
+如果您使用 `scrollType: "column"` 设置，则可以分别滚动每一列。
 :::
 
 ### 默认配置
@@ -27,7 +27,7 @@ scrollType: "default"
 ~~~
 
 :::important
-如果您将 [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config.md) 与 `scrollType: "default"` 一起使用，确保通过 [`cardHeight`](/api/config/js_kanban_cardheight_config.md) 属性设置固定的卡片高度。否则，卡片将不会显示。
+如果您将 [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) 和 `scrollType: "default"` 设置结合使用，请务必通过 [`cardHeight`](api/config/js_kanban_cardheight_config.md) 属性指定卡片的固定高度。否则卡片将无法显示。
 :::
 
 ### 示例
@@ -42,8 +42,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志:** 该属性在 v1.2 版本引入
+**更新日志：** 该属性在 v1.2 版本中添加
 
-**相关文档:** [配置](/guides/configuration#卡片)
+**相关文档：** [配置](guides/configuration.md#cards)
 
-**相关示例:** [看板。固定表头、懒加载和列滚动](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
+**相关示例：** [看板。固定表头、懒加载渲染和列滚动](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

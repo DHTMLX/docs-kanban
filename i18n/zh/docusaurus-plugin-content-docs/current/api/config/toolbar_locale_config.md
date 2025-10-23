@@ -1,17 +1,17 @@
 ---
 sidebar_label: locale
 title: locale 配置
-description: 了解如何在 DHTMLX JavaScript 看板库中配置（Toolbar）的 locale。浏览开发者指南和 API 参考，体验代码示例和在线演示，并获得 DHTMLX 看板的免费 30 天试用。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解（工具栏）locale 配置。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
 ---
 
 # locale
 
 ### 描述
 
-@short: 可选。一个定义 Toolbar 自定义语言环境的对象。
+@short: 可选。工具栏的自定义 locale 对象
 
 :::info
-**locale** 对象应包含看板和 Toolbar 的所有标签及其翻译。
+**locale** 对象需要包含看板和工具栏的所有标签及其对应的翻译。
 :::
 
 ### 用法
@@ -22,10 +22,10 @@ locale?: object;
 
 ### 默认配置
 
-默认情况下，Toolbar 使用的是[**英语**](/guides/localization/#默认语言环境)语言环境。您也可以指定自己的自定义语言环境。
+默认情况下，工具栏使用[**英语**](guides/localization.md#default-locale) locale。您也可以设置为自定义的 locale。
 
 :::tip
-要动态切换语言环境，可以使用 Toolbar 的[**setLocale()**](../../methods/toolbar_setlocale_method)方法。
+要动态更改当前 locale，可以使用工具栏的[**setLocale()**](api/methods/toolbar_setlocale_method.md)方法。
 :::
 
 ### 示例
@@ -33,15 +33,15 @@ locale?: object;
 ~~~jsx {8}
 // 创建看板
 const board = new kanban.Kanban("#root", {
-    locale: zh
+    locale: cn
 });
-// 创建 Toolbar
+// 创建工具栏
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: zh // 将 "zh" 语言环境应用到 Toolbar 
+    locale: cn // 将 "cn" locale 应用到工具栏
 });
 ~~~
 
-**相关文档:** [本地化](/guides/localization)
+**相关文档：** [本地化](guides/localization.md)
 
-**相关示例:** [看板。 本地化](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)
+**相关示例：** [看板. 本地化](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

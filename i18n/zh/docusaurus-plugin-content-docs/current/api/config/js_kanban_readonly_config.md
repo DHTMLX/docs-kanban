@@ -1,20 +1,20 @@
 ---
 sidebar_label: readonly
-title: 只读配置
-description: 探索 DHTMLX JavaScript 看板库中的只读配置。查看开发者指南、API 参考，尝试代码示例和实时演示，并获取 DHTMLX 看板的免费 30 天试用。
+title: readonly 配置
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 readonly 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # readonly
 
 ### 描述
 
-@short: 可选。控制是否启用或禁用卡片的编辑、新增、选择和拖拽功能。
+@short: 可选。启用/禁用卡片的编辑、添加、选择和拖拽功能
 
 ### 用法
 
 ~~~js {}
 readonly?: boolean;
-// 或者
+//或
 readonly?: {
     edit?: boolean,
     add?: boolean,
@@ -25,28 +25,28 @@ readonly?: {
 
 ### 参数
 
-设置 **只读模式** 有两种方式:使用 **简写** 或 **扩展** 格式。
+要配置 **readonly 模式**，您可以使用 **简洁** 或 **扩展** 参数。
 
-**简写** 格式:
-- `readonly` - （可选）开启或关闭看板的 **只读模式**。
+**简洁** 参数：
+- `readonly` - （可选）启用或禁用 Kanban 的 **只读模式**
 
-**扩展** 格式:
-- `readonly` - （可选）包含详细设置的对象。支持以下属性:
-    - `edit` - （可选）开启或关闭 **卡片编辑**。
-    - `add` - （可选）开启或关闭 **新增卡片**。
-    - `select` - （可选）开启或关闭 **卡片选择**。
-    - `dnd` - （可选）开启或关闭 **卡片拖拽**。
+**扩展** 参数：
+- `readonly` - （可选）一个包含扩展设置的对象。您可以指定以下参数：
+    - `edit` - （可选）启用或禁用卡片的 **编辑**
+    - `add` - （可选）启用或禁用新卡片的 **添加**
+    - `select` - （可选）启用或禁用卡片的 **选择**
+    - `dnd` - （可选）启用或禁用卡片的 **拖拽**
 
 ### 默认配置
 
 ~~~jsx {}
-readonly: false // 默认关闭只读模式
-// 或者
+readonly: false // 只读模式禁用
+//或
 readonly: {
-    edit: true, // 启用编辑
-    add: true, // 启用新增
-    select: true, // 启用选择
-    dnd: true // 启用拖拽
+    edit: true, // 编辑启用
+    add: true, // 添加启用
+    select: true, // 选择启用
+    dnd: true // 拖拽启用
 }
 ~~~
 
@@ -58,7 +58,7 @@ new kanban.Kanban("#root", {
     columns,
     readonly: {
         edit: false, // 禁用编辑
-        add: true, // 启用新增
+        add: true, // 启用添加
         select: false, // 禁用选择
         dnd: true // 启用拖拽
     },
@@ -66,4 +66,4 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**相关示例:** [Readonly mode](https://snippet.dhtmlx.com/b8x84yln?tag=kanban)
+**相关示例：** [Readonly mode](https://snippet.dhtmlx.com/b8x84yln?tag=kanban)

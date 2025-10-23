@@ -1,17 +1,17 @@
 ---
 sidebar_label: $meta
 title: $meta 参数
-description: 您可以在DHTMLX JavaScript看板库的文档中了解 $meta 参数。浏览开发者指南和API参考，试用代码示例和在线演示，并免费下载30天评估版的DHTMLX看板。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 $meta 参数。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费的 30 天评估版本 DHTMLX Kanban。
 ---
 
 # $meta
 
-### 说明
+### 描述
 
-@short: 一个包含额外设置的对象，用于自定义看板的方法和事件
+@short: 用于配置 Kanban 方法和事件的额外设置对象
 
 :::important
-`$meta` 对象提供了额外的参数，用于配置与看板事件相关的方法！
+`$meta` 对象包含一组额外的参数，用于基于 Kanban 事件配置方法！
 :::
 
 ### 用法
@@ -24,19 +24,19 @@ $meta?: {
 
 ### 参数
 
-`$meta` 对象包含以下参数:
+`$meta` 对象包含以下参数：
 
-- `skipHistory` - （可选）控制该操作是否应被排除在看板的历史记录跟踪之外
+- `skipHistory` - （可选）启用或禁用在 Kanban 历史记录中跳过操作
 
 ### 示例
 
 ~~~jsx {11-13}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 添加新卡片，并在看板历史中跳过此操作
+// 添加新卡片，并在 Kanban 历史记录中跳过此操作
 board.addCard({
     id: 1,
     columnId: "backlog",
@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**更新日志:** `$meta` 参数自 v1.3 版本引入
+**更新日志：** `$meta` 参数自 v1.3 版本起添加
 
-**相关文章:** [`history`](/api/config/js_kanban_history_config.md)
+**相关文章：** [`history`](api/config/js_kanban_history_config.md)

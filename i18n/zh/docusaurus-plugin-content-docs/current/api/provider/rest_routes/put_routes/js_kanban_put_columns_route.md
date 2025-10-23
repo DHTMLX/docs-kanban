@@ -1,35 +1,35 @@
 ---
 sidebar_label: PUT /columns
 title: PUT /columns
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 PUT /columns REST 路由。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 PUT /columns REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # PUT `/columns`
 
 ### 描述
 
-@short: 更新特定列的详细信息并返回一个空的 JSON 对象。
+@short: 更新指定列的数据并返回一个空的 json 对象
 
-此路由处理发送到 `/columns/{id}` 端点的 **HTTP PUT** 请求。
+该路由处理发送到 `/columns/{id}` 路径的 **HTTP PUT** 请求。
 
 ### 路径参数
 
-请求 URL 中包含以下参数:
+以下参数在请求行中传递：
 
 | 名称       | 类型        | 描述 |
 | ---------- | ----------- | ----------- |
-| `id`       |  number     | *必填*。需要更新的列的 ID。|
+| `id`       |  number     | *必填*。要更新的列的 ID。|
 
 ### 请求负载
 
-服务器期望接收包含列所有属性的 JSON 对象，包括未更改的属性以及新增或修改的属性。
+服务器需要接收一个包含所有列属性（包括未更改和新/修改的）的 json 对象。
 
 | 名称       | 类型        | 描述 |
 | ---------- | ----------- | ----------- |
-| `label`    |  string     | *必填*。列的更新名称。|
-| `collapsed`|  boolean    | *可选*。指示列是否初始为折叠状态（**true**），或展开状态（**false**，默认）。|
+| `label`    |  string     | *必填*。要更新的列的名称。|
+| `collapsed`|  boolean    | *可选*。列的状态：如果列初始折叠则为 **true**，展开状态为 **false**（默认值）。|
 
-示例:
+示例：
 
 ~~~json
 {
@@ -40,14 +40,14 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 PUT /col
 }
 ~~~
 
-另一个列对象的示例可以在[**columns**](/api/config/js_kanban_columns_config.md)部分找到。
+您可以在 [**columns**](api/config/js_kanban_columns_config.md) 部分找到另一个列对象的示例。
 
 ### 响应
 
-请求成功时，返回一个空的 JSON 对象。
+如果请求成功，将返回一个空的 json 对象。
 
-HTTP 状态码表示结果:成功为 200 状态，失败为 500 状态。
+HTTP 状态码显示请求是否成功（response.status == 200）或失败（response.status == 500）。
 
 ---
 
-**相关文档**: [与服务器交互](/guides/working_with_server.md)
+**相关文档**: [与服务器交互](guides/working_with_server.md)

@@ -1,14 +1,14 @@
 ---
 sidebar_label: cardHeight
 title: cardHeight 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 cardHeight 配置。浏览开发者指南和 API 参考，试用代码示例和实时演示，并下载 DHTMLX Kanban 的免费 30 天评估版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 cardHeight 配置。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
 ---
 
 # cardHeight
 
 ### 描述
 
-@short: 可选。定义卡片的高度。
+@short: 可选。卡片的高度
 
 ### 用法
 
@@ -17,7 +17,7 @@ cardHeight?: number; // px
 ~~~
 
 :::important
-当同时使用 [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config.md) 和 [`scrollType: "default"`](/api/config/js_kanban_scrolltype_config.md) 时，务必通过 `cardHeight` 属性设置卡片的固定高度。否则，卡片将无法显示。
+如果您同时使用 [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) 和 [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md) 设置，请务必通过 `cardHeight` 属性指定卡片的固定高度。如果未指定，卡片将不会显示。
 :::
 
 ### 示例
@@ -31,8 +31,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志:** 此属性自版本 1.2 起引入
+**更新日志：** 该属性在 v1.2 版本中添加
 
-**相关文档:** [配置](/guides/configuration#卡片)
+**相关文档：** [配置](guides/configuration.md#cards)
 
-**相关示例:** [Kanban. 懒加载渲染与列滚动](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
+**相关示例：** [Kanban. Lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

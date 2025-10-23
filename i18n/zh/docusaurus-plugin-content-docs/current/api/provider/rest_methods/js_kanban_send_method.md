@@ -1,16 +1,16 @@
 ---
 sidebar_label: send()
 title: send() 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 send() 方法。浏览开发者指南和 API 参考，试用代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 send() 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
 ---
 
 # send()
 
 ### 描述
 
-@short: 此方法负责向服务器发送必要的 HTTP 请求，并返回一个 promise，根据请求类型，promise 可能包含数据。
+@short: 向服务器发送所需的 HTTP 请求，并根据请求返回带数据或不带数据的 promise。
 
-所有服务器请求均通过 [**RestDataProvider**](/guides/working_with_server.md/#restdataprovider) 服务中的 **send()** 方法执行。
+所有发送到服务器的请求均通过 **send()** 方法完成，该方法是 [**RestDataProvider**](guides/working_with_server.md/#restdataprovider) 服务的一部分。
 
 ### 用法
 
@@ -25,34 +25,34 @@ send(
 
 ### 参数
 
-| 名称       | 类型        | 描述 |
+| 名称        | 类型        | 说明 |
 | ----------- | ----------- | ----------- |
-| `url`         |  string     | *必需*。请求发送的服务器端点。            |
-| `method`            |string             | *必需*。使用的 HTTP 方法（GET、POST、PUT、DELETE）。            |
-| `data`  | object        | *可选*。发送到服务器的参数。默认发送事件参数，但您可以通过自定义对象包含额外参数。详见下方[示例](#示例)。 |
-| `headers`  |object       | *可选*。默认请求头包含 **Content-Type** 设置为 *application/json*。可以通过 **customHeaders** 参数添加额外的请求头。详见下方[示例](#示例)。 |
+| `url`       | string      | *必填*。请求发送到的服务器路径。|
+| `method`    | string      | *必填*。HTTP 方法类型（GET、POST、PUT、DELETE）|
+| `data`      | object      | *可选*。发送到服务器的参数。默认情况下，发送触发事件的参数。但您可以用自定义对象添加额外参数。详见下方[示例](#examples)。 |
+| `headers`   | object      | *可选*。默认请求头为 **Content-Type**，值为 *application/json*。可以通过 **customHeaders** 参数添加更多自定义请求头。详见下方[示例](#examples)。 |
 
 ### 返回值
 
-此方法返回一个 promise，返回的数据取决于请求类型。
+该方法返回一个带或不带数据的 promise，具体取决于请求。
 
-请求成功时，promise 解析。请求失败时，会抛出错误。
+请求成功时返回 promise；请求失败时，客户端会抛出错误。
 
-您可以通过返回的 promise 的 **catch** 方法控制返回数据和处理失败请求。
+您可以配置返回内容。要处理失败请求的响应，请使用返回的 promise 的 **catch** 方法。
 
 ~~~jsx
 restDataProvider.send(url, method, data)
 .then(data => {
-   ... // 成功：处理接收到的数据
+   ... // 成功时：处理数据
 })
 .catch(err => {
-    ... // 处理错误
+    ... // 错误处理
 });
 ~~~
 
 ### 示例
 
-下面示例演示如何在默认参数之外，附加额外参数发送请求:
+下面的示例演示了如何发送包含除默认参数外的额外参数的请求：
 
 ~~~jsx {14-20}
 const url = "https://some_backend_url";
@@ -65,7 +65,7 @@ Promise.all([
     const board = new kanban.Kanban("#root", {
         cards,
         columns,
-        //配置参数
+        // 配置参数
     });
 
     board.api.on("add-card", obj => {
@@ -80,7 +80,7 @@ Promise.all([
 });
 ~~~
 
-下面示例展示如何在使用 **send()** 方法时添加额外的请求头:
+以下示例展示了如何向 **send()** 方法添加更多请求头：
 
 ~~~js
 const customHeaders = {
@@ -93,7 +93,7 @@ board.api.on("add-cards", obj => {
 });
 ~~~
 
-或者，您也可以通过扩展 RestDataProvider 来添加请求头，从而更好地控制发送至服务器的数据:
+或者，您也可以通过重新定义 RestDataProvider 来添加请求头，这样可以更灵活地控制发送给服务器的数据：
 
 ~~~jsx {3-8}
 const url = "https://some_backend_url";
@@ -110,4 +110,4 @@ board.api.setNext(new MyDataProvider(url));
 
 ---
 
-**相关文档:** [与服务器交互](../../../../guides/working_with_server)
+**相关文档：** [与服务器交互](guides/working_with_server.md)

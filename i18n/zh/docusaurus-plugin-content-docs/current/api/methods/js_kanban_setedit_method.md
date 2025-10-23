@@ -1,14 +1,14 @@
 ---
 sidebar_label: setEdit()
 title: setEdit 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 setEdit 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 setEdit 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # setEdit()
 
 ### 描述
 
-@short: 切换看板卡片编辑器的开启或关闭状态
+@short: 切换看板的编辑器
 
 ### 用法
 
@@ -18,12 +18,12 @@ setEdit({ cardId: string | number } | null): void;
 
 ### 参数
 
-此方法接受 *null* 或包含以下属性的对象:
+该方法可以接受 *null* 值或包含以下参数的对象：
 
-- `cardId` - （必填）要编辑的卡片 ID
+- `cardId` - （必需）要编辑的卡片的 ID
 
 :::note
-要关闭编辑器，使用带有 ***null*** 参数的 **setEdit()** 方法
+要关闭编辑器，请调用 **setEdit()** 方法并传入 ***null*** 值
 :::
 
 ### 示例
@@ -34,8 +34,8 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 打开指定卡片 ID 的编辑器
+// 通过卡片 ID 打开该卡片的编辑器
 board.setEdit({ cardId: 1 });
 ~~~
 
-**更新日志:** 此方法在 v1.2 版本中引入
+**更新日志：** 该方法在 v1.2 版本中添加

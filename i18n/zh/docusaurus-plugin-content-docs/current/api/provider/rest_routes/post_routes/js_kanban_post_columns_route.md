@@ -1,26 +1,26 @@
 ---
 sidebar_label: POST /columns
 title: POST /columns
-description: 您可以在DHTMLX JavaScript看板库的文档中了解POST /columns REST路由。浏览开发者指南和API参考，试用代码示例和实时演示，并免费下载30天试用版本的DHTMLX看板。
+description: 您可以在DHTMLX JavaScript看板库的文档中了解POST /columns REST路由。浏览开发者指南和API参考，尝试代码示例和在线演示，并下载DHTMLX看板的免费30天试用版本。
 ---
 
 # POST `/columns`
 
 ### 描述
 
-@short: 添加一个新列并返回包含该列ID的JSON对象。
+@short: 添加一个新列并返回包含列ID的json对象
 
-此路由处理发送到`/columns`端点的**HTTP POST**请求。
+该路由处理对路径`/columns`的**HTTP POST**请求。
 
-### 请求负载
+### 请求体
 
-服务器期望接收一个包含以下属性的JSON对象:
+服务器期望接收一个包含以下属性的json对象：
 
-| 名称        | 类型        | 描述           |
-| ----------- | ----------- | -------------- |
-| `label`     |  string     | *必填*。要创建的新列的名称。|
+| 名称        | 类型        | 描述 |
+| ----------- | ----------- | ----------- |
+| `label`     |  string     | *必填*。要添加的新列名称。|
 
-示例:
+示例：
 
 ~~~json
 {
@@ -30,9 +30,9 @@ description: 您可以在DHTMLX JavaScript看板库的文档中了解POST /colum
 
 ### 响应
 
-响应包含一个包含新创建列ID的JSON对象。
+该路由返回一个包含新列ID的json对象。
 
-示例:
+示例：
 
 ~~~json
 { 
@@ -40,8 +40,8 @@ description: 您可以在DHTMLX JavaScript看板库的文档中了解POST /colum
 }
 ~~~
 
-HTTP状态码表示请求是否成功（response.status == 200）或发生错误（response.status == 500）。
+HTTP状态码表示请求是否成功（response.status == 200）或失败（response.status == 500）。
 
 ---
 
-**相关文章**:[与服务器交互](/guides/working_with_server.md)
+**相关文档**: [Working with server](guides/working_with_server.md)

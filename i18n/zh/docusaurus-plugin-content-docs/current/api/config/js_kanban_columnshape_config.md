@@ -1,14 +1,14 @@
 ---
 sidebar_label: columnShape
 title: columnShape 配置
-description: 探索 DHTMLX JavaScript 看板库中的 columnShape 配置。浏览开发者指南和 API 参考，测试代码示例和在线演示，并下载免费的 30 天试用版 DHTMLX 看板。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 columnShape 配置。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # columnShape
 
 ### 描述
 
-@short: 可选。用于自定义列外观的设置对象
+@short: 可选。用于管理列外观的设置对象
 
 ### 用法
 
@@ -22,10 +22,11 @@ columnShape?: {
                 icon?: string,
                 text?: string,
                 disabled?: boolean,
-                onClick?: ({ id, item, column }) => void
-            },
+                onClick?: ({ id, item, column }) => void,
+                data?: array // 菜单子项数组
+            }, 
             {...}
-        ] | ({ column, columnIndex, columns, store }) => array | boolean
+        ] | ({ column, columnIndex, columns, readonly }) => array | null
     },
     fixedHeaders?: boolean,
     css?: (column, cards) => string,
@@ -41,41 +42,43 @@ columnShape?: {
 
 ### 参数
 
-为了设置列的样式，**columnShape** 对象支持以下选项:
+要配置列的外观，可以在 **columnShape** 对象中指定以下参数：
 
-- `menu` - （可选）列上下文菜单的设置。包括:
-    - `show` - （可选）切换列上下文菜单的显示与隐藏
-    - `items` - （可选）定义菜单项的数组。每个菜单项可以包含:
-        - `id` - （可选）菜单项 ID。内置操作可使用以下值:
-            - ***"add-card"*** - 添加新卡片
-            - ***"set-edit"*** - 编辑列名称
-            - ***"move-column:left"*** - 向左移动列
-            - ***"move-column:right"*** - 向右移动列
-            - ***"delete-column"*** - 删除列
-        - `icon` - （可选）菜单项的图标类，例如 *mdi-delete*
-        - `text` - （可选）菜单项标签
-        - `disabled` - （可选）设置菜单项是否启用或禁用
-        - `onClick` - （可选）回调函数，参数包括:
-            - ***id*** - 当前菜单项 ID
-            - ***item*** - 当前菜单项数据对象
-            - ***column*** - 目标列数据对象
+- `menu` - （可选）列上下文菜单的参数对象。可以指定以下参数：
+    - `show` - （可选）启用或禁用列上下文菜单
+    - `items` - （可选）包含列上下文菜单项参数的对象数组。每个菜单项可以指定以下参数：
+        - `id` - （可选）菜单项的 ID。要实现内置操作，需要指定以下值：
+            - ***"add-card"*** - 添加新卡片的操作
+            - ***"set-edit"*** - 编辑列名称的操作
+            - ***"move-column:left"*** - 向左移动列的操作
+            - ***"move-column:right"*** - 向右移动列的操作
+            - ***"delete-column"*** - 删除列的操作
 
-:::info
-你也可以将 `items` 设置为一个函数，接收以下参数:
+        - `icon` - （可选）菜单项图标的类名。这里可以指定任何与图标字体相关的图标（如 *mdi-delete*）
+        - `text` - （可选）菜单项名称
+        - `disabled` - （可选）菜单项状态（*激活* 或 *禁用*，取决于布尔值）
+        - `onClick` - （可选）自定义回调函数，接受以下参数：
+            - ***id*** - 当前菜单项的 ID
+            - ***item*** - 当前菜单项的数据对象
+            - ***column*** - 目标列的数据对象
 
-- ***column*** - 当前列数据
-- ***columnIndex*** - 当前列索引
-- ***columns*** - 所有列数据的数组
-- ***store*** - *dataStore* 对象
+        - `data` - （可选）表示菜单子项的对象数组
 
-这样可以为每个列创建自定义菜单，或者通过返回 *null* 或 *false* 来隐藏某些列的菜单:
+    :::info
+    你也可以将 `menu.items` 参数设置为自定义函数，该函数接受以下参数：
+    - ***column*** - 当前列的数据对象
+    - ***columnIndex*** - 当前列的索引
+    - ***columns*** - 包含所有列数据的对象数组
+    - ***readonly*** - 只读的 [状态属性](api/internal/js_kanban_getstate_method.md) 对象
 
-~~~jsx {}
-    items: ({ column, columnIndex, columns, store }) => {
-        if(column.id === "inprogress")
-            return null
+    该函数允许为任意列自定义菜单，或者通过返回 *null* 或 *false* 来隐藏特定列的菜单：
 
-        if (column.id === "backlog")
+    ~~~jsx {}
+    items: ({ column }) => {
+        if(column.id === "inprogress"){
+            return null;
+        } 
+        if (column.id === "backlog"){
             return [
                 { id: "set-edit", icon: "wxi-edit", text: "重命名" },
                 {
@@ -83,33 +86,34 @@ columnShape?: {
                     icon: "wxi-delete",
                     text: "移除卡片"
                 }
-            ]
+            ];
+        }       
     }
-~~~
-:::
+    ~~~
+    :::
 
-- `fixedHeaders` - （可选）在垂直滚动时保持列头可见（默认值为 *true*）。注意:Kanban 必须启用滚动（限制高度）。
-- `css` - （可选）返回 CSS 类名的函数，用于条件性地设置列样式
-- `headerTemplate` - （可选）列展开时的列头 HTML 模板
-- `collapsedTemplate` - （可选）列折叠时的列头 HTML 模板
-- `confirmDeletion` - （可选）删除列时是否显示确认对话框
+- `fixedHeaders` - （可选）在垂直滚动时固定列头（默认 *true*）。必须在看板本身启用滚动（限制高度）
+- `css` - （可选）一个函数，根据条件返回应用于列的 CSS 类名
+- `headerTemplate` - （可选）展开状态下列头的 HTML 模板
+- `collapsedTemplate` - （可选）折叠状态下列头的 HTML 模板
+- `confirmDeletion` - （可选）显示/隐藏 **确认对话框**，允许用户确认或取消列的删除操作
 
 ### 默认配置
 
 ~~~jsx {}
-const getDefaultColumnMenuItems = ({ column, columnIndex, columns, store }) => [
+const getDefaultColumnMenuItems = ({ column, columnIndex, columns, readonly }) => [
     { id: "add-card", icon: "wxi-plus", text: "添加新卡片" },
     { id: "set-edit", icon: "wxi-edit", text: "重命名" },
     {
         id: "move-column:left",
         icon: "wxi-arrow-left",
-        text: "向左移动",
+        text: "左移",
         disabled: columnIndex <= 0
     },
     {
         id: "move-column:right",
         icon: "wxi-arrow-right",
-        text: "向右移动",
+        text: "右移",
         disabled: columnIndex >= columns.length - 1
     },
     { id: "delete-column", icon: "wxi-delete", text: "删除" }
@@ -134,19 +138,19 @@ const columnShape = {
             {
                 id: "color",
                 text: "颜色",
-                items: [
-                    {
-                        id:"yellow",
+                data: [
+                    { 
+                        id:"yellow", 
                         text: "黄色",
                         onClick: ({ column }) => changeColumnColor(column, "yellow")
                     },
-                    {
-                        id:"red",
+                    { 
+                        id:"red", 
                         text: "红色",
                         onClick: ({ column }) => changeColumnColor(column, "red")
                     },
-                    {
-                        id:"green",
+                    { 
+                        id:"green", 
                         text: "绿色",
                         onClick: ({ column }) => changeColumnColor(column, "green")
                     }
@@ -190,20 +194,23 @@ new kanban.Kanban("#root", {
     cards,
     columns,
     rows,
-    columnShape,
+    columnShape, 
     // 其他参数
 });
 ~~~
 
-**更新日志:**
-- ***css*** 选项在 v1.4 中新增
-- ***menu.items[0].label*** 重命名为 ***menu.items[0].text*** 于 v1.4
-- ***fixedHeaders*** 选项在 v1.5 中新增
-- ***headerTemplate*** 和 ***collapsedTemplate*** 选项在 v1.6 中新增
+**更新日志：**
+- ***css*** 参数在 v1.4 版本新增
+- ***menu.items[0].label*** 参数在 v1.4 版本被废弃，替换为 ***menu.items[0].text***
+- ***menu.items[0].items*** 参数在 v1.4 版本被废弃，替换为 ***menu.items[0].data***
+- ***fixedHeaders*** 参数在 v1.5 版本新增
+- ***headerTemplate*** 和 ***collapsedTemplate*** 参数在 v1.6 版本新增
+- ***menu.items[0].label*** 和 ***menu.items[0].items*** 参数在 v1.7 版本移除
+- ***menu.items*** 函数更新，v1.7 版本中 **store** 参数替换为 **readonly**
 
-**相关文档:** [配置](/guides/configuration)
+**相关文章：** [配置](guides/configuration.md)
 
-**相关示例:**
-- [看板。通过自定义菜单更改列颜色](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
-- [看板。固定表头、懒渲染和列滚动](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
-- [看板。列头模板](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban)
+**相关示例：**
+- [Kanban. 通过自定义菜单更改列颜色](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
+- [Kanban. 固定表头、懒加载和列滚动](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
+- [Kanban. 列头模板](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban)

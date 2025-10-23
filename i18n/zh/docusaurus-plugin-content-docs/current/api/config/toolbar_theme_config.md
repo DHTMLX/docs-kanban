@@ -1,14 +1,14 @@
 ---
-sidebar_label: theme
-title: theme
-description: 探索 DHTMLX JavaScript 看板库中的（工具栏）主题配置。查看开发者指南、API参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费30天试用版本。
+sidebar_label: 主题
+title: 主题配置
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解（工具栏）主题配置。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
 ---
 
 # 主题
 
 ### 描述
 
-@short: 可选。指定应用于工具栏的主题。
+@short: 可选。应用于工具栏的主题
 
 ### 用法
 
@@ -17,7 +17,7 @@ theme?: string; // "material" | "willow" | "willow-dark"
 ~~~
 
 :::important
-除了设置 `theme` 属性之外，您还可以通过向控件容器添加相应的 *css* 类来应用所需的主题:
+除了使用 `theme` 属性，您还可以通过向控件容器添加相应的 *css* 类来应用所需的主题：
 
 - **Material 主题**
 ~~~html {}
@@ -43,7 +43,7 @@ theme?: string; // "material" | "willow" | "willow-dark"
     <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
-或者，您也可以直接从 skins 文件夹中引入所需主题的样式表:
+或者直接从 skins 文件夹在页面中引入所需主题：
 
 ~~~html {}
 <link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
@@ -52,10 +52,10 @@ theme?: string; // "material" | "willow" | "willow-dark"
 
 ### 默认配置
 
-工具栏默认使用 **Material** 主题。您也可以切换到 **Willow** 或 **Willow-Dark** 主题。
+默认情况下，工具栏使用 **Material** 主题。您也可以设置为 **Willow** 和 **Willow-Dark** 主题。
 
 :::tip
-若要动态更新主题，请使用 [**setConfig()**](../../methods/toolbar_setconfig_method) 方法。
+要动态更改当前主题，可以使用 [**setConfig()**](api/methods/toolbar_setconfig_method.md) 方法。
 :::
 
 ### 示例
@@ -65,21 +65,18 @@ theme?: string; // "material" | "willow" | "willow-dark"
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    theme: "willow-dark" // 设置初始主题为 "willow-dark"
+    theme: "willow-dark" // 初始设置为 "willow-dark" 主题
     // 其他参数
 });
 // 创建工具栏
 new Toolbar("#toolbar", {
     api: board.api,
-    theme: "willow-dark", // 设置初始主题为 "willow-dark"
+    theme: "willow-dark", // 初始设置为 "willow-dark" 主题
 });
 ~~~
 
-**更新日志:** 此属性在 v1.4 版本中引入
+**更新日志：** 该属性在 v1.4 版本中添加
 
-**相关文档:** [样式化](/guides/stylization)
+**相关文档：** [样式化](guides/stylization.md)
 
-**相关示例:**
-- [看板。使用主题](https://snippet.dhtmlx.com/jnw54xif?tag=kanban)
-- [看板。以样式表方式引入主题](https://snippet.dhtmlx.com/k3iw6ti0?tag=kanban)
-- [看板。通过 CSS 类切换主题](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)
+**相关示例：** [看板。通过 CSS 类更改主题](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

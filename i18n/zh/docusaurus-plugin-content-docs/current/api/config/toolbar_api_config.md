@@ -1,17 +1,17 @@
 ---
 sidebar_label: api
 title: api 配置
-description: 在 DHTMLX JavaScript 看板库文档中，探索（工具栏）api 配置。查找开发者指南、API 参考、代码示例、在线演示及 DHTMLX 看板的免费30天试用。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 (Toolbar) api 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
 ---
 
 # api
 
 ### 描述
 
-@short: 必填。表示看板内部 API 的对象。
+@short: 必填。包含 Kanban 内部 API 的对象
 
 :::info
-这里的**看板内部 API**指的是工具栏上的**控件**。
+此处，**Kanban 的内部 API** 用于位于 Toolbar 上的 **控件**
 :::
 
 ### 用法
@@ -33,6 +33,6 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**相关文章:** [配置](/guides/configuration#工具栏)
+**相关文档：** [配置](guides/configuration.md#toolbar)
 
-**相关示例:** [看板. 自定义工具栏](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+**相关示例：** [Kanban. 自定义工具栏](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

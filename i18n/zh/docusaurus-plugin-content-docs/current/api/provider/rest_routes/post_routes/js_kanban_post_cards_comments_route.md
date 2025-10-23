@@ -1,40 +1,40 @@
 ---
 sidebar_label: POST /cards/{id}/comments
 title: POST /cards/{cardId}/comments
-description: 本节介绍了DHTMLX JavaScript看板库中的POST /cards/{cardId}/comments REST接口。内容包括开发者指南、API参考、实用代码示例、在线演示，以及DHTMLX看板的免费30天试用。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 POST /cards/{cardId}/comments REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
 ---
 
 # POST `/cards/{cardId}/comments`
 
 ### 描述
 
-@short: 向指定卡片添加一个或多个新评论，并返回包含新添加评论ID的JSON对象。
+@short: 向卡片添加新的评论，并返回包含新添加评论 ID 的 json 对象。
 
-此接口处理发送到 `/cards/{cardId}/comments` 的 **HTTP POST** 请求。
+该路由处理对 `/cards/{cardId}/comments` 路径发起的 **HTTP POST** 请求。
 
-### 请求负载
+### 请求体
 
-服务器期望接收一个包含以下属性的JSON对象:
+服务器期望接收一个包含以下属性的 json 对象：
 
-| 名称        | 类型        | 说明           |
-| ----------- | ----------- | -------------- |
-| `text`      | string      | *必填*。评论内容。|
-| `date`      | object      | *必填*。评论日期。 |
+| 名称        | 类型        | 描述 |
+| ----------- | ----------- | ----------- |
+| `text`      | string      | *必填*。评论内容文本。|
+| `date`      | object      | *必填*。评论的日期。|
 
-示例:
+示例：
 
 ~~~json
 {
-    "text": "评论内容",
+    "text": "The comment content",
     "date": "2023-05-18T09:13:56.656Z",
 }
 ~~~
 
 ### 响应
 
-响应包含一个JSON对象，包含新添加评论的ID。
+该路由返回一个包含新添加评论 ID 的 json 对象。
 
-示例:
+示例：
 
 ~~~json
 { 
@@ -42,8 +42,8 @@ description: 本节介绍了DHTMLX JavaScript看板库中的POST /cards/{cardId}
 }
 ~~~
 
-HTTP状态码表示请求结果:200表示成功，500表示错误。
+HTTP 状态码表示请求是否成功（response.status == 200）或失败（response.status == 500）。
 
 ---
 
-**相关文档**: [Working with server](/guides/working_with_server.md)
+**相关文档**：[Working with server](guides/working_with_server.md)

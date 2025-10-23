@@ -1,14 +1,14 @@
 ---
 sidebar_label: duplicateCard()
 title: duplicateCard 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 duplicateCard 方法。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 duplicateCard 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
 ---
 
 # duplicateCard()
 
 ### 描述
 
-@short: 根据给定的 ID 创建卡片的副本
+@short: 通过指定的 ID 复制一张卡片
 
 ### 用法
 
@@ -23,8 +23,8 @@ duplicateCard({
 ### 参数
 
 - `id` - （必填）要复制的卡片的 ID
-- `card` - （可选）新卡片的数据对象。您可以在[**这里**](/api/config/js_kanban_cards_config.md)找到卡片参数的完整列表
-- `select` - （可选）决定新添加的卡片是否被选中
+- `card` - （可选）新卡片的数据对象。完整的卡片参数列表可以在[**这里**](api/config/js_kanban_cards_config.md)找到
+- `select` - （可选）启用或禁用选择新添加的卡片
 
 ### 示例
 
@@ -42,4 +42,4 @@ board.duplicateCard({
 });
 ~~~
 
-**更新日志:** `select` 参数在 v1.5.10 版本中添加
+**更新日志：** `select` 参数在 v1.5.10 版本中新增

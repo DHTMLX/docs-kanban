@@ -1,33 +1,31 @@
 ---
 sidebar_label: 属性概览
 title: 属性概览
-description: 在 DHTMLX JavaScript Kanban 库文档中，探索 JavaScript 看板的属性概览。查找开发者指南、API 参考，试用代码示例和在线演示，并免费下载 DHTMLX Kanban 的30天免费试用版。
+description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的属性概览。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
 ---
 
 # Kanban 属性概览
 
-有关 **Kanban** 配置的详细信息，请参阅[配置](/guides/configuration)部分。
+要配置 **Kanban**，请参考[配置](guides/configuration.md)章节。
 
 | 名称                                                      | 描述                                                     |
 | --------------------------------------------------------- | -------------------------------------------------------- |
-| [cardHeight](../../config/js_kanban_cardheight_config/)              | @getshort(../config/js_kanban_cardheight_config.md)      |
-| [cards](../../config/js_kanban_cards_config/)                   | @getshort(../config/js_kanban_cards_config.md)           |
-| [cardShape](../../config/js_kanban_cardshape_config/)               | @getshort(../config/js_kanban_cardshape_config.md)       |
-| [cardTemplate](../../config/js_kanban_cardtemplate_config/)            | @getshort(../config/js_kanban_cardtemplate_config.md)    |
-| [columnKey](../../config/js_kanban_columnkey_config/)               | @getshort(../config/js_kanban_columnkey_config.md)       |
-| [columns](../../config/js_kanban_columns_config/)                 | @getshort(../config/js_kanban_columns_config.md)         |
-| [columnShape](../../config/js_kanban_columnshape_config/)             | @getshort(../config/js_kanban_columnshape_config.md)     |
-| [currentUser](../../config/js_kanban_currentuser_config/)             | @getshort(../config/js_kanban_currentuser_config.md)     |
-| [editor](../../config/js_kanban_editor_config/)                  | @getshort(../config/js_kanban_editor_config.md)          |
-| [~~editorAutoSave~~](../../config/js_kanban_editorautosave_config) | 已废弃！~~可选。启用/禁用自动保存模式~~                       |
-| [editorShape](../../config/js_kanban_editorshape_config/)             | @getshort(../config/js_kanban_editorshape_config.md)     |
-| [history](../../config/js_kanban_history_config/)                 | @getshort(../config/js_kanban_history_config.md)         |
-| [links](../../config/js_kanban_links_config/)                   | @getshort(../config/js_kanban_links_config.md)           |
-| [locale](../../config/js_kanban_locale_config/)                  | @getshort(../config/js_kanban_locale_config.md)          |
-| [readonly](../../config/js_kanban_readonly_config/)                | @getshort(../config/js_kanban_readonly_config.md)        |
-| [renderType](../../config/js_kanban_rendertype_config/)              | @getshort(../config/js_kanban_rendertype_config.md)      |
-| [rowKey](../../config/js_kanban_rowkey_config/)                  | @getshort(../config/js_kanban_rowkey_config.md)          |
-| [rows](../../config/js_kanban_rows_config/)                    | @getshort(../config/js_kanban_rows_config.md)            |
-| [rowShape](../../config/js_kanban_rowshape_config/)                | @getshort(../config/js_kanban_rowshape_config.md)        |
-| [scrollType](../../config/js_kanban_scrolltype_config/)              | @getshort(../config/js_kanban_scrolltype_config.md)      |
-| [主题](../../config/js_kanban_theme_config/)                   | @getshort(../config/js_kanban_theme_config.md)           |
+| [](../config/js_kanban_cardheight_config.md)              | @getshort(../config/js_kanban_cardheight_config.md)      |
+| [](../config/js_kanban_cards_config.md)                   | @getshort(../config/js_kanban_cards_config.md)           |
+| [](../config/js_kanban_cardshape_config.md)               | @getshort(../config/js_kanban_cardshape_config.md)       |
+| [](../config/js_kanban_cardtemplate_config.md)            | @getshort(../config/js_kanban_cardtemplate_config.md)    |
+| [](../config/js_kanban_columnkey_config.md)               | @getshort(../config/js_kanban_columnkey_config.md)       |
+| [](../config/js_kanban_columns_config.md)                 | @getshort(../config/js_kanban_columns_config.md)         |
+| [](../config/js_kanban_columnshape_config.md)             | @getshort(../config/js_kanban_columnshape_config.md)     |
+| [](../config/js_kanban_currentuser_config.md)             | @getshort(../config/js_kanban_currentuser_config.md)     |
+| [](../config/js_kanban_editor_config.md)                  | @getshort(../config/js_kanban_editor_config.md)          |
+| [](../config/js_kanban_editorshape_config.md)             | @getshort(../config/js_kanban_editorshape_config.md)     |
+| [](../config/js_kanban_history_config.md)                 | @getshort(../config/js_kanban_history_config.md)         |
+| [](../config/js_kanban_links_config.md)                   | @getshort(../config/js_kanban_links_config.md)           |
+| [](../config/js_kanban_locale_config.md)                  | @getshort(../config/js_kanban_locale_config.md)          |
+| [](../config/js_kanban_readonly_config.md)                | @getshort(../config/js_kanban_readonly_config.md)        |
+| [](../config/js_kanban_rendertype_config.md)              | @getshort(../config/js_kanban_rendertype_config.md)      |
+| [](../config/js_kanban_rowkey_config.md)                  | @getshort(../config/js_kanban_rowkey_config.md)          |
+| [](../config/js_kanban_rows_config.md)                    | @getshort(../config/js_kanban_rows_config.md)            |
+| [](../config/js_kanban_rowshape_config.md)                | @getshort(../config/js_kanban_rowshape_config.md)        |
+| [](../config/js_kanban_scrolltype_config.md)              | @getshort(../config/js_kanban_scrolltype_config.md)      |

@@ -1,14 +1,14 @@
 ---
 sidebar_label: unselectCard()
 title: unselectCard 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 unselectCard 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 unselectCard 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费的 30 天评估版 DHTMLX 看板。
 ---
 
 # unselectCard()
 
 ### 描述
 
-@short: 取消选中通过其 ID 标识的卡片。
+@short: 通过卡片 ID 取消选择卡片
 
 ### 用法
 
@@ -17,12 +17,12 @@ unselectCard({ id: string | number }): void;
 ~~~
 
 :::info
-如果调用 **unselectCard()** 时不传入任何参数，将会清除所有卡片的选中状态。
+要取消选择所有卡片，请调用不带参数的 **unselectCard()** 方法
 :::
 
 ### 参数
 
-- `id` - （必需）要取消选中的卡片的唯一标识符。
+- `id` - （必需）要取消选择的卡片的 ID
 
 ### 示例
 
@@ -32,6 +32,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 取消选中 ID 为 1 的卡片
+// 取消选择 ID 为 1 的卡片
 board.unselectCard({ id: 1 });
 ~~~

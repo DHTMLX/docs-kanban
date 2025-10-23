@@ -1,14 +1,14 @@
 ---
 sidebar_label: addCard()
 title: addCard 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 addCard 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版。
+description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 addCard 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
 ---
 
 # addCard()
 
 ### 描述
 
-@short: 将新卡片插入到看板中
+@short: 向看板中添加一个新卡片
 
 ### 用法
 
@@ -25,15 +25,15 @@ addCard({
 
 ### 参数
 
-- `columnId` - （必填）卡片将被添加到的列的 ID  
-- `id` - （可选）新卡片的标识符  
-- `rowId` - （可选）卡片应放置的行的 ID  
-- `before` - （可选）新卡片将插入到该卡片之前的 ID  
-- `select` - （可选）指定添加后是否选中新卡片  
-- `card` - （可选）表示新卡片的数据对象  
+- `columnId` - （必填）目标列的 ID  
+- `id` - （可选）新卡片的 ID  
+- `rowId` - （可选）目标行的 ID  
+- `before` - （可选）新卡片将被放置在该卡片 ID 之前  
+- `select` - （可选）是否选中新添加的卡片  
+- `card` - （可选）新卡片的数据对象  
 
 :::info
-完整的 **card** 参数列表请参见 [**这里**](/api/config/js_kanban_cards_config.md)
+完整的 **card** 参数列表请见 [**这里**](api/config/js_kanban_cards_config.md)
 :::
 
 ### 示例
@@ -44,7 +44,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 在 "backlog" 列中添加新卡片
+// 向 "backlog" 列添加新卡片
 board.addCard({
     id: 1,
     columnId: "backlog",
@@ -53,5 +53,5 @@ board.addCard({
 ~~~
 
 :::tip
-也可以将卡片 ID 包含在 **card** 对象中
+您也可以在 **card** 对象中指定新卡片的 ID
 :::
