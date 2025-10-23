@@ -13,7 +13,7 @@ description: DHTMLX Kanban을 Salesforce에 통합하는 방법을 알아보세�
 DHTMLX Kanban은 [Salesforce](https://www.salesforce.com/) 플랫폼과 호환됩니다. Salesforce 환경에 DHTMLX Kanban을 추가하는 방법에 대한 코드 예제를 준비했습니다. 자세한 내용은 관련 [GitHub 예제](https://github.com/DHTMLX/salesforce-lwc-demo)를 참고하세요.
 
 :::note
-JavaScript Kanban 위젯은 [**Salesforce**](https://www.salesforce.com/) 환경에서 동작하고 있음을 자동으로 감지하여 내부적으로 통합 로직을 구성합니다. 대부분의 경우 [**Salesforce 전용 메서드**](#salesforce-specific-methods)를 수동으로 호출할 필요가 없습니다.
+JavaScript Kanban 위젯은 [**Salesforce**](https://www.salesforce.com/) 환경에서 동작하고 있음을 자동으로 감지하여 내부적으로 통합 로직을 구성합니다. 대부분의 경우 [**Salesforce 전용 메서드**](#salesforce-전용-메서드)를 수동으로 호출할 필요가 없습니다.
 :::
 
 ## 환경 준비

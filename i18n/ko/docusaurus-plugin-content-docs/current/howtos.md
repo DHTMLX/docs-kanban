@@ -90,8 +90,8 @@ description: DHTMLX JavaScript Kanban 라이브러리의 How-tos 페이지를 �
 | 주제                                                        | 설명                                            |
 | ------------------------------------------------------------ | -----------------------------------------------|
 | [Autosaving mode](api/config/js_kanban_editorautosave_config.md)| 에디터 자동 저장 모드 활성화/비활성화 방법을 알아보세요 |
-| [Configuring editor fields](guides/configuration.md#editor)| 에디터 필드 설정 방법을 알아보세요                 |
-| [Configuring the editor](guides/configuration.md#configuring-the-editor)| 에디터 설정 방법을 알아보세요           |
+| [Configuring editor fields](guides/configuration.md#에디터)| 에디터 필드 설정 방법을 알아보세요                 |
+| [Configuring the editor](guides/configuration.md#에디터-설정)| 에디터 설정 방법을 알아보세요           |
 | [Updating editor settings](api/methods/js_kanban_setconfig_method.md)| 에디터 설정을 업데이트하는 방법을 알아보세요 |
 
 ## 컬럼 작업 방법

@@ -100,7 +100,7 @@ Toolbar는 Kanban 인터페이스의 선택적 요소입니다. Toolbar 없이 K
 이제 Kanban 컴포넌트가 초기화될 때 적용할 설정 속성을 지정할 수 있습니다.
 
 Kanban을 사용하려면 먼저 **cards**와 **columns**(그리고 *rows*)에 대한 초기 데이터를 제공해야 합니다.
-초기 데이터 외에도 [cards](guides/configuration.md#cards), [editor](guides/configuration.md#editor), [toolbar](guides/configuration.md#toolbar)의 외관을 설정할 수 있습니다.
+초기 데이터 외에도 [cards](guides/configuration.md#카드), [editor](guides/configuration.md#에디터), [toolbar](guides/configuration.md#툴바)의 외관을 설정할 수 있습니다.
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {

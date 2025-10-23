@@ -8,9 +8,9 @@ description: DHTMLX JavaScript Kanban 라이브러리의 초기화에 대해 알
 
 이 가이드는 Kanban 보드의 기능으로 애플리케이션을 확장할 수 있도록 페이지에 Kanban을 생성하는 방법을 단계별로 안내합니다. 아래 단계를 따라 사용 준비가 완료된 컴포넌트를 만들 수 있습니다.
 
-1. [Kanban 소스 파일을 페이지에 포함하기](#including-source-files)
-2. [Kanban 컨테이너 생성하기](#creating-container)
-3. [생성자를 사용해 Kanban 초기화하기](#initializing-kanban)
+1. [Kanban 소스 파일을 페이지에 포함하기](#소스-파일-포함하기)
+2. [Kanban 컨테이너 생성하기](#컨테이너-생성하기)
+3. [생성자를 사용해 Kanban 초기화하기](#kanban-초기화하기)
 
 ## 소스 파일 포함하기
 
@@ -48,7 +48,7 @@ Kanban을 위한 컨테이너를 추가하고, 예를 들어 *"root"*와 같은 
 **kanban.Kanban** 생성자를 사용해 Kanban을 초기화합니다. 이 생성자는 두 개의 파라미터를 받습니다.
 
 - HTML 컨테이너 (HTML 컨테이너의 ID)
-- 설정 속성이 포함된 객체. [전체 속성 목록 보기](#configuration-properties)
+- 설정 속성이 포함된 객체. [전체 속성 목록 보기](#설정-속성)
 
 ~~~jsx title="index.html"
 // Kanban 생성

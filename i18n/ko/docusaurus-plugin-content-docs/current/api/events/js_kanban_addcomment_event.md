@@ -34,7 +34,7 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 add-comment �
 - `comment` - (필수) 새 댓글의 구성 객체로, 다음 매개변수를 지정할 수 있습니다:
     - `text` - (선택 사항) 새 댓글의 텍스트
     - `date` - (선택 사항) 새 댓글의 날짜
-    - `html` - (선택 사항) 새 댓글의 HTML 마크업. 텍스트 대신 HTML 마크업을 표시하려면 [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) 구성의 `html` 속성을 활성화하세요.
+    - `html` - (선택 사항) 새 댓글의 HTML 마크업. 텍스트 대신 HTML 마크업을 표시하려면 [`editorShape`](/api/config/js_kanban_editorshape_config/#--comments-유형-매개변수) 구성의 `html` 속성을 활성화하세요.
 - `skipProvider` - (선택 사항) 서버로 요청이 전송되는 것을 방지할지 여부를 설정합니다.
 
 :::info

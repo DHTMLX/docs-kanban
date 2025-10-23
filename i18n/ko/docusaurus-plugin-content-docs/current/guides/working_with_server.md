@@ -277,12 +277,12 @@ remoteEvents.on(handlers);
 
 두 개 이상의 상태를 하나의 컬럼으로 그룹화하는 방법은 두 가지가 있습니다:
 
-- [서버 사이드](#server-side-grouping)
-- [서버 사이드 + 클라이언트 사이드](#server-side--client-side-grouping)
+- [서버 사이드](#서버-사이드-그룹화)
+- [서버 사이드 + 클라이언트 사이드](#서버-사이드--클라이언트-사이드-그룹화)
 
 ### 서버 사이드 그룹화
 
-서버 사이드 그룹화를 구현하려면, 서버가 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)를 통해 클라이언트에 데이터를 전송할 수 있어야 합니다([다중 사용자 백엔드](#multiuser-backend) 참고).
+서버 사이드 그룹화를 구현하려면, 서버가 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)를 통해 클라이언트에 데이터를 전송할 수 있어야 합니다([다중 사용자 백엔드](#다중-사용자-백엔드) 참고).
 
 서버에서 카드 업데이트 쿼리를 처리하는 부분에서 **status** 필드를 확인해야 합니다. 여기서는 [Go](https://go.dev/) 언어를 예시로 사용하지만, 다른 백엔드 기술도 사용할 수 있습니다.
 

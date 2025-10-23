@@ -56,7 +56,7 @@ npm run dev
 
 ### 1단계. 패키지 설치
 
-[**평가판 Kanban 패키지**](/how_to_start/#installing-kanban-via-npm-or-yarn)를 다운로드하고 README 파일의 지침을 따르세요. 평가판 Kanban은 30일 동안만 사용할 수 있습니다.
+[**평가판 Kanban 패키지**](/how_to_start/#npm-또는-yarn을-통한-kanban-설치)를 다운로드하고 README 파일의 지침을 따르세요. 평가판 Kanban은 30일 동안만 사용할 수 있습니다.
 
 ### 2단계. 컴포넌트 생성
 

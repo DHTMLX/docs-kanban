@@ -17,7 +17,7 @@ new kanban.Kanban("#root", {
 **매개변수**:
 
 - HTML 컨테이너 (HTML 컨테이너의 ID)
-- 구성 매개변수 객체 ([여기서 확인](#kanban-properties))
+- 구성 매개변수 객체 ([여기서 확인](#kanban-속성))
 
 ## Toolbar 생성자
 
@@ -30,7 +30,7 @@ new kanban.Toolbar("#toolbar", {
 **매개변수**:
 
 - HTML 컨테이너 (HTML 컨테이너의 ID)
-- 구성 매개변수 객체 ([여기서 확인](#toolbar-properties))
+- 구성 매개변수 객체 ([여기서 확인](#toolbar-속성))
 
 ## Kanban 메서드
 

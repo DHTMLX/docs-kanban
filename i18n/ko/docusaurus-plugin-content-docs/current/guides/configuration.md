@@ -28,33 +28,33 @@ Kanban 보드는 *카드*가 *컬럼*과 *행*에 분배되어 구성됩니다. 
 - `description: boolean` 설정으로 카드 설명
 
     :::tip
-    Kanban 에디터의 입력란을 통해 **label**과 **description** 필드를 관리할 수 있습니다. 해당 필드를 활성화하면 자동으로 에디터에 입력란이 표시됩니다. 이러한 입력란은 [**text** 및 **textarea**](#text-and-textarea-types) 타입으로 설정할 수 있습니다.
+    Kanban 에디터의 입력란을 통해 **label**과 **description** 필드를 관리할 수 있습니다. 해당 필드를 활성화하면 자동으로 에디터에 입력란이 표시됩니다. 이러한 입력란은 [**text** 및 **textarea**](#text-textarea-타입) 타입으로 설정할 수 있습니다.
     :::
 
 - `progress: boolean` 설정으로 카드 진행률
 
     :::tip
-    **progress** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. 이 필드를 활성화하면 관련 컨트롤이 자동으로 에디터에 표시됩니다. 해당 컨트롤은 [**progress**](#progress-type) 타입으로 설정할 수 있습니다.
+    **progress** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. 이 필드를 활성화하면 관련 컨트롤이 자동으로 에디터에 표시됩니다. 해당 컨트롤은 [**progress**](#progress-타입) 타입으로 설정할 수 있습니다.
     :::
 
 - `start_date: boolean` 설정으로 시작일
 - `end_date: boolean` 설정으로 종료일
 
     :::tip
-    **start date**와 **end date** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. 필드를 활성화하면 관련 컨트롤이 자동으로 표시됩니다. 해당 컨트롤은 [**date**](#date-and-daterange-types) 타입으로 설정할 수 있습니다.
+    **start date**와 **end date** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. 필드를 활성화하면 관련 컨트롤이 자동으로 표시됩니다. 해당 컨트롤은 [**date**](#date-daterange-타입) 타입으로 설정할 수 있습니다.
     :::
 
 - `menu: boolean` 설정으로 카드 컨텍스트 메뉴
 - `attached: boolean` 설정으로 카드 첨부파일
 
     :::tip
-    Kanban 에디터의 해당 필드를 통해 **파일 첨부**가 가능합니다. 이 필드는 [**files**](#files-type) 타입으로 설정할 수 있습니다.
+    Kanban 에디터의 해당 필드를 통해 **파일 첨부**가 가능합니다. 이 필드는 [**files**](#files-타입) 타입으로 설정할 수 있습니다.
     :::
 
 - `color: boolean` 설정으로 카드 색상
 
     :::tip
-    카드의 **상단 색상 라인**은 Kanban 에디터의 컨트롤로 관리할 수 있습니다. **color**를 활성화하면 관련 컨트롤(*colorpicker*)이 자동으로 에디터에 표시됩니다. 이 컨트롤은 [**color**](#color-type) 타입으로 설정할 수 있습니다.
+    카드의 **상단 색상 라인**은 Kanban 에디터의 컨트롤로 관리할 수 있습니다. **color**를 활성화하면 관련 컨트롤(*colorpicker*)이 자동으로 에디터에 표시됩니다. 이 컨트롤은 [**color**](#color-타입) 타입으로 설정할 수 있습니다.
     :::
 
 - `cover: boolean` 설정으로 카드 커버(미리보기 이미지)
@@ -64,13 +64,13 @@ Kanban 보드는 *카드*가 *컬럼*과 *행*에 분배되어 구성됩니다. 
 - `users: boolean | { show: boolean, values: object, maxCount: number | false }` 설정으로 카드 담당자(사용자) 지정
 
     :::tip
-    Kanban 에디터의 컨트롤을 통해 한 명 또는 여러 명의 사용자를 카드에 할당할 수 있습니다. 단일 사용자 지정은 [**combo** 또는 **select**](#combo-select-and-multiselect-types) 타입, 복수 사용자 지정은 [**multiselect**](#combo-select-and-multiselect-types) 타입을 사용하세요.
+    Kanban 에디터의 컨트롤을 통해 한 명 또는 여러 명의 사용자를 카드에 할당할 수 있습니다. 단일 사용자 지정은 [**combo** 또는 **select**](#combo-select-multiselect-타입) 타입, 복수 사용자 지정은 [**multiselect**](#combo-select-multiselect-타입) 타입을 사용하세요.
     :::
 
 - `priority: boolean | { show: boolean, values: object }` 설정으로 카드 우선순위
 
     :::tip
-    **priority** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. **priority**를 활성화하면 관련 컨트롤이 자동으로 표시됩니다. 이 컨트롤은 [**combo** 또는 **select**](#combo-select-and-multiselect-types) 타입만 사용할 수 있습니다.
+    **priority** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. **priority**를 활성화하면 관련 컨트롤이 자동으로 표시됩니다. 이 컨트롤은 [**combo** 또는 **select**](#combo-select-multiselect-타입) 타입만 사용할 수 있습니다.
     :::
 
 - *커스텀 필드*는 `headerFields: [ { key: string, label: string, css: string } ]` 설정으로 추가
@@ -133,14 +133,14 @@ new kanban.Kanban("#root", {
 
 Kanban의 *에디터*는 카드 데이터 관리를 위한 필드로 구성되어 있습니다. 에디터 필드(컨트롤)는 [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성으로 설정할 수 있습니다. 사용할 수 있는 에디터 필드 타입은 다음과 같습니다:
 
-- [**combo**, **select**, **multiselect**](#combo-select-and-multiselect-types)
-- [**color**](#color-type)
-- [**text**, **textarea**](#text-and-textarea-types)
-- [**progress**](#progress-type)
-- [**files**](#files-type)
-- [**date**, **dataRange**](#date-and-daterange-types)
-- [**comments**](#comments-type)
-- [**links**](#links-type)
+- [**combo**, **select**, **multiselect**](#combo-select-multiselect-타입)
+- [**color**](#color-타입)
+- [**text**, **textarea**](#text-textarea-타입)
+- [**progress**](#progress-타입)
+- [**files**](#files-타입)
+- [**date**, **dataRange**](#date-daterange-타입)
+- [**comments**](#comments-타입)
+- [**links**](#links-타입)
 
 ### Combo, Select, Multiselect 타입
 
