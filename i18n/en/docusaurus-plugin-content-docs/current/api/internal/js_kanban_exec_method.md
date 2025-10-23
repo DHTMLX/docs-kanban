@@ -1,0 +1,50 @@
+---
+sidebar_label: api.exec()
+title: exec Method
+description: You can learn about the exec method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+---
+
+# api.exec()
+
+### Description
+
+@short: This method lets you trigger internal events within the Kanban board.
+
+### Usage
+
+~~~jsx {}
+api.exec(
+    event: string,
+    config: object
+): void;
+~~~
+
+### Parameters
+
+- `event` - (required) the name of the event to trigger  
+- `config` - (required) an object containing parameters related to the event being triggered
+
+### Events
+
+:::info
+You can find the complete list of Kanban internal events [**here**](api/overview/main_overview.md/#kanban-events)
+:::
+
+### Example
+
+~~~jsx {7,9-12}
+// create Kanban
+const board = new kanban.Kanban("#root", {
+    columns,
+    cards
+});
+// select the card with the 1 ID
+board.api.exec("select-card", { id: 1 });
+// add new card without sending changes to the server
+board.api.exec("add-card", { 
+    columnId: "backlog",
+    skipProvider: true, 
+});
+~~~
+
+**Related sample:** [Kanban. Preserve sorting](https://snippet.dhtmlx.com/74nyuv14?tag=kanban)

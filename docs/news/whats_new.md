@@ -12,6 +12,8 @@ If you are updating Kanban from an older version, check [Migration to newer vers
 
 Released on October 14, 2025
 
+[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+
 ### Salesforce Integration
 
 Starting from v1.7 you can leverage JavaScript Kanban within Salesforce environment. Refer to the following guide for more information: [**Integration with Salesforce**](guides/integration_with_salesforce.md).
@@ -61,6 +63,7 @@ You can also explore our [**GitHub example**](https://github.com/DHTMLX/salesfor
 - File size shown only for newly loaded files
 - Year and month values are not updated after a user clicks the **Done** button in the editor
 - The expandable textarea of comments moves button out of click zone
+- Script error occurs when opening the card linked to the deleted card
 
 ## Version 1.6.5
 

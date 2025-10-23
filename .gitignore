@@ -22,3 +22,6 @@ yarn-error.log*
 .pnp.cjs
 .pnp.loader.mjs
 .yarnrc.yml
+prompts
+gptit.toml
+.gitconfig
