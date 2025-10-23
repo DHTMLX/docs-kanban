@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.getReactiveState()
 title: Метод getReactiveState
-description: Вы можете узнать о методе getReactiveState в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+description: Вы можете узнать о методе getReactiveState в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
 # api.getReactiveState()
 
 ### Описание
 
-@short: Возвращает объект, содержащий реактивные свойства доски Kanban.
+@short: Получает объект с реактивными свойствами Kanban
 
 ### Использование
 
@@ -18,83 +18,87 @@ api.getReactiveState(): object;
 
 ### Возвращаемое значение
 
-Этот метод возвращает объект со следующими свойствами:
+Метод возвращает объект со следующими параметрами:
 
 ~~~jsx {}
 {
-    areasMeta: {
-        subscribe: any,
-        update: any,
-        set: any
-    },
-    before: {...},
     cardHeight: {...},
     cardShape: {...},
     cards: {...},
-    cardsMap: {...},
-    cardsMeta: {...},
     columnKey: {...},
     columnShape: {...},
     columns: {...},
     currentUser: {...},
-    dragItemId: {...},
-    dragItemsCoords: {...},
-    edit: {...},
     history: {...},
-    layout: {...},
     links: {...},
-    overAreaId: {...},
     readonly: {...},
     rowKey: {...},
     rowShape: {...},
+    editorShape: {...},
     rows: {...},
-    scroll: {...},
     search: {...},
     selected: {...},
-    sort: {...}
+    sort: {...},
+
+    // удалённые параметры
+    /*  
+        fromAreaMeta: {...},
+        dropAreaItemsCoords: {...},
+        dropAreasCoords: {...},
+        overAreaMeta: {...},  
+        before: {...},
+        dragItemId: {...},
+        dragItemsCoords: {...},
+        overAreaId: {...},
+    /*
+
+    // приватные параметры
+    /*
+        edit -> _edit: {...},
+        layout -> layout: {...},
+        cardsMap -> _cardsMap: {...},
+        cardsMeta -> _cardsMeta: {...},
+        areasMeta -> _areasMeta: {...},
+        scroll -> _scroll: {...},
+    */
 }
 ~~~  
+
+:::warning
+Эти свойства состояния доступны только для чтения. Не изменяйте их, чтобы избежать непредвиденного поведения!
+:::
 
 ### Пример
 
 ~~~jsx {7-37}
-// создаем Kanban
+// создаём Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
     rows
 });
-// получаем реактивное состояние доски Kanban
+// получаем реактивное состояние Kanban
 const state = board.api.getReactiveState();
 
-// подписываемся на изменения в columns и выводим обновленный массив
+// подписываемся на изменения columns и выводим массив колонок
 state.columns.subscribe((data) => {
     console.log(data);
 });
 
-// подписываемся на изменения в cards и выводим обновленный массив
+// подписываемся на изменения cards и выводим массив карточек
 state.cards.subscribe((data) => {
     console.log(data);
 });
 
-// подписываемся на изменения в rows и выводим обновленный массив
+// подписываемся на изменения rows и выводим массив рядов
 state.rows.subscribe((data) => {
     console.log(data);
 });
 
-// подписываемся на изменения выбора карточек и выводим выбранные ID карточек
+// подписываемся на выбор карточек и выводим ID выбранных карточек
 state.selected.subscribe((data) => {
     console.log(data);
 });
-
-// устанавливаем новый выбор 
-state.selected.set([1, 2]);
-
-// обновляем выбор, добавляя еще один ID карточки
-state.selected.update((data) => {
-    data.push(3);
-    return data;
-});
 ~~~
 
-**История изменений:** Этот метод был обновлен в версии 1.4
+**История изменений:** Метод был обновлён в версии v1.7

@@ -1,14 +1,14 @@
 ---
 sidebar_label: scrollType
 title: Конфигурация scrollType
-description: Изучите конфигурацию scrollType в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков, справочником API, примерами кода, живыми демо и скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о конфигурации scrollType. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
 # scrollType
 
 ### Описание
 
-@short: Опционально. Определяет поведение прокрутки.
+@short: Необязательно. Определяет тип прокрутки
 
 ### Использование
 
@@ -17,7 +17,7 @@ scrollType?: "default" | "column";
 ~~~  
 
 :::note
-Когда `scrollType` установлен в `"column"`, прокрутка каждой колонки осуществляется независимо.
+Если вы используете настройку `scrollType: "column"`, вы сможете прокручивать каждую колонку отдельно.
 :::
 
 ### Конфигурация по умолчанию
@@ -27,7 +27,7 @@ scrollType: "default"
 ~~~
 
 :::important
-Если вы используете [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config.md) вместе с `scrollType: "default"`, обязательно задайте фиксированную высоту карточек с помощью свойства [`cardHeight`](/api/config/js_kanban_cardheight_config.md). Без этого карточки не будут отображаться.
+Если вы комбинируете настройки [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и `scrollType: "default"`, не забудьте указать статическую высоту для карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Если не указать это, карточки не будут отображаться.
 :::
 
 ### Пример
@@ -42,8 +42,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**История изменений:** Это свойство было добавлено в версии v1.2
+**Изменения:** Свойство добавлено в версии v1.2
 
-**Связанные статьи:** [Конфигурация](/guides/configuration#карточки)
+**Связанные статьи:** [Конфигурация](guides/configuration.md#cards)
 
 **Связанный пример:** [Kanban. Фиксированные заголовки, ленивый рендеринг и прокрутка колонок](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

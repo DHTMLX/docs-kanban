@@ -1,14 +1,14 @@
 ---
 sidebar_label: theme
-title: Конфигурация темы
-description: Изучите конфигурацию темы (Toolbar) в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков, справочниками по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Конфигурация theme
+description: Вы можете узнать о конфигурации темы (Toolbar) в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
 # theme
 
 ### Описание
 
-@short: Необязательно. Указывает тему, применяемую к Toolbar.
+@short: Необязательно. Тема, которая будет применена к Toolbar
 
 ### Использование
 
@@ -17,7 +17,7 @@ theme?: string; // "material" | "willow" | "willow-dark"
 ~~~
 
 :::important
-Помимо установки свойства `theme`, вы можете применить нужную тему, добавив соответствующие *css* классы в контейнеры виджетов:
+Помимо использования свойства `theme`, нужную тему можно применить, добавив соответствующие *css* классы к контейнерам виджетов:
 
 - **Тема Material**
 ~~~html {}
@@ -43,7 +43,7 @@ theme?: string; // "material" | "willow" | "willow-dark"
     <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
-Или же просто подключите нужный файл стилей темы из папки skins:
+или просто подключите нужную тему на странице из папки skins:
 
 ~~~html {}
 <link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
@@ -52,10 +52,10 @@ theme?: string; // "material" | "willow" | "willow-dark"
 
 ### Конфигурация по умолчанию
 
-По умолчанию Toolbar использует тему **Material**. Также можно переключиться на тему **Willow** или **Willow-Dark**.
+По умолчанию Toolbar использует тему **Material**. Вы также можете установить темы **Willow** и **Willow-Dark**.
 
 :::tip
-Для динамического изменения темы используйте метод [**setConfig()**](../../methods/toolbar_setconfig_method).
+Чтобы динамически изменить текущую тему, вы можете использовать метод [**setConfig()**](api/methods/toolbar_setconfig_method.md).
 :::
 
 ### Пример
@@ -65,21 +65,18 @@ theme?: string; // "material" | "willow" | "willow-dark"
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    theme: "willow-dark" // устанавливает начальную тему "willow-dark"
+    theme: "willow-dark" // изначально будет установлена тема "willow-dark"
     // другие параметры
 });
 // создаём Toolbar
 new Toolbar("#toolbar", {
     api: board.api,
-    theme: "willow-dark", // устанавливает начальную тему "willow-dark"
+    theme: "willow-dark", // изначально будет установлена тема "willow-dark"
 });
 ~~~
 
 **История изменений:** Свойство добавлено в версии v1.4
 
-**Связанные статьи:** [Стилизация](/guides/stylization)
+**Связанные статьи:** [Стилизация](guides/stylization.md)
 
-**Связанные примеры:**
-- [Kanban. Использование тем](https://snippet.dhtmlx.com/jnw54xif?tag=kanban)
-- [Kanban. Подключение темы как файла стилей](https://snippet.dhtmlx.com/k3iw6ti0?tag=kanban)
-- [Kanban. Изменение темы через CSS класс](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)
+**Связанный пример:** [Kanban. Изменение темы через CSS класс](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

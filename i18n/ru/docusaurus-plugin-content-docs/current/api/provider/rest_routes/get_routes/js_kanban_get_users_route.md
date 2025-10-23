@@ -1,16 +1,16 @@
 ---
 sidebar_label: GET /users
 title: GET /users
-description: Изучите REST-эндпоинт GET /users в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков, справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+description: Вы можете узнать о REST-маршруте GET /users в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
 # GET `/users`
 
 ### Описание
 
-@short: Получает данные обо всех пользователях и возвращает JSON-объект, содержащий массив объектов пользователей.
+@short: Получает данные обо всех пользователях и возвращает json-объект с массивом объектов пользователей
 
-Этот эндпоинт обрабатывает **HTTP GET** запросы, отправленные на URL `/users`.
+Маршрут обрабатывает **HTTP GET** запрос, сделанный по пути `/users`.
 
 ### Тело запроса
 
@@ -18,7 +18,7 @@ description: Изучите REST-эндпоинт GET /users в документ
 
 ### Ответ
 
-Ответ содержит JSON-массив объектов с данными пользователей.
+Маршрут возвращает json-объект с массивом объектов, содержащих данные пользователей.
 
 Пример:
 
@@ -42,12 +42,12 @@ description: Изучите REST-эндпоинт GET /users в документ
 ]
 ~~~
 
-Другой пример возвращаемого объекта смотрите в разделе [**cardShape**](/api/config/js_kanban_cardshape_config.md).
+Другой пример возвращаемого объекта смотрите в разделе [**cardShape**](api/config/js_kanban_cardshape_config.md).
 
-HTTP-код состояния указывает, был ли запрос успешным (response.status == 200) или произошла ошибка (response.status == 500).
+HTTP статус код показывает, успешен ли запрос (response.status == 200) или произошла ошибка (response.status == 500).
 
 ---
 
 **Связанные статьи**:
-- [Работа с сервером](/guides/working_with_server.md)
-- [getUsers()](/api/provider/rest_methods/js_kanban_getusers_method.md)
+- [Работа с сервером](guides/working_with_server.md)
+- [getUsers()](api/provider/rest_methods/js_kanban_getusers_method.md)

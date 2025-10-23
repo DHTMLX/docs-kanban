@@ -8,7 +8,7 @@ description: Вы можете узнать о конфигурации cardHeig
 
 ### Описание
 
-@short: Необязательно. Определяет высоту карточек.
+@short: Необязательно. Высота карточек
 
 ### Использование
 
@@ -17,7 +17,7 @@ cardHeight?: number; // px
 ~~~
 
 :::important
-При использовании [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config.md) вместе с [`scrollType: "default"`](/api/config/js_kanban_scrolltype_config.md) важно установить фиксированную высоту карточек с помощью свойства `cardHeight`. Без этого карточки не будут видны.
+Если вы используете настройки [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md) одновременно, не забудьте указать статическую высоту карточек через свойство `cardHeight`. Если не указать, карточки не будут отображаться.
 :::
 
 ### Пример
@@ -31,8 +31,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Журнал изменений:** Это свойство было добавлено в версии 1.2
+**История изменений:** Свойство добавлено в версии v1.2
 
-**Связанные статьи:** [Конфигурация](/guides/configuration#карточки)
+**Связанные статьи:** [Конфигурация](guides/configuration.md#cards)
 
 **Связанный пример:** [Kanban. Ленивый рендеринг и прокрутка колонок](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

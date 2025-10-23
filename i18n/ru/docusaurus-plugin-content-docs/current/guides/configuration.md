@@ -1,79 +1,79 @@
 ---
 sidebar_label: Конфигурация
 title: Конфигурация
-description: Ознакомьтесь с документацией по настройке библиотеки DHTMLX JavaScript Kanban. Читайте руководства для разработчиков и справочник API, изучайте примеры кода и живые демо, скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+description: Ознакомьтесь с возможностями настройки в документации по JavaScript-библиотеке DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
 # Конфигурация
 
-Виджет *Kanban* можно настраивать как по внешнему виду, так и по функционалу с помощью его API. Доступно множество параметров, которые можно изменить, например:
+Вы можете настраивать внешний вид и функциональность *Kanban* с помощью соответствующего API. Доступные параметры позволят вам:
 
-- Настройте внешний вид карточек с помощью свойства [`cardShape`](/api/config/js_kanban_cardshape_config.md)
-- Определите поля редактора через свойство [`editorShape`](/api/config/js_kanban_editorshape_config.md)
-- Управляйте поведением редактора с помощью свойства [`editor`](/api/config/js_kanban_editor_config.md)
-- Контролируйте рендеринг и прокрутку через [`renderType`](/api/config/js_kanban_rendertype_config.md) и [`scrollType`](/api/config/js_kanban_scrolltype_config.md)
-- Ведите учет изменений с помощью свойства [`history`](/api/config/js_kanban_history_config.md)
-- Персонализируйте карточки с помощью свойства [`cardTemplate`](/api/config/js_kanban_cardtemplate_config.md)
-    - *(Раздел [**Кастомизация**](/guides/customization.md) подробно раскрывает этот вопрос)*
-- Измените язык с помощью свойства [`locale`](/api/config/js_kanban_locale_config.md)
-    - *(См. раздел [**Локализация**](/guides/localization.md) для подробностей)*
-- Загружайте данные карточек, колонок, строк и связей через соответствующие свойства [`cards`](/api/config/js_kanban_cards_config.md), [`columns`](/api/config/js_kanban_columns_config.md), [`rows`](/api/config/js_kanban_rows_config.md) и [`links`](/api/config/js_kanban_links_config.md)
-    - *(Подробнее см. в разделе [**Работа с данными**](/guides/working_with_data.md))*
+- настроить внешний вид карточек через свойство [`cardShape`](api/config/js_kanban_cardshape_config.md)
+- настроить поля редактора через свойство [`editorShape`](api/config/js_kanban_editorshape_config.md)
+- настроить поведение редактора через свойство [`editor`](api/config/js_kanban_editor_config.md)
+- настроить рендеринг и прокрутку через свойства [`renderType`](api/config/js_kanban_rendertype_config.md) и [`scrollType`](api/config/js_kanban_scrolltype_config.md)
+- настроить историю Kanban через свойство [`history`](api/config/js_kanban_history_config.md)
+- кастомизировать внешний вид карточек через свойство [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)
+    - *Смотрите раздел [**Кастомизация**](guides/customization.md) для подробностей!*
+- применить нужную локализацию через свойство [`locale`](api/config/js_kanban_locale_config.md)
+    - *Смотрите раздел [**Локализация**](guides/localization.md) для подробностей!*
+- загрузить данные для карточек, колонок, строк и связей через соответствующие свойства [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md) и [`links`](api/config/js_kanban_links_config.md)
+    - *Смотрите раздел [**Работа с данными**](guides/working_with_data.md) для подробностей!*
 
 ## Карточки
 
-В Kanban карточки структурированы по колонкам и строкам. Вы можете управлять их отображением и содержимым с помощью свойства [`cardShape`](/api/config/js_kanban_cardshape_config.md). Доступно несколько встроенных полей, которые можно включать или скрывать:
+Доска Kanban состоит из *карточек*, распределённых по *колонкам* и *строкам*. Вы можете настроить внешний вид карточек с помощью свойства конфигурации [`cardShape`](api/config/js_kanban_cardshape_config.md). Доступно несколько предустановленных полей, которые можно включить или исключить из шаблона карточки, а именно:
 
-- Название карточки с помощью опции `label: boolean`
-- Описание карточки с помощью опции `description: boolean`
+- метка карточки через конфиг `label: boolean`
+- описание карточки через конфиг `description: boolean`
 
-:::tip
-Оба поля - **label** и **description** - можно редактировать через редактор Kanban. Если они включены, соответствующие поля ввода появятся автоматически. Эти поля задаются через типы [**text** и **textarea**](#типы-text-и-textarea).
-:::
+    :::tip
+    Вы можете управлять полями **label** и **description** любой карточки через соответствующие поля редактора Kanban. Если эти поля активированы, соответствующие инпуты автоматически появятся в редакторе. Для их настройки используйте типы [**text** и **textarea**](#text-and-textarea-types).
+    :::
 
-- Индикатор прогресса через `progress: boolean`
+- прогресс карточки через конфиг `progress: boolean`
 
-:::tip
-Поле **progress** также доступно для редактирования через редактор Kanban. Если оно включено, элемент управления появляется автоматически. Это настраивается через тип [**progress**](#тип-progress).
-:::
+    :::tip
+    Вы можете управлять полем **progress** любой карточки через соответствующий контрол редактора Kanban. Если поле активировано, контрол появится в редакторе автоматически. Для настройки используйте тип [**progress**](#progress-type).
+    :::
 
-- Дата начала через `start_date: boolean`
-- Дата окончания через `end_date: boolean`
+- дата начала через конфиг `start_date: boolean`
+- дата окончания через конфиг `end_date: boolean`
 
-:::tip
-Поля **start date** и **end date** управляются контролами редактора Kanban. Если поля активны - контролы появятся автоматически. Для их настройки используйте тип [**date**](#типы-date-и-daterange).
-:::
+    :::tip
+    Вы можете управлять полями **start date** и **end date** любой карточки через соответствующие контролы редактора Kanban. Если поля активированы, контролы появятся в редакторе автоматически. Для их настройки используйте тип [**date**](#date-and-daterange-types).
+    :::
 
-- Контекстное меню карточки через `menu: boolean`
-- Вложения с помощью `attached: boolean`
+- контекстное меню карточки через конфиг `menu: boolean`
+- вложения карточки через конфиг `attached: boolean`
 
-:::tip
-К карточкам можно прикреплять файлы через редактор Kanban. Это реализовано с помощью типа [**files**](#тип-files).
-:::
+    :::tip
+    Вы можете **прикреплять файлы** к любой карточке через соответствующее поле редактора Kanban. Для настройки этого поля используйте тип [**files**](#files-type).
+    :::
 
-- Цвет карточки через `color: boolean`
+- цвет карточки через конфиг `color: boolean`
 
-:::tip
-**Верхняя цветная линия** карточки управляется контролом редактора Kanban. Если включено **color**, автоматически появится цветовой селектор. Используется тип [**color**](#тип-color).
-:::
+    :::tip
+    Вы можете управлять **верхней цветной полоской** любой карточки через соответствующий контрол редактора Kanban. При активации **color** контрол (**colorpicker**) появится в редакторе автоматически. Для настройки используйте тип [**color**](#color-type).
+    :::
 
-- Обложка карточки (превью) через `cover: boolean`
-- Комментарии к карточкам через `comments: boolean`
-- Диалог подтверждения удаления карточек с помощью `confirmDeletion: boolean`
-- Голосование по карточкам через `votes: boolean | { show: boolean, clicable: true }`
-- Назначение пользователей через `users: boolean | { show: boolean, values: object, maxCount: number | false }`
+- обложка карточки (*превью-изображение*) через конфиг `cover: boolean`
+- комментарии к карточке через конфиг `comments: boolean`
+- диалог подтверждения удаления карточки через конфиг `confirmDeletion: boolean`
+- голосование по карточке через конфиг `votes: boolean | { show: boolean, clicable: true }`
+- назначение пользователей на карточку через конфиг `users: boolean | { show: boolean, values: object, maxCount: number | false }`
 
-:::tip
-Назначение пользователей на карточки осуществляется через контрол редактора Kanban. Для выбора только одного пользователя используйте типы [**combo** или **select**](#типы-combo-select-и-multiselect). Для выбора нескольких - [**multiselect**](#типы-combo-select-и-multiselect).
-:::
+    :::tip
+    Вы можете назначать одного или нескольких пользователей на любую карточку через соответствующий контрол редактора Kanban. Для назначения одного пользователя используйте типы редактора [**combo** или **select**](#combo-select-and-multiselect-types), для нескольких — [**multiselect**](#combo-select-and-multiselect-types).
+    :::
 
-- Поле приоритета через `priority: boolean | { show: boolean, values: object }`
+- приоритет карточки через конфиг `priority: boolean | { show: boolean, values: object }`
 
-:::tip
-Приоритет карточки настраивается через контрол редактора Kanban. При включении **priority** контрол появляется автоматически. Здесь используются только типы [**combo** или **select**](#типы-combo-select-и-multiselect).
-:::
+    :::tip
+    Вы можете управлять **приоритетом** любой карточки через соответствующий контрол редактора Kanban. Если **priority** активирован, контрол появится в редакторе автоматически. Для настройки используйте только типы [**combo** или **select**](#combo-select-and-multiselect-types).
+    :::
 
-- *Пользовательские поля* можно добавить в `headerFields: [ { key: string, label: string, css: string } ]`
+- *кастомное поле* через конфиг `headerFields: [ { key: string, label: string, css: string } ]`
 
 ~~~jsx {12-35,42}
 const users = [ // данные пользователей
@@ -81,7 +81,7 @@ const users = [ // данные пользователей
     { id: 2, label: "Aaron Short" }
 ];
 
-const  cardPriority = [ // данные приоритетов
+const  cardPriority = [ // данные приоритета карточек
     { id: 1, color: "#FF5252", label: "high" },
     { id: 2, color: "#FFC975", label: "medium" },
     { id: 3, color: "#0AB169", label: "low" }
@@ -122,29 +122,29 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-Если вы не определите собственные настройки карточек через [`cardShape`](/api/config/js_kanban_cardshape_config.md), Kanban использует настройки [**defaultCardShape**](/api/config/js_kanban_cardshape_config.md#конфигурация-по-умолчанию)!
+Если вы не укажете настройки карточек через свойство [`cardShape`](api/config/js_kanban_cardshape_config.md), виджет применит набор параметров [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config)!
 :::
 
 ## Редактор
 
 :::info
-Редактор можно отобразить как **боковую панель** или **модальное окно** с помощью свойства [`editor.placement`](/api/config/js_kanban_editor_config.md)!
+Вы можете отображать редактор как **боковую панель** или **модальное окно** с помощью свойства [`editor.placement`](api/config/js_kanban_editor_config.md)!
 :::
 
-*Редактор* Kanban - место, где управляются детали карточки. Настроить, какие поля будут отображаться в редакторе, можно с помощью свойства [`editorShape`](/api/config/js_kanban_editorshape_config.md). Доступные типы полей:
+*Редактор* Kanban состоит из полей для управления данными карточек. Для настройки полей (контролов) редактора используйте свойство [`editorShape`](api/config/js_kanban_editorshape_config.md). Доступны следующие типы полей редактора:
 
-- [**combo**, **select** и **multiselect**](#типы-combo-select-и-multiselect)
-- [**color**](#тип-color)
-- [**text** и **textarea**](#типы-text-и-textarea)
-- [**progress**](#тип-progress)
-- [**files**](#тип-files)
-- [**date** и **dataRange**](#типы-date-и-daterange)
-- [**comments**](#тип-comments)
-- [**links**](#тип-links)
+- [**combo**, **select** и **multiselect**](#combo-select-and-multiselect-types)
+- [**color**](#color-type)
+- [**text** и **textarea**](#text-and-textarea-types)
+- [**progress**](#progress-type)
+- [**files**](#files-type)
+- [**date** и **dataRange**](#date-and-daterange-types)
+- [**comments**](#comments-type)
+- [**links**](#links-type)
 
 ### Типы Combo, Select и Multiselect
 
-Поля редактора этих типов настраиваются так:
+Поля редактора типов **combo**, **select** и **multiselect** можно задать следующим образом:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
@@ -165,7 +165,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::info
-Для полей редактора типа **"multiselect"** и **"combo"** можно добавить превью-изображение, указав свойство **avatar**:
+Для поля редактора типа **"multiselect"** и **"combo"** вы также можете указать путь к превью-изображению через свойство **avatar**:
 
 ~~~jsx {3,9,13}
 editorShape: [
@@ -174,13 +174,13 @@ editorShape: [
         key: "users", // ключ "users" используется при настройке свойства "cardShape"
         label: "Users",
         values: [
-            {
-                id: 1, label: "Alan",
-                avatar: "preview_image_path_1.png"
+            { 
+                id: 1, label: "Alan", 
+                avatar: "preview_image_path_1.png" 
             },
-            {
-                id: 2, label: "John",
-                avatar: "preview_image_path_2.png"
+            { 
+                id: 2, label: "John", 
+                avatar: "preview_image_path_2.png" 
             }
         ]
     },
@@ -193,13 +193,13 @@ editorShape: [
 
 ### Тип Color
 
-Чтобы добавить селектор цвета в редактор, используйте:
+Поле редактора типа **color** можно задать следующим образом:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "color",
+            type: "color", 
             key: "color", // ключ "color" используется при настройке свойства "cardShape"
             label: "Card color",
             values: ["#65D3B3", "#FFC975", "#58C3FE"],
@@ -215,7 +215,7 @@ new kanban.Kanban("#root", {
 
 ### Типы Text и Textarea
 
-Для добавления текстовых полей или многострочных вводов:
+Поля редактора типов **text** и **textarea** можно задать следующим образом:
 
 ~~~jsx {3-14}
 new kanban.Kanban("#root", {
@@ -225,8 +225,8 @@ new kanban.Kanban("#root", {
             key: "label",
             label: "Label",
             config: {
-                placeholder: "Type your tips here",
-                readonly: false,
+                placeholder: "Type your tips here", 
+                readonly: false, 
                 focus: true,
                 disabled: false,
                 inputStyle: "height: 50px;"
@@ -239,13 +239,13 @@ new kanban.Kanban("#root", {
 
 ### Тип Progress
 
-Индикаторы прогресса настраиваются так:
+Поле редактора типа **progress** можно задать следующим образом:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "progress",
+            type: "progress", 
             key: "progress", // ключ "progress" используется при настройке свойства "cardShape"
             label: "Progress",
             config: {
@@ -261,19 +261,19 @@ new kanban.Kanban("#root", {
 
 ### Тип Files
 
-Загрузку файлов в редактор можно настроить двумя способами:
+Поле редактора типа **files** можно задать следующим образом:
 
-#### Передача Upload Url строкой
+#### Настройка uploadURL как строки
 
 ~~~jsx {4-15}
 const url = "https://docs.dhtmlx.com/kanban-backend";
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "files",
+            type: "files", 
             key: "attached", // ключ "attached" используется при настройке свойства "cardShape"
             label: "Attachment",
-            uploadURL: url + "/uploads", // строка URL
+            uploadURL: url + "/uploads", // указать url как строку
             config: {
                 accept: "image/*", // "video/*", "audio/*"
                 disabled: false,
@@ -286,7 +286,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-#### Передача Upload Url функцией
+#### Настройка uploadURL как функции
 
 ~~~jsx {9-31}
 const url = "https://docs.dhtmlx.com/kanban-backend";
@@ -305,7 +305,7 @@ new kanban.Kanban("#root", {
                     method: "POST",
                     body: formData,
                     headers: {
-                        'Authorization': 'Bearer ' + token  // токен или другие заголовки
+                        'Authorization': 'Bearer ' + token  // token или другие заголовки
                     }
                 };
 
@@ -327,13 +327,13 @@ new kanban.Kanban("#root", {
 
 ### Типы Date и DateRange
 
-Добавление выбора даты или диапазона дат:
+Поле редактора типа **date** можно задать следующим образом:
 
 ~~~jsx {3-8}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "date",
+            type: "date", 
             key: "start_date",
             label: "Start date",
             format: "%d/%m/%y"
@@ -343,13 +343,13 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-Для диапазона дат:
+Поле редактора типа **dateRange** можно задать следующим образом:
 
 ~~~jsx {3-11}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "dateRange",
+            type: "dateRange", 
             key: {
                 start: "start_date",
                 end: "end_date"
@@ -364,7 +364,7 @@ new kanban.Kanban("#root", {
 
 ### Тип Comments
 
-Добавление поля комментариев в редактор:
+Поле редактора типа **comments** можно задать следующим образом:
 
 ~~~jsx {3-13}
 new kanban.Kanban("#root", {
@@ -387,7 +387,7 @@ new kanban.Kanban("#root", {
 
 ### Тип Links
 
-Для возможности добавлять ссылки в редактор используйте:
+Поле редактора типа **links** можно задать следующим образом:
 
 ~~~jsx {3-10}
 new kanban.Kanban("#root", {
@@ -408,12 +408,12 @@ new kanban.Kanban("#root", {
 ### Привязка полей редактора к полям карточки
 
 :::info
-Чтобы связать поле редактора с полем карточки, используйте **key** в объекте [`editorShape`](/api/config/js_kanban_editorshape_config.md) (`key: "editor_field_key"`). Для встроенных полей карточки убедитесь, что этот ключ включён (значение *true*) в [`cardShape`](/api/config/js_kanban_cardshape_config.md). Для пользовательских полей добавьте его в массив **headerFields**. Также можно задать начальное значение для любого поля с этим ключом.
+Чтобы связать поле редактора с соответствующим полем карточки, укажите специальный **key** в объекте свойства [`editorShape`](api/config/js_kanban_editorshape_config.md) (`key: "editor_field_key"`). Значение этого ключа должно быть установлено в *true* в свойстве [`cardShape`](api/config/js_kanban_cardshape_config.md) (для встроенных полей карточки) или указано в массиве **headerFields** (для кастомных полей карточки). Начальные данные любого поля также можно задать через этот ключ.
 
 ~~~jsx {5,13,22,25,33-34,38-39,45-47}
 // настройки редактора
-const editorShape = [
-    {
+const editorShape = [ 
+    { 
         type: "text",
         key: "label",
         label: "Label",
@@ -421,7 +421,7 @@ const editorShape = [
             placeholder: "Enter new label here"
         }
     },
-    {
+    { 
         type: "textarea",
         key: "note",
         label: "Note",
@@ -435,7 +435,7 @@ const cardShape = {
     label: true, // ключ встроенного поля
     headerFields: [
         {
-            key: "note", // ключ пользовательского поля
+            key: "note", // ключ кастомного поля 
             label: "Note"
         }
     ]
@@ -453,7 +453,7 @@ const cards = [
         column: "backlog"
     }
 ];
-// создание Kanban
+// создать Kanban
 new kanban.Kanban("#root", {
     editorShape,
     cardShape,
@@ -465,18 +465,18 @@ new kanban.Kanban("#root", {
 :::
 
 :::note
-Если настройки редактора не определены через [`editorShape`](/api/config/js_kanban_editorshape_config.md), виджет использует [**defaultEditorShape**](/api/config/js_kanban_editorshape_config.md#конфигурация-по-умолчанию). Тогда поля и элементы управления появятся только для включённых полей карточки в [`cardShape`](/api/config/js_kanban_cardshape_config.md).
+Если вы не укажете настройки редактора через свойство [`editorShape`](api/config/js_kanban_editorshape_config.md), виджет применит набор параметров [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config). В этом случае стандартные контролы и поля появятся в редакторе только после активации соответствующих полей карточек через свойство [`cardShape`](api/config/js_kanban_cardshape_config.md).
 :::
 
 ### Настройка редактора
 
-Настроить поведение редактора можно через свойство [`editor`](/api/config/js_kanban_editor_config.md):
+С помощью свойства [`editor`](api/config/js_kanban_editor_config.md) вы можете настроить редактор следующим образом:
 
-- Включить или выключить автосохранение с помощью *`editor.autoSave`*
-- Указать задержку автосохранения через *`editor.debounce`* (работает только при ***autoSave: true***)
+- включить/отключить режим автосохранения редактора через свойство *`editor.autoSave`*
+- указать задержку автосохранения данных через свойство *`editor.debounce`* (работает только с параметром ***autoSave: true***)
 
 ~~~jsx {6-9}
-// создание Kanban
+// создать Kanban
 new kanban.Kanban("#root", {
     columns,
     cards,
@@ -489,12 +489,12 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## Панель инструментов
+## Toolbar
 
-**Панель инструментов** Kanban включает строку поиска (для поиска карточек), элементы сортировки и кнопки для добавления новых колонок или строк. Для использования Toolbar инициализируйте её в отдельном контейнере через **kanban.Toolbar()**.
+**Toolbar** Kanban состоит из строки поиска для *поиска карточек* и контролов для *сортировки карточек* и *добавления новых колонок и строк*. Для отображения Toolbar необходимо инициализировать его в отдельном контейнере с помощью конструктора **kanban.Toolbar()**.
 
 ~~~jsx {13}
-// создание Kanban
+// создать Kanban
 const board = new kanban.Kanban("#root", {
     // данные
     columns,
@@ -509,10 +509,10 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-Элементы Toolbar можно показать, скрыть или изменить с помощью свойства **items**:
+Вы можете управлять (*скрывать/отображать/кастомизировать*) контролами Toolbar с помощью свойства **items**:
 
 ~~~jsx {6-51}
-// создание Kanban
+// создать Kanban
 const board = new kanban.Kanban("#root", {...});
 
 new kanban.Toolbar("#toolbar", {
@@ -542,9 +542,9 @@ new kanban.Toolbar("#toolbar", {
             })
         },
         "spacer", // пустое пространство
-        "undo", // отмена операций с карточками из истории
-        "redo", // повтор операций с карточками из истории
-        { // кастомная сортировка
+        "undo", // контрол для отмены операций с карточками из истории
+        "redo", // контрол для повтора операций с карточками из истории
+        { // кастомный контрол сортировки
             type: "sort",
             options: [
                 {
@@ -559,19 +559,19 @@ new kanban.Toolbar("#toolbar", {
                 }
             ]
         },
-        "addColumn", // добавление новых колонок
-        "addRow", // добавление новых строк
-        // дополнительные элементы
+        "addColumn", // контрол для добавления новых колонок
+        "addRow", // контрол для добавления новых строк
+        // кастомные элементы
     ]
 });
 ~~~
 
 :::tip
-Чтобы скрыть некоторые элементы Toolbar, просто уберите соответствующие строки из массива **items**.
+Чтобы скрыть некоторые контролы Toolbar, удалите соответствующие строки из массива **items**.
 :::
 
 ## Пример
 
-Ниже пример настройки **Карточек**, **Редактора** и **Панели инструментов** для Kanban:
+В этом сниппете показано, как настроить **Карточки**, **Редактор** и **Toolbar** Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

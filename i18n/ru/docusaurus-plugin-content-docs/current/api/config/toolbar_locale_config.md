@@ -1,17 +1,17 @@
 ---
 sidebar_label: locale
 title: Конфигурация locale
-description: Узнайте, как настроить локализацию (Toolbar) в JavaScript-библиотеке DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочниками API, опробуйте примеры кода и живые демо, а также получите бесплатный 30-дневный пробный период DHTMLX Kanban.
+description: Вы можете узнать о конфигурации locale (панели инструментов) в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
 # locale
 
 ### Описание
 
-@short: Необязательно. Объект, определяющий пользовательскую локализацию для Toolbar.
+@short: Необязательно. Объект с пользовательской локализацией панели инструментов (Toolbar)
 
 :::info
-Объект **locale** должен включать все метки как для Kanban, так и для Toolbar вместе с их переводами.
+Объект **locale** должен содержать все метки Kanban и Toolbar с соответствующими переводами.
 :::
 
 ### Использование
@@ -22,24 +22,26 @@ locale?: object;
 
 ### Конфигурация по умолчанию
 
-По умолчанию Toolbar настроен на локаль [**English**](/guides/localization/#локаль-по-умолчанию). Вы также можете указать свою собственную пользовательскую локаль.
+По умолчанию Toolbar использует локаль [**английский**](guides/localization.md#default-locale). Вы также можете задать пользовательскую локаль.
 
 :::tip
-Для динамического переключения локали можно использовать метод Toolbar [**setLocale()**](../../methods/toolbar_setlocale_method).
+Чтобы динамически изменить текущую локаль, используйте метод [**setLocale()**](api/methods/toolbar_setlocale_method.md) панели инструментов (Toolbar).
 :::
 
 ### Пример
 
 ~~~jsx {8}
-// создаем Kanban
+// создаём Kanban
 const board = new kanban.Kanban("#root", {
-    locale: zh
+    locale: cn
 });
-// создаем Toolbar
+// создаём Toolbar
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: zh // применяем локаль "zh" к Toolbar
+    locale: cn // применяем локаль "cn" к Toolbar
 });
 ~~~
+
+**Связанные статьи:** [Локализация](guides/localization.md)
 
 **Связанный пример:** [Kanban. Локализация](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

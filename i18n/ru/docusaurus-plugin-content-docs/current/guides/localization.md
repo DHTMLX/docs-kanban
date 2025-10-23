@@ -1,22 +1,21 @@
 ---
 sidebar_label: Локализация
 title: Локализация
-description: Вы можете узнать о локализации в документации по библиотеке DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+description: Вы можете узнать о локализации в документации к DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
 ---
 
 # Локализация
 
-Все надписи в интерфейсе JavaScript Kanban можно локализовать. Просто создайте новую локаль или измените существующую, затем установите её отдельно для Kanban и Toolbar (эти действия выполняются раздельно).
+Вы можете локализовать все надписи в интерфейсе JavaScript Kanban. Для этого необходимо создать новую локаль или изменить встроенную и применить её к Kanban и Toolbar (*отдельно*).
 
 ## Локаль по умолчанию
 
-По умолчанию интерфейс использует **английскую** локаль:
+По умолчанию используется локаль **English**:
 
 ~~~jsx
 const en = {
-    kanban: { // переводы надписей Kanban
+    kanban: {
         Save: "Save",
-        Send: "Send",
         Close: "Close",
         Delete: "Delete",
         Name: "Name",
@@ -24,15 +23,26 @@ const en = {
         Type: "Type",
         "Start date": "Start date",
         "End date": "End date",
-
+        Files: "Files",
+        B: "B",
+        KB: "KB",
+        MB: "MB",
+        GB: "GB",
+        TB: "TB",
+        PB: "PB",
+        EB: "EB",
+        "Make cover": "Make cover",
+        "Remove cover": "Remove cover",
+        Comments: "Comments",
+        Links: "Links",
         Result: "Result",
         "No results": "No results",
         Search: "Search",
         "Search in": "Search in",
         "Add new row": "Add new row",
         "Add new column": "Add new column",
-        "Add new card": "Add new card",
         "Add new card...": "Add new card...",
+        "Add new card": "Add new card",
         "Edit card": "Edit card",
         Edit: "Edit",
 
@@ -57,27 +67,28 @@ const en = {
         "Description (a-z)": "Description (a-z)",
         "Description (z-a)": "Description (z-a)",
 
+        "Add link": "Add link",
         Duplicate: "Duplicate",
         "Duplicate of": "Duplicate of",
-
         "Relates to": "Relates to",
         "Depends on": "Depends on",
         "Is required for": "Is required for",
         Duplicates: "Duplicates",
         "Is duplicated by": "Is duplicated by",
-        "Parent for": "Parent for",
-        "SubTask of": "SubTask of",
+        "Is parent for": "Is parent for",
+        "Is subtask of": "Is subtask of",
 
         Cancel: "Cancel",
         "Link task": "Link task",
         "Select a relation": "Select a relation",
         "Select a task": "Select a task",
 
-        "No comments yet": "No comments yet",
+        Send: "Send",
         "Would you like to delete this comment?":
             "Would you like to delete this comment?",
+        "No comments yet": "No comments yet",
         "Would you like to delete this card?":
-            "Would you like to delete this card?"
+            "Would you like to delete this card?",
     },
     calendar: { // переводы и настройки календаря
         monthFull: [
@@ -117,29 +128,46 @@ const en = {
 };
 ~~~
 
-## Своя локаль
+## Встроенные локали
 
-Если вы хотите использовать собственную локаль, выполните следующие действия:
+Kanban экспортирует следующие локали:
 
-- Создайте свою локаль (или измените стандартную) и заполните переводы для всех нужных надписей (поддерживается любой язык)
-- Установите новую локаль для **Kanban** с помощью свойства [`locale`](/api/config/js_kanban_locale_config.md) или метода [`setLocale()`](/api/methods/js_kanban_setlocale_method.md)
-- Установите новую локаль для **Toolbar** через его свойство [`locale`](/api/config/toolbar_locale_config.md) или метод [`setLocale()`](/api/methods/toolbar_setlocale_method.md)
+**"en"** - English  
+**"de"** - German  
+**"cn"** - Chinese  
+**"es"** - Spanish  
+**"fr"** - French  
+**"it"** - Italian  
+**"jp"** - Japanese  
+**"pt"** - Portugese  
+**"ru"** - Russian  
 
-:::info
-Начиная с v1.2, Kanban больше не экспортирует встроенные локали. Если вам нужны дополнительные локали, обратитесь к [**github page**](https://github.com/web-widgets/wx-kanban-locales). Вы также можете установить нужную локаль через *npm* и использовать её так:
-~~~js
-import { de } from "@xbs/wx-kanban-locales"
-import { de as coreDe } from "@xbs/wx-core-locales"
+Вы можете экспортировать и применить встроенную локаль следующим образом:
 
-new kanban.Kanban({
-    // другие свойства
-    locale: { ...coreDe, ...de },
+```jsx {5}
+// создаём Kanban
+const board = new kanban.Kanban("#root", {
+    columns,
+    cards,
+    locale: kanban.locales["cn"] // изначально будет установлена встроенная локаль "cn"
+    // другие параметры
 });
-~~~
-:::
+
+// применяем встроенную локаль "de" к Kanban
+board.setLocale(kanban.locales["de"]);
+```
+
+## Пользовательская локаль
+
+Чтобы применить пользовательскую локаль, нужно:
+
+- создать пользовательскую локаль (или изменить локаль по умолчанию) и указать переводы для всех текстовых меток (это может быть любой нужный вам язык)
+
+- применить новую локаль к **Kanban** через свойство [`locale`](api/config/js_kanban_locale_config.md) или использовать метод [`setLocale()`](api/methods/js_kanban_setlocale_method.md)
+- применить новую локаль к **Toolbar** через свойство [`locale`](api/config/toolbar_locale_config.md) или использовать метод [`setLocale()`](api/methods/toolbar_setlocale_method.md)
 
 ## Пример
 
-Этот пример показывает, как переключаться между разными локалями:
+В этом примере показано, как переключаться между несколькими локалями:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

@@ -8,7 +8,7 @@ description: Вы можете узнать о методе deleteColumn в до
 
 ### Описание
 
-@short: Удаляет указанный столбец из хранилища данных Kanban.
+@short: Удаляет указанную колонку из хранилища данных Kanban
 
 ### Использование
 
@@ -18,16 +18,16 @@ deleteColumn({ id: string | number }): void;
 
 ### Параметры
 
-- `id` - (обязательный) ID столбца, который необходимо удалить
+- `id` - (обязательно) ID колонки, которую необходимо удалить
 
 ### Пример
 
 ~~~jsx {7}
-// создаём Kanban
+// создаем Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// удаляем столбец по его id
+// удаляем колонку по её id
 board.deleteColumn({ id: "backlog" });
 ~~~

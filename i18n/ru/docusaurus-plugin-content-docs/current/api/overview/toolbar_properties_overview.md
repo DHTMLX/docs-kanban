@@ -1,16 +1,15 @@
 ---
-sidebar_label: Обзор свойств панели инструментов
-title: Обзор свойств панели инструментов
-description: Изучите свойства панели инструментов для JavaScript Kanban в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков, ссылками на API, примерами кода и живыми демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+sidebar_label: Обзор свойств Toolbar
+title: Обзор свойств Toolbar
+description: Вы можете ознакомиться с обзором свойств Toolbar в JavaScript Kanban в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
-# Обзор свойств панели инструментов
+# Обзор свойств Toolbar
 
-Для настройки **панели инструментов** ознакомьтесь с разделом [Configuration](/guides/configuration/#панель-инструментов).
+Для настройки **Toolbar** обратитесь к разделу [Configuration](guides/configuration.md#toolbar).
 
 | Название                                                  | Описание                                               |
-| ----------------------------------------------------------| --------------------------------------------------------|
-| [api](../../config/toolbar_api_config/)                       | @getshort(../config/toolbar_api_config.md)              |
-| [items](../../config/toolbar_items_config/)                     | @getshort(../config/toolbar_items_config.md)            |
-| [locale](../../config/toolbar_locale_config/)                    | @getshort(../config/toolbar_locale_config.md)           |
-| [theme](../../config/toolbar_theme_config/)                     | @getshort(../config/toolbar_theme_config.md)            |
+| --------------------------------------------------------- | ------------------------------------------------------- |
+| [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
+| [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
+| [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |

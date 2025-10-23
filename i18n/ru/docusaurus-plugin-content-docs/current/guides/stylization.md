@@ -1,40 +1,40 @@
 ---
 sidebar_label: Стилизация
 title: Стилизация
-description: Узнайте о возможностях стилизации в документации по DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную пробную версию DHTMLX Kanban на 30 дней.
+description: Ознакомьтесь с возможностями стилизации в документации по DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
 ---
 
 # Стилизация
 
-В Kanban довольно просто настраивать внешний вид **колонок**, **строк** и **карт** с помощью свойств [`columnShape.css`](/api/config/js_kanban_columnshape_config), [`rowShape.css`](/api/config/js_kanban_rowshape_config) и [`cardShape.css`](/api/config/js_kanban_cardshape_config). Эти опции позволяют добавить условные стили для колонок, строк и карточек.
+В Kanban вы можете стилизовать внешний вид **колонок**, **строк** и **карточек** с помощью свойств [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) и [`cardShape.css`](api/config/js_kanban_cardshape_config.md). Эти свойства позволяют условно применять стили к колонкам, строкам и карточкам.
 
-Если вам нужно больше гибкости, вы можете добавить собственные CSS-классы к любой конкретной **колонке**, **строке** или **карте** через свойства [`columns.css`](/api/config/js_kanban_columns_config), [`rows.css`](/api/config/js_kanban_rows_config) и [`cards.css`](/api/config/js_kanban_cards_config).
+Также вы можете применить собственный CSS-класс к отдельной **колонке**, **строке** или **карточке** с помощью свойств [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md) и [`cards.css`](api/config/js_kanban_cards_config.md).
 
-Также вы можете стилизовать любые элементы интерфейса Kanban под нужды вашего проекта. Для этого доступно множество CSS-переменных. В Kanban есть два основных типа переменных:
-- CSS-переменные для стилизации **Kanban**
-- CSS-переменные из библиотеки **WX** (охватывают такие элементы интерфейса, как контролы, календари и др.)
+Кроме того, вы можете применять пользовательские стили к любой части интерфейса Kanban, чтобы соответствовать требованиям вашего проекта. Для этого библиотека предоставляет широкий набор CSS-переменных. Обратите внимание, что Kanban включает два типа переменных:
+- CSS-переменные, связанные со стилем **Kanban**
+- CSS-переменные, связанные со стилем библиотеки **WX** (*элементы управления, календари и т.д.*)
 
 :::info
-Библиотека **WX** используется во внутренней реализации некоторых элементов. Она управляет отдельными частями интерфейса Kanban, например, контролами и календарями.
+Обратите внимание, что библиотека **WX** используется только для внутренних процессов. Она предоставляет некоторые небольшие элементы, используемые в Kanban (*элементы управления, календари и т.д.*)
 :::
 
 ## Стиль по умолчанию
 
 ~~~css
 .wx-material-theme {
-    /* css-переменные библиотеки WX */
+    /* CSS-переменные библиотеки WX */
     --wx-field-width: 100%;
     --wx-theme-name: material;
-    /* конец css-переменных библиотеки WX */
+    /* конец CSS-переменных библиотеки WX */
 
     /* CSS-переменные Kanban */
     --wx-kanban-background: #f1f1f1;
 
-    /* стили колонок */
+    /*  стили колонок */
     --wx-kanban-column-width: 300px;
     --wx-kanban-column-height: 300px;
 
-    /* стили тулбара */
+    /* стили панели инструментов */
     --wx-kanban-toolbar-height: 56px;
     --wx-kanban-toolbar-align: center;
     --wx-kanban-toolbar-justify: flex-start;
@@ -68,18 +68,18 @@ description: Узнайте о возможностях стилизации в 
     --wx-kanban-collapsed-column-width: 44px;
     --wx-kanban-z-index: 1;
 
-    /* стили прогресс-контрола */
+    /* стили элемента прогресса */
     --wx-progress-height: 4px;
     --wx-kanban-progress-inactive-color: #dbdbdb;
 
     /* стили меню */
     --wx-kanban-menu-min-width: 100px;
 
-    /* стили box и тени */
+    /* стили тени и рамки */
     --wx-kanban-shadow: none;
     --wx-kanban-box-border: var(--wx-border);
 
-    /* стили свернутой колонки */
+    /* стили свернутых колонок */
     --wx-kanban-collapsed-padding: var(--wx-padding);
     --wx-kanban-collapsed-margin: 0px;
     --wx-kanban-collapsed-background: transparent;
@@ -90,71 +90,30 @@ description: Узнайте о возможностях стилизации в 
 ~~~
 
 :::tip Примечание
-В будущих версиях Kanban некоторые переменные могут быть изменены или переименованы. Рекомендуется проверять названия переменных после обновления и удостовериться, что ваши стили работают корректно.
+В будущих версиях Kanban могут быть изменены некоторые переменные и их имена. Пожалуйста, не забывайте проверять их после обновления на новую версию и вносить изменения в ваш код, чтобы избежать проблем с отображением компонента.
 :::
-
-## Встроенные темы
-
-Доступно несколько встроенных тем, которые можно применить, указав свойство [`theme`](/api/config/js_kanban_theme_config) или вызвав метод [`setTheme()`](/api/methods/js_kanban_settheme_method). Среди доступных тем: **material**, **willow** и **willow-dark**.
-
-:::important
-В качестве альтернативы свойству `theme` вы можете переключать темы, добавляя соответствующий *css* класс к контейнерам Kanban:
-
-- **Material theme**
-~~~html {}
-    <!-- Toolbar Kanban -->
-    <div id="toolbar" class="wx-material-theme"></div>
-    <!-- Контейнер Kanban -->
-    <div id="root" class="wx-material-theme"></div>
-~~~
-
-- **Willow theme**
-~~~html {}
-    <!-- Toolbar Kanban -->
-    <div id="toolbar" class="wx-willow-theme"></div>
-    <!-- Контейнер Kanban -->
-    <div id="root" class="wx-willow-theme"></div>
-~~~
-
-- **Willow-Dark theme**
-~~~html {}
-    <!-- Toolbar Kanban -->
-    <div id="toolbar" class="wx-willow-dark-theme"></div>
-    <!-- Контейнер Kanban -->
-    <div id="root" class="wx-willow-dark-theme"></div>
-~~~
-
-Если вам удобнее, просто подключите CSS-файл нужной темы из папки skins:
-
-~~~html {}
-<link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
-~~~
-:::
-
-Ниже пример использования темы **willow-dark**:
-<iframe src="https://snippet.dhtmlx.com/k3iw6ti0?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Стилизация скролла
 
-Скроллбар Kanban также можно стилизовать. Для этого используйте CSS-класс `.wx-styled-scroll`. Перед использованием этой возможности проверьте [поддержку в браузерах](https://caniuse.com/css-scrollbar) для кастомных скроллбаров.
+Вы также можете применить пользовательский стиль к полосе прокрутки Kanban. Для этого можно использовать CSS-класс `.wx-styled-scroll`. Перед использованием проверьте совместимость с современными браузерами [здесь](https://caniuse.com/css-scrollbar).
 
 ~~~html {4} title="index.html"
 <!--контейнер для Toolbar-->
 <div id="toolbar"></div> //
 <!--контейнер для Kanban-->
-<div id="root" class="wx-styled-scroll"></div>
+<div id="root" class="wx-styled-scroll"></div> 
 ~~~
 
-## Кастомная стилизация
+## Пользовательский стиль
 
-Пример добавления собственной стилизации в Kanban:
+В этом примере показано, как применить пользовательский стиль к Kanban
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Адаптивность
 
-Этот пример демонстрирует, как сделать Kanban адаптивным с помощью пользовательских CSS-стилей:
+В этом примере показано, как создать адаптивную версию Kanban с использованием пользовательских CSS-стилей
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Связанные статьи:** [Кастомизация](../customization)
+**Связанные статьи:** [Кастомизация](guides/customization.md)

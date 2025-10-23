@@ -1,24 +1,24 @@
 ---
 sidebar_label: DELETE /links
 title: DELETE /links
-description: В этом разделе рассматривается REST-маршрут DELETE /links в библиотеке DHTMLX JavaScript Kanban. Включает руководства для разработчиков, справочник API, примеры, живые демо и бесплатный 30-дневный пробный период DHTMLX Kanban.
+description: Вы можете узнать о REST-маршруте DELETE /links в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
 ---
 
 # DELETE `/links`
 
 ### Описание
 
-@short: Удаляет запись ссылки
+@short: Удаляет данные о связи
 
-Этот эндпоинт обрабатывает **HTTP DELETE** запрос, отправляемый на `/links/{id}`.
+Маршрут обрабатывает **HTTP DELETE** запрос, отправленный по пути `/links/{id}`.
 
 ### Параметры пути
 
-В URL запроса включён следующий параметр:
+Следующий параметр передается в строке запроса:
 
-| Имя  | Тип     | Описание                                    |
-| ---- | ------- | ------------------------------------------- |
-| `id` | number  | *Обязательно*. Идентификатор ссылки, которую нужно удалить. |
+| Имя  | Тип     | Описание                            |
+| ---- | ------- | --------------------------------- |
+| `id` | number  | *Обязательный*. ID связи для удаления. |
 
 ### Тело запроса
 
@@ -26,11 +26,11 @@ description: В этом разделе рассматривается REST-ма
 
 ### Ответ
 
-Содержимое не возвращается. HTTP-статус код указывает на успех (response.status == 200) или ошибку (response.status == 500).
+Данные в ответе не возвращаются. HTTP статус код указывает, успешно ли выполнен запрос (response.status == 200) или произошла ошибка (response.status == 500).
 
 ---
 
 **Связанные статьи**:
-- [Работа с сервером](/guides/working_with_server.md)
-- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method.md)
-- [links](/api/config/js_kanban_links_config.md)
+- [Работа с сервером](guides/working_with_server.md)
+- [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
+- [links](api/config/js_kanban_links_config.md)
