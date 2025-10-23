@@ -1,14 +1,14 @@
 ---
 sidebar_label: cardShape
 title: cardShape 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 cardShape 구성을 살펴보세요. 개발자 가이드, API 참조, 코드 샘플 및 라이브 데모를 확인하고 DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 cardShape 구성에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
 ---
 
 # cardShape
 
 ### 설명
 
-@short: 선택 사항입니다. 카드의 외관을 제어하는 설정 객체입니다.
+@short: 선택 사항입니다. 카드의 외관을 관리하기 위한 설정 객체입니다.
 
 ### 사용법
 
@@ -21,30 +21,31 @@ cardShape?: {
     cover?: boolean | { show?: boolean },
     comments?: boolean | { show?: boolean },
     confirmDeletion?: boolean | { show?: boolean },
-    start_date?: boolean | {
+    start_date?: boolean | { 
+        show?: boolean,
+        format?: string 
+    },
+    end_date?: boolean | { 
         show?: boolean,
         format?: string
     },
-    end_date?: boolean | {
+    color?: boolean | { 
         show?: boolean,
-        format?: string
-    },
-    color?: boolean | {
-        show?: boolean,
-        values?: array
+        values?: array  
     },
     menu?: boolean | {
-        show?: boolean,
+        show?: boolean, 
         items?: [
             {
                 id?: string,
                 icon?: string,
                 text?: string,
                 disabled? boolean,
-                onClick?: ({ id, item, card }) => void
-            },
+                onClick?: ({ id, item, card }) => void,
+                data?: array // 메뉴 하위 항목 배열
+            }, 
             {...}
-        ] | ({ card, store }) => array | boolean
+        ] | ({ card, readonly }) => array | null
     },
     users?: boolean | {
         show?: boolean,
@@ -54,7 +55,7 @@ cardShape?: {
                 label?: string,
                 avatar?: string
             },
-            {...} // 다른 사용자 데이터
+            {...} // 기타 사용자 데이터
         ],
         maxCount?: number | false
     },
@@ -66,13 +67,13 @@ cardShape?: {
                 label?: string,
                 color: string
             },
-            {...} // 다른 우선순위 데이터
+            {...} // 기타 우선순위 데이터
         ]
-    },
-    votes?: boolean | {
+    },    
+    votes?: boolean | { 
         show?: boolean,
         clickable?: boolean
-    },
+    }, 
     css?: (card) => string,
     headerFields?: [
         {
@@ -80,7 +81,7 @@ cardShape?: {
             label?: string,
             css?: string
         },
-        {...} // 다른 필드 데이터
+        {...} // 기타 필드 데이터
     ]
 };
 ~~~
@@ -88,84 +89,97 @@ cardShape?: {
 ### 매개변수
 
 :::info
-때때로 매개변수는 **단축형** 또는 **확장형**으로 설정할 수 있습니다. 예를 들어:
+경우에 따라 매개변수를 **간단한(short)** 값 또는 **확장된(extended)** 값으로 설정할 수 있습니다. 아래 코드를 참고하세요:
 
 ~~~jsx {3,6}
     label: boolean | { show?: boolean }
-    // 단축형
+    // 간단한 값
     label: true
     // 또는
-    // 확장형
+    // 확장된 값
     label: { show: true }
 ~~~
 :::
 
-**cardShape** 객체는 다음 필드를 구성하여 카드의 표시 방식을 제어합니다:
+카드 외관을 구성하려면 **cardShape** 객체 내에서 다음 매개변수(필드)를 지정할 수 있습니다:
 
-- `label` - (선택 사항) **label** 필드의 표시 여부를 토글합니다.
-- `description` - (선택 사항) **description** 필드의 표시 여부를 토글합니다.
-- `progress` - (선택 사항) **progress** 필드의 표시 여부를 토글합니다.
-- `attached` - (선택 사항) **첨부파일** 필드의 표시 여부를 토글합니다.
-- `cover` - (선택 사항) **카드 이미지** 표시 여부를 토글합니다.
-- `comments` - (선택 사항) 카드에 **댓글** 표시 여부를 토글합니다.
-- `confirmDeletion` - (선택 사항) 카드 삭제 시 **확인 대화상자** 표시 여부를 토글합니다.
-- `start_date` - (선택 사항) **시작 날짜** 필드를 구성합니다.
-    - `show` - (선택 사항) 시작 날짜 표시 여부를 토글합니다.
-    - `format` - (선택 사항) 날짜 형식을 설정합니다. 사용 가능한 옵션은 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)를 참조하세요.
-- `end_date` - (선택 사항) **종료 날짜** 필드를 구성합니다.
-    - `show` - (선택 사항) 종료 날짜 표시 여부를 토글합니다.
-    - `format` - (선택 사항) 날짜 형식을 설정합니다. 사용 가능한 옵션은 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)를 참조하세요.
-- `color` - (선택 사항) 카드의 **상단 색상 라인**을 구성합니다.
-    - `show` - (선택 사항) 색상 라인 표시 여부를 토글합니다.
-    - `values` - (선택 사항) HEX 색상 코드 배열입니다.
-- `menu` - (선택 사항) **카드 컨텍스트 메뉴**를 구성합니다.
-    - `show` - (선택 사항) 컨텍스트 메뉴를 활성화하거나 비활성화합니다.
-    - `items` - (선택 사항) 메뉴 항목 객체 배열로 다음 속성을 포함합니다:
-        - `id` - (선택 사항) 메뉴 항목 ID. 내장 동작에 다음 ID를 사용하세요:
-            - ***"set-edit"*** - 카드 이름 편집
-            - ***"delete-card"*** - 카드 삭제
-        - `icon` - (선택 사항) 아이콘 클래스 이름 (예: *mdi-delete*)
-        - `text` - (선택 사항) 메뉴 항목 레이블
-        - `disabled` - (선택 사항) 메뉴 항목 활성화/비활성화
-        - `onClick` - (선택 사항) 콜백 함수이며 다음을 인자로 받습니다:
-            - ***id*** - 메뉴 항목 ID
-            - ***item*** - 메뉴 항목 데이터
-            - ***card*** - 대상 카드 데이터
+- `label` - (선택 사항) **라벨** 필드 표시/숨김
+- `description` - (선택 사항) **설명** 필드 표시/숨김
+- `progress` - (선택 사항) **진행률** 필드 표시/숨김
+- `attached` - (선택 사항) **첨부파일** 필드 표시/숨김
+- `cover` - (선택 사항) **카드 이미지** 표시/숨김
+- `comments` - (선택 사항) 카드에 대한 **댓글** 표시/숨김
+- `confirmDeletion` - (선택 사항) 카드 삭제 시 사용자에게 삭제 확인 대화상자를 표시/숨김
+- `start_date` - (선택 사항) **시작 날짜** 필드의 매개변수 객체
+    - `show` - (선택 사항) 카드 시작 날짜 표시/숨김
+    - `format` - (선택 사항) 카드 시작 날짜 형식 정의. 사용 가능한 매개변수는 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)에서 확인할 수 있습니다.
+- `end_date` - (선택 사항) **종료 날짜** 필드의 매개변수 객체
+    - `show` - (선택 사항) 카드 종료 날짜 표시/숨김
+    - `format` - (선택 사항) 카드 종료 날짜 형식 정의. 사용 가능한 매개변수는 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)에서 확인할 수 있습니다.
+- `color` - (선택 사항) 카드 상단 색상 라인의 매개변수 객체
+    - `show` - (선택 사항) 상단 색상 라인 표시/숨김
+    - `values` - (선택 사항) 유효한 HEX 코드 배열
+- `menu` - (선택 사항) 카드 컨텍스트 메뉴의 매개변수 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `show` - (선택 사항) 카드 컨텍스트 메뉴 활성화/비활성화
+    - `items` - (선택 사항) 카드 컨텍스트 메뉴 항목의 매개변수를 포함하는 객체 배열. 각 항목에 대해 다음 매개변수를 지정할 수 있습니다:
+        - `id` - (선택 사항) 메뉴 항목 ID. 내장 동작을 구현하려면 다음 값을 지정해야 합니다:
+            - ***"set-edit"*** - 카드 이름 편집 동작 정의
+            - ***"delete-card"*** - 카드 삭제 동작 정의
+        - `icon` - (선택 사항) 메뉴 항목 아이콘 클래스 이름. 아이콘 폰트 관련 아이콘 지정 가능 (*mdi-delete* 등)
+        - `text` - (선택 사항) 메뉴 항목 이름
+        - `disabled` - (선택 사항) 메뉴 항목 상태 (*활성* 또는 *비활성*, boolean 값에 따라 다름)
+        - `onClick` - (선택 사항) 다음 인수를 받는 사용자 정의 콜백 함수:
+            - ***id*** - 현재 메뉴 항목 ID
+            - ***item*** - 현재 메뉴 항목 데이터 객체
+            - ***card*** - 대상 카드 데이터 객체
+        - `data` - (선택 사항) 메뉴 하위 항목을 나타내는 객체 배열
 
-:::info
-`items`에 사용자 정의 함수를 지정할 수도 있습니다. 이 함수는 다음을 인자로 받습니다:
+    :::info
+    `menu.items` 매개변수에 다음 인수를 받는 사용자 정의 함수를 설정할 수도 있습니다:
+    - ***card*** - 현재 카드 데이터 객체
+    - ***readonly*** - 읽기 전용 [상태 속성](api/internal/js_kanban_getstate_method.md) 객체
 
-- ***card*** - 현재 카드 데이터
-- ***store*** - *dataStore* 객체
+    이 함수는 특정 카드에 대해 메뉴를 맞춤 설정하거나 특정 카드에 대해 메뉴를 숨길 수 있습니다(함수에서 *null* 또는 *false* 반환):
 
-이를 통해 특정 카드에서 메뉴를 맞춤화하거나 숨길 수 있습니다. *null* 또는 *false*를 반환하여 처리합니다:
+    ~~~jsx {}
+    items: ({ card, readonly }) => {
+        if (card.id === 1){
+            return false;
+        }  
 
-~~~jsx {}
-    items: ({ card, store }) => {
-        if(card.id === 1)
-            return false
-        return [
-            { id: "set-edit", icon: "wxi-edit", label: "Edit" },
-            { id: "delete-card", icon: "wxi-delete", label: "Delete" }
-        ]
+        const menu = [];
+
+        if (!readonly.delete){
+            menu.push({ 
+                id: "delete-card", icon: "wxi-delete", label: "Delete"
+            });
+        }
+            
+        if (!readonly.edit){
+            menu.push({ 
+                id: "set-edit", icon: "wxi-edit", label: "Edit"
+            });
+        }
+        return menu.length ? menu : null;
     }
-~~~
-:::
+    ~~~
+    :::
 
-- `users` - (선택 사항) **사용자** 필드를 구성합니다.
-    - `show` - (선택 사항) 할당된 사용자 표시 여부를 토글합니다.
-    - `values` - (필수) 사용자 객체 배열입니다:
-        - `id` - (필수) 사용자 ID
+- `users` - (선택 사항) **사용자** 필드 매개변수 객체
+    - `show` - (선택 사항) 할당된 사용자 표시/숨김
+    - `values` - (필수) 사용자 데이터 객체 배열. 각 사용자에 대해 다음 매개변수를 지정할 수 있습니다:
+        - `id` - (필수) 사용자 **ID**
         - `label` - (선택 사항) 사용자 이름
         - `avatar` - (선택 사항) 사용자 아바타 경로
-    - `maxCount` - (선택 사항) 카드에 표시할 최대 사용자 수, 무제한은 ***false*** 설정
+    - `maxCount` - (선택 사항) 카드에 표시할 최대 사용자 수 (또는 ***false***)
 
-    `maxCount` 설정으로 카드에 표시할 사용자 수를 제한할 수 있습니다. `false`로 설정하면 모든 할당된 사용자가 표시됩니다.
+    `maxCount` 속성을 카드에 표시할 사용자 수로 설정할 수 있습니다.
+    `maxCount`를 `false`로 설정하면 카드에 할당된 모든 사용자가 표시됩니다.
 
-:::info
-***users*** 필드는 기본적으로 비활성화되어 있습니다. 활성화하려면 `show`를 `true`로 설정하고 `values`에 사용자 데이터를 제공하세요. 편집기에서 사용자를 할당하려면 [`editorShape`](/api/config/js_kanban_editorshape_config.md#--combo-select-multiselect-유형에-대한-매개변수)에서 적절한 컨트롤을 구성하세요. 단일 사용자는 ***select***, 다중 사용자는 ***multiselect***를 사용합니다.
+    :::info
+    ***users*** 필드는 기본적으로 비활성화되어 있습니다. 활성화하려면 `show` 매개변수를 `true`로 설정하고 `values` 매개변수를 통해 해당 사용자 데이터를 제공해야 합니다. 편집기에서 새 사용자를 할당하려면 [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) 속성을 통해 해당 컨트롤을 구성해야 합니다. 한 명 또는 여러 명의 사용자를 할당하려면 ***select*** 유형 또는 ***multiselect*** 유형을 사용하세요.
 
-~~~jsx {}
+    ~~~jsx {}
     cardShape: {
         users: {
             show: true,
@@ -173,29 +187,29 @@ cardShape?: {
                 { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
                 { id: 2, label: "Aaron Short" }
             ],
-            maxCount: 4 // 카드당 최대 4명 사용자 표시 제한
+            maxCount: 4 // 카드에 최대 4명만 표시
         }
     }
-~~~
-:::
+    ~~~
+    :::
 
-- `priority` - (선택 사항) **우선순위** 필드를 구성합니다.
-    - `show` - (선택 사항) 우선순위 표시 여부를 토글합니다.
-    - `values` - (선택 사항) 우선순위 객체 배열입니다:
-        - `id` - (필수) 우선순위 ID
+- `priority` - (선택 사항) **우선순위** 필드 매개변수 객체
+    - `show` - (선택 사항) 카드 우선순위 표시/숨김
+    - `values` - (선택 사항) 우선순위 데이터 객체 배열. 각 우선순위에 대해 다음 매개변수를 지정할 수 있습니다:
+        - `id` - (필수) 우선순위 **ID**
         - `label` - (선택 사항) 우선순위 이름
-        - `color` - (필수) HEX 색상 코드
-- `votes` - (선택 사항) **투표** 기능을 구성합니다.
-    - `show` - (선택 사항) 카드와 편집기에서 투표 아이콘 표시 여부를 토글합니다.
-    - `clickable` - (선택 사항) `true`이면 사용자가 카드에서 아이콘을 클릭해 투표 가능하며, 그렇지 않으면 편집기에서만 투표할 수 있습니다.
-- `css` - 카드를 조건부로 스타일링하기 위한 CSS 클래스를 반환하는 함수입니다.
-- `headerFields` - (선택 사항) **사용자 정의 필드**를 정의하는 객체 배열입니다.
-    - `key` - (필수) 사용자 정의 필드 키로, [editorShape](../js_kanban_editorshape_config)에서 편집기 구성 시 사용합니다.
-    - `label` - (선택 사항) 사용자 정의 필드 레이블
-    - `css` - (선택 사항) 사용자 정의 필드의 CSS 클래스
+        - `color` - (필수) 유효한 HEX 코드
+- `votes` - (선택 사항) **투표** 기능 지정
+    - `show` - (선택 사항) 카드 및 편집기에서 투표 아이콘 표시/숨김
+    - `clickable` - (선택 사항) 카드 위의 투표 아이콘 클릭 가능 여부. `true`면 사용자가 카드 위의 아이콘으로 투표 가능, 그렇지 않으면 편집기 내 아이콘으로만 투표 가능
+- `css` - 카드에 조건부로 적용할 css 클래스를 반환하는 함수
+- `headerFields` - (선택 사항) **사용자 정의 필드** 데이터 객체 배열. 다음 매개변수를 지정할 수 있습니다:
+    - `key` - (필수) 사용자 정의 필드 키. [editorShape](api/config/js_kanban_editorshape_config.md) 속성으로 편집기를 구성할 때 사용
+    - `label` - (선택 사항) 사용자 정의 필드 라벨
+    - `css` - (선택 사항) 사용자 정의 필드 css 클래스
 
 :::info
-**cardShape**를 통해 카드 옵션을 설정하지 않으면 **defaultCardShape**의 기본 매개변수가 적용됩니다.
+**cardShape** 속성으로 카드 설정을 지정하지 않으면 위젯은 **defaultCardShape** 기본 매개변수 집합을 적용합니다!
 :::
 
 ### 기본 구성
@@ -209,8 +223,8 @@ const defaultPriorities = [
 
 const defaultColors = ["#33B0B4", "#0096FA", "#F1B941"];
 
-export const getDefaultCardMenuItems = ({ store }: { store: DataStore }) => {
-    const { readonly } = store.getState();
+export const getDefaultCardMenuItems = ({ readonly }: { readonly: DataStore }) => {
+    const { readonly } = readonly.getState();
     const baseItems = [
         { id: "duplicate-card", icon: "wxi-content-copy", text: "Duplicate" },
         { id: "delete-card", icon: "wxi-delete-outline", text: "Delete" }
@@ -233,11 +247,11 @@ const defaultCardShape = {
     end_date: { show: false },
     users: { show: false },
     confirmDeletion: { show: true },
-    priority: {
+    priority: { 
         show: false,
         values: defaultPriorities
     },
-    color: {
+    color: { 
         show: false,
         values: defaultColors
     },
@@ -250,12 +264,12 @@ const defaultCardShape = {
 ### 예제
 
 ~~~jsx {14-49,54}
-const users = [ // 샘플 사용자 데이터
+const users = [ // 사용자 데이터
     { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
     { id: 2, label: "Aaron Short" }
 ];
 
-const  cardPriority = [ // 샘플 우선순위 데이터
+const  cardPriority = [ // 카드 우선순위 데이터
     { id: 1, color: "#FF5252", label: "high" },
     { id: 2, color: "#FFC975", label: "medium" },
     { id: 3, color: "#0AB169", label: "low" }
@@ -263,7 +277,7 @@ const  cardPriority = [ // 샘플 우선순위 데이터
 
 const cardColors = ["#65D3B3", "#FFC975", "#58C3FE"];
 
-const cardShape = { // 카드 표시 설정
+const cardShape = { // 카드 설정
     label: true,
     description: true,
     progress: true,
@@ -293,7 +307,7 @@ const cardShape = { // 카드 표시 설정
     },
     css: (card) => card.type == "feature" ? "green" : "red",
     headerFields: [
-        {   // 사용자 정의 필드 예제
+        {   // 사용자 정의 필드
             key: "sprint",
             css: "custom_style",
             label: "Sprint"
@@ -310,11 +324,14 @@ new kanban.Kanban("#root", {
 ~~~
 
 **변경 로그:**
-- ***comments***, ***css***, 및 ***votes*** 옵션이 v1.4에 추가되었습니다.
-- ***menu.items[0].label*** 옵션이 v1.4에서 ***menu.items[0].text***로 이름이 변경되었습니다.
-- ***users.maxCount*** 및 ***votes.clickable*** 옵션이 v1.6에 추가되었습니다.
+- ***comments***, ***css*** 및 ***votes*** 매개변수가 v1.4에 추가됨
+- ***menu.items[0].label*** 매개변수가 v1.4에서 폐기되고 ***menu.items[0].text*** 매개변수로 대체됨
+- ***menu.items[0].items*** 매개변수가 v1.4에서 폐기되고 ***menu.items[0].data*** 매개변수로 대체됨
+- ***users.maxCount*** 및 ***votes.clickable*** 매개변수가 v1.6에 추가됨
+- ***menu.items[0].label*** 및 ***menu.items[0].items*** 매개변수가 v1.7에서 제거됨
+- ***menu.items*** 함수가 업데이트되어 v1.7에서 **store** 매개변수가 **readonly**로 대체됨
 
-**관련 문서:** [구성](/guides/configuration#카드)
+**관련 문서:** [구성](guides/configuration.md#cards)
 
 **관련 샘플:**
 - [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

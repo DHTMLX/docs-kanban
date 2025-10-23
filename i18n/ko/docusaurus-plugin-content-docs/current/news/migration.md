@@ -1,14 +1,219 @@
 ---
-sidebar_label: 최신 버전으로 마이그레이션
-title: 최신 버전으로 마이그레이션
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전으로의 마이그레이션에 대해 알아보실 수 있습니다. 개발자 가이드와 API 레퍼런스를 참고하시고, 코드 예제와 라이브 데모를 체험해 보세요. DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
+sidebar_label: 최신 버전으로의 마이그레이션
+title: 최신 버전으로의 마이그레이션
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전으로의 마이그레이션에 대해 알아보실 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 사용해보며, DHTMLX Kanban의 30일 무료 평가판을 다운로드해보세요.
 ---
 
-# 최신 버전으로 마이그레이션
+# 최신 버전으로의 마이그레이션
+
+## 1.6.5 -> 1.7.0
+
+### Api
+
+#### Properties
+
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성이 업데이트되었습니다. `clearButton` 파라미터가 `clear`로 교체되었습니다:
+
+~~~jsx {8} title="v1.7.0 이전"
+new kanban.Kanban("#root", {
+    editorShape: [
+        {
+            type: "combo",
+            label: "Priority",
+            key: "priority",
+            config: {
+                clearButton: true // legacy
+            }
+        }, { /* ... */ }
+    ]
+    // 기타 파라미터
+});
+~~~
+
+~~~jsx {8} title="v1.7.0부터"
+new kanban.Kanban("#root", {
+    editorShape: [
+        {
+            type: "combo",
+            label: "Priority",
+            key: "priority",
+            config: {
+                clear: true // new
+            }
+        }, { /* ... */ }
+    ]
+    // 기타 파라미터
+});
+~~~
+
+- [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) 함수가 업데이트되었습니다. **store** 파라미터가 **readonly**로 교체되었습니다:
+
+~~~jsx {3-4} title="v1.7.0 이전"
+menu: {
+    show: true,
+    items: ({ card, store }) => {
+        const defaultMenuItems = getDefaultCardMenuItems({ card, store }); // "store" 파라미터는 legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="v1.7.0부터"
+menu: {
+    show: true,
+    items: ({ card, readonly }) => {
+        const defaultMenuItems = getDefaultCardMenuItems({ card, readonly }); // "readonly" 파라미터는 신규
+        ...
+    }
+}
+~~~
+
+- [`columnShape.menu.items`](api/config/js_kanban_columnshape_config.md) 함수가 업데이트되었습니다. **store** 파라미터가 **readonly**로 교체되었습니다:
+
+~~~jsx {3-4} title="v1.7.0 이전"
+menu: {
+    show: true,
+    items: ({ column, columnIndex, columns, store }) => {
+        const defaultMenuItems = getDefaultColumnMenuItems({ column, columnIndex, columns, store }); // "store" 파라미터는 legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="v1.7.0부터"
+menu: {
+    show: true,
+    items: ({ column, columnIndex, columns, readonly }) => {
+        const defaultMenuItems = getDefaultColumnMenuItems({ column, columnIndex, columns, readonly }); // "readonly" 파라미터는 신규
+        ...
+    }
+}
+~~~
+
+- [`rowShape.menu.items`](api/config/js_kanban_rowshape_config.md) 함수가 업데이트되었습니다. **store** 파라미터가 **readonly**로 교체되었습니다:
+
+~~~jsx {3-4} title="v1.7.0 이전"
+menu: {
+    show: true,
+    items: ({ row, rowIndex, rows, store }) => {
+        const defaultMenuItems = getDefaultRowMenuItems({ row, rowIndex, rows, store }); // "store" 파라미터는 legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="v1.7.0부터"
+menu: {
+    show: true,
+    items: ({ row, rowIndex, rows, readonly }) => {
+        const defaultMenuItems = getDefaultRowMenuItems({ row, rowIndex, rows, readonly }); // "readonly" 파라미터는 신규
+        ...
+    }
+}
+~~~
+
+- v1.7에서 [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu.items`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu.items`](api/config/js_kanban_rowshape_config.md) 속성의 ***menu.items[0].label*** 및 ***menu.items[0].items*** 파라미터가 제거되었습니다.
+
+- v1.7에서 `editorAutoSave` 속성이 제거되었습니다. 대신 [`editor.autoSave`](api/config/js_kanban_editor_config.md) 속성을 사용하세요:
+
+~~~jsx {2} title="v1.7.0 이전"
+new kanban.Kanban("#root", {
+    editorAutoSave: true, // legacy
+    // 기타 파라미터
+});
+~~~
+
+~~~jsx {3} title="v1.7.0부터"
+new kanban.Kanban("#root", {
+    editor: {
+        autoSave: true // new
+    }
+    // 기타 파라미터
+});
+~~~
+
+- [`links`](api/config/js_kanban_links_config.md) 속성이 다음과 같이 변경되었습니다:
+    - **masterId** 파라미터가 **source**로 교체됨
+    - **slaveId** 파라미터가 **target**으로 교체됨
+
+~~~jsx {5-6,10} title="v1.7.0 이전"
+const links = [
+    {
+        id: 1,
+        // legacy
+        masterId: 2,
+        slaveId: 5
+    }, {...} // 기타 링크 데이터
+];
+
+new kanban.Kanban("#root", {
+    links,
+    // 기타 파라미터
+});
+~~~
+
+~~~jsx {5-6,10} title="v1.7.0부터"
+const links = [
+    {
+        id: 1,
+        // new
+        source: 2,
+        target: 5
+    }, {...} // 기타 링크 데이터
+];
+
+new kanban.Kanban("#root", {
+    links,
+    // 기타 파라미터
+});
+~~~
+
+#### Methods
+
+- store 메서드에서 `undo` 및 `redo` 메서드가 제거되었습니다:
+
+~~~jsx {1} title="v1.7.0 이전"
+kanban.api.getStores().data.undo() // legacy
+~~~
+
+~~~jsx {5-6,10} title="v1.7.0부터"
+kanban.undo();
+// 또는
+kanban.api.exec("undo");
+~~~
+
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) 및 [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) 메서드가 다음과 같이 변경되었습니다:
+    - v1.7.0에서 다음 파라미터가 제거되었습니다:
+
+    ```js
+    fromAreaMeta,
+    dropAreaItemsCoords,
+    dropAreasCoords,
+    overAreaMeta,
+    before,
+    dragItemId,
+    dragItemsCoords,
+    overAreaId
+    ```
+
+    - v1.7.0에서 다음 파라미터가 private로 변경되었습니다:
+
+    ```js
+    edit -> _edit: object,
+    layout -> _layout: string,
+    cardsMap -> _cardsMap: object,
+    cardsMeta -> _cardsMeta: object,
+    areasMeta -> _areasMeta: object,
+    scroll -> _scroll: object
+    ```
+
+#### Events
+
+- [`start-drag-card`](api/events/js_kanban_startdragcard_event.md) 이벤트에서 `dragItemsCoords` 및 `dropAreasCoords` 파라미터가 제거되었습니다.
 
 ## 1.5.13 -> 1.6.0
 
-메뉴 관련 CSS 클래스가 일부 변경되었습니다:
+메뉴와 관련된 CSS 클래스가 다음과 같이 변경되었습니다:
 
 ~~~jsx
     .menu -> .wx-menu
@@ -19,7 +224,7 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
 
 ## 1.5.12 -> 1.5.13
 
-에디터에서 사용되는 CSS 클래스가 업데이트되었습니다:
+에디터와 관련된 CSS 클래스가 다음과 같이 변경되었습니다:
 
 ~~~jsx
     .modal -> .wx-modal
@@ -46,24 +251,24 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
 
 #### Methods
 
-- Kanban 툴바의 [`setLocale`](/api/methods/toolbar_setlocale_method) 메서드는 로케일 적용 방식이 변경되었습니다:
+- Kanban 툴바의 [`setLocale`](api/methods/toolbar_setlocale_method.md) 메서드가 다음과 같이 변경되었습니다:
 
 ~~~jsx {6} title="v1.5.7 이전"
     // Kanban 생성
     const board = new kanban.Kanban("#root", {...});
-    // 툴바 생성
+    // Toolbar 생성
     const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
     // Toolbar에 "de" 로케일 적용
-    toolbar.setLocale(de); // 또는 null로 초기(en)로 리셋
+    toolbar.setLocale(de); // 또는 null로 초기 로케일(en)로 리셋
 ~~~
 
 ~~~jsx {6} title="v1.5.7부터"
     // Kanban 생성
     const board = new kanban.Kanban("#root", {...});
-    // 툴바 생성
+    // Toolbar 생성
     const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
     // Toolbar에 "de" 로케일 적용
-    toolbar.setLocale(de, board.api);
+    toolbar.setLocale(de, board.api); 
 ~~~
 
 ## 1.4 -> 1.5
@@ -72,9 +277,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
 
 #### Properties
 
-- Kanban의 [`columnShape`](/api/config/js_kanban_columnshape_config) 속성이 다음과 같이 변경되었습니다:
+- Kanban의 [`columnShape`](api/config/js_kanban_columnshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.5 이전"
+    ~~~jsx {} title="v1.5 이전"
         {
             menu: {
                 show: true,
@@ -86,9 +291,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }
         }
-~~~
+    ~~~
 
-~~~jsx {11} title="v1.5부터"
+    ~~~jsx {11} title="v1.5부터"
         {
             menu: {
                 show: true,
@@ -100,8 +305,8 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             },
             fixedHeaders: true
-        }
-~~~
+        } 
+    ~~~
 
 ## 1.3 -> 1.4
 
@@ -109,18 +314,18 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
 
 #### Properties
 
-- Kanban의 [`editorShape`](/api/config/js_kanban_editorshape_config) 속성이 다음과 같이 동작합니다:
+- Kanban의 [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         {
-            type: "date",
+            type: "date", 
             key: "start_date",
             label: "Start date"
         },
         // 기타 파라미터
-~~~
+    ~~~
 
-~~~jsx {5,7-21} title="v1.4부터"
+    ~~~jsx {5,7-21} title="v1.4부터"
         {
             type: "date", // 또는 "dateRange" 타입도 사용 가능
             key: "start_date",
@@ -143,11 +348,11 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
             label: "Links",
         },
         // 기타 파라미터
-~~~
+    ~~~
 
-- [`cardShape`](/api/config/js_kanban_cardshape_config) 속성 업데이트:
+- Kanban의 [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         {
             label: true,
             description: true,
@@ -160,9 +365,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
             }
             // 기타 파라미터
         }
-~~~
+    ~~~
 
-~~~jsx {7,11-13} title="v1.4부터"
+    ~~~jsx {7,11-13} title="v1.4부터"
         {
             label: true,
             description: true,
@@ -177,12 +382,12 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
             comments: true,
             css: (card) => card.type == "feature" ? "green" : "red",
             // 기타 파라미터
-        }
-~~~
+        } 
+    ~~~
 
-- [`columnShape`](/api/config/js_kanban_columnshape_config) 속성 업데이트:
+- Kanban의 [`columnShape`](api/config/js_kanban_columnshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         {
             menu: {
                 show: true,
@@ -194,9 +399,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }
         }
-~~~
+    ~~~
 
-~~~jsx {6,11} title="v1.4부터"
+    ~~~jsx {6,11} title="v1.4부터"
         {
             menu: {
                 show: true,
@@ -208,12 +413,12 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             },
             css: (column, cards) => column.id == "feature" && cards.length < 5 ? "green" : "red"
-        }
-~~~
+        } 
+    ~~~
 
-- [`rowShape`](/api/config/js_kanban_rowshape_config) 속성 업데이트:
+- Kanban의 [`rowShape`](api/config/js_kanban_rowshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         {
             menu: {
                 show: true,
@@ -225,9 +430,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }
         }
-~~~
+    ~~~
 
-~~~jsx {6,11} title="v1.4부터"
+    ~~~jsx {6,11} title="v1.4부터"
         {
             menu: {
                 show: true,
@@ -239,12 +444,12 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             },
             css: (row, cards) => row.id == "task" && cards.length < 5 ? "green" : "red",
-        }
-~~~
+        } 
+    ~~~
 
-- [`cards`](/api/config/js_kanban_cards_config) 속성 변경:
+- Kanban의 [`cards`](api/config/js_kanban_cards_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         [
             {
                 id: 1,
@@ -253,9 +458,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }, ...
         ]
-~~~
+    ~~~
 
-~~~jsx {6-18} title="v1.4부터"
+    ~~~jsx {6-18} title="v1.4부터"
         [
             {
                 id: 1,
@@ -275,11 +480,11 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }, ...
         ]
-~~~
+    ~~~
 
-- [`columns`](/api/config/js_kanban_columns_config) 속성에 새로운 옵션이 추가되었습니다:
+- Kanban의 [`columns`](api/config/js_kanban_columns_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         [
             {
                 id: "inprogress",
@@ -287,9 +492,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }, ...
         ]
-~~~
+    ~~~
 
-~~~jsx {5-11} title="v1.4부터"
+    ~~~jsx {5-11} title="v1.4부터"
         [
             {
                 id: "inprogress",
@@ -304,11 +509,11 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }, ...
         ]
-~~~
+    ~~~
 
-- [`rows`](/api/config/js_kanban_rows_config) 속성에 css 옵션이 추가되었습니다:
+- Kanban의 [`rows`](api/config/js_kanban_rows_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         [
             {
                 id: "features",
@@ -316,9 +521,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }, ...
         ]
-~~~
+    ~~~
 
-~~~jsx {5} title="v1.4부터"
+    ~~~jsx {5} title="v1.4부터"
         [
             {
                 id: "features",
@@ -327,11 +532,11 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 // 기타 파라미터
             }, ...
         ]
-~~~
+    ~~~
 
-- [`cardTemplate`](/api/config/js_kanban_cardtemplate_config) 속성 업데이트:
+- Kanban의 [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
@@ -348,9 +553,9 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
             columns,
             cardTemplate
         });
-~~~
+    ~~~
 
-~~~jsx {6-8} title="v1.4부터"
+    ~~~jsx {6-8} title="v1.4부터"
         const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
@@ -371,13 +576,13 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
             cardTemplate: kanban.template(card => cardTemplate(card)),
             // 기타 파라미터
         });
-~~~
+    ~~~
 
-- Kanban Toolbar의 [`items`](/api/config/toolbar_items_config) 중 **sort** 컨트롤의 스타일이 변경되었습니다:
+- [`items`](api/config/toolbar_items_config.md) 속성의 **sort** 컨트롤이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.4 이전"
+    ~~~jsx {} title="v1.4 이전"
         [
-            { // custom sort control
+            { // 커스텀 sort 컨트롤
                 type: "sort",
                 options: [
                     {
@@ -393,11 +598,11 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 ]
             },
         ]
-~~~
+    ~~~
 
-~~~jsx {6,11} title="v1.4부터"
+    ~~~jsx {6,11} title="v1.4부터"
         [
-            { // custom sort control
+            { // 커스텀 sort 컨트롤
                 type: "sort",
                 options: [
                     {
@@ -413,67 +618,67 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 최신 버전
                 ]
             },
         ]
-~~~
+    ~~~
 
 #### Methods
 
-- Kanban의 [`api.getState()`](/api/internal/js_kanban_getstate_method) 메서드는 반환되는 속성이 일부 줄었습니다:
+- Kanban의 [`api.getState()`](api/internal/js_kanban_getstate_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {25-27} title="v1.4 이전"
 api.getState();
-// 반환되는 객체의 속성
+// 메서드는 다음 속성들을 포함한 객체를 반환합니다
 /*{
-    areasMeta: object,
-    before: string | number,
+    areasMeta: object, 
+    before: string | number, 
     cardShape: object,
     cards: array,
     cardsMap: object,
     cardsMeta: object,
     columnKey: string,
     columns: array,
-    dragItemId: string | number,
-    dragItemsCoords: array,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
     edit: object,
     editorShape: array,
     fromAreaMeta: object,
-    overAreaId: string | number,
+    overAreaId: string | number, 
     readonly: object,
     rowKey: string,
     rows: array,
     scroll: object,
     search: object,
-    selected: array,
+    selected: array, 
     sort: object,
     dropAreaItemsCoords: array,
-    dropAreasCoords: array,
-    overAreaMeta: object,
+    dropAreasCoords: array, 
+    overAreaMeta: object, 
 }*/
 ~~~
 
 ~~~jsx {} title="v1.4부터"
 api.getState();
-// 반환되는 객체의 속성
+// 메서드는 다음 속성들을 포함한 객체를 반환합니다
 /*{
-    areasMeta: object,
-    before: string | number,
+    areasMeta: object, 
+    before: string | number, 
     cardShape: object,
     cards: array,
     cardsMap: object,
     cardsMeta: object,
     columnKey: string,
     columns: array,
-    dragItemId: string | number,
-    dragItemsCoords: array,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
     edit: object,
     editorShape: array,
     fromAreaMeta: object,
-    overAreaId: string | number,
+    overAreaId: string | number, 
     readonly: object,
     rowKey: string,
     rows: array,
     scroll: object,
     search: object,
-    selected: array,
+    selected: array, 
     sort: object,
 }*/
 ~~~
@@ -484,20 +689,22 @@ api.getState();
 
 #### Properties
 
-- Kanban의 [`editorShape`](/api/config/js_kanban_editorshape_config) 속성에서 ***dateRange*** 파라미터를 지원합니다:
+- Kanban의 [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
-~~~jsx {} title="v1.3 이전"
+    - ***dateRange*** 파라미터
+
+    ~~~jsx {} title="v1.3 이전"
         {
-            type: "date",
+            type: "date", 
             key: "start_date",
             label: "Start date"
         },
         // 기타 파라미터
-~~~
+    ~~~
 
-~~~jsx {} title="v1.3부터"
+    ~~~jsx {} title="v1.3부터"
         {
-            type: "dateRange", // 또는 "date" 타입 사용 가능
+            type: "dateRange", // 또는 "date" 타입도 사용 가능
             key: {
                 start: "start_date",
                 end: "end_date"
@@ -505,9 +712,9 @@ api.getState();
             label: "Date Range"
         },
         // 기타 파라미터
-~~~
+    ~~~
 
-- Toolbar의 [`items`](/api/config/toolbar_items_config) 속성에 "undo"와 "redo"가 추가되었습니다:
+- Toolbar의 [`items`](api/config/toolbar_items_config.md) 속성이 다음과 같이 변경되었습니다:
 
 ~~~jsx {} title="v1.3 이전"
 items: [
@@ -533,7 +740,7 @@ items: [
 
 #### Methods
 
-- [`updateCard()`](/api/methods/js_kanban_updatecard_method) 메서드에 옵션이 추가되었습니다:
+- Kanban의 [`updateCard()`](api/methods/js_kanban_updatecard_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {} title="v1.3 이전"
 updateCard({
@@ -560,7 +767,7 @@ updateCard({
 });
 ~~~
 
-- [`updateColumn()`](/api/methods/js_kanban_updatecolumn_method) 메서드에도 새로운 인자가 추가되었습니다:
+- Kanban의 [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {} title="v1.3 이전"
 updateColumn({
@@ -587,7 +794,7 @@ updateColumn({
 });
 ~~~
 
-- [`updateRow()`](/api/methods/js_kanban_updaterow_method) 메서드에 replace 옵션이 추가되었습니다:
+- Kanban의 [`updateRow()`](api/methods/js_kanban_updaterow_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {} title="v1.3 이전"
 updateRow({
@@ -616,21 +823,21 @@ updateColumn({
 
 #### Properties
 
-- [`cardShape`](/api/config/js_kanban_cardshape_config) 속성이 개선되었습니다:
+- Kanban의 [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
-    - ***menu*** 파라미터 관련
+    - ***menu*** 파라미터
 
-~~~jsx {} title="v1.2 이전"
+    ~~~jsx {} title="v1.2 이전"
     menu: true,
     //또는
     menu: { show: true }
     // 기타 파라미터
-~~~
+    ~~~
 
-~~~jsx {5-14} title="v1.2부터"
+    ~~~jsx {5-14} title="v1.2부터"
     menu: true,
     // 또는
-    menu: {
+    menu: { 
         show: true,
         items: ({ card, store }) => {
             if(card.id === 1){
@@ -640,51 +847,51 @@ updateColumn({
                     { id: "set-edit", icon: "wxi-edit", label: "Edit" },
                     { id: "delete-card", icon: "wxi-delete", label: "Delete" }
                 ];
-            }
+            } 
         }
     },
     // 기타 파라미터
-~~~
+    ~~~
 
-    - ***users*** 파라미터 관련
+    - ***users*** 파라미터
 
-~~~jsx {7} title="v1.2 이전"
+    ~~~jsx {7} title="v1.2 이전"
     users: {
         show: true,
         values: [
-            {
-                id: 1,
-                label: "John Smith",
-                path: "../assets/user.jpg"
+            { 
+                id: 1, 
+                label: "John Smith", 
+                path: "../assets/user.jpg" 
             },
         ]
     },
     // 기타 파라미터
-~~~
+    ~~~
 
-~~~jsx {7} title="v1.2부터"
+    ~~~jsx {7} title="v1.2부터"
     users: {
         show: true,
         values: [
-            {
-                id: 1,
-                label: "John Smith",
-                avatar: "../assets/user.jpg"
+            { 
+                id: 1, 
+                label: "John Smith", 
+                avatar: "../assets/user.jpg" 
             },
         ]
     },
     // 기타 파라미터
-~~~
+    ~~~
 
-    - ***start_date*** 및 ***end_date*** 파라미터 관련
+    - ***start_date*** 및 ***end_date*** 파라미터
 
-~~~jsx {} title="v1.2 이전"
+    ~~~jsx {} title="v1.2 이전"
     start_date: true,
     end_date: true,
     // 기타 파라미터
-~~~
+    ~~~
 
-~~~jsx {3,7} title="v1.2부터"
+    ~~~jsx {3,7} title="v1.2부터"
     start_date: {
         show: true,
         format: "%d.%m.%Y"
@@ -694,41 +901,41 @@ updateColumn({
         format: "%d.%m.%Y"
     },
     // 기타 파라미터
-~~~
+    ~~~
 
-- [`editorShape`](/api/config/js_kanban_editorshape_config) 속성에서 "avatar"로 변경되었습니다 ("path" 대신):
+- Kanban의 [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성이 다음과 같이 변경되었습니다:
 
 ~~~jsx {8} title="v1.2 이전"
 {
-    type: "multiselect",
-    key: "users",
+    type: "multiselect", 
+    key: "users", 
     label: "Users",
     values: [
-        {
-            id: 1, label: "Alan",
-            path: "preview_image_path_1.png"
+        { 
+            id: 1, label: "Alan", 
+            path: "preview_image_path_1.png" 
         },
     ]
 },
-// 다른 필드 설정
+// 기타 필드 설정
 ~~~
 
 ~~~jsx {8} title="v1.2부터"
 {
-    type: "multiselect",
-    key: "users",
+    type: "multiselect", 
+    key: "users", 
     label: "Users",
     values: [
-        {
-            id: 1, label: "Alan",
-            avatar: "preview_image_path_1.png"
+        { 
+            id: 1, label: "Alan", 
+            avatar: "preview_image_path_1.png" 
         },
     ]
 },
-// 다른 필드 설정
+// 기타 필드 설정
 ~~~
 
-- Toolbar의 [`items`](/api/config/toolbar_items_config) 속성이 개선되었습니다:
+- Toolbar의 [`items`](api/config/toolbar_items_config.md) 속성이 다음과 같이 변경되었습니다:
 
 ~~~jsx {} title="v1.2 이전"
 items: [
@@ -739,7 +946,7 @@ items: [
 
 ~~~jsx {} title="v1.2부터"
 items: [
-    { // 또는 "search"
+    { // 또는 "search",
         type: "search",
         options: [
             {
@@ -757,7 +964,7 @@ items: [
         ]
     },
     "spacer",
-    { // 또는 "sort"
+    { // 또는 "sort",
         type: "sort",
         options: [
             {
@@ -771,7 +978,7 @@ items: [
                 dir: "desc"
             }
         ]
-    },
+    }, 
     "addColumn",
     "addRow"
 ]
@@ -779,7 +986,7 @@ items: [
 
 #### Methods
 
-- Kanban의 [`setLocale()`](/api/methods/js_kanban_setlocale_method) 및 Toolbar의 [`setLocale()`](/api/methods/toolbar_setlocale_method) 메서드가 약간 변경되었습니다:
+- Kanban의 [`setLocale()`](api/methods/js_kanban_setlocale_method.md) 및 Toolbar의 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {} title="v1.2 이전"
 setLocale(kanban.en); // 기본 로케일로 리셋
@@ -789,11 +996,11 @@ setLocale(kanban.en); // 기본 로케일로 리셋
 setLocale(null); // 기본 로케일로 리셋
 ~~~
 
-- Kanban의 [`api.getReactiveState()`](/api/internal/js_kanban_getreactivestate_method) 메서드가 더 많은 상태 속성을 반환합니다:
+- Kanban의 [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {} title="v1.2 이전"
 api.getReactiveState();
-// 반환되는 객체
+// 메서드는 다음 속성들을 포함한 객체를 반환합니다
 /*{
     dragItemId: {
         subscribe: any,
@@ -812,44 +1019,44 @@ api.getReactiveState();
 
 ~~~jsx {} title="v1.2부터"
 api.getReactiveState();
-// 반환되는 객체
+// 메서드는 다음 속성들을 포함한 객체를 반환합니다
 /*{
     areasMeta: {
         subscribe: any,
         update: any,
         set: any
     },
-    before: {...},
+    before: {...}, 
     cardShape: {...},
     cards: {...},
     cardsMap: {...},
     cardsMeta: {...},
     columnKey: {...},
     columns: {...},
-    dragItemId: {...},
-    dragItemsCoords: {...},
-    dropAreaItemsCoords: {...},
-    dropAreasCoords: {...},
+    dragItemId: {...}, 
+    dragItemsCoords: {...}, 
+    dropAreaItemsCoords: {...}, 
+    dropAreasCoords: {...}, 
     edit: {...},
     editorShape: {...},
     fromAreaMeta: {...},
-    overAreaId: {...},
+    overAreaId: {...}, 
     overAreaMeta: {...},
     readonly: {...},
     rowKey: {...},
     rows: {...},
     scroll: {...},
     search: {...},
-    selected: {...},
+    selected: {...}, 
     sort: {...}
 }*/
 ~~~
 
-- Kanban의 [`api.getState()`](/api/internal/js_kanban_getstate_method) 메서드가 더 상세한 상태 객체를 반환합니다:
+- Kanban의 [`api.getState()`](api/internal/js_kanban_getstate_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {} title="v1.2 이전"
 api.getState();
-// 반환되는 객체
+// 메서드는 다음 속성들을 포함한 객체를 반환합니다
 /*{
     dragItemId: string | number,
     before: string | number,
@@ -864,40 +1071,40 @@ api.getState();
 
 ~~~jsx {} title="v1.2부터"
 api.getState();
-// 반환되는 객체
+// 메서드는 다음 속성들을 포함한 객체를 반환합니다
 /*{
-    areasMeta: object,
-    before: string | number,
+    areasMeta: object, 
+    before: string | number, 
     cardShape: object,
     cards: array,
     cardsMap: object,
     cardsMeta: object,
     columnKey: string,
     columns: array,
-    dragItemId: string | number,
-    dragItemsCoords: array,
-    dropAreaItemsCoords: array,
-    dropAreasCoords: array,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
+    dropAreaItemsCoords: array, 
+    dropAreasCoords: array, 
     edit: object,
     editorShape: array,
     fromAreaMeta: object,
-    overAreaId: string | number,
+    overAreaId: string | number, 
     overAreaMeta: object,
     readonly: object,
     rowKey: string,
     rows: array,
     scroll: object,
     search: object,
-    selected: array,
+    selected: array, 
     sort: object
 }*/
 ~~~
 
-- Kanban의 [`api.getStores()`](/api/internal/js_kanban_getstores_method) 메서드는 오직 상태 저장소만 반환합니다:
+- Kanban의 [`api.getStores()`](api/internal/js_kanban_getstores_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {} title="v1.2 이전"
 api.getStores();
-// 반환되는 저장소 객체
+// 메서드는 다음 스토어 객체를 반환합니다
 /*{
     state: StateStore, // ( object )
     data: DataStore // ( object )
@@ -906,7 +1113,7 @@ api.getStores();
 
 ~~~jsx {} title="v1.2부터"
 api.getStores();
-// 반환되는 객체
+// 메서드는 다음 속성들을 포함한 객체를 반환합니다
 /*{
     state: StateStore, // ( object )
 }*/
@@ -995,7 +1202,7 @@ const en = {
 
 ~~~jsx {}
 const en = {
-    kanban: { // Kanban 레이블 번역
+    kanban: { // Kanban 라벨 번역
         "Save": "Save",
         "Close": "Close",
         "Delete": "Delete",
@@ -1033,7 +1240,7 @@ const en = {
     calendar: { // 캘린더 번역 및 설정
         monthFull: [
             "January", "February", "March", "April",
-            "May", "June", "July", "August",
+            "May", "June", "July", "August", 
             "September", "October", "November", "December"
         ],
         monthShort: [
@@ -1075,12 +1282,12 @@ const en = {
 
 #### Properties
 
-- [`columns`](/api/config/js_kanban_columns_config) 속성에 v1.1부터 ***collapsed, limit***, ***strictLimit*** 파라미터가 추가되었습니다.
+- [`columns`](api/config/js_kanban_columns_config.md) 속성이 신규 파라미터로 확장되었습니다. v1.1부터 ***collapsed, limit***, ***strictLimit*** 설정을 사용할 수 있습니다.
 
 ~~~jsx title="v1.1 이전"
 const columns = [
-    {
-        label: "Backlog",
+    { 
+        label: "Backlog", 
         id: "backlog"
     }, ...
 ];
@@ -1088,12 +1295,12 @@ const columns = [
 
 ~~~jsx {5-7,12} title="v1.1부터"
 const columns = [
-    {
-        label: "Backlog",
+    { 
+        label: "Backlog", 
         id: "backlog",
         collapsed: true,
         limit: 3,
-        strictLimit: true
+        strictLimit: true 
     }, ...
 ];
 
@@ -1103,7 +1310,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-- [`cardShape`](/api/config/js_kanban_cardshape_config)의 ***color*** 파라미터가 변경되었습니다.
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성의 ***color*** 파라미터가 변경되었습니다.
 
 ~~~jsx {4-7} title="v1.1 이전"
 const cardShape = {
@@ -1119,10 +1326,10 @@ const cardShape = {
 
 ~~~jsx {4,9} title="v1.1부터"
 const cardShape = {
-    color: {
+    color: { 
         show: true,
-        values: ["#65D3B3", "#FFC975", "#58C3FE"]
-    }
+        values: ["#65D3B3", "#FFC975", "#58C3FE"] 
+    } 
 };
 
 new kanban.Kanban("#root", {
@@ -1133,7 +1340,7 @@ new kanban.Kanban("#root", {
 
 #### Methods
 
-- [`addColumn`](/api/methods/js_kanban_addcolumn_method) 메서드와 [`add-column`](/api/events/js_kanban_addcolumn_event) 이벤트의 초기화 방식이 변경되었습니다:
+- [`addColumn`](api/methods/js_kanban_addcolumn_method.md) 메서드(및 [`add-column`](api/events/js_kanban_addcolumn_event.md) 이벤트)가 변경되었습니다:
 
 ~~~jsx {} title="v1.1 이전"
 addColumn(column_data_object);
@@ -1150,7 +1357,7 @@ addColumn({
 });
 ~~~
 
-- [`addRow`](/api/methods/js_kanban_addrow_method) 메서드와 [`add-row`](/api/events/js_kanban_addrow_event) 이벤트도 변경되었습니다:
+- [`addRow`](api/methods/js_kanban_addrow_method.md) 메서드(및 [`add-row`](api/events/js_kanban_addrow_event.md) 이벤트)가 변경되었습니다:
 
 ~~~jsx {} title="v1.1 이전"
 addRow(row_data_object);
@@ -1167,7 +1374,7 @@ addRow({
 });
 ~~~
 
-- [`updateColumn`](/api/methods/js_kanban_updatecolumn_method) 메서드와 [`update-column`](/api/events/js_kanban_updatecolumn_event) 이벤트 사용 방식이 변경되었습니다:
+- [`updateColumn`](api/methods/js_kanban_updatecolumn_method.md) 메서드(및 [`update-column`](api/events/js_kanban_updatecolumn_event.md) 이벤트)가 변경되었습니다:
 
 ~~~jsx {} title="v1.1 이전"
 updateColumn(column_data_object);
@@ -1184,7 +1391,7 @@ updateColumn({
 });
 ~~~
 
-- [`updateRow`](/api/methods/js_kanban_updaterow_method) 메서드와 [`update-row`](/api/events/js_kanban_updaterow_event) 이벤트도 변경되었습니다:
+- [`updateRow`](api/methods/js_kanban_updaterow_method.md) 메서드(및 [`update-row`](api/events/js_kanban_updaterow_event.md) 이벤트)가 변경되었습니다:
 
 ~~~jsx {} title="v1.1 이전"
 updateRow(row_data_object);
@@ -1201,7 +1408,7 @@ updateRow({
 });
 ~~~
 
-- [`updateCard`](/api/methods/js_kanban_updatecard_method) 메서드와 [`update-card`](/api/events/js_kanban_updatecard_event) 이벤트 사용 방식도 다음과 같이 변경되었습니다:
+- [`updateCard`](api/methods/js_kanban_updatecard_method.md) 메서드(및 [`update-card`](api/events/js_kanban_updatecard_event.md) 이벤트)가 변경되었습니다:
 
 ~~~jsx {} title="v1.1 이전"
 updateCard(card_data_object);
@@ -1218,10 +1425,10 @@ updateCard({
 });
 ~~~
 
-- [`parse`](/api/methods/js_kanban_parse_method) 메서드는 이제 초기 데이터를 리셋하지 않아도 동작합니다:
+- [`parse`](api/methods/js_kanban_parse_method.md) 메서드가 변경되었습니다:
 
 ~~~jsx {3-5,8-12} title="v1.1 이전"
-// 새 데이터를 파싱하기 전에 초기 데이터를 리셋해야 함
+// 새로운 데이터를 파싱하기 전에 초기 데이터를 리셋해야 합니다
 const board = new kanban.Kanban("#root", {
     columns: [],
     cards: [],
@@ -1236,7 +1443,7 @@ board.parse({
 ~~~
 
 ~~~jsx {} title="v1.1부터"
-// 새 데이터를 파싱하기 전에 초기 데이터를 리셋할 필요 없음
+// 새로운 데이터를 파싱하기 전에 초기 데이터를 리셋할 필요가 없습니다
 const board = new kanban.Kanban("#root", {});
 
 board.parse({

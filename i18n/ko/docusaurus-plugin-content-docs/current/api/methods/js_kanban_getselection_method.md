@@ -8,7 +8,7 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getSelection 
 
 ### 설명
 
-@short: 선택된 카드의 ID를 포함하는 배열을 반환합니다.
+@short: 선택된 카드의 ID를 배열로 가져옵니다.
 
 ### 사용법
 
@@ -18,7 +18,7 @@ getSelection(): array;
 
 ### 반환값
 
-이 메서드는 현재 선택된 카드들의 ID를 포함하는 배열을 반환합니다.
+선택된 카드의 ID가 담긴 배열을 반환합니다.
 
 ### 예제
 
@@ -28,6 +28,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 선택된 카드들의 ID 배열을 가져옵니다
+// 선택된 카드의 ID 배열을 가져옵니다.
 board.getSelection();
 ~~~

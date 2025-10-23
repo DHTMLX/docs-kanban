@@ -8,7 +8,7 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 parse 메서�
 
 ### 설명
 
-@short: Kanban 보드에 데이터를 로드합니다
+@short: 데이터를 Kanban으로 파싱합니다.
 
 ### 사용법
 
@@ -16,29 +16,32 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 parse 메서�
 parse({
     columns?: array,
     rows?: array,
-    cards?: array
+    cards?: array,
+    links?: array
 }): void;
 ~~~
 
 ### 매개변수
 
-- [`columns`](/api/config/js_kanban_columns_config.md) - (선택 사항) 컬럼 데이터 객체를 담은 배열
-- [`rows`](/api/config/js_kanban_rows_config.md) - (선택 사항) 행 데이터 객체를 담은 배열
-- [`cards`](/api/config/js_kanban_cards_config.md) - (선택 사항) 카드 데이터 객체를 담은 배열
+- [`columns`](api/config/js_kanban_columns_config.md) - (선택 사항) 열 데이터 객체들의 배열
+- [`rows`](api/config/js_kanban_rows_config.md) - (선택 사항) 행 데이터 객체들의 배열
+- [`cards`](api/config/js_kanban_cards_config.md) - (선택 사항) 카드 데이터 객체들의 배열
+- [`links`](api/config/js_kanban_links_config.md) - (선택 사항) 링크 데이터 객체들의 배열
 
 ### 예제
 
-~~~jsx {4-8}
+~~~jsx {4-9}
 // Kanban 생성
 const board = new kanban.Kanban("#root", {});
-// Kanban에 데이터 로드
+// 데이터를 Kanban으로 파싱
 board.parse({
     columns,
     cards,
-    rows
+    rows,
+    links
 });
 ~~~
 
-**변경 로그:** v1.1부터는 새 데이터를 파싱하기 전에 생성자에서 초기 데이터를 리셋할 필요가 없습니다
+**변경 로그:** v1.1 버전부터는 새 데이터를 파싱하기 전에 생성자에서 초기 데이터를 재설정할 필요가 없습니다.
 
-**관련 문서:** [데이터 작업하기](/guides/working_with_data#로컬-소스에서-데이터-불러오기)
+**관련 문서:** [데이터 작업하기](guides/working_with_data.md#loading-data-from-local-source)

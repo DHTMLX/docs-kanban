@@ -1,79 +1,79 @@
 ---
 sidebar_label: 구성
 title: 구성
-description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 구성 방법을 알아보세요. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 직접 사용해 보며, 30일 무료 평가판을 다운로드할 수 있습니다.
+description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 구성 방법을 확인할 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 직접 체험해보세요. DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
 ---
 
 # 구성
 
-*Kanban* 위젯은 API를 통해 외형과 기능을 모두 사용자 정의할 수 있습니다. 조정할 수 있는 다양한 옵션이 있으며, 예를 들어:
+*Kanban*의 외관과 기능은 관련 API를 통해 구성할 수 있습니다. 사용 가능한 파라미터를 통해 다음과 같은 작업이 가능합니다:
 
-- [`cardShape`](/api/config/js_kanban_cardshape_config.md) 속성으로 카드의 외형을 조정할 수 있습니다.
-- [`editorShape`](/api/config/js_kanban_editorshape_config.md) 속성으로 편집기 필드를 설정할 수 있습니다.
-- [`editor`](/api/config/js_kanban_editor_config.md) 속성으로 편집기의 동작을 제어할 수 있습니다.
-- [`renderType`](/api/config/js_kanban_rendertype_config.md) 및 [`scrollType`](/api/config/js_kanban_scrolltype_config.md)으로 렌더링 및 스크롤 방식을 관리할 수 있습니다.
-- [`history`](/api/config/js_kanban_history_config.md) 속성으로 변경 사항을 추적할 수 있습니다.
-- [`cardTemplate`](/api/config/js_kanban_cardtemplate_config.md) 속성으로 카드의 외형을 개별적으로 꾸밀 수 있습니다.
-    - *(자세한 내용은 [**Customization**](/guides/customization.md) 섹션을 참고하세요)*
-- [`locale`](/api/config/js_kanban_locale_config.md) 속성으로 언어를 변경할 수 있습니다.
-    - *(더 많은 정보는 [**Localization**](/guides/localization.md)에서 확인하세요)*
-- [`cards`](/api/config/js_kanban_cards_config.md), [`columns`](/api/config/js_kanban_columns_config.md), [`rows`](/api/config/js_kanban_rows_config.md), [`links`](/api/config/js_kanban_links_config.md) 속성으로 카드, 컬럼, 행, 링크 데이터를 불러올 수 있습니다.
-    - *(자세한 내용은 [**Working with data**](/guides/working_with_data.md)에서 확인하세요)*
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성으로 카드의 외관을 구성
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성으로 에디터 필드 구성
+- [`editor`](api/config/js_kanban_editor_config.md) 속성으로 에디터 동작 구성
+- [`renderType`](api/config/js_kanban_rendertype_config.md) 및 [`scrollType`](api/config/js_kanban_scrolltype_config.md) 속성으로 렌더링 및 스크롤 설정
+- [`history`](api/config/js_kanban_history_config.md) 속성으로 Kanban 기록 설정
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) 속성으로 카드 외관 커스터마이즈  
+    - 자세한 내용은 [**커스터마이징**](guides/customization.md) 섹션을 참고하세요!
+- [`locale`](api/config/js_kanban_locale_config.md) 속성으로 원하는 로케일 적용  
+    - 자세한 내용은 [**로컬라이제이션**](guides/localization.md) 섹션을 참고하세요!
+- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) 속성으로 카드, 컬럼, 행, 링크 데이터 로드  
+    - 자세한 내용은 [**데이터 작업**](guides/working_with_data.md) 섹션을 참고하세요!
 
 ## 카드
 
-Kanban에서 카드는 컬럼과 행으로 구성됩니다. [`cardShape`](/api/config/js_kanban_cardshape_config.md) 속성을 이용해 카드 외형과 표시 정보를 제어할 수 있습니다. 표시하거나 숨길 수 있는 여러 내장 필드가 있습니다:
+Kanban 보드는 *카드*가 *컬럼*과 *행*에 분배되어 구성됩니다. 카드의 외관은 [`cardShape`](api/config/js_kanban_cardshape_config.md) 구성 속성으로 설정할 수 있습니다. 카드 템플릿에 포함(또는 제외)할 수 있는 사전 정의 필드는 다음과 같습니다:
 
-- `label: boolean` 옵션으로 카드 라벨 표시
-- `description: boolean` 옵션으로 카드 설명 표시
+- `label: boolean` 설정으로 카드 레이블
+- `description: boolean` 설정으로 카드 설명
 
-:::tip
-**label**과 **description** 필드는 Kanban 편집기에서 수정할 수 있습니다. 활성화하면 해당 입력란이 자동으로 보입니다. 이 입력란은 [**text** 및 **textarea**](#text-textarea-타입) 타입으로 설정합니다.
-:::
+    :::tip
+    Kanban 에디터의 입력란을 통해 **label**과 **description** 필드를 관리할 수 있습니다. 해당 필드를 활성화하면 자동으로 에디터에 입력란이 표시됩니다. 이러한 입력란은 [**text** 및 **textarea**](#text-and-textarea-types) 타입으로 설정할 수 있습니다.
+    :::
 
-- `progress: boolean` 옵션으로 진행 바 표시
+- `progress: boolean` 설정으로 카드 진행률
 
-:::tip
-**progress** 필드 또한 Kanban 편집기에서 관리할 수 있습니다. 활성화하면 해당 컨트롤이 자동으로 보입니다. [**progress**](#progress-타입) 타입으로 설정합니다.
-:::
+    :::tip
+    **progress** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. 이 필드를 활성화하면 관련 컨트롤이 자동으로 에디터에 표시됩니다. 해당 컨트롤은 [**progress**](#progress-type) 타입으로 설정할 수 있습니다.
+    :::
 
-- `start_date: boolean`으로 시작일 표시
-- `end_date: boolean`으로 종료일 표시
+- `start_date: boolean` 설정으로 시작일
+- `end_date: boolean` 설정으로 종료일
 
-:::tip
-**start date**와 **end date**는 Kanban 편집기의 컨트롤로 관리됩니다. 활성화하면 해당 컨트롤이 자동으로 나타납니다. [**date**](#date-daterange-타입) 타입을 이용하세요.
-:::
+    :::tip
+    **start date**와 **end date** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. 필드를 활성화하면 관련 컨트롤이 자동으로 표시됩니다. 해당 컨트롤은 [**date**](#date-and-daterange-types) 타입으로 설정할 수 있습니다.
+    :::
 
-- `menu: boolean`으로 카드 컨텍스트 메뉴 표시
-- `attached: boolean`으로 첨부 파일 표시
+- `menu: boolean` 설정으로 카드 컨텍스트 메뉴
+- `attached: boolean` 설정으로 카드 첨부파일
 
-:::tip
-카드에 파일을 첨부하려면 Kanban 편집기의 [**files**](#files-타입) 타입을 이용하세요.
-:::
+    :::tip
+    Kanban 에디터의 해당 필드를 통해 **파일 첨부**가 가능합니다. 이 필드는 [**files**](#files-type) 타입으로 설정할 수 있습니다.
+    :::
 
-- `color: boolean`으로 카드 색상 표시
+- `color: boolean` 설정으로 카드 색상
 
-:::tip
-카드의 **상단 색상 라인**은 Kanban 편집기에서 컨트롤로 관리됩니다. **color**를 활성화하면 컬러 피커가 자동으로 표시됩니다. [**color**](#color-타입) 타입을 사용합니다.
-:::
+    :::tip
+    카드의 **상단 색상 라인**은 Kanban 에디터의 컨트롤로 관리할 수 있습니다. **color**를 활성화하면 관련 컨트롤(*colorpicker*)이 자동으로 에디터에 표시됩니다. 이 컨트롤은 [**color**](#color-type) 타입으로 설정할 수 있습니다.
+    :::
 
-- `cover: boolean`으로 카드 커버 이미지(미리보기) 표시
-- `comments: boolean`으로 카드 댓글 표시
-- `confirmDeletion: boolean`으로 카드 삭제 시 확인 대화상자 표시
-- `votes: boolean | { show: boolean, clicable: true }`로 카드 투표 표시
-- `users: boolean | { show: boolean, values: object, maxCount: number | false }`로 사용자 할당 표시
+- `cover: boolean` 설정으로 카드 커버(미리보기 이미지)
+- `comments: boolean` 설정으로 카드 댓글
+- `confirmDeletion: boolean` 설정으로 카드 삭제 확인 다이얼로그
+- `votes: boolean | { show: boolean, clicable: true }` 설정으로 카드 투표
+- `users: boolean | { show: boolean, values: object, maxCount: number | false }` 설정으로 카드 담당자(사용자) 지정
 
-:::tip
-카드에 사용자 할당은 Kanban 편집기의 컨트롤로 처리됩니다. 한 명만 지정하려면 [**combo** 또는 **select**](#combo-select-multiselect-타입) 타입을, 여러 명을 지정하려면 [**multiselect**](#combo-select-multiselect-타입) 타입을 사용하세요.
-:::
+    :::tip
+    Kanban 에디터의 컨트롤을 통해 한 명 또는 여러 명의 사용자를 카드에 할당할 수 있습니다. 단일 사용자 지정은 [**combo** 또는 **select**](#combo-select-and-multiselect-types) 타입, 복수 사용자 지정은 [**multiselect**](#combo-select-and-multiselect-types) 타입을 사용하세요.
+    :::
 
-- `priority: boolean | { show: boolean, values: object }`로 우선순위 필드 표시
+- `priority: boolean | { show: boolean, values: object }` 설정으로 카드 우선순위
 
-:::tip
-카드 **priority**는 Kanban 편집기에서 컨트롤로 설정할 수 있습니다. 활성화하면 자동으로 컨트롤이 표시됩니다. [**combo** 또는 **select**](#combo-select-multiselect-타입) 타입만 사용됩니다.
-:::
+    :::tip
+    **priority** 필드는 Kanban 에디터의 컨트롤로 관리할 수 있습니다. **priority**를 활성화하면 관련 컨트롤이 자동으로 표시됩니다. 이 컨트롤은 [**combo** 또는 **select**](#combo-select-and-multiselect-types) 타입만 사용할 수 있습니다.
+    :::
 
-- *커스텀 필드*는 `headerFields: [ { key: string, label: string, css: string } ]`에 추가할 수 있습니다.
+- *커스텀 필드*는 `headerFields: [ { key: string, label: string, css: string } ]` 설정으로 추가
 
 ~~~jsx {12-35,42}
 const users = [ // 사용자 데이터
@@ -122,36 +122,36 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-[`cardShape`](/api/config/js_kanban_cardshape_config.md)로 별도 카드 설정을 지정하지 않으면, Kanban은 [**defaultCardShape**](/api/config/js_kanban_cardshape_config.md#기본-구성) 설정을 사용합니다!
+[`cardShape`](api/config/js_kanban_cardshape_config.md) 속성으로 카드 설정을 지정하지 않으면, 위젯은 [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) 파라미터 세트를 적용합니다!
 :::
 
-## 편집기
+## 에디터
 
 :::info
-[`editor.placement`](/api/config/js_kanban_editor_config.md) 속성으로 편집기를 **사이드바** 또는 **모달 창**으로 띄울 수 있습니다!
+[`editor.placement`](api/config/js_kanban_editor_config.md) 속성으로 에디터를 **사이드바** 또는 **모달 창**으로 표시할 수 있습니다!
 :::
 
-Kanban *Editor*는 카드의 세부 정보를 관리하는 곳입니다. [`editorShape`](/api/config/js_kanban_editorshape_config.md) 속성을 사용하여 편집기에 표시할 필드들을 설정할 수 있습니다. 사용 가능한 필드 타입은 다음과 같습니다:
+Kanban의 *에디터*는 카드 데이터 관리를 위한 필드로 구성되어 있습니다. 에디터 필드(컨트롤)는 [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성으로 설정할 수 있습니다. 사용할 수 있는 에디터 필드 타입은 다음과 같습니다:
 
-- [**combo**, **select**, **multiselect**](#combo-select-multiselect-타입)
-- [**color**](#color-타입)
-- [**text**, **textarea**](#text-textarea-타입)
-- [**progress**](#progress-타입)
-- [**files**](#files-타입)
-- [**date**, **dataRange**](#date-daterange-타입)
-- [**comments**](#comments-타입)
-- [**links**](#links-타입)
+- [**combo**, **select**, **multiselect**](#combo-select-and-multiselect-types)
+- [**color**](#color-type)
+- [**text**, **textarea**](#text-and-textarea-types)
+- [**progress**](#progress-type)
+- [**files**](#files-type)
+- [**date**, **dataRange**](#date-and-daterange-types)
+- [**comments**](#comments-type)
+- [**links**](#links-type)
 
 ### Combo, Select, Multiselect 타입
 
-이 타입의 편집기 필드는 다음과 같이 설정합니다:
+**combo**, **select**, **multiselect** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "combo", // 또는 "select", "multiselect"
-            key: "priority", // "cardShape" 속성 설정 시 사용하는 "priority" 키
+            key: "priority", // "cardShape" 속성에서 사용하는 "priority" 키
             label: "Priority",
             values: [
                 { id: 1, label: "high" },
@@ -165,22 +165,22 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::info
-**"multiselect"**와 **"combo"** 타입의 편집기 필드는 **avatar** 속성을 추가하여 미리보기 이미지를 표시할 수 있습니다:
+**"multiselect"** 및 **"combo"** 타입의 에디터 필드는 **avatar** 속성으로 미리보기 이미지 경로를 지정할 수 있습니다:
 
 ~~~jsx {3,9,13}
 editorShape: [
     {
         type: "multiselect", // 또는 "combo"
-        key: "users", // "cardShape" 속성 설정 시 사용하는 "users" 키
+        key: "users", // "cardShape" 속성에서 사용하는 "users" 키
         label: "Users",
         values: [
-            {
-                id: 1, label: "Alan",
-                avatar: "preview_image_path_1.png"
+            { 
+                id: 1, label: "Alan", 
+                avatar: "preview_image_path_1.png" 
             },
-            {
-                id: 2, label: "John",
-                avatar: "preview_image_path_2.png"
+            { 
+                id: 2, label: "John", 
+                avatar: "preview_image_path_2.png" 
             }
         ]
     },
@@ -193,14 +193,14 @@ editorShape: [
 
 ### Color 타입
 
-편집기에 컬러 피커를 추가하려면 다음과 같이 설정하세요:
+**color** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "color",
-            key: "color", // "cardShape" 속성 설정 시 사용하는 "color" 키
+            type: "color", 
+            key: "color", // "cardShape" 속성에서 사용하는 "color" 키
             label: "Card color",
             values: ["#65D3B3", "#FFC975", "#58C3FE"],
             config: {
@@ -215,7 +215,7 @@ new kanban.Kanban("#root", {
 
 ### Text, Textarea 타입
 
-텍스트 입력 또는 여러 줄 입력란을 추가하려면 다음과 같이 합니다:
+**text**, **textarea** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-14}
 new kanban.Kanban("#root", {
@@ -225,8 +225,8 @@ new kanban.Kanban("#root", {
             key: "label",
             label: "Label",
             config: {
-                placeholder: "Type your tips here",
-                readonly: false,
+                placeholder: "Type your tips here", 
+                readonly: false, 
                 focus: true,
                 disabled: false,
                 inputStyle: "height: 50px;"
@@ -239,14 +239,14 @@ new kanban.Kanban("#root", {
 
 ### Progress 타입
 
-진행 바를 편집기에 추가하려면 다음과 같이 설정합니다:
+**progress** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "progress",
-            key: "progress", // "cardShape" 속성 설정 시 사용하는 "progress" 키
+            type: "progress", 
+            key: "progress", // "cardShape" 속성에서 사용하는 "progress" 키
             label: "Progress",
             config: {
                 min: 10,
@@ -261,19 +261,19 @@ new kanban.Kanban("#root", {
 
 ### Files 타입
 
-편집기에서 파일 업로드를 설정하는 방법은 두 가지입니다:
+**files** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
-#### 업로드 URL을 문자열로 지정
+#### 문자열로 업로드 URL 설정
 
 ~~~jsx {4-15}
 const url = "https://docs.dhtmlx.com/kanban-backend";
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "files",
-            key: "attached", // "cardShape" 속성 설정 시 사용하는 "attached" 키
+            type: "files", 
+            key: "attached", // "cardShape" 속성에서 사용하는 "attached" 키
             label: "Attachment",
-            uploadURL: url + "/uploads", // URL을 문자열로 지정
+            uploadURL: url + "/uploads", // 문자열로 URL 지정
             config: {
                 accept: "image/*", // "video/*", "audio/*"
                 disabled: false,
@@ -286,7 +286,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-#### 업로드 URL을 함수로 지정
+#### 함수로 업로드 URL 설정
 
 ~~~jsx {9-31}
 const url = "https://docs.dhtmlx.com/kanban-backend";
@@ -305,11 +305,11 @@ new kanban.Kanban("#root", {
                     method: "POST",
                     body: formData,
                     headers: {
-                        'Authorization': 'Bearer ' + token  // 토큰 또는 다른 헤더
+                        'Authorization': 'Bearer ' + token  // 토큰 또는 기타 헤더
                     }
                 };
 
-                return fetch(url + "/uploads", config)
+                return fetch(url + "/uploads", config) // URL
                     .then(res => res.json())
                     .then(
                         data => {
@@ -327,13 +327,13 @@ new kanban.Kanban("#root", {
 
 ### Date, DateRange 타입
 
-날짜 선택기나 날짜 범위를 추가하려면 다음과 같이 합니다:
+**date** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-8}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "date",
+            type: "date", 
             key: "start_date",
             label: "Start date",
             format: "%d/%m/%y"
@@ -343,13 +343,13 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-날짜 범위의 경우:
+**dateRange** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-11}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "dateRange",
+            type: "dateRange", 
             key: {
                 start: "start_date",
                 end: "end_date"
@@ -364,7 +364,7 @@ new kanban.Kanban("#root", {
 
 ### Comments 타입
 
-편집기에 댓글 필드를 추가하려면 다음과 같이 하세요:
+**comments** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-13}
 new kanban.Kanban("#root", {
@@ -387,7 +387,7 @@ new kanban.Kanban("#root", {
 
 ### Links 타입
 
-편집기에서 링크 추가를 허용하려면 다음과 같이 설정하세요:
+**links** 타입의 에디터 필드는 다음과 같이 설정할 수 있습니다:
 
 ~~~jsx {3-10}
 new kanban.Kanban("#root", {
@@ -405,15 +405,15 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### 편집기 필드와 카드 필드 연결하기
+### 에디터 필드와 카드 필드 바인딩
 
 :::info
-편집기 필드를 카드 필드와 연결하려면 [`editorShape`](/api/config/js_kanban_editorshape_config.md) 객체에 **key**를 지정하세요 (`key: "editor_field_key"`). 내장 카드 필드는 [`cardShape`](/api/config/js_kanban_cardshape_config.md)에서 해당 key를 *true*로 설정해야 합니다. 커스텀 필드는 **headerFields** 배열에 추가하세요. 어떤 필드든 key로 초기값을 설정할 수 있습니다.
+에디터 필드를 해당 카드 필드에 연결하려면, [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성 객체에 **key**를 지정해야 합니다 (`key: "editor_field_key"`). 이 키의 값은 [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성(내장 카드 필드의 경우)에서 *true*로 설정하거나, (커스텀 카드 필드의 경우) **headerFields** 배열에 명시해야 합니다. 해당 키를 통해 각 필드의 초기 데이터도 제공할 수 있습니다.
 
 ~~~jsx {5,13,22,25,33-34,38-39,45-47}
-// 편집기 설정
-const editorShape = [
-    {
+// 에디터 설정
+const editorShape = [ 
+    { 
         type: "text",
         key: "label",
         label: "Label",
@@ -421,7 +421,7 @@ const editorShape = [
             placeholder: "Enter new label here"
         }
     },
-    {
+    { 
         type: "textarea",
         key: "note",
         label: "Note",
@@ -432,10 +432,10 @@ const editorShape = [
 ];
 // 카드 설정
 const cardShape = {
-    label: true, // 내장 필드의 key
+    label: true, // 내장 필드 키
     headerFields: [
         {
-            key: "note", // 커스텀 필드의 key
+            key: "note", // 커스텀 필드 키
             label: "Note"
         }
     ]
@@ -465,15 +465,15 @@ new kanban.Kanban("#root", {
 :::
 
 :::note
-[`editorShape`](/api/config/js_kanban_editorshape_config.md)를 통해 별도의 편집기 설정을 지정하지 않으면, 위젯은 [**defaultEditorShape**](/api/config/js_kanban_editorshape_config.md#기본-구성)를 사용합니다. 이 경우 [`cardShape`](/api/config/js_kanban_cardshape_config.md)에서 해당 카드 필드를 활성화해야만 관련 입력란과 컨트롤이 표시됩니다.
+[`editorShape`](api/config/js_kanban_editorshape_config.md) 속성으로 에디터 설정을 지정하지 않으면, 위젯은 [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) 파라미터 세트를 적용합니다. 이 경우, [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성으로 카드 필드를 활성화한 후에만 에디터에 기본 컨트롤과 입력란이 표시됩니다.
 :::
 
-### 편집기 동작 설정
+### 에디터 설정
 
-[`editor`](/api/config/js_kanban_editor_config.md) 속성으로 편집기의 동작을 세부 조정할 수 있습니다.
+[`editor`](api/config/js_kanban_editor_config.md) 속성을 사용하여 에디터를 다음과 같이 설정할 수 있습니다:
 
-- *`editor.autoSave`*로 자동 저장을 켜거나 끌 수 있습니다.
-- *`editor.debounce`*로 자동 저장의 딜레이를 설정할 수 있습니다(***autoSave: true***일 때만 동작).
+- *`editor.autoSave`* 속성으로 에디터의 자동 저장 모드 활성화/비활성화
+- *`editor.debounce`* 속성으로 자동 저장 지연 시간 지정(***autoSave: true*** 파라미터에서만 동작)
 
 ~~~jsx {6-9}
 // Kanban 생성
@@ -491,7 +491,7 @@ new kanban.Kanban("#root", {
 
 ## 툴바
 
-Kanban **Toolbar**에는 카드 검색, 정렬, 새 컬럼 또는 행 추가 버튼이 포함되어 있습니다. Toolbar를 사용하려면 **kanban.Toolbar()**로 별도의 컨테이너에 초기화하세요.
+Kanban의 **툴바**는 *카드 검색*을 위한 검색창, *카드 정렬* 및 *새 컬럼/행 추가* 컨트롤로 구성됩니다. 툴바를 표시하려면 **kanban.Toolbar()** 생성자를 사용해 별도의 컨테이너에서 초기화해야 합니다.
 
 ~~~jsx {13}
 // Kanban 생성
@@ -502,14 +502,14 @@ const board = new kanban.Kanban("#root", {
     rows,
     // 카드 설정
     cardShape,
-    // 편집기 설정
+    // 에디터 설정
     editorShape
 });
 
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-툴바의 컨트롤들은 **items** 속성으로 표시, 숨김, 커스터마이즈가 가능합니다:
+**items** 속성으로 툴바의 컨트롤을 관리(숨김/노출/커스터마이즈)할 수 있습니다:
 
 ~~~jsx {6-51}
 // Kanban 생성
@@ -542,8 +542,8 @@ new kanban.Toolbar("#toolbar", {
             })
         },
         "spacer", // 빈 공간
-        "undo", // 카드 작업 히스토리 취소
-        "redo", // 카드 작업 히스토리 재실행
+        "undo", // 기록에서 카드 작업 실행 취소
+        "redo", // 기록에서 카드 작업 다시 실행
         { // 커스텀 정렬 컨트롤
             type: "sort",
             options: [
@@ -567,11 +567,11 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 :::tip
-툴바에서 일부 컨트롤을 숨기고 싶으면 **items** 배열에서 해당 문자열을 제거하세요.
+툴바의 일부 컨트롤을 숨기려면 **items** 배열에서 해당 문자열을 제거하면 됩니다.
 :::
 
 ## 예제
 
-**Cards**, **Editor**, **Toolbar**를 Kanban에 설정하는 예시입니다:
+이 스니펫에서는 Kanban의 **카드**, **에디터** 및 **툴바**를 구성하는 방법을 확인할 수 있습니다:
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

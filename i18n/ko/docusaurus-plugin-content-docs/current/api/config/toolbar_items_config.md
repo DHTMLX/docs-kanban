@@ -1,14 +1,14 @@
 ---
 sidebar_label: items
 title: items 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 (Toolbar) items 구성에 대해 살펴보세요. 개발자 가이드, API 참조, 코드 예제, 라이브 데모를 확인하고 DHTMLX Kanban의 30일 무료 체험판을 다운로드하세요.
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 (Toolbar) items 구성에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
 ---
 
 # items
 
 ### 설명
 
-@short: 선택 사항입니다. Kanban Toolbar에 배치된 컨트롤이 담긴 배열입니다.
+@short: 선택 사항입니다. Kanban의 Toolbar에 배치된 컨트롤 배열입니다.
 
 ### 사용법
 
@@ -52,41 +52,41 @@ items?: [
 
 ### 매개변수
 
-**items** 배열에는 다음 매개변수를 포함할 수 있습니다:
+**items** 배열에서 다음 매개변수를 지정할 수 있습니다:
 
 :::info
-#### *기본 검색 바*를 추가하려면 문자열 `"search"`를 사용하세요.
-#### *맞춤 검색 바*를 설정하려면 다음 매개변수를 가진 객체를 제공하세요:
+#### *기본 검색바*를 설정하려면 `"search"` 문자열을 지정할 수 있습니다.
+#### *사용자 정의 검색바*를 설정하려면 다음 매개변수를 포함하는 객체를 지정할 수 있습니다:
 
-- `type` - (필수) 컨트롤 유형 지정 (*"search"*)
-- `options` - (선택) 검색 매개변수를 정의하는 배열. 각 객체(*검색 옵션*)는 다음을 포함할 수 있습니다:
-    - `id` - (필수) 검색에 사용되는 카드 필드 키
-    - `label` - (필수) 검색 바 드롭다운에 표시되는 옵션 이름
-    - `searchRule` (선택) - 검색 기준을 정의하는 맞춤 함수. 다음 인자를 받습니다:
+- `type` - (필수) 컨트롤 유형 (*"search"*)
+- `options` - (선택) 검색 매개변수를 정의하는 객체 배열입니다. 각 객체(*검색 옵션*)에 대해 다음 매개변수를 지정할 수 있습니다:
+    - `id` - (필수) 카드 필드의 키로, 이 키를 기준으로 카드가 검색됩니다.
+    - `label` - (필수) 검색바 선택기의 드롭다운 목록에 사용되는 옵션 이름입니다.
+    - `searchRule` (선택) - 검색 규칙을 정의하는 사용자 정의 함수입니다. 다음 인수를 받습니다:
         - ***card*** - 카드 데이터 객체
-        - ***value*** - 검색 입력값
-        - ***by*** - 검색에 사용되는 카드 필드 키
-- `searchResult` - (선택) 검색 결과 표시 방식을 맞춤화하는 템플릿
+        - ***value*** - 검색바에 입력된 검색 값
+        - ***by*** - 카드가 검색될 카드 필드 키
+- `searchResult` - (선택) 사용자 정의 검색 결과를 표시하기 위한 템플릿
 
 ~~~jsx
 items: [
-    "search", // 기본 검색 바
-    // 다른 컨트롤
+    "search", // 기본 검색바
+    // 기타 컨트롤
 ]
 
-// 또는
+// 또는 
 
 items: [
-    { // 맞춤 검색 바
+    { // 사용자 정의 검색바
         type: "search",
         options: [
             {
                 id: "label",
-                label: "라벨별"
+                label: "라벨로 검색"
             },
             {
                 id: "start_date",
-                label: "날짜별",
+                label: "날짜로 검색",
                 searchRule: (card, value, by) => {
                     const date = card[by];
                     return date?.toString().includes(value);
@@ -100,53 +100,53 @@ items: [
             </div>`
         })
     },
-    // 다른 컨트롤
+    // 기타 컨트롤
 ]
 ~~~
 :::
 
 :::info
-#### *기본 정렬 컨트롤*을 추가하려면 문자열 `"sort"`를 사용하세요.
-#### *맞춤 정렬 컨트롤*을 설정하려면 다음 매개변수를 가진 객체를 제공하세요:
+#### *기본 정렬 컨트롤*을 설정하려면 `"sort"` 문자열을 지정할 수 있습니다.
+#### *사용자 정의 정렬 컨트롤*을 설정하려면 다음 매개변수를 포함하는 객체를 지정할 수 있습니다:
 
-- `type` - (필수) 컨트롤 유형 지정 (*"sort"*)
-- `options` - (선택) 정렬 매개변수를 정의하는 배열. 각 객체(*정렬 옵션*)는 다음을 포함할 수 있습니다:
-    - `text` - (필수) 정렬 드롭다운에 표시되는 옵션 이름
-    - `by` - (선택) 정렬에 사용되는 카드 필드 키 또는 함수
-    - `dir` - (선택) 정렬 방향, *"asc"* 또는 *"desc"*
+- `type` - (필수) 컨트롤 유형 (*"sort"*)
+- `options` - (선택) 정렬 매개변수를 정의하는 객체 배열입니다. 각 객체(*정렬 옵션*)에 대해 다음 매개변수를 지정할 수 있습니다:
+    - `text` - (필수) 정렬 선택기 드롭다운 목록에 사용되는 옵션 이름입니다.
+    - `by` - (선택) 카드를 정렬할 카드 필드의 키입니다. 이 매개변수는 *문자열* 또는 *함수* 값으로 설정할 수 있습니다. 함수는 정렬에 사용할 카드 필드를 반환해야 합니다.
+    - `dir` - (선택) 정렬 순서입니다. 가능한 값은 *"asc"* 와 *"desc"* 입니다.
 
 ~~~jsx
 items: [
     "sort", // 기본 정렬 컨트롤
-    // 다른 컨트롤
+    // 기타 컨트롤
 ]
-// 또는
+// 또는 
 items: [
-    { // 맞춤 정렬 컨트롤
+    { // 사용자 정의 정렬 컨트롤
         type: "sort",
         options: [
             {
-                text: "라벨별 정렬",
+                text: "라벨로 정렬",
                 by: "label",
                 dir: "asc"
             },
             {
-                text: "설명별 정렬",
+                text: "설명으로 정렬",
                 by: "description",
                 dir: "desc"
             }
         ]
-    }, {...} // 다른 컨트롤
+    }, {...} // 기타 컨트롤
 ]
 ~~~
 :::
 
-- `"spacer"` - 컨트롤 사이에 빈 공간을 삽입합니다
-- `"undo"` - 실행 취소 컨트롤 (한 번 클릭 시 이전 단계로 이동)
-- `"redo"` - 다시 실행 컨트롤 (한 번 클릭 시 다음 단계로 이동)
+- `"spacer"` - 컨트롤 사이의 빈 공간
+- `"undo"` - 히스토리 관리 컨트롤 (한 번 클릭 시 한 단계 이전으로 이동)
+- `"redo"` - 히스토리 관리 컨트롤 (한 번 클릭 시 한 단계 이후로 이동)
 - `"addColumn"` - 새 열 추가 컨트롤
 - `"addRow"` - 새 행 추가 컨트롤
-- `custom_control` - (선택) 문자열 또는 함수 형태의 맞춤 컨트롤입니다. 자세한 내용은 [Customization](/guides/customization#사용자-정의-툴바) 섹션을 참고하세요.
+- `custom_control` - (선택) 사용자 정의 컨트롤. 여기에는 **문자열** 또는 **함수** 형태로 사용자 정의 컨트롤을 지정할 수 있습니다. 자세한 내용은 [Customization](guides/customization.md#custom-toolbar) 섹션을 참조하세요.
 
 ### 예제
 
@@ -180,11 +180,11 @@ new kanban.Toolbar("#toolbar", {
 
 **변경 내역:**
 
-- *"Undo"* 및 *"Redo"* 컨트롤은 v1.3에 도입되었습니다.
-- **sort** 컨트롤의 ***items.options[0].label*** 매개변수가 v1.4에서 ***items.options[0].text***로 이름이 변경되었습니다.
+- *"Undo"* 및 *"Redo"* 컨트롤이 v1.3에 추가되었습니다.
+- **sort** 컨트롤의 ***items.options[0].label*** 매개변수가 v1.4에서 ***items.options[0].text*** 매개변수로 변경되었습니다.
 - **"search"** 컨트롤의 ***items.searchResult*** 매개변수가 v1.6에 추가되었습니다.
 
-**관련 문서:** [Configuration](/guides/configuration#툴바) 및 [Customization](/guides/customization#사용자-정의-툴바)
+**관련 문서:** [구성](guides/configuration.md#toolbar) 및 [커스터마이징](guides/customization.md#custom-toolbar)
 
 **관련 샘플:**
 - [Kanban. Custom toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

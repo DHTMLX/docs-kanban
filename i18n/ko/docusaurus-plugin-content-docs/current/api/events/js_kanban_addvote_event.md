@@ -1,14 +1,14 @@
 ---
 sidebar_label: add-vote
 title: add-vote 이벤트
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 add-vote 이벤트에 대해 알아보세요. 개발자 가이드와 API 참조 문서를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 add-vote 이벤트에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
 ---
 
 # add-vote
 
 ### 설명
 
-@short: 사용자가 새 투표를 추가할 때마다 발생합니다.
+@short: 사용자가 새 투표를 추가할 때 발생합니다.
 
 ### 사용법
 
@@ -21,13 +21,13 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 add-vote 이�
 
 ### 매개변수
 
-**add-vote** 이벤트의 콜백은 다음 속성을 포함하는 객체를 받습니다:
+**add-vote** 이벤트의 콜백은 다음 매개변수를 포함하는 객체를 받을 수 있습니다:
 
-- `cardId` - (필수) 투표가 추가되는 카드의 ID
-- `skipProvider` - (선택) 서버 요청을 건너뛸지 여부를 제어
+- `cardId` - (필수) 투표가 추가될 카드의 ID
+- `skipProvider` - (선택) 서버로 요청이 전송되는 것을 방지할지 여부를 활성화/비활성화
 
 :::info
-내부 이벤트와 작업하려면 [**Event Bus methods**](/api/overview/main_overview.md/#이벤트-버스-메서드)를 참조하세요.
+내부 이벤트 처리를 위해 [**Event Bus methods**](api/overview/main_overview.md/#event-bus-methods)를 사용할 수 있습니다.
 :::
 
 ### 예제
@@ -38,10 +38,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// "add-vote" 이벤트를 청취
+// "add-vote" 이벤트 구독
 board.api.on("add-vote", (obj) => {
     console.log(obj.cardId);
 });
 ~~~
 
-**변경 로그:** 이 이벤트는 v1.4에서 도입되었습니다.
+**변경 로그:** 이 이벤트는 v1.4에 추가되었습니다.

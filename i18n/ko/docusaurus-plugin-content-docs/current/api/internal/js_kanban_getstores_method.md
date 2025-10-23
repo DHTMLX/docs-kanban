@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.getStores()
 title: getStores 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getStores 메서드에 대해 알아보세요. 개발자 가이드 및 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해 보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getStores 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
 ---
 
 # api.getStores()
 
 ### 설명
 
-@short: Kanban의 DataStore 속성을 포함하는 객체를 반환합니다.
+@short: Kanban의 DataStore 속성을 가진 객체를 가져옵니다.
 
 ### 사용법
 
@@ -39,4 +39,4 @@ const store = board.api.getStores();
 console.log(store);
 ~~~
 
-**변경 기록:** 이 메서드는 v1.2에서 업데이트되었습니다.
+**변경 로그:** 이 메서드는 v1.2에서 업데이트되었습니다.

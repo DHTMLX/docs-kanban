@@ -1,14 +1,14 @@
 ---
 sidebar_label: rows
-title: rows 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 rows 구성에 대해 알아보세요. 개발자 가이드, API 참조, 코드 샘플과 라이브 데모를 확인하고 DHTMLX Kanban의 무료 30일 체험판을 이용해 보세요.
+title: rows 설정
+description: DHTMLX JavaScript Kanban 라이브러리의 rows 설정에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
 ---
 
 # rows
 
 ### 설명
 
-@short: 선택 사항입니다. 행(스윔레인) 데이터를 담는 객체 배열입니다.
+@short: 선택 사항입니다. 행(스윔레인) 데이터를 포함하는 객체 배열입니다.
 
 ### 사용법
 
@@ -24,20 +24,20 @@ rows?: [
 ~~~
 
 :::info
-스윔레인을 설정하려면 **rows** 배열에 해당 데이터를 제공합니다. 스윔레인은 UI를 통해서나 [관련 API](/howtos/#행스윔레인-작업-방법)를 사용하여 접기/펼치기, 이름 변경, 삭제, 이동할 수 있습니다.
+스윔레인을 생성하려면 **rows** 속성 배열에 해당 데이터를 지정해야 합니다. UI를 통해 또는 [관련 API](howtos.md#how-to-work-with-rows-swimlanes)를 사용하여 스윔레인을 접거나 펼치고, 이름을 변경하고, 삭제하거나 이동할 수 있습니다.
 :::
 
 ### 매개변수
 
-각 행(스윔레인)은 다음 매개변수를 포함할 수 있습니다:
+각 행(스윔레인)에 대해 다음 매개변수(데이터)를 지정할 수 있습니다:
 
-- `id` - (필수) 행(스윔레인) 메서드로 행을 제어할 때 사용하는 **ID**
-- `label` - (선택) 행(스윔레인)에 표시되는 레이블
-- `collapsed` - (선택) 행(스윔레인)이 처음에 접혀 있는지 여부를 나타냅니다. ***true***면 처음에 접혀 있으며 기본값은 ***false*** (펼쳐짐)입니다.
-- `css` - (선택) 개별 행에 적용할 CSS 스타일
+- `id` - (필수) 행(스윔레인)의 **ID**입니다. 해당 메서드를 통해 행을 관리할 때 사용됩니다.
+- `label` - (선택 사항) 행(스윔레인) 레이블입니다. 행 섹션에 표시됩니다.
+- `collapsed` - (선택 사항) 행(스윔레인)의 현재 상태입니다. ***true***인 경우, 행이 처음에 접혀 있습니다. 기본값은 ***false*** (펼쳐진 상태)입니다.
+- `css` - (선택 사항) 개별 행에 적용할 CSS 스타일을 정의합니다.
 
 :::info
-새로운 행(스윔레인) 데이터를 동적으로 불러오려면 [**parse()**](../../methods/js_kanban_parse_method) 메서드를 사용할 수 있습니다.
+행(스윔레인)의 새 데이터를 동적으로 로드하려면 [**parse()**](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다!
 :::
 
 ### 예제
@@ -56,10 +56,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 내역:** ***css*** 매개변수는 v1.4에서 도입되었습니다.
+**변경 내역:** ***css*** 매개변수는 v1.4에서 추가되었습니다.
 
 **관련 문서:**
-- [데이터 작업하기](/guides/working_with_data)
-- [updateRow()](/api/methods/js_kanban_updaterow_method.md)
+- [데이터 작업하기](guides/working_with_data.md)
+- [updateRow()](api/methods/js_kanban_updaterow_method.md)
 
 **관련 샘플:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

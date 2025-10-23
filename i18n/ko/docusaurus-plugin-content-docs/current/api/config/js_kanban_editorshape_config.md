@@ -1,14 +1,14 @@
 ---
 sidebar_label: editorShape
 title: editorShape 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 editorShape 구성을 살펴보세요. 개발자 가이드, API 참조, 코드 예제, 라이브 데모를 찾고 DHTMLX Kanban의 30일 무료 체험을 받으세요.
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 editorShape 구성을 학습할 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제 및 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
 ---
 
 # editorShape
 
 ### 설명
 
-@short: 선택 사항입니다. 칸반 에디터의 모양과 동작을 제어하는 설정을 정의하는 객체 배열입니다.
+@short: 선택 사항입니다. Kanban 편집기의 외관과 기능을 관리하는 설정이 포함된 객체 배열입니다.
 
 ### 사용법
 
@@ -16,10 +16,10 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 editorShape �
 editorShape?: [
     {
         // 모든 유형에 공통적인 매개변수
-        type: string,
-        key: string,
-        label?: string,
-
+        type: string, 
+        key: string, 
+        label?: string, 
+        
         // "dateRange" 유형에만 해당
         key: {
             start: string,
@@ -52,10 +52,10 @@ editorShape?: [
             placeholder?: string,
             title?: string,
             width?: string
-        },
+        }, 
 
-        // "color" 유형에만 해당
-        values?: array,
+        // "color" 유형에만 해당 
+        values?: array, 
         config?: {
             clear?: boolean,
             disabled?: boolean,
@@ -65,16 +65,16 @@ editorShape?: [
         },
 
         // "combo", "select", "multiselect" 유형에만 해당
-        values?: [
+        values?: [ 
             {
                 id: string | number,
                 label: string,
                 avatar?: string // "multiselect" 유형에만 해당
             },
-            {...} // 기타 옵션들
+            {...} // 기타 옵션
         ],
         config?: {
-            clearButton?: boolean, // "combo" 유형에만 해당
+            clear?: boolean, // "combo" 및 "color" 유형에만 해당
             label?: string, // "select" 유형에만 해당
             checkboxes?: boolean, // "multiselect" 유형에만 해당
             // 공통 매개변수
@@ -100,7 +100,7 @@ editorShape?: [
             type?: string
         },
 
-        // "textarea" 유형에만 해당
+        // "textarea" 유형에만 해당 
         config? {
             disabled?: boolean,
             error?: boolean,
@@ -109,7 +109,7 @@ editorShape?: [
             readonly?: boolean
         },
 
-        // "progress" 유형에만 해당
+        // "progress" 유형에만 해당 
         config?: {
             disabled?: boolean,
             label?: string,
@@ -119,8 +119,8 @@ editorShape?: [
             title?: string,
             width?: number
         },
-
-        // "files" 유형에만 해당
+        
+        // "files" 유형에만 해당 
         uploadURL?: string | function,
         config?: {
             accept?: string,
@@ -129,7 +129,7 @@ editorShape?: [
             folder?: boolean,
         },
 
-        // "comments" 유형에만 해당
+        // "comments" 유형에만 해당 
         config?: {
             format?: string,
             placement?: "page" | "editor",
@@ -137,31 +137,31 @@ editorShape?: [
             confirmDeletion?: boolean
         },
 
-        // "links" 유형에만 해당
+        // "links" 유형에만 해당 
         config?: {
             confirmDeletion?: boolean
         },
-    }, { /* 다른 컨트롤 설정들 */ }
+    }, { /* 기타 컨트롤 설정 */ }
 ];
 ~~~
 
 ### 매개변수
 
-에디터의 외관과 기능은 다음 매개변수(필드)를 설정하여 사용자 정의할 수 있습니다.
+편집기 외관과 기능을 구성하려면 다음 매개변수(필드)를 지정할 수 있습니다:
 
 #### - 모든 유형에 공통적인 매개변수
 
-- `type` - (필수) 에디터 필드 유형을 지정합니다.
+- `type` - (필수) 편집기 필드 유형
 
 :::important
-칸반 에디터에서 지원하는 필드 유형은 **dateRange**, **date**, **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **comments**, **links** 입니다.
+Kanban 편집기에서는 다음 필드 유형을 사용할 수 있습니다: **dateRange**, **date**, **combo**, **select**, **multiselect**, **color**, **text**, **textarea**, **progress**, **files**, **comments**, **links**
 :::
 
-- `key` - (필수) 에디터 필드의 키입니다. [`cardShape`](../js_kanban_cardshape_config) 속성에 설정된 값과 일치해야 합니다. 예:
+- `key` - (필수) 편집기 필드 키. 이 값은 [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성에 지정된 값을 사용해야 합니다. 아래 예시를 참고하세요:
 
 ~~~js {8,17}
     // 카드 외관 설정
-    const cardShape = {
+    const cardShape = { 
         ...kanban.defaultCardShape,
         headerFields: [
             { // 사용자 정의 필드
@@ -171,7 +171,7 @@ editorShape?: [
             }
         ]
     };
-    // 에디터 외관 설정
+    // 편집기 외관 설정
     const editorShape = [
         {
             label: "Custom field",
@@ -181,120 +181,120 @@ editorShape?: [
     ];
 ~~~
 
-- `label` - (선택 사항) 에디터 필드의 라벨입니다.
+- `label` - (선택 사항) 편집기 필드 레이블
 
-#### - "dateRange" 유형에 대한 매개변수
+#### - "dateRange" 유형 매개변수
 
-- `key` - (필수) 에디터 필드의 키를 포함하는 객체:
-    - `start` - (필수) 시작 날짜의 키
-    - `end` - (필수) 종료 날짜의 키
+- `key` - (필수) 편집기 필드 키 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `start` - (필수) 시작 날짜 키
+    - `end` - (필수) 종료 날짜 키
 
 :::important
-이 키들은 [`cardShape`](../js_kanban_cardshape_config) 속성에서 사용된 키와 일치합니다.
+이 키 값들은 [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성에서 사용됩니다!
 :::
 
-- `config` - (선택 사항) **"dateRange"** 필드용 구성 객체, 다음 옵션 포함:
-    - `align` - (선택 사항) 날짜 범위 컨트롤에 대한 캘린더 팝업의 정렬 설정
-    - `editable` - (선택 사항) 날짜 선택기가 편집 가능한지 여부 제어; 사용자 정의 형식 지정 가능
-    - `buttons` - (선택 사항) 캘린더 팝업 아래에 오늘 및 지우기 버튼 표시 토글
-    - `css` - (선택 사항) 날짜 범위 컨트롤 내 아이콘 위치 조정
-    - `disabled` - (선택 사항) 날짜 범위 컨트롤 비활성화
-    - `done` - (선택 사항) 날짜 범위 컨트롤 내 완료 버튼 표시 토글
-    - `error` - (선택 사항) 날짜 범위 컨트롤에 오류 스타일 적용
-    - `format` - (선택 사항) 날짜 범위 컨트롤의 날짜 형식 설정. 옵션은 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/) 참고
-    - `months` - (선택 사항) 날짜 범위 컨트롤에 표시할 캘린더 수 정의
-    - `placeholder` - (선택 사항) 날짜 범위 컨트롤의 플레이스홀더 텍스트 설정
-    - `title` - (선택 사항) 날짜 범위 컨트롤의 툴팁 또는 제목 추가
-    - `width` - (선택 사항) 캘린더 팝업 너비 조정
+- `config` - (선택 사항) **"dateRange"** 필드의 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `align` - (선택 사항) 달력 팝업의 정렬 위치 설정
+    - `editable` - (선택 사항) 날짜 선택기가 편집 가능한지 여부 및 선택적 사용자 지정 형식 설정
+    - `buttons` - (선택 사항) 달력 팝업 하단의 Today 및 Clear 버튼 표시 여부
+    - `css` - (선택 사항) Date Range 컨트롤 내 아이콘 위치 변경
+    - `disabled` - (선택 사항) Date Range 컨트롤 비활성화 여부
+    - `done` - (선택 사항) Date Range 컨트롤 내 Done 버튼 표시 여부
+    - `error` - (선택 사항) 오류 스타일 적용 여부
+    - `format` - (선택 사항) 날짜 형식 설정. 사용 가능한 매개변수는 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)에서 확인
+    - `months` - (선택 사항) Date Range 컨트롤에 표시할 달력 수
+    - `placeholder` - (선택 사항) 플레이스홀더 설정
+    - `title` - (선택 사항) 추가 정보용 타이틀 설정
+    - `width` - (선택 사항) 달력 팝업 너비 설정
 
-#### - "date" 유형에 대한 매개변수
+#### - "date" 유형 매개변수
 
-- `config` - (선택 사항) **"date"** 필드용 구성 객체, 다음 옵션 포함:
-    - `align` - (선택 사항) 날짜 컨트롤에 대한 캘린더 팝업 정렬 제어
-    - `editable` - (선택 사항) 날짜 선택기 편집 가능 여부 토글; 사용자 정의 형식 지정 가능
-    - `buttons` - (선택 사항) 캘린더 팝업 내 오늘 및 지우기 버튼 표시 여부
-    - `css` - (선택 사항) 날짜 컨트롤 내 아이콘 위치 변경
-    - `disabled` - (선택 사항) 날짜 컨트롤 비활성화
-    - `error` - (선택 사항) 날짜 컨트롤에 오류 스타일 적용
-    - `format` - (선택 사항) 날짜 컨트롤의 날짜 형식 설정. 참고 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
-    - `placeholder` - (선택 사항) 날짜 컨트롤의 플레이스홀더 텍스트 설정
-    - `title` - (선택 사항) 날짜 컨트롤의 툴팁 또는 제목 추가
-    - `width` - (선택 사항) 캘린더 팝업 너비 설정
+- `config` - (선택 사항) **"date"** 필드의 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `align` - (선택 사항) 달력 팝업 정렬 위치
+    - `editable` - (선택 사항) 날짜 선택기 편집 가능 여부 및 사용자 지정 형식 설정
+    - `buttons` - (선택 사항) Today 및 Clear 버튼 표시 여부
+    - `css` - (선택 사항) 아이콘 위치 변경
+    - `disabled` - (선택 사항) 컨트롤 비활성화 여부
+    - `error` - (선택 사항) 오류 스타일 적용 여부
+    - `format` - (선택 사항) 날짜 형식 설정. 자세한 내용은 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/) 참조
+    - `placeholder` - (선택 사항) 플레이스홀더 설정
+    - `title` - (선택 사항) 추가 정보용 타이틀 설정
+    - `width` - (선택 사항) 달력 팝업 너비 설정
 
-#### - "color" 유형에 대한 매개변수
+#### - "color" 유형 매개변수
 
-- `values` - (선택 사항) 유효한 HEX 색상 코드 배열
-- `config` - (선택 사항) **"color"** 필드용 구성 객체:
-    - `placeholder` - (선택 사항) 색상 컨트롤의 플레이스홀더
-    - `clear` - (선택 사항) 클리어 아이콘 표시 토글
-    - `disabled` - (선택 사항) 색상 컨트롤 비활성화
-    - `error` - (선택 사항) 오류 스타일 적용
-    - `title` - (선택 사항) 색상 컨트롤 관련 툴팁 또는 제목 추가
+- `values` - (선택 사항) 유효한 HEX 코드 배열
+- `config` - (선택 사항) **"color"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `placeholder` - (선택 사항) 플레이스홀더 설정
+    - `clear` - (선택 사항) Color 컨트롤의 "clear" 아이콘 표시 여부
+    - `disabled` - (선택 사항) 컨트롤 비활성화 여부
+    - `error` - (선택 사항) 오류 스타일 적용 여부
+    - `title` - (선택 사항) 추가 정보용 타이틀 설정
 
-#### - "combo", "select", "multiselect" 유형에 대한 매개변수
+#### - "combo", "select", "multiselect" 유형 매개변수
 
-- `values` - (선택 사항) 드롭다운 옵션 객체 배열, 각 객체는:
+- `values` - (선택 사항) 드롭다운 옵션 데이터 객체 배열. 다음 매개변수를 지정할 수 있습니다:
     - `id` - (필수) 옵션 ID
-    - `label` - (필수) 옵션 라벨
-    - `avatar` - (선택 사항) 이미지 경로 (**"multiselect"**에만 해당)
+    - `label` - (필수) 옵션 레이블
+    - `avatar` - (선택 사항) 옵션 미리보기 이미지 경로 ("multiselect" 유형에만 해당)
 
 :::important
-단일 사용자 지정에는 ***"select"*** 또는 ***"combo"*** 유형을 사용하고, 다중 사용자 선택에는 ***"multiselect"*** 유형을 사용하세요.
+단일 사용자 할당 컨트롤은 ***"select"*** 또는 ***"combo"*** 유형을 사용해야 합니다! 여러 사용자 할당은 ***"multiselect"*** 유형을 사용하세요.
 :::
 
-- `config` - (선택 사항) 이 유형들에 대한 구성 객체:
-    - `clearButton` - (선택 사항) 콤보 입력에 클리어 버튼 추가 (**"combo"**만 해당)
-    - `label` - (선택 사항) 옵션을 입력에 바인딩하는 키 (**"select"**만 해당)
-    - `checkboxes` - (선택 사항) 옵션 옆 체크박스 표시 여부 (**"multiselect"**만 해당)
-    - `textField` - (선택 사항) 콤보 옵션을 입력에 바인딩하는 키 (**"combo"**, **"multiselect"**만 해당)
+- `config` - (선택 사항) **"combo"**, **"select"**, **"multiselect"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `clear` - (선택 사항) 콤보 입력에 Clear 버튼 추가 (**"combo" 및 "color" 유형에만 해당**)
+    - `label` - (선택 사항) 지정된 키로 옵션을 입력 필드에 바인딩 (**"select" 유형에만 해당**)
+    - `checkboxes` - (선택 사항) 옵션 옆에 체크박스 표시 여부 (**"multiselect" 유형에만 해당**)
+    - `textField` - (선택 사항) 지정된 키로 콤보 옵션을 입력 필드에 바인딩 (**"combo" 및 "multiselect" 유형에만 해당**)
 
-    - `disabled` - (선택 사항) 컨트롤 비활성화
-    - `error` - (선택 사항) 오류 스타일 적용
-    - `placeholder` - (선택 사항) 플레이스홀더 텍스트 설정
-    - `title` - (선택 사항) 툴팁 또는 제목 추가
+    - `disabled` - (선택 사항) 컨트롤 비활성화 여부
+    - `error` - (선택 사항) 오류 스타일 적용 여부
+    - `placeholder` - (선택 사항) 플레이스홀더 설정
+    - `title` - (선택 사항) 추가 정보용 타이틀 설정
 
-#### - "text" 유형에 대한 매개변수
+#### - "text" 유형 매개변수
 
-- `config` - (선택 사항) **"text"** 필드용 구성 객체:
-    - `css` - (선택 사항) 텍스트 컨트롤 내 아이콘 위치 설정
-    - `disabled` - (선택 사항) 텍스트 컨트롤 비활성화
-    - `error` - (선택 사항) 오류 스타일 적용
-    - `focus` - (선택 사항) 텍스트 컨트롤에 포커스 설정
-    - `icon` - (선택 사항) 텍스트 컨트롤 내 아이콘 추가
-    - `inputStyle` - (선택 사항) 사용자 정의 스타일 적용
-    - `placeholder` - (선택 사항) 플레이스홀더 텍스트 설정
-    - `readonly` - (선택 사항) 읽기 전용 설정
-    - `select` - (선택 사항) 텍스트 컨트롤 내용 선택
-    - `title` - (선택 사항) 툴팁 또는 제목 추가
-    - `type` - (선택 사항) 입력 유형 정의
+- `config` - (선택 사항) **"text"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `css` - (선택 사항) Text 컨트롤 내 아이콘 위치 설정
+    - `disabled` - (선택 사항) 컨트롤 비활성화 여부
+    - `error` - (선택 사항) 오류 스타일 적용 여부
+    - `focus` - (선택 사항) Text 컨트롤에 포커스 설정
+    - `icon` - (선택 사항) Text 컨트롤에 아이콘 추가
+    - `inputStyle` - (선택 사항) Text 컨트롤에 사용자 지정 스타일 적용
+    - `placeholder` - (선택 사항) 플레이스홀더 설정
+    - `readonly` - (선택 사항) 읽기 전용 여부 설정
+    - `select` - (선택 사항) Text 컨트롤 내용 선택 여부
+    - `title` - (선택 사항) 추가 정보용 타이틀 설정
+    - `type` - (선택 사항) Text 컨트롤 타입 설정
 
-#### - "textarea" 유형에 대한 매개변수
+#### - "textarea" 유형 매개변수
 
-- `config` - (선택 사항) **"textarea"** 필드용 구성 객체:
-    - `disabled` - (선택 사항) 텍스트에어리어 컨트롤 비활성화
-    - `error` - (선택 사항) 오류 스타일 적용
-    - `placeholder` - (선택 사항) 플레이스홀더 텍스트 설정
-    - `title` - (선택 사항) 툴팁 또는 제목 추가
-    - `readonly` - (선택 사항) 읽기 전용 설정
+- `config` - (선택 사항) **"textarea"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `disabled` - (선택 사항) 컨트롤 비활성화 여부
+    - `error` - (선택 사항) 오류 스타일 적용 여부
+    - `placeholder` - (선택 사항) 플레이스홀더 설정
+    - `title` - (선택 사항) 추가 정보용 타이틀 설정
+    - `readonly` - (선택 사항) 읽기 전용 여부 설정
 
-#### - "progress" 유형에 대한 매개변수
+#### - "progress" 유형 매개변수
 
-- `config` - (선택 사항) **"progress"** 필드용 구성 객체:
-    - `disabled` - (선택 사항) 프로그레스 컨트롤 비활성화
-    - `label` - (선택 사항) 컨트롤 위에 표시할 라벨
-    - `max` - (선택 사항) 최대 허용 값
-    - `min` - (선택 사항) 최소 허용 값
-    - `step` - (선택 사항) 증가 단위
-    - `title` - (선택 사항) 툴팁 또는 제목
-    - `width` - (선택 사항) 프로그레스 컨트롤 너비
+- `config` - (선택 사항) **"progress"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `disabled` - (선택 사항) 컨트롤 비활성화 여부
+    - `label` - (선택 사항) Progress 컨트롤 위 레이블 설정
+    - `max` - (선택 사항) 최대값 설정
+    - `min` - (선택 사항) 최소값 설정
+    - `step` - (선택 사항) 값 간 증분 설정
+    - `title` - (선택 사항) 추가 정보용 타이틀 설정
+    - `width` - (선택 사항) Progress 컨트롤 너비 설정
 
-#### - "files" 유형에 대한 매개변수
+#### - "files" 유형 매개변수
 
-- `uploadURL` - (선택 사항) 에디터 업로드 URL, 아래 상세 설명
+- `uploadURL` - (선택 사항) 편집기 업로더 URL. 자세한 내용은 아래 참조
 
 <details>
 
-`uploadURL`은 **문자열** 또는 **함수**로 설정할 수 있습니다. 함수 사용 예시:
+`uploadURL` 속성은 **문자열** 또는 **함수**로 지정할 수 있습니다. 다음 예시는 함수로 업로드 URL을 설정하는 방법입니다:
 
 ~~~jsx {}
 uploadURL: rec => {
@@ -322,42 +322,42 @@ uploadURL: rec => {
 }
 ~~~
 
-`rec` 매개변수는 확장된 `PointerEvent` 객체로, 추가 속성 포함:
+여기서 `rec`는 함수의 유일한 매개변수이며 확장된 `PointerEvent` 객체입니다 (기본 타입에 4가지 속성 추가):
 
 ~~~jsx {}
 interface UploadEvent extends PointerEvent {
     id: number;
-    status: "client" | "server" | "error"; // "아직 전송 안됨", "전송 성공", "오류" 상태
-    name: string; // 파일명
-    file: string | Blob; // 파일 자체
+    status: "client" | "server" | "error"; // 각각 "아직 전송 안 됨", "성공적으로 전송됨", "오류 발생" 의미
+    name: string; // 파일 이름
+    file: string | Blob; // 파일
 }
 ~~~
 
 </details>
 
-- `config` - (선택 사항) **"files"** 필드용 구성 객체:
-    - `accept` - (선택 사항) 허용 파일 유형 (예: ***"image/*", "video/*", "audio/*"***)
-    - `disabled` - (선택 사항) 파일 업로드 활성/비활성
-    - `multiple` - (선택 사항) 다중 파일 업로드 활성/비활성
-    - `folder` - (선택 사항) 폴더 업로드 활성/비활성
+- `config` - (선택 사항) **"files"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `accept` - (선택 사항) 업로드할 파일 유형 (예: ***"image/*", "video/*", "audio/*"*** 등)
+    - `disabled` - (선택 사항) 파일 업로드 활성화/비활성화
+    - `multiple` - (선택 사항) 다중 파일 업로드 활성화/비활성화
+    - `folder` - (선택 사항) 폴더 업로드 활성화/비활성화
 
-#### - "comments" 유형에 대한 매개변수
+#### - "comments" 유형 매개변수
 
-- `config` - (선택 사항) **"comments"** 필드용 구성 객체:
-    - `format` - (선택 사항) 댓글의 날짜 형식. 옵션은 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/) 참고
-    - `placement` - (선택 사항) 댓글 표시 위치:
-        - `"editor"` - 에디터 내
-        - `"page"` - 별도 패널 내
-    - `html` - (선택 사항) 댓글 내 HTML 마크업 활성화/비활성화
-    - `confirmDeletion` - (선택 사항) 댓글 삭제 시 확인 대화상자 표시 여부
+- `config` - (선택 사항) **"comments"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `format` - (선택 사항) 댓글 날짜 형식. 가능한 형식은 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)에서 확인
+    - `placement` - (선택 사항) 댓글 표시 위치. 다음 값 중 하나를 설정할 수 있습니다:
+        - `"editor"` - 편집기 내에 댓글 표시
+        - `"page"` - 별도 패널에 댓글 표시
+    - `html` - (선택 사항) 댓글에 HTML 마크업 사용 활성화/비활성화
+    - `confirmDeletion` - (선택 사항) 댓글 삭제 확인 대화상자 표시 여부
 
-#### - "links" 유형에 대한 매개변수
+#### - "links" 유형 매개변수
 
-- `config` - (선택 사항) **"links"** 필드용 구성 객체:
-    - `confirmDeletion` - (선택 사항) 링크 삭제 시 확인 대화상자 표시 여부
+- `config` - (선택 사항) **"links"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
+    - `confirmDeletion` - (선택 사항) 링크 삭제 확인 대화상자 표시 여부
 
 :::info
-`editorShape` 속성이 설정되지 않은 경우, 위젯은 기본값인 **defaultEditorShape** 매개변수를 사용합니다.
+`editorShape` 속성을 통해 편집기 설정을 지정하지 않으면, 위젯은 **defaultEditorShape** 기본 설정 매개변수 집합을 적용합니다!
 :::
 
 ### 기본 구성
@@ -387,7 +387,7 @@ const defaultEditorShape = [
         label: "Priority",
         key: "priority",
         config: {
-            clearButton: true
+            clear: true
         }
     },
     {
@@ -418,7 +418,7 @@ const defaultEditorShape = [
 ];
 ~~~
 
-### 예제
+### 예시
 
 ~~~jsx {6-33,38}
 const users = [ // 사용자 데이터
@@ -426,7 +426,7 @@ const users = [ // 사용자 데이터
     { id: 2, label: "Aaron Short" }
 ];
 
-const editorShape = [ // 에디터 설정
+const editorShape = [ // 편집기 설정
     ...kanban.defaultEditorShape, // 기본 설정 포함
     { // 사용자 정의 필드 추가
         type: "multiselect",
@@ -463,9 +463,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 로그:**
+**변경 이력:**
 
 - v1.3에서 ***dateRange*** 유형 추가
-- v1.4에서 ***comments*** 및 ***links*** 에디터 유형과 ***format*** 매개변수 추가
+- v1.4에서 ***comments*** 및 ***links*** 편집기 유형과 ***format*** 매개변수 추가
+- ***clearButton*** 매개변수가 ***clear*** 매개변수로 대체됨
 
-**관련 문서:** [Configuration](/guides/configuration#편집기)
+**관련 문서:** [구성](guides/configuration.md/#editor)

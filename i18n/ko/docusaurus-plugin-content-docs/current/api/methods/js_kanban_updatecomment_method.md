@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateComment()
 title: updateComment 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 updateComment 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+description: DHTMLX JavaScript Kanban 라이브러리 문서에서 updateComment 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 시도해 보며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
 ---
 
 # updateComment()
 
 ### 설명
 
-@short: ID를 지정하여 카드 댓글을 수정합니다.
+@short: 카드 댓글을 ID로 업데이트합니다.
 
 ### 사용법
 
@@ -28,14 +28,14 @@ updateComment({
 
 ### 매개변수
 
-- `id` -  (선택 사항) 수정할 댓글의 식별자
-- `cardId` - (필수) 댓글이 포함된 카드의 식별자
-- `comment` - (필수) 수정할 댓글 세부 정보를 담은 객체로, 다음을 포함할 수 있습니다:
-    - `id` -  (선택 사항) 수정할 댓글의 식별자
-    - `cardId` - (선택 사항) 수정된 댓글이 위치할 카드의 식별자
-    - `text` - (선택 사항) 댓글의 새 텍스트 내용
-    - `date` - (선택 사항) 댓글에 연관된 새 날짜
-    - `html` - (선택 사항) 댓글에 대한 새 HTML 내용. 텍스트 대신 HTML을 표시하려면 [`editorShape`](/api/config/js_kanban_editorshape_config/#--comments-유형에-대한-매개변수) 설정에서 `html` 속성을 활성화해야 합니다.
+- `id` -  (선택 사항) 업데이트할 댓글의 ID
+- `cardId` - (필수) 댓글을 업데이트할 카드의 ID
+- `comment` - (필수) 업데이트할 댓글의 구성 객체로, 다음 매개변수를 지정할 수 있습니다:
+    - `id` -  (선택 사항) 업데이트할 댓글의 ID
+    - `cardId` - (선택 사항) 업데이트된 댓글이 추가될 카드의 ID
+    - `text` - (선택 사항) 업데이트된 댓글의 텍스트
+    - `date` - (선택 사항) 업데이트된 댓글의 날짜
+    - `html` - (선택 사항) 업데이트된 댓글의 HTML 마크업. 텍스트 대신 HTML 마크업을 표시하려면 [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) 구성의 `html` 속성을 활성화하세요.
 
 ### 예제
 
@@ -45,7 +45,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 댓글 수정
+// 댓글 업데이트
 board.updateComment({
     id: 1,
     cardId: 1,
@@ -59,4 +59,4 @@ board.updateComment({
 });
 ~~~
 
-**변경 이력:** 이 메서드는 버전 1.4에서 도입되었습니다.
+**변경 로그:** 이 메서드는 v1.4에 추가되었습니다.

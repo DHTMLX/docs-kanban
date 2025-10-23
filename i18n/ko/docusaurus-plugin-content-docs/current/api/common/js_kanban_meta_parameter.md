@@ -8,10 +8,10 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 $meta 매개�
 
 ### 설명
 
-@short: Kanban 메서드와 이벤트를 맞춤 설정하기 위한 추가 설정이 포함된 객체
+@short: Kanban의 메서드 및 이벤트 구성을 위한 추가 설정 객체
 
 :::important
-`$meta` 객체는 Kanban 이벤트와 연동된 메서드를 구성하는 데 도움이 되는 추가 매개변수를 제공합니다!
+`$meta` 객체는 Kanban 이벤트를 기반으로 메서드를 구성하는 데 사용되는 추가 매개변수 세트를 포함합니다!
 :::
 
 ### 사용법
@@ -26,7 +26,7 @@ $meta?: {
 
 `$meta` 객체는 다음 매개변수를 포함합니다:
 
-- `skipHistory` - (선택 사항) 해당 작업이 Kanban의 히스토리 추적에서 제외될지 여부를 제어합니다
+- `skipHistory` - (선택 사항) Kanban의 히스토리에서 작업을 건너뛸지 여부를 활성화/비활성화합니다
 
 ### 예제
 
@@ -36,7 +36,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 새 카드를 추가하고 이 작업을 Kanban 히스토리에서 제외
+// 새 카드를 추가하고 Kanban 히스토리에서 이 작업을 건너뜁니다
 board.addCard({
     id: 1,
     columnId: "backlog",
@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**변경 내역:** `$meta` 매개변수는 v1.3 버전에서 도입되었습니다
+**변경 로그:** `$meta` 매개변수는 v1.3에 추가되었습니다
 
-**관련 문서:** [`history`](/api/config/js_kanban_history_config.md)
+**관련 문서:** [`history`](api/config/js_kanban_history_config.md)
