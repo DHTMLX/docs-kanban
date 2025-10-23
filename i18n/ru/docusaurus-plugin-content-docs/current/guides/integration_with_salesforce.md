@@ -13,7 +13,7 @@ description: Узнайте, как интегрировать DHTMLX Kanban в 
 DHTMLX Kanban совместим с платформой [Salesforce](https://www.salesforce.com/). Мы подготовили примеры кода по добавлению DHTMLX Kanban в окружение Salesforce. Дополнительную информацию можно найти в соответствующем [примере на GitHub](https://github.com/DHTMLX/salesforce-lwc-demo).
 
 :::note
-Виджет Kanban на JavaScript автоматически определяет, что работает в окружении [**Salesforce**](https://www.salesforce.com/) и настраивает внутреннюю логику интеграции. В большинстве случаев вам не нужно вручную вызывать какие-либо [**специфические методы Salesforce**](#salesforce-specific-methods).
+Виджет Kanban на JavaScript автоматически определяет, что работает в окружении [**Salesforce**](https://www.salesforce.com/) и настраивает внутреннюю логику интеграции. В большинстве случаев вам не нужно вручную вызывать какие-либо [**специфические методы Salesforce**](#специфические-методы-salesforce).
 :::
 
 ## Подготовка окружения

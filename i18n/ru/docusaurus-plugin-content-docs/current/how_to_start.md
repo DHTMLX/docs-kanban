@@ -100,7 +100,7 @@ Toolbar — это необязательная часть интерфейса 
 Далее вы можете задать свойства конфигурации, которые должен иметь компонент Kanban при инициализации.
 
 Для начала работы с Kanban необходимо предоставить исходные данные для **cards** и **columns** (и *rows*).
-Помимо исходных данных, вы можете настроить внешний вид [cards](guides/configuration.md#cards), [editor](guides/configuration.md#editor) и [toolbar](guides/configuration.md#toolbar).
+Помимо исходных данных, вы можете настроить внешний вид [cards](guides/configuration.md#карточки), [editor](guides/configuration.md#редактор) и [toolbar](guides/configuration.md#toolbar).
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {

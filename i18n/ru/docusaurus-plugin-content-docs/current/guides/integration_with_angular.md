@@ -53,7 +53,7 @@ yarn start
 
 ### Шаг 1. Установка пакета
 
-Скачайте [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) и следуйте инструкциям из файла README. Обратите внимание, что пробная версия Kanban доступна только 30 дней.
+Скачайте [**trial Kanban package**](/how_to_start/#установка-kanban-через-npm-или-yarn) и следуйте инструкциям из файла README. Обратите внимание, что пробная версия Kanban доступна только 30 дней.
   
 ### Шаг 2. Создание компонента
 
