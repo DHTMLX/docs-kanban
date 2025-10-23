@@ -12,7 +12,7 @@ If you're moving to a newer version of Kanban, you might want to look at [Migrat
 
 Released October 14, 2025
 
-[Review of release on the blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+[Review of release on the blog](https://dhtmlx.com/blog/meet-dhtmlx-kanban-1-7/)
 
 ### Salesforce Integration
 

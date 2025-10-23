@@ -12,7 +12,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 于 2025 年 10 月 14 日发布
 
-[博客发布回顾](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+[博客发布回顾](https://dhtmlx.com/blog/meet-dhtmlx-kanban-1-7/)
 
 ### Salesforce 集成
 

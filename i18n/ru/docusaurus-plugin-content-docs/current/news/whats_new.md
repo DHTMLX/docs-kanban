@@ -12,7 +12,7 @@ description: Ознакомьтесь с новыми возможностями
 
 Выпущена 14 октября 2025
 
-[Обзор релиза в блоге](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+[Обзор релиза в блоге](https://dhtmlx.com/blog/meet-dhtmlx-kanban-1-7/)
 
 ### Интеграция с Salesforce
 

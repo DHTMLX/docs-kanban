@@ -12,7 +12,7 @@ description: DHTMLX JavaScript UI 라이브러리의 문서에서 DHTMLX Kanban�
 
 2025년 10월 14일 출시
 
-[블로그 릴리즈 리뷰](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+[블로그 릴리즈 리뷰](https://dhtmlx.com/blog/meet-dhtmlx-kanban-1-7/)
 
 ### Salesforce 연동
 

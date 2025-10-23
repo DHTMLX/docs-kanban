@@ -12,7 +12,7 @@ Wenn Sie Kanban von einer älteren Version aktualisieren, beachten Sie bitte [Mi
 
 Veröffentlicht am 14. Oktober 2025
 
-[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/meet-dhtmlx-kanban-1-7/)
 
 ### Salesforce-Integration
 
