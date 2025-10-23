@@ -8,9 +8,9 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解初始�
 
 本指南将为您详细介绍如何在页面上创建 Kanban，以便为您的应用程序添加看板功能。请按照以下步骤操作，以获得可用的组件：
 
-1. [在页面中引入 Kanban 源文件](#including-source-files)。
-2. [创建 Kanban 的容器](#creating-container)。
-3. [使用构造函数初始化 Kanban](#initializing-kanban)。
+1. [在页面中引入 Kanban 源文件](#引入源文件)。
+2. [创建 Kanban 的容器](#创建容器)。
+3. [使用构造函数初始化 Kanban](#初始化-kanban)。
 
 ## 引入源文件
 
@@ -48,7 +48,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解初始�
 使用 **kanban.Kanban** 构造函数初始化 Kanban。它接受两个参数：
 
 - 一个 HTML 容器（HTML 容器的 ID）
-- 一个包含配置属性的对象。[完整属性列表见此处](#configuration-properties)
+- 一个包含配置属性的对象。[完整属性列表见此处](#配置属性)
 
 ~~~jsx title="index.html"
 // 创建 Kanban

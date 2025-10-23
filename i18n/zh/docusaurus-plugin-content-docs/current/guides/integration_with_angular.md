@@ -53,7 +53,7 @@ yarn start
 
 ### 步骤 1. 安装包
 
-下载 [**试用版 Kanban 包**](/how_to_start/#installing-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤进行操作。请注意，试用版 Kanban 仅可使用 30 天。
+下载 [**试用版 Kanban 包**](/how_to_start/#通过-npm-或-yarn-安装-kanban)，并按照 README 文件中的步骤进行操作。请注意，试用版 Kanban 仅可使用 30 天。
 
 ### 步骤 2. 创建组件
 

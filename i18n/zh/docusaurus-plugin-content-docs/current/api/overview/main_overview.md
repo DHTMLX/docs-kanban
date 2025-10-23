@@ -17,7 +17,7 @@ new kanban.Kanban("#root", {
 **参数**：
 
 - 一个 HTML 容器（HTML 容器的 ID）
-- 一个配置参数对象（[查看此处](#kanban-properties)）
+- 一个配置参数对象（[查看此处](#kanban-属性)）
 
 ## Toolbar 构造函数
 
@@ -30,7 +30,7 @@ new kanban.Toolbar("#toolbar", {
 **参数**：
 
 - 一个 HTML 容器（HTML 容器的 ID）
-- 一个配置参数对象（[查看此处](#toolbar-properties)）
+- 一个配置参数对象（[查看此处](#toolbar-属性)）
 
 ## Kanban 方法
 

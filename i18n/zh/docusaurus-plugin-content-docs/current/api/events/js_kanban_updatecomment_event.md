@@ -38,7 +38,7 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 update-c
     - `cardId` - （可选）已更新评论将被添加到的卡片 ID
     - `text` - （可选）已更新评论的文本内容
     - `date` - （可选）已更新评论的日期
-    - `html` - （可选）已更新评论的 HTML 标记。启用 [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) 配置中的 `html` 属性，以显示 HTML 标记而非纯文本
+    - `html` - （可选）已更新评论的 HTML 标记。启用 [`editorShape`](/api/config/js_kanban_editorshape_config/#--comments-类型的参数) 配置中的 `html` 属性，以显示 HTML 标记而非纯文本
 - `skipProvider` - （可选）启用或禁用阻止请求发送到服务器
 
 :::info

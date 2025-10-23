@@ -100,7 +100,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 接下来，您可以在初始化时为 Kanban 组件指定所需的配置属性。
 
 要开始使用 Kanban，首先需要为 **cards** 和 **columns**（以及 *rows*）提供初始数据。
-除了初始数据，您还可以配置 [cards](guides/configuration.md#cards)、[editor](guides/configuration.md#editor) 和 [toolbar](guides/configuration.md#toolbar) 的外观。
+除了初始数据，您还可以配置 [cards](guides/configuration.md#卡片)、[editor](guides/configuration.md#编辑器) 和 [toolbar](guides/configuration.md#工具栏) 的外观。
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {

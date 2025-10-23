@@ -35,7 +35,7 @@ updateComment({
     - `cardId` - （可选）更新后的评论将被添加到的卡片 ID
     - `text` - （可选）更新后的评论文本
     - `date` - （可选）更新后的评论日期
-    - `html` - （可选）更新后的评论的 HTML 标记。启用 [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) 配置中的 `html` 属性，以显示 HTML 标记而非文本
+    - `html` - （可选）更新后的评论的 HTML 标记。启用 [`editorShape`](/api/config/js_kanban_editorshape_config/#--comments-类型的参数) 配置中的 `html` 属性，以显示 HTML 标记而非文本
 
 ### 示例
 

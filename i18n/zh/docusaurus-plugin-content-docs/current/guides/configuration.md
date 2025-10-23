@@ -28,33 +28,33 @@ Kanban 看板由分布在*列*和*行*中的*卡片*组成。您可以使用 [`c
 - 通过 `description: boolean` 配置卡片描述
 
     :::tip
-    您可以通过 Kanban 编辑器的相应输入框管理任意卡片的**标题**和**描述**字段。如果启用这些字段，相应的输入框会自动在编辑器中显示。要配置这些输入框，可以使用[**text** 和 **textarea**](#text-and-textarea-types) 类型。
+    您可以通过 Kanban 编辑器的相应输入框管理任意卡片的**标题**和**描述**字段。如果启用这些字段，相应的输入框会自动在编辑器中显示。要配置这些输入框，可以使用[**text** 和 **textarea**](#text-和-textarea-类型) 类型。
     :::
 
 - 通过 `progress: boolean` 配置卡片进度
 
     :::tip
-    您可以通过 Kanban 编辑器的相应控件管理任意卡片的**进度**字段。如果启用此字段，相应的控件会自动在编辑器中显示。要配置该控件，可以使用[**progress**](#progress-type) 类型。
+    您可以通过 Kanban 编辑器的相应控件管理任意卡片的**进度**字段。如果启用此字段，相应的控件会自动在编辑器中显示。要配置该控件，可以使用[**progress**](#progress-类型) 类型。
     :::
 
 - 通过 `start_date: boolean` 配置开始日期
 - 通过 `end_date: boolean` 配置结束日期
 
     :::tip
-    您可以通过 Kanban 编辑器的相应控件管理任意卡片的**开始日期**和**结束日期**字段。如果启用这些字段，相应的控件会自动在编辑器中显示。要配置这些控件，可以使用[**date**](#date-and-daterange-types) 类型。
+    您可以通过 Kanban 编辑器的相应控件管理任意卡片的**开始日期**和**结束日期**字段。如果启用这些字段，相应的控件会自动在编辑器中显示。要配置这些控件，可以使用[**date**](#date-和-daterange-类型) 类型。
     :::
 
 - 通过 `menu: boolean` 配置卡片右键菜单
 - 通过 `attached: boolean` 配置卡片附件
 
     :::tip
-    您可以通过 Kanban 编辑器的相应字段**添加文件**到任意卡片。要配置该字段，可以使用[**files**](#files-type) 类型。
+    您可以通过 Kanban 编辑器的相应字段**添加文件**到任意卡片。要配置该字段，可以使用[**files**](#files-类型) 类型。
     :::
 
 - 通过 `color: boolean` 配置卡片颜色
 
     :::tip
-    您可以通过 Kanban 编辑器的相应控件管理卡片的**顶部颜色线**。如果启用**color**，相应的控件（*colorpicker*）会自动在编辑器中显示。要配置该控件，可以使用[**color**](#color-type) 类型。
+    您可以通过 Kanban 编辑器的相应控件管理卡片的**顶部颜色线**。如果启用**color**，相应的控件（*colorpicker*）会自动在编辑器中显示。要配置该控件，可以使用[**color**](#color-类型) 类型。
     :::
 
 - 通过 `cover: boolean` 配置卡片封面（预览图片）
@@ -64,13 +64,13 @@ Kanban 看板由分布在*列*和*行*中的*卡片*组成。您可以使用 [`c
 - 通过 `users: boolean | { show: boolean, values: object, maxCount: number | false }` 配置卡片指派用户
 
     :::tip
-    您可以通过 Kanban 编辑器的相应控件为任意卡片指派一个或多个用户。要配置指派单个用户的控件，使用[**combo** 或 **select**](#combo-select-and-multiselect-types) 类型；要指派多个用户，使用[**multiselect**](#combo-select-and-multiselect-types) 类型。
+    您可以通过 Kanban 编辑器的相应控件为任意卡片指派一个或多个用户。要配置指派单个用户的控件，使用[**combo** 或 **select**](#comboselect-和-multiselect-类型) 类型；要指派多个用户，使用[**multiselect**](#comboselect-和-multiselect-类型) 类型。
     :::
 
 - 通过 `priority: boolean | { show: boolean, values: object }` 配置卡片优先级
 
     :::tip
-    您可以通过 Kanban 编辑器的相应控件管理卡片的**优先级**。如果启用**priority**，相应控件会自动在编辑器中显示。要配置该控件，仅可使用[**combo** 或 **select**](#combo-select-and-multiselect-types) 类型。
+    您可以通过 Kanban 编辑器的相应控件管理卡片的**优先级**。如果启用**priority**，相应控件会自动在编辑器中显示。要配置该控件，仅可使用[**combo** 或 **select**](#comboselect-和-multiselect-类型) 类型。
     :::
 
 - *自定义字段* 通过 `headerFields: [ { key: string, label: string, css: string } ]` 配置
@@ -133,14 +133,14 @@ new kanban.Kanban("#root", {
 
 Kanban 的*编辑器*由用于管理卡片数据的字段组成。要配置编辑器字段（控件），可使用 [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性。可用的编辑器字段类型包括：
 
-- [**combo**、**select** 和 **multiselect**](#combo-select-and-multiselect-types)
-- [**color**](#color-type)
-- [**text** 和 **textarea**](#text-and-textarea-types)
-- [**progress**](#progress-type)
-- [**files**](#files-type)
-- [**date** 和 **dataRange**](#date-and-daterange-types)
-- [**comments**](#comments-type)
-- [**links**](#links-type)
+- [**combo**、**select** 和 **multiselect**](#comboselect-和-multiselect-类型)
+- [**color**](#color-类型)
+- [**text** 和 **textarea**](#text-和-textarea-类型)
+- [**progress**](#progress-类型)
+- [**files**](#files-类型)
+- [**date** 和 **dataRange**](#date-和-daterange-类型)
+- [**comments**](#comments-类型)
+- [**links**](#links-类型)
 
 ### Combo、Select 和 Multiselect 类型
 

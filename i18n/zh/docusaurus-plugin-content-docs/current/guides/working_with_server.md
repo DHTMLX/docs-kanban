@@ -277,12 +277,12 @@ remoteEvents.on(handlers);
 
 实现将两个或更多状态的卡片归为同一列有两种方式：
 
-- [服务器端分组](#server-side-grouping)
-- [服务器端 + 客户端分组](#server-side--client-side-grouping)
+- [服务器端分组](#服务器端分组)
+- [服务器端 + 客户端分组](#服务器端--客户端分组)
 
 ### 服务器端分组
 
-如需实现服务器端分组，您的服务器应支持通过 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) 向客户端发送数据（见 [多用户后端](#multiuser-backend)）。
+如需实现服务器端分组，您的服务器应支持通过 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) 向客户端发送数据（见 [多用户后端](#多用户后端)）。
 
 在服务器处理更新卡片请求时，需要检查 **status** 字段。在本例中我们使用 [Go](https://go.dev/) 语言，您也可以使用其他后端技术。
 

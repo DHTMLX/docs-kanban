@@ -13,7 +13,7 @@ description: 了解如何将 DHTMLX Kanban 集成到 Salesforce。本指南解�
 DHTMLX Kanban 兼容 [Salesforce](https://www.salesforce.com/) 平台。我们已准备了将 DHTMLX Kanban 添加到 Salesforce 环境的代码示例。更多信息请参考相应的 [GitHub 示例](https://github.com/DHTMLX/salesforce-lwc-demo)。
 
 :::note
-JavaScript Kanban 组件会自动检测其运行在 [**Salesforce**](https://www.salesforce.com/) 环境中，并在内部配置集成逻辑。在大多数情况下，您无需手动调用任何 [**Salesforce 专用方法**](#salesforce-specific-methods)。
+JavaScript Kanban 组件会自动检测其运行在 [**Salesforce**](https://www.salesforce.com/) 环境中，并在内部配置集成逻辑。在大多数情况下，您无需手动调用任何 [**Salesforce 专用方法**](#salesforce-专用方法)。
 :::
 
 ## 环境准备
