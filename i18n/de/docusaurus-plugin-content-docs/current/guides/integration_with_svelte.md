@@ -1,80 +1,80 @@
 ---
 sidebar_label: Integration mit Svelte
 title: Integration mit Svelte
-description: In der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren Sie mehr über die Integration mit Svelte. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Integration mit Svelte. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # Integration mit Svelte
 
 :::tip
-Es ist hilfreich, ein grundlegendes Verständnis von **Svelte** zu haben, bevor Sie mit dieser Anleitung beginnen. Für eine schnelle Auffrischung besuchen Sie die [**Svelte Dokumentation**](https://svelte.dev/).
+Sie sollten mit den grundlegenden Konzepten und Mustern von **Svelte** vertraut sein, bevor Sie diese Dokumentation lesen. Um Ihr Wissen aufzufrischen, besuchen Sie bitte die [**Svelte documentation**](https://svelte.dev/docs/svelte/overview).
 :::
 
-DHTMLX Kanban arbeitet reibungslos mit **Svelte** zusammen. Es gibt Codebeispiele, die zeigen, wie DHTMLX Kanban in einer Svelte-Umgebung verwendet werden kann. Weitere Details finden Sie im [**Beispiel auf GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
+DHTMLX Kanban ist mit **Svelte** kompatibel. Wir haben Codebeispiele vorbereitet, wie Sie DHTMLX Kanban mit **Svelte** verwenden können. Weitere Informationen finden Sie im entsprechenden [**Example on GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
 
-## Erstellen eines Projekts
+## Ein Projekt erstellen
 
 :::info
-Bevor Sie ein neues Projekt starten, stellen Sie sicher, dass [**Vite**](https://vite.dev/) (optional) und [**Node.js**](https://nodejs.org/en/) installiert sind.
+Bevor Sie mit der Erstellung eines neuen Projekts beginnen, installieren Sie [**Vite**](https://vite.dev/) (optional) und [**Node.js**](https://nodejs.org/en/).
 :::
 
-Es gibt mehrere Möglichkeiten, ein **Svelte**-Projekt einzurichten:
+Es gibt mehrere Möglichkeiten, ein **Svelte**-Projekt zu erstellen:
 
-- Verwenden Sie [**SvelteKit**](https://kit.svelte.dev/)
+- Sie können [**SvelteKit**](https://kit.svelte.dev/) verwenden
 
 oder
 
-- Verwenden Sie **Svelte und Vite** (ohne SvelteKit):
+- Sie können auch **Svelte mit Vite** (aber ohne SvelteKit) nutzen:
 
 ~~~json
 npm create vite@latest
 ~~~
 
-Weitere Einzelheiten finden Sie in diesem [verwandten Artikel](https://svelte.dev/docs/introduction#start-a-new-project-alternatives-to-sveltekit).
+Weitere Details finden Sie im [related article](https://svelte.dev/docs/svelte/overview).
 
 ### Installation der Abhängigkeiten
 
-Nennen wir das Projekt **my-svelte-kanban-app** und wechseln Sie in dieses Verzeichnis:
+Nennen wir das Projekt **my-svelte-kanban-app** und wechseln Sie in das App-Verzeichnis:
 
 ~~~json
 cd my-svelte-kanban-app
 ~~~
 
-Um Abhängigkeiten zu installieren und den Entwicklungsserver zu starten, wählen Sie Ihren bevorzugten Paketmanager:
+Installieren Sie die Abhängigkeiten und starten Sie den Entwicklungsserver. Verwenden Sie dazu einen Paketmanager:
 
-- Mit [**yarn**](https://yarnpkg.com/):
+- Wenn Sie [**yarn**](https://yarnpkg.com/) verwenden, führen Sie folgende Befehle aus:
 
 ~~~json
 yarn
 yarn start
 ~~~
 
-- Mit [**npm**](https://www.npmjs.com/):
+- Wenn Sie [**npm**](https://www.npmjs.com/) verwenden, führen Sie folgende Befehle aus:
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-Die App ist dann lokal verfügbar, in der Regel unter einer Adresse wie `http://localhost:3000`.
+Die App sollte nun auf localhost laufen (zum Beispiel `http://localhost:3000`).
 
 ## Kanban erstellen
 
-Als Nächstes muss der Quellcode von DHTMLX Kanban verfügbar sein. Stoppen Sie die App vorerst und installieren Sie das Kanban-Paket.
+Jetzt sollten Sie den DHTMLX Kanban-Quellcode besorgen. Stoppen Sie zunächst die App und fahren Sie mit der Installation des Kanban-Pakets fort.
 
 ### Schritt 1. Paketinstallation
 
-Laden Sie das [**Test-Kanban-Paket**](/how_to_start/#kanban-mit-npm-oder-yarn-installieren) herunter und folgen Sie den Anweisungen in der README. Hinweis: Die Testversion ist 30 Tage lang funktionsfähig.
+Laden Sie das [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) herunter und folgen Sie den im README aufgeführten Schritten. Beachten Sie, dass die Testversion von Kanban nur 30 Tage verfügbar ist.
 
 ### Schritt 2. Komponentenerstellung
 
-Jetzt ist es Zeit, eine Svelte-Komponente einzurichten, die Kanban zusammen mit einer Toolbar in die App einbindet. Legen Sie unter ***src/*** eine neue Datei an und nennen Sie sie ***Kanban.svelte***.
+Nun müssen Sie eine Svelte-Komponente erstellen, um ein Kanban mit Toolbar zur Anwendung hinzuzufügen. Erstellen Sie eine neue Datei im ***src/***-Verzeichnis und nennen Sie sie ***Kanban.svelte***.
 
 #### Importieren der Quelldateien
 
-Öffnen Sie ***Kanban.svelte*** und importieren Sie die Kanban-Quelldateien. Beachten Sie dabei:
+Öffnen Sie die ***Kanban.svelte***-Datei und importieren Sie die Kanban-Quelldateien. Beachten Sie dabei:
 
-- Bei der Nutzung der PRO-Version und der lokalen Installation eines Pakets sehen die Importpfade wie folgt aus:
+- Wenn Sie die PRO-Version verwenden und das Kanban-Paket aus einem lokalen Ordner installieren, sehen die Importpfade wie folgt aus:
 
 ~~~html title="Kanban.svelte"
 <script>
@@ -83,9 +83,9 @@ import 'dhx-kanban-package/dist/kanban.css';
 </script>
 ~~~
 
-Abhängig vom Paket können die Quelldateien minifiziert sein. In diesem Fall importieren Sie bitte **kanban.min.css**.
+Beachten Sie, dass die Quelldateien, abhängig vom verwendeten Paket, minifiziert sein können. Stellen Sie in diesem Fall sicher, dass Sie die CSS-Datei als **kanban.min.css** importieren.
 
-- Bei der Verwendung der Testversion sehen die Importpfade so aus:
+- Wenn Sie die Testversion von Kanban nutzen, geben Sie folgende Pfade an:
 
 ~~~html title="Kanban.svelte"
 <script>
@@ -94,11 +94,11 @@ import '@dhx/trial-kanban/dist/kanban.css';
 <script>
 ~~~
 
-Diese Anleitung verwendet für die Konfigurationsbeispiele die **Testversion**.
+In diesem Tutorial sehen Sie, wie Sie die **trial**-Version von Kanban konfigurieren.
 
-#### Container festlegen und Kanban mit Toolbar hinzufügen
+#### Container setzen und Kanban mit Toolbar hinzufügen
 
-Um Kanban mit Toolbar anzuzeigen, richten Sie Container für beide Komponenten ein und initialisieren Sie sie mit ihren Konstruktoren:
+Um Kanban mit Toolbar auf der Seite anzuzeigen, müssen Sie Container für Kanban und Toolbar erstellen und diese Komponenten mit den entsprechenden Konstruktoren initialisieren:
 
 ~~~html {3,6,10-11,13-17,27-28} title="Kanban.svelte"
 <script>
@@ -115,7 +115,7 @@ onMount(() => {
 
     // Toolbar-Komponente initialisieren
     toolbar = new Toolbar(toolbar_container, {
-        api: kanban.api, // Kanban-internes API bereitstellen
+        api: kanban.api, // interne Kanban-API bereitstellen
         // weitere Konfigurationseigenschaften
     })
 });
@@ -134,7 +134,7 @@ onDestroy(() => {
 
 #### Daten laden
 
-Um Daten in Kanban zu laden, wird ein Datensatz benötigt. Erstellen Sie eine Datei ***data.js*** im Verzeichnis ***src/*** und fügen Sie Beispieldaten hinzu:
+Um dem Kanban Daten hinzuzufügen, müssen Sie einen Datensatz bereitstellen. Sie können die Datei ***data.js*** im ***src/***-Verzeichnis erstellen und einige Daten hinzufügen:
 
 ~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
@@ -188,7 +188,7 @@ export function getData() {
 }
 ~~~
 
-Öffnen Sie nun ***App.svelte***, importieren Sie die Daten und übergeben Sie sie als **props** an die neue `<Kanban/>`-Komponente:
+Öffnen Sie dann die ***App.svelte***-Datei, importieren Sie die Daten und geben Sie sie als **props** an die neu erstellte `<Kanban/>`-Komponente weiter:
 
 ~~~html {3,5,8} title="App.svelte"
 <script>
@@ -201,7 +201,7 @@ const { cards, columns, rows } = getData();
 <Kanban {cards} {columns} {rows} />
 ~~~
 
-Wechseln Sie zu ***Kanban.svelte*** und verwenden Sie diese **props** in der Kanban-Konfiguration:
+Wechseln Sie zur ***Kanban.svelte***-Datei und wenden Sie die übergebenen **props** auf das Kanban-Konfigurationsobjekt an:
 
 ~~~html {6-8,15-17} title="Kanban.svelte"
 <script>
@@ -226,7 +226,7 @@ onMount(() => {
     })
 
     toolbar = new Toolbar(toolbar_container, {
-        api: kanban.api, // Kanban-internes API bereitstellen
+        api: kanban.api, // interne Kanban-API bereitstellen
         // weitere Konfigurationseigenschaften
     })
 });
@@ -243,7 +243,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-Alternativ kann die Methode [`parse()`](/api/methods/js_kanban_parse_method/) innerhalb von Sveltes `onMount()` verwendet werden, um Daten in Kanban zu laden:
+Sie können auch die [`parse()`](/api/methods/js_kanban_parse_method/)-Methode innerhalb der `onMount()`-Methode von Svelte verwenden, um Daten in Kanban zu laden:
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -268,7 +268,7 @@ onMount(() => {
     })
 
     toolbar = new Toolbar(toolbar_container, {
-        api: kanban.api, // Kanban-internes API bereitstellen
+        api: kanban.api, // interne Kanban-API bereitstellen
         // weitere Konfigurationseigenschaften
     })
 
@@ -287,15 +287,15 @@ onDestroy(() => {
 </div>
 ~~~
 
-Mit der Methode `parse(data)` können die Daten jedes Mal neu geladen werden, wenn sich etwas ändert.
+Die Methode `parse(data)` ermöglicht das erneute Laden der Daten bei jeder Änderung.
 
-An dieser Stelle ist die Kanban-Komponente fertig eingerichtet. Sobald sie auf der Seite eingebunden ist, wird sie mit den übergebenen Daten initialisiert. Weitere gewünschte Einstellungen können nach Bedarf ergänzt werden. Die [Kanban API-Dokumentation](/api/overview/properties_overview/) enthält Details zu allen verfügbaren Optionen.
+Nun ist die Kanban-Komponente einsatzbereit. Sobald das Element zur Seite hinzugefügt wird, initialisiert es Kanban mit den Daten. Sie können die benötigten Konfigurationseinstellungen ebenfalls angeben. Besuchen Sie unsere [Kanban API docs](/api/overview/properties_overview/), um die vollständige Liste der verfügbaren Eigenschaften zu sehen.
 
-#### Ereignisse behandeln
+#### Ereignisse verarbeiten
 
-Immer wenn im Kanban eine Aktion erfolgt, werden Events ausgelöst. Diese können genutzt werden, um auf Benutzeraktionen zu reagieren und eigene Logik auszuführen. Die [vollständige Liste der Events](/api/overview/events_overview/) gibt einen Überblick.
+Wenn ein Benutzer eine Aktion im Kanban ausführt, wird ein Ereignis ausgelöst. Sie können diese Ereignisse nutzen, um die Aktion zu erkennen und den gewünschten Code auszuführen. Sehen Sie sich die [full list of events](/api/overview/events_overview/) an.
 
-Fügen Sie dies in ***Kanban.svelte*** hinzu, um ein Ereignis innerhalb von `onMount()` zu behandeln:
+Öffnen Sie ***Kanban.svelte*** und ergänzen Sie die `onMount()`-Methode wie folgt:
 
 ~~~html {8-10} title="Kanban.svelte"
 <script>
@@ -318,9 +318,9 @@ onDestroy(() => {
 // ...
 ~~~
 
-### Schritt 3. Kanban in die App einbinden
+### Schritt 3. Kanban zur App hinzufügen
 
-Um die Komponente in der App anzuzeigen, öffnen Sie **App.svelte** und aktualisieren den Code wie folgt:
+Um die Komponente zur App hinzuzufügen, öffnen Sie die **App.svelte**-Datei und ersetzen Sie den Standardcode durch den folgenden:
 
 ~~~html title="App.svelte"
 <script>
@@ -333,8 +333,14 @@ Um die Komponente in der App anzuzeigen, öffnen Sie **App.svelte** und aktualis
 <Kanban {cards} {columns} {rows} />
 ~~~
 
-Starten Sie jetzt die App, um Kanban mit den bereitgestellten Daten in Aktion zu sehen.
+Danach können Sie die App starten, um Kanban mit Daten auf der Seite zu sehen.
 
-![Kanban initialization](/assets/trial_kanban.png)
+import trial from '@site/static/img/trial_kanban.png';
 
-Damit ist die Integration von DHTMLX Kanban in eine Svelte-App abgeschlossen. Der Code kann beliebig angepasst werden, um spezifische Anforderungen zu erfüllen. Ein fortgeschritteneres Beispiel finden Sie auf [**GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).
+<img
+    src={trial}
+    alt="Kanban mit Svelte"
+    className="img_border"
+/>
+
+Nun wissen Sie, wie Sie DHTMLX Kanban mit Svelte integrieren können. Sie können den Code an Ihre spezifischen Anforderungen anpassen. Das finale, erweiterte Beispiel finden Sie auf [**GitHub**](https://github.com/DHTMLX/svelte-kanban-demo).

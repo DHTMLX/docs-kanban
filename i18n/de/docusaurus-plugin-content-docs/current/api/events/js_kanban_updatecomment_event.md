@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-comment
-title: update-comment Event
-description: Lernen Sie das update-comment Event aus der DHTMLX JavaScript Kanban-Bibliothek kennen. Entdecken Sie Entwicklerhandbücher und API-Referenzen, sehen Sie sich Codebeispiele und Live-Demos an und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: update-comment Ereignis
+description: Sie können mehr über das update-comment Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # update-comment
@@ -29,20 +29,20 @@ description: Lernen Sie das update-comment Event aus der DHTMLX JavaScript Kanba
 
 ### Parameter
 
-Der Callback für das **update-comment** Event erhält ein Objekt mit folgenden Parametern:
+Der Callback des **update-comment** Ereignisses kann ein Objekt mit den folgenden Parametern erhalten:
 
-- `id` -  (optional) die ID des aktualisierten Kommentars
-- `cardId` - (erforderlich) die ID der Karte, auf der sich der Kommentar befindet
-- `comment` - (erforderlich) ein Objekt mit den Details des aktualisierten Kommentars. Es kann enthalten:
+- `id` -  (optional) die ID des zu aktualisierenden Kommentars
+- `cardId` - (erforderlich) die ID der Karte, deren Kommentar aktualisiert wird
+- `comment` - (erforderlich) das Konfigurationsobjekt des zu aktualisierenden Kommentars. Hier können Sie folgende Parameter angeben:
     - `id` -  (optional) die ID des aktualisierten Kommentars
-    - `cardId` - (optional) die Karten-ID, auf der der aktualisierte Kommentar hinzugefügt wird
-    - `text` - (optional) der aktualisierte Kommentartext
-    - `date` - (optional) das aktualisierte Kommentardatum
-    - `html` - (optional) das HTML-Markup des aktualisierten Kommentars. Um HTML statt Text anzuzeigen, aktivieren Sie die Eigenschaft `html` in der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameter-für-den-typ-comments) Konfiguration
-- `skipProvider` - (optional) steuert, ob die Aktualisierungsanfrage an den Server gesendet werden soll oder nicht
+    - `cardId` - (optional) die ID der Karte, zu der der aktualisierte Kommentar hinzugefügt wird
+    - `text` - (optional) der Text des aktualisierten Kommentars
+    - `date` - (optional) das Datum des aktualisierten Kommentars
+    - `html` - (optional) das HTML-Markup des aktualisierten Kommentars. Aktivieren Sie die Eigenschaft `html` der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) Konfiguration, um das HTML-Markup anstelle von Text anzuzeigen
+- `skipProvider` - (optional) aktiviert/deaktiviert die Verhinderung, dass die Anfrage an den Server gesendet wird
 
 :::info
-Um interne Events zu verwalten, können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden
+Für die Behandlung der internen Ereignisse können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -53,10 +53,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "update-comment" Event hören
+// Anmeldung für das "update-comment" Ereignis
 board.api.on("update-comment", (obj) => {
     console.log(obj.comment);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Event wurde in Version v1.4 eingeführt
+**Änderungsprotokoll:** Das Ereignis wurde in Version v1.4 hinzugefügt

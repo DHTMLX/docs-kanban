@@ -1,14 +1,14 @@
 ---
 sidebar_label: delete-comment
-title: delete-comment Event
-description: Erfahren Sie mehr über das delete-comment Event in der DHTMLX JavaScript Kanban Bibliothek. Entdecken Sie Entwicklerhandbücher, API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+title: delete-comment Ereignis
+description: Sie können mehr über das delete-comment Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # delete-comment
 
 ### Beschreibung
 
-@short: Wird ausgelöst, wenn ein Kommentar zu einer Karte gelöscht wird
+@short: Wird ausgelöst, wenn ein Kommentar einer Karte gelöscht wird
 
 ### Verwendung
 
@@ -22,14 +22,14 @@ description: Erfahren Sie mehr über das delete-comment Event in der DHTMLX Java
 
 ### Parameter
 
-Der Callback für das **delete-comment** Event erhält ein Objekt mit folgenden Eigenschaften:
+Der Callback des **delete-comment** Ereignisses kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `id` -  (optional) die ID des gelöschten Kommentars
-- `cardId` - (erforderlich) die ID der Karte, die den Kommentar enthält
-- `skipProvider` - (optional) steuert, ob die Anfrage an den Server gesendet wird oder nicht
+- `id` -  (optional) die ID des zu löschenden Kommentars
+- `cardId` - (erforderlich) die ID der Karte, deren Kommentar gelöscht werden soll
+- `skipProvider` - (optional) aktiviert/deaktiviert die Verhinderung, dass die Anfrage an den Server gesendet wird
 
 :::info
-Zur Verwaltung interner Ereignisse können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden.
+Für die Behandlung der internen Ereignisse können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -40,10 +40,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "delete-comment" Event hören
+// Auf das "delete-comment" Ereignis abonnieren
 board.api.on("delete-comment", (obj) => {
     console.log(obj.id);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Event wurde in Version 1.4 eingeführt.
+**Änderungsprotokoll:** Das Ereignis wurde in Version v1.4 hinzugefügt

@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateColumn()
 title: updateColumn Methode
-description: Entdecken Sie die updateColumn Methode in der DHTMLX JavaScript Kanban Bibliothek Dokumentation. Sehen Sie Entwicklerhandbücher, API-Referenzen, Codebeispiele, Live-Demos und erhalten Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban.
+description: Sie können mehr über die updateColumn Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # updateColumn()
 
 ### Beschreibung
 
-@short: Ändert die Daten einer Spalte anhand ihrer ID
+@short: Aktualisiert die Spaltendaten anhand ihrer ID
 
 ### Verwendung
 
@@ -22,13 +22,13 @@ updateColumn({
 
 ### Parameter
 
-- `id` - (erforderlich) gibt die ID der Spalte an, die Sie aktualisieren möchten
-- `column` - (optional) ein Objekt mit den neuen Daten für die Spalte. Eine vollständige Liste der **column** Parameter finden Sie [**hier**](/api/config/js_kanban_columns_config.md)
-- `replace` - (optional) gibt an, ob die vorhandenen Daten vollständig ersetzt werden sollen
+- `id` - (erforderlich) die ID der zu aktualisierenden Spalte
+- `column` - (optional) das neue Datenobjekt der Spalte. Die vollständige Liste der **column**-Parameter finden Sie [**hier**](api/config/js_kanban_columns_config.md)
+- `replace` - (optional) aktiviert/deaktiviert das vollständige Ersetzen der Daten
 
-:::note
-Wenn `replace` auf *true* gesetzt ist, werden die vorhandenen Daten vollständig durch die neuen Daten ersetzt. Wenn nicht, werden nur die angegebenen Werte aktualisiert.
-:::
+    :::note
+    Wenn Sie den Parameter `replace` auf *true* setzen, werden die alten Daten vollständig durch die neuen ersetzt. Andernfalls aktualisiert die Methode nur die Werte, die Sie übergeben haben.
+    :::
 
 ### Beispiel
 
@@ -52,5 +52,5 @@ board.updateColumn({
 ~~~
 
 **Änderungsprotokoll**:
-- Die Parameter **id** und **column** wurden in Version 1.1 eingeführt
-- Der Parameter **replace** wurde in Version 1.3 hinzugefügt
+- Die Parameter **id** und **column** wurden in Version v1.1 hinzugefügt
+- Der Parameter **replace** wurde in Version v1.3 hinzugefügt

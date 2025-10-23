@@ -1,14 +1,14 @@
 ---
 sidebar_label: scrollType
 title: scrollType Konfiguration
-description: Entdecken Sie die scrollType-Konfiguration in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Sehen Sie sich Entwickleranleitungen, API-Referenzen, Codebeispiele, Live-Demos an und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die scrollType-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # scrollType
 
 ### Beschreibung
 
-@short: Optional. Gibt an, wie das Scrollen funktioniert.
+@short: Optional. Definiert eine Art des Scrollens
 
 ### Verwendung
 
@@ -17,7 +17,7 @@ scrollType?: "default" | "column";
 ~~~  
 
 :::note
-Wenn `scrollType` auf `"column"` gesetzt ist, kann jede Spalte unabhängig gescrollt werden.
+Wenn Sie die Einstellung `scrollType: "column"` verwenden, können Sie jede Spalte separat scrollen.
 :::
 
 ### Standardkonfiguration
@@ -27,7 +27,7 @@ scrollType: "default"
 ~~~
 
 :::important
-Wenn Sie [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config.md) zusammen mit `scrollType: "default"` verwenden, stellen Sie sicher, dass Sie eine feste Kartenhöhe über die [`cardHeight`](/api/config/js_kanban_cardheight_config.md) Eigenschaft festlegen. Ohne diese Einstellung werden die Karten nicht angezeigt.
+Wenn Sie die Einstellungen [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) und `scrollType: "default"` kombinieren, vergessen Sie nicht, eine statische Höhe für die Karten über die Eigenschaft [`cardHeight`](api/config/js_kanban_cardheight_config.md) anzugeben. Andernfalls werden die Karten nicht angezeigt.
 :::
 
 ### Beispiel
@@ -42,8 +42,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Eigenschaft wurde in Version v1.2 eingeführt
+**Änderungsprotokoll:** Die Eigenschaft wurde in Version v1.2 hinzugefügt
 
-**Verwandte Artikel:** [Konfiguration](/guides/configuration#karten)
+**Verwandte Artikel:** [Konfiguration](guides/configuration.md#cards)
 
-**Verwandte Beispiel:** [Kanban. Feste Kopfzeilen, Lazy Rendering und Spalten-Scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Feste Kopfzeilen, Lazy Rendering und Spaltenscroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

@@ -1,14 +1,14 @@
 ---
 sidebar_label: setLocale()
 title: setLocale Methode
-description: Sie können die setLocale-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die setLocale Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # setLocale()
 
 ### Beschreibung
 
-@short: Setzt eine neue Lokalisierung für die Kanban-Komponente
+@short: Wendet eine neue Locale auf Kanban an
 
 ### Verwendung
 
@@ -18,11 +18,11 @@ setLocale(null | locale?: object): void;
 
 ### Parameter
 
-- `null` - (optional) setzt die Lokalisierung zurück auf die Standardeinstellung (*Englisch*)
-- `locale` - (optional) ein Objekt, das die neuen Lokalisierungsdaten definiert, die angewendet werden sollen
+- `null` - (optional) setzt die Locale auf die Standard-Locale (*Englisch*) zurück
+- `locale` - (optional) das Objekt mit den Daten der neuen Locale, die angewendet werden soll
 
 :::info
-Die Methode `setLocale()` ist speziell dafür ausgelegt, die Lokalisierung für Kanban zu aktualisieren. Um Kanban auf die Standard-Lokalisierung zurückzusetzen, rufen Sie `setLocale()` ohne Argumente auf (oder übergeben Sie *null*). Wenn Sie nur die Lokalisierung der Toolbar ändern möchten, verwenden Sie die Methode [`toolbar.setLocale()`](/api/methods/toolbar_setlocale_method.md).
+Verwenden Sie die Methode `setLocale()`, um ausschließlich eine neue Locale auf Kanban anzuwenden. Um Kanban auf die Standard-Locale zurückzusetzen, rufen Sie die Methode `setLocale()` ohne Argumente (oder mit dem Wert *null*) auf. Verwenden Sie die Methode [`toolbar.setLocale()`](api/methods/toolbar_setlocale_method.md), um ausschließlich eine neue Locale auf die Toolbar anzuwenden.
 :::
 
 ### Beispiel
@@ -33,12 +33,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards,
 });
-// die "de"-Lokalisierung für Kanban einstellen
-board.setLocale(de);
-// Kanban auf die Standard-Lokalisierung zurücksetzen
+// wendet die Locale "de" auf Kanban an
+board.setLocale(kanban.locales["de"]);
+// wendet die Standard-Locale auf Kanban an
 board.setLocale(); // oder board.setLocale(null);
 ~~~
 
-**Änderungsprotokoll:** Diese Methode wurde in Version 1.2 aktualisiert
+**Änderungsprotokoll:** Die Methode wurde in Version v1.2 aktualisiert
 
-**Verwandte Artikel:** [Lokalisierung](/guides/localization.md)
+**Verwandte Artikel:** [Lokalisierung](guides/localization.md)

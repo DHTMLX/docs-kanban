@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateRow()
-title: updateRow Methode
-description: Erfahren Sie mehr über die updateRow Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: updateRow-Methode
+description: Erfahren Sie mehr über die updateRow-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # updateRow()
 
 ### Beschreibung
 
-@short: Ändert die Daten einer Zeile basierend auf ihrer ID.
+@short: Aktualisiert die Zeilendaten anhand ihrer ID
 
 ### Verwendung
 
@@ -22,13 +22,13 @@ updateRow({
 
 ### Parameter
 
-- `id` - (erforderlich) die Kennung der zu aktualisierenden Zeile
-- `row` - (optional) ein Objekt mit den neuen Daten für die Zeile. Die vollständige Liste der **row**-Parameter finden Sie [**hier**](/api/config/js_kanban_rows_config.md)
-- `replace` - (optional) steuert, ob die bestehenden Daten vollständig ersetzt werden sollen
+- `id` - (erforderlich) die ID der zu aktualisierenden Zeile
+- `row` - (optional) das neue Datenobjekt der Zeile. Die vollständige Liste der **row**-Parameter finden Sie [**hier**](api/config/js_kanban_rows_config.md)
+- `replace` - (optional) aktiviert/deaktiviert das vollständige Ersetzen der Daten
 
-:::note
-Wenn der Parameter `replace` auf *true* gesetzt wird, werden die alten Daten vollständig durch die neuen Daten überschrieben. Wenn nicht gesetzt oder auf false, werden nur die angegebenen Werte aktualisiert.
-:::
+    :::note
+    Wenn Sie den Parameter `replace` auf *true* setzen, werden die alten Daten vollständig durch die neuen ersetzt. Andernfalls aktualisiert die Methode nur die übergebenen Werte.
+    :::
 
 ### Beispiel
 

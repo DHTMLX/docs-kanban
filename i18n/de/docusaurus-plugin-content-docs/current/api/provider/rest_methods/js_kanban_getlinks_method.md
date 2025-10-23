@@ -1,17 +1,17 @@
 ---
 sidebar_label: getLinks()
 title: getLinks REST-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getLinks REST-Methode. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getLinks REST-Methode. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # getLinks()
 
 ### Beschreibung
 
-@short: Ruft ein Promise mit den Link-Daten ab
+@short: Gibt ein Promise mit den Link-Daten zurück
 
 :::info
-Die **getLinks()** Methode gehört zum **RestDataProvider**-Service, der für Serverinteraktionen konzipiert ist.
+Die **getLinks()** Methode ist Teil des **RestDataProvider**-Dienstes, der für die Arbeit mit dem Server vorgesehen ist.
 :::
 
 ### Verwendung
@@ -22,7 +22,7 @@ getLinks(): promise;
 
 ### Rückgabewert
 
-Die **getLinks()** Methode sendet eine **GET**-Anfrage an den Server und gibt ein **Promise** zurück, das mit den Link-Daten aufgelöst wird.
+Die **getLinks()** Methode sendet eine Anfrage an den Server mit der **GET**-Methode und gibt ein **Promise** mit den Link-Daten zurück.
 
 ### Beispiel
 
@@ -44,6 +44,6 @@ Promise.all([
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Methode wurde in Version 1.5 eingeführt
+**Änderungsprotokoll:** Die Methode wurde in Version v1.5 hinzugefügt
 
-**Verwandte Artikel:** [Arbeiten mit dem Server](../../../../guides/working_with_server)
+**Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

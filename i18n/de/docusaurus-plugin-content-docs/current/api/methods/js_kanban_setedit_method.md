@@ -1,14 +1,14 @@
 ---
 sidebar_label: setEdit()
-title: setEdit-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die setEdit-Methode. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: setEdit Methode
+description: Sie können mehr über die setEdit Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # setEdit()
 
 ### Beschreibung
 
-@short: Schaltet den Kanban-Karten-Editor ein oder aus
+@short: Schaltet einen Editor im Kanban um
 
 ### Verwendung
 
@@ -18,12 +18,12 @@ setEdit({ cardId: string | number } | null): void;
 
 ### Parameter
 
-Diese Methode akzeptiert entweder *null* oder ein Objekt mit der folgenden Eigenschaft:
+Die Methode kann einen *null*-Wert oder ein Objekt mit folgendem Parameter annehmen:
 
-- `cardId` - (erforderlich) die ID der Karte, die Sie bearbeiten möchten
+- `cardId` - (erforderlich) die ID der zu bearbeitenden Karte
 
 :::note
-Um den Editor zu schließen, verwenden Sie die **setEdit()**-Methode mit dem Argument ***null***
+Um einen Editor zu schließen, rufen Sie die **setEdit()** Methode mit dem Wert ***null*** auf
 :::
 
 ### Beispiel
@@ -34,8 +34,8 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Editor für die angegebene Karten-ID öffnen
+// Editor für die Karte anhand ihrer ID öffnen
 board.setEdit({ cardId: 1 });
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.2 eingeführt
+**Änderungsprotokoll:** Die Methode wurde in Version v1.2 hinzugefügt

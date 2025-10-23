@@ -1,14 +1,14 @@
 ---
 sidebar_label: addColumn()
-title: addColumn-Methode
-description: Sie können mehr über die addColumn-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: addColumn Methode
+description: Sie können mehr über die addColumn Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # addColumn()
 
 ### Beschreibung
 
-@short: Fügt dem Kanban-Board eine neue Spalte hinzu
+@short: Fügt dem Kanban eine neue Spalte hinzu
 
 ### Verwendung
 
@@ -22,12 +22,12 @@ addColumn({
 
 ### Parameter
 
-- `id` - (optional) gibt die ID für die neue Spalte an
-- `column` - (optional) stellt das Datenobjekt bereit, das die neue Spalte definiert
-- `before` - (optional) gibt die ID der Spalte an, vor der die neue eingefügt wird
+- `id` - (optional) die ID der neuen Spalte
+- `column` - (optional) das Datenobjekt der neuen Spalte
+- `before` - (optional) die ID der Spalte, vor der die neue Spalte eingefügt wird
 
 :::info
-Die vollständige Liste der **column**-Parameter finden Sie [**hier**](/api/config/js_kanban_columns_config.md)
+Die vollständige Liste der **column**-Parameter finden Sie [**hier**](api/config/js_kanban_columns_config.md)
 :::
 
 ### Beispiel
@@ -51,4 +51,4 @@ board.addColumn({
 });
 ~~~
 
-**Änderungsprotokoll**: Die Parameter **id**, **column** und **before** wurden in Version v1.1 eingeführt
+**Änderungsprotokoll**: Die Parameter **id**, **column** und **before** wurden in Version v1.1 hinzugefügt

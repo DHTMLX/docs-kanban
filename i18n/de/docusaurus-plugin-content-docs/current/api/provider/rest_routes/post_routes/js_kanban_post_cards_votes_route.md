@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards/{id}/vote
 title: POST /cards/{cardId}/vote
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route POST /cards/{cardId}/vote. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die POST /cards/{cardId}/vote REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # POST `/cards/{cardId}/vote`
@@ -10,15 +10,15 @@ description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahr
 
 @short: Fügt der Karte eine neue Stimme hinzu und gibt ein JSON-Objekt mit der ID des abstimmenden Benutzers zurück.
 
-Diese Route akzeptiert eine **HTTP POST**-Anfrage an den Endpunkt `/cards/{cardId}/vote`.
+Die Route verarbeitet die **HTTP POST**-Anfrage, die an den Pfad `/cards/{cardId}/vote` gesendet wird.
 
 ### Payload
 
-Für diese Anfrage muss kein Payload gesendet werden.
+Es ist kein Payload erforderlich.
 
 ### Antwort
 
-Die Antwort enthält ein JSON-Objekt mit der ID des Benutzers, der abgestimmt hat.
+Die Route gibt ein JSON-Objekt mit der ID des abstimmenden Benutzers zurück.
 
 Beispiel:
 
@@ -28,8 +28,8 @@ Beispiel:
 }
 ~~~
 
-Der HTTP-Statuscode gibt das Ergebnis an: Ein Status von 200 bedeutet, dass die Anfrage erfolgreich war, während 500 auf einen Fehler hinweist.
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

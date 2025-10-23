@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-comment
-title: add-comment Event
-description: Entdecken Sie das add-comment Ereignis in der DHTMLX JavaScript Kanban Bibliothek Dokumentation. Sehen Sie sich Entwicklerhandbücher, API-Referenzen an, probieren Sie Beispiele und Live-Demos aus und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+title: add-comment Ereignis
+description: Sie können das add-comment Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # add-comment
@@ -27,18 +27,18 @@ description: Entdecken Sie das add-comment Ereignis in der DHTMLX JavaScript Kan
 
 ### Parameter
 
-Der Callback für das **add-comment** Ereignis erhält ein Objekt mit folgenden Eigenschaften:
+Der Callback des **add-comment** Ereignisses kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `id` - (optional) die ID, die dem neuen Kommentar zugewiesen wurde
-- `cardId` - (erforderlich) die ID der Karte, zu der der Kommentar hinzugefügt wird
-- `comment` - (erforderlich) ein Objekt, das die Details des neuen Kommentars definiert. Es kann enthalten:
-    - `text` - (optional) der Textinhalt des Kommentars
-    - `date` - (optional) das Datum, an dem der Kommentar gemacht wurde
-    - `html` - (optional) der HTML-Inhalt des Kommentars. Um die Darstellung von HTML anstelle von Text zu aktivieren, aktivieren Sie die Eigenschaft `html` in der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameter-für-den-typ-comments) Konfiguration
-- `skipProvider` - (optional) steuert, ob die Anfrage an den Server verhindert wird oder nicht
+- `id` - (optional) die ID des neuen Kommentars
+- `cardId` - (erforderlich) die ID der Karte, zu der der Kommentar hinzugefügt werden soll
+- `comment` - (erforderlich) das Konfigurationsobjekt des neuen Kommentars. Hier können Sie folgende Parameter angeben:
+    - `text` - (optional) der Text des neuen Kommentars
+    - `date` - (optional) das Datum des neuen Kommentars
+    - `html` - (optional) das HTML-Markup des neuen Kommentars. Aktivieren Sie die `html`-Eigenschaft der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) Konfiguration, um das HTML-Markup anstelle des Texts anzuzeigen
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern, dass die Anfrage an den Server gesendet wird
 
 :::info
-Zur Verwaltung der internen Ereignisbehandlung siehe [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methoden)
+Für die Verarbeitung der internen Ereignisse können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -49,10 +49,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "add-comment" Ereignis hören
+// Anmeldung für das "add-comment" Ereignis
 board.api.on("add-comment", (obj) => {
     console.log(obj.comment);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Ereignis wurde in Version v1.4 eingeführt
+**Änderungsprotokoll:** Das Ereignis wurde in Version v1.4 hinzugefügt

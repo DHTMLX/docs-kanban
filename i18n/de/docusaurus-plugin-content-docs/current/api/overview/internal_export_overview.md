@@ -1,11 +1,11 @@
 ---
 sidebar_label: Exportmethoden
 title: Exportmethoden
-description: Eine Übersicht der internen Exportmethoden für JavaScript Kanban finden Sie in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Schauen Sie sich die Entwicklerhandbücher und die API-Referenz an, erkunden Sie Codebeispiele und Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können eine interne Übersicht der Exportmethoden von JavaScript Kanban in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek finden. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # Exportmethoden
 
 | Name                                         | Beschreibung                                        |
 | -------------------------------------------- | -------------------------------------------------- |
-| [export.json()](../../internal/js_kanban_json_method/)     | @getshort(../internal/js_kanban_json_method.md)    |
+| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |

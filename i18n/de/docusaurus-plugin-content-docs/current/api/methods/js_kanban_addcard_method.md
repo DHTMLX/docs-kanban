@@ -1,7 +1,7 @@
 ---
 sidebar_label: addCard()
-title: Methode addCard
-description: Sie können mehr über die Methode addCard in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: addCard Methode
+description: In der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren Sie mehr über die addCard Methode. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # addCard()
@@ -25,15 +25,15 @@ addCard({
 
 ### Parameter
 
-- `columnId` - (erforderlich) die ID der Spalte, in die die Karte eingefügt wird  
-- `id` - (optional) die Kennung für die neue Karte  
-- `rowId` - (optional) die ID der Zeile, in der die Karte platziert werden soll  
+- `columnId` - (erforderlich) die ID der Zielspalte  
+- `id` - (optional) die ID der neuen Karte  
+- `rowId` - (optional) die ID der Zielreihe  
 - `before` - (optional) die ID der Karte, vor der die neue Karte eingefügt wird  
-- `select` - (optional) bestimmt, ob die neue Karte nach dem Einfügen ausgewählt wird  
-- `card` - (optional) das Datenobjekt, das die neue Karte repräsentiert  
+- `select` - (optional) aktiviert/deaktiviert die Auswahl der neu hinzugefügten Karte  
+- `card` - (optional) das Datenobjekt der neuen Karte  
 
 :::info
-Eine vollständige Liste der **card**-Parameter finden Sie [**hier**](/api/config/js_kanban_cards_config.md)
+Die vollständige Liste der **card**-Parameter finden Sie [**hier**](api/config/js_kanban_cards_config.md)
 :::
 
 ### Beispiel
@@ -44,7 +44,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// neue Karte in der Spalte "backlog" hinzufügen
+// neue Karte in die Spalte "backlog" einfügen
 board.addCard({
     id: 1,
     columnId: "backlog",
@@ -53,5 +53,5 @@ board.addCard({
 ~~~
 
 :::tip
-Es ist auch möglich, die Karten-ID innerhalb des **card**-Objekts anzugeben
+Sie können die ID der neuen Karte auch im **card**-Objekt angeben
 :::

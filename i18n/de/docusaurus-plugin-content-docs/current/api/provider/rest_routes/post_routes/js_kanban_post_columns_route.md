@@ -1,36 +1,36 @@
 ---
 sidebar_label: POST /columns
 title: POST /columns
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route POST /columns. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die POST /columns REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # POST `/columns`
 
 ### Beschreibung
 
-@short: Fügt eine neue Spalte hinzu und gibt ein JSON-Objekt mit der Spalten-ID zurück.
+@short: Fügt eine neue Spalte hinzu und gibt ein JSON-Objekt mit der Spalten-ID zurück
 
-Diese Route verarbeitet eine **HTTP POST**-Anfrage, die an den Endpunkt `/columns` gesendet wird.
+Die Route verarbeitet die **HTTP POST**-Anfrage, die an den Pfad `/columns` gesendet wird.
 
 ### Payload
 
-Der Server erwartet ein JSON-Objekt mit folgender Eigenschaft:
+Der Server erwartet ein JSON-Objekt mit den folgenden Eigenschaften:
 
 | Name        | Typ         | Beschreibung |
 | ----------- | ----------- | ------------ |
-| `label`     | string      | *Erforderlich*. Der Name für die zu erstellende neue Spalte.|
+| `label`     |  string     | *Erforderlich*. Der Name der hinzuzufügenden neuen Spalte. |
 
 Beispiel:
 
 ~~~json
 {
-    "label": "New column",
+    "label": "Neue Spalte",
 }
 ~~~
 
 ### Antwort
 
-Die Antwort enthält ein JSON-Objekt mit der ID der neu erstellten Spalte.
+Die Route gibt ein JSON-Objekt mit der ID der neuen Spalte zurück.
 
 Beispiel:
 
@@ -40,8 +40,8 @@ Beispiel:
 }
 ~~~
 
-Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder ein Fehler aufgetreten ist (response.status == 500).
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)

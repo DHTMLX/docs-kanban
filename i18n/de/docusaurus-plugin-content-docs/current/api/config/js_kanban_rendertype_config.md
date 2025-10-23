@@ -1,17 +1,17 @@
 ---
 sidebar_label: renderType
 title: renderType Konfiguration
-description: Sie können die renderType-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die renderType-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # renderType
 
 ### Beschreibung
 
-@short: Optional. Gibt an, wie die Karten dargestellt werden.
+@short: Optional. Definiert eine Art der Kartenanzeige
 
 :::info
-Diese Einstellung ist besonders nützlich beim Umgang mit einer großen Anzahl von Karten. Wenn sie auf *"lazy"* gesetzt wird, rendert das Widget nur die Karten, die aktuell sichtbar auf dem Board sind, was die Leistung erheblich verbessern kann.
+Diese Eigenschaft wird verwendet, wenn mit einer großen Anzahl von Karten gearbeitet wird. Wenn sie auf *"lazy"* gesetzt wird, rendert das Widget nur den sichtbaren Teil der Karten, die auf dem Board angezeigt werden. Dies kann die Leistung des Widgets erheblich verbessern.
 :::
 
 ### Verwendung
@@ -21,7 +21,7 @@ renderType?: "default" | "lazy";
 ~~~  
 
 :::important
-Wenn `renderType: "lazy"` zusammen mit [`scrollType: "default"`](/api/config/js_kanban_scrolltype_config.md) verwendet wird, stellen Sie sicher, dass eine feste Höhe für Karten über die [`cardHeight`](/api/config/js_kanban_cardheight_config.md) Eigenschaft eingestellt ist. Andernfalls könnten die Karten nicht korrekt angezeigt werden.
+Wenn Sie die Einstellungen `renderType: "lazy"` und [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md) kombinieren, vergessen Sie nicht, eine statische Höhe für die Karten über die Eigenschaft [`cardHeight`](api/config/js_kanban_cardheight_config.md) anzugeben. Andernfalls werden die Karten nicht korrekt angezeigt.
 :::
 
 ### Standardkonfiguration
@@ -38,12 +38,12 @@ new kanban.Kanban("#root", {
     cards,
     rows,
     renderType: "lazy",
-    // weitere Parameter
+    // andere Parameter
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Eigenschaft wurde in Version v1.2 eingeführt
+**Änderungsprotokoll:** Die Eigenschaft wurde in Version 1.2 hinzugefügt
 
-**Verwandte Artikel:** [Konfiguration](/guides/configuration#karten)
+**Verwandte Artikel:** [Konfiguration](guides/configuration.md#cards)
 
-**Verwandtes Beispiel:** [Kanban. Feste Überschriften, Lazy Rendering und Spalten-Scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Fixierte Überschriften, Lazy Rendering und Spalten-Scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

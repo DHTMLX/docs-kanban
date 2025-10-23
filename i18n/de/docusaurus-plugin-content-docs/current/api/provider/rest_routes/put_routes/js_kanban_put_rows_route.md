@@ -1,33 +1,33 @@
 ---
 sidebar_label: PUT /rows
 title: PUT /rows
-description: Sie können die PUT /rows REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die PUT /rows REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # PUT `/rows`
 
 ### Beschreibung
 
-@short: Aktualisiert die Daten für eine bestimmte Zeile (Swimlane) und gibt ein leeres JSON-Objekt zurück.
+@short: Aktualisiert Daten in einer angegebenen Zeile (Swimlane) und gibt ein leeres JSON-Objekt zurück
 
-Diese Route verarbeitet eine **HTTP PUT**-Anfrage, die an den Endpunkt `/rows/{id}` gesendet wird.
+Die Route verarbeitet die **HTTP PUT**-Anfrage, die an den Pfad `/rows/{id}` gesendet wird.
 
 ### Pfadparameter
 
-Der folgende Parameter ist in der Anforderungs-URL enthalten:
+Der folgende Parameter wird in der Anforderungszeile übergeben:
 
 | Name       | Typ         | Beschreibung |
-| ---------- | ----------- | ------------ |
+| ---------- | ----------- | ------------|
 | `id`       | number      | *Erforderlich*. Die ID der Zeile (Swimlane), die aktualisiert werden soll.|
 
-### Nutzlast
+### Payload
 
-Der Server erwartet ein JSON-Objekt, das alle Eigenschaften der Zeile enthält, einschließlich unveränderter und aktualisierter Felder.
+Der Server muss ein JSON-Objekt mit allen Eigenschaften der Zeile erhalten (sowohl unveränderte als auch neue/geänderte).
 
 | Name        | Typ         | Beschreibung |
-| ----------- | ----------- | ------------ |
-| `label`     | string      | *Erforderlich*. Der Name der Zeile, die aktualisiert werden soll.|
-| `collapsed` | boolean     | *Optional*. Gibt an, ob die Zeile anfangs eingeklappt (**true**) oder ausgeklappt ist (**false**, Standardwert).|
+| ----------- | ----------- | ------------|
+| `label`     | string      | *Erforderlich*. Der Name der zu aktualisierenden Zeile.|
+| `collapsed` | boolean     | *Optional*. Der Zustand der Zeile: **true**, wenn die Zeile anfangs eingeklappt ist, und **false** für den ausgeklappten Zustand (Standard).|
 
 Beispiel:
 
@@ -40,14 +40,14 @@ Beispiel:
 }
 ~~~
 
-Ein weiteres Beispiel für das row-Objekt finden Sie im Abschnitt [**rows**](/api/config/js_kanban_rows_config.md).
+Ein weiteres Beispiel für das row-Objekt finden Sie im Abschnitt [**rows**](api/config/js_kanban_rows_config.md).
 
 ### Antwort
 
-Nach einer erfolgreichen Aktualisierung antwortet der Server mit einem leeren JSON-Objekt.
-
-Der HTTP-Statuscode gibt das Ergebnis an: Ein Status von 200 bedeutet, die Anfrage war erfolgreich, während 500 auf einen Fehler hinweist.
+Im Erfolgsfall wird ein leeres JSON-Objekt zurückgegeben.
+  
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)

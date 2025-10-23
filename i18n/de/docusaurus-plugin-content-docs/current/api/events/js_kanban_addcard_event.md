@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-card
 title: add-card Ereignis
-description: Erfahren Sie, wie das add-card Ereignis in der DHTMLX JavaScript Kanban-Bibliothek funktioniert. Entdecken Sie Entwickleranleitungen, API-Referenzen, Testcode-Beispiele, sehen Sie sich Live-Demos an und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+description: Sie können mehr über das add-card Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # add-card
@@ -26,18 +26,18 @@ description: Erfahren Sie, wie das add-card Ereignis in der DHTMLX JavaScript Ka
 
 ### Parameter
 
-Der Callback für das **add-card** Ereignis erhält ein Objekt mit folgenden Eigenschaften:
+Der Callback des **add-card** Ereignisses kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `columnId` - (erforderlich) die ID der Spalte, in der die Karte hinzugefügt wird
-- `id` - (optional) die ID, die der neuen Karte zugewiesen wird
-- `rowId` - (optional) die ID der Zeile, in der die Karte platziert werden soll
+- `columnId` - (erforderlich) die ID der Zielspalte
+- `id` - (optional) die ID der neuen Karte
+- `rowId` - (optional) die ID der Zielreihe
 - `before` - (optional) die ID der Karte, vor der die neue Karte eingefügt wird
-- `select` - (optional) legt fest, ob die neu hinzugefügte Karte ausgewählt werden soll
-- `card` - (optional) das Datenobjekt, das die neue Karte repräsentiert. Vollständige Details zu den Kartenparametern finden Sie [hier](/api/config/js_kanban_cards_config.md)
-- `skipProvider` - (optional) steuert, ob die Anfrage an den Server übersprungen werden soll
+- `select` - (optional) aktiviert/deaktiviert die Auswahl der neu hinzugefügten Karte
+- `card` - (optional) das Datenobjekt der neuen Karte. Die vollständige Liste der Kartenparameter finden Sie [hier](api/config/js_kanban_cards_config.md)
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern, dass die Anfrage an den Server gesendet wird
 
 :::info
-Für die Verwaltung interner Ereignisse siehe die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden)
+Für die Behandlung der internen Ereignisse können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -48,7 +48,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// "add-card" Ereignis überwachen
+// Anmeldung zum "add-card" Ereignis
 board.api.on("add-card", (obj) => {
     console.log(obj.columnId);
 });

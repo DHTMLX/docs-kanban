@@ -1,28 +1,28 @@
 ---
 sidebar_label: deleteComment()
 title: deleteComment Methode
-description: Sie können die deleteComment-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die deleteComment Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # deleteComment()
 
 ### Beschreibung
 
-@short: Entfernt einen Kommentar von einer Karte anhand seiner ID
+@short: Löschen Sie einen Kommentar einer Karte anhand seiner ID
 
 ### Verwendung
 
 ~~~jsx {}
 deleteComment({
-    id?: string | number, 
+    id: string | number, 
     cardId: string | number
 }): void;
 ~~~
 
 ### Parameter
 
-- `id` - (optional) die ID des zu entfernenden Kommentars
-- `cardId` - (erforderlich) die ID der Karte, die den Kommentar enthält
+- `id` - (erforderlich) die ID des zu löschenden Kommentars
+- `cardId` - (erforderlich) die ID der Karte, deren Kommentar gelöscht werden soll
 
 ### Beispiel
 

@@ -1,16 +1,16 @@
 ---
 sidebar_label: POST /links
 title: POST /links
-description: Erforschen Sie die POST /links REST-Route in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Schauen Sie sich Entwickleranleitungen, API-Referenzen, Beispielcode, Live-Demos an und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route POST /links. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # POST `/links`
 
 ### Beschreibung
 
-@short: Fügt einen neuen Link hinzu und gibt ein JSON-Objekt mit der neuen Link-ID zurück
+@short: Erstellt einen neuen Link und gibt ein JSON-Objekt mit einer neuen Link-ID zurück.
 
-Diese Route verarbeitet **HTTP POST**-Anfragen, die an den Endpunkt `/links` gesendet werden.
+Die Route verarbeitet die **HTTP POST**-Anfrage, die an den Pfad `/links` gesendet wird.
 
 ### Payload
 
@@ -18,23 +18,23 @@ Der Server erwartet ein JSON-Objekt mit den folgenden Eigenschaften:
 
 | Name        | Typ                    | Beschreibung |
 | ----------- | ---------------------- | ------------ |
-| `masterId`  | *number* oder *string* | *Erforderlich*. Die ID des Master-Links. |
-| `slaveId`   | *number* oder *string* | *Erforderlich*. Die ID des Slave-Links.  |
-| `relation`  | *string*               | *Erforderlich*. Definiert die Art der Beziehung, die der Link darstellt. |
+| `source`    | *number* oder *string* | *Erforderlich*. Die ID des Start-Links. |
+| `target`    | *number* oder *string* | *Erforderlich*. Die ID des End-Links.   |
+| `relation`  | *string*               | *Erforderlich*. Der Typ der durch den Link erstellten Beziehung. |
 
 Beispiel:
 
 ~~~json
 {
-    "masterId": 1,
-    "slaveId": 2,
-    "relation": "relatesTo",
+    "source": 1,
+    "target": 2,
+    "relation": "relatesTo"
 }
 ~~~
 
 ### Antwort
 
-Die Antwort gibt ein JSON-Objekt mit der ID des neu erstellten Links zurück.
+Die Route gibt ein JSON-Objekt mit einer neuen Link-ID zurück.
 
 Beispiel:
 
@@ -49,6 +49,6 @@ Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status ==
 ---
 
 **Verwandte Artikel**:
-- [Working with server](/guides/working_with_server.md)
-- [getLinks()](/api/provider/rest_methods/js_kanban_getlinks_method.md)
-- [links](/api/config/js_kanban_links_config.md)
+- [Working with server](guides/working_with_server.md)
+- [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
+- [links](api/config/js_kanban_links_config.md)

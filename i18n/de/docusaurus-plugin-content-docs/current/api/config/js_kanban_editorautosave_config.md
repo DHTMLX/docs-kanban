@@ -9,15 +9,15 @@ description: Sie können die editorAutoSave-Konfiguration in der Dokumentation d
 <h1 style = {{color: "red"}}><s>editorAutoSave</s></h1>
 
 :::danger
-Ab Version 1.3 ist die Eigenschaft `editorAutoSave` **veraltet**. Um den "Autosave"-Modus zu steuern, verwenden Sie bitte stattdessen die Eigenschaft [`editor`](/api/config/js_kanban_editor_config.md).
+Ab Version 1.3 ist die Eigenschaft `editorAutoSave` **veraltet**. Um den "Autosave"-Modus zu verwalten, verwenden Sie die Eigenschaft [`editor`](api/config/js_kanban_editor_config.md)!
 :::
 
 ### Beschreibung
 
-@short: Optional. Schaltet den Autosave-Modus ein oder aus
+@short: Optional. Aktiviert/deaktiviert den Autosave-Modus
 
 :::info
-Diese Einstellung ermöglicht es Ihnen, den Autosave im Kanban-Editor zu aktivieren oder zu deaktivieren. Wenn die Eigenschaft **editorAutoSave** auf **false** gesetzt ist, zeigt der Editor eine "Speichern"-Schaltfläche an, um Änderungen manuell zu speichern.
+Mit diesem Parameter können Sie den Autosave-Modus von Kanban aktivieren oder deaktivieren. Wenn Sie die Eigenschaft **editorAutoSave** auf **false** setzen, zeigt der Editor die Schaltfläche "Speichern" an, um die bearbeiteten Daten zu speichern.
 :::
 
 ### Verwendung

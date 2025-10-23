@@ -1,33 +1,33 @@
 ---
 sidebar_label: DELETE /cards
 title: DELETE /cards
-description: Sie können die REST-Route DELETE /cards in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die DELETE /cards REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # DELETE `/cards`
 
 ### Beschreibung
 
-@short: Entfernt Daten von einer Karte
+@short: Löscht Daten auf einer Karte
 
-Diese Route verarbeitet die **HTTP DELETE**-Anfrage, die an den Endpunkt `/cards/{id}` gesendet wird.
+Die Route verarbeitet die **HTTP DELETE**-Anfrage, die an den Pfad `/cards/{id}` gesendet wird.
 
 ### Pfadparameter
 
-Der folgende Parameter ist in der Anforderungs-URL enthalten:
+Der folgende Parameter wird in der Anforderungszeile übergeben:
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `id`       |  number     | *Erforderlich*. Die ID der zu entfernenden Karte.|
+| `id`       |  number     | *Erforderlich*. Die ID der zu löschenden Karte. |
 
 ### Payload
 
-Es muss kein Payload gesendet werden.
+Kein Payload erforderlich.
 
 ### Antwort
 
-Es wird kein Inhalt zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder ein Fehler auftrat (response.status == 500).
+Es werden keine Daten zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)

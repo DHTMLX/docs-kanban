@@ -1,24 +1,24 @@
 ---
 sidebar_label: GET /rows
 title: GET /rows
-description: Erkunden Sie die REST-Route GET /rows in der DHTMLX JavaScript Kanban-Bibliothek. Sehen Sie sich Entwicklerhandbücher, API-Referenzen an, testen Sie Live-Demos und Codebeispiele und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die GET /rows REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # GET `/rows`
 
 ### Beschreibung
 
-@short: Ruft Daten für alle Zeilen ab und gibt ein JSON-Objekt zurück, das ein Array von Zeilen- (Swimlane-) Datenobjekten enthält.
+@short: Ruft Daten zu allen Zeilen ab und gibt ein JSON-Objekt mit einem Array von Objekten mit Zeilendaten (Swimlanes) zurück.
 
-Diese Route antwortet auf **HTTP GET**-Anfragen, die an den Endpunkt `/rows` gesendet werden.
+Die Route verarbeitet die **HTTP GET**-Anfrage, die an den Pfad `/rows` gesendet wird.
 
 ### Payload
 
-Es muss kein Payload mit der Anfrage gesendet werden.
+Es ist keine Payload erforderlich.
 
 ### Antwort
 
-Die Antwort ist ein JSON-Objekt, das ein Array von Zeilendatenobjekten enthält.
+Die Route gibt ein JSON-Objekt mit einem Array von Objekten mit Zeilendaten zurück.
 
 Beispiel:
 
@@ -37,12 +37,12 @@ Beispiel:
 ]
 ~~~
 
-Ein weiteres Beispiel für das zurückgegebene Objekt finden Sie unter [**rows**](/api/config/js_kanban_rows_config.md).
+Für ein weiteres Beispiel des zurückgegebenen Objekts siehe [**rows**](api/config/js_kanban_rows_config.md).
 
-Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder einen Fehler enthielt (response.status == 500).
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
 **Verwandte Artikel**:
-- [Arbeiten mit dem Server](/guides/working_with_server.md)
-- [getRows()](/api/provider/rest_methods/js_kanban_getrows_method.md)
+- [Arbeiten mit dem Server](guides/working_with_server.md)
+- [getRows()](api/provider/rest_methods/js_kanban_getrows_method.md)

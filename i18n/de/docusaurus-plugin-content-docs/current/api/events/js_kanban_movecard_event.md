@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-card
-title: move-card Event
-description: Sie können mehr über das move-card Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklertools und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: move-card Ereignis
+description: Sie können mehr über das move-card Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # move-card
@@ -24,16 +24,16 @@ description: Sie können mehr über das move-card Event in der Dokumentation der
 
 ### Parameter
 
-Der Callback für das **move-card** Event erhält ein Objekt mit den folgenden Eigenschaften:
+Der Callback des **move-card** Ereignisses kann ein Objekt mit den folgenden Parametern erhalten:
 
 - `id` - (erforderlich) die ID der Karte, die verschoben wird
-- `columnId` - (erforderlich) die ID der Spalte, in der die Karte platziert wird
-- `rowId` - (optional) die ID der Zeile, in der die Karte platziert wird
-- `before` - (optional) die ID der Karte, vor der die verschobene Karte eingefügt wird
-- `skipProvider` - (optional) steuert, ob die Anfrage an den Server verhindert werden soll
+- `columnId` - (erforderlich) die ID der Spalte, in die die Karte eingefügt wird
+- `rowId` - (optional) die ID der Zeile, in die die Karte eingefügt wird
+- `before` - (optional) die ID der Karte, vor der die neue Karte platziert wird
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern der Anfrage an den Server
 
 :::info
-Um interne Events zu verwalten, können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden.
+Zur Handhabung der internen Ereignisse können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -44,10 +44,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Abonnieren des "move-card" Events
+// Auf das "move-card" Ereignis abonnieren
 board.api.on("move-card", (obj) => {
     console.log(obj.columnId);
 });
 ~~~
 
-**Verwandtes Beispiel:** [Kanban. Deaktivieren von Drag & Drop für bestimmte Spalten](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Drag & Drop für bestimmte Spalten deaktivieren](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

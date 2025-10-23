@@ -1,17 +1,17 @@
 ---
 sidebar_label: getCards()
 title: getCards REST-Methode
-description: Sie können in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die getCards REST-Methode erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getCards REST-Methode. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # getCards()
 
 ### Beschreibung
 
-@short: Ruft ein Promise mit den Kartendaten ab
+@short: Gibt ein Promise mit den Kartendaten zurück
 
 :::info
-Die **getCards()**-Methode gehört zum **RestDataProvider**-Service, der für die Kommunikation mit dem Server zuständig ist.
+Die **getCards()**-Methode ist Teil des **RestDataProvider**-Dienstes, der für die Arbeit mit dem Server vorgesehen ist.
 :::
 
 ### Verwendung
@@ -22,7 +22,7 @@ getCards(): promise;
 
 ### Rückgabewert
 
-Die **getCards()**-Methode führt eine **GET**-Anfrage an den Server aus und gibt ein **Promise** mit den Kartendaten zurück.
+Die **getCards()**-Methode sendet eine Anfrage an den Server mit der **GET**-Methode und gibt ein **Promise** mit den Kartendaten zurück.
 
 ### Beispiel
 
@@ -42,4 +42,4 @@ Promise.all([
 });
 ~~~
 
-**Verwandte Artikel:** [Arbeiten mit dem Server](../../../../guides/working_with_server)
+**Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

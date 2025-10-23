@@ -1,14 +1,14 @@
 ---
 sidebar_label: end-drag-card
 title: end-drag-card Event
-description: Sie können mehr über das end-drag-card Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über das end-drag-card Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # end-drag-card
 
 ### Beschreibung
 
-@short: Wird ausgelöst, wenn eine Karten-Zieh-Aktion beendet wird
+@short: Wird ausgelöst, wenn das Ziehen einer Karte beendet wird
 
 ### Verwendung
 
@@ -24,16 +24,16 @@ description: Sie können mehr über das end-drag-card Event in der Dokumentation
 
 ### Parameter
 
-Der Callback für das **end-drag-card** Event erhält ein Objekt mit folgenden Details:
+Der Callback des **end-drag-card** Events kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
 - `id` - (erforderlich) die ID der gezogenen Karte
-- `columnId` - (erforderlich) die ID der Spalte, in der sich die Karte jetzt befindet
-- `rowId` - (optional) die ID der Reihe, in der die Karte platziert wurde
-- `before` - (optional) die ID der Karte, die der gezogenen Karte in der Spalte folgt
-- `source` - (optional) ein Array mit den IDs der verschobenen Karten
+- `columnId` - (erforderlich) die ID der Spalte, in der sich die Karte aktuell befindet
+- `rowId` - (optional) die ID der Zeile, in der sich die Karte aktuell befindet
+- `before` - (optional) die ID einer Karte, die sich aktuell nach der gezogenen Karte in der Spalte befindet
+- `source` - (optional) das Array der IDs der verschobenen Karten
 
 :::info
-Zur Verwaltung interner Events können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden.
+Zur Behandlung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -44,12 +44,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "end-drag-card" Event hören
+// Anmeldung für das "end-drag-card" Event
 board.api.on("end-drag-card", (obj) => {
     console.log(obj.columnId);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Event ist seit Version v1.4 verfügbar
+**Änderungsprotokoll:** Das Event wurde in Version v1.4 hinzugefügt
 
 **Verwandtes Beispiel:** [Kanban. Drag & Drop für bestimmte Spalten deaktivieren](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

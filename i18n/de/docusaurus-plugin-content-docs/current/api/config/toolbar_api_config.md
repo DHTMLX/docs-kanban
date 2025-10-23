@@ -1,17 +1,17 @@
 ---
 sidebar_label: api
 title: api Konfiguration
-description: Entdecken Sie die (Toolbar) api Konfiguration in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Finden Sie Entwickleranleitungen, API-Referenzen, Codebeispiele, Live-Demos und eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+description: Sie können die (Toolbar) api Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # api
 
 ### Beschreibung
 
-@short: Erforderlich. Ein Objekt, das die interne API von Kanban repräsentiert
+@short: Erforderlich. Ein Objekt mit der internen API von Kanban
 
 :::info
-Hier bezieht sich die **interne API von Kanban** auf die **Steuerelemente**, die in der Toolbar zu finden sind.
+In diesem Fall wird die **interne API von Kanban** für **Steuerelemente** verwendet, die sich auf der Toolbar befinden
 :::
 
 ### Verwendung
@@ -33,6 +33,6 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Verwandte Artikel:** [Konfiguration](/guides/configuration#toolbar)
+**Verwandte Artikel:** [Konfiguration](guides/configuration.md#toolbar)
 
-**Verwandte Beispiele:** [Kanban. Benutzerdefinierte Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+**Verwandte Beispiel:** [Kanban. Benutzerdefinierte Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

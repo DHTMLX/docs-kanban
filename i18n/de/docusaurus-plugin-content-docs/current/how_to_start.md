@@ -1,23 +1,29 @@
 ---
 sidebar_label: Erste Schritte
 title: Erste Schritte
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie, wie Sie mit DHTMLX Kanban beginnen können. Durchstöbern Sie Entwicklerhandbücher und API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie, wie Sie mit DHTMLX Kanban beginnen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # Erste Schritte
 
-Hier finden Sie eine einfache Anleitung, die Sie Schritt für Schritt beim Einrichten eines vollständig funktionsfähigen Kanban-Boards auf einer Webseite begleitet.
+Dieses übersichtliche und umfassende Tutorial führt Sie durch die notwendigen Schritte, um ein voll funktionsfähiges Kanban auf einer Seite einzubinden.
 
-![JS Kanban Main](/assets/js_kanban_editor.png)
+import editor from '@site/static/img/js_kanban_editor.png';
+
+<img
+    src={editor}
+    alt="JS Kanban Main"
+    className="img_border"
+/>
 
 ## Schritt 1. Einbinden der Quelldateien
 
-Beginnen Sie mit der Erstellung einer HTML-Datei und benennen Sie sie *index.html*. Fügen Sie anschließend die Kanban-Quelldateien in diese Datei ein.
+Beginnen Sie mit dem Erstellen einer HTML-Datei und nennen Sie sie *index.html*. Fügen Sie dann die Kanban-Quelldateien in die erstellte Datei ein.
 
-Sie benötigen zwei Dateien:
+Es gibt zwei notwendige Dateien:
 
-- Die Kanban-JS-Datei
-- Die Kanban-CSS-Datei
+- die JS-Datei von Kanban
+- die CSS-Datei von Kanban
 
 ~~~html {5-6} title="index.html"
 <!DOCTYPE html>
@@ -37,32 +43,32 @@ Sie benötigen zwei Dateien:
 
 ### Kanban mit npm oder yarn installieren
 
-Kanban kann auch mit `yarn` oder `npm` in Ihr Projekt importiert werden.
+Sie können JavaScript Kanban mit dem Paketmanager `yarn` oder `npm` in Ihr Projekt importieren.
 
-#### Testversion von Kanban über npm oder yarn installieren
+#### Testversion von Kanban mit npm oder yarn installieren
 
 :::info
-Laden Sie für die Testversion das [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) herunter und folgen Sie den Anweisungen in der *README*-Datei. Die Testversion ist für 30 Tage verfügbar.
+Wenn Sie die Testversion von Kanban verwenden möchten, laden Sie das [**Test-Kanban-Paket**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) herunter und folgen Sie den Schritten in der *README*-Datei. Beachten Sie, dass die Testversion von Kanban nur 30 Tage verfügbar ist.
 :::
 
-#### PRO Kanban über npm oder yarn installieren
+#### PRO Kanban mit npm oder yarn installieren
 
 :::info
-Der Zugang zum DHTMLX privaten **npm** ist im [Client's Area](https://dhtmlx.com/clients/) verfügbar, wo Sie Ihren Login und Ihr Passwort für **npm** generieren können. Die Installationsschritte werden dort ebenfalls beschrieben. Bitte beachten Sie, dass der Zugang zum privaten **npm** nur aktiv ist, solange Ihre proprietäre Kanban-Lizenz gültig ist.
+Sie können direkt im [Kundenbereich](https://dhtmlx.com/clients/) auf das private **npm** von DHTMLX zugreifen, indem Sie Ihre Zugangsdaten für **npm** generieren. Dort finden Sie auch eine ausführliche Installationsanleitung. Bitte beachten Sie, dass der Zugriff auf das private **npm** nur solange verfügbar ist, wie Ihre proprietäre Kanban-Lizenz aktiv ist.
 :::
 
 ## Schritt 2. Kanban erstellen
 
-Nachdem die Dateien eingebunden wurden, kann Kanban auf der Seite hinzugefügt werden. Beginnen Sie damit, zwei DIV-Container für das Kanban-Board und die Toolbar zu erstellen:
+Nun sind Sie bereit, Kanban auf der Seite hinzuzufügen. Erstellen Sie zunächst die DIV-Container für Kanban und die Toolbar. Gehen Sie dazu wie folgt vor:
 
-- Fügen Sie zwei DIV-Container in die Datei *index.html* ein
+- Fügen Sie zwei DIV-Container in die *index.html* Datei ein
 - Initialisieren Sie Kanban und die Toolbar mit den Konstruktoren **kanban.Kanban** und **kanban.Toolbar**
 
 :::info
-Die Toolbar ist im Kanban-Interface optional. Wenn Sie nur das Kanban-Board benötigen, reicht ein einziger DIV-Container und der **kanban.Kanban**-Konstruktor.
+Die Toolbar ist ein optionaler Bestandteil der Kanban-Oberfläche. Um Kanban ohne Toolbar zu erstellen, können Sie nur einen DIV-Container angeben und das Widget über den **kanban.Kanban** Konstruktor initialisieren.  
 :::
 
-Die Konstruktoren erwarten die IDs der HTML-Container, in die Kanban und die Toolbar eingefügt werden sollen, sowie deren Konfigurationsobjekte.
+Als Parameter nehmen die Konstruktoren die IDs der HTML-Container, in denen Kanban und Toolbar platziert werden, sowie die entsprechenden Konfigurationsobjekte.
 
 ~~~html {9-10,13-15,17-19} title="index.html"
 <!DOCTYPE html>
@@ -91,10 +97,10 @@ Die Konstruktoren erwarten die IDs der HTML-Container, in die Kanban und die Too
 
 ## Schritt 3. Kanban konfigurieren
 
-Nun können Sie die Konfigurationseigenschaften festlegen, wie Kanban beim Start aussehen und funktionieren soll.
+Als Nächstes können Sie die gewünschten Konfigurationseigenschaften für die Initialisierung der Kanban-Komponente angeben.
 
-Um zu beginnen, fügen Sie die Anfangsdaten für **cards** und **columns** (und *rows*, falls benötigt) hinzu.
-Zusätzlich können Sie das Aussehen von [cards](/guides/configuration#karten), dem [editor](/guides/configuration#editor) und der [toolbar](/guides/configuration#toolbar) anpassen.
+Um mit Kanban zu arbeiten, müssen Sie zunächst die Anfangsdaten für **cards** und **columns** (und *rows*) bereitstellen.
+Neben den Anfangsdaten können Sie das Aussehen der [cards](guides/configuration.md#cards), des [editor](guides/configuration.md#editor) und der [toolbar](guides/configuration.md#toolbar) konfigurieren.
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {
@@ -120,4 +126,4 @@ new kanban.Toolbar("#toolbar", {
 
 ## Wie geht es weiter?
 
-Das war's - mit diesen drei einfachen Schritten haben Sie ein Werkzeug, um Ihren Workflow zu visualisieren und zu verwalten. Sie können nun direkt mit Ihren Aufgaben arbeiten oder tiefer in die Funktionen des JavaScript Kanban eintauchen.
+Das war's! Nur drei einfache Schritte und Sie verfügen über ein praktisches Tool zur Visualisierung und Verwaltung Ihres Workflows. Jetzt können Sie mit Ihren Aufgaben arbeiten oder die Möglichkeiten von JavaScript Kanban weiter erkunden.

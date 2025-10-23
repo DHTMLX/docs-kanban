@@ -1,14 +1,14 @@
 ---
 sidebar_label: selectCard()
 title: selectCard Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren Sie mehr über die selectCard Methode. Durchstöbern Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die selectCard Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # selectCard()
 
 ### Beschreibung
 
-@short: Markiert eine Karte basierend auf der angegebenen ID.
+@short: Wählt eine Karte anhand der angegebenen ID aus
 
 ### Verwendung
 
@@ -22,10 +22,10 @@ selectCard({
 ### Parameter
 
 - `id` - (erforderlich) die ID der auszuwählenden Karte
-- `groupMode` - (optional) aktiviert die Möglichkeit, mehrere Karten gleichzeitig auszuwählen (Standard ist **false**)
+- `groupMode` - (optional) aktiviert/deaktiviert die Mehrfachauswahl von Karten (**false** standardmäßig)
 
 :::info
-Wenn **groupMode** auf **true** gesetzt ist, behält die Methode **selectCard()** die aktuelle Auswahl bei und fügt die neue Karte der Auswahl hinzu.
+Wenn Sie den Parameter **groupMode** auf **true** setzen, setzt die Methode **selectCard()** die Auswahl der anderen Elemente nicht zurück
 :::
 
 ### Beispiel
@@ -36,7 +36,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// wähle die Karte mit der ID 1 aus
+// Karte mit der ID 1 auswählen
 board.selectCard({
     id: 1,
     groupMode: true

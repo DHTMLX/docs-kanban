@@ -1,17 +1,17 @@
 ---
 sidebar_label: rowKey
 title: rowKey Konfiguration
-description: Entdecken Sie die rowKey-Konfiguration in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Finden Sie Entwickleranleitungen und API-Referenzen, experimentieren Sie mit Codebeispielen und Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die rowKey Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # rowKey
 
 ### Beschreibung
 
-@short: Optional. Legt fest, wie eine Karte einer Reihe zugewiesen wird.
+@short: Optional. Definiert die Zugehörigkeit der Karte zur Zeile
 
 :::info
-Um Karten in Reihen (Swimlanes) zu organisieren, müssen Sie einen **benutzerdefinierten Schlüssel** definieren, der der **ID** der Reihe in den Kartendaten entspricht. Anschließend setzen Sie die **rowKey**-Eigenschaft in der Konfiguration des Widgets auf diesen *benutzerdefinierten Schlüssel*.
+Um die Karten in Zeilen (Swimlanes) zu verteilen, müssen Sie einen **benutzerdefinierten Schlüssel** angeben und ihn auf die **ID** der gewünschten Zeile im Kartendatenobjekt setzen. Die Eigenschaft **rowKey** muss in der Widget-Konfigurationsobjekt auf diesen *benutzerdefinierten Schlüssel* gesetzt werden.
 :::
 
 ### Verwendung
@@ -39,7 +39,7 @@ new kanban.Kanban("#root", {
     cards,
     rows,
     rowKey: "row_custom_key",
-    // weitere Parameter
+    // andere Parameter
 });
 ~~~
 

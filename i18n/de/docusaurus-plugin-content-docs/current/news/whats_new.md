@@ -1,12 +1,69 @@
 ---
 sidebar_label: Was ist neu
 title: Was ist neu
-description: Informieren Sie sich über die neuesten Funktionen und Updates von DHTMLX Kanban, überprüfen Sie die Release-Historie, stöbern Sie in Entwickleranleitungen und API-Details, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Entdecken Sie die Neuerungen in DHTMLX Kanban sowie die Release-Historie in der Dokumentation der DHTMLX JavaScript UI-Bibliothek. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Evaluierungsversion von DHTMLX Kanban herunter.
 ---
 
 # Was ist neu
 
-Wenn Sie Kanban von einer älteren Version aktualisieren, empfiehlt es sich, [Migration zu neueren Versionen](/news/migration.md) für weitere Informationen zu prüfen.
+Wenn Sie Kanban von einer älteren Version aktualisieren, beachten Sie bitte [Migration zu neueren Versionen](news/migration.md) für Details.
+
+## Version 1.7.0
+
+Veröffentlicht am 14. Oktober 2025
+
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-7/)
+
+### Salesforce-Integration
+
+Ab Version 1.7 können Sie das JavaScript Kanban innerhalb der Salesforce-Umgebung nutzen. Weitere Informationen finden Sie im folgenden Leitfaden: [**Integration mit Salesforce**](guides/integration_with_salesforce.md).
+
+Sie können auch unser [**GitHub-Beispiel**](https://github.com/DHTMLX/salesforce-lwc-demo) erkunden oder die [**Online-Demo**](https://dhtmlx-dev-ed.develop.lightning.force.com/) ausführen (*Login*: ***user***, *Passwort*: ***demo***).
+
+### Neue API
+
+- #### Events
+
+    - [`undo`](api/events/js_kanban_undo_event.md)
+    - [`redo`](api/events/js_kanban_redo_event.md)
+
+- #### Methoden
+
+    - [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md)
+    - [`detach()`](api/internal/js_kanban_detach_method.md)
+
+### Updates
+
+- #### Methoden
+
+    - Die interne Methode [`on`](api/internal/js_kanban_on_method.md) wurde um die Parameter `config.tag` und `config.intercept` erweitert.
+    - Die interne Methode [`intercept`](api/internal/js_kanban_intercept_method.md) wurde um die Parameter `config.tag` und `config.intercept` erweitert.
+
+- #### Eigenschaften
+
+    - Die Eigenschaft [`links`](api/config/js_kanban_links_config.md) wurde wie folgt aktualisiert:
+        - Der Parameter `masterId` wurde durch den Parameter `source` ersetzt.
+        - Der Parameter `slaveId` wurde durch den Parameter `target` ersetzt.
+
+    - Die Eigenschaft [`editorShape`](api/config/js_kanban_editorshape_config.md) wurde aktualisiert. Der Parameter `clearButton` wurde durch `clear` ersetzt.
+
+    - Die Funktion [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) wurde aktualisiert. Der Parameter `store` wurde durch `readonly` ersetzt.
+
+    - Die Eigenschaft [`cards[i].attached[i]`](api/config/js_kanban_cards_config.md) wurde um den Parameter `size` erweitert.
+
+### Entfernte API
+
+- Die Eigenschaft `editorAutoSave` wurde entfernt. Verwenden Sie stattdessen die Eigenschaft [`editor.autoSave`](api/config/js_kanban_editor_config.md).
+
+- Die Parameter `dragItemsCoords` und `dropAreasCoords` wurden aus dem Event [`start-drag-card`](api/events/js_kanban_startdragcard_event.md) entfernt.
+
+### Fehlerbehebungen
+
+- Beim Hochladen eines Stapels von Dateien oder mehrerer großer Dateien wird das Formular aktualisiert, bevor alle Dateien vollständig auf den Server geladen wurden. In diesem Fall werden die Kartendaten fehlerhaft an den Server gesendet.
+- Dateigröße wird nur für neu geladene Dateien angezeigt.
+- Jahr- und Monatswerte werden nach Klick auf den **Fertig**-Button im Editor nicht aktualisiert.
+- Das erweiterbare Textfeld für Kommentare verschiebt den Button außerhalb des Klickbereichs.
+- Ein Skriptfehler tritt auf, wenn eine Karte geöffnet wird, die mit einer gelöschten Karte verknüpft ist.
 
 ## Version 1.6.5
 
@@ -14,8 +71,8 @@ Veröffentlicht am 14. Juli 2025
 
 ### Fehlerbehebungen
 
-- Die `disabled: true` Konfiguration funktioniert nicht für Menüeinträge
-- Wenn Sie eine Zeile zu Kanban hinzufügen, ohne dass eine vordefinierte Zeilenstruktur vorhanden ist, erscheinen keine Zeilenköpfe
+- Die Konfiguration `disabled: true` funktioniert nicht für Menüeinträge.
+- Wenn Sie eine Zeile zu Kanban hinzufügen, ohne eine vordefinierte Zeilenstruktur, erscheinen keine Zeilenköpfe.
 
 ## Version 1.6.4
 
@@ -23,9 +80,9 @@ Veröffentlicht am 12. Juni 2025
 
 ### Fehlerbehebungen
 
-- Karten gehen verloren, wenn sie zu Spalten/Zeilen hinzugefügt werden, die entfernt und dann wiederhergestellt wurden
-- Fehlende Locale-Labels für Uploader-Listen-Buttons
-- Fehlende Readme-Dateien in kommerziellen Versionen der Pakete
+- Karten gehen verloren, wenn sie zu Spalten/Zeilen hinzugefügt werden, die entfernt und dann wiederhergestellt wurden.
+- Fehlende lokale Bezeichnungen für Uploader-Listen-Buttons.
+- Fehlende Readmes in kommerziellen Versionen.
 
 ## Version 1.6.3
 
@@ -33,12 +90,12 @@ Veröffentlicht am 8. April 2025
 
 ### Fehlerbehebungen
 
-- Das Spaltenlimit wird manchmal fälschlicherweise auf die gesamte Spalte angewendet
-- Fehler erscheinen nach dem Verschieben einer Karte und dem Schließen des Modaleditor
-- Die Bestätigung zum Löschen wird hinter dem Modaleditor angezeigt
-- Das "Mehr"-Symbol der Toolbar erscheint und verschwindet beim langsamen Ändern der Fenstergröße
-- Das `delete-card` Ereignis schließt immer den Editor
-- Der Editor kann nicht geöffnet werden, wenn die Priorität auf eine ID gesetzt wird, die nicht in den Optionen vorhanden ist
+- Limit wird fälschlicherweise auf die gesamte Spalte angewendet.
+- Fehler tritt auf, wenn eine Karte nach Schließen des Modal-Editors verschoben wird.
+- Bestätigung für das Löschen wird unterhalb des Modal-Editors angezeigt.
+- Das Symbol "mehr" in der Toolbar erscheint und verschwindet unerwartet bei langsamer Fenstergrößenänderung.
+- Das Event `delete-card` schließt immer den Editor.
+- Der Editor kann nicht geöffnet werden, wenn die Priorität auf eine ID außerhalb der bereitgestellten Optionen gesetzt ist.
 
 ## Version 1.6.2
 
@@ -46,13 +103,13 @@ Veröffentlicht am 14. Februar 2025
 
 ### Fehlerbehebungen
 
-- Falsches Ablaufdatum in der Testversion
-- Drag and Drop gibt eine Warnung auf Touch-Geräten aus
-- Das Setzen von `add: false` in der readonly-Konfiguration entfernt die **Hinzufügen**-Option nicht aus dem Spaltenmenü
-- Der Editor lädt nicht für Karten mit numerischen IDs als Zeichenketten
-- Veraltete Beispiel-Links im Paket
-- Drag and Drop Probleme, wenn Spaltenscrolling und Lazy Rendering zusammen verwendet werden
-- Die Methode `setConfig()` aktualisiert den festen Zustand der Spaltenüberschriften nicht
+- Falsches Ablaufdatum im Testpaket.
+- Warnung beim Drag & Drop auf Touchgeräten.
+- Readonly-Konfiguration `add: false` entfernt die **Hinzufügen**-Option nicht aus dem Spaltenmenü.
+- Der Editor wird für Karten mit numerischen IDs als Strings nicht gerendert.
+- Veralteter Link zu Beispielen im Paket.
+- Spaltenscrollen mit Lazy Rendering hat Drag & Drop-Probleme.
+- Die Methode `setConfig()` aktualisiert den festen Zustand der Spaltenköpfe nicht.
 
 ## Version 1.6.1
 
@@ -60,55 +117,54 @@ Veröffentlicht am 29. November 2024
 
 ### Fehlerbehebungen
 
-- Das "Mehr"-Symbol der Toolbar ist auf schmalen Bildschirmen nicht korrekt ausgerichtet
-- `RestDataProvider` verwendet nicht die von `setHeaders()` gesetzten Header
-- `RestDataProvider.getIDResolver` ist kein Funktionsfehler
+- Die Toolbar auf schmalen Bildschirmen hat ein falsch ausgerichtetes "mehr"-Symbol.
+- `RestDataProvider` ignoriert Header, die über `setHeaders()` definiert wurden.
+- Fehler "`RestDataProvider.getIDResolver` ist keine Funktion".
 
 ## Version 1.6
 
 Veröffentlicht am 13. November 2024
 
-[Release Review im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-6/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-6/)
 
-### Neue Funktionen
+### Neue Funktionalität
 
-- Es kann festgelegt werden, wie viele zugewiesene Nutzer auf einer Karte angezeigt werden, mit [`cardShape.users.maxCount`](/api/config/js_kanban_cardshape_config) (siehe [**Beispiel**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
-- Der Inhalt der Spaltenüberschriften kann mit [`columnShape`](/api/config/js_kanban_columnshape_config) angepasst werden (siehe [**Beispiel**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
-- Die Darstellung der Suchergebnisse in der Toolbar-Suche kann über [`items.searchResult`](/api/config/toolbar_items_config) angepasst werden (siehe [**Beispiel**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
-- Der Editor kann als Modalfenster mit [`editor.placement`](/api/config/js_kanban_editor_config) geöffnet werden (siehe [**Beispiel**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
-- Karten unterstützen nun das Abstimmen per klickbarem Symbol über [`cardShape.votes.clickable`](/api/config/js_kanban_cardshape_config) (siehe [**Beispiel**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
-- Ein Theme kann mit [`setTheme()`](/api/methods/js_kanban_settheme_method) angewendet werden
+- Möglichkeit, wie viele zugewiesene Benutzer auf einer Karte angezeigt werden, über die Eigenschaft [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) zu ändern (siehe [**Beispiel**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
+- Möglichkeit, den Inhalt von Spaltenköpfen über die Eigenschaft [`columnShape`](api/config/js_kanban_columnshape_config.md) zu ändern (siehe [**Beispiel**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
+- Möglichkeit, Ansicht und Inhalt der Suchergebnisse über die Eigenschaft [`items.searchResult`](api/config/toolbar_items_config.md) der Toolbar-**Suche**-Steuerung zu ändern (siehe [**Beispiel**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
+- Möglichkeit, den Editor als modales Fenster über die Eigenschaft [`editor.placement`](api/config/js_kanban_editor_config.md) anzuzeigen (siehe [**Beispiel**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
+- Möglichkeit, das Voting für eine Karte (mit dem Abstimmungs-Icon auf der Karte) über die Eigenschaft [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) zu aktivieren (siehe [**Beispiel**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
 
-### Aktualisierungen
+### Updates
 
 - #### Eigenschaften
 
-    - [`cardShape`](/api/config/js_kanban_cardshape_config) enthält jetzt ***users.maxCount*** und ***votes.clickable***
-    - [`columnShape`](/api/config/js_kanban_columnshape_config) hat jetzt ***headerTemplate*** und ***collapsedTemplate***
-    - [`editor`](/api/config/js_kanban_editor_config) enthält jetzt die ***placement*** Option
-    - Die Eigenschaft [`items`](/api/config/toolbar_items_config) der Toolbar für **search** enthält jetzt ***searchResult***
+    - Die Eigenschaft [`cardShape`](api/config/js_kanban_cardshape_config.md) wurde um die Parameter ***users.maxCount*** und ***votes.clickable*** erweitert.
+    - Die Eigenschaft [`columnShape`](api/config/js_kanban_columnshape_config.md) wurde um die Parameter ***headerTemplate*** und ***collapsedTemplate*** erweitert.
+    - Die Eigenschaft [`editor`](api/config/js_kanban_editor_config.md) wurde um den Parameter ***placement*** erweitert.
+    - Die Eigenschaft [`items`](api/config/toolbar_items_config.md) der Toolbar-**Suche**-Steuerung wurde um den Parameter ***searchResult*** erweitert.
 
-- #### Ereignisse
+- #### Events
 
-    - [`set-edit`](/api/events/js_kanban_setedit_event) bietet jetzt einen ***eventSource***-Parameter (siehe [**Beispiel**](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban))
+    - Das Event [`set-edit`](api/events/js_kanban_setedit_event.md) wurde um den Parameter ***eventSource*** erweitert (siehe [**Beispiel**](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban)).
 
 - #### Methoden
 
-    - [`setConfig()`](/api/methods/js_kanban_setconfig_method) funktioniert nun anders:
-        - Es ändert den Verlauf nicht (History kann auf diese Weise nicht geändert werden)
-        - Themes werden mit dieser Methode nicht geändert (verwenden Sie stattdessen [`setTheme()`](/api/methods/js_kanban_settheme_method))
-        - Der Kanban-Datenspeicher wird nicht zerstört, Sie müssen Event-Listener oder die Toolbar nicht neu anhängen
+    - Die Funktionalität der Methode [`setConfig()`](api/methods/js_kanban_setconfig_method.md) wurde wie folgt aktualisiert:
 
-    - [`setLocale()`](/api/methods/js_kanban_setlocale_method) zerstört ebenfalls nicht den Datenspeicher, so bleiben Event-Listener und Toolbar verbunden
-    - Der `api` Parameter in der Toolbar-Methode [`setLocale()`](/api/methods/toolbar_setlocale_method) ist jetzt veraltet
+        - Die Methode ändert nicht die Historie (Sie können die Historie überhaupt nicht ändern).
+        - Die Methode zerstört nicht den Kanban-Datenspeicher. Sie müssen Event-Listener und Toolbar nicht neu erstellen oder erneut anhängen.
+
+    - Die Methode [`setLocale()`](api/methods/js_kanban_setlocale_method.md) zerstört nicht den Kanban-Datenspeicher. Sie müssen Event-Listener und Toolbar nicht neu erstellen oder erneut anhängen.
+    - Der Parameter `api` der Toolbar-Methode [`setLocale()`](api/methods/toolbar_setlocale_method.md) wurde als veraltet markiert.
 
 ### Fehlerbehebungen
 
-- Das Entfernen eines Kommentars während des Bearbeitens kann dazu führen, dass der Kommentarbereich verschwindet
-- Einige Lokalisierungsstrings fehlten
-- Drag and Drop funktionierte nicht, wenn sowohl [`scrollType: "column"`](/api/config/js_kanban_scrolltype_config) als auch [`renderType: "lazy"`](/api/config/js_kanban_rendertype_config) gesetzt waren
-- Der Editor konnte nicht über das Schließen-Symbol geschlossen werden
-- Im Willow-Skin entsprach die rechte Seite des Editors der Hintergrundfarbe der Fortschrittsanzeige
+- Ein Kommentar, der gerade bearbeitet wird, kann entfernt werden und das Textfeld für neue Kommentare verschwindet.
+- Fehlende Lokalisierungsstrings wurden hinzugefügt.
+- Drag-n-Drop funktioniert nicht, wenn die Einstellungen [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md) und [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) kombiniert werden.
+- Der Editor kann nicht über das Schließen-Symbol geschlossen werden.
+- Der rechte Bereich des Editors hat die gleiche Farbe wie der Hintergrund der Fortschrittsleiste (nur im Willow-Skin).
 
 ## Version 1.5.13
 
@@ -116,11 +172,11 @@ Veröffentlicht am 12. September 2024
 
 ### Fehlerbehebungen
 
-- Der Button "Als Titelbild festlegen" erscheint nicht, wenn die Dateiendung großgeschrieben ist
-- Das Klicken auf eine deaktivierte Multiselect führt zu einem Fehler
-- Nach der Verwendung von [`addCard()`](/api/methods/js_kanban_addcard_method) kann das Scrollen zu Fehlern führen, wenn Spaltenscrolling und Lazy Rendering aktiviert sind
-- Es werden keine Kommentare als leere Zeichenkette statt als leeres Array gespeichert
-- Editor-Stile können durch gleichnamige globale Klassen überschrieben werden. [Siehe Migrationsabschnitt](/news/migration.md/#1512---1513)
+- Der Button "Als Titelbild festlegen" erscheint nicht, wenn die Erweiterung großgeschrieben ist.
+- Ein Klick auf ein deaktiviertes Multiselect-Steuerelement verursacht einen Fehler.
+- Nach dem Aufruf der Methode [`addCard()`](api/methods/js_kanban_addcard_method.md) führt das Scrollen bei [Spaltenscroll](api/config/js_kanban_scrolltype_config.md) und [Lazy Rendering](api/config/js_kanban_rendertype_config.md) zu einem Fehler.
+- Es werden keine Kommentare gespeichert, sondern "" statt [].
+- Der Editorstil wird durch globale Styles mit einem gleichnamigen nicht eindeutigen Klassenselektor überschrieben. [Siehe den Migrationsabschnitt](news/migration.md/#1512---1513).
 
 ## Version 1.5.12
 
@@ -128,8 +184,8 @@ Veröffentlicht am 2. Mai 2024
 
 ### Fehlerbehebungen
 
-- Intercept Regression: Das Zurückgeben von `false` blockiert innere Ereignisse nicht
-- Deaktivierte Dateien erlauben trotzdem Datei-Uploads
+- Intercept-Regression: `return false` verhindert keine internen Events.
+- Deaktivierte Dateien erlauben Dateien.
 
 ## Version 1.5.11
 
@@ -137,11 +193,11 @@ Veröffentlicht am 25. März 2024
 
 ### Fehlerbehebungen
 
-- Kanban CSS-Variablen für das *Dark willow* Skin fehlen in Toolbar und Portalen
-- Änderungen an Kommentaren und Abstimmungen werden nicht in Formulardaten gespeichert, wenn Autosave deaktiviert ist
-- Die **onClick**-Funktion des benutzerdefinierten Spaltenuntermenüs erhält ein `null`-Argument
-- Datepicker können im Editor nicht auf bearbeitbar gesetzt werden
-- Konsolenwarnungen in Kanban-Beispielen
+- Kanban-CSS-Variablen des *Dark willow*-Skins fehlen für Toolbar und Portale.
+- Änderungen an Kommentaren und Abstimmungen werden nicht auf die Formularwerte angewendet, wenn Autosave deaktiviert ist.
+- Benutzerdefiniertes Spaltenuntermenü erhält `null` im Argument der **onClick**-Funktion.
+- Es ist nicht möglich, den bearbeitbaren Modus für Datepicker im Editor zu setzen.
+- Konsolenwarnungen in Kanban-Beispielen.
 
 ## Version 1.5.10
 
@@ -149,10 +205,9 @@ Veröffentlicht am 29. Februar 2024
 
 ### Fehlerbehebungen
 
-- Fehlerhafter Build auf npm
-- Der Parameter `select` wurde zum [`duplicate-card`](/api/events/js_kanban_duplicatecard_event) Ereignis und zur [`duplicateCard()`](/api/methods/js_kanban_duplicatecard_method) Methode hinzugefügt
-- Das Kommentarfeld im Editor hat falsche Styles
-- Das Ändern des Themes verursachte eine Regression
+- Fehlerhafter Build auf dem npm-Server.
+- Der Parameter `select` wurde dem Event [`duplicate-card`](api/events/js_kanban_duplicatecard_event.md) und der Methode [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) hinzugefügt.
+- Falsche Stile für das Kommentarfeld im Kanban-Editor.
 
 ## Version 1.5.9
 
@@ -160,9 +215,9 @@ Veröffentlicht am 20. Februar 2024
 
 ### Fehlerbehebungen
 
-- Kanban-Stile beeinflussen andere Widgets
-- Benutzerdefinierte Spaltenuntermenüeinträge mit `disabled: true` sind weiterhin anklickbar
-- Für das **Uploader**-Control kann keine benutzerdefinierte Upload-Funktion gesetzt werden
+- Kanban beeinflusst die Styles anderer Widgets.
+- Benutzerdefinierte Spaltenuntermenüeinträge mit `disabled: true` sind weiterhin aktiv.
+- Es ist nicht möglich, eine benutzerdefinierte Upload-Funktion für das **Uploader**-Steuerelement festzulegen.
 
 ## Version 1.5.8
 
@@ -170,34 +225,34 @@ Veröffentlicht am 28. November 2023
 
 ### Fehlerbehebungen
 
-- Die **currentUser** TS-Definition fehlte in **IKanbanConfig**
+- Fehlende **currentUser**-TS-Definition in der **IKanbanConfig**-Typdefinition.
 
 ## Version 1.5.7
 
 Veröffentlicht am 14. November 2023
 
-### Aktualisierungen
+### Updates
 
-- Die Toolbar-Methode [`setLocale()`](/api/methods/toolbar_setlocale_method) hat jetzt einen ***api*** Parameter
+- Die Methode [`setLocale()`](api/methods/toolbar_setlocale_method.md) der Toolbar wurde um den Parameter ***api*** erweitert.
 
 ### Fehlerbehebungen
 
-- `disabled: true` funktioniert nicht für Karteneinträge im Menü
-- Unerwünschte Konsolenwarnungen in Kanban-Beispielen
-- Die Aufgabenpriorität kann nicht zurückgesetzt werden
-- Drop-down-Steuerelemente im Editor schließen nicht beim Klick außerhalb
+- Die Konfiguration `disabled: true` funktioniert nicht für Kartenmenüeinträge.
+- Unerwünschte Konsolenwarnungen in Kanban-Beispielen.
+- Es ist nicht möglich, die Priorität einer Aufgabe zurückzusetzen.
+- Dropdown-Steuerelemente im Kanban-Editor schließen sich nicht beim Klick außerhalb.
 
 ## Version 1.5.6
 
 Veröffentlicht am 13. September 2023
 
-### Aktualisierungen
+### Updates
 
-- Kanban kann jetzt als ES-Modul importiert werden
+- Möglichkeit, die Komponente als ES-Modul zu importieren.
 
 ### Fehlerbehebungen
 
-- Regression in npm-Paketen
+- Regression in npm-Paketen.
 
 ## Version 1.5.4
 
@@ -205,58 +260,58 @@ Veröffentlicht am 9. August 2023
 
 ### Fehlerbehebungen
 
-- Hochgeladene Dateien bleiben im Formular nach dem Wechsel zu einer anderen Karte
-- Datei-Upload per Drag-and-Drop funktioniert nicht
-- Karten können durch Drücken von Delete gelöscht werden, während das Formular offen ist
-- Das Dropdown "Suche in" wird nach Kartenauswahl in der Suche leer
-- Hinzugefügte Links werden beim Rückgängigmachen der Link-Hinzufügung nicht im Backend gelöscht
+- Zuvor hochgeladene Dateien bleiben im Formular, nachdem zu einer anderen Karte gewechselt wurde.
+- Datei-Upload via Drag-and-Drop funktioniert nicht.
+- Unerwartetes Löschen von Karten, während der Benutzer die Entf-Taste drückt und das Formular geöffnet ist.
+- Das Dropdown "Suche in" wird leer, nachdem eine Karte über die Suche ausgewählt wurde.
+- Hinzugefügte Links werden im Backend nicht gelöscht, wenn die Hinzufügen-Link-Operation rückgängig gemacht wird.
 
 ## Version 1.5.1
 
 ### Fehlerbehebungen
 
-- Es werden jetzt die korrekten TypeScript-Definitionen generiert
+- Korrekte Generierung von TypeScript-Definitionen.
 
 ## Version 1.5
 
 Veröffentlicht am 15. Juni 2023
 
-[Release Review im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-5/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-5/)
 
-### Neue Funktionen
+### Neue Funktionalität
 
-- Es ist jetzt möglich, Links zwischen Karten zur Laufzeit zu erstellen und zu löschen
-- Links zwischen Karten können serverseitig verwaltet werden
-- Spaltenüberschriften können fixiert werden (siehe [**Beispiel**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
+- Möglichkeit, Verknüpfungen zwischen Karten zur Laufzeit zu setzen und zu löschen.
+- Möglichkeit, Verknüpfungen zwischen Karten serverseitig zu verwalten.
+- Möglichkeit, Spaltenköpfe zu fixieren (siehe [**Beispiel**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)).
 
 ### Neue API
 
 - #### Methoden
 
-    - [`addLink()`](/api/methods/js_kanban_addlink_method)
-    - [`deleteLink()`](/api/methods/js_kanban_deletelink_method)
-    - [`getLinks()`](/api/provider/rest_methods/js_kanban_getlinks_method)
+    - [`addLink()`](api/methods/js_kanban_addlink_method.md)
+    - [`deleteLink()`](api/methods/js_kanban_deletelink_method.md)
+    - [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md)
 
 - #### Routen
 
-    - [`DELETE /links`](/api/provider/rest_routes/delete_routes/js_kanban_delete_links_route)
-    - [`GET /links`](/api/provider/rest_routes/get_routes/js_kanban_get_links_route)
-    - [`POST /links`](/api/provider/rest_routes/post_routes/js_kanban_post_links_route)
+    - [`DELETE /links`](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)
+    - [`GET /links`](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)
+    - [`POST /links`](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)
 
-### Aktualisierungen
+### Updates
 
 - #### Eigenschaften
 
-    - [`columnShape`](/api/config/js_kanban_columnshape_config) enthält jetzt den Parameter ***fixedHeaders***.
+    - Die Eigenschaft [`columnShape`](api/config/js_kanban_columnshape_config.md) wurde um den Parameter ***fixedHeaders*** erweitert.
 
 ### Fehlerbehebungen
 
-- Links konnten zur Laufzeit nicht geparst, exportiert oder serialisiert werden
-- Das Erstellen eines Kommentarbereichs schlug fehl, wenn der Benutzerbereich nicht aktiv war
-- Links im Store veränderten die Originaldaten und wurden nicht korrekt gespeichert
-- Lazy Rendering zerstörte die Hover-Styles für eingeklappte Spalten
-- Beim Verschieben von Karten in eine neue Spalte verschwanden diese
-- Das Textfeld für neue Kommentare schloss sich nicht, wenn das Bearbeiten begann
+- Verknüpfungen können zur Laufzeit nicht geparst, exportiert oder serialisiert werden.
+- Erstellen des Kommentarbereichs schlägt fehl, wenn der Benutzerbereich nicht aktiviert wurde.
+- Verknüpfungen im Store verändern die Originaldaten und werden nicht korrekt gespeichert.
+- Lazy Rendering zerstört die Styles des Hover-Bereichs eingeklappter Spalten.
+- Karten, die in neu erstellte Spalten verschoben werden, verschwinden.
+- Das Textfeld für einen neuen Kommentar wird beim Bearbeiten nicht geschlossen.
 
 ## Version 1.4.2
 
@@ -264,9 +319,9 @@ Veröffentlicht am 13. April 2023
 
 ### Fehlerbehebungen
 
-- Backend-IDs wurden nach dem Hinzufügen nicht in den lokalen Karten-/Spalten-/Zeilendaten gespeichert
-- Einige TS-Definitionen fehlten
-- Dunkle Skin-Styles wirkten sich auf andere Elemente aus
+- Backend-ID wird nach Hinzufügeaktionen nicht zu lokalen Karten-/Spalten-/Zeilendaten gespeichert.
+- Fehlende TS-Definitionen ergänzt.
+- Dark Skin verliert seine Styles.
 
 ## Version 1.4.1
 
@@ -274,142 +329,139 @@ Veröffentlicht am 29. März 2023
 
 ### Fehlerbehebungen
 
-- Das Beibehalten der Sortierung funktionierte nicht richtig
-- Das Deaktivieren des Kontextmenüs in **cardShape**, **columnShape** oder **rowShape** funktionierte nicht wie erwartet
-- Das Hinzufügen von Links im Editor ohne Daten für Links funktionierte nicht richtig
-- Das Spaltenmenü konnte mit dem der Karte übereinstimmen oder gar nicht angezeigt werden
-- Es konnten zwei Aufgaben statt einer gezogen werden
+- Falsches Verhalten beim Beibehalten der Sortierung.
+- Falsches Verhalten, wenn ein Kontextmenü über die Eigenschaften **cardShape**, **columnShape** oder **rowShape** deaktiviert wird.
+- Falsches Verhalten, wenn Sie im Editor Links hinzufügen, aber keine Links in den Daten bereitstellen.
+- Das Menü auf der Spalte kann wie auf der Karte sein oder nicht angezeigt werden.
+- Zwei Aufgaben werden anstelle von einer gezogen.
 
 ## Version 1.4
 
 Veröffentlicht am 21. März 2023
 
-[Release Review im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-4/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-4/)
 
-### Neue Funktionen
+### Neue Funktionalität
 
-- Kommentare können jetzt hinzugefügt werden (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
-- Die **material**, **willow** und **willow-dark** Themes sind verfügbar (siehe [**Beispiel**](https://snippet.dhtmlx.com/jnw54xif?tag=kanban))
-- Es ist möglich, die Anzahl der Nutzer zu begrenzen (siehe [**Beispiel**](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
-- Links zwischen Karten setzen (siehe [**Beispiel**](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
-- Karten können bewertet werden (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- Möglichkeit, Kommentare hinzuzufügen (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- Möglichkeit, Benutzer zu begrenzen (siehe [**Beispiel**](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
+- Möglichkeit, Verknüpfungen zwischen Karten zu setzen (siehe [**Beispiel**](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
+- Möglichkeit, für eine Karte abzustimmen (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
 
 ### Neue API
 
-- #### Ereignisse
+- #### Events
 
-    - [`add-comment`](/api/events/js_kanban_addcomment_event)
-    - [`add-link`](/api/events/js_kanban_addlink_event)
-    - [`delete-comment`](/api/events/js_kanban_deletecomment_event)
-    - [`delete-link`](/api/events/js_kanban_deletelink_event)
-    - [`drag-card`](/api/events/js_kanban_dragcard_event)
-    - [`end-drag-card`](/api/events/js_kanban_enddragcard_event)
-    - [`start-drag-card`](/api/events/js_kanban_startdragcard_event)
-    - [`update-comment`](/api/events/js_kanban_updatecomment_event)
-
-- #### Methoden
-
-    - [`addComment()`](/api/methods/js_kanban_addcomment_method)
-    - [`deleteComment()`](/api/methods/js_kanban_deletecomment_method)
-    - [`updateComment()`](/api/methods/js_kanban_updatecomment_method)
-
-- #### Eigenschaften
-
-    - [`currentUser`](/api/config/js_kanban_currentuser_config)
-    - [`links`](/api/config/js_kanban_links_config)
-    - [`theme`](/api/config/js_kanban_theme_config) (Kanban)
-    - [`theme`](/api/config/toolbar_items_config) (Toolbar)
-
-### Aktualisierungen
+    - [`add-comment`](api/events/js_kanban_addcomment_event.md)
+    - [`add-link`](api/events/js_kanban_addlink_event.md)
+    - [`delete-comment`](api/events/js_kanban_deletecomment_event.md)
+    - [`delete-link`](api/events/js_kanban_deletelink_event.md)
+    - [`drag-card`](api/events/js_kanban_dragcard_event.md)
+    - [`end-drag-card`](api/events/js_kanban_enddragcard_event.md)
+    - [`start-drag-card`](api/events/js_kanban_startdragcard_event.md)
+    - [`update-comment`](api/events/js_kanban_updatecomment_event.md)
 
 - #### Methoden
 
-    - [`api.getState()`](/api/internal/js_kanban_getstate_method) wurde aktualisiert
+    - [`addComment()`](api/methods/js_kanban_addcomment_method.md)
+    - [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md)
+    - [`updateComment()`](api/methods/js_kanban_updatecomment_method.md)
 
 - #### Eigenschaften
 
-    - [`cards`](/api/config/js_kanban_cards_config) unterstützt jetzt ***css***, ***comments*** und ***votes***
-    - [`cardShape`](/api/config/js_kanban_cardshape_config) enthält jetzt ***comments***, ***votes*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) und ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban))
-    - [`cardTemplate`](/api/config/js_kanban_cardtemplate_config) kann jetzt ein Kontextmenü anzeigen
-    - [`columns`](/api/config/js_kanban_columns_config) enthält jetzt ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) und ***overlay*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/nfv59yif?tag=kanban))
-    - [`columnShape`](/api/config/js_kanban_columnshape_config) hat jetzt ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban))
-    - [`editorShape`](/api/config/js_kanban_editorshape_config) ergänzt [***comments***](/guides/configuration/#comments-typ), [***links***](/guides/configuration/#links-typ) und ***format*** für date/dateRange-Typen
-    - [`rows`](/api/config/js_kanban_rows_config) hat jetzt ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
-    - [`rowShape`](/api/config/js_kanban_rowshape_config) enthält jetzt ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
+    - [`currentUser`](api/config/js_kanban_currentuser_config.md)
+    - [`links`](api/config/js_kanban_links_config.md)
+
+### Updates
+
+- #### Methoden
+
+    - Die Methode [`api.getState()`](api/internal/js_kanban_getstate_method.md) wurde aktualisiert.
+
+- #### Eigenschaften
+
+    - Die Eigenschaft [`cards`](api/config/js_kanban_cards_config.md) wurde um die Parameter ***css***, ***comments*** und ***votes*** erweitert.
+    - Die Eigenschaft [`cardShape`](api/config/js_kanban_cardshape_config.md) wurde um die Parameter ***comments***, ***votes*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)) und ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)) erweitert.
+    - Die Eigenschaft [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) kann jetzt das Kontextmenü anzeigen.
+    - Die Eigenschaft [`columns`](api/config/js_kanban_columns_config.md) wurde um die Parameter ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) und ***overlay*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)) erweitert.
+    - Die Eigenschaft [`columnShape`](api/config/js_kanban_columnshape_config.md) wurde um den Parameter ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)) erweitert.
+    - Die Eigenschaft [`editorShape`](api/config/js_kanban_editorshape_config.md) wurde um die Typen [***comments***](guides/configuration.md#comments-type) und [***links***](guides/configuration.md#links-type) sowie den Parameter ***format*** für *date/dateRange*-Typen erweitert.
+    - Die Eigenschaft [`rows`](api/config/js_kanban_rows_config.md) wurde um den Parameter ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban)) erweitert.
+    - Die Eigenschaft [`rowShape`](api/config/js_kanban_rowshape_config.md) wurde um den Parameter ***css*** (siehe [**Beispiel**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban)) erweitert.
 
 ### Veraltete API
 
 - #### Eigenschaften
 
-    - Das Label in Menüobjekten unter `cardShape.menu.items`, `columnShape.menu.items` und `rowShape.menu.items` ist veraltet
+    - Label in Menüeintragsobjekten in `cardShape.menu.items`, `columnShape.menu.items` und `rowShape.menu.items`.
 
 ### Fehlerbehebungen
 
-- Die Position des Menüs ist falsch, wenn Kanban in einem Container mit Rändern ist
-- Eingeklappte Spalten werden bei benutzerdefinierter Breite nicht richtig positioniert
-- Das Ablegen einer Karte in einer eingeklappten Spalte lässt diese verschwinden
-- Eingeklappte Spalten werden mit benutzerdefinierten Breiten nicht korrekt positioniert
-- Im Swimlane-Modus kann das Kontextmenü der Karte vom Bearbeiten-Panel verdeckt werden, was das Löschen erschwert
+- Die Position des Menüs ist falsch, wenn Kanban in einem Container mit Rändern platziert ist.
+- Falsche Position eingeklappter Spalten bei benutzerdefinierter Spaltenbreite.
+- Das Ablegen einer Karte in eine eingeklappte Spalte führt dazu, dass die Karte verschwindet.
+- Falsche Position eingeklappter Spalten bei benutzerdefinierter Spaltenbreite.
+- Swimlanes: Das Kontextmenü der Karte wird vom Bearbeitungsbereich überlagert und die Karte kann daher nicht gelöscht werden.
 
 ## Version 1.3
 
 Veröffentlicht am 29. September 2022
 
-[Release Review im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-3/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-3/)
 
-### Neue Funktionen
+### Neue Funktionalität
 
-- Karten können per API, über das 3-Punkte-Kontextmenü oder mit `Ctrl (Command)` + `D` dupliziert werden (funktioniert für mehrere Karten)
-- Kanban-Daten können als JSON-Datei exportiert werden
-- Kanban-Historie kann verwaltet werden:
-    - Undo- und Redo-Steuerelemente in der Toolbar
-    - Tastenkombinationen:
-        - `Ctrl (Command)`+`Z` für Rückgängig
-        - `Ctrl (Command)`+`Y` oder `Ctrl (Command)`+`Shift`+`Z` für Wiederherstellen
+- Duplizieren von Karten über die API, ein Kontextmenü (3-Punkte-Symbol) oder die Tastenkombinationen `Ctrl (Command)` + `D` (ermöglicht das Duplizieren mehrerer Karten).
+- Exportieren von Kanban-Daten in eine JSON-Datei.
+- Verwalten der Kanban-Historie:
+    - Über *Undo*- und *Redo*-Steuerelemente in der Toolbar.
+    - Über Tastenkombinationen:
+        - `Ctrl (Command)`+`Z` - Aktion rückgängig machen
+        - `Ctrl (Command)`+`Y` oder `Ctrl (Command)`+`Shift`+`Z` - Aktion wiederholen
     - Über die API
 
 ### Neue API
 
-- **Ereignisse:**
-    [`duplicate-card`](/api/events/js_kanban_duplicatecard_event)
+- **Events:**
+    [`duplicate-card`](api/events/js_kanban_duplicatecard_event.md)
 
 - **Methoden:**
-    [`duplicateCard()`](/api/methods/js_kanban_duplicatecard_method),
-    [`export.json()`](/api/internal/js_kanban_json_method),
-    [`getUsers()`](/api/provider/rest_methods/js_kanban_getusers_method),
-    [`redo()`](/api/methods/js_kanban_redo_method),
-    [`undo()`](/api/methods/js_kanban_undo_method)
+    [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md),
+    [`export.json()`](api/internal/js_kanban_json_method.md),
+    [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md),
+    [`redo()`](api/methods/js_kanban_redo_method.md) und
+    [`undo()`](api/methods/js_kanban_undo_method.md)
 
 - **Eigenschaften:**
-    [`editor`](/api/config/js_kanban_editor_config),
-    [`history`](/api/config/js_kanban_history_config)
+    [`editor`](api/config/js_kanban_editor_config.md) und
+    [`history`](api/config/js_kanban_history_config.md)
 
-- **Gemeinsame Einstellungen:**
-    [`$meta`](/api/common/js_kanban_meta_parameter)
+- **Allgemeine Einstellungen:**
+    [`$meta`](api/common/js_kanban_meta_parameter.md)
 
 ### Veraltete API
 
 - **Eigenschaften:**
-    [`editorAutoSave`](/api/config/js_kanban_editorautosave_config)
+    [`editorAutoSave`](api/config/js_kanban_editorautosave_config.md)
 
-### Aktualisierungen
+### Updates
 
-- #### Ereignisse
+- #### Events
 
-    - Das Ereignis [`update-card`](/api/events/js_kanban_updatecard_event) wurde aktualisiert
-    - Das Ereignis [`update-column`](/api/events/js_kanban_updatecolumn_event) wurde aktualisiert
-    - Das Ereignis [`update-row`](/api/events/js_kanban_updaterow_event) wurde aktualisiert
+    - Das Event [`update-card`](api/events/js_kanban_updatecard_event.md) von Kanban wurde aktualisiert.
+    - Das Event [`update-column`](api/events/js_kanban_updatecolumn_event.md) von Kanban wurde aktualisiert.
+    - Das Event [`update-row`](api/events/js_kanban_updaterow_event.md) von Kanban wurde aktualisiert.
 
 - #### Methoden
 
-    - [`updateCard()`](/api/methods/js_kanban_updatecard_method) wurde aktualisiert
-    - [`updateColumn()`](/api/methods/js_kanban_updatecolumn_method) wurde aktualisiert
-    - [`updateRow()`](/api/methods/js_kanban_updaterow_method) wurde aktualisiert
+    - Die Methode [`updateCard()`](api/methods/js_kanban_updatecard_method.md) von Kanban wurde aktualisiert.
+    - Die Methode [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) von Kanban wurde aktualisiert.
+    - Die Methode [`updateRow()`](api/methods/js_kanban_updaterow_method.md) von Kanban wurde aktualisiert.
 
 - #### Eigenschaften
 
-    - Die [`items`](/api/config/toolbar_items_config) der Toolbar enthalten jetzt ***"undo"*** und ***"redo"*** Steuerelemente
-    - [`editorShape`](/api/config/js_kanban_editorshape_config) ergänzt den ***dateRange*** Typ
+    - Die Eigenschaft [`items`](api/config/toolbar_items_config.md) der Toolbar wurde um die Parameter ***"undo"*** und ***"redo"*** (Steuerelemente) erweitert.
+    - Die Eigenschaft [`editorShape`](api/config/js_kanban_editorshape_config.md) wurde um den Typ ***dateRange*** erweitert.
 
 ## Version 1.2.2
 
@@ -417,161 +469,163 @@ Veröffentlicht am 30. August 2022
 
 ### Fehlerbehebungen
 
-- Doppelte Symbole erschienen in Menüs und Toolbar
+- Doppelte Anzeige einiger Symbole in Menü und Toolbar.
 
 ## Version 1.2.1
 
 Veröffentlicht am 28. Juli 2022
 
-### Fehlerbehebungen
+### Fehlerbehebungen​
 
-- `cardHeight` funktionierte nicht mit aktiviertem `scrollType:"column"`
-- Hochgeladene Dateien wurden im Karteneditor nicht angezeigt
-- Lokalisierung funktionierte nicht für "combo"- und "progress"-Felder im Editor
+- Die Eigenschaft `cardHeight` funktioniert nicht mit aktiviertem `scrollType:"column"`.
+- Uploader zeigt hochgeladene Dateien im Karteneditor nicht an.
+- Lokalisierung funktioniert nicht für "combo"- und "progress"-Felder im Karteneditor.
 
 ## Version 1.2
 
 Veröffentlicht am 29. Juni 2022
 
-[Release Review im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-2/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-2/)
 
-### Neue Funktionen
+### Neue Funktionalität 
 
-- Es ist jetzt möglich, neue Karten über das Spaltenmenü hinzuzufügen (siehe [**Beispiel**](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))
-- Lazy Rendering ist verfügbar (siehe [**Beispiel**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
-- Jede Spalte kann ihr eigenes Scrollen haben (siehe [**Beispiel**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
-- Kanban scrollt zu neuen Karten, Spalten und Zeilen, wenn diese erstellt werden (API und UI) (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
-- Karten können sortiert werden (API und UI) (siehe [**Beispiel**](https://snippet.dhtmlx.com/74nyuv14?tag=kanban))
+- Hinzufügen neuer Karten über das Spaltenmenü (siehe [**Beispiel**](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))
+- Lazy Rendering (siehe [**Beispiel**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
+- Scrollen für einzelne Spalten (siehe [**Beispiel**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
+- Kanban zu neuen Karten, Spalten und Zeilen scrollen (API und UI) (siehe [**Beispiel**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- Karten sortieren (API und UI) (siehe [**Beispiel**](https://snippet.dhtmlx.com/74nyuv14?tag=kanban))
 
 ### Neue API
 
-- **Ereignisse:**
-    [`scroll`](/api/events/js_kanban_scroll_event),
-    [`set-edit`](/api/events/js_kanban_setedit_event),
-    [`set-sort`](/api/events/js_kanban_setsort_event)
+- **Events:**
+    [`scroll`](api/events/js_kanban_scroll_event.md),
+    [`set-edit`](api/events/js_kanban_setedit_event.md) und
+    [`set-sort`](api/events/js_kanban_setsort_event.md)
 
 - **Methoden:**
-    [`scroll()`](/api/methods/js_kanban_scroll_method),
-    [`setEdit()`](/api/methods/js_kanban_setedit_method),
-    [`setSort()`](/api/methods/js_kanban_setsort_method)
+    [`scroll()`](api/methods/js_kanban_scroll_method.md),
+    [`setEdit()`](api/methods/js_kanban_setedit_method.md) und
+    [`setSort()`](api/methods/js_kanban_setsort_method.md)
 
 - **Eigenschaften:**
-    [`cardHeight`](/api/config/js_kanban_cardheight_config),
-    [`columnShape`](/api/config/js_kanban_columnshape_config),
-    [`rowShape`](/api/config/js_kanban_rowshape_config),
-    [`renderType`](/api/config/js_kanban_rendertype_config),
-    [`scrollType`](/api/config/js_kanban_scrolltype_config)
+    [`cardHeight`](api/config/js_kanban_cardheight_config.md),
+    [`columnShape`](api/config/js_kanban_columnshape_config.md),
+    [`rowShape`](api/config/js_kanban_rowshape_config.md), 
+    [`renderType`](api/config/js_kanban_rendertype_config.md) und
+    [`scrollType`](api/config/js_kanban_scrolltype_config.md)
 
-### Aktualisierungen
+### Updates
 
 - #### Methoden
 
-    - [`api.getReactiveState()`](/api/internal/js_kanban_getreactivestate_method) wurde aktualisiert
-    - [`api.getState()`](/api/internal/js_kanban_getstate_method) wurde aktualisiert
-    - [`api.getStores()`](/api/internal/js_kanban_getstores_method) wurde aktualisiert
-    - Kanbans [`setLocale()`](/api/methods/js_kanban_setlocale_method) wurde aktualisiert
-    - Toolbars [`setLocale()`](/api/methods/toolbar_setlocale_method) wurde aktualisiert
+    - Die Methode [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) wurde aktualisiert.
+    - Die Methode [`api.getState()`](api/internal/js_kanban_getstate_method.md) wurde aktualisiert.
+    - Die Methode [`api.getStores()`](api/internal/js_kanban_getstores_method.md) wurde aktualisiert.
+    - Die Methode [`setLocale()`](api/methods/js_kanban_setlocale_method.md) von Kanban wurde aktualisiert.
+    - Die Methode [`setLocale()`](api/methods/toolbar_setlocale_method.md) von Toolbar wurde aktualisiert.
 
 - #### Eigenschaften
 
-    - Die [`items`](/api/config/toolbar_items_config) der Toolbar wurden aktualisiert
-    - [`cardShape`](/api/config/js_kanban_cardshape_config) aktualisiert ***start_date***, ***end_date***, ***menu*** und ***users***
-    - [`editorShape`](/api/config/js_kanban_editorshape_config) aktualisiert den ***multiselect*** Typ
+    - Die Eigenschaft [`items`](api/config/toolbar_items_config.md) der Toolbar wurde aktualisiert.
+    - Die Parameter ***start_date***, ***end_date***, ***menu*** und ***users*** der Eigenschaft [`cardShape`](api/config/js_kanban_cardshape_config.md) wurden aktualisiert.
+    - Der Typ ***multiselect*** der Eigenschaft [`editorShape`](api/config/js_kanban_editorshape_config.md) wurde aktualisiert.
 
 #### Allgemein
 
-- CSS-Klassenpräfixe wurden geändert (*siehe [Stilgestaltung](/guides/stylization)*)
-- Die Struktur der Lokalisierung wurde aktualisiert (*siehe [Lokalisierung](/guides/localization)*)
+- Präfixe der CSS-Klassen (*siehe den Abschnitt [Stilisierung](guides/stylization.md)*)
+- Locale-Struktur (*siehe den Abschnitt [Lokalisierung](guides/localization.md)*)
 
 ### Fehlerbehebungen
 
-- Das Binden von Karten an Swimlanes mit der `rowKey`-Konfiguration funktionierte nicht richtig
-- Das Klicken auf ein Kartenmenü öffnete den Editor
-- Das Ziehen mehrerer Karten verhielt sich nicht wie erwartet
-- Das Bearbeiten von Karten funktionierte nicht, wenn `select: false` (**readonly** Konfiguration)
-- Neue Karten, die über `addCard()` hinzugefügt wurden, konnten nicht richtig ausgewählt werden
-- Die Einstellungen `label: false` und `menu: false` in `cardShape` funktionierten nicht wie erwartet
+- Das Binden von Karten an Swimlanes über die Konfiguration `rowKey` funktioniert nicht korrekt.
+- Klick auf Kartenmenü öffnet den Editor.
+- Das Ziehen mehrerer Karten funktioniert nicht korrekt.
+- Das Bearbeiten von Karten bei `select: false` (**readonly** config.md) funktioniert nicht korrekt.
+- Das Auswählen neu hinzugefügter Karten über die Methode `addCard()` funktioniert nicht korrekt.
+- Die Parameter `label: false` und `menu: false` der Eigenschaft `cardShape` funktionieren nicht korrekt.
 
 ## Version 1.1.1
 
 Veröffentlicht am 28. Februar 2022
 
-[Release Review im Blog](https://dhtmlx.com/blog/maintenance-release-kanban-1-1-1/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/maintenance-release-kanban-1-1-1/)
 
 ### Fehlerbehebungen
 
-- Benutzerdefinierte Editor-Felder funktionierten nur, wenn sie in der cardShape-Konfiguration definiert waren
-- Die richtige Karte aus dem Dropdown der Suchleiste auszuwählen war schwierig
+- Benutzerdefiniertes Editor-Feld funktioniert nicht ohne Definition im cardShape-Config.
+- Auswahl der gewünschten Karte aus dem Dropdown-Menü der Suchleiste.
 
 ## Version 1.1
 
 Veröffentlicht am 15. Februar 2022
 
-[Release Review im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-1-wip-validation-new-operations-columns-rows-typescript-support/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/dhtmlx-kanban-1-1-wip-validation-new-operations-columns-rows-typescript-support/)
 
-### Neue Funktionen
+### Neue Funktionalität
 
-- Spalten können mit dem Pfeil neben dem Label eingeklappt oder ausgeklappt werden
-- Es kann ein Limit für die Anzahl der Karten in Spalten und Swimlanes gesetzt werden
-- Spalten können über das Kontextmenü (Drei-Punkte-Symbol) verschoben werden
-- Zeilen können ebenfalls mit dem Kontextmenü (Drei-Punkte-Symbol) verschoben werden
-- Mehrere Karten in derselben Spalte können mit **Shift** + **Klick** ausgewählt werden
-- TypeScript-Definitionen sind jetzt für Kanban verfügbar
+- Möglichkeit, Spalten mit einem Pfeil links neben dem Spaltenlabel ein- und auszuklappen.
+- Möglichkeit, die Anzahl der Karten für Spalten und Swimlanes zu begrenzen.
+- Möglichkeit, Spalten über das Kontextmenü (3-Punkte-Symbol) zu verschieben.
+- Möglichkeit, Zeilen über das Kontextmenü (3-Punkte-Symbol) zu verschieben.
+- Möglichkeit, mehrere Karten derselben Spalte mit **Shift** + **Klick** auszuwählen.
+- Möglichkeit, [TypeScript-Definitionen](guides/typescript_support.md) von Kanban zu verwenden.
 
 ### Neue API
 
-- Neue **Ereignisse** zum Verschieben von Spalten und Zeilen:
-    [`move-column`](/api/events/js_kanban_movecolumn_event),
-    [`move-row`](/api/events/js_kanban_moverow_event)
-- Neue **Methoden** zum Verschieben von Spalten und Zeilen:
-    [`moveColumn()`](/api/methods/js_kanban_movecolumn_method),
-    [`moveRow()`](/api/methods/js_kanban_moverow_method)
+- Neue **Events** zum Verschieben von Spalten und Zeilen: 
+    [`move-column`](api/events/js_kanban_movecolumn_event.md)
+    und
+    [`move-row`](api/events/js_kanban_moverow_event.md)
+- Neue **Methoden** zum Verschieben von Spalten und Zeilen: 
+    [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) 
+    und
+    [`moveRow()`](api/methods/js_kanban_moverow_method.md)
 
-### Aktualisierungen
+### Updates
 
 #### Eigenschaften
 
-- [`cards`](/api/config/js_kanban_cards_config) ist jetzt optional
+- Die Eigenschaft [`cards`](api/config/js_kanban_cards_config.md) ist jetzt optional.
 
-- [`columns`](/api/config/js_kanban_columns_config) ist jetzt optional und ergänzt:
+- Die Eigenschaft [`columns`](api/config/js_kanban_columns_config.md) ist jetzt optional und wurde um folgende Parameter erweitert:
     - ***collapsed***
     - ***limit***
     - ***strictLimit***
 
-- Die ***color*** Option in [`cardShape`](/api/config/js_kanban_cardshape_config) wurde aktualisiert
+- Der Parameter ***color*** der Eigenschaft [`cardShape`](api/config/js_kanban_cardshape_config.md) wurde aktualisiert.
 
 #### Methoden
 
-- [`addColumn`](/api/methods/js_kanban_addcolumn_method) wurde aktualisiert
-- [`addRow`](/api/methods/js_kanban_addrow_method) wurde aktualisiert
-- [`updateCard`](/api/methods/js_kanban_updatecard_method) wurde aktualisiert
-- [`updateColumn`](/api/methods/js_kanban_updatecolumn_method) wurde aktualisiert
-- [`updateRow`](/api/methods/js_kanban_updaterow_method) wurde aktualisiert
-- [`parse`](/api/methods/js_kanban_parse_method) wurde aktualisiert
+- Die Methode [`addColumn`](api/methods/js_kanban_addcolumn_method.md) wurde aktualisiert.
+- Die Methode [`addRow`](api/methods/js_kanban_addrow_method.md) wurde aktualisiert.
+- Die Methode [`updateCard`](api/methods/js_kanban_updatecard_method.md) wurde aktualisiert.
+- Die Methode [`updateColumn`](api/methods/js_kanban_updatecolumn_method.md) wurde aktualisiert.
+- Die Methode [`updateRow`](api/methods/js_kanban_updaterow_method.md) wurde aktualisiert.
+- Die Methode [`parse`](api/methods/js_kanban_parse_method.md) wurde aktualisiert.
 
-#### Ereignisse
+#### Events
 
-- [`add-column`](/api/events/js_kanban_addcolumn_event) wurde aktualisiert
-- [`add-row`](/api/events/js_kanban_addrow_event) wurde aktualisiert
-- [`update-card`](/api/events/js_kanban_updatecard_event) wurde aktualisiert
-- [`update-column`](/api/events/js_kanban_updatecolumn_event) wurde aktualisiert
-- [`update-row`](/api/events/js_kanban_updaterow_event) wurde aktualisiert
+- Das Event [`add-column`](api/events/js_kanban_addcolumn_event.md) wurde aktualisiert.
+- Das Event [`add-row`](api/events/js_kanban_addrow_event.md) wurde aktualisiert.
+- Das Event [`update-card`](api/events/js_kanban_updatecard_event.md) wurde aktualisiert.
+- Das Event [`update-column`](api/events/js_kanban_updatecolumn_event.md) wurde aktualisiert.
+- Das Event [`update-row`](api/events/js_kanban_updaterow_event.md) wurde aktualisiert.
 
 ## Version 1.0
 
 Veröffentlicht am 23. November 2021
 
-[Release Review im Blog](https://dhtmlx.com/blog/releasing-dhtmlx-kanban-board-v-1-0/)
+[Release-Bewertung im Blog](https://dhtmlx.com/blog/releasing-dhtmlx-kanban-board-v-1-0/)
 
-### Grundfunktionen
+### Grundfunktionalität
 
-- **Karten** können verwaltet werden durch:
-    - Hinzufügen neuer Karten
-    - Auswählen von Karten (inklusive Mehrfachauswahl)
-    - Löschen von Karten
-    - Suchen nach Karten
-    - Karten durch Ziehen zwischen Spalten und Zeilen neu anordnen
-    - Bearbeiten von Kartendetails mit einem Editor:
+- Möglichkeit, mit **Karten** wie folgt zu arbeiten:
+    - Neue Karten hinzufügen
+    - Karten auswählen (Mehrfachauswahl)
+    - Karten löschen
+    - Nach Karten suchen
+    - Karten durch Ziehen in die gewünschte Spalte (und Zeile) umsortieren
+    - Kartendaten über den Editor verwalten:
         - Label
         - Beschreibung
         - Fortschritt
@@ -579,16 +633,16 @@ Veröffentlicht am 23. November 2021
         - Enddatum
         - Farbe
         - Priorität
-        - Anhänge (*Dateien* und *Bilder*)
-        - *benutzerdefinierte Felder*
+        - Anhang (*Dateien* und *Bilder*)
+        - *Benutzerdefinierte Felder*
 
-- **Spalten** und **Zeilen** können verwaltet werden durch:
-    - Hinzufügen neuer Spalten und Zeilen
-    - Löschen von Spalten und Zeilen
-    - Umbenennen von Spalten und Zeilen
-    - Zeilen einklappen oder ausklappen
+- Möglichkeit, mit **Spalten** und **Zeilen** wie folgt zu arbeiten:
+    - Neue Spalten und Zeilen hinzufügen
+    - Spalten und Zeilen löschen
+    - Spalten und Zeilen umbenennen
+    - Zeilen ein- und ausklappen
 
-- [Lokalisierung](/guides/localization)
-- [Backend-Integration](/guides/working_with_server) (Go und Node)
-- Browserübergreifende Kompatibilität
-- Unterstützung für Touch-Geräte
+- [Lokalisierung](guides/localization.md)
+- [Integration mit Backend](guides/working_with_server.md) (Go und Node)
+- Kompatibilität mit verschiedenen Browsern
+- Touch-Unterstützung

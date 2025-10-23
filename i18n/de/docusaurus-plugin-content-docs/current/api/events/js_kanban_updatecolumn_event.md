@@ -1,14 +1,14 @@
 ---
 sidebar_label: update-column
-title: update-column Ereignis
-description: Entdecken Sie das update-column Ereignis in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Sehen Sie sich Entwickleranleitungen, API-Referenzen an, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: update-column Event
+description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das update-column Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # update-column
 
 ### Beschreibung
 
-@short: Wird ausgelöst, sobald Spaltendaten aktualisiert werden.
+@short: Wird ausgelöst, wenn Spaltendaten aktualisiert werden
 
 ### Verwendung
 
@@ -23,20 +23,20 @@ description: Entdecken Sie das update-column Ereignis in der DHTMLX JavaScript K
 
 ### Parameter
 
-Der Callback für das **update-column** Ereignis erhält ein Objekt mit den folgenden Eigenschaften:
+Der Callback des **update-column** Events kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `id` - (erforderlich) identifiziert die zu aktualisierende Spalte
-- `column` - (optional) liefert das neue Datenobjekt für die Spalte. Die vollständige Liste der **column**-Eigenschaften finden Sie [**hier**](/api/config/js_kanban_columns_config.md)
-- `replace` - (optional) bestimmt, ob der gesamte Datensatz ersetzt oder nur bestimmte Felder aktualisiert werden
+- `id` - (erforderlich) die ID der zu aktualisierenden Spalte
+- `column` - (optional) das neue Datenobjekt der Spalte. Die vollständige Liste der **column**-Parameter finden Sie [**hier**](api/config/js_kanban_columns_config.md)
+- `replace` - (optional) aktiviert/deaktiviert das vollständige Ersetzen der Daten
 
-:::note
-Wird `replace` auf *true* gesetzt, werden die bestehenden Daten vollständig durch die neuen Daten ersetzt. Bei false oder wenn der Parameter weggelassen wird, werden nur die angegebenen Werte aktualisiert.
-:::
+    :::note
+    Wenn Sie den Parameter `replace` auf *true* setzen, werden die alten Daten vollständig durch die neuen ersetzt. Andernfalls aktualisiert die Methode nur die übergebenen Werte.
+    :::
 
-- `skipProvider` - (optional) steuert, ob die Anfrage zur Aktualisierung des Servers gesendet oder übersprungen wird
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern, dass die Anfrage an den Server gesendet wird
 
 :::info
-Um interne Events zu verwalten, verwenden Sie die [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methoden)
+Zur Behandlung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden.
 :::
 
 ### Beispiel
@@ -47,12 +47,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "update-column" Ereignis hören
+// Anmeldung für das "update-column" Event
 board.api.on("update-column", (obj) => {
     console.log(obj);
 });
 ~~~
 
 **Änderungsprotokoll**:
-- Die Parameter **id** und **column** wurden in Version v1.1 eingeführt
+- Die Parameter **id** und **column** wurden in Version v1.1 hinzugefügt
 - Der Parameter **replace** wurde in Version v1.3 hinzugefügt

@@ -1,26 +1,26 @@
 ---
 sidebar_label: POST /cards
 title: POST /cards
-description: Entdecken Sie den POST /cards REST-Endpunkt in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Greifen Sie auf Entwickleranleitungen, API-Referenzen, Codebeispiele, Live-Demos zu und erhalten Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban.
+description: Sie können die REST-Route POST /cards in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # POST `/cards`
 
 ### Beschreibung
 
-@short: Fügt eine neue Karte hinzu und antwortet mit einem JSON-Objekt, das die ID der Karte enthält.
+@short: Erstellt eine neue Karte und gibt ein JSON-Objekt mit einer neuen Karten-ID zurück.
 
-Dieser Endpunkt verarbeitet **HTTP POST**-Anfragen, die an die URL `/cards` gesendet werden.
+Die Route verarbeitet die **HTTP POST**-Anfrage, die an den Pfad `/cards` gesendet wird.
 
 ### Payload
 
-Der Server erwartet ein JSON-Objekt mit den folgenden Feldern:
+Der Server erwartet ein JSON-Objekt mit den folgenden Eigenschaften:
 
 | Name        | Typ         | Beschreibung |
 | ----------- | ----------- | ------------ |
-| `label`     | string      | *Erforderlich*. Der Titel der zu erstellenden Karte. |
-| `column`    | number      | *Erforderlich*. Die ID der Spalte, in der die Karte platziert wird. |
-| `row`       | number      | *Erforderlich*. Die ID der Zeile, in der die Karte positioniert wird. |
+| `label`     | string      | *Erforderlich*. Der Name der neuen hinzuzufügenden Karte. |
+| `column`    | number      | *Erforderlich*. Die Ziel-Spalten-ID. |
+| `row`       | number      | *Erforderlich*. Die Ziel-Zeilen-ID. |
 
 Beispiel:
 
@@ -34,7 +34,7 @@ Beispiel:
 
 ### Antwort
 
-Der Endpunkt antwortet mit einem JSON-Objekt, das die ID der neu erstellten Karte enthält.
+Die Route gibt ein JSON-Objekt mit einer neuen Karten-ID zurück.
 
 Beispiel:
 
@@ -44,8 +44,8 @@ Beispiel:
 }
 ~~~
 
-Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder ob ein Fehler aufgetreten ist (response.status == 500).
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

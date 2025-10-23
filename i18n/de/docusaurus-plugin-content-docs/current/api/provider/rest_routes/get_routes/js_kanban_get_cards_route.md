@@ -1,24 +1,24 @@
 ---
 sidebar_label: GET /cards
 title: GET /cards
-description: Sie können mehr über die REST-Route GET /cards in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route GET /cards. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # GET `/cards`
 
 ### Beschreibung
 
-@short: Ruft Informationen zu allen Karten ab und gibt ein JSON-Objekt mit einem Array von Kartenobjekten zurück.
+@short: Ruft Daten aller Karten ab und gibt ein JSON-Objekt mit einem Array von Kartenobjekten zurück
 
-Diese Route verarbeitet eine **HTTP GET**-Anfrage, die an den Endpunkt `/cards` gesendet wird.
+Die Route verarbeitet die **HTTP GET**-Anfrage, die an den Pfad `/cards` gesendet wird.
 
 ### Payload
 
-Kein Payload ist erforderlich.
+Es ist kein Payload erforderlich.
 
 ### Antwort
 
-Die Antwort liefert ein JSON-Objekt mit einem Array aller Kartenobjekte.
+Die Route gibt ein JSON-Objekt mit einem Array aller Kartenobjekte zurück.
 
 Beispiel:
 
@@ -67,15 +67,15 @@ Beispiel:
 ~~~
 
 :::note
-Start- und Enddaten von Ereignissen sollten dem ISO-Format **yyyy-MM-dd'T'HH:mm:ss.SSSXXX** entsprechen.
+Die Start- und Enddaten des Ereignisses sollten dem ISO-Format **yyyy-MM-dd'T'HH:mm:ss.SSSXXX** entsprechen.
 :::
 
-Ein weiteres Beispiel für das zurückgegebene Objekt finden Sie unter [**cards**](/api/config/js_kanban_cards_config.md).
+Für ein weiteres Beispiel des zurückgegebenen Objekts siehe [**cards**](api/config/js_kanban_cards_config.md).
 
-Der HTTP-Statuscode gibt das Ergebnis der Anfrage an: Erfolg (response.status == 200) oder Fehler (response.status == 500).
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
 **Verwandte Artikel**:
-- [Arbeiten mit dem Server](/guides/working_with_server.md)
-- [getCards()](/api/provider/rest_methods/js_kanban_getcards_method.md)
+- [Working with server](guides/working_with_server.md)
+- [getCards()](api/provider/rest_methods/js_kanban_getcards_method.md)

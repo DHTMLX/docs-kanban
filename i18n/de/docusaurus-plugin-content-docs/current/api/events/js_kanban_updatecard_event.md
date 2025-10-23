@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-card
-title: update-card Ereignis
-description: Erfahren Sie mehr über das update-card Ereignis in der DHTMLX JavaScript Kanban Bibliothek. Finden Sie Entwickleranleitungen, API-Referenzen, Codebeispiele, Live-Demos und eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+title: update-card Event
+description: Sie können das update-card Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # update-card
@@ -23,20 +23,20 @@ description: Erfahren Sie mehr über das update-card Ereignis in der DHTMLX Java
 
 ### Parameter
 
-Der Callback für das **update-card** Ereignis erhält ein Objekt mit folgenden Eigenschaften:
+Der Callback des **update-card** Events kann ein Objekt mit folgenden Parametern entgegennehmen:
 
-- `id` - (erforderlich) die Kennung der zu aktualisierenden Karte
-- `card` - (optional) ein Objekt mit den neuen Kartendaten. Eine vollständige Liste der **card** Attribute finden Sie [**hier**](/api/config/js_kanban_cards_config.md)
-- `replace` - (optional) bestimmt, ob die bestehenden Daten vollständig ersetzt werden
+- `id` - (erforderlich) die ID der zu aktualisierenden Karte
+- `card` - (optional) das neue Datenobjekt der Karte. Die vollständige Liste der **card**-Parameter finden Sie [**hier**](api/config/js_kanban_cards_config.md)
+- `replace` - (optional) aktiviert/deaktiviert das vollständige Ersetzen der Daten
 
-:::note
-Wenn `replace` auf *true* gesetzt ist, werden die alten Daten vollständig durch die neuen Daten überschrieben. Andernfalls werden nur die angegebenen Werte aktualisiert.
-:::
+    :::note
+    Wenn Sie den Parameter `replace` auf *true* setzen, werden die alten Daten vollständig durch die neuen ersetzt. Andernfalls aktualisiert die Methode nur die übergebenen Werte.
+    :::
 
-- `skipProvider` - (optional) steuert, ob die Aktualisierung an den Server gesendet wird oder nicht
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern, dass die Anfrage an den Server gesendet wird
 
 :::info
-Zur Verwaltung interner Events können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden.
+Zur Behandlung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -47,12 +47,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "update-card" Ereignis hören
+// Anmeldung am "update-card" Event
 board.api.on("update-card", (obj) => {
     console.log(obj);
 });
 ~~~
 
 **Änderungsprotokoll**:
-- Parameter **id** und **card** hinzugefügt in v1.1
-- Parameter **replace** hinzugefügt in v1.3
+- Die Parameter **id** und **card** wurden in Version v1.1 hinzugefügt
+- Der Parameter **replace** wurde in Version v1.3 hinzugefügt

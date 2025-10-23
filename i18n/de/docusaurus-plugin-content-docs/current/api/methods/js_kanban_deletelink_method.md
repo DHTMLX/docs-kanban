@@ -1,14 +1,14 @@
 ---
 sidebar_label: deleteLink()
 title: deleteLink-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die deleteLink-Methode. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die deleteLink-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # deleteLink()
 
 ### Beschreibung
 
-@short: Löscht den angegebenen Link aus dem Kanban-Datenspeicher.
+@short: Entfernt den angegebenen Link aus dem Datenspeicher von Kanban
 
 ### Verwendung
 
@@ -18,7 +18,7 @@ deleteLink({ id: string | number }): void;
 
 ### Parameter
 
-- `id` - (erforderlich) die ID des Links, der entfernt werden soll
+- `id` - (erforderlich) die ID des zu löschenden Links
 
 ### Beispiel
 

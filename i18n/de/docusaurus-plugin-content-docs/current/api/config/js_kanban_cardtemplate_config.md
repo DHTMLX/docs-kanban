@@ -1,14 +1,14 @@
 ---
 sidebar_label: cardTemplate
 title: cardTemplate Konfiguration
-description: Erfahren Sie alles über die cardTemplate-Konfiguration in der DHTMLX JavaScript Kanban Bibliothek. Entdecken Sie Entwickleranleitungen und API-Referenzen, experimentieren Sie mit Codebeispielen und Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die cardTemplate Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # cardTemplate
 
 ### Beschreibung
 
-@short: Optional. Erzeugt und wendet eine benutzerdefinierte HTML-Vorlage für die Karte an.
+@short: Optional. Gibt eine neue HTML-Vorlage der Karte zurück und wendet sie an.
 
 ### Verwendung
 
@@ -20,15 +20,15 @@ function cardTemplate ({ cardFields, selected, dragging, cardShape }){
 
 ### Parameter
 
-Die Callback-Funktion erhält ein Objekt mit folgenden Eigenschaften:
+Die Callback-Funktion erhält ein Objekt mit folgenden Parametern:
 
-- `cardFields` - enthält die Daten der Karte
-- `selected` - gibt an, ob die Karte ausgewählt ist
-- `dragging` - gibt an, ob die Karte gerade gezogen wird
+- `cardFields` - das Datenobjekt der Karte
+- `selected` - der Auswahlstatus der Karte
+- `dragging` - der Ziehstatus der Karte
 - `cardShape` - das Konfigurationsobjekt der Karte
 
 :::important
-Um ein Kontextmenü zur Karten-Vorlage hinzuzufügen, fügen Sie ein benutzerdefiniertes Symbol im Markup ein und verwenden Sie das Attribut `data-menu-id=${cardFields.id}`, wie im folgenden Beispiel gezeigt.
+Wenn Sie ein Kontextmenü in die Karten-Vorlage einfügen möchten, geben Sie ein benutzerdefiniertes Icon im Template-Markup an und verwenden Sie den Ausdruck `data-menu-id=${cardFields.id}`, wie im folgenden Beispiel gezeigt.
 :::
 
 ### Beispiel
@@ -66,8 +66,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Unterstützung für Kontextmenüs wurde in Version 1.4 eingeführt
+**Änderungsprotokoll:** Die Möglichkeit, ein Kontextmenü anzuzeigen, wurde in Version v1.4 hinzugefügt.
 
-**Verwandte Artikel:** [Anpassung](/guides/customization#individuelle-karten)
+**Verwandte Artikel:** [Anpassung](guides/customization.md#custom-cards)
 
-**Verwandte Beispiel:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban)

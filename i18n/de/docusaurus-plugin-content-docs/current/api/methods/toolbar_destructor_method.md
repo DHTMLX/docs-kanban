@@ -1,14 +1,14 @@
 ---
 sidebar_label: destructor()
-title: destructor-Methode
-description: Sie erfahren mehr über die destructor-Methode der Toolbar in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: destructor Methode
+description: Sie erfahren mehr über die destructor Methode der Toolbar in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # destructor()
 
 ### Beschreibung
 
-@short: Räumt auf, indem alle Toolbar-HTML-Elemente entfernt und alle zugehörigen Ereignisse abgehängt werden.
+@short: Entfernt alle HTML-Elemente der Toolbar und trennt alle zugehörigen Ereignisse
 
 ### Verwendung
 
@@ -19,10 +19,10 @@ destructor(): void;
 ### Beispiel
 
 ~~~jsx {6}
-// create Kanban
+// Kanban erstellen
 const board = new kanban.Kanban("#root", {});
-// create Toolbar
+// Toolbar erstellen
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-// remove Toolbar
+// Toolbar entfernen
 toolbar.destructor();
 ~~~

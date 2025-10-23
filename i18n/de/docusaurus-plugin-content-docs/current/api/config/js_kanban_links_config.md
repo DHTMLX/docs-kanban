@@ -1,14 +1,14 @@
 ---
 sidebar_label: links
 title: links Konfiguration
-description: Erfahren Sie mehr über die links Konfiguration in der DHTMLX JavaScript Kanban Bibliothek. Sehen Sie sich Entwickleranleitungen, API-Referenzen an, testen Sie Codebeispiele und Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die links Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # links
 
 ### Beschreibung
 
-@short: Optional. Dies ist ein Array von Objekten, das die Links-Daten enthält.
+@short: Optional. Ein Array von Objekten, die die Link-Daten enthalten
 
 ### Verwendung
 
@@ -16,28 +16,28 @@ description: Erfahren Sie mehr über die links Konfiguration in der DHTMLX JavaS
 links?: [
     {
         id: string | number,
-        masterId: string | number,
-        slaveId: string | number,
+        source: string | number,
+        target: string | number,
         relation: "relatesTo" | "requiredFor" | "duplicate" | "parent"
-    }, {...} // weitere Links-Daten
+    }, {...} // weitere Link-Daten
 ];
 ~~~
 
 ### Parameter
 
-Jeder Link enthält die folgenden Datenfelder:
+Für jeden Link können Sie die folgenden Parameter (Daten) angeben:
 
-- `id` - (erforderlich) die eindeutige ID für den Link
-- `masterId` - (erforderlich) die Karten-ID, die die dominante Rolle im Link darstellt (z. B. „Is required for")
-- `slaveId` - (erforderlich) die Karten-ID, die die passive Rolle im Link darstellt (z. B. „Depends on")
-- `relation` - (erforderlich) der Linktyp. Die verfügbaren Typen sind:
-    - ***"relatesTo"*** - zeigt eine Abhängigkeit an, bei der die aktuelle Aufgabe mit einer anderen verbunden ist
-    - ***"requiredFor"*** - zeigt eine Abhängigkeit an, bei der eine Aufgabe zuerst von einer anderen abgeschlossen werden muss
-    - ***"duplicate"*** - markiert eine Abhängigkeit zwischen duplizierten Aufgaben
-    - ***"parent"*** - stellt eine Abhängigkeit zwischen einer übergeordneten (master) Aufgabe und ihrer untergeordneten (slave) Aufgabe her
+- `id` - (erforderlich) die ID des Links
+- `source` – (erforderlich) die Karten-ID am Anfang des Links (z.B. „Aufgabe A ist erforderlich für Aufgabe B“)
+- `target` – (erforderlich) die Karten-ID am Ende des Links (z.B. „Aufgabe B hängt von Aufgabe A ab“)
+- `relation` - (erforderlich) der Typ des Links. Hier können Sie die folgenden Typen angeben:
+    - ***"relatesTo"*** - definiert eine Abhängigkeit zwischen Aufgaben, bei der die aktuelle Aufgabe an eine andere gebunden ist
+    - ***"requiredFor"*** - definiert eine Abhängigkeit zwischen Aufgaben, bei der eine Aufgabe die andere erfordert
+    - ***"duplicate"*** - definiert eine Abhängigkeit zwischen duplizierten Aufgaben
+    - ***"parent"*** - definiert eine Abhängigkeit zwischen übergeordneten (Master) und untergeordneten (Slave) Aufgaben
 
 :::info
-Um neue Links-Daten dynamisch zu laden, können Sie die Methode [**parse()**](../../methods/js_kanban_parse_method) verwenden!
+Wenn Sie neue Daten für links dynamisch laden möchten, können Sie die [**parse()**](api/methods/js_kanban_parse_method.md) Methode verwenden!
 :::
 
 ### Beispiel
@@ -46,8 +46,8 @@ Um neue Links-Daten dynamisch zu laden, können Sie die Methode [**parse()**](..
 const links = [
     {
         id: 1,
-        masterId: 2,
-        slaveId: 5,
+        source: 2,
+        target: 5,
         relation: "relatesTo",
     }, {...} // weitere Link-Daten
 ];
@@ -60,8 +60,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Eigenschaft wurde in Version v1.4 eingeführt
+**Änderungsprotokoll:** Die Eigenschaft wurde in Version 1.7 aktualisiert:
+    - Der Parameter **masterId** wurde durch den Parameter **source** ersetzt
+    - Der Parameter **slaveId** wurde durch den Parameter **target** ersetzt
 
-**Verwandte Artikel:** [Arbeiten mit Daten](/guides/working_with_data)
+**Verwandte Artikel:** [Arbeiten mit Daten](guides/working_with_data.md)
 
 **Verwandte Beispiel:** [Kanban. Links zwischen Aufgaben](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)

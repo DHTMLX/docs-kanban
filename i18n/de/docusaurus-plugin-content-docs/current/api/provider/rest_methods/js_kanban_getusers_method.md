@@ -1,17 +1,17 @@
 ---
 sidebar_label: getUsers()
 title: getUsers REST-Methode
-description: Sie können die getUsers REST-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die getUsers REST-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # getUsers()
 
 ### Beschreibung
 
-@short: Ruft ein Promise mit den Benutzerdaten ab
+@short: Liefert ein Promise mit den Benutzerdaten
 
 :::info
-Die **getUsers()**-Methode ist Teil des **RestDataProvider**-Dienstes, der für die Serverkommunikation entwickelt wurde
+Die **getUsers()** Methode ist Teil des **RestDataProvider**-Dienstes, der für die Arbeit mit dem Server vorgesehen ist.
 :::
 
 ### Verwendung
@@ -20,9 +20,9 @@ Die **getUsers()**-Methode ist Teil des **RestDataProvider**-Dienstes, der für 
 getUsers(): promise;
 ~~~
 
-### Rückgabewert
+### Rückgabe
 
-Die **getUsers()**-Methode sendet eine **GET**-Anfrage an den Server und gibt ein **Promise** zurück, das mit den Benutzerdaten aufgelöst wird
+Die **getUsers()** Methode sendet eine Anfrage an den Server mit der **GET**-Methode und gibt ein **Promise** mit den Benutzerdaten zurück.
 
 ### Beispiel
 
@@ -55,6 +55,6 @@ Promise.all([
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Methode wurde in Version 1.3 eingeführt
+**Änderungsprotokoll:** Die Methode wurde in Version v1.3 hinzugefügt
 
-**Verwandte Artikel:** [Arbeiten mit dem Server](../../../../guides/working_with_server)
+**Verwandte Artikel:** [Working with server](guides/working_with_server.md)

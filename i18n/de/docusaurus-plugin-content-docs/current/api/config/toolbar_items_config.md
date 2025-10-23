@@ -1,14 +1,14 @@
 ---
 sidebar_label: items
 title: items Konfiguration
-description: Entdecken Sie die (Toolbar) items Konfiguration in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Schauen Sie sich Entwicklerhandbücher, API-Referenzen, Codebeispiele, Live-Demos an und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die Konfiguration der (Toolbar) items in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek nachlesen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # items
 
 ### Beschreibung
 
-@short: Optional. Ein Array, das die auf der Kanban Toolbar angeordneten Steuerelemente enthält.
+@short: Optional. Ein Array mit Steuerelementen, die in der Toolbar des Kanban angeordnet sind.
 
 ### Verwendung
 
@@ -52,26 +52,26 @@ items?: [
 
 ### Parameter
 
-Im **items** Array können Sie die folgenden Parameter verwenden:
+Im **items**-Array können Sie folgende Parameter angeben:
 
 :::info
-#### Um eine *Standard-Suchleiste* hinzuzufügen, verwenden Sie einfach den String `"search"`.
-#### Um eine *benutzerdefinierte Suchleiste* zu konfigurieren, übergeben Sie ein Objekt mit diesen Parametern:
+#### Um eine *Standard-Suchleiste* einzustellen, können Sie den String `"search"` angeben.
+#### Um eine *benutzerdefinierte Suchleiste* einzustellen, können Sie ein Objekt mit den folgenden Parametern angeben:
 
-- `type` - (erforderlich) gibt den Steuerungstyp an (*"search"*)
-- `options` - (optional) ein Array zur Definition der Suchparameter. Jedes Objekt (*Suchoption*) kann enthalten:
-    - `id` - (erforderlich) der Kartenfeld-Schlüssel, der für die Suche verwendet wird
-    - `label` - (erforderlich) der im Dropdown der Suchleiste angezeigte Name der Option
-    - `searchRule` (optional) - eine benutzerdefinierte Funktion zur Definition der Suchkriterien. Sie erhält:
-        - ***card*** - das Karten-Datenobjekt
-        - ***value*** - der Such-Eingabewert
-        - ***by*** - der Kartenfeld-Schlüssel, der für die Suche verwendet wird
-- `searchResult` - (optional) eine Vorlage zur Anpassung der Anzeige der Suchergebnisse
+- `type` - (erforderlich) ein Steuerelementtyp (*"search"*)
+- `options` - (optional) ein Array von Objekten, die die Suchparameter definieren. Für jedes Objekt (*Suchoption*) können Sie folgende Parameter spezifizieren:
+    - `id` - (erforderlich) ein Schlüssel des Kartenfeldes, nach dem die Karten durchsucht werden
+    - `label` - (erforderlich) ein Name der Option, der in einer Dropdown-Liste des Suchleisten-Selectors verwendet wird
+    - `searchRule` (optional) - eine benutzerdefinierte Funktion, die Suchregeln definiert. Sie erhält folgende Argumente:
+        - ***card*** - ein Objekt mit Kartendaten
+        - ***value*** - ein gesuchter Wert, der in der Suchleiste eingegeben wurde
+        - ***by*** - ein Schlüssel des Kartenfeldes, nach dem gesucht wird
+- `resultTemplate` - (optional) eine Vorlage zur Darstellung des benutzerdefinierten Suchergebnisses
 
 ~~~jsx
 items: [
     "search", // Standard-Suchleiste
-    // weitere Steuerelemente
+    // andere Steuerelemente
 ]
 
 // oder 
@@ -82,7 +82,7 @@ items: [
         options: [
             {
                 id: "label",
-                label: "Nach Bezeichnung"
+                label: "Nach Label"
             },
             {
                 id: "start_date",
@@ -100,25 +100,25 @@ items: [
             </div>`
         })
     },
-    // weitere Steuerelemente
+    // andere Steuerelemente
 ]
 ~~~
 :::
 
 :::info
-#### Um eine *Standard-Sortiersteuerung* hinzuzufügen, verwenden Sie einfach den String `"sort"`.
-#### Um eine *benutzerdefinierte Sortiersteuerung* zu konfigurieren, übergeben Sie ein Objekt mit den folgenden Parametern:
+#### Um eine *Standard-Sortiersteuerung* einzustellen, können Sie den String `"sort"` angeben.
+#### Um eine *benutzerdefinierte Sortiersteuerung* einzustellen, können Sie ein Objekt mit den folgenden Parametern angeben:
 
-- `type` - (erforderlich) gibt den Steuerungstyp an (*"sort"*)
-- `options` - (optional) ein Array zur Definition der Sortierparameter. Jedes Objekt (*Sortieroption*) kann enthalten:
-    - `text` - (erforderlich) der im Sortier-Dropdown angezeigte Name der Option
-    - `by` - (optional) der Kartenfeld-Schlüssel oder eine Funktion, die zum Sortieren verwendet wird
-    - `dir` - (optional) die Sortierrichtung, entweder *"asc"* oder *"desc"*
+- `type` - (erforderlich) ein Steuerelementtyp (*"sort"*)
+- `options` - (optional) ein Array von Objekten, die die Sortierparameter definieren. Für jedes Objekt (*Sortieroption*) können Sie folgende Parameter angeben:
+    - `text` - (erforderlich) ein Name der Option, der in einer Dropdown-Liste des Sortier-Selectors verwendet wird
+    - `by` - (optional) ein Schlüssel des Kartenfeldes, nach dem die Karten sortiert werden. Dieser Parameter kann als *String* oder *Funktion* angegeben werden. Die Funktion muss das Kartenfeld für die Sortierung zurückgeben.
+    - `dir` - (optional) eine Sortierreihenfolge. Mögliche Werte sind *"asc"* und *"desc"*
 
 ~~~jsx
 items: [
     "sort", // Standard-Sortiersteuerung
-    // weitere Steuerelemente
+    // andere Steuerelemente
 ]
 // oder 
 items: [
@@ -126,27 +126,27 @@ items: [
         type: "sort",
         options: [
             {
-                text: "Sortieren nach Bezeichnung",
+                text: "Sortiere nach Label",
                 by: "label",
                 dir: "asc"
             },
             {
-                text: "Sortieren nach Beschreibung",
+                text: "Sortiere nach Beschreibung",
                 by: "description",
                 dir: "desc"
             }
         ]
-    }, {...} // weitere Steuerelemente
+    }, {...} // andere Steuerelemente
 ]
 ~~~
 :::
 
-- `"spacer"` - fügt einen Leerraum zwischen den Steuerelementen ein
-- `"undo"` - Steuerung zum Rückgängig machen von Aktionen (ein Klick geht einen Schritt zurück)
-- `"redo"` - Steuerung zum Wiederherstellen von Aktionen (ein Klick geht einen Schritt vorwärts)
-- `"addColumn"` - Steuerung zum Hinzufügen neuer Spalten
-- `"addRow"` - Steuerung zum Hinzufügen neuer Zeilen
-- `custom_control` - (optional) eine benutzerdefinierte Steuerung, die ein **String** oder eine **Funktion** sein kann. Details finden Sie im Abschnitt [Customization](/guides/customization#individuelle-toolbar).
+- `"spacer"` - ein Leerraum zwischen Steuerelementen
+- `"undo"` - eine Steuerung zur Verwaltung der Historie (ein Klick macht einen Schritt zurück)
+- `"redo"` - eine Steuerung zur Verwaltung der Historie (ein Klick macht einen Schritt vorwärts)
+- `"addColumn"` - eine Steuerung zum Hinzufügen neuer Spalten
+- `"addRow"` - eine Steuerung zum Hinzufügen neuer Zeilen
+- `custom_control` - (optional) benutzerdefiniertes Steuerelement. Hier können Sie benutzerdefinierte Steuerelemente sowohl als **String** als auch als **Funktion** angeben. Siehe den Abschnitt [Customization](guides/customization.md#custom-toolbar)
 
 ### Beispiel
 
@@ -180,11 +180,11 @@ new kanban.Toolbar("#toolbar", {
 
 **Änderungsprotokoll:**
 
-- Die *"Undo"* und *"Redo"* Steuerungen wurden in Version v1.3 eingeführt
-- Der Parameter ***items.options[0].label*** in der **sort** Steuerung wurde in v1.4 zu ***items.options[0].text*** umbenannt
-- Der Parameter ***items.searchResult*** für die **"search"** Steuerung wurde in v1.6 hinzugefügt
+- Die Steuerelemente *"Undo"* und *"Redo"* wurden in v1.3 hinzugefügt
+- Der Parameter ***items.options[0].label*** der **sort** Steuerung wurde in v1.4 durch den Parameter ***items.options[0].text*** ersetzt
+- Der Parameter ***items.searchResult*** der **"search"** Steuerung wurde in v1.6 hinzugefügt
 
-**Verwandte Artikel:** [Konfiguration](/guides/configuration#toolbar) und [Anpassung](/guides/customization#individuelle-toolbar)
+**Verwandte Artikel:** [Konfiguration](guides/configuration.md#toolbar) und [Anpassung](guides/customization.md#custom-toolbar)
 
 **Verwandte Beispiele:**
 - [Kanban. Benutzerdefinierte Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

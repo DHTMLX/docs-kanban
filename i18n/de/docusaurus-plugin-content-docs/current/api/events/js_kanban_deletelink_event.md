@@ -1,14 +1,14 @@
 ---
 sidebar_label: delete-link
-title: delete-link Ereignis
-description: Sie können mehr über das delete-link Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, testen Sie Codebeispiele und Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: delete-link Event
+description: Sie können mehr über das delete-link Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # delete-link
 
 ### Beschreibung
 
-@short: Wird ausgelöst, wenn ein Link gelöscht wird
+@short: Wird ausgelöst, wenn ein Link entfernt wird
 
 ### Verwendung
 
@@ -21,13 +21,13 @@ description: Sie können mehr über das delete-link Ereignis in der Dokumentatio
 
 ### Parameter
 
-Der Callback für das **delete-link** Ereignis erhält ein Objekt mit den folgenden Eigenschaften:
+Der Callback des **delete-link** Events kann ein Objekt mit den folgenden Parametern erhalten:
 
-- `id` - (erforderlich) die ID des Links, der gelöscht wird
-- `skipProvider` - (optional) steuert, ob die Anfrage an den Server unterdrückt wird
+- `id` - (erforderlich) die ID des zu löschenden Links
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern des Sendens der Anfrage an den Server
 
 :::info
-Um interne Ereignisse zu verarbeiten, können die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwendet werden
+Zur Verarbeitung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -39,10 +39,10 @@ const board = new kanban.Kanban("#root", {
     cards,
     links
 });
-// auf das "delete-link" Ereignis hören
+// auf das "delete-link" Event abonnieren
 board.api.on("delete-link", (obj) => {
     console.log(obj.id);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Ereignis wurde in Version 1.4 eingeführt
+**Änderungsprotokoll:** Das Event wurde in Version v1.4 hinzugefügt

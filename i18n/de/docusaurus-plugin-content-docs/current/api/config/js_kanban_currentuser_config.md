@@ -1,17 +1,17 @@
 ---
 sidebar_label: currentUser
 title: currentUser Konfiguration
-description: Sie können die currentUser-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die currentUser Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # currentUser
 
 ### Beschreibung
 
-@short: Optional. Repräsentiert die ID des aktuellen Benutzers
+@short: Optional. Eine ID des aktuellen Benutzers
 
 :::note
-Die ID des aktuellen Benutzers sollte mit einer der IDs übereinstimmen, die in der Eigenschaft [`cardShape.users`](/api/config/js_kanban_cardshape_config.md) aufgeführt sind. Wenn diese ID nicht angegeben wird, sind Kommentare nur im Nur-Lese-Modus zugänglich.
+Die ID des aktuellen Benutzers muss mit einer der IDs übereinstimmen, die in der Eigenschaft [`cardShape.users`](api/config/js_kanban_cardshape_config.md) angegeben sind. Wenn Sie diese ID nicht angeben, sind die Kommentare nur lesbar.
 :::
 
 ### Verwendung
@@ -31,6 +31,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Eigenschaft wurde in Version 1.4 eingeführt
+**Änderungsprotokoll:** Die Eigenschaft wurde in Version v1.4 hinzugefügt
 
-**Verwandtes Beispiel:** [Kanban. Swimlanes, Kommentare, Bewertungen](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Swimlanes, Kommentare, Stimmen](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

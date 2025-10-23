@@ -1,14 +1,14 @@
 ---
 sidebar_label: readonly
-title: readonly Config
-description: Erkunden Sie die readonly-Konfiguration in der DHTMLX JavaScript Kanban Bibliothek Dokumentation. Sehen Sie sich Entwickleranleitungen, API-Referenzen an, probieren Sie Codebeispiele und Live-Demos aus und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+title: readonly Konfiguration
+description: Sie können die readonly-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # readonly
 
 ### Beschreibung
 
-@short: Optional. Steuert, ob das Bearbeiten, Hinzufügen, Auswählen und Ziehen von Karten aktiviert oder deaktiviert ist.
+@short: Optional. Aktiviert/deaktiviert das Bearbeiten, Hinzufügen, Auswählen und Ziehen der Karten
 
 ### Verwendung
 
@@ -25,27 +25,27 @@ readonly?: {
 
 ### Parameter
 
-Es gibt zwei Möglichkeiten, den **readonly-Modus** einzurichten: mit dem **kurzen** oder dem **ausführlichen** Format.
+Um den **readonly-Modus** zu konfigurieren, können Sie die **kurzen** oder **erweiterten** Parameter verwenden.
 
-Das **kurze** Format:
-- `readonly` - (optional) aktiviert oder deaktiviert den **readonly-Modus** für das Kanban.
+Der **kurze** Parameter:
+- `readonly` - (optional) aktiviert/deaktiviert den **readonly-Modus** des Kanban
 
-Das **ausführliche** Format:
-- `readonly` - (optional) ein Objekt mit detaillierten Einstellungen. Es akzeptiert:
-    - `edit` - (optional) aktiviert oder deaktiviert die **Kartenbearbeitung**.
-    - `add` - (optional) aktiviert oder deaktiviert das **Hinzufügen neuer Karten**.
-    - `select` - (optional) aktiviert oder deaktiviert die **Kartenauswahl**.
-    - `dnd` - (optional) aktiviert oder deaktiviert das **Ziehen von Karten**.
+Die **erweiterten** Parameter:
+- `readonly` - (optional) ein Objekt mit erweiterten Einstellungen. Hier können Sie folgende Parameter angeben:
+    - `edit` - (optional) aktiviert/deaktiviert das **Bearbeiten** der Karten
+    - `add` - (optional) aktiviert/deaktiviert das **Hinzufügen** neuer Karten
+    - `select` - (optional) aktiviert/deaktiviert das **Auswählen** der Karten
+    - `dnd` - (optional) aktiviert/deaktiviert das **Ziehen** der Karten
 
 ### Standardkonfiguration
 
 ~~~jsx {}
-readonly: false // readonly-Modus ist standardmäßig deaktiviert
+readonly: false // readonly-Modus ist deaktiviert
 //oder
 readonly: {
-    edit: true, // Bearbeitung ist aktiviert
+    edit: true, // Bearbeiten ist aktiviert
     add: true, // Hinzufügen ist aktiviert
-    select: true, // Auswahl ist aktiviert
+    select: true, // Auswählen ist aktiviert
     dnd: true // Ziehen ist aktiviert
 }
 ~~~
@@ -57,10 +57,10 @@ new kanban.Kanban("#root", {
     cards,
     columns,
     readonly: {
-        edit: false, // Bearbeitung deaktiviert
-        add: true, // Hinzufügen aktiviert
-        select: false, // Auswahl deaktiviert
-        dnd: true // Ziehen aktiviert
+        edit: false, // Bearbeiten deaktivieren
+        add: true, // Hinzufügen aktivieren
+        select: false, // Auswählen deaktivieren
+        dnd: true // Ziehen aktivieren
     },
     // weitere Parameter
 });

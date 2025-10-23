@@ -1,14 +1,14 @@
 ---
 sidebar_label: theme
 title: theme Konfiguration
-description: Erkunden Sie die Theme-Konfigurationsoptionen in der DHTMLX JavaScript Kanban-Bibliothek Dokumentation. Sehen Sie sich Entwicklerhandbücher, API-Referenzen, Live-Demos an und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+description: Sie können die theme-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # theme
 
 ### Beschreibung
 
-@short: Optional. Definiert ein Theme, das auf das Kanban-Board angewendet wird
+@short: Optional. Ein Theme, das auf Kanban angewendet wird
 
 ### Verwendung
 
@@ -20,33 +20,33 @@ theme?: {
 ~~~
 
 :::important
-Neben der Einstellung der `theme`-Eigenschaft ist es auch möglich, ein Theme anzuwenden, indem die entsprechenden *css*-Klassen direkt zu den Widget-Containern hinzugefügt werden:
+Neben der Verwendung der Eigenschaft `theme` können Sie das benötigte Theme auch anwenden, indem Sie die entsprechenden *css*-Klassen zu den Widget-Containern hinzufügen:
 
 - **Material Theme**
 ~~~html {}
-    <!-- Kanban-Toolbar -->
+    <!-- Kanban Toolbar -->
     <div id="toolbar" class="wx-material-theme"></div>
-    <!-- Kanban-Container -->
+    <!-- Kanban Container -->
     <div id="root" class="wx-material-theme"></div>
 ~~~
 
 - **Willow Theme**
 ~~~html {}
-    <!-- Kanban-Toolbar -->
+    <!-- Kanban Toolbar -->
     <div id="toolbar" class="wx-willow-theme"></div>
-    <!-- Kanban-Container -->
+    <!-- Kanban Container -->
     <div id="root" class="wx-willow-theme"></div>
 ~~~
 
 - **Willow-Dark Theme**
 ~~~html {}
-    <!-- Kanban-Toolbar -->
+    <!-- Kanban Toolbar -->
     <div id="toolbar" class="wx-willow-dark-theme"></div>
-    <!-- Kanban-Container -->
+    <!-- Kanban Container -->
     <div id="root" class="wx-willow-dark-theme"></div>
 ~~~
 
-Alternativ können Sie das gewünschte Theme einbinden, indem Sie das zugehörige Stylesheet aus dem Skins-Ordner verlinken:
+oder binden Sie einfach das benötigte Theme von dem skins-Ordner auf der Seite ein:
 
 ~~~html {}
 <link type="stylesheet" href="path/to/kanban/skins/willow-dark.css"/>
@@ -55,19 +55,19 @@ Alternativ können Sie das gewünschte Theme einbinden, indem Sie das zugehörig
 
 ### Parameter
 
-Hier sind die Parameter, mit denen Sie das **theme** konfigurieren können:
+Zur Konfiguration des **theme** können Sie folgende Parameter verwenden.
 
-- `theme` - (optional) ein Objekt mit Theme-Einstellungen. Es unterstützt:
-    - `name` - (erforderlich) der Name des Themes, das auf das Kanban angewendet werden soll
-    - `fonts` - (optional) steuert, ob Schriftarten vom CDN (wxi Schriftart) geladen werden
+- `theme` - (optional) ein Objekt mit Theme-Einstellungen. Hier können Sie folgende Parameter angeben:
+    - `name` - (erforderlich) ein Theme-Name, der auf Kanban angewendet wird
+    - `fonts` - (optional) aktiviert/deaktiviert das Laden der Schriftarten vom CDN (wxi font)
 
 :::tip
-Die **Willow** und **Willow-Dark** Themes sind ebenfalls verfügbar. Um das Theme dynamisch zu wechseln, kann die Methode [`setTheme()`](../../methods/js_kanban_settheme_method) verwendet werden.
+Sie können auch die Themes **Willow** und **Willow-Dark** anwenden. Um das aktuelle Theme dynamisch zu ändern, können Sie die Methode [`setTheme()`](api/methods/js_kanban_settheme_method.md) verwenden.
 :::
 
 ### Standardkonfiguration
 
-Das Kanban-Board verwendet standardmäßig das **Material** Theme.
+Standardmäßig verwendet Kanban das **Material** Theme.
 
 ~~~jsx {}
 theme: {
@@ -84,18 +84,15 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards,
     theme: {
-        name: "willow-dark", // setzt initial das "willow-dark" Theme
+        name: "willow-dark", // das "willow-dark" Theme wird initial gesetzt
         fonts: false
     }
     // weitere Parameter
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Eigenschaft wurde in Version v1.4 eingeführt
+**Änderungsprotokoll:** Die Eigenschaft wurde in Version 1.4 hinzugefügt
 
-**Verwandte Artikel:** [Stylisierung](/guides/stylization)
+**Verwandte Artikel:** [Stylisierung](guides/stylization.md)
 
-**Verwandte Beispiele:**
-- [Kanban. Verwendung von Themes](https://snippet.dhtmlx.com/jnw54xif?tag=kanban)
-- [Kanban. Einbinden eines Themes als Stylesheet](https://snippet.dhtmlx.com/k3iw6ti0?tag=kanban)
-- [Kanban. Ändern eines Themes über die CSS-Klasse](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Ändern eines Themes über die CSS-Klasse](https://snippet.dhtmlx.com/7qzp561m?tag=kanban)

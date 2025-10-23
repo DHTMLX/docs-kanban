@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateCard()
 title: updateCard Methode
-description: Entdecken Sie die updateCard Methode in der DHTMLX JavaScript Kanban Bibliothek Dokumentation. Sehen Sie sich Entwickleranleitungen, API-Referenzen an, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die updateCard Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # updateCard()
 
 ### Beschreibung
 
-@short: Aktualisiert die Daten einer Karte anhand ihrer ID
+@short: Aktualisiert die Kartendaten anhand ihrer ID
 
 ### Verwendung
 
@@ -23,12 +23,12 @@ updateCard({
 ### Parameter
 
 - `id` - (erforderlich) die ID der zu aktualisierenden Karte
-- `card` - (optional) ein Objekt mit den aktualisierten Daten für die Karte. Eine vollständige Liste der Kartenparameter ist [**hier**](/api/config/js_kanban_cards_config.md) verfügbar
-- `replace` - (optional) steuert, ob die bestehenden Daten vollständig ersetzt werden
+- `card` - (optional) das neue Datenobjekt der Karte. Die vollständige Liste der Kartenparameter finden Sie [**hier**](api/config/js_kanban_cards_config.md)
+- `replace` - (optional) aktiviert/deaktiviert das vollständige Ersetzen der Daten
 
-:::note
-Wenn `replace` auf *true* gesetzt ist, werden die alten Daten komplett durch die neuen Daten überschrieben. Andernfalls werden nur die von Ihnen angegebenen Eigenschaften aktualisiert.
-:::
+    :::note
+    Wenn Sie den Parameter `replace` auf *true* setzen, werden die alten Daten vollständig durch die neuen ersetzt. Andernfalls aktualisiert die Methode nur die Werte, die Sie übergeben haben.
+    :::
 
 ### Beispiel
 
@@ -52,5 +52,5 @@ board.updateCard({
 ~~~
 
 **Änderungsprotokoll**:
-- Die Parameter **id** und **card** wurden in Version v1.1 eingeführt
+- Die Parameter **id** und **card** wurden in Version v1.1 hinzugefügt
 - Der Parameter **replace** wurde in Version v1.3 hinzugefügt

@@ -1,14 +1,14 @@
 ---
 sidebar_label: karten
-title: Karten Konfiguration
-description: Sie können die Karten-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Karten-Konfiguration
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Karten-Konfiguration. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # karten
 
 ### Beschreibung
 
-@short: Optional. Ein Array von Objekten, die die Kartendaten enthalten
+@short: Optional. Ein Array von Objekten mit den Kartendaten
 
 ### Verwendung
 
@@ -29,12 +29,13 @@ cards?: [
                 coverURL?: string,
                 name?: string,
                 isCover?: boolean
+                size?: number
             }, {...}
         ],
         color?: string,
         users?: array | string | number,
-            // users?: array - für mehrere Benutzer, wenn Sie den Editor-Typ "multiselect" zur Benutzerzuweisung verwenden
-            // users?: string | number - für einen einzelnen Benutzer, wenn Sie den Editor-Typ "combo" oder "select" zur Benutzerzuweisung verwenden
+            // users?: array - für mehrere Benutzer, wenn Sie den Editor-Typ "multiselect" verwenden, um Benutzer zuzuweisen
+            // users?: string | number - für einen einzelnen Benutzer, wenn Sie die Editor-Typen "combo" oder "select" verwenden, um einen Benutzer zuzuweisen
         priority?: string | number,
         css?: string,
         votes?: array,
@@ -46,7 +47,7 @@ cards?: [
                 text?: string,
                 date?: Date,
             }, {...}
-        ],
+        ], 
         [custom_key: string]?: any
     }, {...} // weitere Kartendaten
 ];
@@ -54,53 +55,54 @@ cards?: [
 
 ### Parameter
 
-Jede Karte kann folgende Parameter enthalten:
+Für jede Karte können Sie folgende Parameter (Daten) angeben:
 
-- `id` - (optional) Karten-**ID**, die zur Verwaltung der Karte über zugehörige Methoden verwendet wird
-- `label` - (optional) Textlabel, angezeigt im **Label**-Feld
-- `description` - (optional) Beschreibungstext, angezeigt im **Beschreibung**-Feld
-- `progress` - (optional) Wert der Fortschrittsanzeige von 0 bis 100, angezeigt im **Fortschrittsbalken**-Feld
-- `start_date` - (optional) Startdatum als Date-Objekt (keine String-Daten), angezeigt im **Startdatum**-Feld
-- `end_date` - (optional) Enddatum als Date-Objekt (keine String-Daten), angezeigt im **Enddatum**-Feld
-- `attached` - (optional) Array mit Details angehängter Dateien, angezeigt im **Anhang**-Feld. Jedes Objekt kann enthalten:
-	- `id` - (erforderlich) ID der angehängten Datei
-    - `url` - (optional) Dateipfad
+- `id` - (optional) eine Karten-**ID**. Wird zur Verwaltung der Karte über die entsprechenden Methoden verwendet
+- `label` - (optional) eine Kartenbezeichnung. Wird im Feld **Label** angezeigt
+- `description` - (optional) eine Kartenbeschreibung. Wird im Feld **Beschreibung** angezeigt
+- `progress` - (optional) ein Wert für die Fortschrittsanzeige. Sie können einen Wert im Bereich von 0 bis 100 angeben. Wird im Feld **Fortschrittsbalken** angezeigt
+- `start_date` - (optional) ein Start-Datum-Objekt (kein String-Datum angeben). Wird im Feld **Startdatum** angezeigt
+- `end_date` - (optional) ein End-Datum-Objekt (kein String-Datum angeben). Wird im Feld **Enddatum** angezeigt
+- `attached` - (optional) ein Array von Objekten mit Daten der angehängten Datei(en). Wird im Feld **Anhang** angezeigt. Für jedes Objekt können Sie folgende Parameter angeben:
+	- `id` - (erforderlich) eine **ID** der angehängten Datei
+    - `url` - (optional) Pfad zur anzuhängenden Datei
     - `previewURL` - (optional) Pfad zum Vorschaubild
-    - `coverURL` - (optional) Pfad zum als Cover gesetzten Bild
+    - `coverURL` - (optional) Pfad zum Bild, das als Cover gesetzt wird
     - `name` - (optional) Dateiname
-    - `isCover` - (optional) wenn **true**, wird das Coverbild von "coverURL" geladen
-- `color` - (optional) HEX-Farbcode, der die obere Linienfarbe der Karte darstellt
-- `users` - (optional) entweder ein **Array** von Benutzer-IDs für mehrere Benutzer oder ein **string | number** für einen einzelnen Benutzer. Zur Zuweisung von Benutzern definieren Sie ein Array mit Benutzerdaten in der Eigenschaft [cardShape.users](../js_kanban_cardshape_config). Benutzer erscheinen im **Benutzer**-Feld
+    - `isCover` - (optional) aktiviert ein Coverbild. Wenn **true**, wird das Coverbild über die URL "coverURL" geladen
+    - `size` - (optional) Größe der angehängten Datei (in Bytes)
+- `color` - (optional) ein gültiger HEX-Farbcode. Es ist die Farbe der oberen Linie der Karte
+- `users` - (optional) ein **Array** mit **IDs** für mehrere zugewiesene Benutzer oder **string | number** für einen einzelnen zugewiesenen Benutzer. Um die zugewiesenen Benutzer anzugeben, müssen Sie ein Array mit Benutzerdaten in der Eigenschaft [cardShape.users](api/config/js_kanban_cardshape_config.md) definieren. Die Benutzer werden im Feld **Benutzer** angezeigt
 
 :::info
-`users?: array` - verwenden Sie ein **Array** von Benutzer-**IDs**, wenn Sie den Editor-Typ [**multiselect**](../js_kanban_editorshape_config/#--parameter-für-die-typen-combo-select-und-multiselect) für die Zuweisung mehrerer Benutzer verwenden
+`users?: array` - geben Sie ein **Array** mit Benutzer-**IDs** an, wenn Sie den Editor-Typ [**multiselect**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) verwenden, um mehrere Benutzer zuzuweisen
 
-`users?: string | number` - geben Sie eine einzelne Benutzer-**ID** an, wenn Sie die Editor-Typen [**combo** oder **select**](../js_kanban_editorshape_config/#--parameter-für-die-typen-combo-select-und-multiselect) für die Zuweisung eines einzelnen Benutzers verwenden
+`users?: string | number` - geben Sie eine einzelne **ID** an, wenn Sie die Editor-Typen [**combo** oder **select**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) verwenden, um einen einzelnen Benutzer zuzuweisen
 :::
 
-- `priority` - (optional) Prioritäts-**ID** der Karte. Definieren Sie ein Array von Prioritäten in der Eigenschaft [cardShape.priority](../js_kanban_cardshape_config). Angezeigt im **Priorität**-Feld
-- `css` - (optional) benutzerdefinierte CSS-Stile für die Karte
-- `votes` - (optional) Array von Benutzer-IDs, die abgestimmt haben
-- `comments` - (optional) Array von Kommentarobjekten mit:
-    - `id` - (erforderlich) Kommentar-**ID**
-    - `userId` - (erforderlich) Benutzer-**ID** des Kommentierenden
-    - `cardId` - (erforderlich) Karten-**ID**, zu der der Kommentar gehört
-    - `text` - (optional) Kommentartext, der HTML-Markup enthalten kann
-    - `date` - (optional) Date-Objekt, das den Zeitpunkt der Kommentierung angibt (wird nach Änderungen nicht aktualisiert)
-- `custom_key` - (optional) beliebiger benutzerdefinierter Schlüssel für die Karte. Dies kann verwendet werden, um die Karte innerhalb von Spalten oder Reihen zu positionieren, siehe die Eigenschaften [columnKey](../js_kanban_columnkey_config) und [rowKey](../js_kanban_rowkey_config)
+- `priority` - (optional) eine Kartenprioritäts-**ID**. Um die Kartenpriorität anzugeben, müssen Sie ein Array mit Prioritätsdaten in der Eigenschaft [cardShape.priority](api/config/js_kanban_cardshape_config.md) definieren. Wird im Feld **Priorität** angezeigt
+- `css` - (optional) definiert CSS-Stile für eine einzelne Karte
+- `votes` - (optional) ein Array von Benutzer-IDs
+- `comments` - (optional) ein Array von Objekten mit Kommentardaten. Für jedes Kommentarobjekt können Sie folgende Parameter angeben:
+    - `id` - (erforderlich) eine **ID** des Kommentars
+    - `userId` - (erforderlich) eine **ID** des Benutzers, der den Kommentar verfasst hat
+    - `cardId` - (erforderlich) eine **ID** der Karte, zu der der Kommentar gehört
+    - `text` - (optional) Text des Kommentars. Kann auch HTML-Markup enthalten
+    - `date` - (optional) ein Date-Objekt (kein String-Datum angeben). Das Datum, an dem der Kommentar verfasst wurde. Wird nach der Bearbeitung nicht aktualisiert
+- `custom_key` - (optional) ein benutzerdefinierter Schlüssel der Karte. Sie können benutzerdefinierte Schlüssel angeben, um die Karte in Spalte und Zeile zu platzieren. Siehe die Eigenschaften [columnKey](../js_kanban_columnkey_config) und [rowKey](api/config/js_kanban_rowkey_config.md)
 
 :::info
-Um neue Kartendaten dynamisch zu laden, kann die Methode [**parse()**](../../methods/js_kanban_parse_method) verwendet werden.
+Wenn Sie neue Daten für Karten dynamisch laden möchten, können Sie die Methode [**parse()**](api/methods/js_kanban_parse_method.md) verwenden!
 :::
 
 ### Beispiel
 
-~~~jsx {1-40,44}
+~~~jsx {1-41,45}
 const cards = [
     {
         id: 1,
         label: "Integration mit React",
-        description: "Einige Beschreibung",
+        description: "Eine Beschreibung",
         progress: 25,
         start_date: new Date("02/24/2022"),
         end_date: new Date("02/24/2023"),
@@ -111,7 +113,8 @@ const cards = [
                 previewURL: "../assets/img-1.jpg",
                 coverURL: "../assets/img-1.jpg",
                 name: "img-1.jpg",
-                isCover: true
+                isCover: true,
+                size: 11979
             }, {...} // weitere angehängte Dateien
         ],
         color: "#65D3B3",
@@ -122,16 +125,16 @@ const cards = [
                 id: 1,
                 userId: 1,
                 cardId: 1,
-                text: "Grüße, liebe Kollegen. Ich möchte meine Einsichten zu dieser Aufgabe teilen. Ich denke, wir sollten mindestens die Hälfte der Punkte im Plan ohne weitere Verzögerungen bearbeiten.",
+                text: "Grüße, liebe Kollegen. Ich möchte meine Einsichten zu dieser Aufgabe teilen. Ich denke, wir sollten mindestens die Hälfte der Punkte im Plan ohne weitere Verzögerungen erledigen.",
                 date: new Date(),
             }, {...} // weitere Kommentare
         ],
         priority: 1,
-        // benutzerdefiniertes Feld, um die Karte in die "feature"-Reihe zu platzieren
-        // die rowKey-Konfiguration muss auf den Wert "type" gesetzt werden
+        // benutzerdefiniertes Feld, um die Karte in der Zeile "feature" zu platzieren 
+        // die rowKey-Konfiguration muss auf den Wert "type" gesetzt sein
         type: "feature",
-        // benutzerdefiniertes Feld, um die Karte in die "backlog"-Spalte zu platzieren
-        // die columnKey-Konfiguration muss auf den Wert "stage" gesetzt werden
+        // benutzerdefiniertes Feld, um die Karte in der Spalte "backlog" zu platzieren 
+        // die columnKey-Konfiguration muss auf den Wert "stage" gesetzt sein
         stage: "backlog",
         css: "red",
     }, {...} // weitere Kartendaten
@@ -144,10 +147,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Parameter ***css***, ***comments*** und ***votes*** wurden in Version v1.4 eingeführt
+**Änderungsprotokoll:** Die Parameter ***css***, ***comments*** und ***votes*** wurden in Version 1.4 hinzugefügt
 
 **Verwandte Artikel:**
-- [Arbeiten mit Daten](/guides/working_with_data)
-- [updateCard()](/api/methods/js_kanban_updatecard_method.md)
+- [Arbeiten mit Daten](guides/working_with_data.md)
+- [updateCard()](api/methods/js_kanban_updatecard_method.md)
 
-**Verwandte Beispiel:** [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Styling von Karten](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)

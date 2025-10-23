@@ -1,33 +1,33 @@
 ---
 sidebar_label: DELETE /cards/{id}/comments/{id}
 title: DELETE /cards/{cardId}/comments/{commentId}
-description: Sie können die DELETE /cards/{cardId}/comments/{commentId} REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die REST-Route DELETE /cards/{cardId}/comments/{commentId} in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # DELETE `/cards/{cardId}/comments/{commentId}`
 
 ### Beschreibung
 
-@short: Löscht einen Kommentar von einer Karte
+@short: Entfernt einen Kommentar von einer Karte
 
-Diese Route verarbeitet eine **HTTP DELETE**-Anfrage, die an den Endpunkt `cards/{cardId}/comments/{commentId}` gesendet wird.
+Die Route verarbeitet die **HTTP DELETE**-Anfrage, die an den Pfad `cards/{cardId}/comments/{commentId}` gesendet wird.
 
 ### Pfadparameter
 
-Die folgenden Parameter sind in der Anforderungs-URL enthalten:
+Die folgenden Parameter werden in der Anforderungszeile übergeben:
 
 | Name        | Typ         | Beschreibung |
 | ----------- | ----------- | ------------ |
-| `cardId`    |  number     | *Erforderlich*. Die Kennung der Karte, von der der Kommentar gelöscht werden soll. |
-| `commentId` |  number     | *Erforderlich*. Die Kennung des zu löschenden Kommentars. |
+| `cardId`    |  number     | *Erforderlich*. Die ID der Karte, von der der Kommentar gelöscht wird. |
+| `commentId` |  number     | *Erforderlich*. Die ID des zu entfernenden Kommentars. |
 
 ### Payload
 
-Für diese Anfrage muss kein Payload gesendet werden.
+Es ist kein Payload erforderlich.
 
 ### Antwort
 
-Der Server antwortet mit einem JSON-Objekt, das die Benutzer-ID enthält, die den Kommentar gelöscht hat.
+Der Server gibt ein JSON-Objekt mit der Benutzer-ID zurück, die den Kommentar entfernt hat.
 
 Beispiel:
 
@@ -37,8 +37,8 @@ Beispiel:
 }
 ~~~
 
-Der HTTP-Statuscode zeigt das Ergebnis an: 200 bedeutet, dass die Anfrage erfolgreich war, während 500 einen Fehler anzeigt.
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

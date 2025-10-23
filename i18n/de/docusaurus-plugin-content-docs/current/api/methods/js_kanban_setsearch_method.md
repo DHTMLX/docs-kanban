@@ -1,14 +1,14 @@
 ---
 sidebar_label: setSearch()
-title: Methode setSearch
-description: Sie können die Methode setSearch in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: setSearch Methode
+description: Sie können mehr über die setSearch Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # setSearch()
 
 ### Beschreibung
 
-@short: Findet Karten basierend auf den angegebenen Suchkriterien
+@short: Sucht nach Karten anhand der angegebenen Parameter
 
 ### Verwendung
 
@@ -20,13 +20,13 @@ setSearch({
 ~~~
 
 :::info
-Mit dieser Methode können Sie Karten entsprechend den angegebenen Suchkriterien finden. Ein Aufruf von **setSearch()** ohne Argumente setzt das Suchfeld zurück und entfernt alle hervorgehobenen Karten.
+Mit dieser Methode können Sie nach den benötigten Karten anhand der angegebenen Parameter suchen. Wenn Sie die **setSearch()** Methode ohne Parameter aufrufen, wird die Suchleiste und die Hervorhebung der Karten gelöscht.
 :::
 
 ### Parameter
 
-- `value` - (erforderlich) der zu suchende Text
-- `by` - (optional) das spezifische Kartenfeld, in dem gesucht werden soll
+- `value` - (erforderlich) der Suchwert
+- `by` - (optional) das Kartenfeld, nach dem gesucht wird
 
 ### Beispiel
 
@@ -36,6 +36,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Hervorheben der Karten, die den Parametern entsprechen
+// Hervorhebung der Karten, die den Parametern entsprechen
 board.setSearch({ value: "Integration", by: "label" });
 ~~~

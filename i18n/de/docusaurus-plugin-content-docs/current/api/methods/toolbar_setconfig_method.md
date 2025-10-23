@@ -1,14 +1,14 @@
 ---
 sidebar_label: setConfig()
-title: setConfig Methode
-description: Sie können in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die setConfig Methode der Toolbar erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Methode setConfig
+description: Sie können die Methode setConfig der Toolbar in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # setConfig()
 
 ### Beschreibung
 
-@short: Aktualisiert die Toolbar mit neuen Konfigurationseinstellungen
+@short: Setzt neue Konfigurationsparameter der Toolbar
 
 ### Verwendung
 
@@ -18,10 +18,10 @@ setConfig(config: object): void;
 
 ### Parameter
 
-- `config` - (erforderlich) ein Objekt, das die Konfigurationsoptionen der Toolbar enthält. Eine vollständige Liste der Eigenschaften finden Sie [hier](/api/overview/main_overview.md#toolbar-eigenschaften)
+- `config` - (erforderlich) das Objekt der Toolbar-Konfiguration. Die vollständige Liste der Eigenschaften finden Sie [hier](api/overview/main_overview.md#toolbar-properties)
 
 :::note
-Es werden nur die im Objekt angegebenen Parameter aktualisiert.
+Die Methode ändert nur die Parameter, die Sie übergeben haben.
 :::
 
 ### Beispiel
@@ -31,7 +31,7 @@ Es werden nur die im Objekt angegebenen Parameter aktualisiert.
 const board = new kanban.Kanban("#root", {});
 // Toolbar erstellen
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-// Toolbar-Konfiguration mit neuen Parametern aktualisieren
+// neue Konfigurationsparameter der Toolbar setzen
 toolbar.setConfig({
     items: ["search", "spacer", "sort"]
 });

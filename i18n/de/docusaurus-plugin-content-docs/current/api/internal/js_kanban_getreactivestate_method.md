@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.getReactiveState()
-title: Methode getReactiveState
-description: Sie erfahren mehr über die Methode getReactiveState in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getReactiveState Methode
+description: Sie können die Methode getReactiveState in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # api.getReactiveState()
 
 ### Beschreibung
 
-@short: Ruft ein Objekt mit den reaktiven Eigenschaften des Kanban-Boards ab.
+@short: Gibt ein Objekt mit den reaktiven Eigenschaften von Kanban zurück
 
 ### Verwendung
 
@@ -18,42 +18,55 @@ api.getReactiveState(): object;
 
 ### Rückgabewert
 
-Diese Methode gibt ein Objekt mit folgenden Eigenschaften zurück:
+Die Methode gibt ein Objekt mit den folgenden Parametern zurück:
 
 ~~~jsx {}
 {
-    areasMeta: {
-        subscribe: any,
-        update: any,
-        set: any
-    },
-    before: {...},
     cardHeight: {...},
     cardShape: {...},
     cards: {...},
-    cardsMap: {...},
-    cardsMeta: {...},
     columnKey: {...},
     columnShape: {...},
     columns: {...},
     currentUser: {...},
-    dragItemId: {...},
-    dragItemsCoords: {...},
-    edit: {...},
     history: {...},
-    layout: {...},
     links: {...},
-    overAreaId: {...},
     readonly: {...},
     rowKey: {...},
     rowShape: {...},
+    editorShape: {...},
     rows: {...},
-    scroll: {...},
     search: {...},
     selected: {...},
-    sort: {...}
+    sort: {...},
+
+    // entfernte Parameter
+    /*  
+        fromAreaMeta: {...},
+        dropAreaItemsCoords: {...},
+        dropAreasCoords: {...},
+        overAreaMeta: {...},  
+        before: {...},
+        dragItemId: {...},
+        dragItemsCoords: {...},
+        overAreaId: {...},
+    /*
+
+    // private Parameter
+    /*
+        edit -> _edit: {...},
+        layout -> layout: {...},
+        cardsMap -> _cardsMap: {...},
+        cardsMeta -> _cardsMeta: {...},
+        areasMeta -> _areasMeta: {...},
+        scroll -> _scroll: {...},
+    */
 }
 ~~~  
+
+:::warning
+Diese Zustands-Eigenschaften sind schreibgeschützt. Ändern Sie sie nicht, um unerwartetes Verhalten zu vermeiden!
+:::
 
 ### Beispiel
 
@@ -64,37 +77,28 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// Zugriff auf den reaktiven Zustand des Kanban-Boards
+// Reaktiven Zustand von Kanban abrufen
 const state = board.api.getReactiveState();
 
-// Auf Änderungen der Spalten abonnieren und das aktualisierte Array ausgeben
+// Auf Änderungen der Spalten abonnieren und das Array der Spalten ausgeben
 state.columns.subscribe((data) => {
     console.log(data);
 });
 
-// Auf Änderungen der Karten abonnieren und das aktualisierte Array ausgeben
+// Auf Änderungen der Karten abonnieren und das Array der Karten ausgeben
 state.cards.subscribe((data) => {
     console.log(data);
 });
 
-// Auf Änderungen der Reihen abonnieren und das aktualisierte Array ausgeben
+// Auf Änderungen der Reihen abonnieren und das Array der Reihen ausgeben
 state.rows.subscribe((data) => {
     console.log(data);
 });
 
-// Auf Änderungen der Kartenauswahl abonnieren und die ausgewählten Karten-IDs ausgeben
+// Auf die Kartenauswahl abonnieren und die IDs der ausgewählten Karten ausgeben
 state.selected.subscribe((data) => {
     console.log(data);
 });
-
-// Neue Auswahl setzen
-state.selected.set([1, 2]);
-
-// Die Auswahl aktualisieren, indem eine weitere Karten-ID hinzugefügt wird
-state.selected.update((data) => {
-    data.push(3);
-    return data;
-});
 ~~~
 
-**Änderungsprotokoll:** Diese Methode wurde in Version 1.4 aktualisiert
+**Änderungsprotokoll:** Die Methode wurde in Version v1.7 aktualisiert

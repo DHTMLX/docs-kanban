@@ -1,25 +1,25 @@
 ---
 sidebar_label: POST /cards/{id}/comments
 title: POST /cards/{cardId}/comments
-description: Dieser Abschnitt behandelt die REST-Route POST /cards/{cardId}/comments aus der DHTMLX JavaScript Kanban-Bibliotheksdokumentation. Er umfasst Entwickleranleitungen, API-Referenzen, praktische Code-Beispiele, Live-Demos und bietet eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+description: Sie können die REST-Route POST /cards/{cardId}/comments in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # POST `/cards/{cardId}/comments`
 
 ### Beschreibung
 
-@short: Fügt der angegebenen Karte einen oder mehrere neue Kommentare hinzu und gibt ein JSON-Objekt mit der ID des neu hinzugefügten Kommentars zurück.
+@short: Fügt dem Kartenobjekt einen neuen Kommentar hinzu und gibt ein JSON-Objekt mit der ID des neu hinzugefügten Kommentars zurück.
 
-Dieser Endpunkt verarbeitet **HTTP POST**-Anfragen, die an `/cards/{cardId}/comments` gesendet werden.
+Diese Route verarbeitet die **HTTP POST**-Anfrage an den Pfad `/cards/{cardId}/comments`.
 
 ### Payload
 
 Der Server erwartet ein JSON-Objekt mit den folgenden Eigenschaften:
 
-| Name        | Typ         | Beschreibung                         |
-| ----------- | ----------- | ---------------------------------- |
-| `text`      | string      | *Erforderlich*. Der Inhalt des Kommentars. |
-| `date`      | object      | *Erforderlich*. Das Datum des Kommentars.  |
+| Name        | Typ         | Beschreibung                      |
+| ----------- | ----------- | -------------------------------- |
+| `text`      | string      | *Erforderlich*. Der Text des Kommentars. |
+| `date`      | object      | *Erforderlich*. Das Datum des Kommentars. |
 
 Beispiel:
 
@@ -32,7 +32,7 @@ Beispiel:
 
 ### Antwort
 
-Die Antwort enthält ein JSON-Objekt mit der ID des neu hinzugefügten Kommentars.
+Die Route gibt ein JSON-Objekt mit der ID des neu hinzugefügten Kommentars zurück.
 
 Beispiel:
 
@@ -42,8 +42,8 @@ Beispiel:
 }
 ~~~
 
-Der HTTP-Statuscode gibt das Ergebnis der Anfrage an: Ein Status von 200 bedeutet Erfolg, während 500 auf einen Fehler hinweist.
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

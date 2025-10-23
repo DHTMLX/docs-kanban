@@ -1,20 +1,20 @@
 ---
 sidebar_label: Arbeiten mit dem Server
 title: Arbeiten mit dem Server
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie, wie Sie mit dem Server arbeiten. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie, wie Sie mit dem Server arbeiten. Stöbern Sie in Entwicklerhandbüchern und der API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # Arbeiten mit dem Server
 
-JavaScript Kanban kann sowohl clientseitige als auch serverseitige Daten verarbeiten. Es gibt keine speziellen Backend-Anforderungen, sodass eine Verbindung zu jeder Plattform möglich ist, die REST-APIs unterstützt.
+JavaScript Kanban ermöglicht das Arbeiten sowohl mit Client- als auch mit Serverdaten. Das Widget stellt keine besonderen Anforderungen an das Backend. Es kann einfach mit jeder Backend-Plattform verbunden werden, die die REST API (RESTful API) unterstützt.
 
 :::info
-Das Widget wird mit integrierten **Go**- und **Node**-Backend-Optionen geliefert, unterstützt aber auch eigene Server-Skripte.
+Standardmäßig wird das Widget mit einem integrierten **Go**- und **Node**-Backend ausgeliefert. Sie können jedoch auch eigene Serverskripte verwenden.
 :::
 
 ## RestDataProvider
 
-JavaScript Kanban bietet den **RestDataProvider**-Service, der REST-APIs für Backend-Operationen vollständig unterstützt. Dieser Service erleichtert die Kommunikation mit Ihrem Server und ermöglicht folgende Datenaktionen:
+JavaScript Kanban bietet den **RestDataProvider**-Service, der die REST API vollständig für die Kommunikation mit dem Backend unterstützt. Damit können Sie mit dem Server interagieren und folgende Datenoperationen ausführen:
 
 - ***"add-card"***
 - ***"add-column"***
@@ -36,28 +36,28 @@ JavaScript Kanban bietet den **RestDataProvider**-Service, der REST-APIs für Ba
 
 ## REST-Methoden
 
-Der **RestDataProvider**-Service stellt verschiedene REST-Methoden zum dynamischen Laden von Daten bereit:
+Der **RestDataProvider**-Service enthält spezielle REST-Methoden für das dynamische Laden von Daten:
 
-- [`getCards()`](/api/provider/rest_methods/js_kanban_getcards_method.md) - gibt ein Promise mit den ***Karten-Daten*** zurück
-- [`getColumns()`](/api/provider/rest_methods/js_kanban_getcolumns_method.md) - gibt ein Promise mit den ***Spalten-Daten*** zurück
-- [`getLinks()`](/api/provider/rest_methods/js_kanban_getlinks_method.md) - gibt ein Promise mit den ***Verknüpfungen-Daten*** zurück
-- [`getRows()`](/api/provider/rest_methods/js_kanban_getrows_method.md) - gibt ein Promise mit den ***Zeilen-Daten*** zurück
-- [`getUsers()`](/api/provider/rest_methods/js_kanban_getusers_method.md) - gibt ein Promise mit den ***Benutzerdaten*** zurück
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) – gibt ein Promise mit den ***Karten-Daten*** zurück
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) – gibt ein Promise mit den ***Spalten-Daten*** zurück
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) – gibt ein Promise mit den ***Verbindungsdaten*** zurück
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) – gibt ein Promise mit den ***Zeilen-Daten*** zurück
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) – gibt ein Promise mit den ***Benutzerdaten*** zurück
 
-## Verbindung mit dem Backend
+## Interaktion mit dem Backend  
 
-Um eine Verbindung zum Server herzustellen, müssen Sie einfach den **RestDataProvider** mit Ihren Server-Skripten verknüpfen. Wenn Sie die integrierten Backends verwenden, finden Sie diese hier:
+Um mit dem Server zu interagieren, müssen Sie den **RestDataProvider** mit den entsprechenden Serverskripten verbinden. Wenn Sie das integrierte Backend verwenden möchten, finden Sie die benötigten Skripte in folgenden Repositories:
 
 - [**Go**](https://github.com/web-widgets/kanban-go) Backend
 - [**Node**](https://github.com/web-widgets/kanban-node) Backend
 
-Sie können selbstverständlich auch Ihr eigenes Backend einrichten.
+Sie können aber auch ein eigenes Backend erstellen.
 
 :::tip
-Wenn Sie ein individuelles Backend verwenden, lesen Sie bitte den Abschnitt [**REST API-Routen**](/api/overview/rest_routes_overview/) für weitere Details.
+Wenn Sie ein eigenes Backend verwenden, lesen Sie das Thema [**REST API routes**](api/overview/rest_routes_overview.md) für weitere Informationen!
 :::
 
-Das Verbinden des **RestDataProvider** mit dem Backend ist einfach: Verwenden Sie einfach den **kanban.RestDataProvider**-Konstruktor und übergeben Sie die Server-**URL**.
+Um **RestDataProvider** mit dem Backend zu verbinden, müssen Sie den **kanban.RestDataProvider**-Konstruktor aufrufen und die entsprechende **URL** als Parameter übergeben.
 
 ~~~js {1-2,27}
 const url = "https://some_backend_url";
@@ -91,20 +91,20 @@ Promise.all([
 ~~~
 
 :::info
-Um Datenoperationen wie das Hinzufügen oder Löschen von Elementen zu ermöglichen und Anfragen an den Server zu senden, muss **RestDataProvider** in die **Event Bus**-Kette über [**api.setNext()**](/api/internal/js_kanban_setnext_method.md) eingebunden werden.
+Sie müssen **RestDataProvider** in die Reihenfolge des **Event Bus** über die Methode [**api.setNext()**](api/internal/js_kanban_setnext_method.md) einbinden, um Datenoperationen (*Hinzufügen*, *Löschen* usw.) durchzuführen und die entsprechenden Anfragen an den Server zu senden.
 :::
 
 ### Beispiel
 
-Hier sehen Sie einen Codeausschnitt, wie **RestDataProvider** mit einem **Go**-Backend verbunden und Daten vom Server geladen werden:
+Im folgenden Beispiel sehen Sie, wie Sie **RestDataProvider** mit dem **Go**-Backend verbinden und Serverdaten laden:
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
 ## Multiuser-Backend
 
-Kanban-Boards sind beliebte Tools für Unternehmen jeder Größe, und Multiuser-Unterstützung kann die Zusammenarbeit deutlich verbessern. Mit dieser Funktion können mehrere Nutzer dieselben Karten in Echtzeit verwalten - ganz ohne Seiten-Reload. So wird die Zusammenarbeit reibungsloser und alle bleiben bei Änderungen stets auf dem neuesten Stand.
+Projektmanagement-Tools wie unser Kanban sind bei Unternehmen jeder Größe sehr gefragt. Daher ist es wichtig, eine reibungslose Benutzererfahrung für mehrere Nutzer zu ermöglichen. Unser neues Feature erlaubt es, dass mehrere Nutzer dieselben Karten auf dem Kanban-Board in Echtzeit verwalten können, ohne dass die Seite neu geladen werden muss. So können Endnutzer zusammenarbeiten und bleiben stets über die Aktionen der anderen auf dem Laufenden, was die Produktivität und Zufriedenheit steigert.
 
-Um ein Multiuser-Backend einzurichten, müssen Sie sich zunächst vor der Initialisierung des Kanban-Boards am Server authentifizieren. Dazu können Sie eine einfache `login(url: string)`-Funktion verwenden:
+Um ein Multiuser-Backend zu implementieren, müssen Sie vor der Kanban-Initialisierung eine Autorisierung am Server durchführen. Dafür können Sie die Funktion `login(url: string)` erstellen:
 
 ~~~js {}
 const login = (url) => {
@@ -122,7 +122,7 @@ const login = (url) => {
 };
 ~~~
 
-Diese Funktion dient nur zu Demonstrationszwecken - jeder Benutzer wird mit einer ID von 1 authentifiziert. Nach dem Login sendet der Server ein Token zurück, das bei zukünftigen Anfragen mitgesendet werden sollte. Um dies automatisch zu erledigen, verwenden Sie die Methode `RestDataProvider.setHeaders()`, die benutzerdefinierte Header zu jeder Anfrage hinzufügt. Standardmäßig erwartet der Server das Token im Header `"Remote-Token":<value>`:
+Diese Funktion simuliert lediglich die Autorisierung, und alle Benutzer werden mit der ID 1 autorisiert. Nach erfolgreicher Autorisierung sendet der Server ein Token, das bei jeder weiteren Anfrage an den Server verwendet werden muss. Um das Senden des Tokens zu automatisieren, wird die Funktion `RestDataProvider.setHeaders()` verwendet. Diese Funktion fügt Anfragen benutzerdefinierte Header hinzu. Standardmäßig speichert unser Server das Token im Header `"Remote-Token":<value>`:
 
 ~~~js {}
 login(url).then(token => {
@@ -137,7 +137,7 @@ login(url).then(token => {
 });
 ~~~
 
-Sobald Sie das Token haben, können Sie das Kanban-Widget wie folgt initialisieren:
+Nach Erhalt des Tokens sollten Sie das Widget initialisieren. Dies kann folgendermaßen erfolgen:
 
 ~~~js {}
 // Widget-Initialisierung...
@@ -157,44 +157,44 @@ Promise.all([
         editorShape,
     });
 
-    // Daten vom Client an den Server speichern
+    // Daten vom Client zum Server speichern
     board.api.setNext(restProvider);
     
     // Multiuser-Initialisierung...
 });
 ~~~
 
-Nach der Initialisierung des Widgets müssen Sie einen WebSocket hinzufügen, um auf Server-Ereignisse zu hören. So geht's:
+Nach der Widget-Initialisierung müssen Sie einen WebSocket hinzufügen, um Ereignisse vom Server zu empfangen. Dies kann wie folgt umgesetzt werden:
 
 ~~~js {}
 // Multiuser-Initialisierung...
 
-// Handler für Serverereignisse vom Client holen
+// Client-Handler für Server-Events erhalten
 const handlers = kanbanUpdates(
     board.api,
     restProvider.getIDResolver()
 );
-// Verbindung zu Serverereignissen herstellen
+// Verbindung zu Server-Events herstellen
 const events = new RemoteEvents(url + "/api/v1", token);
-// Client-Handler an Serverereignisse anhängen
+// Client-Handler an Server-Events anhängen
 events.on(handlers);
 ~~~
 
-- `handlers` - das sind die Client-Funktionen, die auf Serverereignisse reagieren
-- `events` - dieses Objekt stellt die Verbindung zum Server her und hört auf eingehende Ereignisse
-- `RemoteEvents.on(handlers)` - verbindet die Handler mit den Serverereignissen
+- `handlers` – die Client-Handler, die Server-Ereignisse verarbeiten
+- `events` – das Objekt, das sich mit dem Server verbindet und alle eingehenden Ereignisse abhört
+- `RemoteEvents.on(handlers)` – wendet die Client-Handler auf Server-Ereignisse an
 
-Durch das Hinzufügen eines Multiuser-Backends wird die Zusammenarbeit deutlich erleichtert und Änderungen werden sofort in der Benutzeroberfläche sichtbar.
+Nach der Integration des Multiuser-Backends in Ihre App können Sie die Zusammenarbeit zwischen den Nutzern vereinfachen und ermöglichen, dass Änderungen in Echtzeit über die Benutzeroberfläche verfolgt werden.
 
 ### Beispiel
 
-Hier sehen Sie einen Codeausschnitt, wie ein Multiuser-Backend eingerichtet wird, sodass Nutzer die Änderungen der anderen in Echtzeit sehen können:
+Der folgende Snippet zeigt, wie Sie das Multiuser-Backend konfigurieren, um Änderungen anderer Nutzer in Echtzeit zu verfolgen:
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## Anpassung von Serverereignissen
+## Anpassung von Server-Ereignissen
 
-Sie können die Verarbeitung von Serverereignissen individuell anpassen. Übergeben Sie dazu Ihr eigenes **handlers**-Objekt an die Methode `RemoteEvents.on(handlers)`. Das **handlers**-Objekt ist wie folgt aufgebaut:
+Sie können Ihre eigene Logik für die Verarbeitung von Server-Ereignissen definieren. Dafür müssen Sie das **handlers**-Objekt an die Methode `RemoteEvents.on(handlers)` übergeben. Das **handlers**-Objekt sollte folgende Struktur haben:
 
 ~~~js {}
 {
@@ -205,16 +205,16 @@ Sie können die Verarbeitung von Serverereignissen individuell anpassen. Überge
 }
 ~~~
 
-Immer wenn sich etwas auf dem Server ändert, erhalten Sie den Namen des geänderten Elements zurück - dieser kann je nach Backend-Logik variieren.
+Wenn auf dem Server eine Änderung erfolgt, gibt dieser den Namen des geänderten Elements zurück. Diese Namen können je nach Server-Logik variieren.
 
-Updates auf der Clientseite werden im Argument **obj** der Funktion `function(obj: any)` übergeben. Der Operationstyp wird mit dem Feld `type: string` angegeben, das folgende Werte haben kann:
+Die auf der Client-Seite aktualisierten Daten werden im **obj**-Argument der Funktion `function(obj: any)` übergeben. Um eine Operation zu kennzeichnen, gibt es das Feld `type: string`. Es kann folgende Werte annehmen:
 
 - Für **cards**: `"add-card"`, `"update-card"`, `"delete-card"`, `"move-card"`
 - Für **columns**: `"add-column"`, `"update-column"`, `"delete-column"`, `"move-column"`
 - Für **links**: `"add-link"`, `"delete-link"`
 - Für **rows**: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
 
-Siehe folgendes Codebeispiel:
+Im folgenden Codebeispiel sehen Sie die Implementierungsdetails:
 
 ~~~js {}
 // Kanban initialisieren
@@ -234,7 +234,7 @@ const cardsHandler = (obj: any) => {
             board.api.exec("add-card", {
                 card: obj.card,
                 select: false,
-                skipProvider: true, // verhindert, dass der Client eine Anfrage an den Server sendet
+                skipProvider: true, // verhindert das Senden der Anfrage vom Client an den Server
             })
             break;
         // weitere Operationen
@@ -250,40 +250,41 @@ const remoteEvents = new kanban.RemoteEvents(remoteEventsURL, token);
 remoteEvents.on(handlers);
 ~~~
 
-Die Methode `RestDataProvider.getIDResolver()` liefert Ihnen eine Funktion, mit der Sie Client-IDs mit Server-IDs synchronisieren können. Wenn Sie etwas Neues (*card/column/row*) auf dem Client erstellen, erhält es zunächst eine temporäre ID; die echte Server-ID wird im Store gespeichert. Die Funktion `idResolver()` sorgt für die Synchronisierung. Die Signatur ist `idResolver(id: TID, type: number)`.
+Die Methode `RestDataProvider.getIDResolver()` gibt eine Funktion zurück, die zur Synchronisierung von Client-IDs mit Server-IDs benötigt wird. Wenn ein neues Objekt (*card/column/row/link*) auf der Client-Seite erstellt wird, erhält das Objekt eine temporäre ID und eine entsprechende Server-ID im Store. Die Funktion `idResolver()` ermöglicht die Synchronisierung der Client-ID mit der Server-ID. Diese Funktion hat folgendes Format: `idResolver(id: TID, type: number)`
 
-Die Werte für `type` sind wie folgt zugeordnet:
+Das Argument `type` ist der Modelltyp und nimmt folgende Werte an:
 
 - `CardID` - 1,
 - `RowID` - 2,
 - `ColumnID` - 3
+- `LinkID` - 4
 
-Wenn Sie vermeiden möchten, dass eine neue Anfrage an den Server gesendet wird, nutzen Sie beim Aufruf von `board.api.exec()` das Flag `skipProvider: true`.
+Um zu verhindern, dass eine Anfrage an den Server gesendet wird, müssen Sie das Flag `skipProvider: true` beim Aufruf der Methode `board.api.exec()` verwenden.
 
-Sobald die eigenen Handler eingebunden sind, können Sie die Verarbeitung von Serverereignissen auf der Clientseite vollständig steuern.
+Im letzten Schritt wenden Sie die eigenen Handler auf die Server-Ereignisse an. So können Sie Ihre eigenen Server-Event-Handler erstellen.
 
-## Gruppierung von zwei oder mehr Status in einer Spalte
+## Gruppierung von zwei oder mehr Status in einer einzigen Spalte
 
-Manchmal möchten Sie Karten mit unterschiedlichen Status in einer einzigen Spalte anzeigen (zum Beispiel alle Karten mit dem Status *To do* und *Unassigned* in einer Spalte).
+In diesem Abschnitt sehen Sie, wie Sie Karten aus verschiedenen Spalten in einer Spalte anzeigen können (zum Beispiel eine gemeinsame Spalte für Karten mit den Status *To do* und *Unassigned*).
 
-Hierzu fügen Sie ein eigenes Feld (z.B. **status**) hinzu, das den aktuellen Status der Karte speichert. Das **column**-Feld speichert den gemeinsamen Status.
+Um eine solche Gruppierung zu implementieren, müssen Sie ein benutzerdefiniertes Feld hinzufügen (zum Beispiel **status**). Dieses Feld speichert den aktuellen Status einer Karte. Das Feld **column** speichert den gemeinsamen Status.
 
-Definieren Sie anschließend Regeln für die Gruppierung von Karten. Beispielsweise könnten Karten nach folgenden Status zu Spalten gruppiert werden:
+Anschließend müssen Sie spezielle Regeln für die Gruppierung der Karten erstellen. In unserem Fall werden die Karten in bestimmten Spalten nach folgenden Status gruppiert:
 
-- *todo*, *unassigned* - für die Spalte **Open**
-- *dev*, *testing* - für die Spalte **Inprogress**
-- *merged*, *released* - für die Spalte **Done**
+- *todo*, *unassigned* – Status für die Spalte **Open**
+- *dev*, *testing* – Status für die Spalte **Inprogress**
+- *merged*, *released* – Status für die Spalte **Done**
 
-Es gibt verschiedene Möglichkeiten, diese Gruppierung zu implementieren:
+Es gibt zwei Möglichkeiten, wie Sie eine solche Gruppierung von Karten in einer Spalte nach zwei oder mehr Status umsetzen können:
 
-- [Serverseitig](#serverseitige-gruppierung)
-- [Serverseitig + clientseitig](#serverseitige--clientseitige-gruppierung)
+- [Serverseitig](#server-side-grouping)
+- [Serverseitig + clientseitig](#server-side--client-side-grouping)
 
 ### Serverseitige Gruppierung
 
-Wenn Sie die Gruppierung auf dem Server durchführen möchten, muss Ihr Backend in der Lage sein, Daten per [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) an den Client zu senden (siehe [Multiuser-Backend](#multiuser-backend)).
+Wenn Sie die serverseitige Gruppierung umsetzen möchten, sollte Ihr Server in der Lage sein, Daten über [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) an den Client zu senden (siehe [Multiuser-Backend](#multiuser-backend)).
 
-Erhält der Server eine Anfrage zum Aktualisieren einer Karte, sollte er das **status**-Feld prüfen. Zum Beispiel könnte das mit [Go](https://go.dev/) folgendermaßen aussehen:
+An der Stelle, an der der Server eine Anfrage zur Aktualisierung einer Karte verarbeitet, müssen Sie das **status**-Feld überprüfen. In unserem Beispiel verwenden wir die Programmiersprache [Go](https://go.dev/), aber Sie können auch andere Backend-Technologien verwenden.
 
 ~~~go
 func Update(id int, c Card) error {
@@ -301,30 +302,30 @@ func Update(id int, c Card) error {
    db.Save(&c)
 
    if oldColumn != c.Column {
-      // Wurde die Spalte durch das status-Feld geändert,
+      // Wenn die Spalte durch das Statusfeld aktualisiert wurde,
       // sollte der Client benachrichtigt werden, die Karte in die entsprechende Spalte zu verschieben
 
-      // Kartenindex aktualisieren
+      // Index der Karte aktualisieren
       updateCardIndex(&c)
 
-      // Client informieren, die Spalte zu aktualisieren
+      // Client benachrichtigen, die Spalte zu aktualisieren
       ws.Publish("card-update", &c)
    }
    // ...
 }
 ~~~
 
-Wenn sich also der Status einer Karte ändert, weist die Serverlogik sie der passenden Spalte zu und informiert den Client via WebSocket, damit die Karte dorthin verschoben wird.
+Wenn der Benutzer den Wert des Statusfelds ändert, prüft die Serverlogik den Wert und platziert die Karte in der entsprechenden Spalte. Anschließend verwendet der Server WebSocket, um dem Client mitzuteilen, dass die Karte in eine andere Spalte verschoben werden muss.
 
 ### Serverseitige + clientseitige Gruppierung
 
-Bei einem kombinierten Ansatz stellt der Server die Gruppierungsregeln bereit, und der Client entscheidet anhand des Status, in welche Spalte eine Karte gehört.
+Für den gemischten Server- + Client-Ansatz sollten Sie Gruppierungsregeln vom Server abrufen. Gemäß diesen Regeln kann der Client bestimmen, in welche Spalte die Karte je nach Wert des Statusfelds verschoben wird.
 
 ~~~js
 const groupingRules = await fetch("http://server.com/rules");
 ~~~
 
-Ein Beispiel für solche Regeln könnte so aussehen:
+Beispielsweise können Sie folgende Regeln festlegen:
 
 ~~~json
 {
@@ -334,7 +335,7 @@ Ein Beispiel für solche Regeln könnte so aussehen:
 }
 ~~~
 
-Fügen Sie nun auf dem Client Logik hinzu, um den Status einer Karte zu überprüfen und sie der richtigen Spalte zuzuordnen:
+Anschließend müssen Sie eine Logik definieren, die die Kartenänderungen prüft und die Karte in die gewünschte Spalte verschiebt:
 
 ~~~js
 const updateColumn = card => {
@@ -358,10 +359,10 @@ kanban.api.intercept("update-card", ev => {
 });
 ~~~
 
-So steuern Sie, in welchen Spalten Karten erscheinen - basierend auf anderen Feldern.
+Auf diese Weise können Sie bestimmte Spalten für Karten abhängig von anderen Feldern festlegen.
 
 ### Beispiel
 
-Hier sehen Sie einen Codeausschnitt, wie Sie mit serverseitiger Logik zwei oder mehr Status in Echtzeit in einer Spalte gruppieren:
+Der folgende Snippet zeigt, wie Sie die Serverseite konfigurieren, um zwei oder mehr Status in Echtzeit in einer Spalte zu gruppieren:
 
 <iframe src="https://snippet.dhtmlx.com/habbz6mf?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

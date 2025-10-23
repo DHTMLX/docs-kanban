@@ -1,14 +1,14 @@
 ---
 sidebar_label: updateComment()
-title: updateComment-Methode
-description: Erfahren Sie mehr über die updateComment-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: updateComment Methode
+description: Sie können mehr über die updateComment Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # updateComment()
 
 ### Beschreibung
 
-@short: Ändern Sie einen Kommentar einer Karte, indem Sie dessen ID angeben
+@short: Aktualisiert einen Kommentar einer Karte anhand seiner ID
 
 ### Verwendung
 
@@ -28,14 +28,14 @@ updateComment({
 
 ### Parameter
 
-- `id` -  (optional) die Kennung des zu ändernden Kommentars
-- `cardId` - (erforderlich) die Kennung der Karte, die den zu aktualisierenden Kommentar enthält
-- `comment` - (erforderlich) ein Objekt, das die aktualisierten Kommentardetails beschreibt. Es kann enthalten:
-    - `id` -  (optional) die Kennung des zu aktualisierenden Kommentars
-    - `cardId` - (optional) die Kennung der Karte, auf der der aktualisierte Kommentar platziert wird
-    - `text` - (optional) der neue Textinhalt des Kommentars
-    - `date` - (optional) das neue Datum, das mit dem Kommentar verknüpft ist
-    - `html` - (optional) der neue HTML-Inhalt für den Kommentar. Um HTML anstelle von einfachem Text anzuzeigen, aktivieren Sie die `html`-Eigenschaft in der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameter-für-den-typ-comments) Konfiguration
+- `id` -  (optional) die ID des zu aktualisierenden Kommentars
+- `cardId` - (erforderlich) die ID der Karte, deren Kommentar aktualisiert werden soll
+- `comment` - (erforderlich) das Konfigurationsobjekt des zu aktualisierenden Kommentars. Hier können folgende Parameter angegeben werden:
+    - `id` -  (optional) die ID des aktualisierten Kommentars
+    - `cardId` - (optional) die ID der Karte, zu der der aktualisierte Kommentar hinzugefügt werden soll
+    - `text` - (optional) der Text des aktualisierten Kommentars
+    - `date` - (optional) das Datum des aktualisierten Kommentars
+    - `html` - (optional) das HTML-Markup des aktualisierten Kommentars. Aktivieren Sie die `html`-Eigenschaft der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) Konfiguration, um das HTML-Markup anstelle des Textes anzuzeigen
 
 ### Beispiel
 
@@ -59,4 +59,4 @@ board.updateComment({
 });
 ~~~
 
-**Änderungsprotokoll:** Diese Methode wurde in Version 1.4 eingeführt
+**Änderungsprotokoll:** Die Methode wurde in Version v1.4 hinzugefügt

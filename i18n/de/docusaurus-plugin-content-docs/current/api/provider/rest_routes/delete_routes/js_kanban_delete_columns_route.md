@@ -1,24 +1,24 @@
 ---
 sidebar_label: DELETE /columns
 title: DELETE /columns
-description: Sie können mehr über die DELETE /columns REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die DELETE /columns REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # DELETE `/columns`
 
 ### Beschreibung
 
-@short: Entfernt die Daten einer Spalte
+@short: Löscht Daten einer Spalte
 
-Diese Route verarbeitet **HTTP DELETE**-Anfragen, die an den Endpunkt `/columns/{id}` gesendet werden.
+Die Route verarbeitet die **HTTP DELETE**-Anfrage, die an den Pfad `/columns/{id}` gesendet wird.
 
-### Pfadparameter
+### Pfad-Parameter
 
-Der folgende Parameter ist in der Anforderungs-URL enthalten:
+Der folgende Parameter wird in der Anforderungszeile übermittelt:
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `id`       |  number     | *Erforderlich*. Gibt die ID der zu entfernenden Spalte an. |
+| `id`       | number      | *Erforderlich*. Die ID der zu löschenden Spalte. |
 
 ### Payload
 
@@ -26,8 +26,8 @@ Es wird keine Payload benötigt.
 
 ### Antwort
 
-Es wird kein Inhalt zurückgegeben. Der Statuscode gibt das Ergebnis an: Erfolg mit response.status == 200 oder Fehler mit response.status == 500.
+Es werden keine Daten zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)

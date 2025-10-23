@@ -1,14 +1,14 @@
 ---
 sidebar_label: deleteCard()
-title: deleteCard Methode
-description: Sie können die deleteCard Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Methode deleteCard
+description: Sie können die Methode deleteCard in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # deleteCard()
 
 ### Beschreibung
 
-@short: Löscht eine bestimmte Karte aus dem Kanban-Datenspeicher.
+@short: Entfernt die angegebene Karte aus dem Datenspeicher des Kanban
 
 ### Verwendung
 
@@ -18,7 +18,7 @@ deleteCard({ id: string | number }): void;
 
 ### Parameter
 
-- `id` - (erforderlich) die eindeutige Kennung der zu entfernenden Karte
+- `id` - (erforderlich) die ID der zu löschenden Karte
 
 ### Beispiel
 
@@ -28,6 +28,6 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Löschen einer Karte anhand ihrer id
+// Karte anhand ihrer ID entfernen
 board.deleteCard({ id: 1 });
 ~~~

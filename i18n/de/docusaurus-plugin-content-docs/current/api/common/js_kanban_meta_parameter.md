@@ -1,17 +1,17 @@
 ---
 sidebar_label: $meta
 title: $meta Parameter
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über den $meta Parameter. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über den $meta Parameter in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # $meta
 
 ### Beschreibung
 
-@short: Ein Objekt mit zusätzlichen Einstellungen zur Anpassung von Kanban-Methoden und -Ereignissen
+@short: Ein Objekt mit zusätzlichen Einstellungen zur Konfiguration von Methoden und Events des Kanban
 
 :::important
-Das `$meta` Objekt stellt zusätzliche Parameter bereit, die dabei helfen, Methoden zu konfigurieren, die mit Kanban-Ereignissen verknüpft sind!
+Das `$meta`-Objekt enthält einen zusätzlichen Parametersatz, der zur Konfiguration von Methoden basierend auf den Events des Kanban verwendet wird!
 :::
 
 ### Verwendung
@@ -24,9 +24,9 @@ $meta?: {
 
 ### Parameter
 
-Das `$meta` Objekt enthält folgenden Parameter:
+Das `$meta`-Objekt enthält den folgenden Parameter:
 
-- `skipHistory` - (optional) steuert, ob eine Operation von der Verlaufshistorie des Kanban ausgeschlossen werden soll
+- `skipHistory` - (optional) aktiviert/deaktiviert das Überspringen von Operationen in der Historie des Kanban
 
 ### Beispiel
 
@@ -36,7 +36,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// neue Karte hinzufügen und diese Aktion im Kanban-Verlauf überspringen
+// Neue Karte hinzufügen und diese Aktion in der Kanban-Historie überspringen
 board.addCard({
     id: 1,
     columnId: "backlog",
@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**Änderungsprotokoll:** Der `$meta` Parameter wurde in Version 1.3 eingeführt
+**Änderungsprotokoll:** Der `$meta` Parameter wurde in Version 1.3 hinzugefügt
 
-**Verwandter Artikel:** [`history`](/api/config/js_kanban_history_config.md)
+**Verwandter Artikel:** [`history`](api/config/js_kanban_history_config.md)

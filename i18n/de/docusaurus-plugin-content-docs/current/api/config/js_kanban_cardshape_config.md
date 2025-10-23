@@ -1,14 +1,14 @@
 ---
 sidebar_label: cardShape
 title: cardShape Konfiguration
-description: Erkunden Sie die cardShape-Konfiguration in der DHTMLX JavaScript Kanban-Bibliothek Dokumentation. Entdecken Sie Entwicklerhandbücher, API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die cardShape-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # cardShape
 
 ### Beschreibung
 
-@short: Optional. Einstellungsobjekt, das steuert, wie Karten dargestellt werden.
+@short: Optional. Ein Objekt mit Einstellungen zur Verwaltung des Aussehens der Karten
 
 ### Verwendung
 
@@ -21,30 +21,31 @@ cardShape?: {
     cover?: boolean | { show?: boolean },
     comments?: boolean | { show?: boolean },
     confirmDeletion?: boolean | { show?: boolean },
-    start_date?: boolean | {
+    start_date?: boolean | { 
+        show?: boolean,
+        format?: string 
+    },
+    end_date?: boolean | { 
         show?: boolean,
         format?: string
     },
-    end_date?: boolean | {
+    color?: boolean | { 
         show?: boolean,
-        format?: string
-    },
-    color?: boolean | {
-        show?: boolean,
-        values?: array
+        values?: array  
     },
     menu?: boolean | {
-        show?: boolean,
+        show?: boolean, 
         items?: [
             {
                 id?: string,
                 icon?: string,
                 text?: string,
                 disabled? boolean,
-                onClick?: ({ id, item, card }) => void
-            },
+                onClick?: ({ id, item, card }) => void,
+                data?: array // ein Array von Untermenüpunkten
+            }, 
             {...}
-        ] | ({ card, store }) => array | boolean
+        ] | ({ card, readonly }) => array | null
     },
     users?: boolean | {
         show?: boolean,
@@ -54,7 +55,7 @@ cardShape?: {
                 label?: string,
                 avatar?: string
             },
-            {...} // weitere Nutzerdaten
+            {...} // weitere Benutzerdaten
         ],
         maxCount?: number | false
     },
@@ -68,11 +69,11 @@ cardShape?: {
             },
             {...} // weitere Prioritätsdaten
         ]
-    },
-    votes?: boolean | {
+    },    
+    votes?: boolean | { 
         show?: boolean,
         clickable?: boolean
-    },
+    }, 
     css?: (card) => string,
     headerFields?: [
         {
@@ -88,84 +89,97 @@ cardShape?: {
 ### Parameter
 
 :::info
-Manchmal können Parameter in einer **kurzen** oder **ausführlichen** Form angegeben werden. Zum Beispiel:
+In manchen Fällen können Sie den Parameter als **kurzen** oder **ausführlichen** Wert setzen. Siehe das folgende Beispiel:
 
 ~~~jsx {3,6}
     label: boolean | { show?: boolean }
-    // kurze Form
+    // kurzer Wert
     label: true
     // oder
-    // ausführliche Form
+    // ausführlicher Wert
     label: { show: true }
 ~~~
 :::
 
-Das **cardShape**-Objekt ermöglicht Ihnen, das Erscheinungsbild der Karten durch folgende Felder zu steuern:
+Um das Aussehen der Karte zu konfigurieren, können Sie im **cardShape**-Objekt die folgenden Parameter (Felder) angeben:
 
-- `label` - (optional) steuert die Sichtbarkeit des **label**-Felds
-- `description` - (optional) steuert die Sichtbarkeit des **description**-Felds
-- `progress` - (optional) steuert die Sichtbarkeit des **progress**-Felds
-- `attached` - (optional) steuert die Sichtbarkeit des **attachment**-Felds
-- `cover` - (optional) steuert die Sichtbarkeit des **Kartenbildes**
-- `comments` - (optional) steuert die Anzeige von **Kommentare** auf Karten
-- `confirmDeletion` - (optional) steuert den **Bestätigungsdialog** für das Löschen von Karten
-- `start_date` - (optional) konfiguriert das **Startdatum**-Feld
-    - `show` - (optional) steuert die Sichtbarkeit des Startdatums
-    - `format` - (optional) legt das Datumsformat fest. Siehe verfügbare Optionen [hier](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
-- `end_date` - (optional) konfiguriert das **Enddatum**-Feld
-    - `show` - (optional) steuert die Sichtbarkeit des Enddatums
-    - `format` - (optional) legt das Datumsformat fest. Siehe verfügbare Optionen [hier](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
-- `color` - (optional) konfiguriert die **obere Farblinie** der Karte
-    - `show` - (optional) steuert die Sichtbarkeit der Farblinie
-    - `values` - (optional) ein Array von HEX-Farbcodes
-- `menu` - (optional) konfiguriert das **Karten-Kontextmenü**
-    - `show` - (optional) aktiviert oder deaktiviert das Kontextmenü
-    - `items` - (optional) ein Array von Menüobjekten mit folgenden Eigenschaften:
-        - `id` - (optional) Menüelement-ID. Verwenden Sie diese für eingebaute Aktionen:
-            - ***"set-edit"*** - Kartenname bearbeiten
-            - ***"delete-card"*** - Karte löschen
-        - `icon` - (optional) Icon-Klassenname (z.B. *mdi-delete*)
-        - `text` - (optional) Menüelement-Beschriftung
-        - `disabled` - (optional) aktiviert oder deaktiviert das Menüelement
-        - `onClick` - (optional) Callback-Funktion mit folgenden Parametern:
-            - ***id*** - Menüelement-ID
-            - ***item*** - Menüelement-Daten
-            - ***card*** - Zielkarten-Daten
+- `label` - (optional) zeigt/versteckt ein **Label**-Feld
+- `description` - (optional) zeigt/versteckt ein **Beschreibung**-Feld
+- `progress` - (optional) zeigt/versteckt ein **Fortschritt**-Feld
+- `attached` - (optional) zeigt/versteckt ein **Anhang**-Feld
+- `cover` - (optional) zeigt/versteckt ein **Kartenbild**
+- `comments` - (optional) zeigt/versteckt **Kommentare** auf den Karten
+- `confirmDeletion` - (optional) zeigt/versteckt den **Bestätigungsdialog**, der es Benutzern erlaubt, das Löschen einer Karte zu bestätigen oder abzulehnen
+- `start_date` - (optional) ein Objekt mit Parametern für ein **Startdatum**-Feld
+    - `show` - (optional) zeigt/versteckt das Startdatum der Karte
+    - `format` - (optional) definiert das Format des Startdatums der Karte. Die verfügbaren Parameter finden Sie [hier](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+- `end_date` - (optional) ein Objekt mit Parametern für ein **Enddatum**-Feld
+    - `show` - (optional) zeigt/versteckt das Enddatum der Karte
+    - `format` - (optional) definiert das Format des Enddatums der Karte. Die verfügbaren Parameter finden Sie [hier](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
+- `color` - (optional) ein Objekt mit Parametern für die **obere Farbzeile** der Karte
+    - `show` - (optional) zeigt/versteckt die obere Farbzeile
+    - `values` - (optional) ein Array gültiger HEX-Codes
+- `menu` - (optional) ein Objekt mit Parametern für das **Kontextmenü der Karte**. Hier können Sie die folgenden Parameter angeben:
+    - `show` - (optional) aktiviert/deaktiviert das Kontextmenü der Karte
+    - `items` - (optional) ein Array von Objekten mit Parametern der Menüeinträge der Karten. Für jeden Eintrag können Sie folgende Parameter angeben:
+        - `id` - (optional) eine ID des Menüeintrags. Um die eingebauten Aktionen zu implementieren, müssen Sie folgende Werte angeben:
+            - ***"set-edit"*** - definiert die Aktion zum Bearbeiten des Kartennamens
+            - ***"delete-card"*** - definiert die Aktion zum Löschen einer Karte
+        - `icon` - (optional) ein Klassenname für das Icon des Menüeintrags. Hier können Sie beliebige Icons aus Icon-Fonts angeben (*mdi-delete*)
+        - `text` - (optional) ein Name des Menüeintrags
+        - `disabled` - (optional) der Status des Menüeintrags (*aktiv* oder *deaktiviert* je nach *boolean*-Wert)
+        - `onClick` - (optional) eine benutzerdefinierte Callback-Funktion, die folgende Argumente erhält:
+            - ***id*** - eine ID des aktuellen Menüeintrags
+            - ***item*** - ein Datenobjekt des aktuellen Menüeintrags
+            - ***card*** - ein Datenobjekt der Zielkarte
+        - `data` - (optional) ein Array von Objekten, die Untermenüpunkte des Menüs darstellen
 
-:::info
-Sie können auch eine eigene Funktion für `items` bereitstellen, die folgende Parameter erhält:
+    :::info
+    Sie können den Parameter `menu.items` auch auf eine benutzerdefinierte Funktion setzen, die folgende Argumente erhält:
+    - ***card*** - ein Datenobjekt der aktuellen Karte
+    - ***readonly*** - ein Objekt mit readonly [Status-Eigenschaften](api/internal/js_kanban_getstate_method.md)
 
-- ***card*** - aktuelle Kartendaten
-- ***store*** - *dataStore*-Objekt
+    Diese Funktion erlaubt es, das Menü für jede Karte anzupassen oder für eine spezifische Karte auszublenden (indem *null* oder *false* zurückgegeben wird):
 
-Damit können Sie das Menü für bestimmte Karten anpassen oder ausblenden, indem Sie *null* oder *false* zurückgeben:
+    ~~~jsx {}
+    items: ({ card, readonly }) => {
+        if (card.id === 1){
+            return false;
+        }  
 
-~~~jsx {}
-    items: ({ card, store }) => {
-        if(card.id === 1)
-            return false
-        return [
-            { id: "set-edit", icon: "wxi-edit", label: "Edit" },
-            { id: "delete-card", icon: "wxi-delete", label: "Delete" }
-        ]
+        const menu = [];
+
+        if (!readonly.delete){
+            menu.push({ 
+                id: "delete-card", icon: "wxi-delete", label: "Delete"
+            });
+        }
+            
+        if (!readonly.edit){
+            menu.push({ 
+                id: "set-edit", icon: "wxi-edit", label: "Edit"
+            });
+        }
+        return menu.length ? menu : null;
     }
-~~~
-:::
+    ~~~
+    :::
 
-- `users` - (optional) konfiguriert das **Benutzer**-Feld
-    - `show` - (optional) steuert die Sichtbarkeit der zugewiesenen Benutzer
-    - `values` - (erforderlich) Array von Benutzerobjekten:
-        - `id` - (erforderlich) Benutzer-ID
-        - `label` - (optional) Benutzername
-        - `avatar` - (optional) Pfad zum Benutzeravatar
-    - `maxCount` - (optional) maximale Anzahl der auf einer Karte angezeigten Benutzer oder ***false*** für unbegrenzt
+- `users` - (optional) ein Objekt mit Parametern für ein **Benutzer**-Feld
+    - `show` - (optional) zeigt/versteckt die zugewiesenen Benutzer
+    - `values` - (erforderlich) ein Array von Objekten mit Benutzerdaten. Für jeden Benutzer können Sie folgende Parameter angeben:
+        - `id` - (erforderlich) eine Benutzer-**ID**
+        - `label` - (optional) ein Benutzername
+        - `avatar` - (optional) ein Pfad zum Benutzeravatar
+    - `maxCount` - (optional) eine maximale Anzahl der auf der Karte angezeigten Benutzer (oder ***false***)
 
-    Die Einstellung von `maxCount` kontrolliert, wie viele zugewiesene Benutzer auf der Karte sichtbar sind. `false` zeigt alle zugewiesenen Benutzer an.
+    Sie können die Eigenschaft `maxCount` auf eine Zahl setzen, die angibt, wie viele Benutzer auf der Karte angezeigt werden sollen.
+    Wenn Sie `maxCount` auf `false` setzen, werden alle zugewiesenen Benutzer auf der Karte angezeigt.
 
-:::info
-Das ***users***-Feld ist standardmäßig deaktiviert. Um es zu aktivieren, setzen Sie `show` auf `true` und geben Sie Benutzerdaten in `values` an. Um Benutzer über den Editor zuzuweisen, konfigurieren Sie die entsprechende Steuerung in [`editorShape`](/api/config/js_kanban_editorshape_config.md#--parameter-für-die-typen-combo-select-und-multiselect). Verwenden Sie ***select*** für einen einzelnen Benutzer oder ***multiselect*** für mehrere Benutzer.
+    :::info
+    Das ***users***-Feld ist standardmäßig deaktiviert. Um es zu aktivieren, müssen Sie den Parameter `show` auf `true` setzen und die entsprechenden Benutzerdaten über den Parameter `values` bereitstellen. Um neue Benutzer über den Editor zuzuweisen, müssen Sie die entsprechende Steuerung über die [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types)-Eigenschaft konfigurieren. Verwenden Sie den Typ ***select***, um einen oder mehrere Benutzer zuzuweisen, oder den Typ ***multiselect***, um mehrere Benutzer zuzuweisen.
 
-~~~jsx {}
+    ~~~jsx {}
     cardShape: {
         users: {
             show: true,
@@ -173,52 +187,52 @@ Das ***users***-Feld ist standardmäßig deaktiviert. Um es zu aktivieren, setze
                 { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
                 { id: 2, label: "Aaron Short" }
             ],
-            maxCount: 4 // Anzeige auf 4 Benutzer pro Karte begrenzen
+            maxCount: 4 // nur 4 Benutzer werden auf der Karte angezeigt
         }
     }
-~~~
-:::
+    ~~~
+    :::
 
-- `priority` - (optional) konfiguriert das **Priorität**-Feld
-    - `show` - (optional) steuert die Sichtbarkeit der Priorität
-    - `values` - (optional) Array von Prioritätsobjekten:
-        - `id` - (erforderlich) Prioritäts-ID
-        - `label` - (optional) Prioritätsname
-        - `color` - (erforderlich) HEX-Farbcode
-- `votes` - (optional) konfiguriert die **Abstimmungsfunktion**
-    - `show` - (optional) steuert das Abstimmungssymbol auf Karten und im Editor
-    - `clickable` - (optional) wenn `true`, können Nutzer durch Klicken auf das Symbol auf der Karte abstimmen; sonst ist Abstimmung nur über den Editor möglich
-- `css` - Funktion, die eine CSS-Klasse zurückgibt, um Karten bedingt zu stylen
-- `headerFields` - (optional) Array von Objekten zur Definition von **benutzerdefinierten Feldern**
-    - `key` - (erforderlich) Schlüssel des benutzerdefinierten Felds, verwendet bei der Konfiguration des Editors via [editorShape](../js_kanban_editorshape_config)
-    - `label` - (optional) Bezeichnung des benutzerdefinierten Felds
-    - `css` - (optional) CSS-Klasse für das benutzerdefinierte Feld
+- `priority` - (optional) ein Objekt mit Parametern für ein **Prioritäts**-Feld
+    - `show` - (optional) zeigt/versteckt die Priorität der Karte
+    - `values` - (optional) ein Array von Objekten mit Prioritätsdaten. Für jede Priorität können Sie folgende Parameter angeben:
+        - `id` - (erforderlich) eine Prioritäts-**ID**
+        - `label` - (optional) ein Prioritätsname
+        - `color` - (erforderlich) ein gültiger HEX-Code
+- `votes` - (optional) spezifiziert die **Abstimmungs**-Funktionalität
+    - `show` - (optional) zeigt/versteckt das Abstimmungssymbol auf der Karte und im Editor
+    - `clickable` - (optional) macht das Abstimmungssymbol auf der Karte anklickbar. Wenn `true`, können Benutzer für die Karte über das Symbol auf der Karte abstimmen. Andernfalls können Benutzer nur über das Symbol im Editor abstimmen.
+- `css` - eine Funktion, die eine CSS-Klasse zurückgibt, die bedingt auf Karten angewendet wird
+- `headerFields` - (optional) ein Array von Objekten mit Daten zu **benutzerdefinierten Feldern**. Hier können Sie folgende Parameter angeben:
+    - `key` - (erforderlich) ein Schlüssel des benutzerdefinierten Felds. Er wird bei der Konfiguration des Editors über die [editorShape](api/config/js_kanban_editorshape_config.md)-Eigenschaft verwendet
+    - `label` - (optional) ein Label des benutzerdefinierten Felds
+    - `css` - (optional) eine CSS-Klasse des benutzerdefinierten Felds
 
 :::info
-Wenn Sie keine Kartenoptionen über **cardShape** festlegen, werden die Standardparameter aus **defaultCardShape** verwendet.
+Sofern Sie die Karteneinstellungen nicht über die **cardShape**-Eigenschaft angeben, verwendet das Widget die Parameter aus dem **defaultCardShape**!
 :::
 
 ### Standardkonfiguration
 
 ~~~jsx {}
 const defaultPriorities = [
-    { id: 1, color: "#FE6158", label: "High" },
-    { id: 2, color: "#F1B941", label: "Medium" },
-    { id: 3, color: "#77D257", label: "Low" }
+    { id: 1, color: "#FE6158", label: "Hoch" },
+    { id: 2, color: "#F1B941", label: "Mittel" },
+    { id: 3, color: "#77D257", label: "Niedrig" }
 ];
 
 const defaultColors = ["#33B0B4", "#0096FA", "#F1B941"];
 
-export const getDefaultCardMenuItems = ({ store }: { store: DataStore }) => {
-    const { readonly } = store.getState();
+export const getDefaultCardMenuItems = ({ readonly }: { readonly: DataStore }) => {
+    const { readonly } = readonly.getState();
     const baseItems = [
-        { id: "duplicate-card", icon: "wxi-content-copy", text: "Duplicate" },
-        { id: "delete-card", icon: "wxi-delete-outline", text: "Delete" }
+        { id: "duplicate-card", icon: "wxi-content-copy", text: "Duplizieren" },
+        { id: "delete-card", icon: "wxi-delete-outline", text: "Löschen" }
     ];
 
     if (!readonly?.select && readonly?.edit) {
         return [
-            { id: "set-edit", icon: "wxi-edit-outline", text: "Edit" },
+            { id: "set-edit", icon: "wxi-edit-outline", text: "Bearbeiten" },
             ...baseItems,
         ];
     }
@@ -233,11 +247,11 @@ const defaultCardShape = {
     end_date: { show: false },
     users: { show: false },
     confirmDeletion: { show: true },
-    priority: {
+    priority: { 
         show: false,
         values: defaultPriorities
     },
-    color: {
+    color: { 
         show: false,
         values: defaultColors
     },
@@ -250,20 +264,20 @@ const defaultCardShape = {
 ### Beispiel
 
 ~~~jsx {14-49,54}
-const users = [ // Beispiel-Benutzerdaten
+const users = [ // Benutzerdaten
     { id: 1, label: "John Smith", avatar: "../assets/user.jpg" },
     { id: 2, label: "Aaron Short" }
 ];
 
-const  cardPriority = [ // Beispiel-Prioritätsdaten
-    { id: 1, color: "#FF5252", label: "high" },
-    { id: 2, color: "#FFC975", label: "medium" },
-    { id: 3, color: "#0AB169", label: "low" }
+const  cardPriority = [ // Prioritätsdaten der Karten
+    { id: 1, color: "#FF5252", label: "hoch" },
+    { id: 2, color: "#FFC975", label: "mittel" },
+    { id: 3, color: "#0AB169", label: "niedrig" }
 ];
 
 const cardColors = ["#65D3B3", "#FFC975", "#58C3FE"];
 
-const cardShape = { // Kartendarstellungseinstellungen
+const cardShape = { // Karteneinstellungen
     label: true,
     description: true,
     progress: true,
@@ -293,7 +307,7 @@ const cardShape = { // Kartendarstellungseinstellungen
     },
     css: (card) => card.type == "feature" ? "green" : "red",
     headerFields: [
-        {   // Beispiel für benutzerdefiniertes Feld
+        {   // benutzerdefiniertes Feld
             key: "sprint",
             css: "custom_style",
             label: "Sprint"
@@ -310,14 +324,17 @@ new kanban.Kanban("#root", {
 ~~~
 
 **Änderungsprotokoll:**
-- Die Optionen ***comments***, ***css*** und ***votes*** wurden in Version 1.4 hinzugefügt
-- Die Option ***menu.items[0].label*** wurde in Version 1.4 zu ***menu.items[0].text*** umbenannt
-- Die Optionen ***users.maxCount*** und ***votes.clickable*** wurden in Version 1.6 hinzugefügt
+- Die Parameter ***comments***, ***css*** und ***votes*** wurden in Version 1.4 hinzugefügt
+- Der Parameter ***menu.items[0].label*** wurde in Version 1.4 durch ***menu.items[0].text*** ersetzt und als veraltet markiert
+- Der Parameter ***menu.items[0].items*** wurde in Version 1.4 durch ***menu.items[0].data*** ersetzt und als veraltet markiert
+- Die Parameter ***users.maxCount*** und ***votes.clickable*** wurden in Version 1.6 hinzugefügt
+- Die Parameter ***menu.items[0].label*** und ***menu.items[0].items*** wurden in Version 1.7 entfernt
+- Die Funktion ***menu.items*** wurde in Version 1.7 aktualisiert. Der Parameter **store** wurde durch **readonly** ersetzt
 
-**Verwandte Artikel:** [Konfiguration](/guides/configuration#karten)
+**Verwandte Artikel:** [Konfiguration](guides/configuration.md#cards)
 
 **Verwandte Beispiele:**
 - [Kanban. Swimlanes, Kommentare, Abstimmungen](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
 - [Kanban. Hervorhebung veralteter und aktiver Aufgaben](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
-- [Kanban. Kartendesign](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
+- [Kanban. Styling von Karten](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
 - [Kanban. Unbegrenzte Benutzerzuweisungen pro Aufgabe](https://snippet.dhtmlx.com/w205dvzg?tag=kanban)

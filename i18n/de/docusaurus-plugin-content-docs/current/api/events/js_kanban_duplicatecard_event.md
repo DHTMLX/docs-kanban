@@ -1,7 +1,7 @@
 ---
 sidebar_label: duplicate-card
 title: duplicate-card Event
-description: Lernen Sie das duplicate-card Event aus der DHTMLX JavaScript Kanban Bibliothek kennen. Entdecken Sie Entwicklerhandbücher, API-Referenzen, testen Sie Codebeispiele und Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über das duplicate-card Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # duplicate-card
@@ -22,14 +22,14 @@ description: Lernen Sie das duplicate-card Event aus der DHTMLX JavaScript Kanba
 
 ### Parameter
 
-Der Callback für das **duplicate-card** Event erhält ein Objekt mit folgenden Eigenschaften:
+Der Callback des **duplicate-card** Events kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `id` - (erforderlich) die ID der Karte, die dupliziert wird
-- `card` - (optional) das Datenobjekt für die neue Karte. Die vollständige Liste der Kartenparameter finden Sie [hier](/api/config/js_kanban_cards_config.md)
-- `select` - (optional) steuert, ob die neu hinzugefügte Karte ausgewählt wird oder nicht
+- `id` - (erforderlich) die ID der zu duplizierenden Karte
+- `card` - (optional) das Datenobjekt der neuen Karte. Die vollständige Liste der Kartenparameter finden Sie [hier](api/config/js_kanban_cards_config.md)
+- `select` - (optional) aktiviert/deaktiviert die Auswahl der neu hinzugefügten Karte
 
 :::info
-Um mit internen Events zu arbeiten, können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden
+Für die Handhabung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -40,10 +40,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "duplicate-card" Event hören
+// Anmeldung auf das "duplicate-card" Event
 board.api.on("duplicate-card", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Änderungsprotokoll:** Der Parameter `select` wurde in Version v1.5.10 eingeführt
+**Änderungsprotokoll:** Der Parameter `select` wurde in Version v1.5.10 hinzugefügt

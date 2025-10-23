@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-row
-title: move-row Ereignis
-description: Entdecken Sie das move-row Ereignis in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Finden Sie Entwickleranleitungen, API-Referenzen, Codebeispiele, Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: move-row Event
+description: Sie können mehr über das move-row Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # move-row
@@ -15,21 +15,21 @@ description: Entdecken Sie das move-row Ereignis in der DHTMLX JavaScript Kanban
 ~~~jsx {}
 "move-row": ({
     id: string | number,
-    before: string | number,
+    before?: string | number,
     skipProvider?: boolean
 }) => void;
 ~~~
 
 ### Parameter
 
-Der Callback für das **move-row** Ereignis erhält ein Objekt mit folgenden Eigenschaften:
+Der Callback des **move-row** Events kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `id` - (erforderlich) die ID der verschobenen Zeile
-- `before` - (erforderlich) die ID der Zeile, vor der die verschobene Zeile eingefügt wird
-- `skipProvider` - (optional) steuert, ob die Anfrage an den Server übersprungen wird
+- `id` - (erforderlich) die ID der zu verschiebenden Zeile
+- `before` - (optional) die ID der Zeile, vor der die verschobene Zeile platziert wird. Wenn der Parameter `before` nicht angegeben wird, wird die Zeile am Ende des Boards eingefügt
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern, dass die Anfrage an den Server gesendet wird
 
 :::info
-Zur Verwaltung interner Ereignisse können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden.
+Zur Handhabung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -41,10 +41,10 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// auf das "move-row" Ereignis hören
+// Anmeldung zum "move-row" Event
 board.api.on("move-row", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Ereignis wurde in Version v1.1 eingeführt
+**Änderungsprotokoll:** Dieses Event wurde in Version v1.1 hinzugefügt

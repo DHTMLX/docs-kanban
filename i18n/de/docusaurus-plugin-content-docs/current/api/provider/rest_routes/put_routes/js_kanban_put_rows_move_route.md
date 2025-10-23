@@ -1,32 +1,32 @@
 ---
 sidebar_label: PUT /rows/{id}/move
 title: PUT /rows/{id}/move
-description: Sie können mehr über die PUT /rows/{id}/move REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die PUT /rows/{id}/move REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # PUT `/rows/{id}/move`
 
 ### Beschreibung
 
-@short: Ändert die Position einer Zeile, indem sie an eine bestimmte Stelle verschoben wird.
+@short: Verschiebt eine Zeile an eine bestimmte Position
 
-Diese Route verarbeitet eine **HTTP PUT**-Anfrage, die an den Endpunkt `rows/{id}/move` gesendet wird.
+Die Route verarbeitet die **HTTP PUT**-Anfrage, die an den Pfad `rows/{id}/move` gesendet wird.
 
 ### Pfadparameter
 
-Der folgende Parameter ist in der Anforderungs-URL enthalten:
+Der folgende Parameter wird in der Anforderungszeile übergeben:
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `id`       | number      | *Erforderlich*. Die Kennung der Zeile, die verschoben werden soll. |
+| `id`       |  number     | *Erforderlich*. Die ID der zu verschiebenden Zeile.|
 
-### Nutzlast
+### Payload
 
-Der Anfragekörper sollte ein JSON-Objekt mit der folgenden Eigenschaft enthalten:
+Der Server erwartet ein JSON-Objekt mit den folgenden Eigenschaften:
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `before`   | number      | *Optional*. Die ID der Zeile, vor der die verschobene Zeile positioniert werden soll. |
+| `before`   |  number     | *Optional*. Die ID der Zeile, vor der die verschobene Zeile platziert werden soll.|
 
 Beispiel:
 
@@ -38,7 +38,7 @@ Beispiel:
 
 ### Antwort
 
-Die Antwort ist ein JSON-Objekt, das die ID der verschobenen Zeile enthält.
+Der Server gibt ein JSON-Objekt mit der ID der verschobenen Zeile zurück.
 
 Beispiel:
 
@@ -52,4 +52,4 @@ Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status ==
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

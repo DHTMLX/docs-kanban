@@ -2,54 +2,72 @@
 sidebar_label: Kanban-Übersicht
 title: JavaScript Kanban Übersicht
 slug: /
-description: In der Dokumentation erhalten Sie einen Überblick über die DHTMLX JavaScript Kanban-Bibliothek. Durchstöbern Sie Entwicklerhandbücher und API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation erhalten Sie einen Überblick über die DHTMLX JavaScript Kanban-Bibliothek. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # DHTMLX Kanban Übersicht
 
-JavaScript Kanban ist ein praktisches Tool zur Visualisierung von Workflows. Es erleichtert das Verständnis Ihrer Geschäftsprozesse und bietet einen Überblick über die Arbeitsbelastung Ihres Teams. Das Tool ist sehr flexibel und kann beliebig viele Karten, Spalten und Swimlanes verarbeiten. Da es mit reinem JavaScript und CSS entwickelt wurde, ist die Einrichtung und Anpassung unkompliziert und es lässt sich problemlos in jede Webanwendung oder Webseite integrieren.
+JavaScript Kanban ist eine effektive Lösung zur Visualisierung von Workflows. Das Widget hilft Ihnen, Ihre Geschäftsprozesse besser zu verstehen und einen Überblick über die Arbeitsauslastung Ihres Teams zu erhalten. Dieses flexible Tool kann mit beliebig vielen Karten, Spalten und Swimlanes arbeiten. Die Komponente ist vollständig in reinem JavaScript und CSS geschrieben und lässt sich einfach einrichten, anpassen und in jede Webanwendung oder Webseite integrieren.
 
-## Kanban-Struktur
+## Kanban-Struktur­
 
 ### Toolbar
 
-Die **Toolbar** im Kanban befindet sich als eigener Bereich innerhalb der Oberfläche. Sie enthält eine Suchleiste zum Finden von Karten, eine Steuerung zum Sortieren von Karten nach verschiedenen Optionen, Undo/Redo-Buttons zur Verwaltung der Historie sowie Steuerelemente zum Hinzufügen neuer Spalten und Zeilen. Sie können das Such- und Sortierverhalten individuell anpassen und die Toolbar ganz einfach erweitern, indem Sie eigene Elemente hinzufügen oder die Reihenfolge der vorhandenen Elemente ändern. Weitere Informationen finden Sie im Abschnitt [Configuration](./guides/configuration#toolbar).
+Die **Toolbar** von Kanban ist ein separater Teil der Benutzeroberfläche. Sie beinhaltet eine Suchleiste zum *Suchen* von Karten, eine Steuerung zum *Sortieren* von Karten nach bestimmten Parametern, zwei Steuerelemente zur Verwaltung der Historie (*Undo/Redo*) sowie Steuerelemente zum *Hinzufügen neuer Spalten und Zeilen*. Sie können die Such- und Sortierlogik flexibel steuern sowie die Struktur der Toolbar anpassen, indem Sie eigene Elemente hinzufügen oder die Reihenfolge der eingebauten Elemente verändern. Weitere Informationen finden Sie im Abschnitt [Konfiguration](guides/configuration.md#toolbar).
 
-![Kanban Toolbar](/assets/js_kanban_toolbar.png)
+import toolbar from '@site/static/img/js_kanban_toolbar.png';
+
+<img
+    src={toolbar}
+    alt="Kanban Toolbar"
+    className="img_border"
+/>
 
 ### Board
 
-Das **Board** ist der zentrale Bereich im Kanban. Hier werden Karten in Spalten und Zeilen (Swimlanes) angeordnet. Sie können das Aussehen der Karten leicht anpassen oder eigene Templates verwenden. Mehr dazu im Abschnitt [Configuration](./guides/configuration#karten).
+Das **Board** ist der Hauptbestandteil von Kanban. Es besteht aus Karten, die auf Spalten und Zeilen (Swimlanes) verteilt sind. Sie können das Aussehen der Karten flexibel konfigurieren und eine eigene Vorlage anwenden. Weitere Informationen finden Sie im Abschnitt [Konfiguration](guides/configuration.md#cards).
 
-Auf dem **Board**-Panel können Sie mit ***Karten***, ***Spalten*** und ***Zeilen*** auf verschiedene Weise interagieren:
+Auf dem **Board**-Panel können Sie mit den ***Karten***, ***Spalten*** und ***Zeilen*** wie folgt arbeiten:
 
-- Neue Karten durch Klicken auf das Plus-Symbol hinzufügen (unter Berücksichtigung etwaiger *Limits* für jede Spalte und Swimlane)
-- Kommentare und Stimmen zu Aufgaben über das Editor-Panel hinzufügen ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
-- Verknüpfungen zwischen Aufgaben im Editor anlegen ([Example](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
-- Karten, Spalten und Zeilen über das Kontextmenü (Drei-Punkte-Symbol) löschen
-- Karten über das Kontextmenü (Drei-Punkte-Symbol) oder mit `Ctrl (Command)`+`D` duplizieren (ermöglicht das gleichzeitige Duplizieren mehrerer Karten)
-- Kanban-Daten als JSON-Datei exportieren
-- Die Kanban-Historie mit diesen Shortcuts verwalten:
-    - `Ctrl (Command)`+`Z` zum Rückgängig machen der letzten Aktion (einen Schritt zurück in der Kanban-Historie)
-    - `Ctrl (Command)`+`Y` oder `Ctrl (Command)`+`Shift`+`Z` zum Wiederholen einer rückgängig gemachten Aktion (einen Schritt vorwärts in der Kanban-Historie)
-- Karten durch Drag & Drop innerhalb von Spalten oder Zeilen verschieben
-- Spalten und Zeilen über das Kontextmenü (Drei-Punkte-Symbol) verschieben
-- Spalten und Zeilen durch Doppelklick auf das Label oder über das Kontextmenü (Drei-Punkte-Symbol) umbenennen
-- Einen Karten-Editor durch Klicken auf eine Karte öffnen
-- Zeilen mit dem Pfeil-Symbol links neben dem Zeilen-Label ein- oder ausklappen
-- Spalten mit dem Pfeil-Symbol links neben dem Spalten-Label ein- oder ausklappen
-- Mehrere Karten mit folgenden Shortcuts auswählen:
-    - `Shift` + Klick, um mehrere Karten in derselben Spalte zu markieren
-    - `Ctrl (Command)` + Klick, um Karten in verschiedenen Spalten auszuwählen
+- Neue Karten durch Klicken auf das Plus-Symbol hinzufügen (entsprechend den festgelegten *Limits* für jede Spalte und Swimlane)
+- Kommentare und Stimmen für Aufgaben über das Editor-Panel hinzufügen ([Beispiel](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- Verknüpfungen zwischen Aufgaben über den Editor setzen ([Beispiel](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
+- Karten, Spalten und Zeilen über das Kontextmenü (ein 3-Punkte-Symbol) löschen
+- Karten über das Kontextmenü (ein 3-Punkte-Symbol) oder die Tastenkombination `Ctrl (Command)`+`D` duplizieren (ermöglicht das Duplizieren mehrerer Karten)
+- Kanban-Daten in eine JSON-Datei exportieren
+- Die Kanban-Historie mit folgenden Tastenkombinationen verwalten:
+    - `Ctrl (Command)`+`Z` – macht die letzte Aktion im Kanban rückgängig (ein Schritt zurück in der Kanban-Historie)
+    - `Ctrl (Command)`+`Y` oder `Ctrl (Command)`+`Shift`+`Z` – wiederholt die mit *Undo* rückgängig gemachte Aktion (ein Schritt vorwärts in der Kanban-Historie)
+- Karten per Drag & Drop an die gewünschte Stelle (Zeile und Spalte) verschieben
+- Spalten und Zeilen über das Kontextmenü (ein 3-Punkte-Symbol) verschieben
+- Spalten und Zeilen durch Doppelklick auf die entsprechenden Beschriftungen oder über das Kontextmenü (ein 3-Punkte-Symbol) umbenennen
+- Einen Karten-Editor durch Klicken auf die Karte öffnen
+- Zeilen durch Klicken auf das Pfeilsymbol links neben dem Zeilenlabel ein- oder ausklappen
+- Spalten durch Klicken auf das Pfeilsymbol links neben dem Spaltenlabel ein- oder ausklappen
+- Mehrere Karten mit folgenden Tastenkombinationen auswählen:
+    - `Shift` + Klick auf die entsprechenden Karten, um mehrere Karten in derselben Spalte auszuwählen
+    - `Ctrl (Command)` + Klick auf die entsprechenden Karten, um mehrere Karten in verschiedenen Spalten auszuwählen
 
-![Kanban Board](/assets/js_kanban_board.png)
+import board from '@site/static/img/js_kanban_board.png';
+
+<img
+    src={board}
+    alt="Kanban Board"
+    className="img_border"
+/>
 
 ### Editor
 
-Der **Editor** öffnet sich als modales Fenster und bietet Felder und Steuerelemente zum Bearbeiten der Details der ausgewählten Karte. Klicken Sie einfach auf eine beliebige Karte, um den Editor aufzurufen. Sie können den Editor auch individuell anpassen, indem Sie neue Felder oder Steuerelemente hinzufügen. Weitere Informationen finden Sie im Abschnitt [Configuration](./guides/configuration#editor).
+Der **Editor** ist ein modales Panel, das aus Feldern und Steuerelementen zur Verwaltung der ausgewählten Kartendaten besteht. Um den Editor anzuzeigen, klicken Sie auf die Karte, die Sie bearbeiten möchten. Sie können die Struktur des Editors flexibel anpassen, indem Sie neue Felder und Steuerelemente hinzufügen. Weitere Informationen finden Sie im Abschnitt [Konfiguration](guides/configuration.md#editor).
 
-![Kanban Editor](/assets/js_kanban_editor.png)
+import editor from '@site/static/img/js_kanban_editor.png';
+
+<img
+    src={editor}
+    alt="Kanban Editor"
+    className="img_border"
+/>
 
 ## Wie geht es weiter?
 
-Um Kanban in Ihrer Anwendung zu integrieren, folgen Sie dem Tutorial [How to start](./how_to_start) für eine schrittweise Anleitung.
+Jetzt können Sie Kanban in Ihrer Anwendung verwenden. Folgen Sie der Anleitung im Tutorial [How to start](how_to_start.md) für weitere Hinweise.

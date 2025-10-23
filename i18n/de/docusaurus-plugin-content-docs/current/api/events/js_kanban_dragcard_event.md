@@ -1,14 +1,14 @@
 ---
 sidebar_label: drag-card
 title: drag-card Event
-description: Sie können im Dokumentationsbereich der DHTMLX JavaScript Kanban-Bibliothek mehr über das drag-card Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über das drag-card Ereignis in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # drag-card
 
 ### Beschreibung
 
-@short: Dieses Event wird ausgelöst, sobald eine Karte per Drag-and-Drop verschoben wird.
+@short: Wird ausgelöst, wenn eine Karte per Drag & Drop verschoben wird
 
 ### Verwendung
 
@@ -24,16 +24,16 @@ description: Sie können im Dokumentationsbereich der DHTMLX JavaScript Kanban-B
 
 ### Parameter
 
-Der Callback für das **drag-card** Event erhält ein Objekt mit den folgenden Eigenschaften:
+Der Callback des **drag-card** Ereignisses kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `id` - (erforderlich) die ID der gerade gezogenen Karte
+- `id` - (erforderlich) die ID der gezogenen Karte
 - `columnId` - (erforderlich) die ID der Spalte, in der sich die Karte aktuell befindet
 - `rowId` - (optional) die ID der Zeile, in der sich die Karte aktuell befindet
-- `before` - (optional) die ID der Karte, die unmittelbar nach der gezogenen Karte in der Spalte erscheint
-- `source` - (optional) ein Array mit den IDs der verschobenen Karten
+- `before` - (optional) die ID einer Karte, die sich aktuell nach der gezogenen Karte in der Spalte befindet
+- `source` - (optional) das Array der IDs der verschobenen Karten
 
 :::info
-Zur Verwaltung interner Events können Sie die [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methoden) verwenden.
+Für die Handhabung der internen Ereignisse können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -44,12 +44,12 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Anmeldung zum "drag-card" Event
+// Auf das "drag-card" Ereignis abonnieren
 board.api.on("drag-card", (obj) => {
     console.log(obj.columnId);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Event ist seit Version 1.4 verfügbar
+**Änderungsprotokoll:** Das Ereignis wurde in Version v1.4 hinzugefügt
 
-**Verwandtes Beispiel:** [Kanban. Deaktivieren des Drag-and-Drop für bestimmte Spalten](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Drag & Drop für bestimmte Spalten deaktivieren](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

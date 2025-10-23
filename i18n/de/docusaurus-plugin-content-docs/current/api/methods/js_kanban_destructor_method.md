@@ -1,14 +1,14 @@
 ---
 sidebar_label: destructor()
-title: Methode destructor
-description: Sie können mehr über die Methode destructor in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: destructor Methode
+description: Sie können mehr über die destructor Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # destructor()
 
 ### Beschreibung
 
-@short: Löscht alle HTML-Elemente des Kanban-Boards und entfernt alle zugehörigen Ereignishandler.
+@short: Entfernt alle HTML-Elemente des Kanban und löst alle zugehörigen Ereignisse.
 
 ### Verwendung
 

@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.exec()
 title: exec Methode
-description: Erfahren Sie mehr über die exec Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die exec Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # api.exec()
 
 ### Beschreibung
 
-@short: Diese Methode ermöglicht es Ihnen, interne Ereignisse innerhalb des Kanban-Boards auszulösen.
+@short: Ermöglicht das Auslösen interner Ereignisse
 
 ### Verwendung
 
@@ -21,13 +21,13 @@ api.exec(
 
 ### Parameter
 
-- `event` - (erforderlich) das Ereignis, das Sie auslösen möchten 
-- `config` - (erforderlich) ein Objekt mit Parametern, die sich auf das ausgelöste Ereignis beziehen
+- `event` - (erforderlich) ein auszulösendes Ereignis
+- `config` - (erforderlich) das Konfigurationsobjekt mit Parametern (siehe das auszulösende Ereignis)
 
 ### Ereignisse
 
 :::info
-Eine vollständige Liste der internen Kanban-Ereignisse finden Sie [**hier**](/api/overview/main_overview.md/#kanban-events)
+Die vollständige Liste der internen Kanban-Ereignisse finden Sie [**hier**](api/overview/main_overview.md/#kanban-events)
 :::
 
 ### Beispiel

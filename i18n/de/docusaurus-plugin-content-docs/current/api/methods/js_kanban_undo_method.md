@@ -1,7 +1,7 @@
 ---
 sidebar_label: undo()
 title: undo Methode
-description: Sie können die undo Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die undo-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # undo()
@@ -11,7 +11,7 @@ description: Sie können die undo Methode in der Dokumentation der DHTMLX JavaSc
 @short: Macht die letzte Operation im Kanban rückgängig
 
 :::info
-Die `undo()` Methode funktioniert nur, wenn die Konfiguration [`history: true`](/api/config/js_kanban_history_config.md) aktiviert ist!
+Die `undo()` Methode funktioniert nur mit der [`history: true`](api/config/js_kanban_history_config.md) Konfiguration!
 :::
 
 ### Verwendung
@@ -28,7 +28,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// geht im Kanban-Verlauf einen Schritt zurück
+// macht einen Schritt zurück in der Historie des Kanban
 board.undo();
 ~~~
 

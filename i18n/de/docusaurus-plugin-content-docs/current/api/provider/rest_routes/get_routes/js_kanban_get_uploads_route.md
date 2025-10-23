@@ -1,36 +1,36 @@
 ---
 sidebar_label: GET /uploads
 title: GET /uploads
-description: Entdecken Sie die GET /uploads REST-Route in der DHTMLX JavaScript Kanban Bibliothek-Dokumentation. Erkunden Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Beispielcode und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die REST-Route GET /uploads in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # GET `/uploads`
 
 ### Beschreibung
 
-@short: Ruft die angegebene Binärdatei vom Server ab
+@short: Ruft die angeforderte Binärdatei vom Server ab
 
-Diese Route verarbeitet **HTTP GET**-Anfragen, die an den Endpunkt `/uploads/{id}/{name}` gesendet werden.
+Die Route verarbeitet die **HTTP GET**-Anfrage, die an den Pfad `/uploads/{id}/{name}` gesendet wird.
 
 ### Pfadparameter
 
-Die folgenden Parameter sind in der Anforderungs-URL enthalten:
+Die folgenden Parameter werden in der Anforderungszeile übergeben:
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `id`       |  number     | *Erforderlich*. Die ID der abzurufenden Datei. |
-| `name`     |  string     | *Erforderlich*. Der abzurufende Dateiname. |
+| `id`       |  number     | *Erforderlich*. Die ID der benötigten Datei. |
+| `name`     |  string     | *Erforderlich*. Der Name der angeforderten Datei. |
 
 ### Payload
 
-Es wird keine Payload benötigt.
+Es ist kein Payload erforderlich.
 
 ### Antwort
 
-Die Route antwortet mit der angeforderten Binärdatei.
+Die Route gibt die angeforderte Binärdatei zurück.
 
-Der HTTP-Statuscode zeigt Erfolg (response.status == 200) oder Fehlschlag (response.status == 500) an.
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

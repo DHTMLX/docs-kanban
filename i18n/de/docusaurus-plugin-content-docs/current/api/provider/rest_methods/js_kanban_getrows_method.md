@@ -1,17 +1,17 @@
 ---
 sidebar_label: getRows()
 title: getRows REST-Methode
-description: Sie können mehr über die getRows REST-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die getRows REST-Methode erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # getRows()
 
 ### Beschreibung
 
-@short: Ruft ein Promise mit den Zeilendaten ab
+@short: Gibt ein Promise mit den Zeilendaten zurück
 
 :::info
-Die **getRows()** Methode ist Teil des **RestDataProvider**-Dienstes, der für Serverinteraktionen entwickelt wurde.
+Die **getRows()** Methode ist Teil des **RestDataProvider**-Dienstes, der für die Arbeit mit dem Server vorgesehen ist
 :::
 
 ### Verwendung
@@ -22,7 +22,7 @@ getRows(): promise;
 
 ### Rückgabewert
 
-Die **getRows()** Methode sendet eine **GET**-Anfrage an den Server und gibt ein **Promise** zurück, das mit den Zeilendaten aufgelöst wird.
+Die **getRows()** Methode sendet eine Anfrage an den Server mit der **GET**-Methode und gibt ein **Promise** mit den Zeilendaten zurück.
 
 ### Beispiel
 
@@ -45,4 +45,4 @@ Promise.all([
 });
 ~~~
 
-**Verwandte Artikel:** [Arbeiten mit dem Server](../../../../guides/working_with_server)
+**Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

@@ -1,19 +1,20 @@
 ---
 sidebar_label: editor
-title: editor Konfiguration
-description: Entdecken Sie die editor Konfiguration in der DHTMLX JavaScript Kanban-Bibliotheksdokumentation. Sehen Sie sich Entwicklerhandbücher, API-Referenzen an, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: editor-Konfiguration
+description: Sie können mehr über die editor-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # editor
 
 ### Beschreibung
 
-@short: Optional. Enthält Einstellungen zur Anpassung des Kanban-Editors
+@short: Optional. Ein Einstellungsobjekt zur Konfiguration des Kanban-Editors
 
 ### Verwendung
 
 ~~~jsx {}
 editor?: {
+    show?: boolean,
     autoSave?: boolean,
     debounce?: number,
     placement?: "sidebar" | "modal"
@@ -22,16 +23,18 @@ editor?: {
 
 ### Parameter
 
-- `autoSave` - (optional) aktiviert oder deaktiviert die automatische Speicherfunktion
-- `debounce` - (optional) legt die Verzögerungszeit vor dem automatischen Speichern der Daten fest (wirksam nur bei ***autoSave: true***)
-- `placement` - (optional) definiert, wo der Editor angezeigt wird. Mögliche Werte sind:
+- `show` - (optional) - aktiviert/deaktiviert den Editor
+- `autoSave` - (optional) aktiviert/deaktiviert den Autospeichermodus des Editors
+- `debounce` - (optional) Verzögerungszeit für das automatische Speichern von Daten (funktioniert nur mit dem Parameter ***autoSave: true***)
+- `placement` - (optional) gibt die Position des Editors an. Folgende Werte sind möglich:
     - `"sidebar"` - zeigt den Editor als Seitenleiste an
-    - `"modal"` - zeigt den Editor in einem modalen Fenster an
+    - `"modal"` - zeigt den Editor als modales Fenster an
 
 ### Standardkonfiguration
 
 ~~~jsx {}
 editor: {
+    show: true,
     debounce: 100,
     autoSave: true,
     placement: "sidebar"
@@ -45,6 +48,7 @@ new kanban.Kanban("#root", {
     columns,
     cards,
     editor: {
+        show: true
         autoSave: true,
         debounce: 2000,
         placement: "modal"
@@ -53,6 +57,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Option `placement` wurde in Version v1.6 eingeführt
+**Änderungsprotokoll:** Der Parameter `placement` wurde in Version 1.6 hinzugefügt
 
 **Verwandte Beispiele:** [Kanban. Öffnen des Editors in einem modalen Fenster](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)

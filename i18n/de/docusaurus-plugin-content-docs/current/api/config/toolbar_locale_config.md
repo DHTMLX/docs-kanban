@@ -1,17 +1,17 @@
 ---
 sidebar_label: locale
 title: locale Konfiguration
-description: Erfahren Sie, wie Sie die (Toolbar) locale in der DHTMLX JavaScript Kanban-Bibliothek konfigurieren. Entdecken Sie Entwicklerhandbücher und API-Referenzen, experimentieren Sie mit Codebeispielen und Live-Demos und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+description: Sie können mehr über die (Toolbar) locale Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # locale
 
 ### Beschreibung
 
-@short: Optional. Ein Objekt, das eine benutzerdefinierte Locale für die Toolbar definiert.
+@short: Optional. Ein Objekt einer benutzerdefinierten Toolbar-Lokalisierung
 
 :::info
-Das **locale**-Objekt sollte alle Bezeichnungen für sowohl Kanban als auch Toolbar sowie deren Übersetzungen enthalten.
+Das **locale**-Objekt muss alle Bezeichnungen von Kanban und Toolbar mit den entsprechenden Übersetzungen enthalten.
 :::
 
 ### Verwendung
@@ -22,10 +22,10 @@ locale?: object;
 
 ### Standardkonfiguration
 
-Standardmäßig ist die Toolbar auf die [**Englische**](/guides/localization/#standard-locale) locale eingestellt. Sie können auch Ihre eigene benutzerdefinierte Locale angeben.
+Standardmäßig verwendet Toolbar die [**englische**](guides/localization.md#default-locale) Lokalisierung. Sie können sie auch auf eine benutzerdefinierte Lokalisierung einstellen.
 
 :::tip
-Um die locale dynamisch zu wechseln, können Sie die [**setLocale()**](../../methods/toolbar_setlocale_method) Methode der Toolbar verwenden.
+Um die aktuelle Lokalisierung dynamisch zu ändern, können Sie die [**setLocale()**](api/methods/toolbar_setlocale_method.md) Methode von Toolbar verwenden.
 :::
 
 ### Beispiel
@@ -33,15 +33,15 @@ Um die locale dynamisch zu wechseln, können Sie die [**setLocale()**](../../met
 ~~~jsx {8}
 // Kanban erstellen
 const board = new kanban.Kanban("#root", {
-    locale: zh
+    locale: cn
 });
 // Toolbar erstellen
 new kanban.Toolbar("#toolbar", {
     api: board.api,
-    locale: zh // wendet die "zh" locale auf die Toolbar an
+    locale: cn // die "cn" Lokalisierung auf Toolbar anwenden
 });
 ~~~
 
-**Verwandte Artikel:** [Lokalisierung](/guides/localization)
+**Verwandte Artikel:** [Lokalisierung](guides/localization.md)
 
-**Verwandtes Beispiel:** [Kanban. Lokalisierung](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)
+**Verwandte Beispiel:** [Kanban. Lokalisierung](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

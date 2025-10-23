@@ -1,14 +1,14 @@
 ---
 sidebar_label: moveCard()
-title: moveCard-Methode
-description: Entdecken Sie die moveCard-Methode in der DHTMLX JavaScript Kanban-Bibliotheksdokumentation. Sehen Sie sich Entwicklerhandbücher, API-Referenzen, Code-Beispiele, Live-Demos an und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+title: moveCard Methode
+description: Erfahren Sie mehr über die moveCard Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # moveCard()
 
 ### Beschreibung
 
-@short: Verschiebt eine Karte in eine angegebene Spalte (und Zeile).
+@short: Verschiebt eine Karte in die angegebene Spalte (und Zeile)
 
 ### Verwendung
 
@@ -23,13 +23,13 @@ moveCard({
 
 ### Parameter
 
-- `id` - (erforderlich) die ID der zu verschiebenden Karte 
-- `columnId` - (erforderlich) die ID der Zielspalte, in der die Karte platziert wird 
-- `rowId` - (optional) die ID der Zielzeile, in der die Karte positioniert wird
-- `before` - (optional) die ID der Karte, vor der die verschobene Karte eingefügt wird
+- `id` - (erforderlich) die ID der Karte, die verschoben werden soll  
+- `columnId` - (erforderlich) die ID der Spalte, in die die Karte eingefügt wird  
+- `rowId` - (optional) die ID der Zeile, in die die Karte eingefügt wird  
+- `before` - (optional) die ID der Karte, vor der die neue Karte platziert wird  
 
 :::info
-Wenn die Eigenschaft **rowKey** in der Widget-Konfiguration gesetzt ist, wird das Angeben von **rowId** in der **moveCard()**-Methode *verpflichtend*!
+Wenn Sie die Eigenschaft **rowKey** in der Widget-Konfiguration angeben, ist der Parameter **rowId** der Methode **moveCard()** *erforderlich*!
 :::
 
 ### Beispiel
@@ -40,9 +40,9 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Karte mit ID 1 verschieben
-// sie wird in der Spalte "inprogress" und der Zeile "feature" platziert,
-// positioniert vor der Karte mit der ID 8
+// die Karte mit der ID 1 verschieben
+// das Element wird in die Spalte "inprogress" und die Zeile "feature"  
+// vor der Karte mit der ID 8 eingefügt
 board.moveCard({
     id: 1,
     columnId: "inprogress",

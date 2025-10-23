@@ -1,24 +1,24 @@
 ---
-sidebar_label: GET /columns 
-title: GET /columns 
-description: Dieser Abschnitt behandelt die GET /columns REST-Route in der DHTMLX JavaScript Kanban Bibliothek. Enthalten sind Entwickleranleitungen, API-Referenzen, Codebeispiele, Live-Demos sowie ein kostenloser 30-Tage-Test von DHTMLX Kanban. 
+sidebar_label: GET /columns
+title: GET /columns
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route GET /columns. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # GET `/columns`
 
 ### Beschreibung
 
-@short: Ruft Informationen über alle Spalten ab und gibt ein JSON-Objekt mit einem Array von Spaltendaten zurück.
+@short: Ruft Daten aller Spalten ab und gibt ein JSON-Objekt mit einem Array von Objekten mit Spaltendaten zurück
 
-Diese Route verarbeitet **HTTP GET**-Anfragen, die an den Endpunkt `/columns` gesendet werden.
+Die Route verarbeitet die **HTTP GET**-Anfrage, die an den Pfad `/columns` gesendet wird.
 
 ### Payload
 
-Es muss kein Payload gesendet werden.
+Es wird kein Payload benötigt.
 
 ### Antwort
 
-Die Antwort enthält ein JSON-Objekt mit einem Array von Spaltendatenobjekten.
+Die Route gibt ein JSON-Objekt mit einem Array von Objekten mit Spaltendaten zurück.
 
 Beispiel:
 
@@ -47,12 +47,12 @@ Beispiel:
 ]
 ~~~
 
-Ein weiteres Beispiel des zurückgegebenen Objekts finden Sie unter [**columns**](/api/config/js_kanban_columns_config.md).
+Ein weiteres Beispiel des zurückgegebenen Objekts finden Sie unter [**columns**](api/config/js_kanban_columns_config.md).
 
 Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**:  
-- [Working with server](/guides/working_with_server.md)  
-- [getColumns()](/api/provider/rest_methods/js_kanban_getcolumns_method.md)
+**Verwandte Artikel**:
+- [Arbeiten mit dem Server](guides/working_with_server.md)
+- [getColumns()](api/provider/rest_methods/js_kanban_getcolumns_method.md)

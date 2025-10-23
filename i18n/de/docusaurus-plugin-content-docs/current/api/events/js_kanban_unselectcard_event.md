@@ -1,7 +1,7 @@
 ---
 sidebar_label: unselect-card
 title: unselect-card Event
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das unselect-card Event erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das unselect-card Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Beispielcode und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # unselect-card
@@ -18,12 +18,12 @@ description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek meh
 
 ### Parameter
 
-Der Callback für das **unselect-card** Event erhält ein Objekt mit folgender Eigenschaft:
+Der Callback des **unselect-card** Events kann ein Objekt mit folgendem Parameter entgegennehmen:
 
-- `id` - (erforderlich) die ID der Karte, die abgewählt wurde
+- `id` - (erforderlich) die ID der Karte, die abgewählt wird
 
 :::info
-Um interne Events zu verwalten, können Sie sich auf die [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methoden) beziehen.
+Zur Behandlung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -34,7 +34,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Anmeldung für das "unselect-card" Event
+// Abonnieren des "unselect-card" Events
 board.api.on("unselect-card", (obj) => {
     console.log(obj.id);
 });

@@ -1,14 +1,14 @@
 ---
 sidebar_label: add-vote
 title: add-vote Event
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das add-vote-Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das add-vote Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # add-vote
 
 ### Beschreibung
 
-@short: Wird ausgelöst, sobald ein Benutzer eine neue Stimme hinzufügt
+@short: Wird ausgelöst, wenn ein Nutzer eine neue Stimme hinzufügt
 
 ### Verwendung
 
@@ -21,27 +21,27 @@ description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek meh
 
 ### Parameter
 
-Der Callback für das **add-vote**-Event erhält ein Objekt mit den folgenden Eigenschaften:
+Der Callback des **add-vote** Events kann ein Objekt mit den folgenden Parametern entgegennehmen:
 
-- `cardId` - (erforderlich) die ID der Karte, zu der die Stimme hinzugefügt wird
-- `skipProvider` - (optional) steuert, ob die Anfrage an den Server übersprungen wird oder nicht
+- `cardId` - (erforderlich) die ID der Karte, zu der die Stimme hinzugefügt werden soll
+- `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern, dass die Anfrage an den Server gesendet wird
 
 :::info
-Um mit internen Events zu arbeiten, können Sie die [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methoden) heranziehen
+Zur Behandlung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
 
 ~~~jsx {7-9}
-// Erstellen des Kanban
+// Kanban erstellen
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Lauschen auf das "add-vote"-Event
+// Auf das "add-vote" Event abonnieren
 board.api.on("add-vote", (obj) => {
     console.log(obj.cardId);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Event wurde in Version 1.4 eingeführt
+**Änderungsprotokoll:** Das Event wurde in v1.4 hinzugefügt

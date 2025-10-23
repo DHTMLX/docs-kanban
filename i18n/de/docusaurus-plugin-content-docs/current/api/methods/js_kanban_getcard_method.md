@@ -1,14 +1,14 @@
 ---
 sidebar_label: getCard()
-title: getCard-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getCard-Methode. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getCard Methode
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getCard Methode. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # getCard()
 
 ### Beschreibung
 
-@short: Ruft das Datenobjekt einer Karte anhand ihrer angegebenen ID ab
+@short: Ruft das Datenobjekt der Karte anhand der angegebenen ID ab
 
 ### Verwendung
 
@@ -18,11 +18,11 @@ getCard(id: string | number): object;
 
 ### Parameter
 
-- `id` - (erforderlich) die ID der Karte, auf die Sie zugreifen möchten
+- `id` - (erforderlich) die ID der Zielkarte
 
 ### Rückgabewert
 
-Diese Methode gibt das Datenobjekt zurück, das mit der durch die angegebene ID identifizierten Karte verknüpft ist
+Die Methode gibt das Datenobjekt der Karte mit der angegebenen ID zurück
 
 ### Beispiel
 
@@ -32,6 +32,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// ruft das Datenobjekt für die Karte mit der ID 1 ab
-board.getCard(1);
+// das Datenobjekt der Karte mit der ID 1 abrufen
+const card_data = board.getCard(1);
+console.log(card_data);
 ~~~

@@ -1,33 +1,33 @@
 ---
 sidebar_label: PUT /columns
 title: PUT /columns
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route PUT /columns. Durchsuchen Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die PUT /columns REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # PUT `/columns`
 
 ### Beschreibung
 
-@short: Aktualisiert die Details einer bestimmten Spalte und gibt ein leeres JSON-Objekt zurück.
+@short: Aktualisiert Daten einer angegebenen Spalte und gibt ein leeres JSON-Objekt zurück
 
-Diese Route verarbeitet eine **HTTP PUT**-Anfrage, die an den Endpunkt `/columns/{id}` gesendet wird.
+Die Route verarbeitet die **HTTP PUT**-Anfrage, die an den Pfad `/columns/{id}` gesendet wird.
 
 ### Pfadparameter
 
-Der folgende Parameter ist in der Anforderungs-URL enthalten:
+Der folgende Parameter wird in der Anforderungszeile übergeben:
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `id`       | number      | *Erforderlich*. Die ID der Spalte, die aktualisiert werden soll.|
+| `id`       |  number     | *Erforderlich*. Die ID der zu aktualisierenden Spalte.|
 
-### Payload
+### Nutzlast
 
-Der Server erwartet ein JSON-Objekt, das alle Eigenschaften der Spalte enthält, einschließlich der unveränderten und der neuen oder geänderten Eigenschaften.
+Der Server muss ein JSON-Objekt mit allen Spalteneigenschaften erhalten (sowohl unveränderte als auch neue/geänderte).
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `label`    | string      | *Erforderlich*. Der aktualisierte Name der Spalte.|
-| `collapsed`| boolean     | *Optional*. Gibt an, ob die Spalte anfangs eingeklappt (**true**) oder ausgeklappt (**false**, Standard) ist.|
+| `label`    |  string     | *Erforderlich*. Der Name der zu aktualisierenden Spalte.|
+| `collapsed`|  boolean    | *Optional*. Der Zustand der Spalte: **true**, wenn die Spalte initial eingeklappt ist, und **false** für den ausgeklappten Zustand (Standard).|
 
 Beispiel:
 
@@ -40,14 +40,14 @@ Beispiel:
 }
 ~~~
 
-Ein weiteres Beispiel für das Spaltenobjekt finden Sie im Abschnitt [**columns**](/api/config/js_kanban_columns_config.md).
+Ein weiteres Beispiel für das Spaltenobjekt finden Sie im Abschnitt [**columns**](api/config/js_kanban_columns_config.md).
 
 ### Antwort
 
-Bei erfolgreicher Anfrage wird ein leeres JSON-Objekt zurückgegeben.
+Im Erfolgsfall wird ein leeres JSON-Objekt zurückgegeben.
 
-Der HTTP-Statuscode gibt das Ergebnis an: Erfolg mit Status 200 oder Fehler mit Status 500.
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Arbeiten mit dem Server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)

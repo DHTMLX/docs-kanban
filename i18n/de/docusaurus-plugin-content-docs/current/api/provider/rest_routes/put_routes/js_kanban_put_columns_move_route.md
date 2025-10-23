@@ -1,32 +1,32 @@
 ---
 sidebar_label: PUT /columns/{id}/move
 title: PUT /columns/{id}/move
-description: Sie können mehr über die PUT /columns/{id}/move REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die PUT /columns/{id}/move REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # PUT `/columns/{id}/move`
 
 ### Beschreibung
 
-@short: Ändert die Position einer Spalte, indem sie an eine bestimmte Stelle verschoben wird.
+@short: Verschiebt eine Spalte an eine angegebene Position
 
-Diese Route verarbeitet eine **HTTP PUT**-Anfrage, die an `columns/{id}/move` gesendet wird.
+Die Route verarbeitet die **HTTP PUT**-Anfrage, die an den Pfad `columns/{id}/move` gesendet wird.
 
 ### Pfadparameter
 
-Der folgende Parameter ist in der Anforderungs-URL enthalten:
+Der folgende Parameter wird in der Anforderungszeile übergeben:
 
 | Name       | Typ         | Beschreibung |
-| ---------- | ----------- | ------------|
-| `id`       |  number     | *Erforderlich*. Die Kennung der zu verschiebenden Spalte.|
+| ---------- | ----------- | ------------ |
+| `id`       |  number     | *Erforderlich*. Die ID der zu verschiebenden Spalte. |
 
-### Nutzlast
+### Payload
 
-Der Server erwartet ein JSON-Objekt mit folgender Eigenschaft:
+Der Server erwartet ein JSON-Objekt mit den folgenden Eigenschaften:
 
 | Name       | Typ         | Beschreibung |
-| ---------- | ----------- | ------------|
-| `before`   |  number     | *Optional*. Die ID der Spalte, vor der die verschobene Spalte platziert werden soll.|
+| ---------- | ----------- | ------------ |
+| `before`   |  number     | *Optional*. Die ID der Spalte, vor der die verschobene Spalte platziert werden soll. |
 
 Beispiel:
 
@@ -38,7 +38,7 @@ Beispiel:
 
 ### Antwort
 
-Der Server antwortet mit einem JSON-Objekt, das die ID der verschobenen Spalte angibt.
+Der Server gibt ein JSON-Objekt mit der ID der verschobenen Spalte zurück.
 
 Beispiel:
 
@@ -48,8 +48,8 @@ Beispiel:
 }
 ~~~
 
-Der HTTP-Statuscode zeigt das Ergebnis der Anfrage an: Ein Status von 200 bedeutet Erfolg, während 500 einen Fehler anzeigt.
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Arbeiten mit dem Server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

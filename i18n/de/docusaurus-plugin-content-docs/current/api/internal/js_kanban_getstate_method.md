@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.getState()
-title: getState Methode
-description: Sie können mehr über die getState Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getState-Methode
+description: Sie können die getState-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # api.getState()
 
 ### Beschreibung
 
-@short: Ruft ein Objekt ab, das die Eigenschaften des StateStore des Kanban enthält.
+@short: Gibt ein Objekt mit den StateStore-Eigenschaften des Kanban zurück
 
 ### Verwendung
 
@@ -18,44 +18,55 @@ api.getState(): object;
 
 ### Rückgabewert
 
-Diese Methode gibt ein Objekt mit den folgenden Eigenschaften zurück:
+Die Methode gibt ein Objekt mit den folgenden Parametern zurück:
 
 ~~~jsx {}
-{    
-    areasMeta: object, 
-    before: string | number, 
-    cardHeight: number | null, 
+{
+    cardHeight: number | null,
     cards: array,
     cardShape: object,
-    cardsMap: object,
-    cardsMeta: object,
     columnKey: string,
     columns: array,
     columnShape: object,
     currentUser: number | string | null,
-    dragItemId: string | number, 
-    dragItemsCoords: array, 
-    edit: object,
-    history: object,
-    layout: string,
     links: array,
-    overAreaId: string | number, 
     readonly: object,
     rowKey: string,
     rows: array,
     rowShape: object,
-    scroll: object,
+    editorShape: array,
+    history: object,
     search: object,
-    selected: array, 
+    selected: array,
     sort: object,
-    // veraltete Optionen
-    fromAreaMeta: object, // gelöscht in v.1.2
-    editorShape: array, // gelöscht in v.1.4
-    dropAreaItemsCoords: array, // veraltet in v1.4
-    dropAreasCoords: array, // veraltet in v1.4 
-    overAreaMeta: object, // veraltet in v1.4
+
+    // entfernte Parameter
+    /*    
+        fromAreaMeta: object,
+        dropAreaItemsCoords: array,
+        dropAreasCoords: array,
+        overAreaMeta: object,
+        before: string | number,
+        dragItemId: string | number,
+        dragItemsCoords: array,
+        overAreaId: string | number,
+    /*
+
+    // private Parameter
+    /*
+        edit -> _edit: object,
+        layout -> layout: string,
+        cardsMap -> _cardsMap: object,
+        cardsMeta -> _cardsMeta: object,
+        areasMeta -> _areasMeta: object,
+        scroll -> _scroll: object,
+    */
 }
 ~~~
+
+:::warning
+Diese Zustands-Eigenschaften sind schreibgeschützt. Ändern Sie sie nicht, um unerwartetes Verhalten zu vermeiden!
+:::
 
 ### Beispiel
 
@@ -66,18 +77,13 @@ const board = new kanban.Kanban("#root", {
     cards,
     rows
 });
-// den aktuellen Zustand des Kanban abrufen
+// den Zustand des Kanban abrufen
 const state = board.api.getState();
-console.log(state.cards); // zeigt die Kartendaten an
-console.log(state.columns); // zeigt die Spaltendaten an
-console.log(state.rows); // zeigt die Zeilendaten an
-console.log(state.cardShape); // zeigt die Kartenkonfiguration an
+console.log(state.cards); // gibt die Kartendaten aus
+console.log(state.columns); // gibt die Spaltendaten aus
+console.log(state.rows); // gibt die Zeilendaten aus
+console.log(state.cardShape); // gibt die Kartenkonfiguration aus
 //...
 ~~~
 
-**Änderungsprotokoll:**
-Die Methode wurde in Version 1.4 aktualisiert. Die folgenden Parameter wurden veraltet:
-- ***dropAreaItemsCoords***
-- ***dropAreasCoords***
-- ***overAreaMeta***
-Der Parameter ***editorShape*** wurde entfernt
+**Änderungsprotokoll:** Die Methode wurde in Version v1.7 aktualisiert

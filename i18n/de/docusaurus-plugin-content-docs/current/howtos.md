@@ -1,199 +1,199 @@
 ---
 sidebar_label: How-tos
 title: JavaScript Kanban How-Tos
-description: Sie können die How-tos-Seite der DHTMLX JavaScript Kanban-Bibliothek in der Dokumentation erkunden. Stöbern Sie in Entwicklerhandbüchern und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: Sie können die How-tos-Seite der DHTMLX JavaScript Kanban-Bibliothek in der Dokumentation erkunden. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # How-tos
 
-Diese Seite ist eine vollständige Referenz zum Einstieg, zur Einrichtung, Anpassung und Verwaltung von JavaScript Kanban.
+Diese Seite bietet eine umfassende Referenz zur Initialisierung, Konfiguration, Anpassung und Arbeit mit JavaScript Kanban.
 
 ## Grundprinzipien
 
-Hier sind die wichtigsten Punkte, die Sie beim Arbeiten mit Kanban wissen sollten.
+In diesem Abschnitt erfahren Sie die grundlegenden Prinzipien der Arbeit mit Kanban.
 
 | Thema                                         | Beschreibung                                              |
 | --------------------------------------------- | ---------------------------------------------------------|
-| [Initialisierung](/guides/initialization)                  | Einrichtung von Kanban ([Beispiel](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
-| [Konfiguration](/guides/configuration)                   | Möglichkeiten zur Konfiguration von Kanban               |
-| [Anpassung](/guides/customization)                   | Schritte zur Anpassung von Kanban                        |
-| [Stilisierung](/guides/stylization)                     | Optionen zur Gestaltung von Kanban                       |
-| [Lokalisierung](/guides/localization)                    | Kanban lokalisieren ([Beispiel](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [](guides/initialization.md)                  | Lernen Sie, wie Sie Kanban initialisieren ([Beispiel](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
+| [](guides/configuration.md)                   | Lernen Sie, wie Sie Kanban konfigurieren                  |
+| [](guides/customization.md)                   | Lernen Sie, wie Sie Kanban anpassen                       |
+| [](guides/stylization.md)                     | Lernen Sie, wie Sie Kanban gestalten                      |
+| [](guides/localization.md)                    | Lernen Sie, wie Sie Kanban lokalisieren ([Beispiel](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API-Referenz
 
-Hier finden Sie die Kanban API-Referenzen, die Sie benötigen könnten.
+In diesem Abschnitt finden Sie die entsprechenden Referenzen zur Kanban API.
 
 | Thema                                                 | Beschreibung                                              |
 | ----------------------------------------------------- | ---------------------------------------------------------|
-| [Kanban-Ereignisse](/api/overview/events_overview.md)      | Arbeiten mit Kanban-Ereignissen                     |
-| [Kanban-Methoden](/api/overview/methods_overview.md)    | Verwendung von Kanban-Methoden                    |
-| [Kanban-Eigenschaften](/api/overview/properties_overview.md)| Zugriff auf Kanban-Eigenschaften               |
-| [Event Bus-Methoden](/api/overview/internal_eventbus_overview.md)| Event Bus-Methoden        |
-| [RestDataProvider-Methoden](/api/overview/internal_rest_overview.md)| RestDataProvider-Methoden|
-| [State-Methoden](/api/overview/internal_state_overview.md)| State-Methoden                   |
-| [Toolbar-Methoden](/api/overview/toolbar_methods_overview.md)| Toolbar-Methoden              |
-| [Toolbar-Eigenschaften](/api/overview/toolbar_properties_overview.md)| Toolbar-Eigenschaften     |
+| [Kanban events](api/overview/events_overview.md)      | Lernen Sie, wie Sie mit Kanban-Events arbeiten           |
+| [Kanban methods](api/overview/methods_overview.md)    | Lernen Sie, wie Sie mit Kanban-Methoden arbeiten         |
+| [Kanban properties](api/overview/properties_overview.md)| Lernen Sie, wie Sie mit Kanban-Eigenschaften arbeiten  |
+| [Event Bus methods](api/overview/internal_eventbus_overview.md)| Lernen Sie, wie Sie mit Event Bus-Methoden arbeiten |
+| [RestDataProvider methods](api/overview/internal_rest_overview.md)| Lernen Sie, wie Sie mit RestDataProvider-Methoden arbeiten|
+| [State methods](api/overview/internal_state_overview.md)| Lernen Sie, wie Sie mit State-Methoden arbeiten        |
+| [Toolbar methods](api/overview/toolbar_methods_overview.md)| Lernen Sie, wie Sie mit Toolbar-Methoden arbeiten     |
+| [Toolbar properties](api/overview/toolbar_properties_overview.md)| Lernen Sie, wie Sie mit Toolbar-Eigenschaften arbeiten|
 
 ## Arbeiten mit Karten
 
-Diese Abschnitte behandeln das Verwalten von Karten, das Arbeiten mit Kartendaten und die individuelle Anpassung von Karten.
+In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Karten durchführen, mit Kartendaten arbeiten und Karten konfigurieren.
 
 ### Operationen mit Karten durchführen
 
 | Thema                                                        | Beschreibung                                 |
 | ------------------------------------------------------------ | --------------------------------------------|
-| [Neue Karten hinzufügen](/api/methods/js_kanban_addcard_method.md)  | Neue Karten hinzufügen ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban)) |
-| [Karten löschen](/api/methods/js_kanban_deletecard_method.md) | Karten löschen ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban)) |
-| [Karten verschieben](/api/methods/js_kanban_movecard_method.md)     | Karten verschieben ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban))   |
-| [Zur gewünschten Karte scrollen](/api/methods/js_kanban_scroll_method.md)| Kanban zu einer bestimmten Karte scrollen|
-| [Karten suchen](/api/methods/js_kanban_setsearch_method.md)| Karten suchen            |
-| [Karten auswählen](/api/methods/js_kanban_selectcard_method.md)| Karten auswählen                   |
-| [Karten sortieren](/api/methods/js_kanban_setsort_method.md)     | Karten sortieren                     |
-| [Auswahl von Karten aufheben](/api/methods/js_kanban_unselectcard_method.md)| Auswahl von Karten aufheben             |
-| [Verknüpfungen zwischen Karten hinzufügen](/api/config/js_kanban_links_config.md)| Verknüpfungen zwischen Karten herstellen ([Beispiel](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)) |
+| [Adding new cards](api/methods/js_kanban_addcard_method.md)  | Lernen Sie, wie Sie neue Karten hinzufügen ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban)) |
+| [Deleting cards](api/methods/js_kanban_deletecard_method.md) | Lernen Sie, wie Sie Karten löschen ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban)) |
+| [Moving cards](api/methods/js_kanban_movecard_method.md)     | Lernen Sie, wie Sie Karten verschieben ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban))   |
+| [Scrolling to the desired cards](api/methods/js_kanban_scroll_method.md)| Lernen Sie, wie Sie Kanban zur gewünschten Karte scrollen|
+| [Searching for cards](api/methods/js_kanban_setsearch_method.md)| Lernen Sie, wie Sie nach Karten suchen            |
+| [Selecting cards](api/methods/js_kanban_selectcard_method.md)| Lernen Sie, wie Sie Karten auswählen                   |
+| [Sorting cards](api/methods/js_kanban_setsort_method.md)     | Lernen Sie, wie Sie Karten sortieren                     |
+| [Unselecting cards](api/methods/js_kanban_unselectcard_method.md)| Lernen Sie, wie Sie Karten abwählen             |
+| [Adding links between cards](api/config/js_kanban_links_config.md)| Lernen Sie, wie Sie Verknüpfungen zwischen Karten hinzufügen ([Beispiel](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)) |
 
 ### Arbeiten mit Kartendaten
 
 | Thema                                                        | Beschreibung                                         |
 | ------------------------------------------------------------ | ----------------------------------------------------|
-| [Kartendaten abrufen](/api/methods/js_kanban_getcard_method.md) | Kartendaten abrufen                      |
-| [Kartenstatus abrufen](/api/internal/js_kanban_getstate_method.md) | Kartenstatus abrufen                 |
-| [Reaktiven Kartenstatus abrufen](/api/internal/js_kanban_getreactivestate_method.md) | Reaktiven Kartenstatus abrufen |
-| [Kartendaten laden](/api/config/js_kanban_cards_config.md)    | Initiale Kartendaten laden             |
-| [Kartendaten parsen](/api/methods/js_kanban_parse_method.md)   | Kartendaten parsen                    |
-| [Kartendaten serialisieren](/api/methods/js_kanban_serialize_method.md)| Kartendaten serialisieren ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
-| [Kartendaten aktualisieren](/api/methods/js_kanban_updatecard_method.md)| Kartendaten aktualisieren                |
+| [Getting card data](api/methods/js_kanban_getcard_method.md) | Lernen Sie, wie Sie Kartendaten abrufen              |
+| [Getting cards state](api/internal/js_kanban_getstate_method.md) | Lernen Sie, wie Sie den Kartenstatus abrufen      |
+| [Getting cards reactive state](api/internal/js_kanban_getreactivestate_method.md) | Lernen Sie, wie Sie den reaktiven Kartenstatus abrufen|
+| [Loading card data](api/config/js_kanban_cards_config.md)    | Lernen Sie, wie Sie die initialen Kartendaten laden             |
+| [Parsing card data](api/methods/js_kanban_parse_method.md)   | Lernen Sie, wie Sie Kartendaten parsen                    |
+| [Serializing card data](api/methods/js_kanban_serialize_method.md)| Lernen Sie, wie Sie Kartendaten serialisieren ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
+| [Updating card data](api/methods/js_kanban_updatecard_method.md)| Lernen Sie, wie Sie Kartendaten aktualisieren         |
 
 ### Karten konfigurieren
 
 | Thema                                                        | Beschreibung                                         |
 | ------------------------------------------------------------ | ----------------------------------------------------|
-| [Neue Karten hinzufügen](/api/config/js_kanban_readonly_config.md)  | Hinzufügen neuer Karten aktivieren oder deaktivieren|
-| [Karten an Spalten binden](/api/config/js_kanban_columnkey_config.md) | Karten mit Spalten verknüpfen      |
-| [Karten an Zeilen binden](/api/config/js_kanban_rowkey_config.md) | Karten mit Zeilen verknüpfen               |
-| [Darstellung einer Karte konfigurieren](/api/config/js_kanban_cardshape_config.md)| Darstellung einer Karte einstellen|
-| [Kontextmenü für Karten konfigurieren](/api/config/js_kanban_cardshape_config.md)| Kontextmenü für Karten einrichten  ([Beispiel](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
-| [Kartendarstellung anpassen](/api/config/js_kanban_cardtemplate_config.md)| Vorlagen zur Anpassung der Kartendarstellung verwenden ([Beispiel](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban))|
-| [Drag & Drop für Karten](/api/config/js_kanban_readonly_config.md)    | Drag & Drop für Karten aktivieren oder deaktivieren|
-| [Karten bearbeiten](/api/config/js_kanban_readonly_config.md)     | Kartenbearbeitung aktivieren oder deaktivieren|
-| [Lazy Rendering](/api/config/js_kanban_rendertype_config.md)| **Lazy Rendering** für viele Karten aktivieren oder deaktivieren ([Beispiel](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))|
-| [Kartenlimit festlegen](/api/config/js_kanban_columns_config.md)     | Limits für Spalten und Swimlanes setzen (**WIP-Validierung**) ([Beispiel](https://snippet.dhtmlx.com/2blo6hx8?text=kanban))|
-| [Kartenauswahl](/api/config/js_kanban_readonly_config.md)   | Kartenauswahl aktivieren oder deaktivieren|
-| [Feste Kartenhöhe einstellen](/api/config/js_kanban_cardheight_config.md)| Feste Höhe für Karten einstellen   |
-| [Karteneinstellungen aktualisieren](/api/methods/js_kanban_setconfig_method.md)| Karteneinstellungen aktualisieren               |
+| [Adding new cards](api/config/js_kanban_readonly_config.md)  | Lernen Sie, wie Sie das Hinzufügen neuer Karten aktivieren/deaktivieren|
+| [Binding cards into columns](api/config/js_kanban_columnkey_config.md) | Lernen Sie, wie Sie Karten an Spalten binden      |
+| [Binding cards into rows](api/config/js_kanban_rowkey_config.md) | Lernen Sie, wie Sie Karten an Zeilen binden            |
+| [Configuring a card appearance](api/config/js_kanban_cardshape_config.md)| Lernen Sie, wie Sie das Erscheinungsbild einer Karte konfigurieren|
+| [Configuring a cards menu](api/config/js_kanban_cardshape_config.md)| Lernen Sie, wie Sie ein Kontextmenü für Karten konfigurieren ([Beispiel](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
+| [Customizing a card appearance](api/config/js_kanban_cardtemplate_config.md)| Lernen Sie, wie Sie das Erscheinungsbild einer Karte mit Vorlagen anpassen ([Beispiel](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban))|
+| [Dragging cards](api/config/js_kanban_readonly_config.md)    | Lernen Sie, wie Sie das Ziehen und Ablegen von Karten aktivieren/deaktivieren|
+| [Editing cards](api/config/js_kanban_readonly_config.md)     | Lernen Sie, wie Sie das Bearbeiten von Karten aktivieren/deaktivieren|
+| [Lazy rendering](api/config/js_kanban_rendertype_config.md)| Lernen Sie, wie Sie das **Lazy Rendering** für viele Karten aktivieren/deaktivieren ([Beispiel](https://snippet.dhtmlx.com/xez9ghqq?text=#kanban))|
+| [Limiting cards](api/config/js_kanban_columns_config.md)     | Lernen Sie, wie Sie Karten für Spalten und Swimlanes begrenzen (**WIP-Validierung**) ([Beispiel](https://snippet.dhtmlx.com/2blo6hx8?text=kanban))|
+| [Selecting cards](api/config/js_kanban_readonly_config.md)   | Lernen Sie, wie Sie das Auswählen von Karten aktivieren/deaktivieren|
+| [Setting a fix height of cards](api/config/js_kanban_cardheight_config.md)| Lernen Sie, wie Sie eine feste Höhe für Karten einstellen|
+| [Updating card settings](api/methods/js_kanban_setconfig_method.md)| Lernen Sie, wie Sie Karteneinstellungen aktualisieren|
 
-## Arbeiten mit dem Karten-Editor
+## Arbeiten mit einem Karteneditor
 
-Hier finden Sie Details zur Verwendung des Karten-Editors.
+In diesem Abschnitt erfahren Sie, wie Sie mit einem Karteneditor arbeiten.
 
 | Thema                                                        | Beschreibung                                            |
 | ------------------------------------------------------------ | -------------------------------------------------------|
-| [Autosave-Modus](/api/config/js_kanban_editorautosave_config.md)| Editor-Autosave aktivieren oder deaktivieren |
-| [Editor-Felder konfigurieren](/guides/configuration/#editor)| Editor-Felder einrichten         |
-| [Editor konfigurieren](/guides/configuration/#konfiguration-des-editors)| Editor einrichten |
-| [Editoreinstellungen aktualisieren](/api/methods/js_kanban_setconfig_method.md)| Editoreinstellungen aktualisieren            |
+| [Autosaving mode](api/config/js_kanban_editorautosave_config.md)| Lernen Sie, wie Sie den Auto-Speicher-Modus für den Editor aktivieren/deaktivieren|
+| [Configuring editor fields](guides/configuration.md#editor)| Lernen Sie, wie Sie Editorfelder konfigurieren             |
+| [Configuring the editor](guides/configuration.md#configuring-the-editor)| Lernen Sie, wie Sie den Editor konfigurieren         |
+| [Updating editor settings](api/methods/js_kanban_setconfig_method.md)| Lernen Sie, wie Sie Editoreinstellungen aktualisieren      |
 
 ## Arbeiten mit Spalten
 
-So verwalten Sie Spalten und arbeiten mit Spaltendaten.
+In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Spalten durchführen und mit Spaltendaten arbeiten.
 
 ### Operationen mit Spalten durchführen
 
 | Thema                                                           | Beschreibung                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
-| [Neue Spalten hinzufügen](/api/methods/js_kanban_addcolumn_method.md) | Neue Spalten hinzufügen ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
-| [Kontextmenü für Spalten konfigurieren](/api/config/js_kanban_columnshape_config.md)| Kontextmenü für Spalten einrichten ([Beispiel](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
-| [Spalten löschen](/api/methods/js_kanban_deletecolumn_method.md)| Spalten löschen                         |
-| [Spalten verschieben](/api/methods/js_kanban_movecolumn_method.md)    | Spalten verschieben                           |
-| [Zur gewünschten Spalte scrollen](/api/methods/js_kanban_scroll_method.md)| Kanban zu einer bestimmten Spalte scrollen |
-| [Separates Scrollen für Spalten](/api/config/js_kanban_scrolltype_config.md)| Einzelnes Scrollen für jede Spalte aktivieren ([Beispiel](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))|
+| [Adding new columns](api/methods/js_kanban_addcolumn_method.md) | Lernen Sie, wie Sie neue Spalten hinzufügen ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
+| [Configuring a columns menu](api/config/js_kanban_columnshape_config.md)| Lernen Sie, wie Sie ein Kontextmenü für Spalten konfigurieren ([Beispiel](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
+| [Deleting columns](api/methods/js_kanban_deletecolumn_method.md)| Lernen Sie, wie Sie Spalten löschen                         |
+| [Moving columns](api/methods/js_kanban_movecolumn_method.md)    | Lernen Sie, wie Sie Spalten verschieben                     |
+| [Scrolling to the desired columns](api/methods/js_kanban_scroll_method.md)| Lernen Sie, wie Sie Kanban zur gewünschten Spalte scrollen |
+| [Separate scrolling for columns](api/config/js_kanban_scrolltype_config.md)| Lernen Sie, wie Sie ein separates Scrollen für jede Spalte einstellen ([Beispiel](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))|
 
 ### Arbeiten mit Spaltendaten
 
 | Thema                                                           | Beschreibung                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
-| [Kartendaten einer Spalte abrufen](/api/methods/js_kanban_getareacards_method.md)| Kartendaten einer Spalte abrufen |
-| [Spaltenstatus abrufen](/api/internal/js_kanban_getstate_method.md) | Spaltenstatus abrufen               |
-| [Reaktiven Spaltenstatus abrufen](/api/internal/js_kanban_getreactivestate_method.md) | Reaktiven Spaltenstatus abrufen |
-| [Spaltendaten laden](/api/config/js_kanban_columns_config.md)    | Initiale Spaltendaten laden          |
-| [Spaltendaten parsen](/api/methods/js_kanban_parse_method.md)     | Spaltendaten parsen                 |
-| [Spaltendaten serialisieren](/api/methods/js_kanban_serialize_method.md)| Spaltendaten serialisieren          |
-| [Spaltendaten aktualisieren](/api/methods/js_kanban_updatecolumn_method.md)| Spaltendaten aktualisieren             |
+| [Getting card data of the column](api/methods/js_kanban_getareacards_method.md)| Lernen Sie, wie Sie die Kartendaten einer Spalte abrufen|
+| [Getting columns state](api/internal/js_kanban_getstate_method.md) | Lernen Sie, wie Sie den Spaltenstatus abrufen      |
+| [Getting columns reactive state](api/internal/js_kanban_getreactivestate_method.md) | Lernen Sie, wie Sie den reaktiven Spaltenstatus abrufen|
+| [Loading column data](api/config/js_kanban_columns_config.md)    | Lernen Sie, wie Sie die initialen Spaltendaten laden          |
+| [Parsing column data](api/methods/js_kanban_parse_method.md)     | Lernen Sie, wie Sie Spaltendaten parsen                 |
+| [Serializing column data](api/methods/js_kanban_serialize_method.md)| Lernen Sie, wie Sie Spaltendaten serialisieren      |
+| [Updating column data](api/methods/js_kanban_updatecolumn_method.md)| Lernen Sie, wie Sie Spaltendaten aktualisieren         |
 
 ## Arbeiten mit Zeilen (Swimlanes)
 
-Diese Abschnitte zeigen, wie Sie Zeilen (Swimlanes) verwalten und deren Daten bearbeiten.
+In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Zeilen durchführen und mit Zeilendaten arbeiten.
 
 ### Operationen mit Zeilen (Swimlanes) durchführen
 
 | Thema                                                           | Beschreibung                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
-| [Neue Zeilen hinzufügen](/api/methods/js_kanban_addrow_method.md)       | Neue Zeilen (Swimlanes) hinzufügen               |
-| [Kontextmenü für Zeilen konfigurieren](/api/config/js_kanban_rowshape_config.md)| Kontextmenü für Zeilen (Swimlanes) einrichten ([Beispiel](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
-| [Zeilen löschen](/api/methods/js_kanban_deleterow_method.md)      | Zeilen (Swimlanes) löschen                |
-| [Zeilen verschieben](/api/methods/js_kanban_moverow_method.md)          | Zeilen (Swimlanes) verschieben                  |
-| [Zur gewünschten Zeile scrollen](/api/methods/js_kanban_scroll_method.md)| Kanban zu einer bestimmten Zeile (Swimlane) scrollen|
+| [Adding new rows](api/methods/js_kanban_addrow_method.md)       | Lernen Sie, wie Sie neue Zeilen (Swimlanes) hinzufügen         |
+| [Configuring a rows menu](api/config/js_kanban_rowshape_config.md)| Lernen Sie, wie Sie ein Kontextmenü für Zeilen (Swimlanes) konfigurieren ([Beispiel](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))|
+| [Deleting rows](api/methods/js_kanban_deleterow_method.md)      | Lernen Sie, wie Sie Zeilen (Swimlanes) löschen                  |
+| [Moving rows](api/methods/js_kanban_moverow_method.md)          | Lernen Sie, wie Sie Zeilen (Swimlanes) verschieben              |
+| [Scrolling to the desired row](api/methods/js_kanban_scroll_method.md)| Lernen Sie, wie Sie Kanban zur gewünschten Zeile (Swimlane) scrollen|
 
-### Arbeiten mit Zeilendaten (Swimlane-Daten)
+### Arbeiten mit Zeilen- (Swimlane-) Daten
 
 | Thema                                                           | Beschreibung                                         |
 | --------------------------------------------------------------- | ----------------------------------------------------|
-| [Kartendaten einer Spalte und Zeile abrufen](/api/methods/js_kanban_getareacards_method.md)| Kartendaten für eine Spalte und Zeile abrufen |
-| [Zeilenstatus abrufen](/api/internal/js_kanban_getstate_method.md) | Zeilenstatus abrufen                     |
-| [Reaktiven Zeilenstatus abrufen](/api/internal/js_kanban_getreactivestate_method.md) | Reaktiven Zeilenstatus abrufen |
-| [Zeilendaten laden](/api/config/js_kanban_rows_config.md)         | Initiale Zeilendaten laden              |
-| [Zeilendaten parsen](/api/methods/js_kanban_parse_method.md)       | Zeilendaten parsen                     |
-| [Zeilendaten serialisieren](/api/methods/js_kanban_serialize_method.md)| Zeilendaten serialisieren                |
-| [Zeilendaten aktualisieren](/api/methods/js_kanban_updaterow_method.md)  | Zeilendaten aktualisieren                    |
+| [Getting card data of the column and row](api/methods/js_kanban_getareacards_method.md)| Lernen Sie, wie Sie die Kartendaten einer Spalte und Zeile abrufen|
+| [Getting rows state](api/internal/js_kanban_getstate_method.md) | Lernen Sie, wie Sie den Zeilenstatus abrufen               |
+| [Getting rows reactive state](api/internal/js_kanban_getreactivestate_method.md) | Lernen Sie, wie Sie den reaktiven Zeilenstatus abrufen|
+| [Loading row data](api/config/js_kanban_rows_config.md)         | Lernen Sie, wie Sie die initialen Zeilendaten laden              |
+| [Parsing row data](api/methods/js_kanban_parse_method.md)       | Lernen Sie, wie Sie Zeilendaten parsen                     |
+| [Serializing row data](api/methods/js_kanban_serialize_method.md)| Lernen Sie, wie Sie Zeilendaten serialisieren                |
+| [Updating row data](api/methods/js_kanban_updaterow_method.md)  | Lernen Sie, wie Sie Zeilendaten aktualisieren                |
 
-## Arbeiten mit Ereignissen
-
-| Thema                                                       | Beschreibung                                        |
-| ----------------------------------------------------------- | ---------------------------------------------------|
-| [Ereignisse ausführen](/api/internal/js_kanban_exec_method.md)   | Ein internes Ereignis auslösen               |
-| [Ereignisse abfangen](/api/internal/js_kanban_intercept_method.md)| Ein internes Ereignis abfangen        |
-| [Liste der internen Ereignisse](/api/overview/events_overview.md)     | Liste der Kanban-internen Ereignisse                |
-| [Ereignisreihenfolge ändern](/api/internal/js_kanban_setnext_method.md)| Reihenfolge im Event Bus für ein internes Ereignis ändern |
-| [Auf Ereignisse abonnieren](/api/internal/js_kanban_on_method.md)| Auf ein internes Ereignis abonnieren          |
-
-## Arbeiten mit Kanban REST API
+## Arbeiten mit Events
 
 | Thema                                                       | Beschreibung                                        |
 | ----------------------------------------------------------- | ---------------------------------------------------|
-| [Serverdaten für Karten laden](/api/provider/rest_methods/js_kanban_getcards_method.md)| Kartendaten vom Server laden |
-| [Serverdaten für Spalten laden](/api/provider/rest_methods/js_kanban_getcolumns_method.md)| Spaltendaten vom Server laden |
-| [Serverdaten für Zeilen laden](/api/provider/rest_methods/js_kanban_getrows_method.md)| Zeilendaten vom Server laden |
-| [Mit dem Server arbeiten](/guides/working_with_server.md)        | Arbeiten mit dem Server über die REST API ([Beispiel](https://snippet.dhtmlx.com/f25y0809?tag=kanban))|
+| [Executing events](api/internal/js_kanban_exec_method.md)   | Lernen Sie, wie Sie interne Events ausführen        |
+| [Intercepting events](api/internal/js_kanban_intercept_method.md)| Lernen Sie, wie Sie interne Events abfangen    |
+| [List of inner events](api/overview/events_overview.md)     | Sehen Sie die Liste der Kanban-internen Events      |
+| [Reordering events](api/internal/js_kanban_setnext_method.md)| Lernen Sie, wie Sie interne Events in die Event Bus-Reihenfolge einfügen|
+| [Subscribing on events](api/internal/js_kanban_on_method.md)| Lernen Sie, wie Sie sich auf interne Events abonnieren|
+
+## Arbeiten mit der Kanban REST API
+
+| Thema                                                       | Beschreibung                                        |
+| ----------------------------------------------------------- | ---------------------------------------------------|
+| [Loading server data for cards](api/provider/rest_methods/js_kanban_getcards_method.md)| Lernen Sie, wie Sie Serverdaten für Karten laden|
+| [Loading server data for columns](api/provider/rest_methods/js_kanban_getcolumns_method.md)| Lernen Sie, wie Sie Serverdaten für Spalten laden|
+| [Loading server data for rows](api/provider/rest_methods/js_kanban_getrows_method.md)| Lernen Sie, wie Sie Serverdaten für Zeilen laden|
+| [Working with server](guides/working_with_server.md)        | Lernen Sie, wie Sie mit dem Server über die REST API arbeiten ([Beispiel](https://snippet.dhtmlx.com/f25y0809?tag=kanban))|
 
 ## Arbeiten mit Kanban-Status
 
 | Thema                                                       | Beschreibung                                        |
 | ----------------------------------------------------------- | ---------------------------------------------------|
-| [StateStore und DataStore abrufen](/api/internal/js_kanban_getstores_method.md)| StateStore- und DataStore-Objekte abrufen |
-| [StateStore-Eigenschaften abrufen](/api/internal/js_kanban_getstate_method.md)| StateStore-Eigenschaftsobjekte abrufen |
-| [Reaktive StateStore-Eigenschaften abrufen](/api/internal/js_kanban_getreactivestate_method.md)| Reaktive StateStore-Eigenschaftsobjekte abrufen |
+| [Getting StateStore and DataStore](api/internal/js_kanban_getstores_method.md)| Lernen Sie, wie Sie StateStore- und DataStore-Objekte erhalten|
+| [Getting StateStore properties](api/internal/js_kanban_getstate_method.md)| Lernen Sie, wie Sie ein Objekt der StateStore-Eigenschaften erhalten|
+| [Getting StateStore reactive properties](api/internal/js_kanban_getreactivestate_method.md)| Lernen Sie, wie Sie ein Objekt der reaktiven StateStore-Eigenschaften erhalten|
 
 ## Arbeiten mit der Toolbar
 
 | Thema                                                       | Beschreibung                                           |
 | ----------------------------------------------------------- | ------------------------------------------------------|
-| [Suchleiste in der Toolbar konfigurieren](/api/config/toolbar_items_config.md) | Suchleiste in der Toolbar einrichten ([Beispiel](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban))|
-| [Sortiersteuerung in der Toolbar konfigurieren](/api/config/toolbar_items_config.md) | Sortiersteuerung in der Toolbar einrichten ([Beispiel](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban))|
-| [Toolbar-Steuerelemente konfigurieren](/api/config/toolbar_items_config.md)| Toolbar-Steuerelemente einrichten, anpassen und sortieren ([Beispiel](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)) |
-| [Kanban API in der Toolbar einbinden](/api/config/toolbar_api_config.md) | Kanban API in der Toolbar einbinden und verwenden |
-| [Toolbar lokalisieren](/api/config/toolbar_locale_config.md) | Toolbar lokalisieren |
+| [Configuring a searchbar on Toolbar](api/config/toolbar_items_config.md) | Lernen Sie, wie Sie eine Suchleiste in der Toolbar konfigurieren ([Beispiel](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban))|
+| [Configuring a sort control on Toolbar](api/config/toolbar_items_config.md) | Lernen Sie, wie Sie eine Sortiersteuerung in der Toolbar konfigurieren ([Beispiel](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban))|
+| [Configuring Toolbar controls](api/config/toolbar_items_config.md)| Lernen Sie, wie Sie die Toolbar-Steuerelemente konfigurieren, anpassen und anordnen ([Beispiel](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban))|
+| [Including Kanban API in Toolbar](api/config/toolbar_api_config.md) | Lernen Sie, wie Sie die Kanban API in die Toolbar einbinden und verwenden|
+| [Localizing Toolbar](api/config/toolbar_locale_config.md) | Lernen Sie, wie Sie die Toolbar lokalisieren|
 
 ## Arbeiten mit TypeScript
 
 | Thema                                                       | Beschreibung                                        |
 | ----------------------------------------------------------- | ---------------------------------------------------|
-| [Arbeiten mit TypeScript](/guides/typescript_support.md)     | Kanban mit TypeScript verwenden                  |
+| [Working with TypeScript](guides/typescript_support.md)     | Lernen Sie, wie Sie mit TypeScript arbeiten         |
 
 ## Noch Fragen?
 
-<button class="support_btn"><a href="https://forum.dhtmlx.com/">Ask the community</a> </button>
+<button class="support_btn"><a href="https://forum.dhtmlx.com/">Fragen Sie die Community</a> </button>
 
 :::info
-Fragen können auch unten in den Kommentaren gestellt werden!
+Sie können Ihre Fragen auch unten in den Kommentaren hinterlassen!
 :::

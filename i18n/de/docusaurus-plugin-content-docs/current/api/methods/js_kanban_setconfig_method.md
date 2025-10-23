@@ -1,14 +1,14 @@
 ---
 sidebar_label: setConfig()
 title: setConfig Methode
-description: Sie können die setConfig Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die setConfig Methode. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # setConfig()
 
 ### Beschreibung
 
-@short: Aktualisiert das Kanban mit neuen Konfigurationseinstellungen
+@short: Setzt neue Konfigurationsparameter für das Kanban
 
 ### Verwendung
 
@@ -18,10 +18,10 @@ setConfig(config: object): void;
 
 ### Parameter
 
-- `config` - (erforderlich) ein Objekt, das die Kanban-Konfigurationsoptionen enthält. Eine vollständige Liste der Eigenschaften finden Sie [hier](/api/overview/main_overview.md#kanban-eigenschaften).
+- `config` - (erforderlich) das Objekt mit der Kanban-Konfiguration. Eine vollständige Liste der Eigenschaften finden Sie [hier](api/overview/main_overview.md#kanban-properties)
 
 :::tip
-Mit dieser Methode können Sie die Einstellungen des Kanban-Widgets anpassen und Daten darin laden. Beachten Sie, dass sie keinen Einfluss auf die Historie hat (Änderungen an der Historie werden nicht unterstützt) oder auf Themes (verwenden Sie dafür die [`setTheme()`](/api/methods/js_kanban_settheme_method.md) Methode).
+Mit dieser Methode können Sie das Kanban-Widget konfigurieren sowie Daten laden. Die Methode ändert nicht die Historie (eine Änderung der Historie ist überhaupt nicht möglich).
 :::
 
 ### Beispiel
@@ -36,7 +36,7 @@ const board = new kanban.Kanban("#root", {
 // Toolbar erstellen
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
 
-// Kanban-Konfiguration mit neuen Parametern aktualisieren
+// neue Konfigurationsparameter für das Kanban angeben
 board.setConfig({
     columnKey: "stage",
     rowKey: "type",
@@ -48,6 +48,6 @@ board.setConfig({
     /* weitere Parameter */
 });
                         
-// Toolbar-Konfiguration mit neuen Elementen aktualisieren
+// neue Konfigurationsparameter für die Toolbar angeben
 toolbar.setConfig({ items: ["search", "spacer", "sort"] });
 ~~~

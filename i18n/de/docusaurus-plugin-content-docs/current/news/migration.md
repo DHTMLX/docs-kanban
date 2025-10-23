@@ -1,14 +1,219 @@
 ---
 sidebar_label: Migration zu neueren Versionen
 title: Migration zu neueren Versionen
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Migration zu neueren Versionen. Durchstöbern Sie Entwickleranleitungen und API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Informationen zur Migration zu neueren Versionen finden Sie in der Dokumentation zur DHTMLX JavaScript Kanban Bibliothek. Stöbern Sie in den Entwicklerhandbüchern und der API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # Migration zu neueren Versionen
 
+## 1.6.5 -> 1.7.0
+
+### API
+
+#### Eigenschaften
+
+- Die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft wurde aktualisiert. Der Parameter `clearButton` wurde durch `clear` ersetzt:
+
+~~~jsx {8} title="Vor v1.7.0"
+new kanban.Kanban("#root", {
+    editorShape: [
+        {
+            type: "combo",
+            label: "Priority",
+            key: "priority",
+            config: {
+                clearButton: true // legacy
+            }
+        }, { /* ... */ }
+    ]
+    // weitere Parameter
+});
+~~~
+
+~~~jsx {8} title="Ab v1.7.0"
+new kanban.Kanban("#root", {
+    editorShape: [
+        {
+            type: "combo",
+            label: "Priority",
+            key: "priority",
+            config: {
+                clear: true // neu
+            }
+        }, { /* ... */ }
+    ]
+    // weitere Parameter
+});
+~~~
+
+- Die Funktion [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) wurde aktualisiert. Der **store** Parameter wurde durch **readonly** ersetzt:
+
+~~~jsx {3-4} title="Vor v1.7.0"
+menu: {
+    show: true,
+    items: ({ card, store }) => {
+        const defaultMenuItems = getDefaultCardMenuItems({ card, store }); // der "store" Parameter ist legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="Ab v1.7.0"
+menu: {
+    show: true,
+    items: ({ card, readonly }) => {
+        const defaultMenuItems = getDefaultCardMenuItems({ card, readonly }); // der "readonly" Parameter ist neu
+        ...
+    }
+}
+~~~
+
+- Die Funktion [`columnShape.menu.items`](api/config/js_kanban_columnshape_config.md) wurde aktualisiert. Der **store** Parameter wurde durch **readonly** ersetzt:
+
+~~~jsx {3-4} title="Vor v1.7.0"
+menu: {
+    show: true,
+    items: ({ column, columnIndex, columns, store }) => {
+        const defaultMenuItems = getDefaultColumnMenuItems({ column, columnIndex, columns, store }); // der "store" Parameter ist legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="Ab v1.7.0"
+menu: {
+    show: true,
+    items: ({ column, columnIndex, columns, readonly }) => {
+        const defaultMenuItems = getDefaultColumnMenuItems({ column, columnIndex, columns, readonly }); // der "readonly" Parameter ist neu
+        ...
+    }
+}
+~~~
+
+- Die Funktion [`rowShape.menu.items`](api/config/js_kanban_rowshape_config.md) wurde aktualisiert. Der **store** Parameter wurde durch **readonly** ersetzt:
+
+~~~jsx {3-4} title="Vor v1.7.0"
+menu: {
+    show: true,
+    items: ({ row, rowIndex, rows, store }) => {
+        const defaultMenuItems = getDefaultRowMenuItems({ row, rowIndex, rows, store }); // der "store" Parameter ist legacy
+        ...
+    }
+}
+~~~
+
+~~~jsx {3-4} title="Ab v1.7.0"
+menu: {
+    show: true,
+    items: ({ row, rowIndex, rows, readonly }) => {
+        const defaultMenuItems = getDefaultRowMenuItems({ row, rowIndex, rows, readonly }); // der "readonly" Parameter ist neu
+        ...
+    }
+}
+~~~
+
+- Die Parameter ***menu.items[0].label*** und ***menu.items[0].items*** sind ab v1.7 für die Eigenschaften [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu.items`](api/config/js_kanban_columnshape_config.md) und [`rowShape.menu.items`](api/config/js_kanban_rowshape_config.md) entfernt worden.
+
+- Die Eigenschaft `editorAutoSave` wurde in v1.7 entfernt. Verwenden Sie stattdessen die Eigenschaft [`editor.autoSave`](api/config/js_kanban_editor_config.md):
+
+~~~jsx {2} title="Vor v1.7.0"
+new kanban.Kanban("#root", {
+    editorAutoSave: true, // legacy
+    // weitere Parameter
+});
+~~~
+
+~~~jsx {3} title="Ab v1.7.0"
+new kanban.Kanban("#root", {
+    editor: {
+        autoSave: true // neu
+    }
+    // weitere Parameter
+});
+~~~
+
+- Die [`links`](api/config/js_kanban_links_config.md) Eigenschaft wurde wie folgt aktualisiert:
+    - Der **masterId** Parameter wurde durch **source** ersetzt
+    - Der **slaveId** Parameter wurde durch **target** ersetzt
+
+~~~jsx {5-6,10} title="Vor v1.7.0"
+const links = [
+    {
+        id: 1,
+        // legacy
+        masterId: 2,
+        slaveId: 5
+    }, {...} // weitere Linkdaten
+];
+
+new kanban.Kanban("#root", {
+    links,
+    // weitere Parameter
+});
+~~~
+
+~~~jsx {5-6,10} title="Ab v1.7.0"
+const links = [
+    {
+        id: 1,
+        // neu
+        source: 2,
+        target: 5
+    }, {...} // weitere Linkdaten
+];
+
+new kanban.Kanban("#root", {
+    links,
+    // weitere Parameter
+});
+~~~
+
+#### Methoden
+
+- Die Methoden `undo` und `redo` wurden aus den Store-Methoden entfernt:
+
+~~~jsx {1} title="Vor v1.7.0"
+kanban.api.getStores().data.undo() // legacy
+~~~
+
+~~~jsx {5-6,10} title="Ab v1.7.0"
+kanban.undo();
+// oder
+kanban.api.exec("undo");
+~~~
+
+- Die Methoden [`api.getState()`](api/internal/js_kanban_getstate_method.md) und [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) wurden folgendermaßen aktualisiert:
+    - Die folgenden Parameter wurden in v1.7.0 entfernt:
+
+    ```js
+    fromAreaMeta,
+    dropAreaItemsCoords,
+    dropAreasCoords,
+    overAreaMeta,
+    before,
+    dragItemId,
+    dragItemsCoords,
+    overAreaId
+    ```
+
+    - Die folgenden Parameter sind ab v1.7.0 privat:
+
+    ```js
+    edit -> _edit: object,
+    layout -> _layout: string,
+    cardsMap -> _cardsMap: object,
+    cardsMeta -> _cardsMeta: object,
+    areasMeta -> _areasMeta: object,
+    scroll -> _scroll: object
+    ```
+
+#### Ereignisse
+
+- Die Parameter `dragItemsCoords` und `dropAreasCoords` wurden aus dem [`start-drag-card`](api/events/js_kanban_startdragcard_event.md) Ereignis entfernt
+
 ## 1.5.13 -> 1.6.0
 
-Es wurden einige Änderungen an den CSS-Klassen für das Menü vorgenommen:
+Die CSS-Klassen für das Menü wurden wie folgt geändert:
 
 ~~~jsx
     .menu -> .wx-menu
@@ -19,7 +224,7 @@ Es wurden einige Änderungen an den CSS-Klassen für das Menü vorgenommen:
 
 ## 1.5.12 -> 1.5.13
 
-Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
+Die CSS-Klassen für den Editor wurden wie folgt geändert:
 
 ~~~jsx
     .modal -> .wx-modal
@@ -46,15 +251,15 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
 
 #### Methoden
 
-- Die [`setLocale`](/api/methods/toolbar_setlocale_method)-Methode für die Kanban-Toolbar hat eine neue Möglichkeit, ein Locale anzuwenden:
+- Die [`setLocale`](api/methods/toolbar_setlocale_method.md) Methode der Kanban-Toolbar wurde folgendermaßen geändert:
 
 ~~~jsx {6} title="Vor v1.5.7"
     // Kanban erstellen
     const board = new kanban.Kanban("#root", {...});
     // Toolbar erstellen
     const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-    // "de"-Locale auf Toolbar anwenden
-    toolbar.setLocale(de); // oder null, um die Locale auf die Standardversion (en) zurückzusetzen
+    // Die "de"-Locale auf die Toolbar anwenden
+    toolbar.setLocale(de); // oder null, um die Locale auf den Standard (en) zurückzusetzen
 ~~~
 
 ~~~jsx {6} title="Ab v1.5.7"
@@ -62,8 +267,8 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
     const board = new kanban.Kanban("#root", {...});
     // Toolbar erstellen
     const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
-    // "de"-Locale auf Toolbar anwenden
-    toolbar.setLocale(de, board.api);
+    // Die "de"-Locale auf die Toolbar anwenden
+    toolbar.setLocale(de, board.api); 
 ~~~
 
 ## 1.4 -> 1.5
@@ -72,9 +277,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
 
 #### Eigenschaften
 
-- Die [`columnShape`](/api/config/js_kanban_columnshape_config)-Eigenschaft in Kanban wurde geändert:
+- Die [`columnShape`](api/config/js_kanban_columnshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.5"
+    ~~~jsx {} title="Vor v1.5"
         {
             menu: {
                 show: true,
@@ -86,9 +291,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }
         }
-~~~
+    ~~~
 
-~~~jsx {11} title="Ab v1.5"
+    ~~~jsx {11} title="Ab v1.5"
         {
             menu: {
                 show: true,
@@ -100,8 +305,8 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             },
             fixedHeaders: true
-        }
-~~~
+        } 
+    ~~~
 
 ## 1.3 -> 1.4
 
@@ -109,18 +314,18 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
 
 #### Eigenschaften
 
-- Die [`editorShape`](/api/config/js_kanban_editorshape_config)-Eigenschaft für Kanban funktioniert nun wie folgt:
+- Die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         {
-            type: "date",
+            type: "date", 
             key: "start_date",
             label: "Start date"
         },
         // weitere Parameter
-~~~
+    ~~~
 
-~~~jsx {5,7-21} title="Ab v1.4"
+    ~~~jsx {5,7-21} title="Ab v1.4"
         {
             type: "date", // oder Sie können auch den Typ "dateRange" verwenden
             key: "start_date",
@@ -143,11 +348,11 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
             label: "Links",
         },
         // weitere Parameter
-~~~
+    ~~~
 
-- Aktualisierung der [`cardShape`](/api/config/js_kanban_cardshape_config)-Eigenschaft:
+- Die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         {
             label: true,
             description: true,
@@ -160,9 +365,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
             }
             // weitere Parameter
         }
-~~~
+    ~~~
 
-~~~jsx {7,11-13} title="Ab v1.4"
+    ~~~jsx {7,11-13} title="Ab v1.4"
         {
             label: true,
             description: true,
@@ -177,12 +382,12 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
             comments: true,
             css: (card) => card.type == "feature" ? "green" : "red",
             // weitere Parameter
-        }
-~~~
+        } 
+    ~~~
 
-- Aktualisierung der [`columnShape`](/api/config/js_kanban_columnshape_config)-Eigenschaft:
+- Die [`columnShape`](api/config/js_kanban_columnshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         {
             menu: {
                 show: true,
@@ -194,9 +399,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }
         }
-~~~
+    ~~~
 
-~~~jsx {6,11} title="Ab v1.4"
+    ~~~jsx {6,11} title="Ab v1.4"
         {
             menu: {
                 show: true,
@@ -208,12 +413,12 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             },
             css: (column, cards) => column.id == "feature" && cards.length < 5 ? "green" : "red"
-        }
-~~~
+        } 
+    ~~~
 
-- Aktualisierung der [`rowShape`](/api/config/js_kanban_rowshape_config)-Eigenschaft:
+- Die [`rowShape`](api/config/js_kanban_rowshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         {
             menu: {
                 show: true,
@@ -225,9 +430,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }
         }
-~~~
+    ~~~
 
-~~~jsx {6,11} title="Ab v1.4"
+    ~~~jsx {6,11} title="Ab v1.4"
         {
             menu: {
                 show: true,
@@ -239,12 +444,12 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             },
             css: (row, cards) => row.id == "task" && cards.length < 5 ? "green" : "red",
-        }
-~~~
+        } 
+    ~~~
 
-- Die [`cards`](/api/config/js_kanban_cards_config)-Eigenschaft hat nun folgendes Format:
+- Die [`cards`](api/config/js_kanban_cards_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         [
             {
                 id: 1,
@@ -253,9 +458,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }, ...
         ]
-~~~
+    ~~~
 
-~~~jsx {6-18} title="Ab v1.4"
+    ~~~jsx {6-18} title="Ab v1.4"
         [
             {
                 id: 1,
@@ -275,11 +480,11 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }, ...
         ]
-~~~
+    ~~~
 
-- Die [`columns`](/api/config/js_kanban_columns_config)-Eigenschaft enthält jetzt neue Optionen:
+- Die [`columns`](api/config/js_kanban_columns_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         [
             {
                 id: "inprogress",
@@ -287,9 +492,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }, ...
         ]
-~~~
+    ~~~
 
-~~~jsx {5-11} title="Ab v1.4"
+    ~~~jsx {5-11} title="Ab v1.4"
         [
             {
                 id: "inprogress",
@@ -304,11 +509,11 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }, ...
         ]
-~~~
+    ~~~
 
-- Die [`rows`](/api/config/js_kanban_rows_config)-Eigenschaft ermöglicht jetzt eine css-Option:
+- Die [`rows`](api/config/js_kanban_rows_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         [
             {
                 id: "features",
@@ -316,9 +521,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }, ...
         ]
-~~~
+    ~~~
 
-~~~jsx {5} title="Ab v1.4"
+    ~~~jsx {5} title="Ab v1.4"
         [
             {
                 id: "features",
@@ -327,11 +532,11 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 // weitere Parameter
             }, ...
         ]
-~~~
+    ~~~
 
-- Die [`cardTemplate`](/api/config/js_kanban_cardtemplate_config)-Eigenschaft wurde aktualisiert:
+- Die [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
@@ -348,9 +553,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
             columns,
             cardTemplate
         });
-~~~
+    ~~~
 
-~~~jsx {6-8} title="Ab v1.4"
+    ~~~jsx {6-8} title="Ab v1.4"
         const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
@@ -371,11 +576,11 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
             cardTemplate: kanban.template(card => cardTemplate(card)),
             // weitere Parameter
         });
-~~~
+    ~~~
 
-- Das **Sortier**-Steuerelement in [`items`](/api/config/toolbar_items_config) für die Kanban-Toolbar hat jetzt einen neuen Stil:
+- Das **sort**-Steuerelement in der [`items`](api/config/toolbar_items_config.md) Eigenschaft der Kanban Toolbar wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.4"
+    ~~~jsx {} title="Vor v1.4"
         [
             { // benutzerdefiniertes Sortier-Steuerelement
                 type: "sort",
@@ -393,9 +598,9 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 ]
             },
         ]
-~~~
+    ~~~
 
-~~~jsx {6,11} title="Ab v1.4"
+    ~~~jsx {6,11} title="Ab v1.4"
         [
             { // benutzerdefiniertes Sortier-Steuerelement
                 type: "sort",
@@ -413,40 +618,40 @@ Die vom Editor verwendeten CSS-Klassen wurden aktualisiert:
                 ]
             },
         ]
-~~~
+    ~~~
 
 #### Methoden
 
-- Die [`api.getState()`](/api/internal/js_kanban_getstate_method)-Methode in Kanban gibt jetzt weniger Eigenschaften zurück:
+- Die [`api.getState()`](api/internal/js_kanban_getstate_method.md) Methode von Kanban wurde aktualisiert:
 
 ~~~jsx {25-27} title="Vor v1.4"
 api.getState();
 // die Methode gibt ein Objekt mit folgenden Eigenschaften zurück
 /*{
-    areasMeta: object,
-    before: string | number,
+    areasMeta: object, 
+    before: string | number, 
     cardShape: object,
     cards: array,
     cardsMap: object,
     cardsMeta: object,
     columnKey: string,
     columns: array,
-    dragItemId: string | number,
-    dragItemsCoords: array,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
     edit: object,
     editorShape: array,
     fromAreaMeta: object,
-    overAreaId: string | number,
+    overAreaId: string | number, 
     readonly: object,
     rowKey: string,
     rows: array,
     scroll: object,
     search: object,
-    selected: array,
+    selected: array, 
     sort: object,
     dropAreaItemsCoords: array,
-    dropAreasCoords: array,
-    overAreaMeta: object,
+    dropAreasCoords: array, 
+    overAreaMeta: object, 
 }*/
 ~~~
 
@@ -454,26 +659,26 @@ api.getState();
 api.getState();
 // die Methode gibt ein Objekt mit folgenden Eigenschaften zurück
 /*{
-    areasMeta: object,
-    before: string | number,
+    areasMeta: object, 
+    before: string | number, 
     cardShape: object,
     cards: array,
     cardsMap: object,
     cardsMeta: object,
     columnKey: string,
     columns: array,
-    dragItemId: string | number,
-    dragItemsCoords: array,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
     edit: object,
     editorShape: array,
     fromAreaMeta: object,
-    overAreaId: string | number,
+    overAreaId: string | number, 
     readonly: object,
     rowKey: string,
     rows: array,
     scroll: object,
     search: object,
-    selected: array,
+    selected: array, 
     sort: object,
 }*/
 ~~~
@@ -484,20 +689,22 @@ api.getState();
 
 #### Eigenschaften
 
-- Die [`editorShape`](/api/config/js_kanban_editorshape_config)-Eigenschaft unterstützt jetzt einen ***dateRange***-Parameter:
+- Die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-~~~jsx {} title="Vor v1.3"
+    - der ***dateRange*** Parameter
+
+    ~~~jsx {} title="Vor v1.3"
         {
-            type: "date",
+            type: "date", 
             key: "start_date",
             label: "Start date"
         },
         // weitere Parameter
-~~~
+    ~~~
 
-~~~jsx {} title="Ab v1.3"
+    ~~~jsx {} title="Ab v1.3"
         {
-            type: "dateRange", // alternativ auch Typ "date"
+            type: "dateRange", // oder Sie können auch den Typ "date" verwenden
             key: {
                 start: "start_date",
                 end: "end_date"
@@ -505,9 +712,9 @@ api.getState();
             label: "Date Range"
         },
         // weitere Parameter
-~~~
+    ~~~
 
-- Die [`items`](/api/config/toolbar_items_config)-Eigenschaft der Toolbar umfasst jetzt "undo" und "redo":
+- Die [`items`](api/config/toolbar_items_config.md) Eigenschaft der Toolbar wurde wie folgt aktualisiert:
 
 ~~~jsx {} title="Vor v1.3"
 items: [
@@ -533,7 +740,7 @@ items: [
 
 #### Methoden
 
-- Die [`updateCard()`](/api/methods/js_kanban_updatecard_method)-Methode nimmt jetzt eine zusätzliche Option entgegen:
+- Die [`updateCard()`](api/methods/js_kanban_updatecard_method.md) Methode von Kanban wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.3"
 updateCard({
@@ -560,7 +767,7 @@ updateCard({
 });
 ~~~
 
-- Die [`updateColumn()`](/api/methods/js_kanban_updatecolumn_method)-Methode unterstützt nun ein weiteres Argument:
+- Die [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) Methode von Kanban wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.3"
 updateColumn({
@@ -587,7 +794,7 @@ updateColumn({
 });
 ~~~
 
-- Die [`updateRow()`](/api/methods/js_kanban_updaterow_method)-Methode beinhaltet jetzt die Option replace:
+- Die [`updateRow()`](api/methods/js_kanban_updaterow_method.md) Methode von Kanban wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.3"
 updateRow({
@@ -616,21 +823,21 @@ updateColumn({
 
 #### Eigenschaften
 
-- Die [`cardShape`](/api/config/js_kanban_cardshape_config)-Eigenschaft wurde verbessert:
+- Die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
-    - für den ***menu***-Parameter
+    - der ***menu*** Parameter
 
-~~~jsx {} title="Vor v1.2"
+    ~~~jsx {} title="Vor v1.2"
     menu: true,
     //oder
     menu: { show: true }
     // weitere Parameter
-~~~
+    ~~~
 
-~~~jsx {5-14} title="Ab v1.2"
+    ~~~jsx {5-14} title="Ab v1.2"
     menu: true,
     // oder
-    menu: {
+    menu: { 
         show: true,
         items: ({ card, store }) => {
             if(card.id === 1){
@@ -640,51 +847,51 @@ updateColumn({
                     { id: "set-edit", icon: "wxi-edit", label: "Edit" },
                     { id: "delete-card", icon: "wxi-delete", label: "Delete" }
                 ];
-            }
+            } 
         }
     },
     // weitere Parameter
-~~~
+    ~~~
 
-    - für den ***users***-Parameter
+    - der ***users*** Parameter
 
-~~~jsx {7} title="Vor v1.2"
+    ~~~jsx {7} title="Vor v1.2"
     users: {
         show: true,
         values: [
-            {
-                id: 1,
-                label: "John Smith",
-                path: "../assets/user.jpg"
+            { 
+                id: 1, 
+                label: "John Smith", 
+                path: "../assets/user.jpg" 
             },
         ]
     },
     // weitere Parameter
-~~~
+    ~~~
 
-~~~jsx {7} title="Ab v1.2"
+    ~~~jsx {7} title="Ab v1.2"
     users: {
         show: true,
         values: [
-            {
-                id: 1,
-                label: "John Smith",
-                avatar: "../assets/user.jpg"
+            { 
+                id: 1, 
+                label: "John Smith", 
+                avatar: "../assets/user.jpg" 
             },
         ]
     },
     // weitere Parameter
-~~~
+    ~~~
 
-    - für ***start_date*** und ***end_date***-Parameter
+    - die ***start_date*** und ***end_date*** Parameter
 
-~~~jsx {} title="Vor v1.2"
+    ~~~jsx {} title="Vor v1.2"
     start_date: true,
     end_date: true,
     // weitere Parameter
-~~~
+    ~~~
 
-~~~jsx {3,7} title="Ab v1.2"
+    ~~~jsx {3,7} title="Ab v1.2"
     start_date: {
         show: true,
         format: "%d.%m.%Y"
@@ -694,41 +901,41 @@ updateColumn({
         format: "%d.%m.%Y"
     },
     // weitere Parameter
-~~~
+    ~~~
 
-- Die [`editorShape`](/api/config/js_kanban_editorshape_config)-Eigenschaft verwendet jetzt "avatar" statt "path":
+- Die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft von Kanban wurde wie folgt aktualisiert:
 
 ~~~jsx {8} title="Vor v1.2"
 {
-    type: "multiselect",
-    key: "users",
+    type: "multiselect", 
+    key: "users", 
     label: "Users",
     values: [
-        {
-            id: 1, label: "Alan",
-            path: "preview_image_path_1.png"
+        { 
+            id: 1, label: "Alan", 
+            path: "preview_image_path_1.png" 
         },
     ]
 },
-// Einstellungen anderer Felder
+// Einstellungen weiterer Felder
 ~~~
 
 ~~~jsx {8} title="Ab v1.2"
 {
-    type: "multiselect",
-    key: "users",
+    type: "multiselect", 
+    key: "users", 
     label: "Users",
     values: [
-        {
-            id: 1, label: "Alan",
-            avatar: "preview_image_path_1.png"
+        { 
+            id: 1, label: "Alan", 
+            avatar: "preview_image_path_1.png" 
         },
     ]
 },
-// Einstellungen anderer Felder
+// Einstellungen weiterer Felder
 ~~~
 
-- Die [`items`](/api/config/toolbar_items_config)-Eigenschaft der Toolbar bietet neue Funktionen:
+- Die [`items`](api/config/toolbar_items_config.md) Eigenschaft der Toolbar wurde wie folgt aktualisiert:
 
 ~~~jsx {} title="Vor v1.2"
 items: [
@@ -771,7 +978,7 @@ items: [
                 dir: "desc"
             }
         ]
-    },
+    }, 
     "addColumn",
     "addRow"
 ]
@@ -779,17 +986,17 @@ items: [
 
 #### Methoden
 
-- Die [`setLocale()`](/api/methods/js_kanban_setlocale_method)-Methode in Kanban und die [`setLocale()`](/api/methods/toolbar_setlocale_method)-Methode in der Toolbar funktionieren jetzt etwas anders:
+- Die [`setLocale()`](api/methods/js_kanban_setlocale_method.md) Methode von Kanban und [`setLocale()`](api/methods/toolbar_setlocale_method.md) Methode der Toolbar wurden aktualisiert:
 
 ~~~jsx {} title="Vor v1.2"
-setLocale(kanban.en); // auf Standard-Locale zurücksetzen
+setLocale(kanban.en); // auf Standard-Übersetzung zurücksetzen
 ~~~
 
 ~~~jsx {} title="Ab v1.2"
-setLocale(null); // auf Standard-Locale zurücksetzen
+setLocale(null); // auf Standard-Übersetzung zurücksetzen
 ~~~
 
-- Die [`api.getReactiveState()`](/api/internal/js_kanban_getreactivestate_method)-Methode in Kanban gibt jetzt mehr Status-Eigenschaften zurück:
+- Die [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) Methode von Kanban wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.2"
 api.getReactiveState();
@@ -819,33 +1026,33 @@ api.getReactiveState();
         update: any,
         set: any
     },
-    before: {...},
+    before: {...}, 
     cardShape: {...},
     cards: {...},
     cardsMap: {...},
     cardsMeta: {...},
     columnKey: {...},
     columns: {...},
-    dragItemId: {...},
-    dragItemsCoords: {...},
-    dropAreaItemsCoords: {...},
-    dropAreasCoords: {...},
+    dragItemId: {...}, 
+    dragItemsCoords: {...}, 
+    dropAreaItemsCoords: {...}, 
+    dropAreasCoords: {...}, 
     edit: {...},
     editorShape: {...},
     fromAreaMeta: {...},
-    overAreaId: {...},
+    overAreaId: {...}, 
     overAreaMeta: {...},
     readonly: {...},
     rowKey: {...},
     rows: {...},
     scroll: {...},
     search: {...},
-    selected: {...},
+    selected: {...}, 
     sort: {...}
 }*/
 ~~~
 
-- Die [`api.getState()`](/api/internal/js_kanban_getstate_method)-Methode in Kanban gibt jetzt ein detaillierteres Statusobjekt zurück:
+- Die [`api.getState()`](api/internal/js_kanban_getstate_method.md) Methode von Kanban wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.2"
 api.getState();
@@ -866,34 +1073,34 @@ api.getState();
 api.getState();
 // die Methode gibt ein Objekt mit folgenden Eigenschaften zurück
 /*{
-    areasMeta: object,
-    before: string | number,
+    areasMeta: object, 
+    before: string | number, 
     cardShape: object,
     cards: array,
     cardsMap: object,
     cardsMeta: object,
     columnKey: string,
     columns: array,
-    dragItemId: string | number,
-    dragItemsCoords: array,
-    dropAreaItemsCoords: array,
-    dropAreasCoords: array,
+    dragItemId: string | number, 
+    dragItemsCoords: array, 
+    dropAreaItemsCoords: array, 
+    dropAreasCoords: array, 
     edit: object,
     editorShape: array,
     fromAreaMeta: object,
-    overAreaId: string | number,
+    overAreaId: string | number, 
     overAreaMeta: object,
     readonly: object,
     rowKey: string,
     rows: array,
     scroll: object,
     search: object,
-    selected: array,
+    selected: array, 
     sort: object
 }*/
 ~~~
 
-- Die [`api.getStores()`](/api/internal/js_kanban_getstores_method)-Methode in Kanban gibt jetzt nur noch den State-Store zurück:
+- Die [`api.getStores()`](api/internal/js_kanban_getstores_method.md) Methode von Kanban wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.2"
 api.getStores();
@@ -1033,7 +1240,7 @@ const en = {
     calendar: { // Übersetzungen und Einstellungen des Kalenders
         monthFull: [
             "January", "February", "March", "April",
-            "May", "June", "July", "August",
+            "May", "June", "July", "August", 
             "September", "October", "November", "December"
         ],
         monthShort: [
@@ -1075,12 +1282,12 @@ const en = {
 
 #### Eigenschaften
 
-- Die [`columns`](/api/config/js_kanban_columns_config)-Eigenschaft enthält ab v1.1 einige zusätzliche Parameter: ***collapsed, limit*** und ***strictLimit***.
+- Die [`columns`](api/config/js_kanban_columns_config.md) Eigenschaft wurde um neue Parameter erweitert. Ab v1.1 können Sie die Konfigurationen ***collapsed, limit*** und ***strictLimit*** verwenden.
 
 ~~~jsx title="Vor v1.1"
 const columns = [
-    {
-        label: "Backlog",
+    { 
+        label: "Backlog", 
         id: "backlog"
     }, ...
 ];
@@ -1088,12 +1295,12 @@ const columns = [
 
 ~~~jsx {5-7,12} title="Ab v1.1"
 const columns = [
-    {
-        label: "Backlog",
+    { 
+        label: "Backlog", 
         id: "backlog",
         collapsed: true,
         limit: 3,
-        strictLimit: true
+        strictLimit: true 
     }, ...
 ];
 
@@ -1103,7 +1310,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-- Der ***color***-Parameter in [`cardShape`](/api/config/js_kanban_cardshape_config) wurde angepasst.
+- Der ***color*** Parameter der [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft wurde aktualisiert.
 
 ~~~jsx {4-7} title="Vor v1.1"
 const cardShape = {
@@ -1119,10 +1326,10 @@ const cardShape = {
 
 ~~~jsx {4,9} title="Ab v1.1"
 const cardShape = {
-    color: {
+    color: { 
         show: true,
-        values: ["#65D3B3", "#FFC975", "#58C3FE"]
-    }
+        values: ["#65D3B3", "#FFC975", "#58C3FE"] 
+    } 
 };
 
 new kanban.Kanban("#root", {
@@ -1133,7 +1340,7 @@ new kanban.Kanban("#root", {
 
 #### Methoden
 
-- Die [`addColumn`](/api/methods/js_kanban_addcolumn_method)-Methode (und [`add-column`](/api/events/js_kanban_addcolumn_event)-Event) wird jetzt etwas anders initialisiert:
+- Die [`addColumn`](api/methods/js_kanban_addcolumn_method.md) Methode (und [`add-column`](api/events/js_kanban_addcolumn_event.md) Ereignis.md) wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.1"
 addColumn(column_data_object);
@@ -1150,7 +1357,7 @@ addColumn({
 });
 ~~~
 
-- Die [`addRow`](/api/methods/js_kanban_addrow_method)-Methode (und [`add-row`](/api/events/js_kanban_addrow_event)-Event) wurde ebenfalls aktualisiert:
+- Die [`addRow`](api/methods/js_kanban_addrow_method.md) Methode (und [`add-row`](api/events/js_kanban_addrow_event.md) Ereignis.md) wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.1"
 addRow(row_data_object);
@@ -1167,7 +1374,7 @@ addRow({
 });
 ~~~
 
-- Die [`updateColumn`](/api/methods/js_kanban_updatecolumn_method)-Methode (und [`update-column`](/api/events/js_kanban_updatecolumn_event)-Event) wurde wie folgt geändert:
+- Die [`updateColumn`](api/methods/js_kanban_updatecolumn_method.md) Methode (und [`update-column`](api/events/js_kanban_updatecolumn_event.md) Ereignis.md) wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.1"
 updateColumn(column_data_object);
@@ -1184,7 +1391,7 @@ updateColumn({
 });
 ~~~
 
-- Die [`updateRow`](/api/methods/js_kanban_updaterow_method)-Methode (und [`update-row`](/api/events/js_kanban_updaterow_event)-Event) hat jetzt auch ein neues Format:
+- Die [`updateRow`](api/methods/js_kanban_updaterow_method.md) Methode (und [`update-row`](api/events/js_kanban_updaterow_event.md) Ereignis.md)  wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.1"
 updateRow(row_data_object);
@@ -1201,7 +1408,7 @@ updateRow({
 });
 ~~~
 
-- Die [`updateCard`](/api/methods/js_kanban_updatecard_method)-Methode (und [`update-card`](/api/events/js_kanban_updatecard_event)-Event) wird jetzt wie folgt eingerichtet:
+- Die [`updateCard`](api/methods/js_kanban_updatecard_method.md) Methode (und [`update-card`](api/events/js_kanban_updatecard_event.md) Ereignis.md) wurde aktualisiert:
 
 ~~~jsx {} title="Vor v1.1"
 updateCard(card_data_object);
@@ -1218,10 +1425,10 @@ updateCard({
 });
 ~~~
 
-- Die [`parse`](/api/methods/js_kanban_parse_method)-Methode funktioniert jetzt, ohne dass die Anfangsdaten vorher zurückgesetzt werden müssen:
+- Die [`parse`](api/methods/js_kanban_parse_method.md) Methode  wurde aktualisiert:
 
 ~~~jsx {3-5,8-12} title="Vor v1.1"
-// Sie müssen die Anfangsdaten vor dem Parsen neuer Daten zurücksetzen
+// Sie müssen die Anfangsdaten zurücksetzen, bevor Sie neue parsen
 const board = new kanban.Kanban("#root", {
     columns: [],
     cards: [],
@@ -1236,7 +1443,7 @@ board.parse({
 ~~~
 
 ~~~jsx {} title="Ab v1.1"
-// Sie müssen die Anfangsdaten vor dem Parsen neuer Daten nicht mehr zurücksetzen
+// Sie müssen die Anfangsdaten nicht mehr zurücksetzen, bevor Sie neue parsen
 const board = new kanban.Kanban("#root", {});
 
 board.parse({

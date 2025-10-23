@@ -1,33 +1,33 @@
 ---
 sidebar_label: PUT /cards/{id}/comments/{id}
 title: PUT /cards/{cardId}/comments/{commentId}
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route PUT /cards/{cardId}/comments/{cardId}. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die REST-Route PUT /cards/{cardId}/comments/{cardId} in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # PUT `/cards/{cardId}/comments/{commentId}`
 
 ### Beschreibung
 
-@short: Dieser Endpunkt aktualisiert einen bestehenden Kommentar innerhalb einer Karte und gibt ein JSON-Objekt mit der ID des aktualisierten Kommentars zurück.
+@short: Aktualisiert einen Kommentar in einer Karte und gibt ein JSON-Objekt mit der ID des aktualisierten Kommentars zurück.
 
-Diese Route verarbeitet die **HTTP PUT**-Anfrage, die an `cards/{cardId}/comments/{commentId}` gesendet wird.
+Die Route verarbeitet die **HTTP PUT**-Anfrage, die an den Pfad `cards/{cardId}/comments/{commentId}` gesendet wird.
 
 ### Pfadparameter
 
-Die folgenden Parameter sind in der Anfrage-URL enthalten:
+Die folgenden Parameter werden in der Anforderungszeile übergeben:
 
 | Name        | Typ         | Beschreibung |
 | ----------- | ----------- | ------------ |
-| `cardId`    | number      | *Erforderlich*. Die ID der Karte, die den zu aktualisierenden Kommentar enthält. |
-| `commentId` | number      | *Erforderlich*. Die ID des Kommentars, der aktualisiert werden soll. |
+| `cardId`    | number      | *Erforderlich*. Die ID der Karte, deren Kommentar aktualisiert wird. |
+| `commentId` | number      | *Erforderlich*. Die ID des zu aktualisierenden Kommentars. |
 
 ### Payload
 
-Der Server erwartet ein JSON-Objekt mit der folgenden Eigenschaft:
+Der Server erwartet ein JSON-Objekt mit den folgenden Eigenschaften:
 
-| Name    | Typ     | Beschreibung                   |
-| ------- | ------- | ----------------------------- |
-| `text`  | string  | *Erforderlich*. Der aktualisierte Inhalt des Kommentars. |
+| Name        | Typ         | Beschreibung |
+| ----------- | ----------- | ------------ |
+| `text`      | string      | *Erforderlich*. Der Text des Kommentars.|
 
 Beispiel:
 
@@ -39,7 +39,7 @@ Beispiel:
 
 ### Antwort
 
-Der Server antwortet mit einem JSON-Objekt, das die ID des aktualisierten Kommentars enthält.
+Der Server gibt ein JSON-Objekt mit einer Karten-ID zurück.
 
 Beispiel:
 
@@ -49,8 +49,8 @@ Beispiel:
 }
 ~~~
 
-Der HTTP-Statuscode zeigt das Ergebnis der Anfrage an: Ein Status von 200 bedeutet Erfolg, während 500 einen Fehler anzeigt.
+Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

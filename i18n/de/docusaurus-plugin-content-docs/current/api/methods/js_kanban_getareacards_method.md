@@ -1,14 +1,14 @@
 ---
 sidebar_label: getAreaCards()
 title: getAreaCards Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getAreaCards Methode. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die getAreaCards-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # getAreaCards()
 
 ### Beschreibung
 
-@short: Ruft ein Array mit Datenobjekten aller Karten in der angegebenen Spalte (und Zeile) ab.
+@short: Gibt ein Array mit Datenobjekten aller Karten der angegebenen Spalte (und Zeile) zurück
 
 ### Verwendung
 
@@ -21,27 +21,28 @@ getAreaCards(
 
 ### Parameter
 
-- `columnId` - (erforderlich) die ID der anzusprechenden Spalte  
-- `rowId` - (optional) die ID der anzusprechenden Zeile
+- `columnId` - (erforderlich) die ID der Zielspalte
+- `rowId` - (optional) die ID der Zielzeile
 
 ### Rückgabewert
 
-Diese Methode gibt ein Array von Datenobjekten zurück, die die Karten repräsentieren.
+Die Methode gibt ein Array mit Datenobjekten der Karten zurück
 
 :::info
-Wenn das Kanban-Board **Spalten** ohne **Zeilen** hat, ist nur der Parameter ***columnId*** erforderlich. In diesem Fall liefert die Methode ein Array mit allen Kartendatenobjekten in dieser Spalte.
+Wenn Kanban nur **Spalten** ohne **Zeilen** enthält, müssen Sie nur den Parameter ***columnId*** übergeben. In diesem Fall gibt die Methode ein Array mit Datenobjekten zurück, die alle Karten der angegebenen Spalte enthalten.
 
-Wenn das Kanban-Board sowohl **Spalten** als auch **Zeilen** enthält, müssen sowohl die Parameter ***columnId*** als auch ***rowId*** angegeben werden. Die Methode gibt dann ein Array von Datenobjekten für Karten zurück, die sich in der angegebenen Spalte und Zeile befinden.
+Wenn Kanban **Spalten** und **Zeilen** enthält, können Sie sowohl die Parameter ***columnId*** als auch ***rowId*** übergeben. In diesem Fall gibt die Methode ein Array mit Datenobjekten zurück, die alle Karten der spezifischen Spalte und Zeile enthalten.
 :::
 
 ### Beispiel
 
-~~~jsx {7}
+~~~jsx {8}
 // Kanban erstellen
 const board = new kanban.Kanban("#root", {
     columns,
-    cards
+    cards,
+    rows
 });
-// Array von Kartendatenobjekten aus der angegebenen Spalte und Zeile abrufen
+// ein Array mit den Datenobjekten der Karten der angegebenen Spalte und Zeile abrufen
 board.getAreaCards("column_id", "row_id");
 ~~~

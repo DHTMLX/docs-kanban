@@ -1,22 +1,21 @@
 ---
 sidebar_label: Lokalisierung
 title: Lokalisierung
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Lokalisierung. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Lokalisierung. Stöbern Sie in Entwicklerhandbüchern und der API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # Lokalisierung
 
-Alle Beschriftungen in der JavaScript Kanban-Oberfläche können lokalisiert werden. Legen Sie einfach eine neue Sprache an oder passen Sie eine bestehende an und setzen Sie diese dann separat für Kanban und Toolbar (diese müssen jeweils einzeln eingestellt werden).
+Sie können alle Beschriftungen in der Oberfläche von JavaScript Kanban lokalisieren. Dazu müssen Sie entweder eine neue Sprachumgebung erstellen oder eine integrierte anpassen und sie auf Kanban und Toolbar (*separat*) anwenden.
 
-## Standard-Locale
+## Standardmäßige Sprachumgebung
 
-Standardmäßig verwendet die Oberfläche das **Englisch**-Locale:
+Die **englische** Sprachumgebung wird standardmäßig verwendet:
 
 ~~~jsx
 const en = {
-    kanban: { // Übersetzungen der Kanban-Beschriftungen
+    kanban: {
         Save: "Save",
-        Send: "Send",
         Close: "Close",
         Delete: "Delete",
         Name: "Name",
@@ -24,15 +23,26 @@ const en = {
         Type: "Type",
         "Start date": "Start date",
         "End date": "End date",
-
+        Files: "Files",
+        B: "B",
+        KB: "KB",
+        MB: "MB",
+        GB: "GB",
+        TB: "TB",
+        PB: "PB",
+        EB: "EB",
+        "Make cover": "Make cover",
+        "Remove cover": "Remove cover",
+        Comments: "Comments",
+        Links: "Links",
         Result: "Result",
         "No results": "No results",
         Search: "Search",
         "Search in": "Search in",
         "Add new row": "Add new row",
         "Add new column": "Add new column",
-        "Add new card": "Add new card",
         "Add new card...": "Add new card...",
+        "Add new card": "Add new card",
         "Edit card": "Edit card",
         Edit: "Edit",
 
@@ -57,27 +67,28 @@ const en = {
         "Description (a-z)": "Description (a-z)",
         "Description (z-a)": "Description (z-a)",
 
+        "Add link": "Add link",
         Duplicate: "Duplicate",
         "Duplicate of": "Duplicate of",
-
         "Relates to": "Relates to",
         "Depends on": "Depends on",
         "Is required for": "Is required for",
         Duplicates: "Duplicates",
         "Is duplicated by": "Is duplicated by",
-        "Parent for": "Parent for",
-        "SubTask of": "SubTask of",
+        "Is parent for": "Is parent for",
+        "Is subtask of": "Is subtask of",
 
         Cancel: "Cancel",
         "Link task": "Link task",
         "Select a relation": "Select a relation",
         "Select a task": "Select a task",
 
-        "No comments yet": "No comments yet",
+        Send: "Send",
         "Would you like to delete this comment?":
             "Would you like to delete this comment?",
+        "No comments yet": "No comments yet",
         "Would you like to delete this card?":
-            "Would you like to delete this card?"
+            "Would you like to delete this card?",
     },
     calendar: { // Übersetzungen und Einstellungen des Kalenders
         monthFull: [
@@ -117,30 +128,46 @@ const en = {
 };
 ~~~
 
-## Benutzerdefiniertes Locale
+## Integrierte Sprachumgebungen
 
-Wenn Sie ein eigenes Locale verwenden möchten, gehen Sie wie folgt vor:
+Kanban stellt die folgenden Sprachumgebungen bereit:
 
-- Erstellen Sie ein benutzerdefiniertes Locale (oder passen Sie das Standard-Locale an) und tragen Sie Übersetzungen für alle gewünschten Beschriftungen ein (jede Sprache ist möglich).
+**"en"** – Englisch  
+**"de"** – Deutsch  
+**"cn"** – Chinesisch  
+**"es"** – Spanisch  
+**"fr"** – Französisch  
+**"it"** – Italienisch  
+**"jp"** – Japanisch  
+**"pt"** – Portugiesisch  
+**"ru"** – Russisch  
 
-- Setzen Sie das neue Locale in **Kanban** über die [`locale`](/api/config/js_kanban_locale_config.md)-Eigenschaft oder die [`setLocale()`](/api/methods/js_kanban_setlocale_method.md)-Methode.
-- Setzen Sie das neue Locale in der **Toolbar** über die [`locale`](/api/config/toolbar_locale_config.md)-Eigenschaft oder die [`setLocale()`](/api/methods/toolbar_setlocale_method.md)-Methode.
+Sie können eine integrierte Sprachumgebung wie folgt exportieren und anwenden:
 
-:::info
-Seit v1.2 exportiert Kanban keine eingebauten Locales mehr. Falls Sie weitere Sprachen benötigen, besuchen Sie die [**github page**](https://github.com/web-widgets/wx-kanban-locales). Sie können das gewünschte Locale auch per *npm* installieren und wie folgt verwenden:
-~~~js
-import { de } from "@xbs/wx-kanban-locales"
-import { de as coreDe } from "@xbs/wx-core-locales"
-
-new kanban.Kanban({
-    // weitere Eigenschaften
-    locale: { ...coreDe, ...de },
+```jsx {5}
+// Kanban erstellen
+const board = new kanban.Kanban("#root", {
+    columns,
+    cards,
+    locale: kanban.locales["cn"] // die integrierte "cn"-Sprachumgebung wird initial gesetzt
+    // weitere Parameter
 });
-~~~
-:::
+
+// die integrierte "de"-Sprachumgebung auf Kanban anwenden
+board.setLocale(kanban.locales["de"]);
+```
+
+## Eigene Sprachumgebung
+
+Um eine eigene Sprachumgebung zu verwenden, müssen Sie:
+
+- eine eigene Sprachumgebung erstellen (oder die Standardumgebung anpassen) und Übersetzungen für alle Textbeschriftungen bereitstellen (es kann jede gewünschte Sprache sein)
+
+- die neue Sprachumgebung für **Kanban** über die [`locale`](api/config/js_kanban_locale_config.md)-Eigenschaft oder mit der [`setLocale()`](api/methods/js_kanban_setlocale_method.md)-Methode anwenden
+- die neue Sprachumgebung für **Toolbar** über die [`locale`](api/config/toolbar_locale_config.md)-Eigenschaft oder mit der [`setLocale()`](api/methods/toolbar_setlocale_method.md)-Methode anwenden
 
 ## Beispiel
 
-Der folgende Codeausschnitt zeigt, wie Sie zwischen verschiedenen Locales wechseln können:
+Im folgenden Beispiel sehen Sie, wie Sie zwischen mehreren Sprachumgebungen wechseln können:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

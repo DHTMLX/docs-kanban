@@ -1,14 +1,14 @@
 ---
 sidebar_label: addRow()
-title: addRow-Methode
-description: Sie können mehr über die addRow-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Code-Beispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Methode addRow
+description: Sie können die Methode addRow in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # addRow()
 
 ### Beschreibung
 
-@short: Fügt dem Kanban-Board eine neue Zeile hinzu
+@short: Fügt eine neue Zeile in das Kanban-Board ein
 
 ### Verwendung
 
@@ -22,12 +22,12 @@ addRow({
 
 ### Parameter
 
-- `id` - (optional) die Kennung der neuen Zeile
-- `row` - (optional) das Datenobjekt, das die neue Zeile repräsentiert
-- `before` - (optional) die ID der Zeile, vor der die neue Zeile eingefügt werden soll
+- `id` - (optional) die ID der neuen Zeile
+- `row` - (optional) das Datenobjekt der neuen Zeile
+- `before` - (optional) die ID der Zeile, vor der die neue Zeile eingefügt wird
 
 :::info
-Eine vollständige Liste der **row**-Parameter finden Sie [**hier**](/api/config/js_kanban_rows_config.md)
+Die vollständige Liste der **row**-Parameter finden Sie [**hier**](api/config/js_kanban_rows_config.md)
 :::
 
 ### Beispiel
@@ -43,11 +43,11 @@ const board = new kanban.Kanban("#root", {
 board.addRow({
     id: "extra_row",
     row: {
-        label: "Extra row",
+        label: "Extra Zeile",
         collapsed: false
     },
     before: "row_2"
 });
 ~~~
 
-**Änderungsprotokoll**: Die Parameter **id**, **row** und **before** wurden in Version 1.1 eingeführt
+**Änderungsprotokoll**: Die Parameter **id**, **row** und **before** wurden in Version v1.1 hinzugefügt

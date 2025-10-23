@@ -1,14 +1,14 @@
 ---
 sidebar_label: set-search
-title: set-search Ereignis
-description: Entdecken Sie das set-search Ereignis in der DHTMLX JavaScript Kanban Bibliothek Dokumentation. Sehen Sie sich Entwickleranleitungen an, erkunden Sie API-Referenzen, testen Sie Codebeispiele und Live-Demos und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+title: set-search Event
+description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das set-search Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # set-search
 
 ### Beschreibung
 
-@short: Wird ausgelöst, wenn eine Kartensuche ausgeführt wird
+@short: Wird ausgelöst, wenn nach Karten gesucht wird
 
 ### Verwendung
 
@@ -21,13 +21,13 @@ description: Entdecken Sie das set-search Ereignis in der DHTMLX JavaScript Kanb
 
 ### Parameter
 
-Der Callback für das **set-search** Ereignis erhält ein Objekt mit folgenden Parametern:
+Der Callback des **set-search** Events kann ein Objekt mit den folgenden Parametern erhalten:
 
-- `value` - (erforderlich) der Suchbegriff
+- `value` - (erforderlich) der Suchwert
 - `by` - (optional) das Kartenfeld, nach dem gesucht wird
 
 :::info
-Um interne Ereignisse zu verarbeiten, können Sie die [**Event Bus Methoden**](/api/overview/main_overview.md/#event-bus-methoden) verwenden.
+Für die Handhabung der internen Events können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -38,7 +38,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "set-search" Ereignis hören
+// Anmeldung auf das "set-search" Event
 board.api.on("set-search", (obj) => {
     console.log(obj.value);
 });

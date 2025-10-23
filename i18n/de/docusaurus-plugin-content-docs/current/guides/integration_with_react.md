@@ -1,24 +1,24 @@
 ---
 sidebar_label: Integration mit React
 title: Integration mit React
-description: In der Dokumentation zur DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Integration mit React. Durchstöbern Sie Entwickleranleitungen und die API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Integration mit React. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # Integration mit React
 
 :::tip
-Es ist hilfreich, die Grundlagen von [**React**](https://react.dev) zu kennen, bevor Sie mit dieser Dokumentation beginnen. Falls Sie Ihr Wissen zu React auffrischen möchten, schauen Sie in die [**React-Dokumentation**](https://reactjs.org/docs/getting-started.html).
+Sie sollten mit den grundlegenden Konzepten und Mustern von [**React**](https://react.dev) vertraut sein, bevor Sie diese Dokumentation lesen. Um Ihr Wissen aufzufrischen, besuchen Sie bitte die [**React Dokumentation**](https://react.dev/learn).
 :::
 
-DHTMLX Kanban funktioniert gut mit **React**. Es gibt Codebeispiele, die zeigen, wie Sie DHTMLX Kanban in React-Projekten verwenden können. Für weitere Details werfen Sie einen Blick auf das [**Beispiel auf GitHub**](https://github.com/DHTMLX/react-kanban-demo).
+DHTMLX Kanban ist mit **React** kompatibel. Wir haben Codebeispiele vorbereitet, wie Sie DHTMLX Kanban mit **React** verwenden können. Weitere Informationen finden Sie im entsprechenden [**Beispiel auf GitHub**](https://github.com/DHTMLX/react-kanban-demo).
 
-## Projekt erstellen
+## Erstellen eines Projekts
 
 :::info
-Bevor Sie ein neues Projekt starten, stellen Sie sicher, dass [**Vite**](https://vite.dev/) (optional) und [**Node.js**](https://nodejs.org/en/) installiert sind.
+Bevor Sie mit der Erstellung eines neuen Projekts beginnen, installieren Sie [**Vite**](https://vite.dev/) (optional) und [**Node.js**](https://nodejs.org/en/).
 :::
 
-Sie können mit einem Standard-**React**-Projekt starten oder eines mit **React und Vite** einrichten. Für diese Anleitung heißt das Projekt **my-react-kanban-app**:
+Sie können ein grundlegendes **React**-Projekt erstellen oder **React mit Vite** verwenden. Nennen wir das Projekt **my-react-kanban-app**:
 
 ~~~json
 npx create-react-app my-react-kanban-app
@@ -26,67 +26,67 @@ npx create-react-app my-react-kanban-app
 
 ### Installation der Abhängigkeiten
 
-Wechseln Sie in das Verzeichnis der App:
+Wechseln Sie in das neu erstellte App-Verzeichnis:
 
 ~~~json
 cd my-react-kanban-app
 ~~~
 
-Fügen Sie die Abhängigkeiten hinzu und starten Sie den Entwicklungsserver. Sie können Ihren bevorzugten Paketmanager verwenden:
+Installieren Sie die Abhängigkeiten und starten Sie den Entwicklungsserver. Verwenden Sie dazu einen Paketmanager:
 
-- Mit [**yarn**](https://yarnpkg.com/):
+- Wenn Sie [**yarn**](https://yarnpkg.com/) verwenden, führen Sie folgende Befehle aus:
 
 ~~~json
 yarn
 yarn start
 ~~~
 
-- Mit [**npm**](https://www.npmjs.com/):
+- Wenn Sie [**npm**](https://www.npmjs.com/) verwenden, führen Sie folgende Befehle aus:
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-Die App ist dann lokal verfügbar, üblicherweise unter `http://localhost:3000`.
+Die App sollte nun auf einem lokalen Server laufen (zum Beispiel `http://localhost:3000`).
 
 ## Kanban erstellen
 
-Als nächstes benötigen Sie den Quellcode von DHTMLX Kanban. Stoppen Sie zunächst die App und installieren Sie das Kanban-Paket.
+Nun sollten Sie den Quellcode von DHTMLX Kanban beziehen. Beenden Sie zunächst die App und installieren Sie das Kanban-Paket.
 
 ### Schritt 1. Paketinstallation
 
-Laden Sie das [**Test-Kanban-Paket**](/how_to_start/#kanban-mit-npm-oder-yarn-installieren) herunter und folgen Sie den Anweisungen in der README-Datei. Beachten Sie, dass die Testversion für 30 Tage gültig ist.
+Laden Sie das [**Test-Kanban-Paket**](/how_to_start/#installing-kanban-via-npm-or-yarn) herunter und befolgen Sie die Schritte in der README-Datei. Beachten Sie, dass die Testversion von Kanban nur 30 Tage verfügbar ist.
 
 ### Schritt 2. Komponentenerstellung
 
-Erstellen Sie eine neue React-Komponente, um das Kanban-Board in Ihrer App hinzuzufügen. Legen Sie eine Datei namens ***Kanban.jsx*** im Verzeichnis ***src/*** an.
+Jetzt müssen Sie eine React-Komponente erstellen, um ein Kanban zum Projekt hinzuzufügen. Erstellen Sie eine neue Datei im Verzeichnis ***src/*** und nennen Sie sie ***Kanban.jsx***.
 
 #### Importieren der Quelldateien
 
-Öffnen Sie ***Kanban.jsx*** und importieren Sie die Kanban-Quelldateien. Beachten Sie dabei Folgendes:
+Öffnen Sie die Datei ***Kanban.jsx*** und importieren Sie die Kanban-Quelldateien. Beachten Sie dabei:
 
-- Für die lokal installierte PRO-Version importieren Sie wie folgt:
+- Wenn Sie die PRO-Version verwenden und das Kanban-Paket aus einem lokalen Ordner installieren, sehen die Importpfade so aus:
 
 ~~~jsx title="Kanban.jsx"
 import { Kanban, Toolbar } from 'dhx-kanban-package';
 import 'dhx-kanban-package/dist/kanban.css';
 ~~~
 
-Je nach Paket kann die CSS-Datei minifiziert sein. In diesem Fall verwenden Sie ***kanban.min.css***.
+Beachten Sie, dass je nach verwendetem Paket die Quelldateien minifiziert sein können. In diesem Fall stellen Sie sicher, dass Sie die CSS-Datei als ***kanban.min.css*** importieren.
 
-- Für die Testversion nutzen Sie diese Importpfade:
+- Wenn Sie die Testversion von Kanban verwenden, geben Sie folgende Pfade an:
 
 ~~~jsx title="Kanban.jsx"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
 import "@dhx/trial-kanban/dist/kanban.css";
 ~~~
 
-Diese Anleitung zeigt die Arbeit mit der **Testversion**.
+In diesem Tutorial sehen Sie, wie Sie die **Testversion** von Kanban konfigurieren.
 
 #### Container setzen und Kanban mit Toolbar hinzufügen
 
-Um Kanban zusammen mit der Toolbar auf Ihrer Seite anzuzeigen, richten Sie Container für beide ein und initialisieren Sie sie mit ihren jeweiligen Konstruktoren:
+Um Kanban mit Toolbar auf der Seite anzuzeigen, müssen Sie Container für Kanban und Toolbar anlegen und diese Komponenten mit den entsprechenden Konstruktoren initialisieren:
 
 ~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -103,7 +103,7 @@ export default function KanbanComponent(props) {
 
         // Toolbar-Komponente initialisieren
         const toolbar = new Toolbar(toolbar_container.current, {
-            api: kanban.api, // Kanban-interne API übergeben
+            api: kanban.api, // Kanban-internes API bereitstellen
             // weitere Konfigurationseigenschaften
         });
 
@@ -122,10 +122,10 @@ export default function KanbanComponent(props) {
 
 #### Stile hinzufügen
 
-Damit Kanban korrekt angezeigt wird, fügen Sie diese grundlegenden Stile in Ihre Haupt-CSS-Datei ein:
+Damit Kanban korrekt angezeigt wird, müssen Sie wichtige Stile für Kanban und seinen Container in der Haupt-CSS-Datei des Projekts festlegen:
 
 ~~~css title="index.css"
-/* Stile für die Ausgangsseite */
+/* Stile für die Startseite festlegen */
 html,
 body,
 #root {
@@ -148,7 +148,7 @@ body,
 
 #### Daten laden
 
-Um Daten im Kanban anzuzeigen, benötigen Sie einen Datensatz. Erstellen Sie eine neue Datei namens ***data.js*** im Verzeichnis ***src/*** und fügen Sie beispielsweise folgendes hinzu:
+Um Daten in das Kanban zu laden, müssen Sie einen Datensatz bereitstellen. Sie können die Datei ***data.js*** im Verzeichnis ***src/*** anlegen und dort einige Daten hinzufügen:
 
 ~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
@@ -202,7 +202,7 @@ export function getData() {
 }
 ~~~
 
-Nun importieren Sie in ***App.js*** die Daten und übergeben sie als **props** an Ihre `<Kanban/>`-Komponente:
+Öffnen Sie dann die Datei ***App.js*** und importieren Sie die Daten. Danach können Sie die Daten per **props** an die neu erstellte `<Kanban/>`-Komponente übergeben:
 
 ~~~jsx {2,5-6} title="App.js"
 import Kanban from "./Kanban";
@@ -216,7 +216,7 @@ function App() {
 export default App;
 ~~~
 
-Verwenden Sie in ***Kanban.jsx*** die Props, um Kanban zu konfigurieren:
+Öffnen Sie die Datei ***Kanban.jsx*** und wenden Sie die übergebenen **props** auf das Kanban-Konfigurationsobjekt an:
 
 ~~~jsx {5,11-13} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-Falls Sie Daten mithilfe der [`parse()`](/api/methods/js_kanban_parse_method/)-Methode innerhalb von `useEffect()` laden möchten, können Sie das wie folgt machen:
+Sie können auch die [`parse()`](/api/methods/js_kanban_parse_method/)-Methode innerhalb der `useEffect()`-Methode von React verwenden, um Daten in Kanban zu laden:
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -298,15 +298,15 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-Mit `parse(data)` können Sie Kanban-Daten neu laden, wann immer sich etwas ändert.
+Die Methode `parse(data)` ermöglicht das Neuladen der Daten bei jeder Änderung.
 
-Zu diesem Zeitpunkt ist die Kanban-Komponente eingerichtet. Beim Rendern wird sie mit Ihren Daten initialisiert und Sie können die Konfiguration nach Bedarf erweitern. Weitere Einstellungen finden Sie in den [Kanban API-Dokumenten](/api/overview/properties_overview/).
+Nun ist die Kanban-Komponente einsatzbereit. Sobald das Element zur Seite hinzugefügt wird, wird Kanban mit Daten initialisiert. Sie können auch weitere Konfigurationseinstellungen vornehmen. Besuchen Sie unsere [Kanban API-Dokumentation](/api/overview/properties_overview/), um die vollständige Liste der verfügbaren Eigenschaften zu sehen.
 
 #### Ereignisse behandeln
 
-Wenn Nutzer mit Kanban interagieren, werden verschiedene Ereignisse ausgelöst. Diese Events helfen Ihnen, auf Nutzeraktionen zu reagieren und eigenen Code auszuführen. Die [vollständige Liste aller Events](/api/overview/events_overview/) finden Sie in der Dokumentation.
+Wenn ein Benutzer eine Aktion im Kanban ausführt, wird ein Ereignis ausgelöst. Sie können diese Ereignisse nutzen, um die Aktion zu erkennen und den gewünschten Code auszuführen. Sehen Sie sich die [vollständige Liste der Ereignisse](/api/overview/events_overview/) an.
 
-So richten Sie einen einfachen Event-Handler in ***Kanban.jsx*** ein:
+Öffnen Sie ***Kanban.jsx*** und ergänzen Sie die `useEffect()`-Methode wie folgt:
 
 ~~~jsx {5-7} title="Kanban.jsx"
 // ...
@@ -324,8 +324,14 @@ useEffect(() => {
 // ...
 ~~~
 
-Starten Sie nun einfach die App und Sie sehen das Kanban-Board mit Ihren Daten.
+Danach können Sie die App starten, um Kanban mit Daten auf einer Seite zu sehen.
 
-![Kanban-Initialisierung](/assets/trial_kanban.png)
+import trial from '@site/static/img/trial_kanban.png';
 
-Mit dieser Einrichtung läuft DHTMLX Kanban in React. Sie können den Code nach Bedarf für Ihren Anwendungsfall anpassen. Ein fortgeschritteneres Beispiel finden Sie auf [**GitHub**](https://github.com/DHTMLX/react-kanban-demo).
+<img
+    src={trial}
+    alt="Kanban mit React"
+    className="img_border"
+/>
+
+Jetzt wissen Sie, wie Sie DHTMLX Kanban mit React integrieren können. Sie können den Code nach Ihren spezifischen Anforderungen anpassen. Das endgültige, erweiterte Beispiel finden Sie auf [**GitHub**](https://github.com/DHTMLX/react-kanban-demo).

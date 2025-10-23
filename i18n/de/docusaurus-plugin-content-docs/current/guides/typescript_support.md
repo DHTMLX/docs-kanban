@@ -1,19 +1,21 @@
 ---
 sidebar_label: TypeScript-Unterstützung
 title: TypeScript-Unterstützung
-description: In der Dokumentation erfahren Sie, wie Sie TypeScript mit der DHTMLX JavaScript Kanban-Bibliothek verwenden. Stöbern Sie in Entwicklerhandbüchern und der API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation erfahren Sie, wie Sie TypeScript mit der DHTMLX JavaScript Kanban-Bibliothek verwenden. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # TypeScript-Unterstützung
 
-Ab Version 1.1 wird DHTMLX Kanban mit TypeScript-Definitionen ausgeliefert, sodass es sofort einsatzbereit für TypeScript ist.
+Ab Version v1.1 bietet die DHTMLX Kanban-Bibliothek die Möglichkeit, TypeScript-Definitionen zu verwenden. Die integrierte Unterstützung für TypeScript funktioniert direkt nach der Installation.
 
-:::note 
-Probieren Sie alles gerne im <a href="https://snippet.dhtmlx.com/2blo6hx8?tag=kanban" target="_blank">Snippet Tool</a> aus.
+:::note
+Sie können die Funktionalität direkt in unserem <a href="https://snippet.dhtmlx.com/2blo6hx8?tag=kanban" target="_blank">Snippet Tool</a> ausprobieren.
 :::
 
-## Vorteile bei der Verwendung von TypeScript
+## Vorteile der Verwendung von TypeScript
 
-Die Nutzung von DHTMLX Kanban mit TypeScript bietet einige praktische Vorteile.
+Warum sollten Sie DHTMLX Kanban mit TypeScript verwenden?
 
-TypeScript sorgt für einen reibungsloseren und zuverlässigeren Entwicklungsprozess. Dank Typüberprüfung und Autovervollständigung lassen sich Fehler viel früher erkennen. Außerdem liefert TypeScript beim Arbeiten mit der DHTMLX Kanban API klare Hinweise darauf, welche Datentypen verwendet werden sollen.
+Der Hauptvorteil von TypeScript besteht darin, dass es Ihnen ermöglicht, die Effizienz des Entwicklungsprozesses deutlich zu steigern.
+
+Die Art und Weise, wie eine Anwendung entwickelt wird, wird robuster, da die Überprüfung der Typen zusammen mit der Autovervollständigung hilft, potenzielle Fehler zu vermeiden. Außerdem liefert TypeScript Informationen darüber, welche Datentypen Sie bei der Arbeit mit der API der DHTMLX Kanban-Bibliothek verwenden sollten.

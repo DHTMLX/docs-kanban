@@ -1,17 +1,17 @@
 ---
 sidebar_label: locale
 title: locale-Konfiguration
-description: Erkunden Sie die locale-Konfiguration in der DHTMLX JavaScript Kanban Bibliothek Dokumentation. Sehen Sie Entwickleranleitungen, API-Referenzen, Codebeispiele, Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die locale-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # locale
 
 ### Beschreibung
 
-@short: Optional. Ein Objekt, das eine benutzerdefinierte Locale für Kanban definiert.
+@short: Optional. Ein Objekt für eine benutzerdefinierte Kanban-Lokalisierung
 
 :::info
-Das **locale**-Objekt sollte alle Kanban- und Toolbar-Bezeichnungen sowie deren übersetzte Versionen enthalten.
+Das **locale**-Objekt muss alle Bezeichnungen von Kanban und der Toolbar mit den entsprechenden Übersetzungen enthalten.
 :::
 
 ### Verwendung
@@ -22,10 +22,10 @@ locale?: object;
 
 ### Standardkonfiguration
 
-Kanban verwendet standardmäßig die [**englische**](/guides/localization/#standard-locale) Locale. Sie können bei Bedarf auch eine benutzerdefinierte Locale angeben.
+Standardmäßig verwendet Kanban die [**englische**](guides/localization.md#default-locale) locale. Sie können diese auch auf eine benutzerdefinierte locale einstellen.
 
 :::tip
-Um die Locale zur Laufzeit zu wechseln, steht in Kanban die Methode [**setLocale()**](../../methods/js_kanban_setlocale_method) zur Verfügung.
+Um die aktuelle locale dynamisch zu ändern, können Sie die [**setLocale()**](api/methods/js_kanban_setlocale_method.md)-Methode von Kanban verwenden.
 :::
 
 ### Beispiel
@@ -35,11 +35,11 @@ Um die Locale zur Laufzeit zu wechseln, steht in Kanban die Methode [**setLocale
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
-    locale: zh // die Locale "zh" wird anfänglich angewendet
+    locale: kanban.locales["cn"] // die "cn"-locale wird initial gesetzt
     // weitere Parameter
 });
 ~~~
 
-**Verwandte Artikel:** [Lokalisierung](/guides/localization)
+**Verwandte Artikel:** [Lokalisierung](guides/localization.md)
 
-**Verwandte Beispiel:** [Kanban. Lokalisierung](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Lokalisierung](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

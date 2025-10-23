@@ -1,14 +1,14 @@
 ---
 sidebar_label: set-sort
 title: set-sort Ereignis
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das set-sort Ereignis erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das set-sort Ereignis erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # set-sort
 
 ### Beschreibung
 
-@short: Wird ausgelöst, sobald Karten sortiert werden.
+@short: Wird ausgelöst, wenn Karten sortiert werden
 
 ### Verwendung
 
@@ -25,15 +25,15 @@ description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek meh
 
 ### Parameter
 
-Der Callback für das **set-sort** Ereignis kann entweder *null* oder ein Objekt mit folgenden Eigenschaften erhalten:
+Der Callback des **set-sort** Ereignisses kann den Wert *null* oder ein Objekt mit den folgenden Parametern annehmen:
 
-- `by` - (optional) gibt das Kartenfeld an, das für die Sortierung verwendet wird (*string* oder *function*)
-- `dir` - (optional) gibt die Sortierrichtung an, entweder *"asc"* oder *"desc"*
-- `preserve` - (optional) bestimmt, ob der aktuelle Sortierstatus beibehalten werden soll
-- `columnId` - (optional) identifiziert, welche Spalte sortiert wird
+- `by` - (optional) das Kartenfeld für die Sortierung (*string* oder *function*)
+- `dir` - (optional) die Sortierreihenfolge. Mögliche Werte sind *"asc"* und *"desc"*
+- `preserve` - (optional) aktiviert/deaktiviert das Beibehalten des Sortierzustands
+- `columnId` - (optional) die ID der zu sortierenden Spalte
 
 :::info
-Um mit internen Events zu arbeiten, siehe die [**Event Bus methods**](/api/overview/main_overview.md/#event-bus-methoden)
+Zur Behandlung der internen Ereignisse können Sie die [**Event Bus Methoden**](api/overview/main_overview.md/#event-bus-methods) verwenden
 :::
 
 ### Beispiel
@@ -44,10 +44,10 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// auf das "set-sort" Ereignis hören
+// Anmeldung für das "set-sort" Ereignis
 board.api.on("set-sort", (obj) => {
     console.log(obj);
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Ereignis wurde in Version v1.2 eingeführt
+**Änderungsprotokoll:** Das Ereignis wurde in Version v1.2 hinzugefügt

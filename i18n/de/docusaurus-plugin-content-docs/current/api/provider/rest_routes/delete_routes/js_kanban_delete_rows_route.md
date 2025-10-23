@@ -1,33 +1,33 @@
 ---
 sidebar_label: DELETE /rows
 title: DELETE /rows
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route DELETE /rows. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, testen Sie Codebeispiele und Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können mehr über die DELETE /rows REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # DELETE `/rows`
 
 ### Beschreibung
 
-@short: Entfernt eine Zeile (Swimlane) aus den Daten.
+@short: Löscht Daten in einer Zeile (Swimlane)
 
-Diese Route verarbeitet eine **HTTP DELETE**-Anfrage, die an den Endpunkt `/rows/{id}` gesendet wird.
+Die Route verarbeitet die **HTTP DELETE**-Anfrage, die an den Pfad `/rows/{id}` gesendet wird.
 
 ### Pfadparameter
 
-Der folgende Parameter ist in der Anforderungs-URL enthalten:
+Der folgende Parameter wird in der Anforderungszeile übergeben:
 
 | Name       | Typ         | Beschreibung |
 | ---------- | ----------- | ------------ |
-| `id`       |  number     | *Erforderlich*. Die eindeutige Kennung der zu entfernenden Zeile. |
+| `id`       | number      | *Erforderlich*. Die ID der zu löschenden Zeile. |
 
 ### Payload
 
-Es muss kein Payload mit der Anfrage gesendet werden.
+Es ist kein Payload erforderlich.
 
 ### Antwort
 
-Es wird kein Inhalt zurückgegeben. Der HTTP-Statuscode zeigt das Ergebnis an: Ein Status von 200 bedeutet, dass die Löschung erfolgreich war, während 500 auf einen Fehler hinweist.
+Es werden keine Daten zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status == 200) oder fehlgeschlagen ist (response.status == 500).
 
 ---
 
-**Verwandte Artikel**: [Working with server](/guides/working_with_server.md)
+**Verwandte Artikel**: [Working with server](guides/working_with_server.md)

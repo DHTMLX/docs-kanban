@@ -1,14 +1,14 @@
 ---
 sidebar_label: spalten
 title: Spalten-Konfiguration
-description: Entdecken Sie die Spaltenkonfiguration in der DHTMLX JavaScript Kanban Bibliothek Dokumentation. Finden Sie Entwicklerhandbücher, API-Referenzen, Codebeispiele, Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die Spalten-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # Spalten
 
 ### Beschreibung
 
-@short: Optional. Ein Array von Objekten, die die Spaltendaten enthalten
+@short: Optional. Ein Array von Objekten, das die Spaltendaten enthält
 
 ### Verwendung
 
@@ -29,63 +29,63 @@ columns?: [
 
 ### Parameter
 
-Jede Spalte kann mit den folgenden Eigenschaften (Daten) konfiguriert werden:
+Für jede Spalte können Sie die folgenden Parameter (Daten) angeben:
 
-- `id` - (erforderlich) die eindeutige **ID** der Spalte. Diese wird verwendet, um die Spalte über die zugehörigen Methoden zu verwalten.
-- `label` - (optional) die Bezeichnung, die im Spaltenkopf angezeigt wird.
-- `collapsed` - (optional) gibt den Anfangszustand der Spalte an. Wenn ***true***, startet die Spalte eingeklappt. Der Standardwert ist ***false*** (ausgeklappt).
-- `limit` - (optional) kann zwei Typen haben:
-    - `number` - legt eine maximale Anzahl von Karten fest, die in der Spalte erlaubt sind.
-    - `object` - definiert Kartenlimits pro Zeile (Swimlane) anhand ihrer IDs.
-- `strictLimit` - (optional) aktiviert die strikte Limitierung. Wenn ***true***, können Benutzer nicht mehr Karten hinzufügen als im **limit**-Parameter angegeben. Standard ist ***false***.
-- `css` - (optional) wendet benutzerdefinierte CSS-Stile auf die einzelne Spalte an.
-- `overlay` - (optional) fügt der Spalte eine Überlagerungsebene hinzu. Dies ist nützlich, um eine Vorlage zu definieren, die die Spalte überdeckt, zum Beispiel:
+- `id` - (erforderlich) eine Spalten-**ID**. Sie wird zur Verwaltung der Spalte über die entsprechenden Methoden verwendet
+- `label` - (optional) eine Spaltenbeschriftung. Sie wird im Spaltenbereich angezeigt
+- `collapsed` - (optional) der aktuelle Zustand der Spalte. Wenn ***true***, ist die Spalte anfangs eingeklappt. Standardwert ist ***false*** (erweiterter Zustand)
+- `limit` - (optional) dieser Parameter kann einen von zwei Werttypen annehmen:
+    - `number` - eine Begrenzung der Kartenanzahl in der aktuellen Spalte
+    - `object` - ein Objekt mit Begrenzungen der Kartenanzahl für jede Zeile (Swimlane) anhand ihrer ID
+- `strictLimit` - (optional) ein strenger Limit-Modus. Wenn ***true***, kann der Benutzer keine neuen Karten über die durch den **limit**-Parameter angegebene Anzahl hinaus erstellen. Standardwert ist ***false***
+- `css` - (optional) definiert CSS-Stile für eine einzelne Spalte
+- `overlay` - (optional) definiert eine Überlagerungsschicht für eine einzelne Spalte. Hier können Sie eine Vorlage angeben, die eine einzelne Spalte wie folgt überdeckt:
 
-~~~jsx {}
+    ~~~jsx {}
     overlay: template(`
         <div class="blockOverlay disable-drop">
-            <span class="disable-drop-header">Drop is not allowed</span>
-            <span class="disable-drop-description">Only testers can move cards to this
-                column</span>
+            <span class="disable-drop-header">Drop ist nicht erlaubt</span>
+            <span class="disable-drop-description">Nur Tester können Karten in diese
+                Spalte verschieben</span>
         </div>`)
-~~~
+    ~~~
 
 :::info
-Um Spaltendaten dynamisch zu aktualisieren, können Sie die [`parse()`](../../methods/js_kanban_parse_method) Methode verwenden.
+Wenn Sie neue Daten für Spalten dynamisch laden möchten, können Sie die [`parse()`](../../methods/js_kanban_parse_method) Methode verwenden!
 :::
 
 ### Beispiel
 
 ~~~jsx {1-31,34}
 const columns = [
-    {
-        label: "Backlog",
+    { 
+        label: "Backlog", 
         id: "backlog",
         collapsed: true,
         limit: 3,
         strictLimit: true,
-        css: "red"
+        css: "red" 
     },
-    {
-        label: "In progress",
+    { 
+        label: "In Bearbeitung", 
         id: "inprogress",
         collapsed: false,
         limit: {
-            // begrenzt die Anzahl der Karten für die Zeilen "Feature" und "Task" in der Spalte "In progress"
-            feature: 3,
+            // Begrenzung der Kartenzahl für die "Feature" und "Task" Zeilen der "In Bearbeitung" Spalte
+            feature: 3, 
             task: 2
         },
         strictLimit: false
     },
-    {
-        label: "Done",
+    { 
+        label: "Erledigt", 
         id: "done",
         overlay: template(`
             <div class="blockOverlay disable-drop">
-                <span class="disable-drop-header">Drop is not allowed</span>
-                <span class="disable-drop-description">Only testers can move cards to this
-                    column</span>
-            </div>`)
+                <span class="disable-drop-header">Drop ist nicht erlaubt</span>
+                <span class="disable-drop-description">Nur Tester können Karten in diese
+                    Spalte verschieben</span>
+            </div>`) 
     }
 ];
 
@@ -97,13 +97,29 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungshistorie:** Die Eigenschaften **css** und **overlay** wurden in Version 1.4 eingeführt.
+### Benutzerdefinierte Gestaltung
+
+Um benutzerdefinierte Stile auf Spalten mit dem `css`-Parameter anzuwenden, fügen Sie CSS-Regeln für Ihre benutzerdefinierte Klasse hinzu.
+
+```css
+.wx-header .wx-column.red,
+.wx-column.red {
+    background: #FFA29C;
+}
+```
+
+Falls die Stile nicht angewendet werden, stellen Sie sicher, dass:
+
+- Ihr Selektor genügend Kontext enthält (z. B. Eltern- und interne DHTMLX-Klassen)
+- Falls die Eigenschaft durch einen Inline-Stil überschrieben wird, können Sie `!important` verwenden
+
+**Änderungsprotokoll:** Die Parameter **css** und **overlay** wurden in Version v1.4 hinzugefügt
 
 **Verwandte Artikel:**
-- [Arbeiten mit Daten](/guides/working_with_data)
-- [updateColumn()](/api/methods/js_kanban_updatecolumn_method.md)
+- [Arbeiten mit Daten](guides/working_with_data.md)
+- [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 
 **Verwandte Beispiele:**
 - [Kanban. Limits für Spalten und Swimlanes](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban)
-- [Kanban. Ändern der Spaltenfarbe über benutzerdefiniertes Menü](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
+- [Kanban. Farbänderung der Spalte über ein benutzerdefiniertes Menü](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
 - [Kanban. Drag & Drop für bestimmte Spalten deaktivieren](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

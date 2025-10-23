@@ -1,13 +1,13 @@
 ---
-sidebar_label: Statusmethoden
-title: Statusmethoden
-description: Hier ist eine kurze Übersicht der internen Statusmethoden, die im JavaScript Kanban innerhalb der DHTMLX JavaScript Kanban Bibliotheksdokumentation verfügbar sind. Sie können Entwicklerhandbücher und API-Referenzen erkunden, Codebeispiele und Live-Demos testen und eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunterladen.
+sidebar_label: State-Methoden
+title: State-Methoden
+description: Sie finden eine Übersicht der internen State-Methoden von JavaScript Kanban in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
-# Statusmethoden
+# State-Methoden
 
-| Name                                                     | Beschreibung                                               |
-| ---------------------------------------------------------| ---------------------------------------------------------- |
-| [api.getReactiveState()](../../internal/js_kanban_getreactivestate_method/)     | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
-| [api.getState()](../../internal/js_kanban_getstate_method/)             | @getshort(../internal/js_kanban_getstate_method.md)          |
-| [api.getStores()](../../internal/js_kanban_getstores_method/)            | @getshort(../internal/js_kanban_getstores_method.md)         |
+| Name                                                     | Beschreibung                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| [](../internal/js_kanban_getreactivestate_method.md)     | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
+| [](../internal/js_kanban_getstate_method.md)             | @getshort(../internal/js_kanban_getstate_method.md)          |
+| [](../internal/js_kanban_getstores_method.md)            | @getshort(../internal/js_kanban_getstores_method.md)         |

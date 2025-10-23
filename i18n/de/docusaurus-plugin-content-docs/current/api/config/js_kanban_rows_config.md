@@ -1,16 +1,16 @@
 ---
 sidebar_label: zeilen
-title: rows Konfiguration
-description: Erkunden Sie die rows-Konfiguration in der DHTMLX JavaScript Kanban Bibliotheksdokumentation. Sehen Sie sich Entwicklerleitfäden, API-Referenzen an, probieren Sie Codebeispiele und Live-Demos aus und erhalten Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban.
+title: Zeilen-Konfiguration
+description: Sie können mehr über die Zeilen-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
-# rows
+# zeilen
 
 ### Beschreibung
 
-@short: Optional. Ein Array von Objekten, das die Daten der Zeilen (Swimlanes) enthält.
+@short: Optional. Ein Array von Objekten, die die Daten der Zeilen (Swimlanes) enthalten.
 
-### Nutzung
+### Verwendung
 
 ~~~jsx {}
 rows?: [
@@ -24,20 +24,20 @@ rows?: [
 ~~~
 
 :::info
-Um Swimlanes einzurichten, geben Sie die entsprechenden Daten im **rows**-Array an. Sie können Swimlanes über die Benutzeroberfläche oder durch Verwendung der [zugehörigen API](/howtos/#arbeiten-mit-zeilen-swimlanes) einklappen/ausklappen, umbenennen, löschen und verschieben.
+Um Swimlanes zu erstellen, müssen Sie die entsprechenden Daten im Array der **rows**-Eigenschaft angeben. Sie können Swimlanes über die Benutzeroberfläche oder mit der [entsprechenden API](howtos.md#how-to-work-with-rows-swimlanes) einklappen/ausklappen, umbenennen, löschen und verschieben.
 :::
 
 ### Parameter
 
-Jede Zeile (Swimlane) kann die folgenden Parameter enthalten:
+Für jede Zeile (Swimlane) können Sie folgende Parameter (Daten) angeben:
 
-- `id` - (erforderlich) die Zeilen- (Swimlane-) **ID**, die zur Steuerung der Zeile über ihre Methoden verwendet wird
-- `label` - (optional) die Bezeichnung für die Zeile (Swimlane), die im Zeilenbereich angezeigt wird
-- `collapsed` - (optional) gibt an, ob die Zeile (Swimlane) zu Beginn eingeklappt ist. Wenn ***true***, ist sie initial eingeklappt. Der Standardwert ist ***false*** (ausgeklappt)
-- `css` - (optional) wendet CSS-Stile auf eine einzelne Zeile an
+- `id` - (erforderlich) eine Zeilen-(Swimlane-)ID. Sie wird zur Verwaltung der Zeile über die entsprechenden Methoden verwendet.
+- `label` - (optional) ein Bezeichner der Zeile (Swimlane). Er wird im Bereich der Zeile angezeigt.
+- `collapsed` - (optional) der aktuelle Zustand der Zeile (Swimlane). Ist der Wert ***true***, ist die Zeile initial eingeklappt. Der Standardwert ist ***false*** (ausgeklappter Zustand).
+- `css` - (optional) definiert CSS-Stile für eine einzelne Zeile.
 
 :::info
-Um neue Zeilen- (Swimlane-) Daten dynamisch zu laden, kann die [**parse()**](../../methods/js_kanban_parse_method) Methode verwendet werden.
+Wenn Sie neue Daten für Zeilen (Swimlanes) dynamisch laden möchten, können Sie die [**parse()**](api/methods/js_kanban_parse_method.md) Methode verwenden!
 :::
 
 ### Beispiel
@@ -51,15 +51,15 @@ const rows = [
 new kanban.Kanban("#root", {
     columns,
     cards,
-    rows, // Swimlane-Daten
+    rows, // Swimlanes-Daten
     // andere Parameter
 });
 ~~~
 
-**Änderungsprotokoll:** Der ***css*** Parameter wurde in Version 1.4 eingeführt
+**Änderungsprotokoll:** Der Parameter ***css*** wurde in Version 1.4 hinzugefügt.
 
 **Verwandte Artikel:**
-- [Arbeiten mit Daten](/guides/working_with_data)
-- [updateRow()](/api/methods/js_kanban_updaterow_method.md)
+- [Arbeiten mit Daten](guides/working_with_data.md)
+- [updateRow()](api/methods/js_kanban_updaterow_method.md)
 
-**Verwandtes Beispiel:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
+**Verwandte Beispiel:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

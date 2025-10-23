@@ -1,14 +1,14 @@
 ---
 sidebar_label: Arbeiten mit Daten
 title: Arbeiten mit Daten
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie, wie Sie mit Daten arbeiten. Durchstöbern Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie, wie Sie mit Daten arbeiten. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # Arbeiten mit Daten
 
 ## Initiales Laden von Daten
 
-Beim Einrichten von Kanban ist es möglich, Startdaten für [**columns**](/api/config/js_kanban_columns_config.md), [**cards**](/api/config/js_kanban_cards_config.md), [**rows**](/api/config/js_kanban_rows_config.md) und [**links**](/api/config/js_kanban_links_config.md) zu übergeben.
+Beim Initialisieren von Kanban können Sie die Anfangsdaten für [**Spalten**](api/config/js_kanban_columns_config.md), [**Karten**](api/config/js_kanban_cards_config.md), [**Zeilen**](api/config/js_kanban_rows_config.md) und [**Verknüpfungen**](api/config/js_kanban_links_config.md) bereitstellen.
 
 ~~~jsx {1,17,81,94,106-109}
 const columns = [ // Daten für Spalten
@@ -107,14 +107,14 @@ const rows = [ // Daten für Zeilen
 const links = [
     {
         id: "link_1",
-        masterId: 1,
-        slaveId: 2,
+        source: 1,
+        target: 2,
         relation: "relatesTo",
     },
     {...}
 ];
 
-// Initialisierung von Kanban mit den Startdaten für Spalten, Karten und Zeilen
+// Initialisierung von Kanban mit den Anfangsdaten für Spalten, Karten und Zeilen
 new kanban.Kanban("#root", {
     columns, 
     cards, 
@@ -125,7 +125,7 @@ new kanban.Kanban("#root", {
 
 ## Laden von Daten aus einer lokalen Quelle
 
-Um Daten für ***columns***, ***rows*** und ***cards*** aus einer lokalen Quelle einzubinden, steht die Methode [`parse()`](/api/methods/js_kanban_parse_method.md) zur Verfügung. Übergeben Sie einfach ein Objekt mit den benötigten Daten.
+Um Daten für ***columns***, ***rows***, ***cards*** und ***links*** aus einer lokalen Quelle zu laden, können Sie die Methode [`parse()`](api/methods/js_kanban_parse_method.md) verwenden. Sie nimmt ein Objekt mit den benötigten Daten als Parameter entgegen.
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});
@@ -136,66 +136,66 @@ board.parse({ columns, cards, rows });
 
 ## Kanban-Daten mit Gantt und Scheduler synchronisieren
 
-Hier sehen Sie ein Beispiel, wie Kanban-Daten mit anderen DHTMLX-Widgets wie [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) und [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/) synchronisiert werden können:
+In diesem Beispiel sehen Sie, wie Kanban-Daten mit anderen DHTMLX-Widgets, nämlich [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) und [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/), synchronisiert werden können:
 
 <iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 ## Kanban-Daten abrufen
 
-Es gibt verschiedene Methoden, um auf Kanban-Daten zuzugreifen:
+Um Kanban-Daten abzurufen, können Sie folgende Methoden verwenden:
 
-- [`getAreaCards()`](/api/methods/js_kanban_getareacards_method.md) - gibt ein Array mit Datenobjekten aller Karten in einer bestimmten Spalte (und Zeile) zurück
-- [`getCard()`](/api/methods/js_kanban_getcard_method.md) - gibt ein Datenobjekt einer Karte anhand ihrer ID zurück
-- [`serialize()`](/api/methods/js_kanban_serialize_method.md) - serialisiert Kanban-Daten in JSON
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) – gibt ein Array mit Datenobjekten aller Karten der angegebenen Spalte (und Zeile) zurück
+- [`getCard()`](api/methods/js_kanban_getcard_method.md) – gibt ein Datenobjekt einer Karte anhand der angegebenen ID zurück
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) – serialisiert Kanban-Daten zu JSON
 
 ## Kanban-Status abrufen
 
-Um auf den Status von Kanban zuzugreifen, sind diese Methoden hilfreich:
+Um den Status von Kanban abzurufen, können Sie folgende Methoden verwenden:
 
-- [`api.getReactiveState()`](/api/internal/js_kanban_getreactivestate_method.md) - gibt ein Objekt mit den reaktiven Eigenschaften aus *StateStore* zurück
-- [`api.getState()`](/api/internal/js_kanban_getstate_method.md) - ruft ein Objekt mit den aktuellen Eigenschaften aus *StateStore* ab
-- [`api.getStores()`](/api/internal/js_kanban_getstores_method.md) - liefert ein Objekt mit *StateStore* und *DataStore*
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) – gibt ein Objekt mit den reaktiven Eigenschaften des *StateStore* zurück
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) – gibt ein Objekt mit den aktuellen Eigenschaften des *StateStore* zurück
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) – gibt ein Objekt mit den *StateStore* und *DataStore* Objekten zurück
 
 ## Kanban-Daten exportieren
 
-Zum Exportieren von Kanban-Daten können Sie verwenden:
+Um Kanban-Daten zu exportieren, können Sie folgende Methode verwenden:
 
-- [`export.json()`](/api/internal/js_kanban_json_method.md) - exportiert Kanban-Daten als JSON-Datei
+- [`export.json()`](api/internal/js_kanban_json_method.md) – exportiert die Kanban-Daten in eine JSON-Datei
 
-## Neue Einträge hinzufügen
+## Neue Elemente hinzufügen
 
-Neue *cards*, *columns* und *rows* können mit diesen Methoden erstellt werden:
+Um neue *cards*, *columns* und *rows* hinzuzufügen, können Sie die folgenden Methoden verwenden:
 
-- [`addCard()`](/api/methods/js_kanban_addcard_method.md) - erstellt eine neue Karte in Kanban
-- [`addColumn()`](/api/methods/js_kanban_addcolumn_method.md) - erstellt eine neue Spalte in Kanban
-- [`addRow()`](/api/methods/js_kanban_addrow_method.md) - erstellt eine neue Zeile in Kanban
+- [`addCard()`](api/methods/js_kanban_addcard_method.md) – fügt eine neue Karte zu Kanban hinzu
+- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) – fügt eine neue Spalte zu Kanban hinzu
+- [`addRow()`](api/methods/js_kanban_addrow_method.md) – fügt eine neue Zeile zu Kanban hinzu
 
-## Einträge aktualisieren
+## Elemente aktualisieren
 
-Wenn Sie *cards*, *columns* oder *rows* aktualisieren möchten, stehen Ihnen diese Methoden zur Verfügung:
+Um *cards*, *columns* und *rows* zu aktualisieren, können Sie die folgenden Methoden verwenden:
 
-- [`updateCard()`](/api/methods/js_kanban_updatecard_method.md) - aktualisiert Kartendaten anhand der ID
-- [`updateColumn()`](/api/methods/js_kanban_updatecolumn_method.md) - aktualisiert Spaltendaten anhand der ID
-- [`updateRow()`](/api/methods/js_kanban_updaterow_method.md) - aktualisiert Zeilendaten anhand der ID
+- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) – aktualisiert die Kartendaten anhand der angegebenen ID
+- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) – aktualisiert die Spaltendaten anhand der angegebenen ID
+- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) – aktualisiert die Zeilendaten anhand der angegebenen ID
 
-## Einträge löschen
+## Elemente löschen
 
-*Cards*, *columns* und *rows* können mit den folgenden Methoden gelöscht werden:
+Um *cards*, *columns* und *rows* zu entfernen, können Sie die folgenden Methoden verwenden:
 
-- [`deleteCard()`](/api/methods/js_kanban_deletecard_method.md) - löscht eine Karte aus Kanban über die ID
-- [`deleteColumn()`](/api/methods/js_kanban_deletecolumn_method.md) - löscht eine Spalte aus Kanban über die ID
-- [`deleteRow()`](/api/methods/js_kanban_deleterow_method.md) - löscht eine Zeile aus Kanban über die ID
+- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) – entfernt eine Karte aus Kanban anhand der angegebenen ID
+- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) – entfernt eine Spalte aus Kanban anhand der angegebenen ID
+- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) – entfernt eine Zeile aus Kanban anhand der angegebenen ID
 
-## Einträge verschieben
+## Elemente verschieben
 
-Um die Position von *cards*, *columns* oder *rows* zu ändern, verwenden Sie:
+Um *cards*, *columns* und *rows* zu verschieben, können Sie die folgenden Methoden verwenden:
 
-- [`moveCard()`](/api/methods/js_kanban_movecard_method.md) - verschiebt eine Karte in eine bestimmte Spalte und Zeile
-- [`moveColumn()`](/api/methods/js_kanban_movecolumn_method.md) - verschiebt eine Spalte auf die gewünschte Position
-- [`moveRow()`](/api/methods/js_kanban_moverow_method.md) - verschiebt eine Zeile auf die gewünschte Position
+- [`moveCard()`](api/methods/js_kanban_movecard_method.md) – verschiebt eine Karte in die gewünschte Spalte und Zeile
+- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) – verschiebt eine Spalte an die gewünschte Position
+- [`moveRow()`](api/methods/js_kanban_moverow_method.md) – verschiebt eine Zeile an die gewünschte Position
 
 ## Beispiel
 
-Hier ein Beispiel, das zeigt, wie Sie mit der Kanban-API Daten verwalten können:
+In diesem Beispiel sehen Sie, wie Sie die Kanban-API für die Arbeit mit Daten verwenden können:
 
 <iframe src="https://snippet.dhtmlx.com/61crsls3?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

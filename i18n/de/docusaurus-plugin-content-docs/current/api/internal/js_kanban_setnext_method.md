@@ -1,14 +1,14 @@
 ---
 sidebar_label: api.setNext()
 title: setNext Methode
-description: Sie können mehr über die setNext Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können die setNext Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # api.setNext()
 
 ### Beschreibung
 
-@short: Ermöglicht das Einfügen einer bestimmten Aktion in die Event Bus-Sequenz.
+@short: Ermöglicht das Hinzufügen einer Aktion in die Reihenfolge des Event Bus
 
 ### Verwendung
 
@@ -18,7 +18,7 @@ api.setNext(next: any): void;
 
 ### Parameter
 
-- `next` - (erforderlich) die Aktion, die in die **Event Bus**-Sequenz eingefügt werden soll  
+- `next` - (erforderlich) die Aktion, die in die Reihenfolge des **Event Bus** aufgenommen werden soll  
 
 ### Beispiel
 
@@ -42,5 +42,5 @@ Promise.all([
 ~~~
 
 :::info
-Die Einbindung von **RestDataProvider** in die **Event Bus**-Sequenz ist notwendig, um Datenoperationen wie **Hinzufügen**, **Löschen** zu verarbeiten und die zugehörigen Anfragen an den Server zu senden.
+Sie müssen **RestDataProvider** in die Reihenfolge des **Event Bus** aufnehmen, um Operationen mit Daten (wie **Hinzufügen**, **Löschen** usw.) durchzuführen und die entsprechenden Anfragen an den Server zu senden.
 :::

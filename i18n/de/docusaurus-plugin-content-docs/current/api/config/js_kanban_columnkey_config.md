@@ -1,17 +1,17 @@
 ---
 sidebar_label: columnKey
-title: columnKey-Konfiguration
-description: Entdecken Sie die columnKey-Konfiguration in der DHTMLX JavaScript Kanban-Bibliothek. Finden Sie Entwicklerhandbücher, API-Referenzen, Codebeispiele, Live-Demos und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: columnKey Konfiguration
+description: Sie können mehr über die columnKey-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # columnKey
 
 ### Beschreibung
 
-@short: Optional. Gibt an, zu welcher Spalte eine Karte gehört.
+@short: Optional. Definiert die Zugehörigkeit der Karte zur Spalte
 
 :::info
-Um Karten bestimmten Spalten zuzuordnen, ist es notwendig, einen Schlüssel (**column** oder einen *benutzerdefinierten*) zu verwenden und diesen auf die entsprechende Spalten-**ID** im Kartendatenobjekt zu setzen. Die Eigenschaft **columnKey** sollte in der Konfiguration des Widgets auf diesen Schlüssel gesetzt werden.
+Um die Karten auf die Spalten zu verteilen, müssen Sie einen Schlüssel (**column** oder einen *benutzerdefinierten*) angeben und diesen im Kartendatenobjekt auf die **ID** der gewünschten Spalte setzen. Die Eigenschaft **columnKey** muss im Widget-Konfigurationsobjekt auf diesen Schlüssel gesetzt werden.
 :::
 
 ### Verwendung
@@ -23,7 +23,7 @@ columnKey?: string;
 ### Standardkonfiguration
 
 :::note
-Wenn Sie keinen benutzerdefinierten Spaltenschlüssel über die Eigenschaft **columnKey** angeben, verwendet das Widget standardmäßig den Schlüssel **"column"**! In diesem Fall sollte das Kartendatenobjekt den Schlüssel **column** mit der entsprechenden Spalten-**ID** enthalten.
+Sofern Sie keinen Spaltenschlüssel über die Eigenschaft **columnKey** registrieren, verwendet das Widget standardmäßig den Schlüssel **"column"**! In diesem Fall müssen Sie den Schlüssel **column** im Kartendatenobjekt auf die benötigte Spalten-**ID** setzen.
 
 ~~~jsx {3}
 const cards = [
