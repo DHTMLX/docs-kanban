@@ -29,8 +29,8 @@ send(
 | ----------- | ----------- | ------------ |
 | `url`       | string      | *Erforderlich*. Ein Pfad zum Server, an den die Anfrage gesendet wird. |
 | `method`    | string      | *Erforderlich*. Ein HTTP-Methodentyp (GET, POST, PUT, DELETE) |
-| `data`      | object      | *Optional*. Parameter, die an den Server gesendet werden. Standardmäßig werden die Parameter des ausgelösten Events gesendet. Sie können jedoch zusätzliche Parameter mit einem benutzerdefinierten Objekt hinzufügen. Siehe das [Beispiel](#examples) unten. |
-| `headers`   | object      | *Optional*. Ein Standard-Header ist der **Content-Type** Header mit dem Wert *application/json*. Weitere optionale Header können mit dem Parameter **customHeaders** hinzugefügt werden. Siehe das [Beispiel](#examples) unten. |
+| `data`      | object      | *Optional*. Parameter, die an den Server gesendet werden. Standardmäßig werden die Parameter des ausgelösten Events gesendet. Sie können jedoch zusätzliche Parameter mit einem benutzerdefinierten Objekt hinzufügen. Siehe das [Beispiel](#beispiele) unten. |
+| `headers`   | object      | *Optional*. Ein Standard-Header ist der **Content-Type** Header mit dem Wert *application/json*. Weitere optionale Header können mit dem Parameter **customHeaders** hinzugefügt werden. Siehe das [Beispiel](#beispiele) unten. |
 
 ### Antwort
 

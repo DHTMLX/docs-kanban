@@ -91,7 +91,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mit einem Karteneditor arbeiten.
 | ------------------------------------------------------------ | -------------------------------------------------------|
 | [Autosaving mode](api/config/js_kanban_editorautosave_config.md)| Lernen Sie, wie Sie den Auto-Speicher-Modus für den Editor aktivieren/deaktivieren|
 | [Configuring editor fields](guides/configuration.md#editor)| Lernen Sie, wie Sie Editorfelder konfigurieren             |
-| [Configuring the editor](guides/configuration.md#configuring-the-editor)| Lernen Sie, wie Sie den Editor konfigurieren         |
+| [Configuring the editor](guides/configuration.md#den-editor-konfigurieren)| Lernen Sie, wie Sie den Editor konfigurieren         |
 | [Updating editor settings](api/methods/js_kanban_setconfig_method.md)| Lernen Sie, wie Sie Editoreinstellungen aktualisieren      |
 
 ## Arbeiten mit Spalten

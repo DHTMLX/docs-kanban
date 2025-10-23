@@ -35,7 +35,7 @@ updateComment({
     - `cardId` - (optional) die ID der Karte, zu der der aktualisierte Kommentar hinzugefügt werden soll
     - `text` - (optional) der Text des aktualisierten Kommentars
     - `date` - (optional) das Datum des aktualisierten Kommentars
-    - `html` - (optional) das HTML-Markup des aktualisierten Kommentars. Aktivieren Sie die `html`-Eigenschaft der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) Konfiguration, um das HTML-Markup anstelle des Textes anzuzeigen
+    - `html` - (optional) das HTML-Markup des aktualisierten Kommentars. Aktivieren Sie die `html`-Eigenschaft der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameter-für-den-typ-comments) Konfiguration, um das HTML-Markup anstelle des Textes anzuzeigen
 
 ### Beispiel
 

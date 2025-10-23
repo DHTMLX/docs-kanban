@@ -56,7 +56,7 @@ Nun sollten Sie den Quellcode von DHTMLX Kanban beziehen. Beenden Sie zunächst 
 
 ### Schritt 1. Paketinstallation
 
-Laden Sie das [**Test-Kanban-Paket**](/how_to_start/#installing-kanban-via-npm-or-yarn) herunter und befolgen Sie die Schritte in der README-Datei. Beachten Sie, dass die Testversion von Kanban nur 30 Tage verfügbar ist.
+Laden Sie das [**Test-Kanban-Paket**](/how_to_start/#kanban-mit-npm-oder-yarn-installieren) herunter und befolgen Sie die Schritte in der README-Datei. Beachten Sie, dass die Testversion von Kanban nur 30 Tage verfügbar ist.
 
 ### Schritt 2. Komponentenerstellung
 

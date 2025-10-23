@@ -17,7 +17,7 @@ new kanban.Kanban("#root", {
 **Parameter**:
 
 - ein HTML-Container (die ID des HTML-Containers)
-- ein Objekt mit den Konfigurationsparametern ([hier prüfen](#kanban-properties))
+- ein Objekt mit den Konfigurationsparametern ([hier prüfen](#kanban-eigenschaften))
 
 ## Toolbar Konstruktor
 
@@ -30,7 +30,7 @@ new kanban.Toolbar("#toolbar", {
 **Parameter**:
 
 - ein HTML-Container (die ID des HTML-Containers)
-- ein Objekt mit den Konfigurationsparametern ([hier prüfen](#toolbar-properties))
+- ein Objekt mit den Konfigurationsparametern ([hier prüfen](#toolbar-eigenschaften))
 
 ## Kanban Methoden
 

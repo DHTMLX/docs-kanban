@@ -31,7 +31,7 @@ addComment({
 - `comment` - (erforderlich) das Konfigurationsobjekt des neuen Kommentars. Hier können Sie folgende Parameter angeben:
     - `text` - (optional) der Text des neuen Kommentars
     - `date` - (optional) das Datum des neuen Kommentars
-    - `html` - (optional) das HTML-Markup des neuen Kommentars. Aktivieren Sie die Eigenschaft `html` der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) Konfiguration, um das HTML-Markup anstelle von Text anzuzeigen
+    - `html` - (optional) das HTML-Markup des neuen Kommentars. Aktivieren Sie die Eigenschaft `html` der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameter-für-den-typ-comments) Konfiguration, um das HTML-Markup anstelle von Text anzuzeigen
 
 ### Beispiel
 

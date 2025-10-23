@@ -25,7 +25,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 ### Board
 
-Das **Board** ist der Hauptbestandteil von Kanban. Es besteht aus Karten, die auf Spalten und Zeilen (Swimlanes) verteilt sind. Sie können das Aussehen der Karten flexibel konfigurieren und eine eigene Vorlage anwenden. Weitere Informationen finden Sie im Abschnitt [Konfiguration](guides/configuration.md#cards).
+Das **Board** ist der Hauptbestandteil von Kanban. Es besteht aus Karten, die auf Spalten und Zeilen (Swimlanes) verteilt sind. Sie können das Aussehen der Karten flexibel konfigurieren und eine eigene Vorlage anwenden. Weitere Informationen finden Sie im Abschnitt [Konfiguration](guides/configuration.md#karten).
 
 Auf dem **Board**-Panel können Sie mit den ***Karten***, ***Spalten*** und ***Zeilen*** wie folgt arbeiten:
 

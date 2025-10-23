@@ -100,7 +100,7 @@ Als Parameter nehmen die Konstruktoren die IDs der HTML-Container, in denen Kanb
 Als Nächstes können Sie die gewünschten Konfigurationseigenschaften für die Initialisierung der Kanban-Komponente angeben.
 
 Um mit Kanban zu arbeiten, müssen Sie zunächst die Anfangsdaten für **cards** und **columns** (und *rows*) bereitstellen.
-Neben den Anfangsdaten können Sie das Aussehen der [cards](guides/configuration.md#cards), des [editor](guides/configuration.md#editor) und der [toolbar](guides/configuration.md#toolbar) konfigurieren.
+Neben den Anfangsdaten können Sie das Aussehen der [cards](guides/configuration.md#karten), des [editor](guides/configuration.md#editor) und der [toolbar](guides/configuration.md#toolbar) konfigurieren.
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {

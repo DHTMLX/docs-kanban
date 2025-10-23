@@ -277,8 +277,8 @@ Anschließend müssen Sie spezielle Regeln für die Gruppierung der Karten erste
 
 Es gibt zwei Möglichkeiten, wie Sie eine solche Gruppierung von Karten in einer Spalte nach zwei oder mehr Status umsetzen können:
 
-- [Serverseitig](#server-side-grouping)
-- [Serverseitig + clientseitig](#server-side--client-side-grouping)
+- [Serverseitig](#serverseitige-gruppierung)
+- [Serverseitig + clientseitig](#serverseitige--clientseitige-gruppierung)
 
 ### Serverseitige Gruppierung
 

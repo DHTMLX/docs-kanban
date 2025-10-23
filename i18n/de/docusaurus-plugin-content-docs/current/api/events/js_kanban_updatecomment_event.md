@@ -38,7 +38,7 @@ Der Callback des **update-comment** Ereignisses kann ein Objekt mit den folgende
     - `cardId` - (optional) die ID der Karte, zu der der aktualisierte Kommentar hinzugefügt wird
     - `text` - (optional) der Text des aktualisierten Kommentars
     - `date` - (optional) das Datum des aktualisierten Kommentars
-    - `html` - (optional) das HTML-Markup des aktualisierten Kommentars. Aktivieren Sie die Eigenschaft `html` der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) Konfiguration, um das HTML-Markup anstelle von Text anzuzeigen
+    - `html` - (optional) das HTML-Markup des aktualisierten Kommentars. Aktivieren Sie die Eigenschaft `html` der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameter-für-den-typ-comments) Konfiguration, um das HTML-Markup anstelle von Text anzuzeigen
 - `skipProvider` - (optional) aktiviert/deaktiviert die Verhinderung, dass die Anfrage an den Server gesendet wird
 
 :::info

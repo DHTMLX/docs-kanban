@@ -34,7 +34,7 @@ Der Callback des **add-comment** Ereignisses kann ein Objekt mit den folgenden P
 - `comment` - (erforderlich) das Konfigurationsobjekt des neuen Kommentars. Hier können Sie folgende Parameter angeben:
     - `text` - (optional) der Text des neuen Kommentars
     - `date` - (optional) das Datum des neuen Kommentars
-    - `html` - (optional) das HTML-Markup des neuen Kommentars. Aktivieren Sie die `html`-Eigenschaft der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) Konfiguration, um das HTML-Markup anstelle des Texts anzuzeigen
+    - `html` - (optional) das HTML-Markup des neuen Kommentars. Aktivieren Sie die `html`-Eigenschaft der [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameter-für-den-typ-comments) Konfiguration, um das HTML-Markup anstelle des Texts anzuzeigen
 - `skipProvider` - (optional) aktiviert/deaktiviert das Verhindern, dass die Anfrage an den Server gesendet wird
 
 :::info
