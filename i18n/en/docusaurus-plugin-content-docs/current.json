@@ -1,0 +1,134 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.What's new and migration": {
+    "message": "What's new and migration",
+    "description": "The label for category What's new and migration in sidebar docs"
+  },
+  "sidebar.docs.category.What's new and migration.link.generated-index.title": {
+    "message": "What's new and migration",
+    "description": "The generated-index page title for category What's new and migration in sidebar docs"
+  },
+  "sidebar.docs.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar docs"
+  },
+  "sidebar.docs.category.Kanban methods": {
+    "message": "Kanban methods",
+    "description": "The label for category Kanban methods in sidebar docs"
+  },
+  "sidebar.docs.category.Kanban internal API": {
+    "message": "Kanban internal API",
+    "description": "The label for category Kanban internal API in sidebar docs"
+  },
+  "sidebar.docs.category.Kanban internal API.link.generated-index.title": {
+    "message": "Internal API overview",
+    "description": "The generated-index page title for category Kanban internal API in sidebar docs"
+  },
+  "sidebar.docs.category.Event Bus methods": {
+    "message": "Event Bus methods",
+    "description": "The label for category Event Bus methods in sidebar docs"
+  },
+  "sidebar.docs.category.Export methods": {
+    "message": "Export methods",
+    "description": "The label for category Export methods in sidebar docs"
+  },
+  "sidebar.docs.category.State methods": {
+    "message": "State methods",
+    "description": "The label for category State methods in sidebar docs"
+  },
+  "sidebar.docs.category.Kanban events": {
+    "message": "Kanban events",
+    "description": "The label for category Kanban events in sidebar docs"
+  },
+  "sidebar.docs.category.Kanban properties": {
+    "message": "Kanban properties",
+    "description": "The label for category Kanban properties in sidebar docs"
+  },
+  "sidebar.docs.category.Toolbar methods": {
+    "message": "Toolbar methods",
+    "description": "The label for category Toolbar methods in sidebar docs"
+  },
+  "sidebar.docs.category.Toolbar properties": {
+    "message": "Toolbar properties",
+    "description": "The label for category Toolbar properties in sidebar docs"
+  },
+  "sidebar.docs.category.Common settings": {
+    "message": "Common settings",
+    "description": "The label for category Common settings in sidebar docs"
+  },
+  "sidebar.docs.category.Backend API": {
+    "message": "Backend API",
+    "description": "The label for category Backend API in sidebar docs"
+  },
+  "sidebar.docs.category.Backend API.link.generated-index.title": {
+    "message": "Backend API",
+    "description": "The generated-index page title for category Backend API in sidebar docs"
+  },
+  "sidebar.docs.category.RestDataProvider API": {
+    "message": "RestDataProvider API",
+    "description": "The label for category RestDataProvider API in sidebar docs"
+  },
+  "sidebar.docs.category.RestDataProvider API.link.generated-index.title": {
+    "message": "RestDataProvider API",
+    "description": "The generated-index page title for category RestDataProvider API in sidebar docs"
+  },
+  "sidebar.docs.category.REST methods": {
+    "message": "REST methods",
+    "description": "The label for category REST methods in sidebar docs"
+  },
+  "sidebar.docs.category.REST routes": {
+    "message": "REST routes",
+    "description": "The label for category REST routes in sidebar docs"
+  },
+  "sidebar.docs.category.GET routes": {
+    "message": "GET routes",
+    "description": "The label for category GET routes in sidebar docs"
+  },
+  "sidebar.docs.category.GET routes.link.generated-index.title": {
+    "message": "GET routes",
+    "description": "The generated-index page title for category GET routes in sidebar docs"
+  },
+  "sidebar.docs.category.POST routes": {
+    "message": "POST routes",
+    "description": "The label for category POST routes in sidebar docs"
+  },
+  "sidebar.docs.category.POST routes.link.generated-index.title": {
+    "message": "POST routes",
+    "description": "The generated-index page title for category POST routes in sidebar docs"
+  },
+  "sidebar.docs.category.PUT routes": {
+    "message": "PUT routes",
+    "description": "The label for category PUT routes in sidebar docs"
+  },
+  "sidebar.docs.category.PUT routes.link.generated-index.title": {
+    "message": "PUT routes",
+    "description": "The generated-index page title for category PUT routes in sidebar docs"
+  },
+  "sidebar.docs.category.DELETE routes": {
+    "message": "DELETE routes",
+    "description": "The label for category DELETE routes in sidebar docs"
+  },
+  "sidebar.docs.category.DELETE routes.link.generated-index.title": {
+    "message": "DELETE routes",
+    "description": "The generated-index page title for category DELETE routes in sidebar docs"
+  },
+  "sidebar.docs.category.Backend and frameworks integration": {
+    "message": "Backend and frameworks integration",
+    "description": "The label for category Backend and frameworks integration in sidebar docs"
+  },
+  "sidebar.docs.category.Backend and frameworks integration.link.generated-index.title": {
+    "message": "Backend and frameworks integration",
+    "description": "The generated-index page title for category Backend and frameworks integration in sidebar docs"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar docs"
+  },
+  "sidebar.docs.category.Guides.link.generated-index.title": {
+    "message": "Guides",
+    "description": "The generated-index page title for category Guides in sidebar docs"
+  }
+}

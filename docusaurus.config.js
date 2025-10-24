@@ -134,17 +134,30 @@ const onAfterDataTransformation = (data) => {
 const config = {
 	noIndex: false,
 	title: 'DHTMLX JavaScript Kanban Docs',
-	tagline: 'DHTMLX JavaScript Kanban Docs',
+	tagline: 'DHTMLX JavaScript Kanban Docs', 
 	url: 'https://docs.dhtmlx.com',
-	baseUrl: '/kanban/',
-
+	baseUrl: process.env.DOCUSAURUS_BASEURL || '/kanban/',
+	i18n: {
+		defaultLocale: 'en',
+		locales: ['en', 'de', 'ru', 'zh', 'ko'],
+		localeConfigs: {
+			zh: {
+				htmlLang: 'zh-CN',
+				label: '中文'
+			},
+		}
+	},
 	onBrokenLinks: 'warn',
-	onBrokenMarkdownLinks: 'warn',
     onBrokenAnchors: 'warn',
 	favicon: 'img/favicon.ico',
 	organizationName: 'DHTMLX', // Usually your GitHub org/user name.
 	projectName: 'docs-kanban', // Usually your repo name.
 	trailingSlash: true,
+	markdown: {
+		hooks: {
+			onBrokenMarkdownLinks: 'warn',
+		}
+	},
 	scripts:[
 		{
 			src: 'https://dhtmlx.com/gtag/docs.js',
@@ -217,7 +230,11 @@ const config = {
 					"label": "Download",
 					"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml",
 					"position": "right"
-				}
+				},
+				{
+					type: 'localeDropdown',
+					position: 'right',
+				},
 			],
 		},
 	  	footer: {

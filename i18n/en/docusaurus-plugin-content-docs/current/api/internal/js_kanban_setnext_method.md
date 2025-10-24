@@ -1,0 +1,46 @@
+---
+sidebar_label: api.setNext()
+title: setNext Method
+description: You can learn about the setNext method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+---
+
+# api.setNext()
+
+### Description
+
+@short: Enables adding an action into the Event Bus sequence
+
+### Usage
+
+~~~jsx {}
+api.setNext(next: any): void;
+~~~
+
+### Parameters
+
+- `next` - (required) the action to be added into the **Event Bus** sequence  
+
+### Example
+
+~~~jsx {15}
+const url = "https://some_backend_url";
+const restProvider = new kanban.RestDataProvider(url);
+
+Promise.all([
+    restProvider.getCards(),
+    restProvider.getColumns(),
+    restProvider.getRows()
+]).then(([cards, columns, rows]) => {
+    const board = new kanban.Kanban("#root", {
+        cards,
+        columns,
+        rows,
+        rowKey: "row"
+    });
+    board.api.setNext(restProvider);
+});
+~~~
+
+:::info
+Including **RestDataProvider** in the **Event Bus** sequence is necessary to handle data operations like **adding** and **deleting**, and to send the related requests to the server.
+:::

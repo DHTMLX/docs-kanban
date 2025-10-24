@@ -13,7 +13,7 @@ You should be familiar with the basic concepts and patterns of [**Salesforce**](
 DHTMLX Kanban is compatible with [Salesforce](https://www.salesforce.com/) platform. We have prepared code examples on how to add DHTMLX Kanban into Salesforce environment. For more information, refer to the corresponding [Example on GitHub](https://github.com/DHTMLX/salesforce-lwc-demo).
 
 :::note
-The JavaScript Kanban widget automatically detects that it operates within a [Salesforce](https://www.salesforce.com/) environment and configures the integration logic internally. In most cases, you do not need to call any [Salesforce-specific methods](#salesforce-specific-methods) manually.
+The JavaScript Kanban widget automatically detects that it operates within a [**Salesforce**](https://www.salesforce.com/) environment and configures the integration logic internally. In most cases, you do not need to call any [**Salesforce-specific methods**](#salesforce-specific-methods) manually.
 :::
 
 ## Preparing environment
@@ -49,19 +49,40 @@ Normally, salesforce-specific methods are not required, but they can be availabl
 
 ### Salesforce-specific methods
 
-You can use the following methods of the `salesForceEnv` helper class: 
+You can use the following methods of the `salesForceEnv` helper class:
 
 | Method                                                           | Description                                                                    |
 | :--------------------------------------------------------------- | :----------------------------------------------------------------------------- |
 | `salesForceEnv.detect()`                                         | Detects whether the Kanban is running inside Salesforce                        |
-| `salesForceEnv.addGlobalEvent(eventName, handler, htmlElement)`  | Attaches a global event to the first available `HTMLElement`                   |
-| `salesForceEnv.getTopNode()`                                     | Returns the first available `HTMLElement` inside the Salesforce DOM hierarchy  |
+| `salesForceEnv.addGlobalEvent(eventName, handler, htmlElement)`  | Attaches a global event to the first available HTML element                    |
+| `salesForceEnv.getTopNode()`                                     | Returns the first available HTML element inside the Salesforce DOM hierarchy   |
+
+```jsx {4,7}
+import { 
+    Kanban, 
+    Toolbar, 
+    salesForceEnv
+} from "@dhx/trial-kanban";
+
+salesForceEnv.detect();
+```
 
 ### Additional exported function
 
 | Function             | Description                                                                       |
 | :------------------- | :-------------------------------------------------------------------------------- |
 | `enableSalesForce()` | Manually sets the Salesforce environment when automatic detection is unavailable  |
+
+```jsx {5,8}
+import { 
+    Kanban, 
+    Toolbar, 
+    salesForceEnv,
+    enableSalesForce
+} from "@dhx/trial-kanban";
+
+enableSalesForce();
+```
 
 ## Workflow steps
 

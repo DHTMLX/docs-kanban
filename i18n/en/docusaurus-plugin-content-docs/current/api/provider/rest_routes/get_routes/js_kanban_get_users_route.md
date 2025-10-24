@@ -1,0 +1,53 @@
+---
+sidebar_label: GET /users
+title: GET /users
+description: You can learn about the GET /users REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+---
+
+# GET `/users`
+
+### Description
+
+@short: Retrieves data for all users and returns a JSON object containing an array of user objects.
+
+This route processes an **HTTP GET** request sent to the `/users` endpoint.
+
+### Payload
+
+No payload is necessary.
+
+### Response
+
+The response includes a JSON object with an array of user data objects.
+
+Example:
+
+~~~json
+[
+    {
+        "id": 1,
+        "label": "Jhon",
+        "avatar": "https://serv.com/images/jhon.png"
+    },
+    {
+        "id": 2,
+        "label": "Ben",
+        "avatar": "https://serv.com/images/ben.png"
+    },
+    {
+        "id": 3,
+        "label": "Alex",
+        "avatar": "https://serv.com/images/alex.png"
+    }
+]
+~~~
+
+For another example of the returned object, see [**cardShape**](api/config/js_kanban_cardshape_config.md).
+
+The HTTP status code indicates whether the request was successful (response.status == 200) or encountered an error (response.status == 500).
+
+---
+
+**Related articles**:
+- [Working with server](guides/working_with_server.md)
+- [getUsers()](api/provider/rest_methods/js_kanban_getusers_method.md)
