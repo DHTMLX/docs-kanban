@@ -51,7 +51,7 @@ For each column you can specify the following parameters (data):
     ~~~
 
 :::info
-If you want to load new data for columns dynamically, you can use the [`parse()`](../../methods/js_kanban_parse_method) method!
+If you want to load new data for columns dynamically, you can use the [`setConfig()`](../../methods/js_kanban_setconfig_method) or  [`parse()`](../../methods/js_kanban_parse_method) method!
 :::
 
 ### Example

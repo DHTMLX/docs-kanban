@@ -92,7 +92,7 @@ For each card you can specify the following parameters (data):
 - `custom_key` - (optional) a custom key of the card. You can specify the custom keys to place the card into column and row. See the [columnKey](../js_kanban_columnkey_config) and [rowKey](api/config/js_kanban_rowkey_config.md) properties
 
 :::info
-If you want to load new data for cards dynamically, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method!
+If you want to load new data for cards dynamically, you can use the [**setConfig()**](api/methods/js_kanban_setconfig_method.md) or [**parse()**](api/methods/js_kanban_parse_method.md) method!
 :::
 
 ### Example

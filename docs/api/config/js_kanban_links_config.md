@@ -37,7 +37,7 @@ For each link you can specify the following parameters (data):
     - ***"parent"*** - defines dependency between parent (master) and child (slave) tasks
 
 :::info
-If you want to load new data for links dynamically, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method!
+If you want to load new data for links dynamically, you can use the [**setConfig()**](api/methods/js_kanban_setconfig_method.md) or [**parse()**](api/methods/js_kanban_parse_method.md) method!
 :::
 
 ### Example

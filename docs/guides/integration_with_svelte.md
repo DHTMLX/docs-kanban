@@ -243,7 +243,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `onMount()` method of Svelte to load data into Kanban:
+You can also use the [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `onMount()` method of Svelte to load data into Kanban. The `setConfig` or `parse()` method provides data reloading on each applied change. 
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -272,7 +272,8 @@ onMount(() => {
         // other configuration properties
     })
 
-    kanban.parse({ columns, cards, rows });
+    kanban.setConfig({ columns, cards, rows });
+    // or kanban.parse({ columns, cards, rows });
 });
 
 onDestroy(() => {
@@ -286,8 +287,6 @@ onDestroy(() => {
     <div bind:this={kanban_container} style="height: calc(100% - 56px);"></div>
 </div>
 ~~~
-
-The `parse(data)` method provides data reloading on each applied change.
 
 Now the Kanban component is ready to use. When the element will be added to the page, it will initialize the Kanban with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
 

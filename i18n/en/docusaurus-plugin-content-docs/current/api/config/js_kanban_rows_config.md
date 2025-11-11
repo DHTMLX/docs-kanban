@@ -37,7 +37,7 @@ Each row (swimlane) can include the following properties:
 - `css` - (optional) applies custom CSS styles to the individual row.
 
 :::info
-To update rows (swimlanes) data dynamically, the [**parse()**](api/methods/js_kanban_parse_method.md) method can be used.
+To update rows (swimlanes) data dynamically, the [**setConfig()**](api/methods/js_kanban_setconfig_method.md) or [**parse()**](api/methods/js_kanban_parse_method.md) method can be used.
 :::
 
 ### Example

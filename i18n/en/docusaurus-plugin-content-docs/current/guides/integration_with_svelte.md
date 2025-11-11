@@ -243,7 +243,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-If you want, you can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method in Svelte's `onMount()` to load data into Kanban:
+If you want, you can also use the [`setConfig()`](/api/methods/js_kanban_setconfig_method) or [`parse()`](/api/methods/js_kanban_parse_method/) method in Svelte's `onMount()` to load data into Kanban:
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -272,7 +272,7 @@ onMount(() => {
         // other config options
     })
 
-    kanban.parse({ columns, cards, rows });
+    kanban.setConfig({ columns, cards, rows });
 });
 
 onDestroy(() => {
@@ -287,7 +287,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-The `parse(data)` method is handy for reloading data whenever something changes.
+Both `setConfig()` and `parse(data)` methods are handy for reloading data whenever something changes.
 
 At this point, the Kanban component is good to go. Once it's on the page, it will initialize with your data. You can tweak the configuration as needed. To see all the available settings, check out the [Kanban API docs](/api/overview/properties_overview/).
 

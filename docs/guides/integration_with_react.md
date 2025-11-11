@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-You can also use the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `useEffect()` method of React to load data into Kanban:
+You can also use the [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `useEffect()` method of React to load data into Kanban. The `setConfig` or `parse()` method provides data reloading on each applied change.
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -283,7 +283,8 @@ export default function KanbanComponent(props) {
             // other configuration properties
         });
     
-        kanban.parse({ columns, cards, rows });
+        kanban.setConfig({ columns, cards, rows });
+        // or kanban.parse({ columns, cards, rows });
 
         return () => {
             kanban.destructor();
@@ -297,8 +298,6 @@ export default function KanbanComponent(props) {
             </div>
 }
 ~~~
-
-The `parse(data)` method provides data reloading on each applied change.
 
 Now the Kanban component is ready. When the element will be added to the page, it will initialize the Kanban with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
 

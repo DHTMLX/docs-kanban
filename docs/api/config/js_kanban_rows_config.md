@@ -37,7 +37,7 @@ For each row (swimlane) you can specify the following parameters (data):
 - `css` - (optional) defines css styles for a separate row
 
 :::info
-If you want to load new data for rows (swimlanes) dynamically, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method!
+If you want to load new data for rows (swimlanes) dynamically, you can use the [**setConfig()**](api/methods/js_kanban_setconfig_method.md) or [**parse()**](api/methods/js_kanban_parse_method.md) method!
 :::
 
 ### Example
