@@ -92,7 +92,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | [Autosaving mode](/api/config/js_kanban_editorautosave_config.md)| 如何开启或关闭编辑器自动保存功能         |
 | [Configuring editor fields](/guides/configuration/#编辑器)| 如何设置编辑器字段                        |
 | [Configuring the editor](/guides/configuration/#编辑器行为配置)| 如何配置编辑器                |
-| [Updating editor settings](/api/methods/js_kanban_setconfig_method)| 如何更新编辑器设置                    |
+| [Updating editor settings](/api/methods/js_kanban_setconfig_method.md)| 如何更新编辑器设置                    |
 
 ## 列操作指南
 
