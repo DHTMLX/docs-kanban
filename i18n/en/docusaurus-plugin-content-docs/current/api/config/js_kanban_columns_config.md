@@ -51,7 +51,7 @@ Each column can include the following properties (data):
     ~~~
 
 :::info
-To load new column data dynamically, the [`parse()`](../../methods/js_kanban_parse_method) method can be used.
+To load new column data dynamically, the [`setConfig()`](../../methods/js_kanban_setconfig_method) or  [`parse()`](../../methods/js_kanban_parse_method) method can be used.
 :::
 
 ### Example

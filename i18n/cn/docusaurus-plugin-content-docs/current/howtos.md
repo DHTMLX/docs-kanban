@@ -81,7 +81,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | [Limiting cards](/api/config/js_kanban_columns_config.md)     | 设置列和泳道的卡片限制（**WIP 校验**） ([示例](https://snippet.dhtmlx.com/2blo6hx8?text=kanban))|
 | [Selecting cards](/api/config/js_kanban_readonly_config.md)   | 开启或关闭卡片选择                          |
 | [Setting a fix height of cards](/api/config/js_kanban_cardheight_config.md)| 如何设置卡片固定高度            |
-| [Updating card settings](/api/methods/js_kanban_setconfig_method.md)| 如何更新卡片设置                    |
+| [Updating card settings](/api/methods/js_kanban_setconfig_method)| 如何更新卡片设置                    |
 
 ## 卡片编辑器操作
 

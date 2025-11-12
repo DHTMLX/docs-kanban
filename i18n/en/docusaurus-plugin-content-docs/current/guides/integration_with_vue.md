@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-Alternatively, you can use the [`parse()`](/api/methods/js_kanban_parse_method/) method in the `mounted()` hook to load data into Kanban:
+Alternatively, you can use the [`setConfig()`](/api/methods/js_kanban_setconfig_method) or [`parse()`](/api/methods/js_kanban_parse_method/) method in the `mounted()` hook to load data into Kanban:
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -299,7 +299,7 @@ export default {
             // other configuration properties
         });
 
-        this.kanban.parse({ 
+        this.kanban.setConfig({ 
             cards: this.cards,
             columns: this.columns,
             rows: this.rows
@@ -321,7 +321,7 @@ export default {
 </template>
 ~~~
 
-The `parse(data)` method lets you reload data whenever changes are made.
+The `setConfig` or `parse()` method lets you reload data whenever changes are made.
 
 At this point, the Kanban component is set up and ready. Once you add it to the page, it initializes with your data. You can also pass in any extra configuration you need. To see all available properties, visit the [Kanban API docs](/api/overview/properties_overview/).
 

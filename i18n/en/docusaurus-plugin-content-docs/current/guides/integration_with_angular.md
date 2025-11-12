@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-You can also load data into Kanban using the [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `ngOnInit()` method.
+You can also load data into Kanban using the [`setConfig()`](/api/methods/js_kanban_setconfig_method) or [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `ngOnInit()` method.
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -293,7 +293,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
         });
 
         // apply the data via the parse() method
-        this._kanban.parse({ 
+        this._kanban.setConfig({ 
             columns, 
             cards, 
             rows 
@@ -307,7 +307,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-The `parse(data)` method lets you reload data whenever you need to update it.
+The `setConfig` or `parse()` method lets you reload data whenever you need to update it.
 
 At this point, the Kanban component is good to go. When you add the element to a page, Kanban will initialize with your data. You can also tweak the configuration as needed. For all available options, check out the [Kanban API docs](/api/overview/properties_overview/).
 

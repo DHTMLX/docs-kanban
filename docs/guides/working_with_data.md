@@ -125,13 +125,15 @@ new kanban.Kanban("#root", {
 
 ## Loading data from local source
 
-To load data for ***columns***, ***rows***, ***cards***, and ***links*** from a local source, you can use the [`parse()`](api/methods/js_kanban_parse_method.md) method. It takes an object with the needed data as a parameter.
+To load data for ***columns***, ***rows***, ***cards***, and ***links*** from a local source, you can use the [`setConfig()`](api/methods/js_kanban_setconfig_method.md) or [`parse()`](api/methods/js_kanban_parse_method.md) method. 
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});
 
 // loading data into Kanban
-board.parse({ columns, cards, rows });
+board.setConfig({ columns, cards, rows });
+
+// or board.parse({ columns, cards, rows });
 ~~~
 
 ## Syncing Kanban data with Gantt and Scheduler

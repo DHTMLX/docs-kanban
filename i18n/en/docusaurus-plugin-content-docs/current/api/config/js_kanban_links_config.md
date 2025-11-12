@@ -37,7 +37,7 @@ Each link can include the following details:
     - ***"parent"*** - indicates a parent (master) and child (slave) task relationship
 
 :::info
-To update links data dynamically, you can use the [**parse()**](api/methods/js_kanban_parse_method.md) method!
+To update links data dynamically, you can use the [**setConfig()**](api/methods/js_kanban_setconfig_method.md) or [**parse()**](api/methods/js_kanban_parse_method.md) method!
 :::
 
 ### Example

@@ -313,8 +313,7 @@ new kanban.Kanban("#root", {
                     .then(res => res.json())
                     .then(
                         data => {
-                            rec.id = data.id;
-                            return data;
+                            return { id: rec.id, ...data };
                         },
                         () => ({ id: rec.id, status: "error" })
                     )

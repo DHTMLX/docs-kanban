@@ -10,6 +10,8 @@ description: You can learn about the parse method in the documentation of the DH
 
 @short: Loads data into the Kanban board
 
+This method performs the same operation as [`setConfig`](/api/methods/js_kanban_setconfig_method) when used with data-related Kanban settings. It is therefore recommended to use `setConfig` for consistency with other configuration options, although `parse` remains supported as an alias for data parsing.
+
 ### Usage
 
 ~~~jsx {}
