@@ -501,10 +501,10 @@ CSS classes related to the editor were changed in the following way:
                 label: "In progress",
                 css: "red",
                 overlay: template(`
-                    <div class="blockOverlay disable-drop">
-                        <span class="disable-drop-header">Drop is not allowed</span>
-                        <span class="disable-drop-description">Only testers can move cards to this
-                            column</span>
+  <div class="blockOverlay disable-drop">
+  <span class="disable-drop-header">Drop is not allowed</span>
+  <span class="disable-drop-description">Only testers can move cards to this
+  column</span>
                     </div>`)
                 // other parameters
             }, ...
@@ -540,10 +540,10 @@ CSS classes related to the editor were changed in the following way:
         const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
-                    <div class="custom-card" style="padding:20px">
-                        <div class="status-color" style="background:${cardFields.color}"></div>
-                        Selected:${cardFields.label}
-                    </div>
+  <div class="custom-card" style="padding:20px">
+  <div class="status-color" style="background:${cardFields.color}"></div>
+  Selected:${cardFields.label}
+  </div>
                 `;
             }
         }
@@ -559,13 +559,13 @@ CSS classes related to the editor were changed in the following way:
         const cardTemplate = ({ cardFields, selected, dragging, cardShape }) => {
             if (selected) {
                 return `
-                    <div class="custom-card" style="padding:20px">
-                        <div class="status-color" style="background:${cardFields.color}"></div>
-                        <div data-menu-id=${cardFields.id} >
-                            <i class="wxi-dots-v"></i>
-                        </div>
-                        Selected:${cardFields.label}
-                    </div>
+  <div class="custom-card" style="padding:20px">
+  <div class="status-color" style="background:${cardFields.color}"></div>
+  <div data-menu-id=${cardFields.id} >
+  <i class="wxi-dots-v"></i>
+  </div>
+  Selected:${cardFields.label}
+  </div>
                 `;
             }
         }

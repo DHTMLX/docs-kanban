@@ -28,8 +28,8 @@ links?: [
 对于每个链接，您可以指定以下参数（数据）：
 
 - `id` - （必填）链接的 ID
-- `source` – （必填）链接起点的卡片 ID（例如，“任务 A 是任务 B 的前置任务”）
-- `target` – （必填）链接终点的卡片 ID（例如，“任务 B 依赖于任务 A”）
+- `source` - （必填）链接起点的卡片 ID（例如，“任务 A 是任务 B 的前置任务”）
+- `target` - （必填）链接终点的卡片 ID（例如，“任务 B 依赖于任务 A”）
 - `relation` - （必填）链接类型。可指定以下类型：
     - ***"relatesTo"*** - 定义任务之间的关联，当前任务与另一个任务相关联
     - ***"requiredFor"*** - 定义任务之间的依赖关系，其中一个任务需要另一个任务完成
@@ -37,7 +37,7 @@ links?: [
     - ***"parent"*** - 定义父（主）任务与子（从）任务之间的依赖关系
 
 :::info
-如果您想动态加载新的链接数据，可以使用 [**parse()**](api/methods/js_kanban_parse_method.md) 方法！
+如果您想动态加载新的链接数据，可以使用 [**setConfig()**](api/methods/js_kanban_setconfig_method.md) 或 [**parse()**](api/methods/js_kanban_parse_method.md) 方法！
 :::
 
 ### 示例

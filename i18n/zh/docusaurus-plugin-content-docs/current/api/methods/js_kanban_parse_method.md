@@ -6,9 +6,9 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 parse �
 
 # parse()
 
-### 描述
-
 @short: 将数据解析到看板中
+
+该方法在处理与数据相关的看板配置时，与 [`setConfig`](/api/methods/js_kanban_setconfig_method) 执行相同的操作。因此，建议为了与其他配置选项保持一致，优先使用 `setConfig`，不过 `parse` 依然作为数据解析的别名被支持。
 
 ### 用法
 
@@ -42,6 +42,6 @@ board.parse({
 });
 ~~~
 
-**更新日志：** 从 v1.1 版本开始，解析新数据前无需在构造函数中重置初始数据
+**更新日志**：自 v1.1 版本起，在解析新数据前无需在构造函数中重置初始数据。
 
-**相关文章：** [数据操作](guides/working_with_data.md#loading-data-from-local-source)
+**相关文章**：[数据操作](guides/working_with_data.md#loading-data-from-local-source)

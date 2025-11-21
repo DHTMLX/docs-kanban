@@ -14,11 +14,11 @@ This section covers the essentials for working with Kanban.
 
 | Topic                                         | Description                                              |
 | --------------------------------------------- | ---------------------------------------------------------|
-| [](guides/initialization.md)                  | How to get Kanban up and running ([Example](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
-| [](guides/configuration.md)                   | How to tweak Kanban settings                            |
-| [](guides/customization.md)                   | Ways to adjust Kanban to fit your needs                 |
-| [](guides/stylization.md)                     | Options for changing Kanban’s look and feel             |
-| [](guides/localization.md)                    | How to set up Kanban for different languages ([Example](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [Initialization](guides/initialization.md)                  | How to get Kanban up and running ([Example](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
+| [Configuration](guides/configuration.md)                   | How to tweak Kanban settings                            |
+| [Customization](guides/customization.md)                   | Ways to adjust Kanban to fit your needs                 |
+| [Stylization](guides/stylization.md)                     | Options for changing Kanban’s look and feel             |
+| [Localization](guides/localization.md)                    | How to set up Kanban for different languages ([Example](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API reference
 

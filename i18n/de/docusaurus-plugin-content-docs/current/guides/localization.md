@@ -132,15 +132,15 @@ const en = {
 
 Kanban stellt die folgenden Sprachumgebungen bereit:
 
-**"en"** – Englisch  
-**"de"** – Deutsch  
-**"cn"** – Chinesisch  
-**"es"** – Spanisch  
-**"fr"** – Französisch  
-**"it"** – Italienisch  
-**"jp"** – Japanisch  
-**"pt"** – Portugiesisch  
-**"ru"** – Russisch  
+**"en"** - Englisch  
+**"de"** - Deutsch  
+**"cn"** - Chinesisch  
+**"es"** - Spanisch  
+**"fr"** - Französisch  
+**"it"** - Italienisch  
+**"jp"** - Japanisch  
+**"pt"** - Portugiesisch  
+**"ru"** - Russisch  
 
 Sie können eine integrierte Sprachumgebung wie folgt exportieren und anwenden:
 

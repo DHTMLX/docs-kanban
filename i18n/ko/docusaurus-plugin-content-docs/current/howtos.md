@@ -14,11 +14,11 @@ description: DHTMLX JavaScript Kanban 라이브러리의 How-tos 페이지를 �
 
 | 주제                                         | 설명                                              |
 | --------------------------------------------- | --------------------------------------------------|
-| [](guides/initialization.md)                  | Kanban을 초기화하는 방법을 알아보세요 ([예제](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
-| [](guides/configuration.md)                   | Kanban을 구성하는 방법을 알아보세요                |
-| [](guides/customization.md)                   | Kanban을 커스터마이즈하는 방법을 알아보세요        |
-| [](guides/stylization.md)                     | Kanban을 스타일링하는 방법을 알아보세요            |
-| [](guides/localization.md)                    | Kanban을 현지화하는 방법을 알아보세요 ([예제](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [초기화](guides/initialization.md)                  | Kanban을 초기화하는 방법을 알아보세요 ([예제](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
+| [구성](guides/configuration.md)                   | Kanban을 구성하는 방법을 알아보세요                |
+| [사용자 정의](guides/customization.md)                   | Kanban을 커스터마이즈하는 방법을 알아보세요        |
+| [스타일링](guides/stylization.md)                     | Kanban을 스타일링하는 방법을 알아보세요            |
+| [로컬라이제이션](guides/localization.md)                    | Kanban을 현지화하는 방법을 알아보세요 ([예제](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API 레퍼런스
 

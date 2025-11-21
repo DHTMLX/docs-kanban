@@ -37,7 +37,7 @@ rows?: [
 - `css` - (선택 사항) 개별 행에 적용할 CSS 스타일을 정의합니다.
 
 :::info
-행(스윔레인)의 새 데이터를 동적으로 로드하려면 [**parse()**](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다!
+행(스윔레인)의 새 데이터를 동적으로 로드하려면 [**setConfig()**](api/methods/js_kanban_setconfig_method.md) 또는 [**parse()**](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다!
 :::
 
 ### 예제

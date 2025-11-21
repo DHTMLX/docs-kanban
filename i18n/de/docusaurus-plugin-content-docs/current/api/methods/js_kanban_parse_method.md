@@ -1,7 +1,7 @@
 ---
 sidebar_label: parse()
 title: parse Methode
-description: Sie können die parse-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Sie können sich über die parse-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek informieren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
 # parse()
@@ -9,6 +9,8 @@ description: Sie können die parse-Methode in der Dokumentation der DHTMLX JavaS
 ### Beschreibung
 
 @short: Parst Daten in Kanban
+
+Diese Methode führt denselben Vorgang aus wie [`setConfig`](/api/methods/js_kanban_setconfig_method), wenn sie mit datenbezogenen Kanban-Einstellungen verwendet wird. Es wird daher empfohlen, `setConfig` zu verwenden, um Konsistenz mit anderen Konfigurationsoptionen zu gewährleisten, obwohl `parse` weiterhin als Alias für das Parsen von Daten unterstützt wird.
 
 ### Verwendung
 
@@ -42,6 +44,6 @@ board.parse({
 });
 ~~~
 
-**Änderungsprotokoll:** Ab Version v1.1 müssen Sie die Anfangsdaten im Konstruktor nicht mehr zurücksetzen, bevor Sie neue Daten parsen
+**Änderungsprotokoll:** Seit Version v1.1 müssen Sie die Startdaten nicht mehr im Konstruktor zurücksetzen, bevor Sie neue Daten parsen.
 
 **Verwandte Artikel:** [Arbeiten mit Daten](guides/working_with_data.md#loading-data-from-local-source)

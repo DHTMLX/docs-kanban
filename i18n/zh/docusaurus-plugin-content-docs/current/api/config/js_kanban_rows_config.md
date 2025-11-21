@@ -37,7 +37,7 @@ rows?: [
 - `css` - （可选）为单独的行定义 CSS 样式
 
 :::info
-如果您想动态加载新的行（泳道）数据，可以使用 [**parse()**](api/methods/js_kanban_parse_method.md) 方法！
+如果您想动态加载新的行（泳道）数据，可以使用 [**setConfig()**](api/methods/js_kanban_setconfig_method.md) 或 [**parse()**](api/methods/js_kanban_parse_method.md) 方法！
 :::
 
 ### 示例

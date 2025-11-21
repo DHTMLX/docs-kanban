@@ -28,8 +28,8 @@ links?: [
 For each link you can specify the following parameters (data):
 
 - `id` - (required) the ID of the link
-- `source` – (required) the card ID at the start of the link (e.g. “Task A is required for Task B”)
-- `target` – (required) the card ID at the end of the link (e.g. “Task B depends on Task A”)
+- `source` - (required) the card ID at the start of the link (e.g. "Task A is required for Task B")
+- `target` - (required) the card ID at the end of the link (e.g. "Task B depends on Task A")
 - `relation` - (required) the type of link. Here you can specify the following types:
     - ***"relatesTo"*** -  defines dependency between tasks where the current task is bound to other one
     - ***"requiredFor"*** - defines dependency between tasks where one task requires the other one to be done

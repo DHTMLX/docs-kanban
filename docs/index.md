@@ -18,9 +18,9 @@ JavaScript Kanban is an effective solution for the workflow visualization. The w
 import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
-    src={toolbar}
-    alt="Kanban Toolbar"
-    className="img_border"
+  src={toolbar}
+  alt="Kanban Toolbar"
+  className="img_border"
 />
 
 ### Board
@@ -51,9 +51,9 @@ On the **Board** panel you can work with the ***cards***, ***columns*** and ***r
 import board from '@site/static/img/js_kanban_board.png';
 
 <img
-    src={board}
-    alt="Kanban Board"
-    className="img_border"
+  src={board}
+  alt="Kanban Board"
+  className="img_border"
 />
 
 ### Editor
@@ -63,9 +63,9 @@ The **Editor** is a modal panel that consists of the fields and controls for man
 import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
-    src={editor}
-    alt="Kanban Editor"
-    className="img_border"
+  src={editor}
+  alt="Kanban Editor"
+  className="img_border"
 />
 
 ## What's next

@@ -92,7 +92,7 @@ cards?: [
 - `custom_key` - (необязательно) пользовательский ключ карточки. Можно указать пользовательские ключи для размещения карточки в колонке и строке. См. свойства [columnKey](../js_kanban_columnkey_config) и [rowKey](api/config/js_kanban_rowkey_config.md)
 
 :::info
-Если вы хотите динамически загружать новые данные для карточек, можно использовать метод [**parse()**](api/methods/js_kanban_parse_method.md)!
+Если вы хотите динамически загружать новые данные для карточек, можно использовать метод [**setConfig()**](api/methods/js_kanban_setconfig_method.md) или [**parse()**](api/methods/js_kanban_parse_method.md)!
 :::
 
 ### Пример

@@ -37,7 +37,7 @@ rows?: [
 - `css` - (необязательно) задаёт CSS-стили для отдельной строки
 
 :::info
-Если вы хотите динамически загружать новые данные для строк (swimlanes), вы можете использовать метод [**parse()**](api/methods/js_kanban_parse_method.md)!
+Если вы хотите динамически загружать новые данные для строк (swimlanes), вы можете использовать метод [**setConfig()**](api/methods/js_kanban_setconfig_method.md) или [**parse()**](api/methods/js_kanban_parse_method.md)!
 :::
 
 ### Пример

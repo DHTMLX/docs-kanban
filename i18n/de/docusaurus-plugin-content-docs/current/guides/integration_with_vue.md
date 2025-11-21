@@ -1,13 +1,13 @@
 ---
 sidebar_label: Integration mit Vue
 title: Integration mit Vue
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Integration mit Vue. Durchstöbern Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: Erfahren Sie in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die Integration mit Vue. Durchstöbern Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # Integration mit Vue
 
 :::tip
-Sie sollten mit den grundlegenden Konzepten und Mustern von [**Vue**](https://vuejs.org/) vertraut sein, bevor Sie diese Dokumentation lesen. Um Ihr Wissen aufzufrischen, lesen Sie bitte die [**Vue 3-Dokumentation**](https://vuejs.org/guide/introduction.html#getting-started).
+Bevor Sie diese Dokumentation lesen, sollten Sie mit den grundlegenden Konzepten und Mustern von [**Vue**](https://vuejs.org/) vertraut sein. Um Ihr Wissen aufzufrischen, lesen Sie bitte die [**Vue 3-Dokumentation**](https://vuejs.org/guide/introduction.html#getting-started).
 :::
 
 DHTMLX Kanban ist mit **Vue** kompatibel. Wir haben Codebeispiele vorbereitet, wie Sie DHTMLX Kanban mit **Vue 3** verwenden können. Weitere Informationen finden Sie im entsprechenden [**Beispiel auf GitHub**](https://github.com/DHTMLX/vue-kanban-demo).
@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-Sie können auch die [`parse()`](/api/methods/js_kanban_parse_method/)-Methode innerhalb der `mounted()`-Methode von Vue verwenden, um Daten in Kanban zu laden:
+Sie können auch die [`setConfig()`](/api/methods/js_kanban_setconfig_method/) oder [`parse()`](/api/methods/js_kanban_parse_method/)-Methode innerhalb der `mounted()`-Methode von Vue verwenden, um Daten in Kanban zu laden. Die `setConfig`- oder `parse()`-Methode ermöglicht das Nachladen von Daten bei jeder vorgenommenen Änderung.
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -299,11 +299,12 @@ export default {
             // weitere Konfigurationseigenschaften
         });
 
-        this.kanban.parse({ 
+        this.kanban.setConfig({ 
             cards: this.cards,
             columns: this.columns,
             rows: this.rows
         });
+
     },
 
     unmounted() {
@@ -320,8 +321,6 @@ export default {
     </div>
 </template>
 ~~~
-
-Die Methode `parse(data)` ermöglicht das Nachladen von Daten bei jeder Änderung.
 
 Nun ist die Kanban-Komponente einsatzbereit. Sobald das Element zur Seite hinzugefügt wird, initialisiert es Kanban mit den Daten. Sie können auch die gewünschten Konfigurationseinstellungen bereitstellen. Besuchen Sie unsere [Kanban API-Dokumentation](/api/overview/properties_overview/), um die vollständige Liste der verfügbaren Eigenschaften zu sehen.
 

@@ -14,11 +14,11 @@ In this section you can find out basic principles of work with Kanban
 
 | Topic                                         | Description                                              |
 | --------------------------------------------- | ---------------------------------------------------------|
-| [](guides/initialization.md)                  | Learn how to initialize Kanban ([Example](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
-| [](guides/configuration.md)                   | Learn how to configure Kanban                            |
-| [](guides/customization.md)                   | Learn how to customize Kanban                            |
-| [](guides/stylization.md)                     | Learn how to stylize Kanban                              |
-| [](guides/localization.md)                    | Learn how to localize Kanban ([Example](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [Initialization](guides/initialization.md)                  | Learn how to initialize Kanban ([Example](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
+| [Configuration](guides/configuration.md)                   | Learn how to configure Kanban                            |
+| [Customization](guides/customization.md)                   | Learn how to customize Kanban                            |
+| [Stylization](guides/stylization.md)                     | Learn how to stylize Kanban                              |
+| [Localization](guides/localization.md)                    | Learn how to localize Kanban ([Example](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API reference
 

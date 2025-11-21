@@ -485,7 +485,7 @@ Released on August 30, 2022
 
 Released on July 28, 2022
 
-### Fixes​
+### Fixes
 
 - The `cardHeight` property doesn't work with the enabled `scrollType:"column"` config
 - Uploader doesn't show uploaded files in card editor
@@ -584,11 +584,11 @@ Released on February 15, 2022
 
 - New **events** for moving columns and rows: 
     [`move-column`](api/events/js_kanban_movecolumn_event.md)
-    and
+  and
     [`move-row`](api/events/js_kanban_moverow_event.md)
 - New **methods** for moving columns and rows: 
     [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) 
-    and
+  and
     [`moveRow()`](api/methods/js_kanban_moverow_method.md)
 
 ### Updates

@@ -92,7 +92,7 @@ cards?: [
 - `custom_key` - （可选）卡片的自定义键。您可以指定自定义键以将卡片放入列和行。请参阅 [columnKey](../js_kanban_columnkey_config) 和 [rowKey](api/config/js_kanban_rowkey_config.md) 属性
 
 :::info
-如果您想动态加载卡片的新数据，可以使用 [**parse()**](api/methods/js_kanban_parse_method.md) 方法！
+如果您想动态加载卡片的新数据，可以使用 [**setConfig()**](api/methods/js_kanban_setconfig_method.md) 或 [**parse()**](api/methods/js_kanban_parse_method.md) 方法！
 :::
 
 ### 示例

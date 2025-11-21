@@ -243,7 +243,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-Также вы можете использовать метод [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `onMount()` Svelte для загрузки данных в Kanban:
+Вы также можете использовать методы [`setConfig()`](/api/methods/js_kanban_setconfig_method/) или [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `onMount()` Svelte для загрузки данных в Kanban. Методы `setConfig` или `parse()` обеспечивают перезагрузку данных при каждом применённом изменении.
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -272,7 +272,8 @@ onMount(() => {
         // другие параметры конфигурации
     })
 
-    kanban.parse({ columns, cards, rows });
+    kanban.setConfig({ columns, cards, rows });
+    // или kanban.parse({ columns, cards, rows });
 });
 
 onDestroy(() => {
@@ -286,8 +287,6 @@ onDestroy(() => {
     <div bind:this={kanban_container} style="height: calc(100% - 56px);"></div>
 </div>
 ~~~
-
-Метод `parse(data)` обеспечивает перезагрузку данных при каждом внесённом изменении.
 
 Теперь компонент Kanban готов к использованию. Когда элемент будет добавлен на страницу, он инициализирует Kanban с данными. Вы также можете указать необходимые параметры конфигурации. Посетите [документацию по API Kanban](/api/overview/properties_overview/), чтобы ознакомиться с полным списком доступных свойств.
 

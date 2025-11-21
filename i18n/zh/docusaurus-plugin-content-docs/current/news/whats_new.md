@@ -6,7 +6,17 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 # 新增内容
 
-如果您正在从旧版本升级 Kanban，请查阅 [迁移到新版本](news/migration.md) 获取详细信息。
+如果您正在从旧版本升级 Kanban，请查阅 [迁移到新版本](news/migration.md) 了解详细信息。
+
+## 版本 1.7.1
+
+于 2025 年 11 月 20 日发布
+
+### 修复
+
+- 在编辑器中使用 `dateRange` 时出现脚本错误
+- 调用 `setConfig()` 后 `parse()` 不再工作
+- 关闭编辑器且未保存链接值时出现脚本错误
 
 ## 版本 1.7.0
 

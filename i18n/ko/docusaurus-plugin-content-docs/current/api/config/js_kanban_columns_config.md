@@ -50,7 +50,7 @@ columns?: [
     ~~~
 
 :::info
-열에 대한 새 데이터를 동적으로 로드하려면 [`parse()`](../../methods/js_kanban_parse_method) 메서드를 사용할 수 있습니다!
+열에 대한 새 데이터를 동적으로 로드하려면 [`setConfig()`](../../methods/js_kanban_setconfig_method) 또는  [`parse()`](../../methods/js_kanban_parse_method) 메서드를 사용할 수 있습니다!
 :::
 
 ### 예제

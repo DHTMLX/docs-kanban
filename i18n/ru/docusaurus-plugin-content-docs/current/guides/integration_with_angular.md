@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-Также вы можете использовать метод [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `ngOnInit()` компонента Angular для загрузки данных в Kanban.
+Вы также можете использовать методы [`setConfig()`](/api/methods/js_kanban_setconfig_method/) или [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `ngOnInit()` компонента Angular для загрузки данных в Kanban. Метод `setConfig` или `parse()` обеспечивает перезагрузку данных при каждом применённом изменении.
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -292,8 +292,8 @@ export class KanbanComponent implements OnInit, OnDestroy {
             // другие параметры конфигурации 
         });
 
-        // загрузка данных с помощью метода parse()
-        this._kanban.parse({ 
+        // загрузка данных с помощью метода setConfig() или parse()
+        this._kanban.setConfig({ 
             columns, 
             cards, 
             rows 
@@ -306,8 +306,6 @@ export class KanbanComponent implements OnInit, OnDestroy {
     }
 }
 ~~~
-
-Метод `parse(data)` позволяет перезагружать данные при каждом изменении.
 
 Теперь компонент Kanban готов к использованию. После добавления элемента на страницу Kanban будет инициализирован с данными. Вы также можете задать необходимые параметры конфигурации. Посетите [Kanban API docs](/api/overview/properties_overview/), чтобы ознакомиться с полным списком доступных свойств.
 

@@ -243,7 +243,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-또한 Svelte의 `onMount()` 메서드 내에서 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용해 Kanban에 데이터를 로드할 수 있습니다:
+또한 Svelte의 `onMount()` 메서드 내에서 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 또는 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용해 Kanban에 데이터를 로드할 수 있습니다. `setConfig` 또는 `parse()` 메서드는 변경이 적용될 때마다 데이터 리로딩을 제공합니다.
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -272,7 +272,8 @@ onMount(() => {
         // 기타 설정 속성
     })
 
-    kanban.parse({ columns, cards, rows });
+    kanban.setConfig({ columns, cards, rows });
+    // 또는 kanban.parse({ columns, cards, rows });
 });
 
 onDestroy(() => {
@@ -286,8 +287,6 @@ onDestroy(() => {
     <div bind:this={kanban_container} style="height: calc(100% - 56px);"></div>
 </div>
 ~~~
-
-`parse(data)` 메서드는 변경 사항이 적용될 때마다 데이터 리로딩을 제공합니다.
 
 이제 Kanban 컴포넌트를 사용할 준비가 되었습니다. 요소가 페이지에 추가되면 Kanban이 데이터와 함께 초기화됩니다. 필요에 따라 설정을 추가할 수 있습니다. 사용 가능한 전체 속성 목록은 [Kanban API docs](/api/overview/properties_overview/)를 참고하세요.
 

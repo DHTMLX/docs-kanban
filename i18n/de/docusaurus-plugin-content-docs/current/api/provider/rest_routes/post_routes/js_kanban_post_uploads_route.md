@@ -18,8 +18,8 @@ Der Server muss eine Binärdatei über eine **multipart/form-data**-Anfrage erha
 
 - den **Content-Disposition**-Header, der auf **form-data** gesetzt sein muss
   - das **name**-Attribut mit dem Wert **upload**
-  - **filename** – der ursprüngliche Dateiname der hochgeladenen Datei
-- den **Content-Type**-Header – der Typ des Datei-Inhalts
+  - **filename** - der ursprüngliche Dateiname der hochgeladenen Datei
+- den **Content-Type**-Header - der Typ des Datei-Inhalts
 
 Pro Anfrage kann nur eine Datei gesendet werden.
 

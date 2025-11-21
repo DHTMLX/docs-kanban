@@ -125,13 +125,15 @@ new kanban.Kanban("#root", {
 
 ## 로컬 소스에서 데이터 로딩
 
-***columns***, ***rows***, ***cards***, ***links***에 대한 데이터를 로컬 소스에서 불러오려면 [`parse()`](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다. 이 메서드는 필요한 데이터가 담긴 객체를 파라미터로 받습니다.
+***columns***, ***rows***, ***cards***, ***links***에 대한 데이터를 로컬 소스에서 불러오려면 [`setConfig()`](api/methods/js_kanban_setconfig_method.md) 또는 [`parse()`](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다.
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});
 
 // Kanban에 데이터 로딩
-board.parse({ columns, cards, rows });
+board.setConfig({ columns, cards, rows });
+
+// 또는 board.parse({ columns, cards, rows });
 ~~~
 
 ## Kanban 데이터를 Gantt 및 Scheduler와 동기화

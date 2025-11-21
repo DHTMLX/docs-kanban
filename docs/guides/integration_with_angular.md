@@ -57,7 +57,7 @@ Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm
   
 ### Step 2. Component creation
 
-Now you need to create an Angular component, to add Kanban with Toolbar into the application. Create  the **kanban** folder in the **src/app/** directory, add a new file into it and name it **kanban.component.ts**. 
+Now you need to create an Angular component, to add Kanban with Toolbar into the application. Create the **kanban** folder in the **src/app/** directory, add a new file into it and name it **kanban.component.ts**. 
 
 #### Import source files
 
@@ -378,9 +378,9 @@ After that, you can start the app to see Kanban loaded with data on a page.
 import trial from '@site/static/img/trial_kanban.png';
 
 <img
-    src={trial}
-    alt="Kanban with Angular"
-    className="img_border"
+  src={trial}
+  alt="Kanban with Angular"
+  className="img_border"
 />
 
 Now you know how to integrate DHTMLX Kanban with Angular. You can customize the code according to your specific requirements. The final advanced example you can find on [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
