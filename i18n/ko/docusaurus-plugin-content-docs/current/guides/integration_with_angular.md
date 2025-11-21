@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-또한 Angular의 `ngOnInit()` 메서드 내에서 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용해 Kanban에 데이터를 로드할 수 있습니다.
+또한 Angular의 `ngOnInit()` 메서드 내에서 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 또는 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용해 Kanban에 데이터를 로드할 수 있습니다. `setConfig` 또는 `parse()` 메서드는 적용된 변경마다 데이터 리로딩을 제공합니다.
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -292,8 +292,8 @@ export class KanbanComponent implements OnInit, OnDestroy {
             // 기타 구성 속성 
         });
 
-        // parse() 메서드로 데이터 적용
-        this._kanban.parse({ 
+        // setConfig() 또는 parse() 메서드로 데이터 적용
+        this._kanban.setConfig({ 
             columns, 
             cards, 
             rows 
@@ -306,8 +306,6 @@ export class KanbanComponent implements OnInit, OnDestroy {
     }
 }
 ~~~
-
-`parse(data)` 메서드는 변경 사항이 적용될 때마다 데이터 리로딩을 제공합니다.
 
 이제 Kanban 컴포넌트를 사용할 준비가 되었습니다. 요소가 페이지에 추가되면 데이터와 함께 Kanban이 초기화됩니다. 필요한 구성 설정도 제공할 수 있습니다. 사용 가능한 전체 속성 목록은 [Kanban API docs](/api/overview/properties_overview/)를 참고하세요.
 

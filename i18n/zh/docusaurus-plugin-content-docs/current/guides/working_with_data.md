@@ -125,13 +125,15 @@ new kanban.Kanban("#root", {
 
 ## 从本地数据源加载数据
 
-要从本地数据源加载 ***columns***、***rows***、***cards*** 和 ***links*** 的数据，可以使用 [`parse()`](api/methods/js_kanban_parse_method.md) 方法。该方法接收一个包含所需数据的对象作为参数。
+要从本地数据源加载 ***columns***、***rows***、***cards*** 和 ***links*** 的数据，可以使用 [`setConfig()`](api/methods/js_kanban_setconfig_method.md) 或 [`parse()`](api/methods/js_kanban_parse_method.md) 方法。
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});
 
 // 向 Kanban 加载数据
-board.parse({ columns, cards, rows });
+board.setConfig({ columns, cards, rows });
+
+// 或者 board.parse({ columns, cards, rows });
 ~~~
 
 ## 同步 Kanban 数据与 Gantt 和 Scheduler

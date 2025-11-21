@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-Вы также можете использовать метод [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `mounted()` компонента Vue для загрузки данных в Kanban:
+Вы также можете использовать методы [`setConfig()`](/api/methods/js_kanban_setconfig_method/) или [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `mounted()` компонента Vue для загрузки данных в Kanban. Метод `setConfig` или `parse()` обеспечивает перезагрузку данных при каждом внесённом изменении.
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -299,11 +299,12 @@ export default {
             // другие параметры конфигурации
         });
 
-        this.kanban.parse({ 
+        this.kanban.setConfig({ 
             cards: this.cards,
             columns: this.columns,
             rows: this.rows
         });
+
     },
 
     unmounted() {
@@ -320,8 +321,6 @@ export default {
     </div>
 </template>
 ~~~
-
-Метод `parse(data)` обеспечивает перезагрузку данных при каждом изменении.
 
 Теперь компонент Kanban готов к использованию. При добавлении элемента на страницу он инициализирует Kanban с данными. Также можно задать необходимые параметры конфигурации. Ознакомьтесь с полным списком доступных свойств в [документации по Kanban API](/api/overview/properties_overview/).
 

@@ -44,7 +44,7 @@ The **RestDataProvider** service includes the special REST methods for dynamic d
 - [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - gets a promise with the ***rows data***
 - [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - gets a promise with the ***users data***
 
-## Interacting with backend  
+## Interacting with backend 
 
 To interact with the server, you need to connect **RestDataProvider** to the corresponding server scripts. If you want to use the built-in backend, you can find the needed scripts in the following repositories:
 
@@ -315,7 +315,7 @@ func Update(id int, c Card) error {
 }
 ~~~
 
-Thus, when the user changes the value of the status field, the server logic checks the value and put the card in the corresponding column. After this, the server will use WebSocket to notify the client that the card needs to be moved  to another column.
+Thus, when the user changes the value of the status field, the server logic checks the value and put the card in the corresponding column. After this, the server will use WebSocket to notify the client that the card needs to be moved to another column.
 
 ### Server side + client side grouping
 

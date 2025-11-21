@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-Vue의 `mounted()` 메서드 내에서 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용해 Kanban에 데이터를 로드할 수도 있습니다:
+또한 Vue의 `mounted()` 메서드 내에서 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 또는 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용해 Kanban에 데이터를 로드할 수 있습니다. `setConfig` 또는 `parse()` 메서드는 변경 사항이 적용될 때마다 데이터 리로딩을 제공합니다.
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -299,11 +299,12 @@ export default {
             // 기타 설정
         });
 
-        this.kanban.parse({ 
+        this.kanban.setConfig({ 
             cards: this.cards,
             columns: this.columns,
             rows: this.rows
         });
+
     },
 
     unmounted() {
@@ -320,8 +321,6 @@ export default {
     </div>
 </template>
 ~~~
-
-`parse(data)` 메서드는 변경 사항이 적용될 때마다 데이터 리로딩을 제공합니다.
 
 이제 Kanban 컴포넌트 사용 준비가 완료되었습니다. 요소가 페이지에 추가되면, 데이터와 함께 Kanban이 초기화됩니다. 필요한 설정을 추가로 지정할 수 있습니다. 사용 가능한 속성의 전체 목록은 [Kanban API 문서](/api/overview/properties_overview/)를 참고하세요.
 

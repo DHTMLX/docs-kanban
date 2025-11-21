@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-您还可以在 Angular 的 `ngOnInit()` 方法中使用 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban。
+您也可以在 Angular 的 `ngOnInit()` 方法中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban。`setConfig` 或 `parse()` 方法在每次应用更改时都能实现数据重新加载。
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -292,8 +292,8 @@ export class KanbanComponent implements OnInit, OnDestroy {
             // 其他配置属性 
         });
 
-        // 通过 parse() 方法应用数据
-        this._kanban.parse({ 
+        // 通过 setConfig() 或 parse() 方法应用数据
+        this._kanban.setConfig({ 
             columns, 
             cards, 
             rows 
@@ -306,8 +306,6 @@ export class KanbanComponent implements OnInit, OnDestroy {
     }
 }
 ~~~
-
-`parse(data)` 方法可在每次更改时重新加载数据。
 
 现在 Kanban 组件已经可以使用。当该元素被添加到页面时，会自动初始化带有数据的 Kanban。您还可以根据需要提供其他配置设置。请访问我们的 [Kanban API 文档](/api/overview/properties_overview/) 查看所有可用属性的完整列表。
 

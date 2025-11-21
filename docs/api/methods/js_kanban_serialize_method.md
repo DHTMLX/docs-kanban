@@ -18,7 +18,7 @@ serialize(): object;
 
 ### Returns
 
-The method returns the object of Kanban data  
+The method returns the object of Kanban data 
 
 ~~~jsx {}
 {

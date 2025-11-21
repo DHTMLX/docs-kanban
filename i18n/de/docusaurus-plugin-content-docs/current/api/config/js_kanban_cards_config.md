@@ -92,7 +92,7 @@ Für jede Karte können Sie folgende Parameter (Daten) angeben:
 - `custom_key` - (optional) ein benutzerdefinierter Schlüssel der Karte. Sie können benutzerdefinierte Schlüssel angeben, um die Karte in Spalte und Zeile zu platzieren. Siehe die Eigenschaften [columnKey](../js_kanban_columnkey_config) und [rowKey](api/config/js_kanban_rowkey_config.md)
 
 :::info
-Wenn Sie neue Daten für Karten dynamisch laden möchten, können Sie die Methode [**parse()**](api/methods/js_kanban_parse_method.md) verwenden!
+Wenn Sie neue Daten für Karten dynamisch laden möchten, können Sie die Methoden [**setConfig()**](api/methods/js_kanban_setconfig_method.md) oder [**parse()**](api/methods/js_kanban_parse_method.md) verwenden!
 :::
 
 ### Beispiel

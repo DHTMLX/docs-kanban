@@ -8,6 +8,16 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you're moving to a newer version of Kanban, you might want to look at [Migration to newer versions](news/migration.md) for more info.
 
+## Version 1.7.1
+
+Released on November 20, 2025
+
+### Fixes
+
+-   A script error when using `dateRange` in the editor
+-   `parse()` does not work after `setConfig()` is called
+-   A script error in the editor after closing with unsaved link values
+
 ## Version 1.7.0
 
 Released October 14, 2025

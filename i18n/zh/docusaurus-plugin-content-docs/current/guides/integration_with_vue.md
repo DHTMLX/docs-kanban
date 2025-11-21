@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-您还可以在 Vue 的 `mounted()` 方法中使用 [`parse()`](/api/methods/js_kanban_parse_method/) 方法向 Kanban 加载数据：
+您还可以在 Vue 的 `mounted()` 方法中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法向 Kanban 加载数据。`setConfig` 或 `parse()` 方法会在每次应用更改时重新加载数据。
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -299,11 +299,12 @@ export default {
             // 其他配置项
         });
 
-        this.kanban.parse({ 
+        this.kanban.setConfig({ 
             cards: this.cards,
             columns: this.columns,
             rows: this.rows
         });
+        
     },
 
     unmounted() {
@@ -320,8 +321,6 @@ export default {
     </div>
 </template>
 ~~~
-
-`parse(data)` 方法支持在每次应用更改时重新加载数据。
 
 现在 Kanban 组件已经可以使用。当元素被添加到页面时，将会初始化带有数据的 Kanban。您还可以根据需要提供配置项。访问我们的 [Kanban API 文档](/api/overview/properties_overview/) 查看所有可用属性列表。
 

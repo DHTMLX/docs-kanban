@@ -38,11 +38,11 @@ JavaScript Kanban bietet den **RestDataProvider**-Service, der die REST API voll
 
 Der **RestDataProvider**-Service enthält spezielle REST-Methoden für das dynamische Laden von Daten:
 
-- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) – gibt ein Promise mit den ***Karten-Daten*** zurück
-- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) – gibt ein Promise mit den ***Spalten-Daten*** zurück
-- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) – gibt ein Promise mit den ***Verbindungsdaten*** zurück
-- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) – gibt ein Promise mit den ***Zeilen-Daten*** zurück
-- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) – gibt ein Promise mit den ***Benutzerdaten*** zurück
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - gibt ein Promise mit den ***Karten-Daten*** zurück
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - gibt ein Promise mit den ***Spalten-Daten*** zurück
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - gibt ein Promise mit den ***Verbindungsdaten*** zurück
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - gibt ein Promise mit den ***Zeilen-Daten*** zurück
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - gibt ein Promise mit den ***Benutzerdaten*** zurück
 
 ## Interaktion mit dem Backend  
 
@@ -180,9 +180,9 @@ const events = new RemoteEvents(url + "/api/v1", token);
 events.on(handlers);
 ~~~
 
-- `handlers` – die Client-Handler, die Server-Ereignisse verarbeiten
-- `events` – das Objekt, das sich mit dem Server verbindet und alle eingehenden Ereignisse abhört
-- `RemoteEvents.on(handlers)` – wendet die Client-Handler auf Server-Ereignisse an
+- `handlers` - die Client-Handler, die Server-Ereignisse verarbeiten
+- `events` - das Objekt, das sich mit dem Server verbindet und alle eingehenden Ereignisse abhört
+- `RemoteEvents.on(handlers)` - wendet die Client-Handler auf Server-Ereignisse an
 
 Nach der Integration des Multiuser-Backends in Ihre App können Sie die Zusammenarbeit zwischen den Nutzern vereinfachen und ermöglichen, dass Änderungen in Echtzeit über die Benutzeroberfläche verfolgt werden.
 
@@ -271,9 +271,9 @@ Um eine solche Gruppierung zu implementieren, müssen Sie ein benutzerdefinierte
 
 Anschließend müssen Sie spezielle Regeln für die Gruppierung der Karten erstellen. In unserem Fall werden die Karten in bestimmten Spalten nach folgenden Status gruppiert:
 
-- *todo*, *unassigned* – Status für die Spalte **Open**
-- *dev*, *testing* – Status für die Spalte **Inprogress**
-- *merged*, *released* – Status für die Spalte **Done**
+- *todo*, *unassigned* - Status für die Spalte **Open**
+- *dev*, *testing* - Status für die Spalte **Inprogress**
+- *merged*, *released* - Status für die Spalte **Done**
 
 Es gibt zwei Möglichkeiten, wie Sie eine solche Gruppierung von Karten in einer Spalte nach zwei oder mehr Status umsetzen können:
 

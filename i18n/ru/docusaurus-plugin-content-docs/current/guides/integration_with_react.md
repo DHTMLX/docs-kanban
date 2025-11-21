@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-Также можно использовать метод [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `useEffect()` в React для загрузки данных в Kanban:
+Вы также можете использовать методы [`setConfig()`](/api/methods/js_kanban_setconfig_method/) или [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `useEffect()` в React для загрузки данных в Kanban. Метод `setConfig` или `parse()` обеспечивает перезагрузку данных при каждом применённом изменении.
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -283,7 +283,8 @@ export default function KanbanComponent(props) {
             // другие параметры конфигурации
         });
     
-        kanban.parse({ columns, cards, rows });
+        kanban.setConfig({ columns, cards, rows });
+        // или kanban.parse({ columns, cards, rows });
 
         return () => {
             kanban.destructor();
@@ -297,8 +298,6 @@ export default function KanbanComponent(props) {
             </div>
 }
 ~~~
-
-Метод `parse(data)` позволяет перезагружать данные при каждом изменении.
 
 Теперь компонент Kanban готов. Когда элемент будет добавлен на страницу, он инициализирует Kanban с данными. Вы также можете задать необходимые настройки конфигурации. Посетите [документацию по API Kanban](/api/overview/properties_overview/), чтобы ознакомиться с полным списком доступных свойств.
 

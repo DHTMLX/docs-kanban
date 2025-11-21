@@ -51,7 +51,7 @@ columns?: [
     ~~~
 
 :::info
-Если вы хотите динамически загружать новые данные для колонок, вы можете использовать метод [`parse()`](../../methods/js_kanban_parse_method)!
+Если вы хотите динамически загружать новые данные для колонок, вы можете использовать метод [`setConfig()`](../../methods/js_kanban_setconfig_method) или [`parse()`](../../methods/js_kanban_parse_method)!
 :::
 
 ### Пример

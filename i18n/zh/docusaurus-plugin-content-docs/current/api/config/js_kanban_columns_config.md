@@ -51,7 +51,7 @@ columns?: [
     ~~~
 
 :::info
-如果您想动态加载列的新数据，可以使用 [`parse()`](../../methods/js_kanban_parse_method) 方法！
+如果您想动态加载列的新数据，可以使用 [`setConfig()`](../../methods/js_kanban_setconfig_method) 或 [`parse()`](../../methods/js_kanban_parse_method) 方法！
 :::
 
 ### 示例

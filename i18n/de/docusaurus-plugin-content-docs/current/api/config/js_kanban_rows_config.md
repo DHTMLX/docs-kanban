@@ -37,7 +37,7 @@ Für jede Zeile (Swimlane) können Sie folgende Parameter (Daten) angeben:
 - `css` - (optional) definiert CSS-Stile für eine einzelne Zeile.
 
 :::info
-Wenn Sie neue Daten für Zeilen (Swimlanes) dynamisch laden möchten, können Sie die [**parse()**](api/methods/js_kanban_parse_method.md) Methode verwenden!
+Wenn Sie neue Daten für Zeilen (Swimlanes) dynamisch laden möchten, können Sie die [**setConfig()**](api/methods/js_kanban_setconfig_method.md) oder [**parse()**](api/methods/js_kanban_parse_method.md) Methode verwenden!
 :::
 
 ### Beispiel

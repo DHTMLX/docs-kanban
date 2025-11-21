@@ -14,11 +14,11 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 
 | 主题                                         | 描述                                              |
 | --------------------------------------------- | ------------------------------------------------- |
-| [](guides/initialization.md)                  | 学习如何初始化 Kanban ([示例](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
-| [](guides/configuration.md)                   | 学习如何配置 Kanban                               |
-| [](guides/customization.md)                   | 学习如何自定义 Kanban                             |
-| [](guides/stylization.md)                     | 学习如何美化 Kanban                               |
-| [](guides/localization.md)                    | 学习如何本地化 Kanban ([示例](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [初始化](guides/initialization.md)                  | 学习如何初始化 Kanban ([示例](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
+| [配置](guides/configuration.md)                   | 学习如何配置 Kanban                               |
+| [自定义](guides/customization.md)                   | 学习如何自定义 Kanban                             |
+| [样式化](guides/stylization.md)                     | 学习如何美化 Kanban                               |
+| [本地化](guides/localization.md)                    | 学习如何本地化 Kanban ([示例](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API 参考
 

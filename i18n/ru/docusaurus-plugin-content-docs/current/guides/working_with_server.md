@@ -38,11 +38,11 @@ JavaScript Kanban позволяет работать как с клиентск
 
 Сервис **RestDataProvider** включает специальные REST-методы для динамической загрузки данных:
 
-- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) – возвращает promise с ***данными карточек***
-- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) – возвращает promise с ***данными колонок***
-- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) – возвращает promise с ***данными связей***
-- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) – возвращает promise с ***данными строк***
-- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) – возвращает promise с ***данными пользователей***
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - возвращает promise с ***данными карточек***
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - возвращает promise с ***данными колонок***
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - возвращает promise с ***данными связей***
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - возвращает promise с ***данными строк***
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - возвращает promise с ***данными пользователей***
 
 ## Взаимодействие с backend
 

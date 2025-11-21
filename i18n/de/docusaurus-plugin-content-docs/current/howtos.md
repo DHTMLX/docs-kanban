@@ -14,11 +14,11 @@ In diesem Abschnitt erfahren Sie die grundlegenden Prinzipien der Arbeit mit Kan
 
 | Thema                                         | Beschreibung                                              |
 | --------------------------------------------- | ---------------------------------------------------------|
-| [](guides/initialization.md)                  | Lernen Sie, wie Sie Kanban initialisieren ([Beispiel](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
-| [](guides/configuration.md)                   | Lernen Sie, wie Sie Kanban konfigurieren                  |
-| [](guides/customization.md)                   | Lernen Sie, wie Sie Kanban anpassen                       |
-| [](guides/stylization.md)                     | Lernen Sie, wie Sie Kanban gestalten                      |
-| [](guides/localization.md)                    | Lernen Sie, wie Sie Kanban lokalisieren ([Beispiel](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [Initialisierung](guides/initialization.md)                  | Lernen Sie, wie Sie Kanban initialisieren ([Beispiel](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
+| [Konfiguration](guides/configuration.md)                   | Lernen Sie, wie Sie Kanban konfigurieren                  |
+| [Anpassung](guides/customization.md)                   | Lernen Sie, wie Sie Kanban anpassen                       |
+| [Stilierung](guides/stylization.md)                     | Lernen Sie, wie Sie Kanban gestalten                      |
+| [Lokalisierung](guides/localization.md)                    | Lernen Sie, wie Sie Kanban lokalisieren ([Beispiel](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API-Referenz
 

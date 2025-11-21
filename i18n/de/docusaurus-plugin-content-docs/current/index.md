@@ -36,8 +36,8 @@ Auf dem **Board**-Panel können Sie mit den ***Karten***, ***Spalten*** und ***Z
 - Karten über das Kontextmenü (ein 3-Punkte-Symbol) oder die Tastenkombination `Ctrl (Command)`+`D` duplizieren (ermöglicht das Duplizieren mehrerer Karten)
 - Kanban-Daten in eine JSON-Datei exportieren
 - Die Kanban-Historie mit folgenden Tastenkombinationen verwalten:
-    - `Ctrl (Command)`+`Z` – macht die letzte Aktion im Kanban rückgängig (ein Schritt zurück in der Kanban-Historie)
-    - `Ctrl (Command)`+`Y` oder `Ctrl (Command)`+`Shift`+`Z` – wiederholt die mit *Undo* rückgängig gemachte Aktion (ein Schritt vorwärts in der Kanban-Historie)
+    - `Ctrl (Command)`+`Z` - macht die letzte Aktion im Kanban rückgängig (ein Schritt zurück in der Kanban-Historie)
+    - `Ctrl (Command)`+`Y` oder `Ctrl (Command)`+`Shift`+`Z` - wiederholt die mit *Undo* rückgängig gemachte Aktion (ein Schritt vorwärts in der Kanban-Historie)
 - Karten per Drag & Drop an die gewünschte Stelle (Zeile und Spalte) verschieben
 - Spalten und Zeilen über das Kontextmenü (ein 3-Punkte-Symbol) verschieben
 - Spalten und Zeilen durch Doppelklick auf die entsprechenden Beschriftungen oder über das Kontextmenü (ein 3-Punkte-Symbol) umbenennen

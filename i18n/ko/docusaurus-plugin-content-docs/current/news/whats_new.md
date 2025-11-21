@@ -8,6 +8,16 @@ description: DHTMLX JavaScript UI 라이브러리의 문서에서 DHTMLX Kanban�
 
 이전 버전에서 Kanban을 업데이트하는 경우, 자세한 내용은 [Migration to newer versions](news/migration.md) 문서를 참고하세요.
 
+## 버전 1.7.1
+
+2025년 11월 20일 출시
+
+### 버그 수정
+
+- 에디터에서 `dateRange` 사용 시 스크립트 오류 발생
+- `setConfig()`를 호출한 후 `parse()`가 동작하지 않는 문제
+- 링크 값이 저장되지 않은 상태에서 닫으면 에디터에서 스크립트 오류 발생
+
 ## 버전 1.7.0
 
 2025년 10월 14일 출시

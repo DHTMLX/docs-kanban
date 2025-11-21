@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-您还可以在 React 的 `useEffect()` 方法中使用 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban 中：
+您还可以在 React 的 `useEffect()` 方法中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban 中。`setConfig` 或 `parse()` 方法可在每次更改时重新加载数据。
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -283,7 +283,8 @@ export default function KanbanComponent(props) {
             // 其他配置项
         });
     
-        kanban.parse({ columns, cards, rows });
+        kanban.setConfig({ columns, cards, rows });
+        // 或 kanban.parse({ columns, cards, rows });
 
         return () => {
             kanban.destructor();
@@ -297,8 +298,6 @@ export default function KanbanComponent(props) {
             </div>
 }
 ~~~
-
-`parse(data)` 方法可在每次更改时重新加载数据。
 
 现在 Kanban 组件已经准备就绪。当该元素被添加到页面时，会初始化并加载数据。您还可以根据需要提供配置项。请访问我们的 [Kanban API 文档](/api/overview/properties_overview/)，查看全部可用属性列表。
 

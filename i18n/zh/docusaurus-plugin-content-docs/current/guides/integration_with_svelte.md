@@ -243,7 +243,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-您还可以在 Svelte 的 `onMount()` 方法中使用 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban 中：
+您还可以在 Svelte 的 `onMount()` 方法中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban 中。`setConfig` 或 `parse()` 方法可以在每次应用更改时重新加载数据。
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -272,7 +272,8 @@ onMount(() => {
         // 其他配置属性
     })
 
-    kanban.parse({ columns, cards, rows });
+    kanban.setConfig({ columns, cards, rows });
+    // 或 kanban.parse({ columns, cards, rows });
 });
 
 onDestroy(() => {
@@ -286,8 +287,6 @@ onDestroy(() => {
     <div bind:this={kanban_container} style="height: calc(100% - 56px);"></div>
 </div>
 ~~~
-
-`parse(data)` 方法可以在每次变更后重新加载数据。
 
 现在 Kanban 组件已可用。当元素被添加到页面时，它会用数据初始化 Kanban。您还可以根据需要提供相应的配置设置。访问我们的 [Kanban API 文档](/api/overview/properties_overview/) 查看全部可用属性。
 

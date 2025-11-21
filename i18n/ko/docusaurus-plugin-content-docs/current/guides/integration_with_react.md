@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-또한 React의 `useEffect()` 안에서 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용하여 Kanban에 데이터를 로드할 수 있습니다:
+또한 React의 `useEffect()` 안에서 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 또는 [`parse()`](/api/methods/js_kanban_parse_method/) 메서드를 사용하여 Kanban에 데이터를 로드할 수 있습니다. `setConfig` 또는 `parse()` 메서드는 변경사항이 적용될 때마다 데이터 재로딩을 제공합니다.
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -283,7 +283,8 @@ export default function KanbanComponent(props) {
             // 기타 설정 속성
         });
     
-        kanban.parse({ columns, cards, rows });
+        kanban.setConfig({ columns, cards, rows });
+        // 또는 kanban.parse({ columns, cards, rows });
 
         return () => {
             kanban.destructor();
@@ -297,8 +298,6 @@ export default function KanbanComponent(props) {
             </div>
 }
 ~~~
-
-`parse(data)` 메서드는 변경 사항이 적용될 때마다 데이터를 다시 로드할 수 있도록 해줍니다.
 
 이제 Kanban 컴포넌트가 준비되었습니다. 요소가 페이지에 추가되면 데이터를 가진 Kanban이 초기화됩니다. 필요한 설정 옵션도 제공할 수 있습니다. 사용 가능한 전체 속성 목록은 [Kanban API 문서](/api/overview/properties_overview/)를 참고하세요.
 

@@ -51,7 +51,7 @@ Für jede Spalte können Sie die folgenden Parameter (Daten) angeben:
     ~~~
 
 :::info
-Wenn Sie neue Daten für Spalten dynamisch laden möchten, können Sie die [`parse()`](../../methods/js_kanban_parse_method) Methode verwenden!
+Wenn Sie neue Daten für Spalten dynamisch laden möchten, können Sie die [`setConfig()`](../../methods/js_kanban_setconfig_method) oder  [`parse()`](../../methods/js_kanban_parse_method) Methode verwenden!
 :::
 
 ### Beispiel

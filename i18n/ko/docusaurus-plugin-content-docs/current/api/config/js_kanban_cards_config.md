@@ -92,7 +92,7 @@ cards?: [
 - `custom_key` - (선택 사항) 카드의 사용자 정의 키입니다. 카드를 열(column)과 행(row)에 배치하기 위해 사용자 정의 키를 지정할 수 있습니다. 자세한 내용은 [columnKey](../js_kanban_columnkey_config) 및 [rowKey](api/config/js_kanban_rowkey_config.md) 속성을 참조하십시오.
 
 :::info
-카드 데이터를 동적으로 새로 불러오려면 [**parse()**](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다!
+카드 데이터를 동적으로 새로 불러오려면 [**setConfig()**](api/methods/js_kanban_setconfig_method.md) 또는 [**parse()**](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다!
 :::
 
 ### 예제

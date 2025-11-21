@@ -1,30 +1,30 @@
 ---
 sidebar_label: Integration mit React
 title: Integration mit React
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Integration mit React. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: Erfahren Sie in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die Integration mit React. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
 ---
 
 # Integration mit React
 
 :::tip
-Sie sollten mit den grundlegenden Konzepten und Mustern von [**React**](https://react.dev) vertraut sein, bevor Sie diese Dokumentation lesen. Um Ihr Wissen aufzufrischen, besuchen Sie bitte die [**React Dokumentation**](https://react.dev/learn).
+Bevor Sie diese Dokumentation lesen, sollten Sie mit den grundlegenden Konzepten und Mustern von [**React**](https://react.dev) vertraut sein. Besuchen Sie zur Auffrischung bitte die [**React Dokumentation**](https://react.dev/learn).
 :::
 
 DHTMLX Kanban ist mit **React** kompatibel. Wir haben Codebeispiele vorbereitet, wie Sie DHTMLX Kanban mit **React** verwenden können. Weitere Informationen finden Sie im entsprechenden [**Beispiel auf GitHub**](https://github.com/DHTMLX/react-kanban-demo).
 
-## Erstellen eines Projekts
+## Ein Projekt erstellen
 
 :::info
-Bevor Sie mit der Erstellung eines neuen Projekts beginnen, installieren Sie [**Vite**](https://vite.dev/) (optional) und [**Node.js**](https://nodejs.org/en/).
+Installieren Sie vor dem Erstellen eines neuen Projekts [**Vite**](https://vite.dev/) (optional) und [**Node.js**](https://nodejs.org/en/).
 :::
 
-Sie können ein grundlegendes **React**-Projekt erstellen oder **React mit Vite** verwenden. Nennen wir das Projekt **my-react-kanban-app**:
+Sie können ein Standard-**React**-Projekt erstellen oder **React mit Vite** verwenden. Nennen wir das Projekt **my-react-kanban-app**:
 
 ~~~json
 npx create-react-app my-react-kanban-app
 ~~~
 
-### Installation der Abhängigkeiten
+### Abhängigkeiten installieren
 
 Wechseln Sie in das neu erstellte App-Verzeichnis:
 
@@ -32,41 +32,41 @@ Wechseln Sie in das neu erstellte App-Verzeichnis:
 cd my-react-kanban-app
 ~~~
 
-Installieren Sie die Abhängigkeiten und starten Sie den Entwicklungsserver. Verwenden Sie dazu einen Paketmanager:
+Installieren Sie die Abhängigkeiten und starten Sie den Entwicklungsserver mit einem Paketmanager:
 
-- Wenn Sie [**yarn**](https://yarnpkg.com/) verwenden, führen Sie folgende Befehle aus:
+- Wenn Sie [**yarn**](https://yarnpkg.com/) verwenden, führen Sie Folgendes aus:
 
 ~~~json
 yarn
 yarn start
 ~~~
 
-- Wenn Sie [**npm**](https://www.npmjs.com/) verwenden, führen Sie folgende Befehle aus:
+- Wenn Sie [**npm**](https://www.npmjs.com/) verwenden, führen Sie Folgendes aus:
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-Die App sollte nun auf einem lokalen Server laufen (zum Beispiel `http://localhost:3000`).
+Die App sollte nun auf einem lokalen Server laufen (z.B. `http://localhost:3000`).
 
 ## Kanban erstellen
 
-Nun sollten Sie den Quellcode von DHTMLX Kanban beziehen. Beenden Sie zunächst die App und installieren Sie das Kanban-Paket.
+Nun sollten Sie den Quellcode von DHTMLX Kanban erhalten. Beenden Sie zunächst die App und installieren Sie das Kanban-Paket.
 
-### Schritt 1. Paketinstallation
+### Schritt 1. Paket installieren
 
-Laden Sie das [**Test-Kanban-Paket**](/how_to_start/#kanban-mit-npm-oder-yarn-installieren) herunter und befolgen Sie die Schritte in der README-Datei. Beachten Sie, dass die Testversion von Kanban nur 30 Tage verfügbar ist.
+Laden Sie das [**Trial-Kanban-Paket**](/how_to_start/#kanban-mit-npm-oder-yarn-installieren) herunter und befolgen Sie die Schritte in der README-Datei. Beachten Sie, dass die Testversion von Kanban nur 30 Tage verfügbar ist.
 
-### Schritt 2. Komponentenerstellung
+### Schritt 2. Komponente erstellen
 
 Jetzt müssen Sie eine React-Komponente erstellen, um ein Kanban zum Projekt hinzuzufügen. Erstellen Sie eine neue Datei im Verzeichnis ***src/*** und nennen Sie sie ***Kanban.jsx***.
 
-#### Importieren der Quelldateien
+#### Quelldateien importieren
 
 Öffnen Sie die Datei ***Kanban.jsx*** und importieren Sie die Kanban-Quelldateien. Beachten Sie dabei:
 
-- Wenn Sie die PRO-Version verwenden und das Kanban-Paket aus einem lokalen Ordner installieren, sehen die Importpfade so aus:
+- Wenn Sie die PRO-Version nutzen und das Kanban-Paket aus einem lokalen Ordner installiert haben, sehen die Importpfade wie folgt aus:
 
 ~~~jsx title="Kanban.jsx"
 import { Kanban, Toolbar } from 'dhx-kanban-package';
@@ -84,9 +84,9 @@ import "@dhx/trial-kanban/dist/kanban.css";
 
 In diesem Tutorial sehen Sie, wie Sie die **Testversion** von Kanban konfigurieren.
 
-#### Container setzen und Kanban mit Toolbar hinzufügen
+#### Container einrichten und Kanban mit Toolbar hinzufügen
 
-Um Kanban mit Toolbar auf der Seite anzuzeigen, müssen Sie Container für Kanban und Toolbar anlegen und diese Komponenten mit den entsprechenden Konstruktoren initialisieren:
+Um Kanban mit Toolbar auf der Seite anzuzeigen, müssen Sie Container für Kanban und Toolbar anlegen und diese mit den entsprechenden Konstruktoren initialisieren:
 
 ~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -122,7 +122,7 @@ export default function KanbanComponent(props) {
 
 #### Stile hinzufügen
 
-Damit Kanban korrekt angezeigt wird, müssen Sie wichtige Stile für Kanban und seinen Container in der Haupt-CSS-Datei des Projekts festlegen:
+Damit Kanban korrekt angezeigt wird, müssen Sie die wichtigsten Stile für Kanban und seinen Container in der Haupt-CSS-Datei des Projekts festlegen:
 
 ~~~css title="index.css"
 /* Stile für die Startseite festlegen */
@@ -148,7 +148,7 @@ body,
 
 #### Daten laden
 
-Um Daten in das Kanban zu laden, müssen Sie einen Datensatz bereitstellen. Sie können die Datei ***data.js*** im Verzeichnis ***src/*** anlegen und dort einige Daten hinzufügen:
+Um Daten in das Kanban zu laden, müssen Sie einen Datensatz bereitstellen. Sie können die Datei ***data.js*** im Verzeichnis ***src/*** anlegen und einige Daten hinzufügen:
 
 ~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
@@ -202,7 +202,7 @@ export function getData() {
 }
 ~~~
 
-Öffnen Sie dann die Datei ***App.js*** und importieren Sie die Daten. Danach können Sie die Daten per **props** an die neu erstellte `<Kanban/>`-Komponente übergeben:
+Öffnen Sie dann ***App.js*** und importieren Sie die Daten. Danach können Sie die Daten per **props** an die neue `<Kanban/>`-Komponente übergeben:
 
 ~~~jsx {2,5-6} title="App.js"
 import Kanban from "./Kanban";
@@ -216,7 +216,7 @@ function App() {
 export default App;
 ~~~
 
-Öffnen Sie die Datei ***Kanban.jsx*** und wenden Sie die übergebenen **props** auf das Kanban-Konfigurationsobjekt an:
+Öffnen Sie ***Kanban.jsx*** und wenden Sie die übergebenen **props** auf das Kanban-Konfigurationsobjekt an:
 
 ~~~jsx {5,11-13} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-Sie können auch die [`parse()`](/api/methods/js_kanban_parse_method/)-Methode innerhalb der `useEffect()`-Methode von React verwenden, um Daten in Kanban zu laden:
+Sie können auch die [`setConfig()`](/api/methods/js_kanban_setconfig_method/)- oder [`parse()`](/api/methods/js_kanban_parse_method/)-Methode innerhalb der `useEffect()`-Methode von React verwenden, um Daten in Kanban zu laden. Die `setConfig`- oder `parse()`-Methode ermöglicht das Neuladen der Daten bei jeder vorgenommenen Änderung.
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -283,7 +283,8 @@ export default function KanbanComponent(props) {
             // weitere Konfigurationseigenschaften
         });
     
-        kanban.parse({ columns, cards, rows });
+        kanban.setConfig({ columns, cards, rows });
+        // oder kanban.parse({ columns, cards, rows });
 
         return () => {
             kanban.destructor();
@@ -298,9 +299,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-Die Methode `parse(data)` ermöglicht das Neuladen der Daten bei jeder Änderung.
-
-Nun ist die Kanban-Komponente einsatzbereit. Sobald das Element zur Seite hinzugefügt wird, wird Kanban mit Daten initialisiert. Sie können auch weitere Konfigurationseinstellungen vornehmen. Besuchen Sie unsere [Kanban API-Dokumentation](/api/overview/properties_overview/), um die vollständige Liste der verfügbaren Eigenschaften zu sehen.
+Nun ist die Kanban-Komponente einsatzbereit. Wenn das Element zur Seite hinzugefügt wird, wird Kanban mit Daten initialisiert. Sie können auch weitere Konfigurationseinstellungen vornehmen. Besuchen Sie unsere [Kanban API-Dokumentation](/api/overview/properties_overview/), um die vollständige Liste der verfügbaren Eigenschaften zu sehen.
 
 #### Ereignisse behandeln
 

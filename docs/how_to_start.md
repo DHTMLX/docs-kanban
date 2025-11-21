@@ -11,9 +11,9 @@ This clear and comprehensive tutorial will guide your through the steps you need
 import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
-    src={editor}
-    alt="JS Kanban Main"
-    className="img_border"
+  src={editor}
+  alt="JS Kanban Main"
+  className="img_border"
 />
 
 ## Step 1. Including source files
@@ -65,7 +65,7 @@ Now you are ready to add Kanban to the page. First, let's create the DIV contain
 - initialize Kanban and its Toolbar using the **kanban.Kanban** and **kanban.Toolbar** constructors
 
 :::info
-The Toolbar is an optional part of the Kanban interface. To create Kanban without Toolbar, you can specify only one DIV container and initialize the widget via the **kanban.Kanban** constructor  
+The Toolbar is an optional part of the Kanban interface. To create Kanban without Toolbar, you can specify only one DIV container and initialize the widget via the **kanban.Kanban** constructor 
 :::
 
 As parameters, constructors take the IDs of HTML containers where the Kanban and Toolbar will be placed into, as well as corresponding configuration objects.
