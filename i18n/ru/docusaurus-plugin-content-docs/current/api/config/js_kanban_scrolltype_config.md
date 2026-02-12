@@ -20,15 +20,15 @@ scrollType?: "default" | "column";
 Если вы используете настройку `scrollType: "column"`, вы сможете прокручивать каждую колонку отдельно.
 :::
 
-### Конфигурация по умолчанию
+### Значение по умолчанию
 
 ~~~jsx {}
 scrollType: "default"
 ~~~
 
 :::important
-Если вы комбинируете настройки [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и `scrollType: "default"`, не забудьте указать статическую высоту для карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Если не указать это, карточки не будут отображаться.
-Если вы используете `renderType: "lazy"` с [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md), мы также советуем фиксировать высоту карточек. Хотя для этого типа лейаута поддерживается переменная высота карточек, скролл может работать нестабильно с кастомизациями карточек.
+Если вы комбинируете настройки [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и `scrollType: "default"`, не забудьте указать статическую высоту для карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Если не указать высоту, карточки не будут отображаться.
+Если вы используете [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и `scrollType: "column"`, мы советуем также фиксировать высоту карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Хотя для этого типа лейаута поддерживается переменная высота карточек, скролл может работать нестабильно с кастомным содержимым карточек.
 :::
 
 ### Пример

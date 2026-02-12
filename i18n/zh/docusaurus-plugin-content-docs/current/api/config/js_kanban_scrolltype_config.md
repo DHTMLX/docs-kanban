@@ -28,7 +28,7 @@ scrollType: "default"
 
 :::important
 如果您将 [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) 和 `scrollType: "default"` 设置结合使用，请务必通过 [`cardHeight`](api/config/js_kanban_cardheight_config.md) 属性指定卡片的固定高度。否则卡片将无法显示。
-当您将 `renderType: "lazy"` 与 [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md) 一起使用时，也应该固定卡片的高度。尽管该布局类型支持可变高度的卡片，但如果卡片内容为自定义内容，显示效果可能不稳定。
+当您将 [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) 与 `scrollType: "column"` 一起使用时，也应该通过 [`cardHeight`](api/config/js_kanban_cardheight_config.md) 属性固定卡片的高度。尽管该布局类型支持可变高度的卡片，但如果卡片内容为自定义内容，显示效果可能不稳定。
 :::
 
 ### 示例

@@ -18,6 +18,7 @@ cardHeight?: number; // px
 
 :::important
 If you combine the [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) and [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md) settings, don't forget to specify a static height for cards via the `cardHeight` property. Unless you specify it, the cards will not be displayed.
+When you use [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) with [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md), you should also fix the height of cards via the `cardHeight` property. Although a variable height of cards is supported for this type of layout, it may not work in a stable manner with custom card content.
 :::
 
 ### Example
