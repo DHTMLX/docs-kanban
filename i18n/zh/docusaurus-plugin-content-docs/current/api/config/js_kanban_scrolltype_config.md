@@ -14,7 +14,7 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 scrollTy
 
 ~~~jsx {}
 scrollType?: "default" | "column";
-~~~  
+~~~
 
 :::note
 如果您使用 `scrollType: "column"` 设置，则可以分别滚动每一列。
@@ -28,6 +28,7 @@ scrollType: "default"
 
 :::important
 如果您将 [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) 和 `scrollType: "default"` 设置结合使用，请务必通过 [`cardHeight`](api/config/js_kanban_cardheight_config.md) 属性指定卡片的固定高度。否则卡片将无法显示。
+当您将 `renderType: "lazy"` 与 [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md) 一起使用时，也应该固定卡片的高度。尽管该布局类型支持可变高度的卡片，但如果卡片内容为自定义内容，显示效果可能不稳定。
 :::
 
 ### 示例

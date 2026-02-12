@@ -14,7 +14,7 @@ description: В документации библиотеки DHTMLX JavaScript 
 
 ~~~jsx {}
 scrollType?: "default" | "column";
-~~~  
+~~~
 
 :::note
 Если вы используете настройку `scrollType: "column"`, вы сможете прокручивать каждую колонку отдельно.
@@ -28,6 +28,7 @@ scrollType: "default"
 
 :::important
 Если вы комбинируете настройки [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и `scrollType: "default"`, не забудьте указать статическую высоту для карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Если не указать это, карточки не будут отображаться.
+Если вы используете `renderType: "lazy"` с [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md), мы также советуем фиксировать высоту карточек. Хотя для этого типа лейаута поддерживается переменная высота карточек, скролл может работать нестабильно с кастомизациями карточек.
 :::
 
 ### Пример

@@ -22,6 +22,7 @@ renderType?: "default" | "lazy";
 
 :::important
 Если вы используете настройки `renderType: "lazy"` и [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md) вместе, не забудьте указать статическую высоту карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Если этого не сделать, карточки будут отображаться некорректно.
+Если вы используете `renderType: "lazy"` с [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md), мы также советуем фиксировать высоту карточек. Хотя переменная высота карточек поддерживается для такого типа лейаута, скролл может работать нестабильно с кастомизациями карточки.
 :::
 
 ### Конфигурация по умолчанию

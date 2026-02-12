@@ -28,6 +28,7 @@ scrollType: "default"
 
 :::important
 [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md)와 `scrollType: "default"` 설정을 함께 사용할 경우, [`cardHeight`](api/config/js_kanban_cardheight_config.md) 속성을 통해 카드의 고정 높이를 반드시 지정해야 합니다. 지정하지 않으면 카드가 표시되지 않습니다.
+`renderType: "lazy"`와 [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md)을 함께 사용할 때에도 카드의 높이를 고정하는 것이 좋습니다. 이 레이아웃 유형에서는 카드의 가변 높이가 지원되지만, 커스텀 카드 콘텐츠와 함께 사용할 경우 안정적으로 동작하지 않을 수 있습니다.
 :::
 
 ### 예제

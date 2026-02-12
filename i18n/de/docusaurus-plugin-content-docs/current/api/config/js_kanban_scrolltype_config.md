@@ -28,6 +28,7 @@ scrollType: "default"
 
 :::important
 Wenn Sie die Einstellungen [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) und `scrollType: "default"` kombinieren, vergessen Sie nicht, eine statische Höhe für die Karten über die Eigenschaft [`cardHeight`](api/config/js_kanban_cardheight_config.md) anzugeben. Andernfalls werden die Karten nicht angezeigt.
+Wenn Sie `renderType: "lazy"` mit [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md) verwenden, sollten Sie ebenfalls die Höhe der Karten festlegen. Obwohl eine variable Höhe für Karten bei diesem Layouttyp unterstützt wird, kann dies bei individuellem Karteninhalt zu einer instabilen Darstellung führen.
 :::
 
 ### Beispiel
