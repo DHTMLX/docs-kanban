@@ -22,6 +22,7 @@ renderType?: "default" | "lazy";
 
 :::important
 When using `renderType: "lazy"` together with [`scrollType: "default"`](api/config/js_kanban_scrolltype_config.md), make sure to set a fixed height for cards using the [`cardHeight`](api/config/js_kanban_cardheight_config.md) option. Without this, cards may not display properly.
+When you use `renderType: "lazy"` with [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md), you should also fix the height of cards using the [`cardHeight`](api/config/js_kanban_cardheight_config.md) property. Although a variable height of cards is supported for this type of layout, it may not work in a stable manner with custom card content.
 :::
 
 ### Default config

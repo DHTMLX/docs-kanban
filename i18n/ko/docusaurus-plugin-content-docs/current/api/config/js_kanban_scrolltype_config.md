@@ -14,7 +14,7 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 scrollType �
 
 ~~~jsx {}
 scrollType?: "default" | "column";
-~~~  
+~~~
 
 :::note
 `scrollType: "column"` 설정을 사용하면 각 열을 개별적으로 스크롤할 수 있습니다.
@@ -28,6 +28,7 @@ scrollType: "default"
 
 :::important
 [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md)와 `scrollType: "default"` 설정을 함께 사용할 경우, [`cardHeight`](api/config/js_kanban_cardheight_config.md) 속성을 통해 카드의 고정 높이를 반드시 지정해야 합니다. 지정하지 않으면 카드가 표시되지 않습니다.
+[`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md)와 `scrollType: "column"`을 함께 사용할 때에도 [`cardHeight`](api/config/js_kanban_cardheight_config.md) 속성을 통해 카드의 높이를 고정해야 합니다. 이 레이아웃 유형에서는 카드의 가변 높이가 지원되지만, 커스텀 카드 콘텐츠와 함께 사용할 경우 안정적으로 동작하지 않을 수 있습니다.
 :::
 
 ### 예제
