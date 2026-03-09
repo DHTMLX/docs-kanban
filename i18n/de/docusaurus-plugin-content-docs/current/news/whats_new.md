@@ -6,7 +6,24 @@ description: Entdecken Sie die Neuerungen in DHTMLX Kanban sowie die Release-His
 
 # Was ist neu
 
-Wenn Sie Kanban von einer älteren Version aktualisieren, beachten Sie bitte [Migration zu neueren Versionen](news/migration.md) für Details.
+Wenn Sie Kanban von einer älteren Version aktualisieren, beachten Sie [Migration zu neueren Versionen](news/migration.md) für Details.
+
+## Version 1.7.2
+
+Veröffentlicht am 9. März 2026
+
+### Fehlerbehebungen
+
+-   Karten verschwinden beim Scrollen mit `renderType:lazy`
+-   Lazy Render und Spalten-Rendering: Falscher Endindex beim langsamen Scrollen mit der Scrollbar
+-   Lazy Render und Spaltenscroll DnD-Probleme
+-   Hotkeys für Undo/Redo: Regressionen und unerwartetes Verhalten
+-   Merkwürdiges Scroll-Verhalten auf iOS-Touchgeräten
+-   Ungespeicherte Daten gehen verloren beim Aktualisieren von Kommentar oder Stimme
+-   Falsche Menüposition für Elemente nahe am rechten Rand des Viewports
+-   DnD auf Touchgeräten: Der Drag-Node ist riesig
+-   Toolbar: 2 fehlende Locale-Labels für Tooltips
+-   Uploader-`config`-Parameter werden nicht angewendet
 
 ## Version 1.7.1
 
