@@ -8,7 +8,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 如果您正在从旧版本升级 Kanban，请查阅 [迁移到新版本](news/migration.md) 了解详细信息。
 
-# 版本 1.7.2
+## 版本 1.7.2
 
 于 2026 年 3 月 9 日发布
 

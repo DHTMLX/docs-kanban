@@ -8,7 +8,7 @@ description: You can explore what's new in DHTMLX Kanban and its release history
 
 If you are updating Kanban from an older version, check [Migration to newer versions](news/migration.md) for details.
 
-# Version 1.7.2
+## Version 1.7.2
 
 Released on March 9, 2026
 
