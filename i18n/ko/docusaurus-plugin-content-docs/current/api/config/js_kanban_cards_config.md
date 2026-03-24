@@ -75,9 +75,9 @@ cards?: [
 - `users` - (선택 사항) 여러 할당 사용자의 **ID** 배열 또는 단일 할당 사용자의 **string | number**입니다. 할당된 사용자를 지정하려면 [cardShape.users](api/config/js_kanban_cardshape_config.md) 속성에 사용자 데이터 배열을 정의해야 합니다. 사용자는 **Users** 필드에 표시됩니다.
 
 :::info
-`users?: array` - 여러 사용자를 지정할 때 [**multiselect**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) 편집기 타입을 사용하는 경우 사용자 **ID** 배열을 지정합니다.
+`users?: array` - 여러 사용자를 지정할 때 [**multiselect**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) 편집기 타입을 사용하는 경우 사용자 **ID** 배열을 지정합니다.
 
-`users?: string | number` - 단일 사용자를 지정할 때 [**combo** 또는 **select**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) 편집기 타입을 사용하는 경우 단일 **ID**를 지정합니다.
+`users?: string | number` - 단일 사용자를 지정할 때 [**combo** 또는 **select**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) 편집기 타입을 사용하는 경우 단일 **ID**를 지정합니다.
 :::
 
 - `priority` - (선택 사항) 카드 우선순위 **ID**입니다. 카드 우선순위를 지정하려면 [cardShape.priority](api/config/js_kanban_cardshape_config.md) 속성에 우선순위 데이터 배열을 정의해야 합니다. **Priority** 필드에 표시됩니다.

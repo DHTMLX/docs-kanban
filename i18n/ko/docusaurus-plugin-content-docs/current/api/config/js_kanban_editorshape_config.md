@@ -231,7 +231,7 @@ Kanban 편집기에서는 다음 필드 유형을 사용할 수 있습니다: **
     - `error` - (선택 사항) 오류 스타일 적용 여부
     - `title` - (선택 사항) 추가 정보용 타이틀 설정
 
-#### - "combo", "select", "multiselect" 유형 매개변수
+#### - "combo", "select", "multiselect" 유형 매개변수 {#parameters-for-combo-select-and-multiselect-types}
 
 - `values` - (선택 사항) 드롭다운 옵션 데이터 객체 배열. 다음 매개변수를 지정할 수 있습니다:
     - `id` - (필수) 옵션 ID
@@ -359,7 +359,7 @@ interface UploadEvent extends PointerEvent {
 `editorShape` 속성을 통해 편집기 설정을 지정하지 않으면, 위젯은 **defaultEditorShape** 기본 설정 매개변수 집합을 적용합니다!
 :::
 
-### 기본 구성
+### 기본 구성 {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [

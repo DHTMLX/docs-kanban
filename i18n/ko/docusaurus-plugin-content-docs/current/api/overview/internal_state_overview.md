@@ -8,6 +8,6 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 JavaScript Ka
 
 | 이름                                                     | 설명                                                        |
 | -------------------------------------------------------- | ------------------------------------------------------------ |
-| [](../internal/js_kanban_getreactivestate_method.md)     | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
-| [](../internal/js_kanban_getstate_method.md)             | @getshort(../internal/js_kanban_getstate_method.md)          |
-| [](../internal/js_kanban_getstores_method.md)            | @getshort(../internal/js_kanban_getstores_method.md)         |
+| [](api/internal/js_kanban_getreactivestate_method.md)     | @getshort(api/internal/js_kanban_getreactivestate_method.md)  |
+| [](api/internal/js_kanban_getstate_method.md)             | @getshort(api/internal/js_kanban_getstate_method.md)          |
+| [](api/internal/js_kanban_getstores_method.md)            | @getshort(api/internal/js_kanban_getstores_method.md)         |

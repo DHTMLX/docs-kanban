@@ -8,4 +8,4 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 JavaScript Ka
 
 | 이름                                          | 설명                                              |
 | --------------------------------------------- | -------------------------------------------------- |
-| [](../common/js_kanban_meta_parameter.md)     | @getshort(../common/js_kanban_meta_parameter.md)   |
+| [](api/common/js_kanban_meta_parameter.md)     | @getshort(api/common/js_kanban_meta_parameter.md)   |
