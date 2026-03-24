@@ -231,7 +231,7 @@ Die Werte dieser Schlüssel werden in der [`cardShape`](api/config/js_kanban_car
     - `error` - (optional) definiert, ob Fehlerstilierung auf die Farbsteuerung angewandt wird
     - `title` - (optional) setzt einen Titel mit zusätzlichen Informationen zur Farbsteuerung
 
-#### - Parameter für die Typen "combo", "select" und "multiselect"
+#### - Parameter für die Typen "combo", "select" und "multiselect" {#parameters-for-combo-select-and-multiselect-types}
 
 - `values` - (optional) ein Array von Objekten mit den Dropdown-Optionen. Hier können Sie folgende Parameter angeben:
     - `id` - (erforderlich) eine Options-ID
@@ -359,7 +359,7 @@ interface UploadEvent extends PointerEvent {
 Wenn Sie die Editor-Einstellungen nicht über die Eigenschaft `editorShape` angeben, verwendet das Widget einen Satz von Parametern namens **defaultEditorShape**!
 :::
 
-### Standardkonfiguration
+### Standardkonfiguration {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [

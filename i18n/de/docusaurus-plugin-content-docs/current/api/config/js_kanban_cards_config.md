@@ -75,9 +75,9 @@ Für jede Karte können Sie folgende Parameter (Daten) angeben:
 - `users` - (optional) ein **Array** mit **IDs** für mehrere zugewiesene Benutzer oder **string | number** für einen einzelnen zugewiesenen Benutzer. Um die zugewiesenen Benutzer anzugeben, müssen Sie ein Array mit Benutzerdaten in der Eigenschaft [cardShape.users](api/config/js_kanban_cardshape_config.md) definieren. Die Benutzer werden im Feld **Benutzer** angezeigt
 
 :::info
-`users?: array` - geben Sie ein **Array** mit Benutzer-**IDs** an, wenn Sie den Editor-Typ [**multiselect**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) verwenden, um mehrere Benutzer zuzuweisen
+`users?: array` - geben Sie ein **Array** mit Benutzer-**IDs** an, wenn Sie den Editor-Typ [**multiselect**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) verwenden, um mehrere Benutzer zuzuweisen
 
-`users?: string | number` - geben Sie eine einzelne **ID** an, wenn Sie die Editor-Typen [**combo** oder **select**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) verwenden, um einen einzelnen Benutzer zuzuweisen
+`users?: string | number` - geben Sie eine einzelne **ID** an, wenn Sie die Editor-Typen [**combo** oder **select**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) verwenden, um einen einzelnen Benutzer zuzuweisen
 :::
 
 - `priority` - (optional) eine Kartenprioritäts-**ID**. Um die Kartenpriorität anzugeben, müssen Sie ein Array mit Prioritätsdaten in der Eigenschaft [cardShape.priority](api/config/js_kanban_cardshape_config.md) definieren. Wird im Feld **Priorität** angezeigt

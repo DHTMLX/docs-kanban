@@ -121,7 +121,7 @@ In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Spalten durchführen
 | [Serializing column data](api/methods/js_kanban_serialize_method.md)| Lernen Sie, wie Sie Spaltendaten serialisieren      |
 | [Updating column data](api/methods/js_kanban_updatecolumn_method.md)| Lernen Sie, wie Sie Spaltendaten aktualisieren         |
 
-## Arbeiten mit Zeilen (Swimlanes)
+## Arbeiten mit Zeilen (Swimlanes) {#how-to-work-with-rows-swimlanes}
 
 In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Zeilen durchführen und mit Zeilendaten arbeiten.
 

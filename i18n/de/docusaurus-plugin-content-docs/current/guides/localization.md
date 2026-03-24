@@ -8,7 +8,7 @@ description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahr
 
 Sie können alle Beschriftungen in der Oberfläche von JavaScript Kanban lokalisieren. Dazu müssen Sie entweder eine neue Sprachumgebung erstellen oder eine integrierte anpassen und sie auf Kanban und Toolbar (*separat*) anwenden.
 
-## Standardmäßige Sprachumgebung
+## Standardmäßige Sprachumgebung {#default-locale}
 
 Die **englische** Sprachumgebung wird standardmäßig verwendet:
 
