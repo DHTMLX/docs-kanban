@@ -23,14 +23,14 @@
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.70.0",
+    "sass": "^1.98.0",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.1",
     "@docusaurus/types": "^3.9.1",
     "dhx-md-data-parser": "file:local_modules/dhx-md-data-parser",
-    "docusaurus-plugin-sass": "^0.2.5"
+    "docusaurus-plugin-sass": "^0.2.6"
   },
   "engines": {
     "node": ">=20.0"
