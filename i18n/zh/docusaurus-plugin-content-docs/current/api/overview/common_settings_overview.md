@@ -8,4 +8,4 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScr
 
 | 名称                                          | 描述                                               |
 | --------------------------------------------- | -------------------------------------------------- |
-| [](../common/js_kanban_meta_parameter.md)     | @getshort(../common/js_kanban_meta_parameter.md)   |
+| [](api/common/js_kanban_meta_parameter.md)     | @getshort(api/common/js_kanban_meta_parameter.md)   |

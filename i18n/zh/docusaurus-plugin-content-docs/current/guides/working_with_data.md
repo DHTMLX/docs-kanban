@@ -123,7 +123,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## 从本地数据源加载数据
+## 从本地数据源加载数据 {#loading-data-from-local-source}
 
 要从本地数据源加载 ***columns***、***rows***、***cards*** 和 ***links*** 的数据，可以使用 [`setConfig()`](api/methods/js_kanban_setconfig_method.md) 或 [`parse()`](api/methods/js_kanban_parse_method.md) 方法。
 

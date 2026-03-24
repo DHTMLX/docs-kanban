@@ -177,7 +177,7 @@ cardShape?: {
     如果将 `maxCount` 设置为 `false`，则卡片上将显示所有已分配用户。
 
     :::info
-    ***users*** 字段默认禁用。要启用它，需将 `show` 参数设置为 `true`，并通过 `values` 参数提供相应的用户数据。若要通过编辑器分配新用户，需通过 [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) 属性配置相应控件。使用 ***select*** 类型分配单个用户，使用 ***multiselect*** 类型分配多个用户。
+    ***users*** 字段默认禁用。要启用它，需将 `show` 参数设置为 `true`，并通过 `values` 参数提供相应的用户数据。若要通过编辑器分配新用户，需通过 [`editorShape`](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) 属性配置相应控件。使用 ***select*** 类型分配单个用户，使用 ***multiselect*** 类型分配多个用户。
 
     ~~~jsx {}
     cardShape: {
@@ -212,7 +212,7 @@ cardShape?: {
 除非通过 **cardShape** 属性指定卡片设置，否则组件将应用 **defaultCardShape** 的默认参数集！
 :::
 
-### 默认配置
+### 默认配置 {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [

@@ -10,6 +10,6 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScr
 
 | 名称                                                      | 描述                                                     |
 | --------------------------------------------------------- | ------------------------------------------------------- |
-| [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
-| [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
-| [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |
+| [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
+| [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
+| [](api/config/toolbar_locale_config.md)                    | @getshort(api/config/toolbar_locale_config.md)           |

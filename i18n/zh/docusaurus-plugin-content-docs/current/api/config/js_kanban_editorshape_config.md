@@ -231,7 +231,7 @@ editorShape?: [
     - `error` - （可选）定义是否对颜色控件应用错误样式
     - `title` - （可选）设置颜色控件的附加信息标题
 
-#### - "combo"、"select" 和 "multiselect" 类型的参数
+#### - "combo"、"select" 和 "multiselect" 类型的参数 {#parameters-for-combo-select-and-multiselect-types}
 
 - `values` - （可选）包含下拉选项数据的对象数组。可以指定以下参数：
     - `id` - （必填）选项 ID
@@ -359,7 +359,7 @@ interface UploadEvent extends PointerEvent {
 如果未通过 `editorShape` 属性指定编辑器设置，控件将使用一组 **defaultEditorShape** 默认参数！
 :::
 
-### 默认配置
+### 默认配置 {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [

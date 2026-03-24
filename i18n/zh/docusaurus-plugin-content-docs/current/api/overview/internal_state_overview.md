@@ -8,6 +8,6 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScr
 
 | 名称                                                     | 描述                                                         |
 | -------------------------------------------------------- | ------------------------------------------------------------ |
-| [](../internal/js_kanban_getreactivestate_method.md)     | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
-| [](../internal/js_kanban_getstate_method.md)             | @getshort(../internal/js_kanban_getstate_method.md)          |
-| [](../internal/js_kanban_getstores_method.md)            | @getshort(../internal/js_kanban_getstores_method.md)         |
+| [](api/internal/js_kanban_getreactivestate_method.md)     | @getshort(api/internal/js_kanban_getreactivestate_method.md)  |
+| [](api/internal/js_kanban_getstate_method.md)             | @getshort(api/internal/js_kanban_getstate_method.md)          |
+| [](api/internal/js_kanban_getstores_method.md)            | @getshort(api/internal/js_kanban_getstores_method.md)         |
