@@ -8,4 +8,4 @@ description: Here’s an overview of the common settings for JavaScript Kanban i
 
 | Name                                          | Description                                        |
 | --------------------------------------------- | -------------------------------------------------- |
-| [](../common/js_kanban_meta_parameter.md)     | @getshort(../common/js_kanban_meta_parameter.md)   |
+| [](api/common/js_kanban_meta_parameter.md)     | @getshort(api/common/js_kanban_meta_parameter.md)   |
