@@ -75,9 +75,9 @@ cards?: [
 - `users` - (необязательно) **массив** с **ID** нескольких назначенных пользователей или **string | number** для одного назначенного пользователя. Для указания назначенных пользователей нужно определить массив с данными пользователей в свойстве [cardShape.users](api/config/js_kanban_cardshape_config.md). Пользователи отображаются в поле **Users**
 
 :::info
-`users?: array` - указывайте **массив** с ID пользователей, если используете редактор типа [**multiselect**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) для назначения нескольких пользователей
+`users?: array` - указывайте **массив** с ID пользователей, если используете редактор типа [**multiselect**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) для назначения нескольких пользователей
 
-`users?: string | number` - указывайте один ID, если используете редакторы типа [**combo** или **select**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) для назначения одного пользователя
+`users?: string | number` - указывайте один ID, если используете редакторы типа [**combo** или **select**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) для назначения одного пользователя
 :::
 
 - `priority` - (необязательно) **ID** приоритета карточки. Для указания приоритетов карточек нужно определить массив с данными приоритетов в свойстве [cardShape.priority](api/config/js_kanban_cardshape_config.md). Отображается в поле **Priority**

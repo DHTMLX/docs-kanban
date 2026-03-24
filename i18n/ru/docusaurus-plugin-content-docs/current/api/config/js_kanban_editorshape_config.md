@@ -231,7 +231,7 @@ editorShape?: [
     - `error` - (необязательно) применяет стили для отображения ошибки в контроле Color
     - `title` - (необязательно) задаёт заголовок с дополнительной информацией, связанной с контролом Color
 
-#### - Параметры для типов "combo", "select" и "multiselect"
+#### - Параметры для типов "combo", "select" и "multiselect" {#parameters-for-combo-select-and-multiselect-types}
 
 - `values` - (необязательно) массив объектов с данными для выпадающего списка. Здесь можно указать следующие параметры:
     - `id` - (обязательно) ID опции
@@ -359,7 +359,7 @@ interface UploadEvent extends PointerEvent {
 Если вы не указываете настройки редактора через свойство `editorShape`, виджет применит набор параметров **defaultEditorShape** по умолчанию!
 :::
 
-### Конфигурация по умолчанию
+### Конфигурация по умолчанию {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [

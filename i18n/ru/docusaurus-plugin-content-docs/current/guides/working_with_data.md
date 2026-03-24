@@ -123,7 +123,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## Загрузка данных из локального источника
+## Загрузка данных из локального источника {#loading-data-from-local-source}
 
 Чтобы загрузить данные для ***columns***, ***rows***, ***cards*** и ***links*** из локального источника, вы можете использовать метод [`setConfig()`](api/methods/js_kanban_setconfig_method.md) или [`parse()`](api/methods/js_kanban_parse_method.md).
 
