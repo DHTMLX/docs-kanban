@@ -8,4 +8,4 @@ description: You can have an Internal Export methods overview of JavaScript Kanb
 
 | Name                                         | Description                                        |
 | -------------------------------------------- | -------------------------------------------------- |
-| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |
+| [](api/internal/js_kanban_json_method.md)     | @getshort(api/internal/js_kanban_json_method.md)    |

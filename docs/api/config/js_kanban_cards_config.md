@@ -75,9 +75,9 @@ For each card you can specify the following parameters (data):
 - `users` - (optional) an **array** with **ID**s for multiple assigned users or **string | number**  for a single assigned user. To specify the assigned users, you need to define an array with users data in the [cardShape.users](api/config/js_kanban_cardshape_config.md) property. The users are displayed in the **Users** field
 
 :::info
-`users?: array` - specify **array** with users **ID**s, if you use the [**multiselect**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) editor type to assign multiple users
+`users?: array` - specify **array** with users **ID**s, if you use the [**multiselect**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) editor type to assign multiple users
 
-`users?: string | number` - specify a single **ID**, if you use the [**combo** or **select**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) editor types to assign a single user
+`users?: string | number` - specify a single **ID**, if you use the [**combo** or **select**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) editor types to assign a single user
 :::
 
 - `priority` - (optional) a card priority **ID**. To specify the card priority, you need to define an array with priorities data in the [cardShape.priority](api/config/js_kanban_cardshape_config.md) property. It is displayed in the **Priority** field

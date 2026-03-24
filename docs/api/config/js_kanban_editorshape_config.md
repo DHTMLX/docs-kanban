@@ -231,7 +231,7 @@ The values of these keys used in the [`cardShape`](api/config/js_kanban_cardshap
     - `error` - (optional) defines whether error styling is applied to the Color control
     - `title` - (optional) sets a title with additional info related the Color control
 
-#### - Parameters for "combo", "select" and "multiselect" types
+#### - Parameters for "combo", "select" and "multiselect" types {#parameters-for-combo-select-and-multiselect-types}
 
 - `values` - (optional) an array of objects containing the dropdown options data. Here you can specify the following parameters:
     - `id` - (required) an option **ID**
