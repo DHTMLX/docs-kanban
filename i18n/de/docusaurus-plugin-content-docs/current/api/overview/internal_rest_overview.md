@@ -8,9 +8,9 @@ description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek finden
 
 | Name                                                         | Beschreibung                                                      |
 | ------------------------------------------------------------ | ----------------------------------------------------------------- |
-| [](../provider/rest_methods/js_kanban_getcards_method.md)    | @getshort(../provider/rest_methods/js_kanban_getcards_method.md)  |
-| [](../provider/rest_methods/js_kanban_getcolumns_method.md)  | @getshort(../provider/rest_methods/js_kanban_getcolumns_method.md)|
-| [](../provider/rest_methods/js_kanban_getlinks_method.md)    | @getshort(../provider/rest_methods/js_kanban_getlinks_method.md)  |
-| [](../provider/rest_methods/js_kanban_getrows_method.md)     | @getshort(../provider/rest_methods/js_kanban_getrows_method.md)   |
-| [](../provider/rest_methods/js_kanban_getusers_method.md)    | @getshort(../provider/rest_methods/js_kanban_getusers_method.md)  |
-| [](../provider/rest_methods/js_kanban_send_method.md)        | @getshort(../provider/rest_methods/js_kanban_send_method.md)      |
+| [](api/provider/rest_methods/js_kanban_getcards_method.md)    | @getshort(api/provider/rest_methods/js_kanban_getcards_method.md)  |
+| [](api/provider/rest_methods/js_kanban_getcolumns_method.md)  | @getshort(api/provider/rest_methods/js_kanban_getcolumns_method.md)|
+| [](api/provider/rest_methods/js_kanban_getlinks_method.md)    | @getshort(api/provider/rest_methods/js_kanban_getlinks_method.md)  |
+| [](api/provider/rest_methods/js_kanban_getrows_method.md)     | @getshort(api/provider/rest_methods/js_kanban_getrows_method.md)   |
+| [](api/provider/rest_methods/js_kanban_getusers_method.md)    | @getshort(api/provider/rest_methods/js_kanban_getusers_method.md)  |
+| [](api/provider/rest_methods/js_kanban_send_method.md)        | @getshort(api/provider/rest_methods/js_kanban_send_method.md)      |

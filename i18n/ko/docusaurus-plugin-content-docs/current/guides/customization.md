@@ -8,7 +8,7 @@ description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 사용자 
 
 Kanban을 구성하는 것 외에도, 외관과 동작을 자유롭게 사용자 정의할 수 있습니다. 위젯에서는 카드에 대한 사용자 정의 템플릿 지정, 카드·컬럼·행에 대한 컨텍스트 메뉴 수정, 툴바 구조 및 기능 변경, Kanban에 맞춤형 CSS 스타일 적용이 가능합니다.
 
-## 사용자 정의 카드
+## 사용자 정의 카드 {#custom-cards}
 
 카드를 사용자 정의 템플릿으로 표시하려면 [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) 속성을 사용할 수 있습니다. 이 속성은 원하는 스타일과 로직을 정의하여 Kanban에 적용할 수 있는 콜백 함수입니다. 아래의 예제를 참고하세요:
 
@@ -20,7 +20,7 @@ Kanban을 구성하는 것 외에도, 외관과 동작을 자유롭게 사용자
 
 <iframe src="https://snippet.dhtmlx.com/8eo65gr5?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## 사용자 정의 툴바
+## 사용자 정의 툴바 {#custom-toolbar}
 
 툴바의 구조와 기능을 사용자 정의하려면 [`items`](api/config/toolbar_items_config.md) 속성을 사용할 수 있습니다. 이 설정의 배열 내에서 필요한 컨트롤을 정의하고, 원하는 순서로 배치하며, 동작도 변경할 수 있습니다.
 

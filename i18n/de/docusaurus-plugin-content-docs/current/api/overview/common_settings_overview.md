@@ -8,4 +8,4 @@ description: Sie finden eine Übersicht der allgemeinen Einstellungen von JavaSc
 
 | Name                                          | Beschreibung                                        |
 | --------------------------------------------- | -------------------------------------------------- |
-| [](../common/js_kanban_meta_parameter.md)     | @getshort(../common/js_kanban_meta_parameter.md)   |
+| [](api/common/js_kanban_meta_parameter.md)     | @getshort(api/common/js_kanban_meta_parameter.md)   |

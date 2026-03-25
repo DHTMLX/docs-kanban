@@ -20,7 +20,7 @@ Das Aussehen und die Funktionalität von *Kanban* können Sie über die entsprec
 - Daten für Karten, Spalten, Zeilen und Verknüpfungen über die entsprechenden Eigenschaften [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md) und [`links`](api/config/js_kanban_links_config.md) zu laden
     - *Details finden Sie im Abschnitt [**Working with data**](guides/working_with_data.md)!*
 
-## Karten
+## Karten {#cards}
 
 Das Kanban-Board besteht aus *Karten*, die auf *Spalten* und *Zeilen* verteilt sind. Sie können das Erscheinungsbild der Karten mit der [`cardShape`](api/config/js_kanban_cardshape_config.md) Konfigurationseigenschaft anpassen. Es gibt mehrere vordefinierte Felder, die Sie in die Kartenvorlage einfügen (oder ausschließen) können, nämlich:
 
@@ -139,8 +139,8 @@ Der *Editor* von Kanban besteht aus Feldern zur Verwaltung der Kartendaten. Zum 
 - [**progress**](#progress-typ)
 - [**files**](#files-typ)
 - [**date** und **dataRange**](#date--und-daterange-typen)
-- [**comments**](#comments-typ)
-- [**links**](#links-typ)
+- [**comments**](#comments-type)
+- [**links**](#links-type)
 
 ### Combo-, Select- und Multiselect-Typen
 
@@ -361,7 +361,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Comments-Typ
+### Comments-Typ {#comments-type}
 
 Das Editor-Feld vom Typ **comments** kann wie folgt gesetzt werden:
 
@@ -384,7 +384,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Links-Typ
+### Links-Typ {#links-type}
 
 Das Editor-Feld vom Typ **links** kann wie folgt gesetzt werden:
 

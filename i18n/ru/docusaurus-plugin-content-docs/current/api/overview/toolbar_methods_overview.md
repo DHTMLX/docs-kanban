@@ -8,6 +8,6 @@ description: В документации библиотеки DHTMLX JavaScript 
 
 | Название                                                 | Описание                                               |
 | -------------------------------------------------------- | ------------------------------------------------------- |
-| [](../methods/toolbar_destructor_method.md)              | @getshort(../methods/toolbar_destructor_method.md)      |
-| [](../methods/toolbar_setconfig_method.md)               | @getshort(../methods/toolbar_setconfig_method.md)       |
-| [](../methods/toolbar_setlocale_method.md)               | @getshort(../methods/toolbar_setlocale_method.md)       |
+| [](api/methods/toolbar_destructor_method.md)              | @getshort(api/methods/toolbar_destructor_method.md)      |
+| [](api/methods/toolbar_setconfig_method.md)               | @getshort(api/methods/toolbar_setconfig_method.md)       |
+| [](api/methods/toolbar_setlocale_method.md)               | @getshort(api/methods/toolbar_setlocale_method.md)       |

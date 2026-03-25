@@ -8,4 +8,4 @@ description: В документации библиотеки DHTMLX JavaScript 
 
 | Название                                     | Описание                                         |
 | -------------------------------------------- | ------------------------------------------------ |
-| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)  |
+| [](api/internal/js_kanban_json_method.md)     | @getshort(api/internal/js_kanban_json_method.md)  |

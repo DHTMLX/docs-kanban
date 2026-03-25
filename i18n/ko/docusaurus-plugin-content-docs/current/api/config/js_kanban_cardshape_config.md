@@ -177,7 +177,7 @@ cardShape?: {
     `maxCount`를 `false`로 설정하면 카드에 할당된 모든 사용자가 표시됩니다.
 
     :::info
-    ***users*** 필드는 기본적으로 비활성화되어 있습니다. 활성화하려면 `show` 매개변수를 `true`로 설정하고 `values` 매개변수를 통해 해당 사용자 데이터를 제공해야 합니다. 편집기에서 새 사용자를 할당하려면 [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) 속성을 통해 해당 컨트롤을 구성해야 합니다. 한 명 또는 여러 명의 사용자를 할당하려면 ***select*** 유형 또는 ***multiselect*** 유형을 사용하세요.
+    ***users*** 필드는 기본적으로 비활성화되어 있습니다. 활성화하려면 `show` 매개변수를 `true`로 설정하고 `values` 매개변수를 통해 해당 사용자 데이터를 제공해야 합니다. 편집기에서 새 사용자를 할당하려면 [`editorShape`](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) 속성을 통해 해당 컨트롤을 구성해야 합니다. 한 명 또는 여러 명의 사용자를 할당하려면 ***select*** 유형 또는 ***multiselect*** 유형을 사용하세요.
 
     ~~~jsx {}
     cardShape: {
@@ -212,7 +212,7 @@ cardShape?: {
 **cardShape** 속성으로 카드 설정을 지정하지 않으면 위젯은 **defaultCardShape** 기본 매개변수 집합을 적용합니다!
 :::
 
-### 기본 구성
+### 기본 구성 {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [

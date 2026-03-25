@@ -231,7 +231,7 @@ These keys should match those used in the [`cardShape`](api/config/js_kanban_car
     - `error` - (optional) applies error styling
     - `title` - (optional) extra info title
 
-#### - Parameters for "combo", "select" and "multiselect" types
+#### - Parameters for "combo", "select" and "multiselect" types {#parameters-for-combo-select-and-multiselect-types}
 
 - `values` - (optional) an array of option objects, each with:
     - `id` - (required) option ID

@@ -8,6 +8,6 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 JavaScript Ka
 
 | 이름                                                     | 설명                                                    |
 | -------------------------------------------------------- | ------------------------------------------------------- |
-| [](../methods/toolbar_destructor_method.md)              | @getshort(../methods/toolbar_destructor_method.md)      |
-| [](../methods/toolbar_setconfig_method.md)               | @getshort(../methods/toolbar_setconfig_method.md)       |
-| [](../methods/toolbar_setlocale_method.md)               | @getshort(../methods/toolbar_setlocale_method.md)       |
+| [](api/methods/toolbar_destructor_method.md)              | @getshort(api/methods/toolbar_destructor_method.md)      |
+| [](api/methods/toolbar_setconfig_method.md)               | @getshort(api/methods/toolbar_setconfig_method.md)       |
+| [](api/methods/toolbar_setlocale_method.md)               | @getshort(api/methods/toolbar_setlocale_method.md)       |

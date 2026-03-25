@@ -278,7 +278,7 @@ Next, set up rules for grouping cards. For example, you might group cards into c
 There are a couple of ways to group cards by status into a single column:
 
 - [Server side](#server-side-grouping)
-- [Server side + client side](#server-side--client-side-grouping)
+- [Server side + client side](#server-side-client-side-grouping)
 
 ### Server side grouping
 
@@ -317,7 +317,7 @@ func Update(id int, c Card) error {
 
 So when a user changes the status, the server checks it and puts the card in the right column. Then, the server uses WebSocket to let the client know the card needs to move.
 
-### Server side + client side grouping
+### Server side + client side grouping {#server-side-client-side-grouping}
 
 For a mixed approach, get the grouping rules from the server. Then, the client can figure out which column a card belongs to based on its status.
 

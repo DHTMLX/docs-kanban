@@ -278,7 +278,7 @@ Anschließend müssen Sie spezielle Regeln für die Gruppierung der Karten erste
 Es gibt zwei Möglichkeiten, wie Sie eine solche Gruppierung von Karten in einer Spalte nach zwei oder mehr Status umsetzen können:
 
 - [Serverseitig](#serverseitige-gruppierung)
-- [Serverseitig + clientseitig](#serverseitige--clientseitige-gruppierung)
+- [Serverseitig + clientseitig](#serverseitige-clientseitige-gruppierung)
 
 ### Serverseitige Gruppierung
 
@@ -317,7 +317,7 @@ func Update(id int, c Card) error {
 
 Wenn der Benutzer den Wert des Statusfelds ändert, prüft die Serverlogik den Wert und platziert die Karte in der entsprechenden Spalte. Anschließend verwendet der Server WebSocket, um dem Client mitzuteilen, dass die Karte in eine andere Spalte verschoben werden muss.
 
-### Serverseitige + clientseitige Gruppierung
+### Serverseitige + clientseitige Gruppierung {#serverseitige-clientseitige-gruppierung}
 
 Für den gemischten Server- + Client-Ansatz sollten Sie Gruppierungsregeln vom Server abrufen. Gemäß diesen Regeln kann der Client bestimmen, in welche Spalte die Karte je nach Wert des Statusfelds verschoben wird.
 

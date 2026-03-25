@@ -48,7 +48,7 @@ const onAtNotationMatch = (data, { key }) => {
 
 const onAtNotationFunctionMatch = (data, { key, fullMatch, dir }) => {
 	if (data.indexOf('.md') !== -1 || data.indexOf('.mdx') !== -1 || data.indexOf('.') === -1) {
-		const result = readFile(dir, data);
+		const result = readFileFromPath(dir, data);
 		return result ? /@short: (.*)/g.exec(result)[1] : fullMatch;
 	}
 	return fullMatch;
@@ -88,11 +88,71 @@ const readFile = (workingDir, filePath) => {
 	return fs.readFileSync(path.normalize(finalPath), 'utf8');
 };
 
+const getContentRelativePath = (dir, filePath) => {
+	// Already a docs-root-relative path (no ./ or ../ prefix) — return as-is
+	if (!filePath.startsWith('.')) {
+		return filePath;
+	}
+
+	const absolutePath = path.resolve(dir, filePath).replace(/\\/g, '/');
+	const i18nDir = path.join(__dirname, 'i18n').replace(/\\/g, '/');
+	const docsDir = path.join(__dirname, 'docs').replace(/\\/g, '/');
+
+	if (absolutePath.startsWith(i18nDir + '/')) {
+		const currentIndex = absolutePath.indexOf('/current/');
+		if (currentIndex !== -1) {
+			return absolutePath.substring(currentIndex + '/current/'.length);
+		}
+	}
+
+	if (absolutePath.startsWith(docsDir + '/')) {
+		return absolutePath.substring(docsDir.length + 1);
+	}
+
+	return filePath;
+};
+
+// Returns the content root for i18n files (i18n/XX/.../current), or null for docs/ files.
+const getLocaleContentRoot = (dir) => {
+	const normalizedDir = dir.replace(/\\/g, '/');
+	const currentIndex = normalizedDir.indexOf('/current/');
+	if (currentIndex !== -1 && normalizedDir.includes('/i18n/')) {
+		return normalizedDir.substring(0, currentIndex + '/current'.length);
+	}
+	return null;
+};
+
+// Reads a file by path, supporting both relative (../foo.md) and docs-root-relative (api/foo.md) formats.
+// For i18n files, tries the localized version first before falling back to docs/.
+const readFileFromPath = (dir, filePath) => {
+	const result = readFile(dir, filePath);
+	if (result) return result;
+
+	// If path doesn't start with . it may be docs-root-relative
+	if (!filePath.startsWith('.')) {
+		// For i18n files: try the locale's content root first (localized version)
+		const localeRoot = getLocaleContentRoot(dir);
+		if (localeRoot) {
+			const localeResult = readFile(localeRoot, filePath);
+			if (localeResult) return localeResult;
+		}
+
+		// Fall back to docs/ (English)
+		const docsDir = path.join(__dirname, 'docs').replace(/\\/g, '/');
+		return readFile(docsDir, filePath);
+	}
+
+	return false;
+};
+
 const onEmptyLinkMatch = (data, { key, fullMatch, dir }) => {
 	const filePath = fullMatch.substring(fullMatch.indexOf('(') + 1, fullMatch.length - 1);
 	if (filePath.indexOf('.md') !== -1 || filePath.indexOf('.mdx') !== -1 || filePath.indexOf('.') === -1) {
-		const data = readFile(dir, filePath);
-		return data ? `[${/.*sidebar_label: (.+)/g.exec(data)[1]}]${fullMatch.match(/\(\D+\)/g)[0]}` : fullMatch;
+		const fileData = readFileFromPath(dir, filePath);
+		if (!fileData) return fullMatch;
+		const label = /.*sidebar_label: (.+)/g.exec(fileData)[1];
+		const normalizedPath = getContentRelativePath(dir, filePath);
+		return `[${label}](${normalizedPath})`;
 	}
 	return fullMatch;
 };

@@ -8,4 +8,4 @@ description: 您可以在 DHTMLX JavaScript 看板库的文档中查看 JavaScri
 
 | 名称                                         | 描述                                        |
 | -------------------------------------------- | -------------------------------------------- |
-| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |
+| [](api/internal/js_kanban_json_method.md)     | @getshort(api/internal/js_kanban_json_method.md)    |

@@ -32,28 +32,28 @@ import TabItem from '@theme/TabItem';
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md)</td>
 <td>获取所有卡片数据，返回包含卡片对象数组的 JSON 对象</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td><a href="api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md)</td>
 <td>创建新卡片，返回包含新卡片 ID 的 JSON 对象</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)</td>
 <td>更新指定卡片的数据，返回空 JSON 对象</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md"> /cards/id/move</a></td>
+<td>[/cards/id/move](api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md)</td>
 <td>将卡片移动到指定位置</td>
 </tr>
 
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)</td>
 <td>删除卡片数据</td>
 </tr>
 </tbody>
@@ -74,27 +74,27 @@ import TabItem from '@theme/TabItem';
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md)</td>
 <td>获取所有行数据，返回包含行（泳道）对象数组的 JSON 对象</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md"> /rows</a></td>
+<td >[/rows](api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md)</td>
 <td>添加新行，返回包含行 ID 的 JSON 对象</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)</td>
 <td>更新指定行（泳道）数据，返回空 JSON 对象</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md"> /rows/id/move</a></td>
+<td>[/rows/id/move](api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)</td>
 <td>将行移动到指定位置</td>
 </tr>
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)</td>
 <td>删除行数据</td>
 </tr>
 </tbody>
@@ -114,27 +114,27 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)</td>
                 <td>获取所有列数据，返回包含列对象数组的 JSON 对象</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md"> /columns</a></td>
+                <td >[/columns](api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md)</td>
                 <td>添加新列，返回包含列 ID 的 JSON 对象</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md)</td>
                 <td>更新指定列数据，返回空 JSON 对象</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md"> /columns/id/move</a></td>
+                <td>[/columns/id/move](api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)</td>
                 <td>将列移动到指定位置</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)</td>
                 <td>删除列数据</td>
             </tr>
         </tbody>
@@ -154,17 +154,17 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)</td>
                 <td>获取所有链接数据，返回包含链接对象数组的 JSON 对象</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_links_route.md"> /links</a></td>
+                <td >[/links](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)</td>
                 <td>创建新链接，返回包含新链接 ID 的 JSON 对象</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)</td>
                 <td>删除链接数据</td>
             </tr>
         </tbody>
@@ -184,12 +184,12 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md)</td>
                 <td>从服务器获取请求的二进制文件</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td><a href="api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)</td>
                 <td>上传二进制文件至服务器，返回包含文件 id、名称和 url 的 JSON 对象</td>
             </tr>
         </tbody>

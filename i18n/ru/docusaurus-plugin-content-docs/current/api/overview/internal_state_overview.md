@@ -8,6 +8,6 @@ description: Вы можете ознакомиться с обзором вну
 
 | Название                                                 | Описание                                                    |
 | -------------------------------------------------------- | ------------------------------------------------------------ |
-| [](../internal/js_kanban_getreactivestate_method.md)     | @getshort(../internal/js_kanban_getreactivestate_method.md)  |
-| [](../internal/js_kanban_getstate_method.md)             | @getshort(../internal/js_kanban_getstate_method.md)          |
-| [](../internal/js_kanban_getstores_method.md)            | @getshort(../internal/js_kanban_getstores_method.md)         |
+| [](api/internal/js_kanban_getreactivestate_method.md)     | @getshort(api/internal/js_kanban_getreactivestate_method.md)  |
+| [](api/internal/js_kanban_getstate_method.md)             | @getshort(api/internal/js_kanban_getstate_method.md)          |
+| [](api/internal/js_kanban_getstores_method.md)            | @getshort(api/internal/js_kanban_getstores_method.md)         |

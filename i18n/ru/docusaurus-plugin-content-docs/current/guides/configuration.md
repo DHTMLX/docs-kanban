@@ -20,7 +20,7 @@ description: Ознакомьтесь с возможностями настро
 - загрузить данные для карточек, колонок, строк и связей через соответствующие свойства [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md) и [`links`](api/config/js_kanban_links_config.md)
     - *Смотрите раздел [**Работа с данными**](guides/working_with_data.md) для подробностей!*
 
-## Карточки
+## Карточки {#cards}
 
 Доска Kanban состоит из *карточек*, распределённых по *колонкам* и *строкам*. Вы можете настроить внешний вид карточек с помощью свойства конфигурации [`cardShape`](api/config/js_kanban_cardshape_config.md). Доступно несколько предустановленных полей, которые можно включить или исключить из шаблона карточки, а именно:
 
@@ -125,7 +125,7 @@ new kanban.Kanban("#root", {
 Если вы не укажете настройки карточек через свойство [`cardShape`](api/config/js_kanban_cardshape_config.md), виджет применит набор параметров [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config)!
 :::
 
-## Редактор
+## Редактор {#editor}
 
 :::info
 Вы можете отображать редактор как **боковую панель** или **модальное окно** с помощью свойства [`editor.placement`](api/config/js_kanban_editor_config.md)!

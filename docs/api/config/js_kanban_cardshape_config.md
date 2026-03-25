@@ -177,7 +177,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
     If you set the `maxCount` property to `false`, you can see all the assigned user on the card.
 
     :::info
-    The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding users data via the `values` parameter. To assign new users via the editor, you need to configure the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) property. Use the ***select*** type for assigning one or user or the ***multiselect*** type for assigning several users.
+    The ***users*** field is disabled by default. To enable it, you need to set the `show` parameter to `true` and provide the corresponding users data via the `values` parameter. To assign new users via the editor, you need to configure the corresponding control via the [`editorShape`](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) property. Use the ***select*** type for assigning one or user or the ***multiselect*** type for assigning several users.
 
     ~~~jsx {}
     cardShape: {

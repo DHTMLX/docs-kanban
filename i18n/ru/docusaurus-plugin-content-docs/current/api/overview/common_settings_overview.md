@@ -8,4 +8,4 @@ description: Вы можете ознакомиться с обзором Общ
 
 | Название                                      | Описание                                          |
 | --------------------------------------------- | -------------------------------------------------- |
-| [](../common/js_kanban_meta_parameter.md)     | @getshort(../common/js_kanban_meta_parameter.md)   |
+| [](api/common/js_kanban_meta_parameter.md)     | @getshort(api/common/js_kanban_meta_parameter.md)   |

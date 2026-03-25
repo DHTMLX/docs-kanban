@@ -8,7 +8,7 @@ description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahr
 
 Neben der Konfiguration von Kanban können Sie auch das Aussehen und Verhalten individuell anpassen. Das Widget ermöglicht es Ihnen, eine eigene Vorlage für Karten festzulegen, das Kontextmenü für Karten, Spalten und Zeilen zu modifizieren, die Struktur und Funktionalität der Toolbar zu verändern sowie eigene CSS-Stile auf Kanban anzuwenden.
 
-## Eigene Karten
+## Eigene Karten {#custom-cards}
 
 Um Karten mit einer eigenen Vorlage darzustellen, können Sie die [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)-Eigenschaft verwenden. Dies ist eine Callback-Funktion, mit der Sie gewünschte Stile und Logik definieren und auf Kanban anwenden können. Siehe folgendes Beispiel:
 
@@ -20,7 +20,7 @@ Um das Kontextmenü für Karten, Spalten und Zeilen anzupassen, können Sie die 
 
 <iframe src="https://snippet.dhtmlx.com/8eo65gr5?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Eigene Toolbar
+## Eigene Toolbar {#custom-toolbar}
 
 Um die Struktur und Funktionalität der Toolbar anzupassen, können Sie die [`items`](api/config/toolbar_items_config.md)-Eigenschaft verwenden. In diesem Array können Sie die benötigten Steuerelemente definieren, sie in der gewünschten Reihenfolge anordnen und ihr Verhalten anpassen.
 

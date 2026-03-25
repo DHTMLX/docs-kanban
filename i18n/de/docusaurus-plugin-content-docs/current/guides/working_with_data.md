@@ -123,7 +123,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## Laden von Daten aus einer lokalen Quelle
+## Laden von Daten aus einer lokalen Quelle {#loading-data-from-local-source}
 
 Um Daten für ***columns***, ***rows***, ***cards*** und ***links*** aus einer lokalen Quelle zu laden, können Sie die Methode [`setConfig()`](api/methods/js_kanban_setconfig_method.md) oder [`parse()`](api/methods/js_kanban_parse_method.md) verwenden. 
 

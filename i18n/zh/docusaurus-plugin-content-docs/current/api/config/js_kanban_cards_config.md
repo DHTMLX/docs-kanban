@@ -75,9 +75,9 @@ cards?: [
 - `users` - （可选）一个包含多个用户 **ID** 的数组，或单个用户的 **string | number**。要指定分配的用户，需要在 [cardShape.users](api/config/js_kanban_cardshape_config.md) 属性中定义用户数据数组。用户显示在 **Users** 字段
 
 :::info
-`users?: array` - 如果使用 [**multiselect**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) 编辑器类型分配多个用户，请指定包含用户 **ID** 的 **数组**
+`users?: array` - 如果使用 [**multiselect**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) 编辑器类型分配多个用户，请指定包含用户 **ID** 的 **数组**
 
-`users?: string | number` - 如果使用 [**combo** 或 **select**](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types) 编辑器类型分配单个用户，请指定单个 **ID**
+`users?: string | number` - 如果使用 [**combo** 或 **select**](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types) 编辑器类型分配单个用户，请指定单个 **ID**
 :::
 
 - `priority` - （可选）卡片优先级 **ID**。要指定卡片优先级，需要在 [cardShape.priority](api/config/js_kanban_cardshape_config.md) 属性中定义优先级数据数组。显示在 **Priority** 字段

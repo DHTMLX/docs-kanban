@@ -8,4 +8,4 @@ description: The documentation for the DHTMLX JavaScript Kanban library includes
 
 | Name                                         | Description                                        |
 | -------------------------------------------- | -------------------------------------------------- |
-| [](../internal/js_kanban_json_method.md)     | @getshort(../internal/js_kanban_json_method.md)    |
+| [](api/internal/js_kanban_json_method.md)     | @getshort(api/internal/js_kanban_json_method.md)    |

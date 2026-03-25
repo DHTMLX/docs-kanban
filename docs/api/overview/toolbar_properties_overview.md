@@ -10,6 +10,6 @@ To configure the **Toolbar**, refer to the [Configuration](guides/configuration.
 
 | Name                                                      | Description                                             |
 | --------------------------------------------------------- | ------------------------------------------------------- |
-| [](../config/toolbar_api_config.md)                       | @getshort(../config/toolbar_api_config.md)              |
-| [](../config/toolbar_items_config.md)                     | @getshort(../config/toolbar_items_config.md)            |
-| [](../config/toolbar_locale_config.md)                    | @getshort(../config/toolbar_locale_config.md)           |
+| [](api/config/toolbar_api_config.md)                       | @getshort(api/config/toolbar_api_config.md)              |
+| [](api/config/toolbar_items_config.md)                     | @getshort(api/config/toolbar_items_config.md)            |
+| [](api/config/toolbar_locale_config.md)                    | @getshort(api/config/toolbar_locale_config.md)           |

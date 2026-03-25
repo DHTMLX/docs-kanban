@@ -8,8 +8,8 @@ description: 您可以在DHTMLX JavaScript看板库的文档中查看JavaScript�
 
 | 名称                                                     | 描述                                                         |
 | -------------------------------------------------------- | ------------------------------------------------------------ |
-| [](../internal/js_kanban_detach_method.md)               | @getshort(../internal/js_kanban_detach_method.md)            |
-| [](../internal/js_kanban_exec_method.md)                 | @getshort(../internal/js_kanban_exec_method.md)              |
-| [](../internal/js_kanban_intercept_method.md)            | @getshort(../internal/js_kanban_intercept_method.md)         |
-| [](../internal/js_kanban_on_method.md)                   | @getshort(../internal/js_kanban_on_method.md)                |
-| [](../internal/js_kanban_setnext_method.md)              | @getshort(../internal/js_kanban_setnext_method.md)           |
+| [](api/internal/js_kanban_detach_method.md)               | @getshort(api/internal/js_kanban_detach_method.md)            |
+| [](api/internal/js_kanban_exec_method.md)                 | @getshort(api/internal/js_kanban_exec_method.md)              |
+| [](api/internal/js_kanban_intercept_method.md)            | @getshort(api/internal/js_kanban_intercept_method.md)         |
+| [](api/internal/js_kanban_on_method.md)                   | @getshort(api/internal/js_kanban_on_method.md)                |
+| [](api/internal/js_kanban_setnext_method.md)              | @getshort(api/internal/js_kanban_setnext_method.md)           |

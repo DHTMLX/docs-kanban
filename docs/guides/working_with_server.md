@@ -278,7 +278,7 @@ After this you need to create specific rules for grouping cards. In our case, th
 There are 2 ways how to implement such grouping cards in a single column by 2 or more statuses:
 
 - [Server side](#server-side-grouping)
-- [Server side + client side](#server-side--client-side-grouping)
+- [Server side + client side](#server-side-client-side-grouping)
 
 ### Server side grouping
 
@@ -317,7 +317,7 @@ func Update(id int, c Card) error {
 
 Thus, when the user changes the value of the status field, the server logic checks the value and put the card in the corresponding column. After this, the server will use WebSocket to notify the client that the card needs to be moved to another column.
 
-### Server side + client side grouping
+### Server side + client side grouping {#server-side-client-side-grouping}
 
 For the mixed server + client approach, you should obtain grouping rules from the server. According to this rules, the client will be able to determine to which column the card will be moved depending on the value of the status field.
 

@@ -177,7 +177,7 @@ Um das Aussehen der Karte zu konfigurieren, können Sie im **cardShape**-Objekt 
     Wenn Sie `maxCount` auf `false` setzen, werden alle zugewiesenen Benutzer auf der Karte angezeigt.
 
     :::info
-    Das ***users***-Feld ist standardmäßig deaktiviert. Um es zu aktivieren, müssen Sie den Parameter `show` auf `true` setzen und die entsprechenden Benutzerdaten über den Parameter `values` bereitstellen. Um neue Benutzer über den Editor zuzuweisen, müssen Sie die entsprechende Steuerung über die [`editorShape`](api/config/js_kanban_editorshape_config.md#--parameters-for-combo-select-and-multiselect-types)-Eigenschaft konfigurieren. Verwenden Sie den Typ ***select***, um einen oder mehrere Benutzer zuzuweisen, oder den Typ ***multiselect***, um mehrere Benutzer zuzuweisen.
+    Das ***users***-Feld ist standardmäßig deaktiviert. Um es zu aktivieren, müssen Sie den Parameter `show` auf `true` setzen und die entsprechenden Benutzerdaten über den Parameter `values` bereitstellen. Um neue Benutzer über den Editor zuzuweisen, müssen Sie die entsprechende Steuerung über die [`editorShape`](api/config/js_kanban_editorshape_config.md#parameters-for-combo-select-and-multiselect-types)-Eigenschaft konfigurieren. Verwenden Sie den Typ ***select***, um einen oder mehrere Benutzer zuzuweisen, oder den Typ ***multiselect***, um mehrere Benutzer zuzuweisen.
 
     ~~~jsx {}
     cardShape: {
@@ -212,7 +212,7 @@ Um das Aussehen der Karte zu konfigurieren, können Sie im **cardShape**-Objekt 
 Sofern Sie die Karteneinstellungen nicht über die **cardShape**-Eigenschaft angeben, verwendet das Widget die Parameter aus dem **defaultCardShape**!
 :::
 
-### Standardkonfiguration
+### Standardkonfiguration {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [

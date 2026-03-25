@@ -90,7 +90,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | 主题                                                        | 描述                                          |
 | ----------------------------------------------------------- | --------------------------------------------- |
 | [Autosaving mode](api/config/js_kanban_editorautosave_config.md)| 学习如何启用/禁用编辑器自动保存模式      |
-| [Configuring editor fields](guides/configuration.md#编辑器)| 学习如何配置编辑器字段                          |
+| [Configuring editor fields](guides/configuration.md#editor)| 学习如何配置编辑器字段                          |
 | [Configuring the editor](guides/configuration.md#编辑器的配置)| 学习如何配置编辑器                 |
 | [Updating editor settings](api/methods/js_kanban_setconfig_method.md)| 学习如何更新编辑器设置                   |
 
@@ -121,7 +121,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | [Serializing column data](api/methods/js_kanban_serialize_method.md)| 学习如何序列化列数据                    |
 | [Updating column data](api/methods/js_kanban_updatecolumn_method.md)| 学习如何更新列数据                       |
 
-## 行（泳道）操作方法
+## 行（泳道）操作方法 {#how-to-work-with-rows-swimlanes}
 
 在这些章节中，您可以了解如何对行（泳道）进行操作及处理行数据
 
