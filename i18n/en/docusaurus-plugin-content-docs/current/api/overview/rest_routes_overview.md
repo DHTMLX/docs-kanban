@@ -32,28 +32,28 @@ For easy navigation, you can use either the tabs below or the side menu:
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md)</td>
 <td>Retrieves all cards and returns a JSON object containing an array of card objects</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td><a href="api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md)</td>
 <td>Adds a new card and returns a JSON object with the new card’s ID</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)</td>
 <td>Updates a specific card’s data and returns an empty JSON object</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md"> /cards/id/move</a></td>
+<td>[/cards/id/move](api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md)</td>
 <td>Moves cards to a designated position</td>
 </tr>
 
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)</td>
 <td>Removes a card’s data</td>
 </tr>
 </tbody>
@@ -74,27 +74,27 @@ For easy navigation, you can use either the tabs below or the side menu:
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md)</td>
 <td>Retrieves all rows and returns a JSON object with an array of swimlane data objects</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md"> /rows</a></td>
+<td >[/rows](api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md)</td>
 <td>Adds a new row and returns a JSON object containing the row ID</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)</td>
 <td>Updates a specific row’s data and returns an empty JSON object</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md"> /rows/id/move</a></td>
+<td>[/rows/id/move](api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)</td>
 <td>Moves a row to a specified position</td>
 </tr>
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)</td>
 <td>Deletes data for a row</td>
 </tr>
 </tbody>
@@ -114,27 +114,27 @@ For easy navigation, you can use either the tabs below or the side menu:
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)</td>
                 <td>Retrieves all columns and returns a JSON object with an array of column data objects</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md"> /columns</a></td>
+                <td >[/columns](api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md)</td>
                 <td>Adds a new column and returns a JSON object with the column ID</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md)</td>
                 <td>Updates data for a specific column and returns an empty JSON object</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md"> /columns/id/move</a></td>
+                <td>[/columns/id/move](api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)</td>
                 <td>Moves a column to a chosen position</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)</td>
                 <td>Deletes a column’s data</td>
             </tr>
         </tbody>
@@ -154,17 +154,17 @@ For easy navigation, you can use either the tabs below or the side menu:
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)</td>
                 <td>Retrieves all links and returns a JSON object with an array of link objects</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_links_route.md"> /links</a></td>
+                <td >[/links](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)</td>
                 <td>Creates a new link and returns a JSON object with the new link ID</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)</td>
                 <td>Deletes a link’s data</td>
             </tr>
         </tbody>
@@ -184,12 +184,12 @@ For easy navigation, you can use either the tabs below or the side menu:
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md)</td>
                 <td>Fetches a requested binary file from the server</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td><a href="api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)</td>
                 <td>Uploads a binary file to the server and returns a JSON object with its ID, name, and URL</td>
             </tr>
         </tbody>

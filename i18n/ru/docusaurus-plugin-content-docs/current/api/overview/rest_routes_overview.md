@@ -32,28 +32,28 @@ import TabItem from '@theme/TabItem';
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md)</td>
 <td>Получает данные по всем карточкам и возвращает JSON объект с массивом объектов карточек</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td><a href="api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md)</td>
 <td>Создаёт новую карточку и возвращает JSON объект с ID новой карточки</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)</td>
 <td>Обновляет данные указанной карточки и возвращает пустой JSON объект</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md"> /cards/id/move</a></td>
+<td>[/cards/id/move](api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md)</td>
 <td>Перемещает карточки на указанную позицию</td>
 </tr>
 
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)</td>
 <td>Удаляет данные карточки</td>
 </tr>
 </tbody>
@@ -74,27 +74,27 @@ import TabItem from '@theme/TabItem';
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md)</td>
 <td>Получает данные по всем рядам и возвращает JSON объект с массивом объектов с данными рядов (swimlanes)</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md"> /rows</a></td>
+<td >[/rows](api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md)</td>
 <td>Добавляет новый ряд и возвращает JSON объект с ID ряда</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)</td>
 <td>Обновляет данные указанного ряда (swimlane) и возвращает пустой JSON объект</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md"> /rows/id/move</a></td>
+<td>[/rows/id/move](api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)</td>
 <td>Перемещает ряд на указанную позицию</td>
 </tr>
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)</td>
 <td>Удаляет данные ряда</td>
 </tr>
 </tbody>
@@ -114,27 +114,27 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)</td>
                 <td>Получает данные по всем колонкам и возвращает JSON объект с массивом объектов с данными колонок</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md"> /columns</a></td>
+                <td >[/columns](api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md)</td>
                 <td>Добавляет новую колонку и возвращает JSON объект с ID ряда</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md)</td>
                 <td>Обновляет данные указанной колонки и возвращает пустой JSON объект</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md"> /columns/id/move</a></td>
+                <td>[/columns/id/move](api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)</td>
                 <td>Перемещает колонку на указанную позицию</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)</td>
                 <td>Удаляет данные колонки</td>
             </tr>
         </tbody>
@@ -154,17 +154,17 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)</td>
                 <td>Получает данные по всем ссылкам и возвращает JSON объект с массивом объектов ссылок</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_links_route.md"> /links</a></td>
+                <td >[/links](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)</td>
                 <td>Создаёт новую ссылку и возвращает JSON объект с ID новой ссылки</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)</td>
                 <td>Удаляет данные ссылки</td>
             </tr>
         </tbody>
@@ -184,12 +184,12 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md)</td>
                 <td>Получает запрашиваемый бинарный файл с сервера</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td><a href="api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)</td>
                 <td>Загружает бинарный файл на сервер и возвращает JSON объект с его id, именем и url</td>
             </tr>
         </tbody>

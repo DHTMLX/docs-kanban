@@ -32,28 +32,28 @@ import TabItem from '@theme/TabItem';
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/get_routes/js_kanban_get_cards_route.md)</td>
 <td>모든 카드 데이터를 가져오며, 카드 객체 배열이 포함된 json 객체를 반환합니다</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td><a href="api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md)</td>
 <td>새 카드를 생성하며, 새 카드 ID가 포함된 json 객체를 반환합니다</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)</td>
 <td>지정된 카드 데이터를 업데이트하며, 빈 json 객체를 반환합니다</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md"> /cards/id/move</a></td>
+<td>[/cards/id/move](api/provider/rest_routes/put_routes/js_kanban_put_cards_move_route.md)</td>
 <td>카드를 지정된 위치로 이동합니다</td>
 </tr>
 
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md"> /cards</a></td>
+<td>[/cards](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)</td>
 <td>카드 데이터를 삭제합니다</td>
 </tr>
 </tbody>
@@ -74,27 +74,27 @@ import TabItem from '@theme/TabItem';
 <tbody>
 <tr>
 <td>`GET`</td>
-<td><a href="api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/get_routes/js_kanban_get_rows_route.md)</td>
 <td>모든 행 데이터를 가져오며, 행(스윔레인) 데이터 객체 배열이 포함된 json 객체를 반환합니다</td>
 </tr>
 <tr>
 <td>`POST`</td>
-<td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md"> /rows</a></td>
+<td >[/rows](api/provider/rest_routes/post_routes/js_kanban_post_rows_route.md)</td>
 <td>새 행을 추가하며, 행 ID가 포함된 json 객체를 반환합니다</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)</td>
 <td>지정된 행(스윔레인) 데이터를 업데이트하며, 빈 json 객체를 반환합니다</td>
 </tr>
 <tr>
 <td>`PUT`</td>
-<td><a href="api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md"> /rows/id/move</a></td>
+<td>[/rows/id/move](api/provider/rest_routes/put_routes/js_kanban_put_rows_move_route.md)</td>
 <td>행을 지정된 위치로 이동합니다</td>
 </tr>
 <tr>
 <td>`DELETE`</td>
-<td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md"> /rows</a></td>
+<td>[/rows](api/provider/rest_routes/delete_routes/js_kanban_delete_rows_route.md)</td>
 <td>행 데이터를 삭제합니다</td>
 </tr>
 </tbody>
@@ -114,27 +114,27 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/get_routes/js_kanban_get_columns_route.md)</td>
                 <td>모든 열 데이터를 가져오며, 열 데이터 객체 배열이 포함된 json 객체를 반환합니다</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md"> /columns</a></td>
+                <td >[/columns](api/provider/rest_routes/post_routes/js_kanban_post_columns_route.md)</td>
                 <td>새 열을 추가하며, 행 ID가 포함된 json 객체를 반환합니다</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/put_routes/js_kanban_put_columns_route.md)</td>
                 <td>지정된 열 데이터를 업데이트하며, 빈 json 객체를 반환합니다</td>
             </tr>
             <tr>
                 <td>`PUT`</td>
-                <td><a href="api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md"> /columns/id/move</a></td>
+                <td>[/columns/id/move](api/provider/rest_routes/put_routes/js_kanban_put_columns_move_route.md)</td>
                 <td>열을 지정된 위치로 이동합니다</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md"> /columns</a></td>
+                <td>[/columns](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)</td>
                 <td>열 데이터를 삭제합니다</td>
             </tr>
         </tbody>
@@ -154,17 +154,17 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)</td>
                 <td>모든 링크 데이터를 가져오며, 링크 객체 배열이 포함된 json 객체를 반환합니다</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td ><a href="api/provider/rest_routes/post_routes/js_kanban_post_links_route.md"> /links</a></td>
+                <td >[/links](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)</td>
                 <td>새 링크를 생성하며, 새 링크 ID가 포함된 json 객체를 반환합니다</td>
             </tr>
             <tr>
                 <td>`DELETE`</td>
-                <td><a href="api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md"> /links</a></td>
+                <td>[/links](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)</td>
                 <td>링크 데이터를 삭제합니다</td>
             </tr>
         </tbody>
@@ -184,12 +184,12 @@ import TabItem from '@theme/TabItem';
         <tbody>
             <tr>
                 <td>`GET`</td>
-                <td><a href="api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/get_routes/js_kanban_get_uploads_route.md)</td>
                 <td>서버에서 요청된 이진 파일을 가져옵니다</td>
             </tr>
             <tr>
                 <td>`POST`</td>
-                <td><a href="api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md"> /uploads</a></td>
+                <td>[/uploads](api/provider/rest_routes/post_routes/js_kanban_post_uploads_route.md)</td>
                 <td>서버에 이진 파일을 업로드하며, 파일의 id, 이름, url이 포함된 json 객체를 반환합니다</td>
             </tr>
         </tbody>
