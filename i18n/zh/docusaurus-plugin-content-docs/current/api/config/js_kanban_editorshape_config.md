@@ -340,7 +340,7 @@ interface UploadEvent extends PointerEvent {
     - `multiple` - （可选）启用/禁用多文件上传
     - `folder` - （可选）启用/禁用文件夹上传
 
-#### - "comments" 类型的参数
+#### - "comments" 类型的参数 {#parameters-for-comments-type}
 
 - `config` - （可选）**"comments"** 字段的配置对象。可以指定以下参数：
     - `format` - （可选）评论的日期格式。可用格式参见[这里](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)

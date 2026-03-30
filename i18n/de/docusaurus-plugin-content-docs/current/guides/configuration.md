@@ -142,7 +142,7 @@ Der *Editor* von Kanban besteht aus Feldern zur Verwaltung der Kartendaten. Zum 
 - [**comments**](#comments-type)
 - [**links**](#links-type)
 
-### Combo-, Select- und Multiselect-Typen
+### Combo-, Select- und Multiselect-Typen {#combo-select-und-multiselect-typen}
 
 Die Editor-Felder der Typen **combo**, **select** und **multiselect** können wie folgt gesetzt werden:
 
@@ -213,7 +213,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Text- und Textarea-Typen
+### Text- und Textarea-Typen {#text-und-textarea-typen}
 
 Die Editor-Felder der Typen **text** und **textarea** können wie folgt gesetzt werden:
 
@@ -324,7 +324,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Date- und DateRange-Typen
+### Date- und DateRange-Typen {#date-und-daterange-typen}
 
 Das Editor-Feld vom Typ **date** kann wie folgt gesetzt werden:
 

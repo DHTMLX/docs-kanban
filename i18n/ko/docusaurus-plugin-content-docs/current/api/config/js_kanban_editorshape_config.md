@@ -340,7 +340,7 @@ interface UploadEvent extends PointerEvent {
     - `multiple` - (선택 사항) 다중 파일 업로드 활성화/비활성화
     - `folder` - (선택 사항) 폴더 업로드 활성화/비활성화
 
-#### - "comments" 유형 매개변수
+#### - "comments" 유형 매개변수 {#-comments-type-parameters}
 
 - `config` - (선택 사항) **"comments"** 필드 구성 객체. 다음 매개변수를 지정할 수 있습니다:
     - `format` - (선택 사항) 댓글 날짜 형식. 가능한 형식은 [여기](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)에서 확인

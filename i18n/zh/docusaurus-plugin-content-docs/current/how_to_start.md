@@ -41,7 +41,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 </html>
 ~~~
 
-### 通过 npm 或 yarn 安装 Kanban
+### 通过 npm 或 yarn 安装 Kanban {#install-kanban-via-npm-or-yarn}
 
 您可以通过 `yarn` 或 `npm` 包管理器将 JavaScript Kanban 导入到您的项目中。
 

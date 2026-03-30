@@ -340,7 +340,7 @@ interface UploadEvent extends PointerEvent {
     - `multiple` - (optional) aktiviert/deaktiviert das Hochladen von *mehreren Dateien*
     - `folder` - (optional) aktiviert/deaktiviert das Hochladen von *Ordnern*
 
-#### - Parameter für den Typ "comments"
+#### - Parameter für den Typ "comments" {#parameters-for-comments-type}
 
 - `config` - (optional) ein Konfigurationsobjekt für das Feld **"comments"**. Hier können Sie folgende Parameter angeben:
     - `format` - (optional) - ein Datumsformat für Kommentare. Verfügbare Formate finden Sie [hier](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
