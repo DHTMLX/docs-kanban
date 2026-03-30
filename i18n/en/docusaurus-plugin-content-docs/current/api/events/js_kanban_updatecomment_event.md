@@ -38,7 +38,7 @@ The callback for the **update-comment** event receives an object with these prop
     - `cardId` - (optional) the ID of the card the updated comment belongs to
     - `text` - (optional) the updated comment text
     - `date` - (optional) the updated comment date
-    - `html` - (optional) the updated comment’s HTML markup. To display HTML instead of text, enable the `html` option in the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) config
+    - `html` - (optional) the updated comment's HTML markup. To display HTML instead of text, enable the `html` option in the [`editorShape`](/api/config/js_kanban_editorshape_config/#-parameters-for-a-comments-type) config
 - `skipProvider` - (optional) controls whether the request to the server is skipped or not
 
 :::info

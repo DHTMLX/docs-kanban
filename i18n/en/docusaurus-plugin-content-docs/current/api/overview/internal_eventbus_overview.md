@@ -1,7 +1,7 @@
 ---
 sidebar_label: Event Bus methods
 title: Event Bus Methods
-description: Here’s an overview of the Internal Event Bus methods for JavaScript Kanban, found in the DHTMLX JavaScript Kanban library documentation. You’ll find developer guides, API references, code samples, live demos, and a free 30-day trial version of DHTMLX Kanban.
+description: Here's an overview of the Internal Event Bus methods for JavaScript Kanban, found in the DHTMLX JavaScript Kanban library documentation. You'll find developer guides, API references, code samples, live demos, and a free 30-day trial version of DHTMLX Kanban.
 ---
 
 # Event Bus methods

@@ -1,6 +1,6 @@
 ---
 sidebar_label: Решения
-title: JavaScript Kanban — решения
+title: JavaScript Kanban - решения
 description: На этой странице документации библиотеки DHTMLX JavaScript Kanban вы найдете раздел Решения. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную версию DHTMLX Kanban.
 ---
 

@@ -11,7 +11,7 @@ description: Check out the history config in the DHTMLX JavaScript Kanban librar
 @short: Optional. Turns history tracking on or off
 
 :::info
-The `history` property lets you enable or disable the Kanban history feature. Setting it to **false** means you won’t be able to use the API or Toolbar controls to manage history.
+The `history` property lets you enable or disable the Kanban history feature. Setting it to **false** means you won't be able to use the API or Toolbar controls to manage history.
 :::
 
 :::tip

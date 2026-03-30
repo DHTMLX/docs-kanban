@@ -21,7 +21,7 @@ The following parameter is included in the request URL:
 | `id`       | number      | *Required*. The ID of the card to move. If moving multiple cards, set the id to 0.|
 
 :::info
-When moving multiple cards, ensure the `id` is set to 0. If it’s set to any other value, only the card with that specific id will be moved.
+When moving multiple cards, ensure the `id` is set to 0. If it's set to any other value, only the card with that specific id will be moved.
 :::
 
 ### Payload

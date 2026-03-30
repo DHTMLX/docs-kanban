@@ -1,7 +1,7 @@
 ---
 sidebar_label: Methods overview
 title: Methods Overview
-description: Here’s a Methods overview for JavaScript Kanban in the DHTMLX JavaScript Kanban library documentation. Check out developer guides and API references, explore code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: Here's a Methods overview for JavaScript Kanban in the DHTMLX JavaScript Kanban library documentation. Check out developer guides and API references, explore code examples and live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # Methods overview

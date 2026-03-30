@@ -363,7 +363,7 @@ import { KanbanComponent } from "./kanban/kanban.component";
 export class AppModule {}
 ~~~
 
-Последний шаг — откройте файл ***src/main.ts*** и замените существующий код следующим:
+Последний шаг - откройте файл ***src/main.ts*** и замените существующий код следующим:
 
 ~~~jsx title="main.ts"
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";

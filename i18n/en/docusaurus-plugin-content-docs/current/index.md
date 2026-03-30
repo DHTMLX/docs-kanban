@@ -7,13 +7,13 @@ description: You can have an overview of DHTMLX JavaScript Kanban library in the
 
 # DHTMLX Kanban overview
 
-JavaScript Kanban is a handy tool for visualizing workflows. It makes it easier to see how business processes are going and gives a clear picture of how much work is on each team member's plate. The widget is flexible—use as many cards, columns, or swimlanes as needed. Since it’s built entirely with JavaScript and CSS, it’s simple to set up, customize, and plug into any web app or website.
+JavaScript Kanban is a handy tool for visualizing workflows. It makes it easier to see how business processes are going and gives a clear picture of how much work is on each team member's plate. The widget is flexible-use as many cards, columns, or swimlanes as needed. Since it's built entirely with JavaScript and CSS, it's simple to set up, customize, and plug into any web app or website.
 
 ## Kanban structure­
 
 ### Toolbar
 
-The **Toolbar** is a separate part of the Kanban interface. It comes with a search bar for finding cards, a control to sort cards by different parameters, undo/redo buttons for managing history, and options for adding new columns and rows. The searching and sorting logic can be tailored, and the Toolbar layout is easy to update—add your own elements or rearrange the built-in ones. More details are in the [Configuration](guides/configuration.md#toolbar) section.
+The **Toolbar** is a separate part of the Kanban interface. It comes with a search bar for finding cards, a control to sort cards by different parameters, undo/redo buttons for managing history, and options for adding new columns and rows. The searching and sorting logic can be tailored, and the Toolbar layout is easy to update-add your own elements or rearrange the built-in ones. More details are in the [Configuration](guides/configuration.md#toolbar) section.
 
 import toolbar from '@site/static/img/js_kanban_toolbar.png';
 

@@ -30,7 +30,7 @@ In this example, the project is named **my-vue-kanban-app**.
 
 ### Installation of dependencies
 
-Move into your app’s folder:
+Move into your app's folder:
 
 ~~~json
 cd my-vue-kanban-app
@@ -70,7 +70,7 @@ Create a new Vue component to add Kanban with a Toolbar to your app. In the ***s
 
 Open ***Kanban.vue*** and import the Kanban source files. Keep in mind:
 
-- If you’re using the PRO version and installed the Kanban package from a local folder, your imports will look like this:
+- If you're using the PRO version and installed the Kanban package from a local folder, your imports will look like this:
 
 ~~~html title="Kanban.vue"
 <script>
@@ -81,7 +81,7 @@ import 'dhx-kanban-package/dist/kanban.css';
 
 Depending on your package, the source files might be minified. In that case, make sure to import **kanban.min.css** instead.
 
-- If you’re using the trial version, use these paths:
+- If you're using the trial version, use these paths:
 
 ~~~html title="Kanban.vue"
 <script>

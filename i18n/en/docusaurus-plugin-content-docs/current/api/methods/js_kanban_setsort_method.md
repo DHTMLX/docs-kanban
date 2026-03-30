@@ -33,7 +33,7 @@ This method accepts either an object with sorting options or *null*. Within the 
 - `preserve` - (optional) controls whether the sorting order is maintained (*false* by default)
 
 :::info
-When **preserve** is set to *false*, sorting applies only once. This means that if cards are added or moved afterward, the sorting won’t be kept and the order may change. If set to *true*, the sorting will stay consistent even after cards are added or moved. To turn off preserving, call **setSort()** with *null*.
+When **preserve** is set to *false*, sorting applies only once. This means that if cards are added or moved afterward, the sorting won't be kept and the order may change. If set to *true*, the sorting will stay consistent even after cards are added or moved. To turn off preserving, call **setSort()** with *null*.
 :::
 
 ### Example

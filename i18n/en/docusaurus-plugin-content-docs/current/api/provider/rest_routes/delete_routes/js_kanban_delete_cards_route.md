@@ -26,7 +26,7 @@ No payload needs to be sent.
 
 ### Response
 
-No content is returned. The HTTP status code indicates the outcome: success if the status is 200, or failure if it’s 500.
+No content is returned. The HTTP status code indicates the outcome: success if the status is 200, or failure if it's 500.
 
 ---
 

@@ -27,7 +27,7 @@ The server expects a JSON object containing all the properties of the column, in
 | Name       | Type        | Description |
 | ---------- | ----------- | ----------- |
 | `label`    |  string     | *Required*. The new name for the column.|
-| `collapsed`|  boolean    | *Optional*. Indicates the column’s initial state: **true** if collapsed, **false** if expanded (default).|
+| `collapsed`|  boolean    | *Optional*. Indicates the column's initial state: **true** if collapsed, **false** if expanded (default).|
 
 Example:
 

@@ -80,7 +80,7 @@ Promise.all([
 });
 ~~~
 
-Here’s how you can add extra headers when using the **send()** method:
+Here's how you can add extra headers when using the **send()** method:
 
 ~~~js
 const customHeaders = {

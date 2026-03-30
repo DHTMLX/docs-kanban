@@ -22,7 +22,7 @@ setLocale(null | locale?: object): void;
 - `locale` - (необязательно) объект с данными новой локализации, который будет применён к Toolbar
 
 :::info
-**Toolbar** Kanban — это отдельный компонент. Используйте метод `toolbar.setLocale()` для применения новой локализации только к Toolbar. Чтобы сбросить локализацию Toolbar на значение по умолчанию, вызовите метод `toolbar.setLocale()` без аргументов (или с *null*). Для применения новой локализации только к Kanban используйте метод [`kanban.setLocale()`](api/methods/js_kanban_setlocale_method.md).
+**Toolbar** Kanban - это отдельный компонент. Используйте метод `toolbar.setLocale()` для применения новой локализации только к Toolbar. Чтобы сбросить локализацию Toolbar на значение по умолчанию, вызовите метод `toolbar.setLocale()` без аргументов (или с *null*). Для применения новой локализации только к Kanban используйте метод [`kanban.setLocale()`](api/methods/js_kanban_setlocale_method.md).
 :::
 
 ### Пример

@@ -28,7 +28,7 @@ Das Kanban-Board besteht aus *Karten*, die auf *Spalten* und *Zeilen* verteilt s
 - eine Kartenbeschreibung über die `description: boolean` Konfiguration
 
     :::tip
-    Sie können die Felder **label** und **description** jeder Karte über die entsprechenden Eingabefelder des Kanban-Editors verwalten. Wenn Sie diese Felder aktivieren, werden die entsprechenden Eingaben im Editor automatisch angezeigt. Zum Konfigurieren dieser Eingaben können Sie die Typen [**text** und **textarea**](#text--und-textarea-typen) verwenden.
+    Sie können die Felder **label** und **description** jeder Karte über die entsprechenden Eingabefelder des Kanban-Editors verwalten. Wenn Sie diese Felder aktivieren, werden die entsprechenden Eingaben im Editor automatisch angezeigt. Zum Konfigurieren dieser Eingaben können Sie die Typen [**text** und **textarea**](#text-und-textarea-typen) verwenden.
     :::
 
 - einen Kartenfortschritt über die `progress: boolean` Konfiguration
@@ -41,7 +41,7 @@ Das Kanban-Board besteht aus *Karten*, die auf *Spalten* und *Zeilen* verteilt s
 - ein Enddatum über die `end_date: boolean` Konfiguration
 
     :::tip
-    Sie können die Felder **start date** und **end date** jeder Karte über die entsprechenden Steuerelemente des Kanban-Editors verwalten. Wenn Sie diese Felder aktivieren, werden die entsprechenden Steuerelemente im Editor automatisch angezeigt. Zum Konfigurieren dieser Steuerelemente können Sie den Typ [**date**](#date--und-daterange-typen) verwenden.
+    Sie können die Felder **start date** und **end date** jeder Karte über die entsprechenden Steuerelemente des Kanban-Editors verwalten. Wenn Sie diese Felder aktivieren, werden die entsprechenden Steuerelemente im Editor automatisch angezeigt. Zum Konfigurieren dieser Steuerelemente können Sie den Typ [**date**](#date-und-daterange-typen) verwenden.
     :::
 
 - ein Kontextmenü für Karten über die `menu: boolean` Konfiguration
@@ -64,13 +64,13 @@ Das Kanban-Board besteht aus *Karten*, die auf *Spalten* und *Zeilen* verteilt s
 - eine Benutzerzuweisung über die `users: boolean | { show: boolean, values: object, maxCount: number | false }` Konfiguration
 
     :::tip
-    Sie können einer Karte einen oder mehrere Benutzer über das entsprechende Steuerelement des Kanban-Editors zuweisen. Zum Konfigurieren des Steuerelements für die Zuweisung eines einzelnen Benutzers verwenden Sie die Typen [**combo** oder **select**](#combo--select--und-multiselect-typen). Für die Zuweisung mehrerer Benutzer nutzen Sie den Typ [**multiselect**](#combo--select--und-multiselect-typen).
+    Sie können einer Karte einen oder mehrere Benutzer über das entsprechende Steuerelement des Kanban-Editors zuweisen. Zum Konfigurieren des Steuerelements für die Zuweisung eines einzelnen Benutzers verwenden Sie die Typen [**combo** oder **select**](#combo-select-und-multiselect-typen). Für die Zuweisung mehrerer Benutzer nutzen Sie den Typ [**multiselect**](#combo-select-und-multiselect-typen).
     :::
 
 - eine Kartenpriorität über die `priority: boolean | { show: boolean, values: object }` Konfiguration
 
     :::tip
-    Sie können die **priority**-Eigenschaft jeder Karte über das entsprechende Steuerelement des Kanban-Editors verwalten. Wenn Sie **priority** aktivieren, wird das entsprechende Steuerelement im Editor automatisch angezeigt. Zum Konfigurieren dieses Steuerelements können Sie nur die Typen [**combo** oder **select**](#combo--select--und-multiselect-typen) verwenden.
+    Sie können die **priority**-Eigenschaft jeder Karte über das entsprechende Steuerelement des Kanban-Editors verwalten. Wenn Sie **priority** aktivieren, wird das entsprechende Steuerelement im Editor automatisch angezeigt. Zum Konfigurieren dieses Steuerelements können Sie nur die Typen [**combo** oder **select**](#combo-select-und-multiselect-typen) verwenden.
     :::
 
 - *ein benutzerdefiniertes Feld* über die `headerFields: [ { key: string, label: string, css: string } ]` Konfiguration
@@ -133,12 +133,12 @@ Sie können den Editor als **Seitenleiste** oder **modales Fenster** anzeigen la
 
 Der *Editor* von Kanban besteht aus Feldern zur Verwaltung der Kartendaten. Zum Konfigurieren der Editor-Felder (Steuerelemente) verwenden Sie die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft. Folgende Typen von Editor-Feldern stehen zur Verfügung:
 
-- [**combo**, **select** und **multiselect**](#combo--select--und-multiselect-typen)
+- [**combo**, **select** und **multiselect**](#combo-select-und-multiselect-typen)
 - [**color**](#color-typ)
-- [**text** und **textarea**](#text--und-textarea-typen)
+- [**text** und **textarea**](#text-und-textarea-typen)
 - [**progress**](#progress-typ)
 - [**files**](#files-typ)
-- [**date** und **dataRange**](#date--und-daterange-typen)
+- [**date** und **dataRange**](#date-und-daterange-typen)
 - [**comments**](#comments-type)
 - [**links**](#links-type)
 

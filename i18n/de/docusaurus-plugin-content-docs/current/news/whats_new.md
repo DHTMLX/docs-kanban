@@ -502,7 +502,7 @@ Veröffentlicht am 30. August 2022
 
 Veröffentlicht am 28. Juli 2022
 
-### Fehlerbehebungen​
+### Fehlerbehebungen
 
 - Die Eigenschaft `cardHeight` funktioniert nicht mit aktiviertem `scrollType:"column"`.
 - Uploader zeigt hochgeladene Dateien im Karteneditor nicht an.

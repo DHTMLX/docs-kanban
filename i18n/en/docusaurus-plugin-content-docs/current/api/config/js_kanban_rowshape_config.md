@@ -36,7 +36,7 @@ rowShape?: {
 
 The **rowShape** object lets you tweak how rows appear and behave by specifying these options:
 
-- `menu` - (optional) settings for the rows’ context menu. This includes:
+- `menu` - (optional) settings for the rows' context menu. This includes:
     - `show` - (optional) turns the row context menu on or off
     - `items` - (optional) an array defining the menu items for rows. Each item can include:
         - `id` - (optional) menu item ID. Use these IDs for built-in actions:
@@ -49,16 +49,16 @@ The **rowShape** object lets you tweak how rows appear and behave by specifying 
         - `text` - (optional) label for the menu item
         - `disabled` - (optional) whether the menu item is active or disabled based on a boolean
         - `onClick` - (optional) custom callback function with these arguments:
-            - ***id*** - the menu item’s ID
-            - ***item*** - the menu item’s data object
-            - ***row*** - the target row’s data object
+            - ***id*** - the menu item's ID
+            - ***item*** - the menu item's data object
+            - ***row*** - the target row's data object
 
         - `data` - (optional) array of subitems for nested menus
 
     :::info
     The `menu.items` option can also be a custom function receiving:
-    - ***row*** - the current row’s data object
-    - ***rowIndex*** - the current row’s index
+    - ***row*** - the current row's data object
+    - ***rowIndex*** - the current row's index
     - ***rows*** - array of all rows data
     - ***readonly*** - an object with readonly [state properties](api/internal/js_kanban_getstate_method.md)
 

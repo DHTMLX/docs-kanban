@@ -32,9 +32,9 @@ The callback for the **add-comment** event receives an object with these propert
 - `id` -  (optional) the ID assigned to the new comment
 - `cardId` - (required) the ID of the card where the comment is being added
 - `comment` - (required) an object describing the new comment. It can include:
-    - `text` - (optional) the comment’s text content
+    - `text` - (optional) the comment's text content
     - `date` - (optional) the date associated with the comment
-    - `html` - (optional) the HTML markup for the comment. To show HTML instead of plain text, enable the `html` option in the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) configuration
+    - `html` - (optional) the HTML markup for the comment. To show HTML instead of plain text, enable the `html` option in the [`editorShape`](/api/config/js_kanban_editorshape_config/#-parameters-for-a-comments-type) configuration
 - `skipProvider` - (optional) controls whether the request to the server is skipped or not
 
 :::info

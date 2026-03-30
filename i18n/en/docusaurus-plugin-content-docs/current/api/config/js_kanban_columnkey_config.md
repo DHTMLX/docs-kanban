@@ -23,7 +23,7 @@ columnKey?: string;
 ### Default config
 
 :::note
-If you don’t set a column key using the **columnKey** property, the widget defaults to using the **"column"** key. In that case, the **column** key in the card data object must be set to the appropriate column **ID**.
+If you don't set a column key using the **columnKey** property, the widget defaults to using the **"column"** key. In that case, the **column** key in the card data object must be set to the appropriate column **ID**.
 
 ~~~jsx {3}
 const cards = [

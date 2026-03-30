@@ -28,8 +28,8 @@ links?: [
 Für jeden Link können Sie die folgenden Parameter (Daten) angeben:
 
 - `id` - (erforderlich) die ID des Links
-- `source` - (erforderlich) die Karten-ID am Anfang des Links (z.B. „Aufgabe A ist erforderlich für Aufgabe B“)
-- `target` - (erforderlich) die Karten-ID am Ende des Links (z.B. „Aufgabe B hängt von Aufgabe A ab“)
+- `source` - (erforderlich) die Karten-ID am Anfang des Links (z.B. "Aufgabe A ist erforderlich für Aufgabe B")
+- `target` - (erforderlich) die Karten-ID am Ende des Links (z.B. "Aufgabe B hängt von Aufgabe A ab")
 - `relation` - (erforderlich) der Typ des Links. Hier können Sie die folgenden Typen angeben:
     - ***"relatesTo"*** - definiert eine Abhängigkeit zwischen Aufgaben, bei der die aktuelle Aufgabe an eine andere gebunden ist
     - ***"requiredFor"*** - definiert eine Abhängigkeit zwischen Aufgaben, bei der eine Aufgabe die andere erfordert

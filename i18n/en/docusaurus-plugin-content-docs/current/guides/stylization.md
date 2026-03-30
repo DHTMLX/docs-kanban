@@ -6,11 +6,11 @@ description: You can learn about the stylization in the documentation of the DHT
 
 # Stylization
 
-With Kanban, it’s easy to tweak the look of **columns**, **rows**, and **cards** by using the [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), and [`cardShape.css`](api/config/js_kanban_cardshape_config.md) properties. These options let you style columns, rows, and cards based on certain conditions.
+With Kanban, it's easy to tweak the look of **columns**, **rows**, and **cards** by using the [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), and [`cardShape.css`](api/config/js_kanban_cardshape_config.md) properties. These options let you style columns, rows, and cards based on certain conditions.
 
 If you want to add a custom CSS class to a specific **column**, **row**, or **card**, you can do that with the [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), and [`cards.css`](api/config/js_kanban_cards_config.md) properties.
 
-It’s also possible to add your own styles to any part of the Kanban interface to better fit your project’s needs. The library comes with lots of CSS variables for easy customization. There are two main sets of variables:
+It's also possible to add your own styles to any part of the Kanban interface to better fit your project's needs. The library comes with lots of CSS variables for easy customization. There are two main sets of variables:
 - CSS variables for the **Kanban** style
 - CSS variables for the **WX** library style (like controls, calendars, etc.)
 
@@ -90,12 +90,12 @@ The **WX** library is used under the hood for some internal features. It covers 
 ~~~
 
 :::tip Note
-Future Kanban releases might update some variables or their names. It’s a good idea to double-check the variable names after upgrading to a new version and update your code if needed to make sure everything displays correctly.
+Future Kanban releases might update some variables or their names. It's a good idea to double-check the variable names after upgrading to a new version and update your code if needed to make sure everything displays correctly.
 :::
 
 ## Scroll style
 
-The scroll bar in Kanban can be styled too. Just use the `.wx-styled-scroll` CSS class. Before adding it, it’s worth checking if it works with the browsers you’re targeting — you can do that [here](https://caniuse.com/css-scrollbar).
+The scroll bar in Kanban can be styled too. Just use the `.wx-styled-scroll` CSS class. Before adding it, it's worth checking if it works with the browsers you're targeting - you can do that [here](https://caniuse.com/css-scrollbar).
 
 ~~~html {4} title="index.html"
 <!--container for Toolbar-->
@@ -106,7 +106,7 @@ The scroll bar in Kanban can be styled too. Just use the `.wx-styled-scroll` CSS
 
 ## Custom style
 
-Here’s a snippet that shows how to set up a custom style for Kanban.
+Here's a snippet that shows how to set up a custom style for Kanban.
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
