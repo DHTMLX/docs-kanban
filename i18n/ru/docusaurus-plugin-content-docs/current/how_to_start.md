@@ -41,7 +41,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 </html>
 ~~~
 
-### Установка Kanban через npm или yarn
+### Установка Kanban через npm или yarn {#installing-kanban-via-npm-or-yarn}
 
 Вы можете импортировать JavaScript Kanban в свой проект с помощью менеджера пакетов `yarn` или `npm`.
 

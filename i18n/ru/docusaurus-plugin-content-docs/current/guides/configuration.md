@@ -467,7 +467,7 @@ new kanban.Kanban("#root", {
 Если вы не укажете настройки редактора через свойство [`editorShape`](api/config/js_kanban_editorshape_config.md), виджет применит набор параметров [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config). В этом случае стандартные контролы и поля появятся в редакторе только после активации соответствующих полей карточек через свойство [`cardShape`](api/config/js_kanban_cardshape_config.md).
 :::
 
-### Настройка редактора
+### Настройка редактора {#editor-configuration}
 
 С помощью свойства [`editor`](api/config/js_kanban_editor_config.md) вы можете настроить редактор следующим образом:
 

@@ -340,7 +340,7 @@ interface UploadEvent extends PointerEvent {
     - `multiple` - (необязательно) включение/отключение загрузки *нескольких файлов*
     - `folder` - (необязательно) включение/отключение загрузки *папок*
 
-#### - Параметры для типа "comments"
+#### - Параметры для типа "comments" {#parameters-for-comments-type}
 
 - `config` - (необязательно) объект конфигурации поля **"comments"**. Здесь можно указать следующие параметры:
     - `format` - (необязательно) формат даты комментариев. Доступные форматы описаны [здесь](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
