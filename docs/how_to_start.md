@@ -6,7 +6,9 @@ description: You can explore how to start working with DHTMLX Kanban in the docu
 
 # How to start
 
-This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional Kanban on a page.
+This guide walks you through adding a working Kanban board to a page. You'll include the source files, create containers, and initialize both the board and its optional Toolbar.
+
+There are two constructors you'll work with: `kanban.Kanban` for the board and `kanban.Toolbar` for the control bar above it. The Toolbar is optional — if you don't need search or sort controls, you can skip it entirely. When you do use it, it needs its own container and a reference to the board's API.
 
 import editor from '@site/static/img/js_kanban_editor.png';
 
@@ -16,21 +18,16 @@ import editor from '@site/static/img/js_kanban_editor.png';
   className="img_border"
 />
 
-## Step 1. Including source files
+## Step 1. Include source files
 
-Start from creating an HTML file and call it *index.html*. Then proceed to include Kanban source files into the created file.
-
-There are two necessary files:
-
-- the JS file of Kanban
-- the CSS file of Kanban
+Create an HTML file and include the two required Kanban files — the JS bundle and the CSS:
 
 ~~~html {5-6} title="index.html"
 <!DOCTYPE html>
 <html>
     <head>
         <title>How to Start with Kanban</title>
-        <script src="./dist/kanban.js"></script>   
+        <script src="./dist/kanban.js"></script>
         <link href="./dist/kanban.css" rel="stylesheet">
     </head>
     <body>
@@ -41,66 +38,48 @@ There are two necessary files:
 </html>
 ~~~
 
-### Installing Kanban via npm or yarn
+### Installing via npm or yarn
 
-You can import JavaScript Kanban into your project using `yarn` or `npm` package manager.
-
-#### Installing trial Kanban via npm or yarn
+If you prefer to install through a package manager, you have two options depending on your license:
 
 :::info
-If you want to use trial version of Kanban, download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the *README* file. Note that trial Kanban is available 30 days only.
+**Trial version:** Download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow the steps in the *README*. The trial is valid for 30 days.
 :::
-
-#### Installing PRO Kanban via npm or yarn
 
 :::info
-You can access the DHTMLX private **npm** directly in the [Client's Area](https://dhtmlx.com/clients/) by generating your login and password for **npm**. A detailed installation guide is also available there. Please note that access to the private **npm** is available only while your proprietary Kanban license is active.
+**PRO version:** You can access the DHTMLX private **npm** registry through the [Client's Area](https://dhtmlx.com/clients/). Generate your credentials there. Access requires an active Kanban license.
 :::
 
-## Step 2. Creating Kanban
+## Step 2. Add containers
 
-Now you are ready to add Kanban to the page. First, let's create the DIV containers for Kanban and its Toolbar. So, take the following steps:
+Here we add two containers — one for the board, one for the Toolbar. The order in the HTML matters: the Toolbar container should come first so it renders above the board.
 
-- specify two DIV containers in the *index.html* file
-- initialize Kanban and its Toolbar using the **kanban.Kanban** and **kanban.Toolbar** constructors
-
-:::info
-The Toolbar is an optional part of the Kanban interface. To create Kanban without Toolbar, you can specify only one DIV container and initialize the widget via the **kanban.Kanban** constructor 
-:::
-
-As parameters, constructors take the IDs of HTML containers where the Kanban and Toolbar will be placed into, as well as corresponding configuration objects.
-
-~~~html {9-10,13-15,17-19} title="index.html"
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>How to Start with Kanban</title>
-        <script src="./dist/kanban.js"></script>   
-        <link href="./dist/kanban.css" rel="stylesheet">  
-    </head>
-    <body>
-        <div id="toolbar"></div>
-        <div id="root"></div>
-
-        <script>
-            const board = new kanban.Kanban("#root", {
-                // configuration properties
-            });
-
-            new kanban.Toolbar("#toolbar", {
-                // configuration properties
-            });
-        </script>
-    </body>
-</html>
+~~~html {1-2} title="index.html"
+<div id="toolbar"></div>
+<div id="root"></div>
 ~~~
 
-## Step 3. Configuring Kanban
+:::info
+The Toolbar is optional. If you don't need it, you only need one container for the board.
+:::
 
-Next you can specify configuration properties you want the Kanban component to have when initialized.
+## Step 3. Initialize
 
-To start working with Kanban, first you need to provide the initial data for **cards** and **columns** (and *rows*).
-Beside the initial data, you can configure the [cards](guides/configuration.md#cards), [editor](guides/configuration.md#editor) and [toolbar](guides/configuration.md#toolbar) appearance.
+Here we initialize both constructors. Notice that we pass `board.api` to the Toolbar — that's how it knows which board to control:
+
+~~~jsx {2-4,6-8} title="index.html"
+const board = new kanban.Kanban("#root", {
+    // configuration properties
+});
+
+new kanban.Toolbar("#toolbar", {
+    api: board.api
+});
+~~~
+
+## Step 4. Load data
+
+At minimum, you need to provide `cards` and `columns`. `rows` is optional — you only need it if you want swimlanes:
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {
@@ -124,6 +103,16 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
+For the full list of configuration options, see:
+
+- [Cards configuration](guides/configuration.md#cards)
+- [Editor configuration](guides/configuration.md#editor)
+- [Toolbar configuration](guides/configuration.md#toolbar)
+
 ## What's next
 
-That's all. Just three simple steps and you have a handy tool for visualizing and managing the workflow. Now you can start working with your tasks or keep exploring the inner world of JavaScript Kanban.
+Now that the board is on the page, you may want to:
+
+- [Load data from a server](guides/working_with_data.md)
+- [Customize card appearance](guides/customization.md)
+- [Localize the interface](guides/localization.md)
