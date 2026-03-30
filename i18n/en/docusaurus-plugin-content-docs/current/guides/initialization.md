@@ -6,7 +6,7 @@ description: You can learn about the initialization in the documentation of the 
 
 # Initialization
 
-This guide walks through the process of adding a Kanban board to a web page, so you can easily bring Kanban functionality into your app. Here’s how to get everything set up and ready to use:
+This guide walks through the process of adding a Kanban board to a web page, so you can easily bring Kanban functionality into your app. Here's how to get everything set up and ready to use:
 
 1. [Include the Kanban source files on a page](#including-source-files).
 2. [Create a container for Kanban](#creating-container).
@@ -47,7 +47,7 @@ If you want to add a *Toolbar* along with the Kanban board, set up a separate co
 
 To get Kanban up and running, use the **kanban.Kanban** constructor. It needs two things:
 
-- the HTML container (just pass the container’s ID)
+- the HTML container (just pass the container's ID)
 - an object with configuration options. [Check out the full list here](#configuration-properties)
 
 ~~~jsx title="index.html"
@@ -57,7 +57,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-If you’re adding a *Toolbar* too, it gets initialized separately with the **kanban.Toolbar** constructor. The setup is similar:
+If you're adding a *Toolbar* too, it gets initialized separately with the **kanban.Toolbar** constructor. The setup is similar:
 
 - the HTML container (the ID)
 - an object with configuration options
@@ -81,11 +81,11 @@ For more details on setting up the Kanban Toolbar, check out the [**Configuratio
 
 :::note
 A complete list of configuration options for **Kanban** is available [**here**](api/overview/properties_overview.md). <br/> 
-You’ll find all the Toolbar configuration options [**here**](api/overview/toolbar_properties_overview.md).
+You'll find all the Toolbar configuration options [**here**](api/overview/toolbar_properties_overview.md).
 :::
 
 ## Example
 
-Here’s a quick example showing how to set up **Kanban** with some starter data:
+Here's a quick example showing how to set up **Kanban** with some starter data:
 
 <iframe src="https://snippet.dhtmlx.com/gb50vyip?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

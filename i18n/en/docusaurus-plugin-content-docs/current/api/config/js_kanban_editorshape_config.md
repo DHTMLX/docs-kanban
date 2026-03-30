@@ -293,7 +293,7 @@ To assign a single user, use ***"select"*** or ***"combo"*** types. To assign mu
 
 <details>
 
-The `uploadURL` can be a **string** or a **function**. Here’s an example using a function:
+The `uploadURL` can be a **string** or a **function**. Here's an example using a function:
 
 ~~~jsx {}
 uploadURL: rec => {
@@ -344,8 +344,8 @@ interface UploadEvent extends PointerEvent {
 - `config` - (optional) configuration options for the **"comments"** field:
     - `format` - (optional) date format for comments; see available options [here](https://docs.dhtmlx.com/suite/calendar/api/calendar_dateformat_config/)
     - `placement` - (optional) where comments appear:
-        - `"editor"` — inside the editor
-        - `"page"` — in a separate panel
+        - `"editor"` - inside the editor
+        - `"page"` - in a separate panel
     - `html` - (optional) allows HTML markup in comments
     - `confirmDeletion` - (optional) shows a confirmation dialog before deleting comments
 
@@ -355,7 +355,7 @@ interface UploadEvent extends PointerEvent {
     - `confirmDeletion` - (optional) shows a confirmation dialog before deleting links
 
 :::info
-If you don’t set editor options via the `editorShape` property, the widget will use the **defaultEditorShape** settings.
+If you don't set editor options via the `editorShape` property, the widget will use the **defaultEditorShape** settings.
 :::
 
 ### Default config

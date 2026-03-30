@@ -9,7 +9,7 @@ description: You can find an overview of Internal RestDataProvider routes for Ja
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This page lists all REST routes along with brief descriptions and links to detailed pages.<br/> It’s a good idea to check out [Working with Server](guides/working_with_server.md) before exploring the individual routes.
+This page lists all REST routes along with brief descriptions and links to detailed pages.<br/> It's a good idea to check out [Working with Server](guides/working_with_server.md) before exploring the individual routes.
 
 ---
 
@@ -38,12 +38,12 @@ For easy navigation, you can use either the tabs below or the side menu:
 <tr>
 <td>`POST`</td>
 <td>[/cards](api/provider/rest_routes/post_routes/js_kanban_post_cards_route.md)</td>
-<td>Adds a new card and returns a JSON object with the new card’s ID</td>
+<td>Adds a new card and returns a JSON object with the new card's ID</td>
 </tr>
 <tr>
 <td>`PUT`</td>
 <td>[/cards](api/provider/rest_routes/put_routes/js_kanban_put_cards_route.md)</td>
-<td>Updates a specific card’s data and returns an empty JSON object</td>
+<td>Updates a specific card's data and returns an empty JSON object</td>
 </tr>
 <tr>
 <td>`PUT`</td>
@@ -54,7 +54,7 @@ For easy navigation, you can use either the tabs below or the side menu:
 <tr>
 <td>`DELETE`</td>
 <td>[/cards](api/provider/rest_routes/delete_routes/js_kanban_delete_cards_route.md)</td>
-<td>Removes a card’s data</td>
+<td>Removes a card's data</td>
 </tr>
 </tbody>
 </table>
@@ -85,7 +85,7 @@ For easy navigation, you can use either the tabs below or the side menu:
 <tr>
 <td>`PUT`</td>
 <td>[/rows](api/provider/rest_routes/put_routes/js_kanban_put_rows_route.md)</td>
-<td>Updates a specific row’s data and returns an empty JSON object</td>
+<td>Updates a specific row's data and returns an empty JSON object</td>
 </tr>
 <tr>
 <td>`PUT`</td>
@@ -135,7 +135,7 @@ For easy navigation, you can use either the tabs below or the side menu:
             <tr>
                 <td>`DELETE`</td>
                 <td>[/columns](api/provider/rest_routes/delete_routes/js_kanban_delete_columns_route.md)</td>
-                <td>Deletes a column’s data</td>
+                <td>Deletes a column's data</td>
             </tr>
         </tbody>
     </table>
@@ -165,7 +165,7 @@ For easy navigation, you can use either the tabs below or the side menu:
             <tr>
                 <td>`DELETE`</td>
                 <td>[/links](api/provider/rest_routes/delete_routes/js_kanban_delete_links_route.md)</td>
-                <td>Deletes a link’s data</td>
+                <td>Deletes a link's data</td>
             </tr>
         </tbody>
     </table>

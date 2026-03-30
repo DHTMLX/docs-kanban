@@ -31,7 +31,7 @@ addComment({
 - `comment` - (required) object defining the new comment's details. It can include:
     - `text` - (optional) the comment's text content
     - `date` - (optional) the date associated with the comment
-    - `html` - (optional) HTML content for the comment. To display HTML instead of plain text, enable the `html` property in the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) configuration
+    - `html` - (optional) HTML content for the comment. To display HTML instead of plain text, enable the `html` property in the [`editorShape`](/api/config/js_kanban_editorshape_config/#-parameters-for-a-comments-type) configuration
 
 ### Example
 

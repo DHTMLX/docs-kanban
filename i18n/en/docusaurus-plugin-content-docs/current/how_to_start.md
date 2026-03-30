@@ -54,12 +54,12 @@ If you're interested in the trial version, just download the [**trial Kanban pac
 #### Installing PRO Kanban via npm or yarn
 
 :::info
-The DHTMLX private **npm** is available in the [Client's Area](https://dhtmlx.com/clients/), where you can generate your login and password for **npm**. There’s also a detailed installation guide there. Remember, access to the private **npm** is only available while your Kanban license is active.
+The DHTMLX private **npm** is available in the [Client's Area](https://dhtmlx.com/clients/), where you can generate your login and password for **npm**. There's also a detailed installation guide there. Remember, access to the private **npm** is only available while your Kanban license is active.
 :::
 
 ## Step 2. Creating Kanban
 
-Now it's time to add Kanban to the page. First, set up the DIV containers for Kanban and its Toolbar. Here’s what to do:
+Now it's time to add Kanban to the page. First, set up the DIV containers for Kanban and its Toolbar. Here's what to do:
 
 - Add two DIV containers to your *index.html* file
 - Initialize Kanban and its Toolbar using the **kanban.Kanban** and **kanban.Toolbar** constructors
@@ -126,4 +126,4 @@ new kanban.Toolbar("#toolbar", {
 
 ## What's next
 
-That’s it—just three easy steps and the Kanban board is ready for action. You can start managing your tasks or dive deeper into what JavaScript Kanban has to offer.
+That's it-just three easy steps and the Kanban board is ready for action. You can start managing your tasks or dive deeper into what JavaScript Kanban has to offer.

@@ -35,7 +35,7 @@ updateComment({
     - `cardId` - (optional) the ID of the card where the updated comment will be placed
     - `text` - (optional) the new text content of the comment
     - `date` - (optional) the date associated with the updated comment
-    - `html` - (optional) the HTML content for the updated comment. To show HTML instead of plain text, make sure the `html` property is enabled in the [`editorShape`](/api/config/js_kanban_editorshape_config/#--parameters-for-a-comments-type) configuration
+    - `html` - (optional) the HTML content for the updated comment. To show HTML instead of plain text, make sure the `html` property is enabled in the [`editorShape`](/api/config/js_kanban_editorshape_config/#-parameters-for-a-comments-type) configuration
 
 ### Example
 

@@ -304,7 +304,7 @@ At this point, the Kanban component is set up. When the component is added to th
 
 #### Handling events
 
-Kanban fires events whenever something happens—like a card is added or moved. These events can be used to trigger custom code. The [complete list of events](/api/overview/events_overview/) is available for reference.
+Kanban fires events whenever something happens-like a card is added or moved. These events can be used to trigger custom code. The [complete list of events](/api/overview/events_overview/) is available for reference.
 
 To handle an event, update ***Kanban.jsx*** and add the following to the `useEffect()`:
 

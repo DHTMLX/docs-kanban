@@ -501,7 +501,7 @@ Released August 30, 2022
 
 Released July 28, 2022
 
-### Fixes​
+### Fixes
 
 - The `cardHeight` property didn't work with `scrollType:"column"`
 - Uploader didn't show uploaded files in the card editor

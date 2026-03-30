@@ -25,7 +25,7 @@ description: Learn about the move-column event in the DHTMLX JavaScript Kanban l
 The callback for the **move-column** event receives an object with these properties:
 
 - `id` - (required) the ID of the column being moved
-- `before` - (optional) the ID of the column before which the moved column will be inserted. If this isn’t specified, the column will be placed at the end of the board
+- `before` - (optional) the ID of the column before which the moved column will be inserted. If this isn't specified, the column will be placed at the end of the board
 - `skipProvider` - (optional) controls whether the request to the server is suppressed
 
 :::info

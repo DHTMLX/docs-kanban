@@ -46,7 +46,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-- The [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) function changed — the **store** parameter was replaced by **readonly**:
+- The [`cardShape.menu.items`](api/config/js_kanban_cardshape_config.md) function changed - the **store** parameter was replaced by **readonly**:
 
 ~~~jsx {3-4} title="Before v1.7.0"
 menu: {

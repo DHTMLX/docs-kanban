@@ -53,7 +53,7 @@ yarn start
 
 ### Шаг 1. Установка пакета
 
-Скачайте [**trial Kanban package**](/how_to_start/#установка-kanban-через-npm-или-yarn) и следуйте инструкциям из файла README. Обратите внимание, что пробная версия Kanban доступна только 30 дней.
+Скачайте [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) и следуйте инструкциям из файла README. Обратите внимание, что пробная версия Kanban доступна только 30 дней.
   
 ### Шаг 2. Создание компонента
 
@@ -363,7 +363,7 @@ import { KanbanComponent } from "./kanban/kanban.component";
 export class AppModule {}
 ~~~
 
-Последний шаг — откройте файл ***src/main.ts*** и замените существующий код следующим:
+Последний шаг - откройте файл ***src/main.ts*** и замените существующий код следующим:
 
 ~~~jsx title="main.ts"
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";

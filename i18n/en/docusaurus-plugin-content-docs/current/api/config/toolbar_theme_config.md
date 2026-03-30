@@ -1,7 +1,7 @@
 ---
 sidebar_label: theme
 title: theme Config
-description: Here’s an overview of the (Toolbar) theme configuration in the DHTMLX JavaScript Kanban library documentation. Explore developer guides, API references, try code examples, check out live demos, and download a free 30-day trial of DHTMLX Kanban.
+description: Here's an overview of the (Toolbar) theme configuration in the DHTMLX JavaScript Kanban library documentation. Explore developer guides, API references, try code examples, check out live demos, and download a free 30-day trial of DHTMLX Kanban.
 ---
 
 # theme

@@ -6,10 +6,10 @@ description: You can explore how to work with Server in the documentation of the
 
 # Working with server
 
-JavaScript Kanban makes it easy to work with both client and server data. The widget doesn’t have strict backend requirements and can connect to any backend platform that supports the REST API (RESTful API).
+JavaScript Kanban makes it easy to work with both client and server data. The widget doesn't have strict backend requirements and can connect to any backend platform that supports the REST API (RESTful API).
 
 :::info
-The widget comes with built-in **Go** and **Node** backends, but you’re free to use your own server scripts too.
+The widget comes with built-in **Go** and **Node** backends, but you're free to use your own server scripts too.
 :::
 
 ## RestDataProvider
@@ -46,7 +46,7 @@ The **RestDataProvider** service offers special REST methods for loading data dy
 
 ## Interacting with backend  
 
-To work with the server, just connect **RestDataProvider** to your server scripts. If you’re using the built-in backend, you’ll find the scripts here:
+To work with the server, just connect **RestDataProvider** to your server scripts. If you're using the built-in backend, you'll find the scripts here:
 
 - [**Go**](https://github.com/web-widgets/kanban-go) backend
 - [**Node**](https://github.com/web-widgets/kanban-node) backend
@@ -54,7 +54,7 @@ To work with the server, just connect **RestDataProvider** to your server script
 Or you can set up your own backend.
 
 :::tip
-If you’re using a custom backend, check out the [**REST API routes**](api/overview/rest_routes_overview.md) for more details.
+If you're using a custom backend, check out the [**REST API routes**](api/overview/rest_routes_overview.md) for more details.
 :::
 
 To hook up **RestDataProvider** to your backend, just call the **kanban.RestDataProvider** constructor and pass in the backend **URL**.
@@ -91,20 +91,20 @@ Promise.all([
 ~~~
 
 :::info
-Make sure to include **RestDataProvider** in the **Event Bus** chain with [**api.setNext()**](api/internal/js_kanban_setnext_method.md) so you can add, delete, and update data—and send requests to your server.
+Make sure to include **RestDataProvider** in the **Event Bus** chain with [**api.setNext()**](api/internal/js_kanban_setnext_method.md) so you can add, delete, and update data-and send requests to your server.
 :::
 
 ### Example
 
-Here’s a snippet showing how to connect **RestDataProvider** to the **Go** backend and load data from the server:
+Here's a snippet showing how to connect **RestDataProvider** to the **Go** backend and load data from the server:
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
 ## Multiuser backend
 
-Kanban boards are popular for all kinds of teams and companies. To make collaboration smooth for multiple users, there’s a feature that lets everyone manage the same cards in real-time—no page reloads needed. This means users can work together and instantly see each other’s changes, which helps keep everyone in sync.
+Kanban boards are popular for all kinds of teams and companies. To make collaboration smooth for multiple users, there's a feature that lets everyone manage the same cards in real-time-no page reloads needed. This means users can work together and instantly see each other's changes, which helps keep everyone in sync.
 
-To set up a multiuser backend, you’ll need to handle authorization on the server before initializing Kanban. Here’s a simple `login(url: string)` function for that:
+To set up a multiuser backend, you'll need to handle authorization on the server before initializing Kanban. Here's a simple `login(url: string)` function for that:
 
 ~~~js {}
 const login = (url) => {
@@ -122,7 +122,7 @@ const login = (url) => {
 };
 ~~~
 
-This function just simulates login, and everyone gets authorized with ID 1. After logging in, the server sends back a token. You’ll need to include this token in every request. The `RestDataProvider.setHeaders()` function makes this easy by adding custom headers. By default, the token goes into the `"Remote-Token":<value>` header:
+This function just simulates login, and everyone gets authorized with ID 1. After logging in, the server sends back a token. You'll need to include this token in every request. The `RestDataProvider.setHeaders()` function makes this easy by adding custom headers. By default, the token goes into the `"Remote-Token":<value>` header:
 
 ~~~js {}
 login(url).then(token => {
@@ -164,7 +164,7 @@ Promise.all([
 });
 ~~~
 
-After setting up the widget, you’ll want to add a WebSocket to listen for server events. Here’s how to do it:
+After setting up the widget, you'll want to add a WebSocket to listen for server events. Here's how to do it:
 
 ~~~js {}
 // multiuser initialization...
@@ -184,7 +184,7 @@ events.on(handlers);
 - `events` - this connects to the server and listens for incoming events
 - `RemoteEvents.on(handlers)` - applies your handlers to server events
 
-With the multiuser backend in place, it’s much easier for teams to collaborate and see updates in real-time right in the UI.
+With the multiuser backend in place, it's much easier for teams to collaborate and see updates in real-time right in the UI.
 
 ### Example
 
@@ -214,7 +214,7 @@ Any data updated on the client side will be passed as the **obj** argument to `f
 - For **links**: `"add-link"`, `"delete-link"`
 - For **rows**: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
 
-Here’s an example showing how this works:
+Here's an example showing how this works:
 
 ~~~js {}
 // initialize kanban
@@ -250,7 +250,7 @@ const remoteEvents = new kanban.RemoteEvents(remoteEventsURL, token);
 remoteEvents.on(handlers);
 ~~~
 
-The `RestDataProvider.getIDResolver()` method gives you a function to keep client and server IDs in sync. When you create a new object (card/column/row/link) on the client, it gets a temporary ID and a server ID in the store. The `idResolver()` function helps match up the client ID with the server ID. Here’s how it looks: `idResolver(id: TID, type: number)`
+The `RestDataProvider.getIDResolver()` method gives you a function to keep client and server IDs in sync. When you create a new object (card/column/row/link) on the client, it gets a temporary ID and a server ID in the store. The `idResolver()` function helps match up the client ID with the server ID. Here's how it looks: `idResolver(id: TID, type: number)`
 
 The `type` argument is the model type:
 
@@ -261,13 +261,13 @@ The `type` argument is the model type:
 
 To keep the client from sending a duplicate request to the server, use `skipProvider: true` when calling `board.api.exec()`.
 
-Once you’ve set up your custom handlers, you can handle server events however you like.
+Once you've set up your custom handlers, you can handle server events however you like.
 
 ## Grouping two or more statuses into a single column
 
 Sometimes you might want to show cards from different columns all together in a single column (like combining *To do* and *Unassigned* statuses into one column).
 
-To do this, you can add a custom field (for example, **status**) that keeps track of the card’s current status. The **column** field will hold the general column status.
+To do this, you can add a custom field (for example, **status**) that keeps track of the card's current status. The **column** field will hold the general column status.
 
 Next, set up rules for grouping cards. For example, you might group cards into columns like this:
 
@@ -284,7 +284,7 @@ There are a couple of ways to group cards by status into a single column:
 
 If you want to do the grouping on the server, your backend needs to send data to the client using [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (see [Multiuser backend](#multiuser-backend)).
 
-When the server handles an update for a card, check the **status** field. Here’s how you might do it in [Go](https://go.dev/), but you can use any backend tech you like.
+When the server handles an update for a card, check the **status** field. Here's how you might do it in [Go](https://go.dev/), but you can use any backend tech you like.
 
 ~~~go
 func Update(id int, c Card) error {
@@ -325,7 +325,7 @@ For a mixed approach, get the grouping rules from the server. Then, the client c
 const groupingRules = await fetch("http://server.com/rules");
 ~~~
 
-Here’s what the rules might look like:
+Here's what the rules might look like:
 
 ~~~json
 {
@@ -363,6 +363,6 @@ This way, you can group cards into columns based on other fields.
 
 ### Example
 
-Here’s a snippet showing how to set up the server to group two or more statuses into a single column in real-time:
+Here's a snippet showing how to set up the server to group two or more statuses into a single column in real-time:
 
 <iframe src="https://snippet.dhtmlx.com/habbz6mf?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

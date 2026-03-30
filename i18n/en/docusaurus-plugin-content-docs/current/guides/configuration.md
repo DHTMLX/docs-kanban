@@ -12,7 +12,7 @@ The *Kanban* board can be customized in both looks and features using its API. T
 - Set up which fields appear in the editor with the [`editorShape`](api/config/js_kanban_editorshape_config.md) property
 - Adjust how the editor works using the [`editor`](api/config/js_kanban_editor_config.md) property
 - Choose how Kanban renders and scrolls with [`renderType`](api/config/js_kanban_rendertype_config.md) and [`scrollType`](api/config/js_kanban_scrolltype_config.md)
-- Manage Kanban’s history through the [`history`](api/config/js_kanban_history_config.md) property
+- Manage Kanban's history through the [`history`](api/config/js_kanban_history_config.md) property
 - Personalize card templates using [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)
     - *For more details, check out the [**Customization**](guides/customization.md) section*
 - Set the language with the [`locale`](api/config/js_kanban_locale_config.md) property
@@ -48,7 +48,7 @@ On a Kanban board, *cards* are organized into *columns* and *rows*. The [`cardSh
 - Card attachment, using `attached: boolean`
 
     :::tip
-    You can attach files to a card using the editor’s field. To set this up, use the [**files**](#files-type) type.
+    You can attach files to a card using the editor's field. To set this up, use the [**files**](#files-type) type.
     :::
 
 - Card color, with `color: boolean`
@@ -122,7 +122,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-If you don’t set up card fields using [`cardShape`](api/config/js_kanban_cardshape_config.md), Kanban will use its [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) settings!
+If you don't set up card fields using [`cardShape`](api/config/js_kanban_cardshape_config.md), Kanban will use its [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) settings!
 :::
 
 ## Editor
@@ -464,7 +464,7 @@ new kanban.Kanban("#root", {
 :::
 
 :::note
-If you don’t set up editor fields with [`editorShape`](api/config/js_kanban_editorshape_config.md), Kanban uses its [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) settings. In this case, default controls and inputs only show up in the editor after you enable the matching card fields using [`cardShape`](api/config/js_kanban_cardshape_config.md).
+If you don't set up editor fields with [`editorShape`](api/config/js_kanban_editorshape_config.md), Kanban uses its [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) settings. In this case, default controls and inputs only show up in the editor after you enable the matching card fields using [`cardShape`](api/config/js_kanban_cardshape_config.md).
 :::
 
 ### Configuring the editor
@@ -571,6 +571,6 @@ To hide Toolbar controls, just remove their strings from the **items** array.
 
 ## Example
 
-Here’s a snippet that shows how to set up **Cards**, the **Editor**, and the **Toolbar** in Kanban:
+Here's a snippet that shows how to set up **Cards**, the **Editor**, and the **Toolbar** in Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

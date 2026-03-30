@@ -6,7 +6,7 @@ description: You can explore the How-tos page of DHTMLX JavaScript Kanban librar
 
 # How-tos
 
-Here’s a handy reference for getting started with JavaScript Kanban, including setup, configuration, customization, and everyday use.
+Here's a handy reference for getting started with JavaScript Kanban, including setup, configuration, customization, and everyday use.
 
 ## Basic principles
 
@@ -17,12 +17,12 @@ This section covers the essentials for working with Kanban.
 | [Initialization](guides/initialization.md)                  | How to get Kanban up and running ([Example](https://snippet.dhtmlx.com/gb50vyip?tag=kanban))|
 | [Configuration](guides/configuration.md)                   | How to tweak Kanban settings                            |
 | [Customization](guides/customization.md)                   | Ways to adjust Kanban to fit your needs                 |
-| [Stylization](guides/stylization.md)                     | Options for changing Kanban’s look and feel             |
+| [Stylization](guides/stylization.md)                     | Options for changing Kanban's look and feel             |
 | [Localization](guides/localization.md)                    | How to set up Kanban for different languages ([Example](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
 ## API reference
 
-Here you’ll find links to all the main Kanban API docs.
+Here you'll find links to all the main Kanban API docs.
 
 | Topic                                                 | Description                                              |
 | ----------------------------------------------------- | ---------------------------------------------------------|
@@ -85,7 +85,7 @@ These sections break down how to manage cards, handle card data, and adjust card
 
 ## How to work with a card editor
 
-Here’s how to use and configure the card editor.
+Here's how to use and configure the card editor.
 
 | Topic                                                        | Description                                            |
 | ------------------------------------------------------------ | -------------------------------------------------------|
@@ -153,7 +153,7 @@ These sections go over row (swimlane) operations and data management.
 | ----------------------------------------------------------- | ---------------------------------------------------|
 | [Executing events](api/internal/js_kanban_exec_method.md)   | How to trigger inner events               |
 | [Intercepting events](api/internal/js_kanban_intercept_method.md)| How to intercept inner events        |
-| [List of inner events](api/overview/events_overview.md)     | List of Kanban’s built-in events                |
+| [List of inner events](api/overview/events_overview.md)     | List of Kanban's built-in events                |
 | [Reordering events](api/internal/js_kanban_setnext_method.md)| How to change the order of inner events in the Event Bus |
 | [Subscribing on events](api/internal/js_kanban_on_method.md)| How to subscribe to inner events          |
 
@@ -172,7 +172,7 @@ These sections go over row (swimlane) operations and data management.
 | ----------------------------------------------------------- | ---------------------------------------------------|
 | [Getting StateStore and DataStore](api/internal/js_kanban_getstores_method.md)| How to access StateStore and DataStore objects |
 | [Getting StateStore properties](api/internal/js_kanban_getstate_method.md)| How to get StateStore property objects |
-| [Getting StateStore reactive properties](api/internal/js_kanban_getreactivestate_method.md)| How to get StateStore’s reactive property objects |
+| [Getting StateStore reactive properties](api/internal/js_kanban_getreactivestate_method.md)| How to get StateStore's reactive property objects |
 
 ## How to work with Toolbar
 

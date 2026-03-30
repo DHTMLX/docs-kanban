@@ -64,7 +64,7 @@ description: Ознакомьтесь с возможностями настро
 - назначение пользователей на карточку через конфиг `users: boolean | { show: boolean, values: object, maxCount: number | false }`
 
     :::tip
-    Вы можете назначать одного или нескольких пользователей на любую карточку через соответствующий контрол редактора Kanban. Для назначения одного пользователя используйте типы редактора [**combo** или **select**](#типы-combo-select-и-multiselect), для нескольких — [**multiselect**](#типы-combo-select-и-multiselect).
+    Вы можете назначать одного или нескольких пользователей на любую карточку через соответствующий контрол редактора Kanban. Для назначения одного пользователя используйте типы редактора [**combo** или **select**](#типы-combo-select-и-multiselect), для нескольких - [**multiselect**](#типы-combo-select-и-multiselect).
     :::
 
 - приоритет карточки через конфиг `priority: boolean | { show: boolean, values: object }`
@@ -467,7 +467,7 @@ new kanban.Kanban("#root", {
 Если вы не укажете настройки редактора через свойство [`editorShape`](api/config/js_kanban_editorshape_config.md), виджет применит набор параметров [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config). В этом случае стандартные контролы и поля появятся в редакторе только после активации соответствующих полей карточек через свойство [`cardShape`](api/config/js_kanban_cardshape_config.md).
 :::
 
-### Настройка редактора
+### Настройка редактора {#editor-configuration}
 
 С помощью свойства [`editor`](api/config/js_kanban_editor_config.md) вы можете настроить редактор следующим образом:
 

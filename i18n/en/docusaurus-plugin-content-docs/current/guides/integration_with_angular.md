@@ -28,11 +28,11 @@ ng new my-angular-kanban-app
 If you want to follow along with this guide, remember to turn off Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering) when setting up your Angular app!
 :::
 
-This command will set up everything you need, so there’s no need to run any extra commands afterwards.
+This command will set up everything you need, so there's no need to run any extra commands afterwards.
 
 ### Installation of dependencies
 
-Head into your new app’s directory:
+Head into your new app's directory:
 
 ~~~json
 cd my-angular-kanban-app
@@ -49,7 +49,7 @@ Your app should now be running locally (for example, at `http://localhost:3000`)
 
 ## Creating Kanban
 
-To get started with DHTMLX Kanban, you’ll need the source code. First, stop your app and install the Kanban package.
+To get started with DHTMLX Kanban, you'll need the source code. First, stop your app and install the Kanban package.
 
 ### Step 1. Package installation
 
@@ -61,15 +61,15 @@ Next, set up an Angular component to include Kanban with a Toolbar in your app. 
 
 #### Import source files
 
-Open up **kanban.component.ts** and import the Kanban source files. Here’s what to keep in mind:
+Open up **kanban.component.ts** and import the Kanban source files. Here's what to keep in mind:
 
-- If you’re using the PRO version and installed Kanban from a local folder, your import will look like this:
+- If you're using the PRO version and installed Kanban from a local folder, your import will look like this:
 
 ~~~jsx
 import { Kanban, Toolbar } from 'dhx-kanban-package';
 ~~~
 
-- If you’re using the trial version, the import should be:
+- If you're using the trial version, the import should be:
 
 ~~~jsx
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -152,7 +152,7 @@ body{
 
 #### Loading data
 
-To fill Kanban with data, you’ll need a data set. Create a **data.ts** file in **src/app/kanban/** and add some sample data like this:
+To fill Kanban with data, you'll need a data set. Create a **data.ts** file in **src/app/kanban/** and add some sample data like this:
 
 ~~~jsx {2,14,37,48} title="data.ts"
 export function getData() {
@@ -385,4 +385,4 @@ import trial from '@site/static/img/trial_kanban.png';
     className="img_border"
 />
 
-That’s it for integrating DHTMLX Kanban with Angular. Feel free to adjust the code to fit your project’s needs. There’s a more advanced example available on [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
+That's it for integrating DHTMLX Kanban with Angular. Feel free to adjust the code to fit your project's needs. There's a more advanced example available on [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).

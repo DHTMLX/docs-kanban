@@ -467,7 +467,7 @@ new kanban.Kanban("#root", {
 如果未通过 [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性指定编辑器设置，控件将应用 [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) 默认参数集。在这种情况下，仅在通过 [`cardShape`](api/config/js_kanban_cardshape_config.md) 属性激活卡片的对应字段后，默认控件和输入框才会在编辑器中显示。
 :::
 
-### 编辑器的配置
+### 编辑器的配置 {#editor-config}
 
 通过 [`editor`](api/config/js_kanban_editor_config.md) 属性，您可以如下配置编辑器：
 

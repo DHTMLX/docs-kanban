@@ -60,7 +60,7 @@
     "description": "面包屑导航的ARIA标签"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 个项目|{count} 个项目",
+    "message": "个项目",
     "description": "生成的索引中类别卡的默认描述，说明该类别包含多少项目"
   },
   "theme.docs.paginator.navAriaLabel": {
