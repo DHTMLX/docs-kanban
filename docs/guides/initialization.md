@@ -6,7 +6,7 @@ description: You can learn about the initialization in the documentation of the 
 
 # Initialization
 
-This guide will give you detailed instructions on how to create Kanban on a page to enrich your application with features of the Kanban board. Take the following steps to get a ready-to-use component:
+This guide covers how to add Kanban to a page. Take the following steps to get a ready-to-use component:
 
 1. [Include the Kanban source files on a page](#including-source-files).
 2. [Create a container for Kanban](#creating-container).
@@ -21,7 +21,7 @@ To create Kanban, you need to include 2 source files on your page:
 - *kanban.js*
 - *kanban.css*
 
-Make sure that you set correct relative paths to the source files:
+Set correct relative paths to the source files:
 
 ~~~html title="index.html"
 <script type="text/javascript" src="./dist/kanban.js"></script>  
@@ -62,6 +62,8 @@ If you want to create the widget along with its *Toolbar*, you need to initializ
 - an HTML container (the ID of the HTML container)
 - an object with configuration properties
 
+Pass a reference to the board's API when initializing the Toolbar:
+
 ~~~jsx {6-8} title="index.html"
 // create Kanban
 const board = new kanban.Kanban("#root", {
@@ -69,7 +71,7 @@ const board = new kanban.Kanban("#root", {
 });
 
 new kanban.Toolbar("#toolbar", {
-    // configuration properties
+    api: board.api
 });
 ~~~
 
@@ -80,12 +82,12 @@ To learn more about configuring the Toolbar of Kanban, read the [**Configuration
 ### Configuration properties
 
 :::note
-The full list of properties to configure **Kanban** can be found [**here**](api/overview/properties_overview.md). <br/> 
+The full list of properties to configure **Kanban** can be found [**here**](api/overview/properties_overview.md). <br/>
 The full list of properties to configure **Toolbar of Kanban** can be found [**here**](api/overview/toolbar_properties_overview.md).
 :::
 
 ## Example
 
-In this snippet you can see how to initialize **Kanban** with the initial data:
+This snippet shows how to initialize **Kanban** with initial data:
 
 <iframe src="https://snippet.dhtmlx.com/gb50vyip?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
