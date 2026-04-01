@@ -42,7 +42,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// "done" ID 컬럼으로 카드 이동 금지
+// "done" ID 컬럼으로만 카드 이동 허용
 board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;

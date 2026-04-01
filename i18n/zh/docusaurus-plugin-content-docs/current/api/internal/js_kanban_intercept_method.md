@@ -42,7 +42,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 禁止将卡片移动到 ID 为 "done" 的列
+// 只允许将卡片移动到 ID 为 "done" 的列
 board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;

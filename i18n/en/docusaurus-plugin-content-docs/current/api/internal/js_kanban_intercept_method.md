@@ -42,7 +42,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// block moving cards into the column with the "done" ID
+// allow moving cards only into the column with the "done" ID
 board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;

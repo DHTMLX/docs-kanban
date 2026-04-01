@@ -42,7 +42,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// Verhindert das Verschieben von Karten in die Spalte mit der ID "done"
+// Erlaubt das Verschieben von Karten nur in die Spalte mit der ID "done"
 board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;
