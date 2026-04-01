@@ -42,7 +42,7 @@ const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// запрещаем перемещать карточки в колонку с ID "done"
+// разрешаем перемещать карточки только в колонку с ID "done"
 board.api.intercept("move-card", ({ id, columnId }) => {
     if(columnId !== "done" ){
         return false;
