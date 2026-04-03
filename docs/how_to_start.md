@@ -6,7 +6,7 @@ description: You can explore how to start working with DHTMLX Kanban in the docu
 
 # How to start
 
-This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional Kanban on a page.
+This guide covers the steps to get Kanban running on a page.
 
 import editor from '@site/static/img/js_kanban_editor.png';
 
@@ -16,11 +16,9 @@ import editor from '@site/static/img/js_kanban_editor.png';
   className="img_border"
 />
 
-## Step 1. Including source files
+## Step 1. Include source files
 
-Start from creating an HTML file and call it *index.html*. Then proceed to include Kanban source files into the created file.
-
-There are two necessary files:
+Create an HTML file named *index.html*, then include the Kanban source files:
 
 - the JS file of Kanban
 - the CSS file of Kanban
@@ -41,34 +39,34 @@ There are two necessary files:
 </html>
 ~~~
 
-### Installing Kanban via npm or yarn
+### Install Kanban via npm or yarn
 
 You can import JavaScript Kanban into your project using `yarn` or `npm` package manager.
 
-#### Installing trial Kanban via npm or yarn
+#### Install trial Kanban via npm or yarn
 
 :::info
 If you want to use trial version of Kanban, download the [**trial Kanban package**](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and follow steps mentioned in the *README* file. Note that trial Kanban is available 30 days only.
 :::
 
-#### Installing PRO Kanban via npm or yarn
+#### Install PRO Kanban via npm or yarn
 
 :::info
 You can access the DHTMLX private **npm** directly in the [Client's Area](https://dhtmlx.com/clients/) by generating your login and password for **npm**. A detailed installation guide is also available there. Please note that access to the private **npm** is available only while your proprietary Kanban license is active.
 :::
 
-## Step 2. Creating Kanban
+## Step 2. Create Kanban
 
-Now you are ready to add Kanban to the page. First, let's create the DIV containers for Kanban and its Toolbar. So, take the following steps:
+Add two DIV containers to *index.html* and initialize the constructors:
 
 - specify two DIV containers in the *index.html* file
 - initialize Kanban and its Toolbar using the **kanban.Kanban** and **kanban.Toolbar** constructors
 
 :::info
-The Toolbar is an optional part of the Kanban interface. To create Kanban without Toolbar, you can specify only one DIV container and initialize the widget via the **kanban.Kanban** constructor 
+The Toolbar is an optional part of the Kanban interface. To create Kanban without Toolbar, you can specify only one DIV container and initialize the widget via the **kanban.Kanban** constructor
 :::
 
-As parameters, constructors take the IDs of HTML containers where the Kanban and Toolbar will be placed into, as well as corresponding configuration objects.
+Each constructor takes the ID of its HTML container and a configuration object:
 
 ~~~html {9-10,13-15,17-19} title="index.html"
 <!DOCTYPE html>
@@ -95,12 +93,9 @@ As parameters, constructors take the IDs of HTML containers where the Kanban and
 </html>
 ~~~
 
-## Step 3. Configuring Kanban
+## Step 3. Configure Kanban
 
-Next you can specify configuration properties you want the Kanban component to have when initialized.
-
-To start working with Kanban, first you need to provide the initial data for **cards** and **columns** (and *rows*).
-Beside the initial data, you can configure the [cards](guides/configuration.md#cards), [editor](guides/configuration.md#editor) and [toolbar](guides/configuration.md#toolbar) appearance.
+Pass configuration properties to the constructors. At minimum, provide initial data for **cards** and **columns** (and *rows*). You can also configure the [cards](guides/configuration.md#cards), [editor](guides/configuration.md#editor), and [toolbar](guides/configuration.md#toolbar) appearance:
 
 ~~~jsx {2-7,11-18}
 const board = new kanban.Kanban("#root", {
@@ -126,4 +121,4 @@ new kanban.Toolbar("#toolbar", {
 
 ## What's next
 
-That's all. Just three simple steps and you have a handy tool for visualizing and managing the workflow. Now you can start working with your tasks or keep exploring the inner world of JavaScript Kanban.
+That's all — three steps and Kanban is running on your page. Now you can start working with your tasks or explore the [Configuration](guides/configuration.md) guide to customize the board further.
