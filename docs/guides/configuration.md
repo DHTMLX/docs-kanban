@@ -6,74 +6,80 @@ description: You can learn about the configuration in the documentation of the D
 
 # Configuration
 
-You can configure the *Kanban* appearance and functionality via the corresponding API. The available parameters will allow you to:
+Kanban has three configurable areas: **Cards** (what each card shows), **Editor** (what fields appear when you open a card), and **Toolbar** (the controls above the board).
 
-- configure the cards appearance via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property
-- configure the editor fields via the [`editorShape`](api/config/js_kanban_editorshape_config.md) property
-- configure the editor behaviour via the [`editor`](api/config/js_kanban_editor_config.md) property
-- configure rendering and scrolling via the [`renderType`](api/config/js_kanban_rendertype_config.md) and [`scrollType`](api/config/js_kanban_scrolltype_config.md) properties
-- configure the Kanban history via the [`history`](api/config/js_kanban_history_config.md) property
-- customize the card appearance via the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property
-    - *Refer to the [**Customization**](guides/customization.md) section for details!*
-- apply the desired locale via the [`locale`](api/config/js_kanban_locale_config.md) property
-    - *Refer to the [**Localization**](guides/localization.md) section for details!*
-- load data for cards, columns, rows and links via the corresponding [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md) and [`links`](api/config/js_kanban_links_config.md) properties
-    - *Refer to the [**Working with data**](guides/working_with_data.md) section for details!*
+Cards and Editor are linked by key names. A field on a card maps to an editor control through a shared `key`. If the keys don't match, the editor control won't update the card field. This is the one thing that trips most people up when customizing both at the same time.
+
+The full API for each area:
+
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) — card fields
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) — editor controls
+- [`editor`](api/config/js_kanban_editor_config.md) — editor behavior (autosave, etc.)
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — custom card rendering → see [Customization](guides/customization.md)
+- [`locale`](api/config/js_kanban_locale_config.md) — localization → see [Localization](guides/localization.md)
+- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) — data → see [Working with data](guides/working_with_data.md)
 
 ## Cards
 
-The board of Kanban consists of the *cards* distributed into *columns* and *rows*. You can configure the cards appearance using the [`cardShape`](api/config/js_kanban_cardshape_config.md) configuration property. There are several predefined fields you can include (or exclude) into the card template, namely:
+Use [`cardShape`](api/config/js_kanban_cardshape_config.md) to control which fields appear on each card. Set a field to `true` to show it, `false` (or omit it) to hide it.
 
-- a card label via the `label: boolean` config
-- a card description via the `description: boolean` config
+Available fields:
 
-    :::tip
-    You can manage the **label** and **description** fields of any card via the corresponding inputs of the Kanban editor. If you activate these fields, the corresponding inputs will be displayed in the editor automatically. To configure these inputs, you can use the [**text** and **textarea**](#text-and-textarea-types) types.
-    :::
-
-- a card progress via the `progress: boolean` config
+- `label: boolean` — card title
 
     :::tip
-    You can manage the **progress** field of any card via the corresponding control of the Kanban editor. If you activate this field, the corresponding control will be displayed in the editor automatically. To configure this control, you can use the [**progress**](#progress-type) type.
+    Managed via the **label** input in the editor. Enable it here and the input appears automatically. Configure it with the [text or textarea](#text-and-textarea-types) editor type.
     :::
 
-- a start date via the `start_date: boolean` config
-- an end date via the `end_date: boolean` config
+- `description: boolean` — card description
 
     :::tip
-    You can manage the **start date** and **end date** fields of any card via the corresponding controls of the Kanban editor. If you activate these fields, the corresponding controls will be displayed in the editor automatically. To configure these controls, you can use the [**date**](#date-and-daterange-types) type.
+    Managed via the **description** input in the editor. Configure it with the [text or textarea](#text-and-textarea-types) editor type.
     :::
 
-- a card context menu via the `menu: boolean` config
-- a card attachment via the `attached: boolean` config
+- `progress: boolean` — progress bar
 
     :::tip
-    You can **attache files** to any card via the corresponding field of the Kanban editor. To configure this field, you can use the [**files**](#files-type) type.
+    Managed via the **progress** control in the editor. Configure it with the [progress](#progress-type) editor type.
     :::
 
-- a card color via the `color: boolean` config
+- `start_date: boolean` — start date
+- `end_date: boolean` — end date
 
     :::tip
-    You can manage the **top color line** of any card via the corresponding control of the Kanban editor. If you activate **color**, the corresponding control (*colorpicker*) will be displayed in the editor automatically. To configure this control, you can use the [**color**](#color-type) type.
+    Managed via date controls in the editor. Configure them with the [date](#date-and-daterange-types) editor type.
     :::
 
-- a card cover (*preview image*) via the `cover: boolean` config
-- a card comment(s) via the `comments: boolean` config
-- a confirmation dialog to confirm or decline the card deletion via the `confirmDeletion: boolean` config
-- a card vote(s) via the `votes: boolean | { show: boolean, clicable: true }` config
-- a card assignment (users) via the `users: boolean | { show: boolean, values: object, maxCount: number | false }` config
+- `menu: boolean` — three-dot context menu on the card
+- `attached: boolean` — file attachments
 
     :::tip
-    You can assign one or several users to any card via the corresponding control of the Kanban editor. To configure the control for assigning a single user, use the [**combo** or **select**](#combo-select-and-multiselect-types) types of editor. To assign multiple users, use the [**multiselect**](#combo-select-and-multiselect-types) type.
+    Attach files to any card via the editor. Configure the field with the [files](#files-type) editor type.
     :::
 
-- a card priority via the `priority: boolean | { show: boolean, values: object }` config
+- `color: boolean` — top color bar on the card
 
     :::tip
-    You can manage the **priority** of any card via the corresponding control of the Kanban editor. If you activate **priority**, the corresponding control will be displayed in the editor automatically. To configure this control, you can use the [**combo** or **select**](#combo-select-and-multiselect-types) types only.
+    Managed via a color picker in the editor. If enabled, the picker appears automatically. Configure it with the [color](#color-type) editor type.
     :::
 
-- *a custom field* via the `headerFields: [ { key: string, label: string, css: string } ]` config
+- `cover: boolean` — preview image
+- `comments: boolean` — comments
+- `confirmDeletion: boolean` — confirmation dialog before deleting a card
+- `votes: boolean | { show: boolean, clickable: boolean }` — vote counter
+- `users: boolean | { show: boolean, values: object, maxCount: number | false }` — assigned users
+
+    :::tip
+    Assign one or multiple users via the editor. For a single user, use the [combo or select](#combo-select-and-multiselect-types) type. For multiple users, use [multiselect](#combo-select-and-multiselect-types).
+    :::
+
+- `priority: boolean | { show: boolean, values: object }` — priority badge
+
+    :::tip
+    Managed via the editor. If enabled, the control appears automatically. Configure it with the [combo or select](#combo-select-and-multiselect-types) types only.
+    :::
+
+- `headerFields: [ { key: string, label: string, css: string } ]` — custom fields
 
 ~~~jsx {12-35,42}
 const users = [ // users data
@@ -122,29 +128,31 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-Unless you specify the card settings via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property, the widget will apply a [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) set of parameters!
+If you don't set `cardShape`, the widget uses [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config).
 :::
 
 ## Editor
 
 :::info
-You can display the Editor as the **sidebar** or **modal window** using the [`editor.placement`](api/config/js_kanban_editor_config.md) property!
+Display the Editor as a **sidebar** or **modal window** using the [`editor.placement`](api/config/js_kanban_editor_config.md) property.
 :::
 
-The *Editor* of Kanban consists of the fields for managing the cards data. To configure the editor fields (controls), you can use the [`editorShape`](api/config/js_kanban_editorshape_config.md) property. You can use the following types of editor fields:
+Use [`editorShape`](api/config/js_kanban_editorshape_config.md) to define which controls appear in the editor. Each control has a `type`, a `key` that links it to the corresponding card field, and a `label`.
+
+Available types:
 
 - [**combo**, **select**, and **multiselect**](#combo-select-and-multiselect-types)
 - [**color**](#color-type)
 - [**text** and **textarea**](#text-and-textarea-types)
 - [**progress**](#progress-type)
 - [**files**](#files-type)
-- [**date** and **dataRange**](#date-and-daterange-types)
+- [**date** and **dateRange**](#date-and-daterange-types)
 - [**comments**](#comments-type)
 - [**links**](#links-type)
 
 ### Combo, Select and Multiselect types
 
-The editor fields of **combo**, **select**, and **multiselect** types can be set in the following way:
+Use `combo`, `select`, or `multiselect` for fields with a predefined list of options (priority, tags, assignees, etc.):
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
@@ -165,7 +173,7 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::info
-For the editor field of **"multiselect"** and **"combo"** types you can also specify a path to the preview image via the **avatar** property:
+`multiselect` and `combo` also support an `avatar` property for preview images:
 
 ~~~jsx {3,9,13}
 editorShape: [
@@ -174,13 +182,13 @@ editorShape: [
         key: "users", // the "users" key is used when configuring the "cardShape" property
         label: "Users",
         values: [
-            { 
-                id: 1, label: "Alan", 
-                avatar: "preview_image_path_1.png" 
+            {
+                id: 1, label: "Alan",
+                avatar: "preview_image_path_1.png"
             },
-            { 
-                id: 2, label: "John", 
-                avatar: "preview_image_path_2.png" 
+            {
+                id: 2, label: "John",
+                avatar: "preview_image_path_2.png"
             }
         ]
     },
@@ -193,13 +201,13 @@ editorShape: [
 
 ### Color type
 
-The editor field of **color** type can be set in the following way:
+Use `color` to let users pick a color for the card's top bar:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "color", 
+            type: "color",
             key: "color", // the "color" key is used when configuring the "cardShape" property
             label: "Card color",
             values: ["#65D3B3", "#FFC975", "#58C3FE"],
@@ -215,7 +223,7 @@ new kanban.Kanban("#root", {
 
 ### Text and Textarea types
 
-The editor fields of **text** and **textarea** types can be set in the following way:
+Use `text` for single-line inputs and `textarea` for multi-line ones:
 
 ~~~jsx {3-14}
 new kanban.Kanban("#root", {
@@ -225,8 +233,8 @@ new kanban.Kanban("#root", {
             key: "label",
             label: "Label",
             config: {
-                placeholder: "Type your tips here", 
-                readonly: false, 
+                placeholder: "Type your tips here",
+                readonly: false,
                 focus: true,
                 disabled: false,
                 inputStyle: "height: 50px;"
@@ -239,13 +247,13 @@ new kanban.Kanban("#root", {
 
 ### Progress type
 
-The editor field of **progress** type can be set in the following way:
+Use `progress` to render a slider for tracking completion percentage:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "progress", 
+            type: "progress",
             key: "progress", // the "progress" key is used when configuring the "cardShape" property
             label: "Progress",
             config: {
@@ -261,7 +269,7 @@ new kanban.Kanban("#root", {
 
 ### Files type
 
-The editor field of **files** type can be set in the following way:
+Use `files` to let users attach files to a card. You can provide the upload URL as a string or as a function for custom request handling.
 
 #### Configuring Upload Url as String
 
@@ -270,7 +278,7 @@ const url = "https://docs.dhtmlx.com/kanban-backend";
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "files", 
+            type: "files",
             key: "attached", // the "attached" key is used when configuring the "cardShape" property
             label: "Attachment",
             uploadURL: url + "/uploads", // specify url as string
@@ -287,6 +295,8 @@ new kanban.Kanban("#root", {
 ~~~
 
 #### Configuring Upload Url as Function
+
+Use a function when you need to add auth headers or transform the response:
 
 ~~~jsx {9-31}
 const url = "https://docs.dhtmlx.com/kanban-backend";
@@ -326,13 +336,13 @@ new kanban.Kanban("#root", {
 
 ### Date and DateRange types
 
-The editor field of **date** type can be set in the following way:
+Use `date` for a single date field:
 
 ~~~jsx {3-8}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "date", 
+            type: "date",
             key: "start_date",
             label: "Start date",
             format: "%d/%m/%y"
@@ -342,13 +352,13 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-The editor field of **dateRange** type can be set in the following way:
+Use `dateRange` to bind start and end dates to a single control:
 
 ~~~jsx {3-11}
 new kanban.Kanban("#root", {
     editorShape: [
         {
-            type: "dateRange", 
+            type: "dateRange",
             key: {
                 start: "start_date",
                 end: "end_date"
@@ -362,8 +372,6 @@ new kanban.Kanban("#root", {
 ~~~
 
 ### Comments type
-
-The editor field of **comments** type can be set in the following way:
 
 ~~~jsx {3-13}
 new kanban.Kanban("#root", {
@@ -386,8 +394,6 @@ new kanban.Kanban("#root", {
 
 ### Links type
 
-The editor field of **links** type can be set in the following way:
-
 ~~~jsx {3-10}
 new kanban.Kanban("#root", {
     editorShape: [
@@ -406,13 +412,14 @@ new kanban.Kanban("#root", {
 
 ### Binding editor fields to card fields
 
+The `key` in each `editorShape` object is what connects the editor control to the card field. For built-in fields, the key must be set to `true` in `cardShape`. For custom fields, the key must appear in the `headerFields` array. The same key is also how you provide initial data for that field.
+
 :::info
-To link the editor field to the corresponding card field, you need to provide special **key** in the object of [`editorShape`](api/config/js_kanban_editorshape_config.md) property (`key: "editor_field_key"`). The value of this key needs to be set to *true* in the [`cardShape`](api/config/js_kanban_cardshape_config.md) property (for built-in card fields) or specified in the **headerFields** array (for custom card fields). You can provide the initial data of any field via this key as well.
 
 ~~~jsx {5,13,22,25,33-34,38-39,45-47}
 // editor settings
-const editorShape = [ 
-    { 
+const editorShape = [
+    {
         type: "text",
         key: "label",
         label: "Label",
@@ -420,12 +427,12 @@ const editorShape = [
             placeholder: "Enter new label here"
         }
     },
-    { 
+    {
         type: "textarea",
         key: "note",
         label: "Note",
         config: {
-            placeholder: "Enter usefull note here"
+            placeholder: "Enter a useful note here"
         }
     }
 ];
@@ -434,7 +441,7 @@ const cardShape = {
     label: true, // a key of built-in field
     headerFields: [
         {
-            key: "note", // a key of custom field 
+            key: "note", // a key of custom field
             label: "Note"
         }
     ]
@@ -461,18 +468,19 @@ new kanban.Kanban("#root", {
     // other configuration parameters
 });
 ~~~
+
 :::
 
 :::note
-Unless you specify the editor settings via the [`editorShape`](api/config/js_kanban_editorshape_config.md) property, the widget will apply a [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) set of parameters. In this case, the default controls and inputs will be displayed in editor only after activating the corresponding fields of cards via the [`cardShape`](api/config/js_kanban_cardshape_config.md) property.
+If you don't set `editorShape`, the widget uses [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config). In that case, the default controls only appear after you enable the corresponding card fields via `cardShape`.
 :::
 
 ### Configuring the editor
 
-Using the [`editor`](api/config/js_kanban_editor_config.md) property, you can configure the editor in the following way:
+Use the [`editor`](api/config/js_kanban_editor_config.md) property to configure editor behavior:
 
-- enables/disables an autosave mode of the editor via the *`editor.autoSave`* property
-- specify a delay time of autosaving data via the *`editor.debounce`* property (works with the ***autoSave: true*** parameter only)
+- `editor.autoSave` — enable autosave mode
+- `editor.debounce` — delay (ms) between edits and save (only applies when `autoSave: true`)
 
 ~~~jsx {6-9}
 // create Kanban
@@ -490,7 +498,7 @@ new kanban.Kanban("#root", {
 
 ## Toolbar
 
-**Toolbar** of Kanban consists of the searchbar for *searching cards* and controls for *sorting cards* and *adding new columns and rows*. To display Toolbar, you need to initialize it in a separate container using the **kanban.Toolbar()** constructor.
+The **Toolbar** is a separate component initialized in its own container. It connects to the board via `api`:
 
 ~~~jsx {13}
 // create Kanban
@@ -508,7 +516,7 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-You can manage (*hide/show/customize*) the Toolbar controls using the **items** property:
+Use the `items` array to control which controls appear, in what order. Remove a string to hide that control. Pass an object instead of a string to customize it:
 
 ~~~jsx {6-51}
 // create Kanban
@@ -566,11 +574,9 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 :::tip
-To hide some of the Toolbar controls, remove the corresponding string(s) from the **items** array.
+To hide a Toolbar control, remove its string from the `items` array.
 :::
 
 ## Example
-
-In this snippet you can see how to configure the **Cards**, **Editor** and **Toolbar** of Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
