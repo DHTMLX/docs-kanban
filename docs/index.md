@@ -7,13 +7,17 @@ description: You can have an overview of DHTMLX JavaScript Kanban library in the
 
 # DHTMLX Kanban overview
 
-JavaScript Kanban is an effective solution for the workflow visualization. The widget helps you better understand your business processes and gain an overview of your team workload. This flexible tool can work with any number of cards, columns and swimlanes. Fully written in pure JavaScript and CSS, the component can be easily set and customized as well as integrated into any web app or web page.
+DHTMLX Kanban is a JavaScript widget for building Kanban boards. It's written in pure JavaScript and CSS, so you can drop it into any web page or app without framework dependencies.
 
-## Kanban structure­
+The widget is made up of three parts: **Toolbar**, **Board**, and **Editor**. Understanding how these relate to each other will help you configure each one correctly — they're loosely coupled, but they share data through a common API.
+
+## Kanban structure
 
 ### Toolbar
 
-**Toolbar** of Kanban is a separate part of the interface. It includes a search bar for *searching* cards, a control for *sorting* cards by the specified parameters, two controls for managing history (*undo/redo*) and controls for *adding new columns and rows*. You can flexibly manage the searching and sorting logic as well as change the Toolbar structure by adding custom elements or changing the order of the built-in ones. Read more in the [Configuration](guides/configuration.md#toolbar) section.
+The **Toolbar** is a separate component that sits above the board. It gives your users a search bar, sort controls, undo/redo buttons, and controls for adding columns and rows.
+
+You can customize it: reorder the built-in controls, remove ones you don't need, or inject your own elements. See [Configuration](guides/configuration.md#toolbar) for details.
 
 import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
@@ -25,28 +29,26 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 ### Board
 
-The **Board** is main part of Kanban. It consists of the cards distributed into columns and rows (swimlanes). You can flexibly configure the cards appearance as well as apply a custom template. Read more in the [Configuration](guides/configuration.md#cards) section.
+The **Board** is where cards live. Cards are organized into columns (stages) and rows (swimlanes). You can control which fields appear on each card and apply a fully custom card template if the defaults don't fit your use case. See [Configuration](guides/configuration.md#cards).
 
-On the **Board** panel you can work with the ***cards***, ***columns*** and ***rows*** in the following way:
+Here's what you and your users can do on the board:
 
-- add new cards by clicking on the plus icon (in accordance with the specified *limits* for each column and swimlane)
-- add comments and votes for tasks via the editor panel ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
-- set links between tasks via the editor ([Example](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
-- delete cards, columns and rows using a context menu (a 3 dots icon)
-- duplicate cards using a context menu (a 3 dots icon) or the `Ctrl (Command)`+`D` shortcuts (allows duplicating multiple cards)
-- export Kanban data to a JSON file
-- managing Kanban history using the following shortcuts:
-    - `Ctrl (Command)`+`Z` - reverts the last operation in Kanban (one step back in the Kanban history)
-    - `Ctrl (Command)`+`Y` or `Ctrl (Command)`+`Shift`+`Z` - repeats the operation that was reverted by the *undo* action (one step forward in the Kanban history)
-- move cards by dragging them into desired place (row and column)
-- move columns and rows using a context menu (a 3 dots icon)
-- rename columns and rows by double clicking on the corresponding labels or using a context menu (a 3 dots icon)
-- display a card editor by clicking on the card
-- collapse/uncollapse rows by clicking on the arrow icon on the left of the row label
-- collapse/uncollapse columns by clicking on the arrow icon on the left of the column label
-- select multiple cards using the following shortcuts:
-    - `Shift` +  clicking on the corresponding cards, to select multiple cards in the same column
-    - `Ctrl (Command)` + clicking on the corresponding cards, to select multiple cards in different columns
+- Add cards via the plus icon (subject to column and swimlane limits you define)
+- Add comments and votes through the editor panel ([Example](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- Link cards to each other via the editor ([Example](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
+- Delete, duplicate, or move cards, columns, and rows via the context menu
+- Duplicate multiple selected cards at once with `Ctrl (Command)`+`D`
+- Export board data to JSON
+- Undo/redo with keyboard shortcuts:
+  - `Ctrl (Command)`+`Z` — undo
+  - `Ctrl (Command)`+`Y` or `Ctrl (Command)`+`Shift`+`Z` — redo
+- Drag cards to a different column or row
+- Rename columns and rows by double-clicking their labels or via the context menu
+- Open the card editor by clicking a card
+- Collapse/expand rows and columns via the arrow icon
+- Select multiple cards:
+  - `Shift` + click — cards in the same column
+  - `Ctrl (Command)` + click — cards across different columns
 
 import board from '@site/static/img/js_kanban_board.png';
 
@@ -58,7 +60,9 @@ import board from '@site/static/img/js_kanban_board.png';
 
 ### Editor
 
-The **Editor** is a modal panel that consists of the fields and controls for managing the selected card data. To display the editor, click on the card you want to change. You can flexibly configure the editor structure by adding new fields and controls. Read more in the [Configuration](guides/configuration.md#editor) section.
+The **Editor** opens when you click a card. It shows the fields for that card's data and lets your users edit them directly.
+
+You can configure which fields appear in the editor and add custom fields on top of the defaults. The editor fields are linked to card fields through shared key names — you'll see how this works in [Configuration](guides/configuration.md#editor).
 
 import editor from '@site/static/img/js_kanban_editor.png';
 
@@ -70,4 +74,4 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 ## What's next
 
-Now you can get down to using Kanban in your application. Follow the directions of the [How to start](how_to_start.md) tutorial for guidance.
+To add the board to your page, start with [How to start](how_to_start.md).
