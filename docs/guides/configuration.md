@@ -18,7 +18,7 @@ You can configure the *Kanban* appearance and functionality via the following pr
 - [`locale`](api/config/js_kanban_locale_config.md) — apply the desired locale
     - *Refer to the [**Localization**](guides/localization.md) section for details!*
 - [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) — load data for cards, columns, rows, and links
-    - *Refer to the [**Working with data**](guides/working_with_data.md) section for details!*
+    - *Refer to the [**Working with data**](guides/working_with_data.md) section for details.*
 
 ## Cards
 
@@ -158,7 +158,7 @@ new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "combo", // or "select" and "multiselect"
-            key: "priority", // the "priority" key is used when configuring the "cardShape" property
+            key: "priority", // use the "priority" key in the "cardShape" property
             label: "Priority",
             values: [
                 { id: 1, label: "high" },
@@ -178,7 +178,7 @@ For `multiselect` and `combo` types you can specify a path to the preview image 
 editorShape: [
     {
         type: "multiselect", // or "combo"
-        key: "users", // the "users" key is used when configuring the "cardShape" property
+        key: "users", // specify the "users" key in the "cardShape" property
         label: "Users",
         values: [
             { 
@@ -207,7 +207,7 @@ new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "color", 
-            key: "color", // the "color" key is used when configuring the "cardShape" property
+            key: "color", // use the "color" key in the "cardShape" property
             label: "Card color",
             values: ["#65D3B3", "#FFC975", "#58C3FE"],
             config: {
@@ -253,7 +253,7 @@ new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "progress", 
-            key: "progress", // the "progress" key is used when configuring the "cardShape" property
+            key: "progress", // use the "progress" key in the "cardShape" property
             label: "Progress",
             config: {
                 min: 10,
@@ -278,7 +278,7 @@ new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "files", 
-            key: "attached", // the "attached" key is used when configuring the "cardShape" property
+            key: "attached", // use the "attached" key in the "cardShape" property
             label: "Attachment",
             uploadURL: url + "/uploads", // specify url as string
             config: {
@@ -293,7 +293,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-#### Configuring Upload Url as Function
+#### Configure Upload Url as Function
 
 The following code snippet uses a function as the `uploadURL` value to handle file uploads with custom headers:
 
@@ -436,7 +436,7 @@ const editorShape = [
         key: "note",
         label: "Note",
         config: {
-            placeholder: "Enter usefull note here"
+            placeholder: "Enter useful note here"
         }
     }
 ];
@@ -482,7 +482,7 @@ If you do not specify editor settings via the [`editorShape`](api/config/js_kanb
 
 Use the [`editor`](api/config/js_kanban_editor_config.md) property to configure the editor appearance and behavior:
 
-- enables/disables an autosave mode of the editor via the `editor.autoSave` property
+- enable/disable an autosave mode of the editor via the `editor.autoSave` property
 - specify a delay time of autosaving data via the `editor.debounce` property (works with the `autoSave: true` parameter only)
 
 The following code snippet enables autosave with a 2-second debounce delay:
@@ -503,7 +503,7 @@ new kanban.Kanban("#root", {
 
 ## Toolbar
 
-**Toolbar** of Kanban includes the searchbar for *searching cards* and controls for *sorting cards* and *adding new columns and rows*. Initialize Toolbar in a separate container using the `kanban.Toolbar()` constructor:
+Toolbar of Kanban includes the searchbar for *searching cards* and controls for *sorting cards* and *adding new columns and rows*. Initialize Toolbar in a separate container using the `kanban.Toolbar()` constructor:
 
 ~~~jsx {13}
 // create Kanban
@@ -521,7 +521,7 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-You can manage (*hide/show/customize*) the Toolbar controls through the `items` property:
+Use the [`items`](api/config/toolbar_items_config.md) property to hide, show, or customize Toolbar controls:
 
 ~~~jsx {6-51}
 // create Kanban
