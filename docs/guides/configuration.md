@@ -17,11 +17,11 @@ You can configure the *Kanban* appearance and functionality via the correspondin
 - **[`editor`](api/config/js_kanban_editor_config.md)** — configures editor behaviour
 - **[`renderType`](api/config/js_kanban_rendertype_config.md)** and **[`scrollType`](api/config/js_kanban_scrolltype_config.md)** — configure rendering and scrolling
 - **[`history`](api/config/js_kanban_history_config.md)** — configures Kanban history
-- **[`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)** — customizes card appearance; see [**Customization**](guides/customization.md) for details
-- **[`locale`](api/config/js_kanban_locale_config.md)** — applies a locale; see [**Localization**](guides/localization.md) for details
-- **[`cards`](api/config/js_kanban_cards_config.md)**, **[`columns`](api/config/js_kanban_columns_config.md)**, **[`rows`](api/config/js_kanban_rows_config.md)**, and **[`links`](api/config/js_kanban_links_config.md)** — load data for cards, columns, rows, and links; see [**Working with data**](guides/working_with_data.md) for details
+- **[`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)** — customizes card appearance. See [**Customization**](guides/customization.md) for details.
+- **[`locale`](api/config/js_kanban_locale_config.md)** — applies a locale. See [**Localization**](guides/localization.md) for details.
+- **[`cards`](api/config/js_kanban_cards_config.md)**, **[`columns`](api/config/js_kanban_columns_config.md)**, **[`rows`](api/config/js_kanban_rows_config.md)**, and **[`links`](api/config/js_kanban_links_config.md)** — load data for cards, columns, rows, and links. See [**Working with data**](guides/working_with_data.md) for details.
 
-The `cardShape` and `editorShape` objects are linked by field keys. When you enable a field in `cardShape` (for example, `priority: true`) and define a field in `editorShape` with the same `key` value (`key: "priority"`), Kanban connects them. The editor field reads from and writes to that card field.
+Kanban links `cardShape` and `editorShape` through shared keys. When you enable a field in `cardShape` (for example, `priority: true`) and add an `editorShape` entry with `key: "priority"`, the editor control reads from and writes to that card field.
 
 Built-in fields like `label`, `priority`, and `color` have reserved keys. Custom fields go into the `headerFields` array in `cardShape`, with any key you choose.
 
