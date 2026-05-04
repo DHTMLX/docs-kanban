@@ -1,10 +1,10 @@
 ---
-sidebar_label: Integration mit DHTML-Widgets
-title: Integration mit DHTML-Widgets
+sidebar_label: Integration mit DHTMLX-Widgets
+title: Integration mit DHTMLX-Widgets
 description: Informationen zur Integration finden Sie in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchstöbern Sie Entwicklerhandbücher und die API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
 ---
 
-# Integration mit DHTML-Widgets
+# Integration mit DHTMLX-Widgets
 
 Sie können DHTMLX Kanban mit anderen DHTMLX-Widgets integrieren (zum Beispiel mit [Gantt](https://docs.dhtmlx.com/gantt/), [Scheduler](https://docs.dhtmlx.com/scheduler/), [To Do List](https://docs.dhtmlx.com/todolist/)). Sehen Sie sich die folgenden Beispiele an.
 
