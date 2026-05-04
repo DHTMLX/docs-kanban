@@ -1,10 +1,10 @@
 ---
-sidebar_label: Интеграция с DHTML виджетами
-title: Интеграция с DHTML виджетами
+sidebar_label: Интеграция с DHTMLX виджетами
+title: Интеграция с DHTMLX виджетами
 description: Вы можете узнать об интеграции в документации по JavaScript библиотеке DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
 ---
 
-# Интеграция с DHTML виджетами
+# Интеграция с DHTMLX виджетами
 
 Вы можете интегрировать DHTMLX Kanban с другими виджетами DHTMLX (например, [Gantt](https://docs.dhtmlx.com/gantt/), [Scheduler](https://docs.dhtmlx.com/scheduler/), [To Do List](https://docs.dhtmlx.com/todolist/)). Ознакомьтесь с примерами ниже.
 
