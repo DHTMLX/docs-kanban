@@ -7,70 +7,70 @@ description: You can learn about the integration with Vue in the documentation o
 # Integration with Vue
 
 :::tip
-You should be familiar with the basic concepts and patterns of [**Vue**](https://vuejs.org/) before reading this documentation. To refresh your knowledge, please refer to the [**Vue 3 documentation**](https://vuejs.org/guide/introduction.html#getting-started).
+This guide assumes familiarity with [Vue](https://vuejs.org/) concepts and patterns. For background, see the [Vue 3 documentation](https://vuejs.org/guide/introduction.html#getting-started).
 :::
 
-DHTMLX Kanban is compatible with **Vue**. We have prepared code examples on how to use DHTMLX Kanban with **Vue 3**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/vue-kanban-demo).
+DHTMLX Kanban is compatible with Vue. The full code example for Vue 3 is available on [GitHub](https://github.com/DHTMLX/vue-kanban-demo).
 
-## Creating a project
+## Create a project
 
 :::info
-Before you start to create a new project, install [**Node.js**](https://nodejs.org/en/).
+Install [Node.js](https://nodejs.org/en/) before creating the project.
 :::
 
-To create a **Vue** project, run the following command:
+The following command creates a new Vue project:
 
 ~~~json
 npm create vue@latest
 ~~~
 
-This command installs and executes `create-vue`, the official **Vue** project scaffolding tool. Check the details in the [Vue.js Quick Start](https://vuejs.org/guide/quick-start.html#creating-a-vue-application).
+The command runs `create-vue`, the official Vue project scaffolding tool. For details, see the [Vue.js Quick Start](https://vuejs.org/guide/quick-start.html#creating-a-vue-application).
 
-Let's name the project as **my-vue-kanban-app**.
+Let's name the project *my-vue-kanban-app*.
 
-### Installation of dependencies
+### Install dependencies
 
-Go to the app directory:
+Move into the app directory:
 
 ~~~json
 cd my-vue-kanban-app
 ~~~
 
-Install dependencies and start the dev server. For this, use a package manager:
+Install dependencies and start the dev server with one of the package managers:
 
-- if you use [**yarn**](https://yarnpkg.com/), run the following commands:
+- For [yarn](https://yarnpkg.com/):
 
 ~~~jsx
 yarn
 yarn start // or yarn dev
 ~~~
 
-- if you use [**npm**](https://www.npmjs.com/), run the following commands:
+- For [npm](https://www.npmjs.com/):
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-The app should run on a localhost (for instance `http://localhost:3000`).
+The app runs on a localhost address (for example, `http://localhost:3000`).
 
-## Creating Kanban
+## Create Kanban
 
-Now you should get the DHTMLX Kanban source code. First of all, stop the app and proceed with installing the Kanban package.
+Stop the dev server and install the Kanban package.
 
-### Step 1. Package installation
+### Step 1. Install the package
 
-Download the [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Kanban is available 30 days only.
+Download the [trial Kanban package](/how_to_start/#installing-kanban-via-npm-or-yarn) and follow the steps in the README file. The trial version is available for 30 days.
 
-### Step 2. Component creation
+### Step 2. Create the component
 
-Now you need to create a Vue component, to add Kanban with Toolbar into the application. Create a new file in the ***src/components/*** directory and name it ***Kanban.vue***.
+Create a Vue component that adds Kanban with the Toolbar to the application. Add a new file to the *src/components/* directory and name it *Kanban.vue*.
 
 #### Import source files
 
-Open the ***Kanban.vue*** file and import Kanban source files. Note that:
+Open *Kanban.vue* and import the Kanban source files. The import paths depend on the package version:
 
-- if you use PRO version and install the Kanban package from a local folder, the import paths look like this:
+- For the PRO version installed from a local folder:
 
 ~~~html title="Kanban.vue"
 <script>
@@ -79,9 +79,9 @@ import 'dhx-kanban-package/dist/kanban.css';
 </script>
 ~~~
 
-Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as **kanban.min.css**.
+If the package ships minified source files, import the CSS file as *kanban.min.css*.
 
-- if you use the trial version of Kanban, specify the following paths:
+- For the trial version:
 
 ~~~html title="Kanban.vue"
 <script>
@@ -90,11 +90,11 @@ import '@dhx/trial-kanban/dist/kanban.css';
 </script>
 ~~~
 
-In this tutorial you can see how to configure the **trial** version of Kanban.
+This tutorial uses the trial version of Kanban.
 
-#### Setting containers and adding Kanban with Toolbar
+#### Set up containers and initialize Kanban
 
-To display Kanban with Toolbar on the page, you need to create containers for Kanban and Toolbar, and initialize these components using the corresponding constructors:
+To display Kanban with the Toolbar, create containers for both components and call the corresponding constructors. The following code snippet wires up refs and instantiates the components inside `mounted()`:
 
 ~~~html {2,7-8,10-14} title="Kanban.vue"
 <script>
@@ -128,9 +128,9 @@ export default {
 </template>
 ~~~
 
-#### Adding styles
+#### Add styles
 
-To display Kanban correctly, you need to specify important styles for Kanban and its container in the main css file of the project:
+Add styles for Kanban and its container in the main CSS file of the project:
 
 ~~~css title="main.css"
 /* specify styles for initial page */
@@ -154,9 +154,9 @@ body,
 }
 ~~~
 
-#### Loading data
+#### Load data
 
-To add data into the Kanban, you need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
+To populate Kanban, provide a data set. Create the *data.js* file in the *src/* directory:
 
 ~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
@@ -210,7 +210,7 @@ export function getData() {
 }
 ~~~
 
-Then open the ***App.vue*** file, import data, and initialize it via the inner `data()` method. After this you can pass data into the new created `<Kanban/>` component as **props**:
+Open *App.vue*, import the data, initialize it through the inner `data()` method, and pass the data to the new `<Kanban/>` component as props:
 
 ~~~html {3,8,10-12,19} title="App.vue"
 <script>
@@ -235,7 +235,7 @@ export default {
 </template>
 ~~~
 
-Go to the ***Kanban.vue*** file and apply the passed **props** to the Kanban configuration object:
+Open *Kanban.vue* and apply the props to the Kanban configuration object:
 
 ~~~html {6,10-12} title="Kanban.vue"
 <script>
@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-You can also use the [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) method inside the `mounted()` method of Vue to load data into Kanban. The `setConfig` or `parse()` method provides data reloading on each applied change.
+To reload data after each change, call [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `mounted()`:
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -322,13 +322,13 @@ export default {
 </template>
 ~~~
 
-Now the Kanban component is ready to use. When the element will be added to the page, it will initialize the Kanban with data. You can provide necessary configuration settings as well. Visit our [Kanban API docs](/api/overview/properties_overview/) to check the full list of available properties.
+The Kanban component is now ready. When the element renders, Kanban initializes with data. For the full list of supported configuration properties, see the [Kanban API reference](/api/overview/properties_overview/).
 
-#### Handling events
+#### Handle events
 
-When a user makes some action in the Kanban, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/events_overview/).
+User actions on the Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
 
-Open ***Kanban.vue*** and complete the `mounted()` method:
+Open *Kanban.vue* and extend the `mounted()` method:
 
 ~~~html {8-10} title="Kanban.vue"
 <script>
@@ -352,7 +352,7 @@ export default {
 // ...
 ~~~
 
-After that, you can start the app to see Kanban loaded with data on a page.
+Start the app to see Kanban loaded with data on the page.
 
 import trial from '@site/static/img/trial_kanban.png';
 
@@ -362,4 +362,4 @@ import trial from '@site/static/img/trial_kanban.png';
   className="img_border"
 />
 
-Now you know how to integrate DHTMLX Kanban with Vue. You can customize the code according to your specific requirements. The final advanced example you can find on [**GitHub**](https://github.com/DHTMLX/vue-kanban-demo).
+The full advanced example is available on [GitHub](https://github.com/DHTMLX/vue-kanban-demo).
