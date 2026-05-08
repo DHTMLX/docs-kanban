@@ -6,12 +6,12 @@ description: You can learn about using typescript with the DHTMLX JavaScript Kan
 
 # TypeScript support
 
-Since v1.1, DHTMLX Kanban ships with built-in TypeScript definitions that work out of the box.
+Since v1.1, DHTMLX Kanban ships with built-in TypeScript definitions.
 
 :::note
 Try the [Snippet Tool](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban) for a working TypeScript example.
 :::
 
-## Why use TypeScript with Kanban
+## Benefits of TypeScript
 
-TypeScript makes Kanban development more efficient through static type checking. Type checking and autocompletion catch mistakes early, and the bundled definitions surface the expected data shapes when you call the Kanban API.
+TypeScript catches mistakes early through static type checking and autocompletion. The bundled definitions also show the expected data shapes when you call the Kanban API.
