@@ -10,21 +10,21 @@ You can customize the Kanban appearance and behavior with the following properti
 
 - [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — render cards with a custom HTML template
 - [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) — modify the context menu for cards, columns, and rows
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — change column header templates
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — replace column header templates
 - [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) — apply CSS classes conditionally
-- [`items`](api/config/toolbar_items_config.md) — change the Toolbar structure and controls
+- [`items`](api/config/toolbar_items_config.md) — rearrange Toolbar structure and add custom controls
 - CSS variables — adjust visual styles (see the [Stylization](guides/stylization.md) section)
 
 ## Custom cards
 
-Use the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property to render cards with a custom HTML template. The property is a callback that returns the markup for each card.
+Use the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property to render cards with a custom HTML template. The callback returns the markup for each card.
 
 The callback receives an object with the following parameters:
 
-- `cardFields` — data object of the card
-- `selected` — selected state of the card
-- `dragging` — dragging state of the card
-- `cardShape` — configuration object of the card
+- `cardFields` — card data
+- `selected` — whether the card is selected
+- `dragging` — whether the card is being dragged
+- `cardShape` — card configuration
 
 To embed a context menu trigger in a custom card template, render an icon element with the `data-menu-id=${cardFields.id}` attribute. The widget binds the menu to the trigger through this attribute.
 
@@ -36,19 +36,19 @@ The following demo applies a custom card template:
 
 Configure the context menu for cards, columns, and rows through the [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), and [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) properties. Each `menu.items` entry can use a built-in action ID to invoke a default operation, or define a custom `onClick` handler for any other behavior.
 
-Built-in card menu actions ([`cardShape.menu`](api/config/js_kanban_cardshape_config.md)):
+### `cardShape.menu`
 
 - `"set-edit"` — open the card editor
 - `"delete-card"` — delete the card
 
-Built-in column menu actions ([`columnShape.menu`](api/config/js_kanban_columnshape_config.md)):
+### `columnShape.menu`
 
 - `"add-card"` — add a new card to the column
 - `"set-edit"` — rename the column
 - `"move-column:left"`, `"move-column:right"` — move the column left or right
 - `"delete-column"` — delete the column
 
-Built-in row menu actions ([`rowShape.menu`](api/config/js_kanban_rowshape_config.md)):
+### `rowShape.menu`
 
 - `"set-edit"` — rename the row
 - `"move-row:up"`, `"move-row:down"` — move the row up or down
@@ -56,7 +56,7 @@ Built-in row menu actions ([`rowShape.menu`](api/config/js_kanban_rowshape_confi
 
 Set `menu.items` to a function to render a different menu per card, column, or row. Return `null` or `false` from the function to hide the menu for a specific item.
 
-The following demo applies a custom context menu to columns and rows:
+The following demo applies a custom context menu:
 
 <iframe src="https://snippet.dhtmlx.com/8eo65gr5?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
