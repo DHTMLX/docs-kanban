@@ -18,10 +18,10 @@ DHTMLX Kanban is compatible with Svelte. The full code example is available on [
 Install [Vite](https://vite.dev/) (optional) and [Node.js](https://nodejs.org/en/) before creating the project.
 :::
 
-A Svelte project can be set up in two ways:
+Set up a Svelte project in one of two ways:
 
-- with [SvelteKit](https://kit.svelte.dev/)
-- with Svelte and Vite (without SvelteKit):
+- with [SvelteKit](https://kit.svelte.dev/) — recommended
+- with Svelte and Vite (without SvelteKit) — run:
 
 ~~~json
 npm create vite@latest
@@ -31,7 +31,7 @@ For details, see the [Svelte documentation](https://svelte.dev/docs/svelte/overv
 
 ### Install dependencies
 
-Let's name the project *my-svelte-kanban-app*. Move into the app directory:
+Name the project *my-svelte-kanban-app*. Move into the app directory:
 
 ~~~json
 cd my-svelte-kanban-app
@@ -65,7 +65,7 @@ Download the [trial Kanban package](/how_to_start/#installing-kanban-via-npm-or-
 
 ### Step 2. Create the component
 
-Create a Svelte component that adds Kanban with the Toolbar to the application. Add a new file to the *src/* directory and name it *Kanban.svelte*.
+Create a Svelte component that mounts Kanban and the Toolbar. Add a new *Kanban.svelte* file to the *src/* directory.
 
 #### Import source files
 
@@ -95,7 +95,7 @@ This tutorial uses the trial version of Kanban.
 
 #### Set up containers and initialize Kanban
 
-To display Kanban with the Toolbar, create containers for both components and call the corresponding constructors. The following code snippet binds the containers and instantiates the components inside `onMount()`:
+To display Kanban with the Toolbar, create two containers and call the constructors. The following code snippet binds the containers and instantiates the components inside `onMount()`:
 
 ~~~html {3,6,10-11,13-17,27-28} title="Kanban.svelte"
 <script>
@@ -118,8 +118,8 @@ onMount(() => {
 });
 
 onDestroy(() => {
-    kanban.destructor(); // destruct Kanban
-    toolbar.destructor(); // destruct Toolbar
+    kanban.destructor(); // destroy Kanban
+    toolbar.destructor(); // destroy Toolbar
 });
 </script>
 
@@ -159,7 +159,7 @@ export function getData() {
             type: "feature",
         },
         {
-            label: "Archive the cards/kanbans ",
+            label: "Archive the cards/boards",
             priority: 3,
             color: "#58C3FE",
             users: [4],
@@ -185,7 +185,7 @@ export function getData() {
 }
 ~~~
 
-Open *App.svelte*, import the data, and pass the data to the new `<Kanban/>` component as props:
+Open *App.svelte*, import the dataset, and pass the values to the new `<Kanban/>` component as props:
 
 ~~~html {3,5,8} title="App.svelte"
 <script>
@@ -240,7 +240,7 @@ onDestroy(() => {
 </div>
 ~~~
 
-To reload data after each change, call [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `onMount()`:
+As an alternative, load data after creating the instance with [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `onMount()`:
 
 ~~~html {6-8,27} title="Kanban.svelte"
 <script>
@@ -289,7 +289,7 @@ The Kanban component is now ready. When the element renders, Kanban initializes 
 
 #### Handle events
 
-User actions on the Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
+User actions in Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
 
 Open *Kanban.svelte* and extend the `onMount()` callback:
 
@@ -329,7 +329,7 @@ To register the component, open *App.svelte* and replace the default code:
 <Kanban {cards} {columns} {rows} />
 ~~~
 
-Start the app to see Kanban loaded with data on the page.
+Run the app to view the populated Kanban board on the page.
 
 import trial from '@site/static/img/trial_kanban.png';
 
@@ -339,4 +339,4 @@ import trial from '@site/static/img/trial_kanban.png';
   className="img_border"
 />
 
-The full advanced example is available on [GitHub](https://github.com/DHTMLX/svelte-kanban-demo).
+See the complete project on [GitHub](https://github.com/DHTMLX/svelte-kanban-demo).
