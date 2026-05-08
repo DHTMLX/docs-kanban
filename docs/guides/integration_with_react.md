@@ -18,7 +18,7 @@ DHTMLX Kanban is compatible with React. The full code example is available on [G
 Install [Vite](https://vite.dev/) (optional) and [Node.js](https://nodejs.org/en/) before creating the project.
 :::
 
-Create a basic React project (or React with Vite). Let's name the project *my-react-kanban-app*:
+Create a basic React project (or React with Vite). Name the project *my-react-kanban-app*:
 
 ~~~json
 npx create-react-app my-react-kanban-app
@@ -86,7 +86,7 @@ This tutorial uses the trial version of Kanban.
 
 #### Set up containers and initialize Kanban
 
-To display Kanban with the Toolbar, create containers for both components and call the corresponding constructors. The following code snippet wires up refs and instantiates the components inside `useEffect()`:
+To display Kanban with the Toolbar, create two containers and call the constructors. The following code snippet wires up refs and instantiates the components inside `useEffect()`:
 
 ~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -108,8 +108,8 @@ export default function KanbanComponent(props) {
         });
 
         return () => {
-            kanban.destructor(); // destruct Kanban
-            toolbar.destructor(); // destruct Toolbar
+            kanban.destructor(); // destroy Kanban
+            toolbar.destructor(); // destroy Toolbar
         };
     }, []);
 
@@ -122,7 +122,7 @@ export default function KanbanComponent(props) {
 
 #### Add styles
 
-Add styles for Kanban and its container in the main CSS file of the project:
+Add styles for Kanban and the container in the main CSS file:
 
 ~~~css title="index.css"
 /* specify styles for initial page */
@@ -202,7 +202,7 @@ export function getData() {
 }
 ~~~
 
-Open *App.js*, import the data, and pass it to the new `<Kanban/>` component as props:
+Open *App.js*, import the dataset, and pass the values to the new `<Kanban/>` component as props:
 
 ~~~jsx {2,5-6} title="App.js"
 import Kanban from "./Kanban";
@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-To reload data after each change, call [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `useEffect()`:
+As an alternative, load data after creating the instance with [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `useEffect()`:
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -265,9 +265,9 @@ export default function KanbanComponent(props) {
     let kanban_container = useRef();
     let toolbar_container = useRef();
 
-    let columns = props.columns; // data for columns
-    let cards = props.cards; // data for cards
-    let rows = props.rows; // data for rows
+    let columns = props.columns;
+    let cards = props.cards;
+    let rows = props.rows;
 
     useEffect(() => {
         const kanban = new Kanban(kanban_container.current, {
@@ -303,7 +303,7 @@ The Kanban component is now ready. When the element renders, Kanban initializes 
 
 #### Handle events
 
-User actions on the Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
+User actions in Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
 
 Open *Kanban.jsx* and extend the `useEffect()` call:
 
@@ -323,7 +323,7 @@ useEffect(() => {
 // ...
 ~~~
 
-Start the app to see Kanban loaded with data on the page.
+Run the app to view the populated Kanban board on the page.
 
 import trial from '@site/static/img/trial_kanban.png';
 
@@ -333,4 +333,4 @@ import trial from '@site/static/img/trial_kanban.png';
   className="img_border"
 />
 
-The full advanced example is available on [GitHub](https://github.com/DHTMLX/react-kanban-demo).
+See the complete project on [GitHub](https://github.com/DHTMLX/react-kanban-demo).
