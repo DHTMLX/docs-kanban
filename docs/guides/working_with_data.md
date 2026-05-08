@@ -6,6 +6,8 @@ description: You can explore how to work with Data in the documentation of the D
 
 # Working with data
 
+This guide covers data operations in Kanban: loading initial data, reading and exporting data, mutating cards, columns, rows, and links, and managing comments and selection.
+
 ## Load initial data
 
 When you initialize Kanban, pass initial data through the [`columns`](api/config/js_kanban_columns_config.md), [`cards`](api/config/js_kanban_cards_config.md), [`rows`](api/config/js_kanban_rows_config.md), and [`links`](api/config/js_kanban_links_config.md) properties.
@@ -127,9 +129,7 @@ new kanban.Kanban("#root", {
 
 ## Load data from a local source
 
-Use the [`setConfig()`](api/methods/js_kanban_setconfig_method.md) or [`parse()`](api/methods/js_kanban_parse_method.md) method to load data for columns, rows, cards, and links from a local source.
-
-The following code snippet replaces the current data with a new dataset after initialization:
+Use [`setConfig()`](api/methods/js_kanban_setconfig_method.md) or [`parse()`](api/methods/js_kanban_parse_method.md) to load columns, rows, cards, and links data after initialization:
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});
@@ -140,38 +140,28 @@ board.setConfig({ columns, cards, rows });
 // or board.parse({ columns, cards, rows });
 ~~~
 
-## Sync Kanban data with Gantt and Scheduler
+## Sync data with Gantt and Scheduler
 
-The following demo synchronizes Kanban data with [Gantt](https://dhtmlx.com/docs/products/dhtmlxGantt/) and [Scheduler](https://dhtmlx.com/docs/products/dhtmlxScheduler/):
+For multi-widget integration, see [Integration with DHTMLX widgets](guides/integration.md#gantt-and-scheduler).
 
-<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
-
-## Get Kanban data
-
-The following methods read card data from Kanban:
+## Get data
 
 - [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — gets data objects of all cards in the specified column and row
-- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — gets data objects of all cards in a specific column
+- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — gets data objects of all cards in the specified column
 - [`getCard()`](api/methods/js_kanban_getcard_method.md) — gets a card data object by ID
-- [`serialize()`](api/methods/js_kanban_serialize_method.md) — serializes Kanban data to JSON
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) — returns Kanban data as a JSON object
 
-## Get Kanban state
-
-The following methods read Kanban state:
+## Get state
 
 - [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — gets reactive properties of the *StateStore*
 - [`api.getState()`](api/internal/js_kanban_getstate_method.md) — gets current properties of the *StateStore*
 - [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — gets the *StateStore* and *DataStore* objects
 
-## Export Kanban data
+## Export data
 
-Use the following method to export Kanban data:
-
-- [`export.json()`](api/internal/js_kanban_json_method.md) — exports Kanban data to a JSON file
+- [`export.json()`](api/internal/js_kanban_json_method.md) — downloads Kanban data as a JSON file
 
 ## Add new items
-
-The following methods add new items to Kanban:
 
 - [`addCard()`](api/methods/js_kanban_addcard_method.md) — adds a new card
 - [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) — adds a new column
@@ -180,15 +170,11 @@ The following methods add new items to Kanban:
 
 ## Update items
 
-The following methods update existing items:
-
 - [`updateCard()`](api/methods/js_kanban_updatecard_method.md) — updates a card by ID
 - [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) — updates a column by ID
 - [`updateRow()`](api/methods/js_kanban_updaterow_method.md) — updates a row by ID
 
 ## Delete items
-
-The following methods remove items from Kanban:
 
 - [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) — removes a card by ID
 - [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) — removes a column by ID
@@ -196,15 +182,11 @@ The following methods remove items from Kanban:
 
 ## Move items
 
-The following methods move items to a new position:
-
 - [`moveCard()`](api/methods/js_kanban_movecard_method.md) — moves a card to the target column and row
 - [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) — moves a column to a new position
 - [`moveRow()`](api/methods/js_kanban_moverow_method.md) — moves a row to a new position
 
 ## Manage comments
-
-The following methods work with comments on a card:
 
 - [`addComment()`](api/methods/js_kanban_addcomment_method.md) — adds a comment to a card by ID
 - [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) — updates a comment by ID
@@ -212,14 +194,10 @@ The following methods work with comments on a card:
 
 ## Manage links
 
-The following methods work with links between cards at runtime:
-
 - [`addLink()`](api/methods/js_kanban_addlink_method.md) — adds a new link between cards
 - [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) — deletes a link by ID
 
 ## Manage card selection
-
-The following methods read or change the selected cards:
 
 - [`getSelection()`](api/methods/js_kanban_getselection_method.md) — gets IDs of the currently selected cards
 - [`selectCard()`](api/methods/js_kanban_selectcard_method.md) — selects a card by ID
