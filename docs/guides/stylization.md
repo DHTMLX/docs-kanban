@@ -6,7 +6,7 @@ description: You can learn about the stylization in the documentation of the DHT
 
 # Stylization
 
-You can style Kanban appearance through CSS classes and CSS variables. The following properties accept CSS classes for columns, rows, and cards:
+You can style the Kanban appearance through CSS classes and CSS variables. The following properties accept CSS classes for columns, rows, and cards:
 
 - [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — functions that return a CSS class conditionally based on item data
 - [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — string CSS class assigned to a single item
@@ -30,13 +30,13 @@ const cards = [
 ];
 ~~~
 
-Beyond per-item CSS, Kanban exposes a wide range of CSS variables for theming. The library uses two groups of variables:
+Beyond per-item CSS, Kanban exposes CSS variables for theming. Variables fall into two groups:
 
 - Kanban variables — define Kanban-specific styles
-- WX library variables — define shared elements like controls and calendars
+- WX library variables — style shared UI elements (controls, calendars)
 
 :::info
-The WX library handles internal Kanban functionality such as controls and calendars. Treat WX variables as part of Kanban styling.
+The WX library powers internal Kanban UI components. Treat WX variables as part of Kanban styling.
 :::
 
 ## Theme variables
@@ -118,7 +118,7 @@ Variable names may change in future versions. Check the names after upgrading an
 
 ## Scroll style
 
-Apply the `.wx-styled-scroll` CSS class to the Kanban container to enable a custom scroll bar style. Check [browser compatibility](https://caniuse.com/css-scrollbar) before using the class:
+Apply the `.wx-styled-scroll` CSS class to the Kanban container to enable a custom scrollbar style. Check [browser compatibility](https://caniuse.com/css-scrollbar) before using the class:
 
 ~~~html {4} title="index.html"
 <!-- container for Toolbar -->
@@ -133,9 +133,9 @@ The following demo applies a custom style to Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Adaptivity
+## Responsive layout
 
-The following demo creates an adaptive Kanban layout with custom CSS:
+The following demo creates a responsive Kanban layout with custom CSS:
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
