@@ -9,7 +9,7 @@ description: You can explore how to work with Server in the documentation of the
 JavaScript Kanban supports both client-side and server-side data. The widget has no special backend requirements and connects to any platform that exposes a REST (RESTful) API.
 
 :::info
-The widget ships with a built-in Go and Node backend. You can also use custom server scripts.
+The widget ships with built-in backends in Go and Node. You can also use custom server scripts.
 :::
 
 ## RestDataProvider
@@ -90,7 +90,7 @@ Promise.all([
 ~~~
 
 :::info
-Add `RestDataProvider` to the Event Bus through the [`api.setNext()`](api/internal/js_kanban_setnext_method.md) method. This step lets data operations (adding, deleting, and similar) trigger the corresponding requests to the server.
+Add `RestDataProvider` to the Event Bus through the [`api.setNext()`](api/internal/js_kanban_setnext_method.md) method. This step lets data operations (adding, deleting, and similar) trigger matching requests to the server.
 :::
 
 ### Example
@@ -101,7 +101,7 @@ The following demo connects `RestDataProvider` to a Go backend and loads server 
 
 ## Multiuser backend
 
-A multiuser backend lets several users edit the same Kanban board in real time without page reloads. The widget connects to the server through a WebSocket, and custom handlers apply incoming changes to the Kanban board.
+A multiuser backend lets multiple users edit the same Kanban board in real time without page reloads. The widget connects to the server through a WebSocket, and custom handlers apply incoming changes to the Kanban board.
 
 To enable a multiuser backend, authorize the user on the server before initializing Kanban. The following `login(url)` function fetches and caches a session token:
 
@@ -121,7 +121,9 @@ const login = (url) => {
 };
 ~~~
 
-The function simulates authorization. Every user receives an ID of `1`. After successful authorization, the server returns a token that subsequent requests must include. To attach the token to every request, call `RestDataProvider.setHeaders()`. By default, the server stores the token in the `"Remote-Token": <value>` header:
+The function simulates authorization. Every user receives an ID of `1`. After successful authorization, the server returns a token that subsequent requests must include.
+
+To attach the token to every request, call `RestDataProvider.setHeaders()`. By default, the server stores the token in the `"Remote-Token": <value>` header:
 
 ~~~js {}
 login(url).then(token => {
@@ -181,11 +183,10 @@ events.on(handlers);
 
 The snippet uses the following identifiers:
 
-- `handlers` — client handlers that handle server events
-- `events` — object that connects to the server and listens for incoming events
-- `RemoteEvents.on(handlers)` — applies client handlers to server events
+- `handlers` — client handlers for server events
+- `events` — `RemoteEvents` instance that listens for incoming events from the server
 
-With the multiuser backend in place, users collaborate and track each other's changes through the UI in real time.
+The `events.on(handlers)` call registers the client handlers for the server-side events. The widget now reflects server-side changes in real time.
 
 ### Example
 
@@ -197,16 +198,16 @@ The following demo configures the multiuser backend to track other users' change
 
 To define custom logic for server events, pass a `handlers` object to `RemoteEvents.on(handlers)`. The object follows this structure:
 
-~~~js {}
+~~~ts {}
 {
-    "cards": cardsHandler: function(obj: any),
-    "columns": columnsHandler: function(obj: any),
-    "links": linksHandler: function(obj: any),
-    "rows": rowsHandler: function(obj: any),
+    cards?: (obj: any) => void;
+    columns?: (obj: any) => void;
+    links?: (obj: any) => void;
+    rows?: (obj: any) => void;
 }
 ~~~
 
-When a change occurs on the server, the server returns the name of the modified element. The names depend on the server logic.
+After a change on the server, the response includes the name of the modified element. The names depend on the server logic.
 
 The updated client-side data arrives in the `obj` argument of the `function(obj: any)` callback. The `type: string` field specifies the operation. Allowed values:
 
@@ -251,7 +252,7 @@ const remoteEvents = new kanban.RemoteEvents(remoteEventsURL, token);
 remoteEvents.on(handlers);
 ~~~
 
-The `RestDataProvider.getIDResolver()` method returns a function that synchronizes client IDs with server IDs. When the client creates a new object (card, column, row, or link), the object receives a temporary ID together with a server ID stored in the data store. The `idResolver(id: TID, type: number)` function resolves the temporary ID to the corresponding server ID.
+The `RestDataProvider.getIDResolver()` method returns a function that synchronizes client IDs with server IDs. When the client creates a new object (card, column, row, or link), the object receives a temporary ID together with a server ID stored in the data store. The `idResolver(id: TID, type: number)` function resolves the temporary ID to the server ID.
 
 The `type` argument identifies the model type:
 
@@ -260,17 +261,15 @@ The `type` argument identifies the model type:
 - `ColumnID` — `3`
 - `LinkID` — `4`
 
-To prevent the request from going to the server, pass `skipProvider: true` when you call `board.api.exec()`.
-
-The final step applies the custom handlers to the server events.
+To prevent the request from going to the server, pass `skipProvider: true` when you call `board.api.exec()`. The `remoteEvents.on(handlers)` call registers the custom handlers.
 
 ## Group statuses into a single column
 
-This section shows how to display cards from different columns in one column. For example, you can use a single column for cards with `todo` and `unassigned` statuses.
+Display cards from different columns in one column. For example, you can use a single column for cards with `todo` and `unassigned` statuses.
 
 To implement grouping, add a custom field (for example, `status`) that stores the current card status. The `column` field then stores a common status.
 
-Define grouping rules. In the example below, cards group by these statuses:
+Define grouping rules. In the example below, the grouping uses these statuses:
 
 - `todo`, `unassigned` — for the **Open** column
 - `dev`, `testing` — for the **Inprogress** column
@@ -318,7 +317,7 @@ func Update(id int, c Card) error {
 }
 ~~~
 
-When the user changes the status field, the server checks the value and puts the card in the corresponding column. The server then uses the WebSocket to notify the client to move the card.
+When the user changes the status field, the server checks the value and puts the card in the target column. The server then uses the WebSocket to notify the client to move the card.
 
 ### Mix server and client grouping {#server-side-client-side-grouping}
 
