@@ -26,7 +26,7 @@ npm create vue@latest
 
 The command runs `create-vue`, the official Vue project scaffolding tool. For details, see the [Vue.js Quick Start](https://vuejs.org/guide/quick-start.html#creating-a-vue-application).
 
-Let's name the project *my-vue-kanban-app*.
+Name the project *my-vue-kanban-app*.
 
 ### Install dependencies
 
@@ -64,7 +64,7 @@ Download the [trial Kanban package](/how_to_start/#installing-kanban-via-npm-or-
 
 ### Step 2. Create the component
 
-Create a Vue component that adds Kanban with the Toolbar to the application. Add a new file to the *src/components/* directory and name it *Kanban.vue*.
+Create a Vue component that mounts Kanban and the Toolbar. Add a new *Kanban.vue* file to the *src/components/* directory.
 
 #### Import source files
 
@@ -94,7 +94,7 @@ This tutorial uses the trial version of Kanban.
 
 #### Set up containers and initialize Kanban
 
-To display Kanban with the Toolbar, create containers for both components and call the corresponding constructors. The following code snippet wires up refs and instantiates the components inside `mounted()`:
+To display Kanban with the Toolbar, create two containers and call the constructors. The following code snippet wires up refs and instantiates the components inside `mounted()`:
 
 ~~~html {2,7-8,10-14} title="Kanban.vue"
 <script>
@@ -114,8 +114,8 @@ export default {
     },
 
     unmounted() {
-        this.kanban.destructor(); // destruct Kanban
-        this.toolbar.destructor(); // destruct Toolbar
+        this.kanban.destructor(); // destroy Kanban
+        this.toolbar.destructor(); // destroy Toolbar
     }
 };
 </script>
@@ -130,7 +130,7 @@ export default {
 
 #### Add styles
 
-Add styles for Kanban and its container in the main CSS file of the project:
+Add styles for Kanban and the container in the main CSS file:
 
 ~~~css title="main.css"
 /* specify styles for initial page */
@@ -184,7 +184,7 @@ export function getData() {
             type: "feature",
         },
         {
-            label: "Archive the cards/kanbans ",
+            label: "Archive the cards/boards",
             priority: 3,
             color: "#58C3FE",
             users: [4],
@@ -210,7 +210,7 @@ export function getData() {
 }
 ~~~
 
-Open *App.vue*, import the data, initialize it through the inner `data()` method, and pass the data to the new `<Kanban/>` component as props:
+Open *App.vue* and import the dataset. Initialize the values through the inner `data()` method, then pass the values to the new `<Kanban/>` component as props:
 
 ~~~html {3,8,10-12,19} title="App.vue"
 <script>
@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-To reload data after each change, call [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `mounted()`:
+As an alternative, load data after creating the instance with [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `mounted()`:
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -326,7 +326,7 @@ The Kanban component is now ready. When the element renders, Kanban initializes 
 
 #### Handle events
 
-User actions on the Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
+User actions in Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
 
 Open *Kanban.vue* and extend the `mounted()` method:
 
@@ -336,7 +336,7 @@ Open *Kanban.vue* and extend the `mounted()` method:
 export default {
     // ...
     mounted() {
-        this.kanban = new Kanban(this.$refs.cont, {});
+        this.kanban = new Kanban(this.$refs.kanban_container, {});
 
         this.kanban.api.on("add-card", (obj) => {
             console.log(obj.columnId);
@@ -352,7 +352,7 @@ export default {
 // ...
 ~~~
 
-Start the app to see Kanban loaded with data on the page.
+Run the app to view the populated Kanban board on the page.
 
 import trial from '@site/static/img/trial_kanban.png';
 
@@ -362,4 +362,4 @@ import trial from '@site/static/img/trial_kanban.png';
   className="img_border"
 />
 
-The full advanced example is available on [GitHub](https://github.com/DHTMLX/vue-kanban-demo).
+See the complete project on [GitHub](https://github.com/DHTMLX/vue-kanban-demo).
