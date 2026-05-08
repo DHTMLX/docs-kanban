@@ -57,7 +57,7 @@ Download the [trial Kanban package](/how_to_start/#installing-kanban-via-npm-or-
 
 ### Step 2. Create the component
 
-Create an Angular component that adds Kanban with the Toolbar to the application. Add the *kanban* folder to the *src/app/* directory and create the *kanban.component.ts* file inside it.
+Create an Angular component that mounts Kanban and the Toolbar. Create the *src/app/kanban/* folder and add a *kanban.component.ts* file inside.
 
 #### Import source files
 
@@ -79,7 +79,7 @@ This tutorial uses the trial version of Kanban.
 
 #### Set up containers and initialize Kanban
 
-To display Kanban with the Toolbar, set containers for both components and call the corresponding constructors. The following code snippet defines the component template, references the containers, and creates the instances:
+To display Kanban with the Toolbar, set up two containers and call the constructors. The following code snippet defines the component template, references the containers, and creates the instances:
 
 ~~~jsx {1,8-11,15-18,24-31} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -116,15 +116,15 @@ export class KanbanComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this._kanban.destructor(); // destruct Kanban
-        this._toolbar.destructor(); // destruct Toolbar
+        this._kanban.destructor(); // destroy Kanban
+        this._toolbar.destructor(); // destroy Toolbar
     }
 }
 ~~~
 
 #### Add styles
 
-Add styles for Kanban and its container. Create the *kanban.component.css* file in the *src/app/kanban/* directory:
+Add styles for Kanban and the container. Create the *kanban.component.css* file in the *src/app/kanban/* directory:
 
 ~~~css title="kanban.component.css"
 /* import Kanban styles */
@@ -206,7 +206,7 @@ export function getData() {
 }
 ~~~
 
-Open *kanban.component.ts*, import the data, and pass the data properties to the Kanban configuration object inside the `ngOnInit()` method:
+Open *kanban.component.ts*, import the dataset, and pass the data properties to the Kanban configuration object inside `ngOnInit()`:
 
 ~~~jsx {2,23,25-27} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-To reload data after each change, call [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `ngOnInit()`:
+As an alternative, load data after creating the instance with [`setConfig()`](/api/methods/js_kanban_setconfig_method/) or [`parse()`](/api/methods/js_kanban_parse_method/) inside `ngOnInit()`:
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -311,7 +311,7 @@ The Kanban component is now ready. When the element renders, Kanban initializes 
 
 #### Handle events
 
-User actions on the Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
+User actions in Kanban trigger events. Listen to events to react to specific actions. For the complete list, see the [Kanban events reference](/api/overview/events_overview/).
 
 Open *kanban.component.ts* and extend the `ngOnInit()` method:
 
@@ -373,7 +373,7 @@ platformBrowserDynamic()
     .catch((err) => console.error(err));
 ~~~
 
-Start the app to see Kanban loaded with data on the page.
+Run the app to view the populated Kanban board on the page.
 
 import trial from '@site/static/img/trial_kanban.png';
 
@@ -383,4 +383,4 @@ import trial from '@site/static/img/trial_kanban.png';
   className="img_border"
 />
 
-The full advanced example is available on [GitHub](https://github.com/DHTMLX/angular-kanban-demo).
+See the complete project on [GitHub](https://github.com/DHTMLX/angular-kanban-demo).
