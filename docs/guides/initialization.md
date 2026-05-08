@@ -6,15 +6,15 @@ description: You can learn about the initialization in the documentation of the 
 
 # Initialization
 
-This guide walks through the steps to create a ready-to-use Kanban widget on a page:
+Create a Kanban widget on a page in three steps:
 
-1. [Include the Kanban source files on a page](#include-source-files).
-2. [Create a container for Kanban](#create-a-container).
-3. [Initialize Kanban with a constructor](#initialize-kanban).
+1. [Include source files](#include-source-files).
+2. [Create a container](#create-a-container).
+3. [Initialize Kanban](#initialize-kanban).
 
 ## Include source files
 
-[Download the package](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and unpack it into a folder of your project.
+[Download the package](https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml) and unpack the contents into a folder of your project.
 
 Include the following source files on your page:
 
@@ -47,7 +47,7 @@ To create the widget with a Toolbar, add a separate container for the Toolbar:
 
 Initialize Kanban with the `kanban.Kanban` constructor. The constructor takes two parameters:
 
-- an HTML container ID
+- a CSS selector for the HTML container (or the container element itself)
 - a configuration object (see the [full list of properties](#configuration-properties))
 
 The following code snippet creates a Kanban instance:
@@ -79,7 +79,7 @@ For details on configuring the Toolbar, read the [Configuration](guides/configur
 
 ### Configuration properties
 
-For the complete reference of configuration properties, see:
+For the full configuration reference:
 
 - [Kanban properties overview](api/overview/properties_overview.md) — all Kanban configuration properties
 - [Toolbar properties overview](api/overview/toolbar_properties_overview.md) — all Toolbar configuration properties
