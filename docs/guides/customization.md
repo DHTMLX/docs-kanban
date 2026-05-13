@@ -26,7 +26,7 @@ The callback receives an object with the following parameters:
 - `dragging` — whether the card is being dragged
 - `cardShape` — card configuration
 
-To embed a context menu trigger in a custom card template, render an icon element with the `data-menu-id=${cardFields.id}` attribute. The widget binds the menu to the trigger through this attribute.
+To embed a context menu trigger in a custom card template, wrap the menu icon in a `<div>` with the `data-menu-id=${cardFields.id}` attribute (the same structure as the built-in card). The widget binds the menu to the wrapper through this attribute.
 
 The following demo applies a custom card template:
 
@@ -38,8 +38,11 @@ Configure the context menu for cards, columns, and rows through the [`cardShape.
 
 ### `cardShape.menu`
 
-- `"set-edit"` — open the card editor
+By default the card menu shows **Duplicate** and **Delete** options. The **Edit** option appears only when card editing is enabled and selection is disabled. Available built-in action IDs:
+
+- `"duplicate-card"` — duplicate the card
 - `"delete-card"` — delete the card
+- `"set-edit"` — open the card editor (shown when editing is available)
 
 ### `columnShape.menu`
 
@@ -75,22 +78,20 @@ new kanban.Kanban("#root", {
     columns,
     cards,
     columnShape: {
-        headerTemplate: kanban.template(column => `
-            <div class="wx-collapse-icon" data-action="collapse">
-                <i class="${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}"></i>
-            </div>
-            ${!column.column.collapsed
-                ? `<div class="wx-label" data-action="rename">
-                       ${column.column.label} (${column.columnState.cardsCount})
-                   </div>
-                   <div class="wx-menu" data-menu-id="${column.id}">
-                       <i class="wxi-dots-h"></i>
-                   </div>`
-                : ""}
-        `),
-        collapsedTemplate: kanban.template(column => `
-            <div class="wx-collapsed-label">${column.column.label}</div>
-        `)
+        headerTemplate: kanban.template(({ column, columnState }) => {
+            return `<div class="wx-collapse-icon" data-action="collapse">
+                        <i class="${column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}"></i>
+                    </div>
+                    ${!column.collapsed
+                        ? `<div class="wx-label" data-action="rename">
+                                ${column.label} (${columnState.cardsCount})
+                            </div>
+                            <div class="wx-menu" data-menu-id="${column.id}">
+                                <i class="wxi-dots-h"></i>
+                            </div>`
+                        : ""}`;
+        }),
+        collapsedTemplate: kanban.template(({ column }) => `<div class="wx-collapsed-label">${column.label}</div>`)
     }
 });
 ~~~

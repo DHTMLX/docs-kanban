@@ -21,7 +21,6 @@ const en = {
         Save: "Save",
         Close: "Close",
         Delete: "Delete",
-        Name: "Name",
         Description: "Description",
         Type: "Type",
         "Start date": "Start date",
@@ -46,8 +45,11 @@ const en = {
         "Add new column": "Add new column",
         "Add new card...": "Add new card...",
         "Add new card": "Add new card",
+        "Add a comment...": "Add a comment...",
         "Edit card": "Edit card",
         Edit: "Edit",
+        Undo: "Undo",
+        Redo: "Redo",
 
         Everywhere: "Everywhere",
         Label: "Label",
@@ -122,9 +124,16 @@ const en = {
         am: ["am", "AM"],
         pm: ["pm", "PM"],
         weekStart: 7,
-        timeFormat: 24
+        clockFormat: 24
+    },
+    formats: { // date/time format patterns
+        timeFormat: "%H:%i",
+        dateFormat: "%m/%d/%Y",
+        monthYearFormat: "%F %Y",
+        yearFormat: "%Y"
     },
     core: { // translations of the core elements
+        lang: "en-US",
         ok: "OK",
         cancel: "Cancel"
     }
@@ -133,11 +142,12 @@ const en = {
 
 </details>
 
-A locale object contains three top-level sections:
+A locale object contains four top-level sections:
 
 - `kanban` — UI labels (buttons, dialogs, search, sort options, link relations)
-- `calendar` — date picker labels and settings (month and day names, time format, week start, AM/PM markers)
-- `core` — shared dialog buttons (`ok`, `cancel`)
+- `calendar` — date picker labels and settings (month and day names, clock format, week start, AM/PM markers)
+- `formats` — date and time format patterns (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
+- `core` — shared dialog buttons (`ok`, `cancel`) and language code (`lang`)
 
 A locale object must include translations for every Kanban and Toolbar label.
 

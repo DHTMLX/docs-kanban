@@ -66,7 +66,7 @@ Override these CSS variables in your stylesheet to customize the Material theme:
     --wx-kanban-toolbar-border: var(--wx-border);
 
     /* card styles */
-    --wx-kanban-card-field-padding: 12px;
+    --wx-kanban-card-field-padding: 10px;
     --wx-kanban-content-background: var(--wx-background);
     --wx-kanban-card-border: var(--wx-border);
     --wx-kanban-card-border-radius: 6px;
@@ -83,8 +83,11 @@ Override these CSS variables in your stylesheet to customize the Material theme:
     --wx-kanban-editor-width: 569px;
     --wx-kanban-editor-height: auto;
     --wx-kanban-editor-x-padding: 20px;
-    --wx-kanban-editor-background: var(--wx-kanban-content-background);
-    --wx-kanban-editor-top-border: none;
+    --wx-kanban-editor-background: var(--wx-background);
+    --wx-kanban-editor-top-border: var(--wx-border);
+    --wx-kanban-editor-modal-width: 1000px;
+    --wx-editor-right-background: rgba(0, 0, 0, 0.03);
+    --wx-editor-cancel-background: rgba(0, 0, 0, 0.04);
 
     /* column styles */
     --wx-kanban-over-limit-color: var(--wx-color-danger);

@@ -146,16 +146,16 @@ For multi-widget integration, see [Integration with DHTMLX widgets](guides/integ
 
 ## Get data
 
-- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — gets data objects of all cards in the specified column and row
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — gets data objects of all cards in the specified column (and optionally row)
 - [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — gets data objects of all cards in the specified column
 - [`getCard()`](api/methods/js_kanban_getcard_method.md) — gets a card data object by ID
 - [`serialize()`](api/methods/js_kanban_serialize_method.md) — returns Kanban data as a JSON object
 
 ## Get state
 
-- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — gets reactive properties of the *StateStore*
-- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — gets current properties of the *StateStore*
-- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — gets the *StateStore* and *DataStore* objects
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — gets reactive properties of the *DataStore*
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — gets current properties of the *DataStore*
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — returns `{ data: DataStore }`
 
 ## Export data
 

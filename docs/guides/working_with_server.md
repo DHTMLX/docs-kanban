@@ -33,6 +33,8 @@ JavaScript Kanban includes the `RestDataProvider` service, which fully supports 
 - `"update-column"`
 - `"update-comment"`
 - `"update-row"`
+- `"add-vote"` (`{ cardId, userId }`)
+- `"delete-vote"` (`{ cardId, userId }`)
 
 ## REST methods
 
@@ -121,7 +123,7 @@ const login = (url) => {
 };
 ~~~
 
-The function simulates authorization. Every user receives an ID of `1`. After successful authorization, the server returns a token that subsequent requests must include.
+The function simulates authorization (the demo hard-codes `id=1` in the login query, so every fetched session uses ID `1`). After successful authorization, the server returns a token that subsequent requests must include.
 
 To attach the token to every request, call `RestDataProvider.setHeaders()`. By default, the server stores the token in the `"Remote-Token": <value>` header:
 
@@ -204,6 +206,8 @@ To define custom logic for server events, pass a `handlers` object to `RemoteEve
     columns?: (obj: any) => void;
     links?: (obj: any) => void;
     rows?: (obj: any) => void;
+    comments?: (obj: any) => void;
+    votes?: (obj: any) => void;
 }
 ~~~
 
@@ -215,6 +219,8 @@ The updated client-side data arrives in the `obj` argument of the `function(obj:
 - For columns: `"add-column"`, `"update-column"`, `"delete-column"`, `"move-column"`
 - For links: `"add-link"`, `"delete-link"`
 - For rows: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
+- For comments: `"add-comment"`, `"update-comment"`, `"delete-comment"`
+- For votes: `"add-vote"`, `"delete-vote"`
 
 The following code snippet shows the implementation:
 
@@ -260,6 +266,7 @@ The `type` argument identifies the model type:
 - `RowID` — `2`
 - `ColumnID` — `3`
 - `LinkID` — `4`
+- `CommentID` — `5`
 
 To prevent the request from going to the server, pass `skipProvider: true` when you call `board.api.exec()`. The `remoteEvents.on(handlers)` call registers the custom handlers.
 
