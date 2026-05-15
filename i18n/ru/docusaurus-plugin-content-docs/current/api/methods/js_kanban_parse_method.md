@@ -46,4 +46,4 @@ board.parse({
 
 **История изменений:** Начиная с версии v1.1 нет необходимости сбрасывать исходные данные в конструкторе перед парсингом новых данных
 
-**Связанные статьи:** [Работа с данными](guides/working_with_data.md#loading-data-from-local-source)
+**Связанные статьи:** [Работа с данными](guides/working_with_data.md#load-data-from-a-local-source)

@@ -6,74 +6,43 @@ description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahr
 
 # Konfiguration
 
-Das Aussehen und die Funktionalität von *Kanban* können Sie über die entsprechende API konfigurieren. Die verfügbaren Parameter ermöglichen es Ihnen:
+Das Aussehen und die Funktionalität von Kanban können Sie mit den folgenden Eigenschaften konfigurieren:
 
-- das Erscheinungsbild der Karten über die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft zu konfigurieren
-- die Editor-Felder über die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft zu konfigurieren
-- das Verhalten des Editors über die [`editor`](api/config/js_kanban_editor_config.md) Eigenschaft zu konfigurieren
-- Rendering und Scrollen über die Eigenschaften [`renderType`](api/config/js_kanban_rendertype_config.md) und [`scrollType`](api/config/js_kanban_scrolltype_config.md) zu konfigurieren
-- die Kanban-Historie über die [`history`](api/config/js_kanban_history_config.md) Eigenschaft zu konfigurieren
-- das Erscheinungsbild der Karten über die [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) Eigenschaft anzupassen
-    - *Details finden Sie im Abschnitt [**Customization**](guides/customization.md)!*
-- die gewünschte Sprache über die [`locale`](api/config/js_kanban_locale_config.md) Eigenschaft anzuwenden
-    - *Details finden Sie im Abschnitt [**Localization**](guides/localization.md)!*
-- Daten für Karten, Spalten, Zeilen und Verknüpfungen über die entsprechenden Eigenschaften [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md) und [`links`](api/config/js_kanban_links_config.md) zu laden
-    - *Details finden Sie im Abschnitt [**Working with data**](guides/working_with_data.md)!*
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) — Erscheinungsbild und integrierte Felder der Karten festlegen
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) — Editor-Felder definieren
+- [`editor`](api/config/js_kanban_editor_config.md) — Sichtbarkeit, Autosave und Platzierung des Editors steuern
+- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) — Karten-Rendering und Board-Scrollen anpassen
+- [`history`](api/config/js_kanban_history_config.md) — Historie der Kartenoperationen verwalten
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — Erscheinungsbild der Karten anpassen (siehe Abschnitt [Customization](guides/customization.md))
+- [`locale`](api/config/js_kanban_locale_config.md) — eine Sprache anwenden (siehe Abschnitt [Localization](guides/localization.md))
+- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) — Daten für Karten, Spalten, Zeilen und Verknüpfungen laden (siehe Abschnitt [Working with data](guides/working_with_data.md))
 
 ## Karten {#cards}
 
-Das Kanban-Board besteht aus *Karten*, die auf *Spalten* und *Zeilen* verteilt sind. Sie können das Erscheinungsbild der Karten mit der [`cardShape`](api/config/js_kanban_cardshape_config.md) Konfigurationseigenschaft anpassen. Es gibt mehrere vordefinierte Felder, die Sie in die Kartenvorlage einfügen (oder ausschließen) können, nämlich:
+Das Kanban-Board besteht aus Karten, die auf Spalten und Zeilen verteilt sind. Verwenden Sie die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft, um das Erscheinungsbild und die integrierten Felder der Karten zu konfigurieren:
 
-- eine Kartenbezeichnung über die `label: boolean` Konfiguration
-- eine Kartenbeschreibung über die `description: boolean` Konfiguration
+- `label: boolean | { show }` — Kartenbezeichnung, bearbeitet mit dem Typ [`text`](#text-und-textarea-typen)
+- `description: boolean | { show }` — Kartenbeschreibung, bearbeitet mit dem Typ [`textarea`](#text-und-textarea-typen)
+- `progress: boolean | { show }` — Kartenfortschritt, bearbeitet mit dem Typ [`progress`](#progress-typ)
+- `start_date: boolean | { show, format }` — Startdatum der Karte, bearbeitet mit dem Typ [`date`](#date-und-daterange-typen)
+- `end_date: boolean | { show, format }` — Enddatum der Karte, bearbeitet mit dem Typ [`date`](#date-und-daterange-typen)
+- `menu: boolean | { show, items }` — Kontextmenü der Karte
+- `attached: boolean | { show }` — Dateianhang der Karte, bearbeitet mit dem Typ [`files`](#files-typ)
+- `color: boolean | { show, values }` — obere Farblinie der Karte, bearbeitet mit dem Typ [`color`](#color-typ)
+- `cover: boolean | { show }` — Vorschaubild der Karte
+- `comments: boolean | { show }` — Kommentare zur Karte
+- `confirmDeletion: boolean | { show }` — Bestätigungsdialog zum Löschen der Karte
+- `votes: boolean | { show, clickable }` — Abstimmungsmöglichkeit bei der Karte
+- `users: boolean | { show, values, maxCount }` — der Karte zugewiesene Benutzer, bearbeitet mit den Typen [`combo`, `select` oder `multiselect`](#combo-select-und-multiselect-typen)
+- `priority: boolean | { show, values }` — Kartenpriorität, bearbeitet mit dem Typ [`combo` oder `select`](#combo-select-und-multiselect-typen)
+- `css: (card) => string` — Funktion, die eine CSS-Klasse zurückgibt, die bedingt auf eine Karte angewendet wird
+- `headerFields: [{ key, label, css }]` — benutzerdefinierte Kartenfelder
 
-    :::tip
-    Sie können die Felder **label** und **description** jeder Karte über die entsprechenden Eingabefelder des Kanban-Editors verwalten. Wenn Sie diese Felder aktivieren, werden die entsprechenden Eingaben im Editor automatisch angezeigt. Zum Konfigurieren dieser Eingaben können Sie die Typen [**text** und **textarea**](#text-und-textarea-typen) verwenden.
-    :::
+:::tip
+Wenn Sie ein Feld in `cardShape` aktivieren, zeigt der Editor das entsprechende Steuerelement automatisch an. Konfigurieren Sie jedes Steuerelement über die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft — verfügbare Typen finden Sie unter [Editor](#editor).
+:::
 
-- einen Kartenfortschritt über die `progress: boolean` Konfiguration
-
-    :::tip
-    Sie können das **progress**-Feld jeder Karte über das entsprechende Steuerelement des Kanban-Editors verwalten. Wenn Sie dieses Feld aktivieren, wird das entsprechende Steuerelement im Editor automatisch angezeigt. Zum Konfigurieren dieses Steuerelements können Sie den Typ [**progress**](#progress-typ) verwenden.
-    :::
-
-- ein Startdatum über die `start_date: boolean` Konfiguration
-- ein Enddatum über die `end_date: boolean` Konfiguration
-
-    :::tip
-    Sie können die Felder **start date** und **end date** jeder Karte über die entsprechenden Steuerelemente des Kanban-Editors verwalten. Wenn Sie diese Felder aktivieren, werden die entsprechenden Steuerelemente im Editor automatisch angezeigt. Zum Konfigurieren dieser Steuerelemente können Sie den Typ [**date**](#date-und-daterange-typen) verwenden.
-    :::
-
-- ein Kontextmenü für Karten über die `menu: boolean` Konfiguration
-- einen Dateianhang über die `attached: boolean` Konfiguration
-
-    :::tip
-    Sie können **Dateien an jede Karte anhängen** über das entsprechende Feld des Kanban-Editors. Zum Konfigurieren dieses Feldes können Sie den Typ [**files**](#files-typ) verwenden.
-    :::
-
-- eine Kartenfarbe über die `color: boolean` Konfiguration
-
-    :::tip
-    Sie können die **obere Farblinie** jeder Karte über das entsprechende Steuerelement des Kanban-Editors verwalten. Wenn Sie **color** aktivieren, wird das entsprechende Steuerelement (*colorpicker*) im Editor automatisch angezeigt. Zum Konfigurieren dieses Steuerelements können Sie den Typ [**color**](#color-typ) verwenden.
-    :::
-
-- ein Karten-Cover (*Vorschaubild*) über die `cover: boolean` Konfiguration
-- Kommentare zu einer Karte über die `comments: boolean` Konfiguration
-- einen Bestätigungsdialog zum Löschen der Karte über die `confirmDeletion: boolean` Konfiguration
-- eine Abstimmungsmöglichkeit über die `votes: boolean | { show: boolean, clicable: true }` Konfiguration
-- eine Benutzerzuweisung über die `users: boolean | { show: boolean, values: object, maxCount: number | false }` Konfiguration
-
-    :::tip
-    Sie können einer Karte einen oder mehrere Benutzer über das entsprechende Steuerelement des Kanban-Editors zuweisen. Zum Konfigurieren des Steuerelements für die Zuweisung eines einzelnen Benutzers verwenden Sie die Typen [**combo** oder **select**](#combo-select-und-multiselect-typen). Für die Zuweisung mehrerer Benutzer nutzen Sie den Typ [**multiselect**](#combo-select-und-multiselect-typen).
-    :::
-
-- eine Kartenpriorität über die `priority: boolean | { show: boolean, values: object }` Konfiguration
-
-    :::tip
-    Sie können die **priority**-Eigenschaft jeder Karte über das entsprechende Steuerelement des Kanban-Editors verwalten. Wenn Sie **priority** aktivieren, wird das entsprechende Steuerelement im Editor automatisch angezeigt. Zum Konfigurieren dieses Steuerelements können Sie nur die Typen [**combo** oder **select**](#combo-select-und-multiselect-typen) verwenden.
-    :::
-
-- *ein benutzerdefiniertes Feld* über die `headerFields: [ { key: string, label: string, css: string } ]` Konfiguration
+Das folgende Code-Beispiel konfiguriert Karten mit benutzerdefinierten Benutzern, Prioritäten und einem benutzerdefinierten Header-Feld:
 
 ~~~jsx {12-35,42}
 const users = [ // Nutzerdaten
@@ -122,36 +91,36 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::note
-Sofern Sie keine Karteneinstellungen über die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft angeben, verwendet das Widget einen [**defaultCardShape**](api/config/js_kanban_cardshape_config.md#default-config) Parametersatz!
+Sofern Sie keine Karteneinstellungen über die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft angeben, greift das Widget auf [`defaultCardShape`](api/config/js_kanban_cardshape_config.md#default-config) zurück.
 :::
 
 ## Editor
 
+Der Kanban-Editor enthält Felder zur Verwaltung der Kartendaten. Verwenden Sie die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft, um Editor-Felder zu konfigurieren. Folgende Feldtypen stehen zur Verfügung:
+
+- [`combo`, `select`, `multiselect`](#combo-select-und-multiselect-typen) — Dropdown-Optionen
+- [`color`](#color-typ) — Farbauswahl
+- [`text`, `textarea`](#text-und-textarea-typen) — Texteingaben
+- [`progress`](#progress-typ) — Fortschrittsregler
+- [`files`](#files-typ) — Datei-Upload
+- [`date`, `dateRange`](#date-und-daterange-typen) — einzelnes Datum oder Datumsbereich
+- [`comments`](#comments-type) — Kartenkommentare
+- [`links`](#links-type) — Kartenverknüpfungen
+
 :::info
-Sie können den Editor als **Seitenleiste** oder **modales Fenster** anzeigen lassen, indem Sie die [`editor.placement`](api/config/js_kanban_editor_config.md) Eigenschaft verwenden!
+Zeigen Sie den Editor als Seitenleiste oder modales Fenster an, indem Sie die [`editor.placement`](api/config/js_kanban_editor_config.md) Eigenschaft verwenden.
 :::
-
-Der *Editor* von Kanban besteht aus Feldern zur Verwaltung der Kartendaten. Zum Konfigurieren der Editor-Felder (Steuerelemente) verwenden Sie die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft. Folgende Typen von Editor-Feldern stehen zur Verfügung:
-
-- [**combo**, **select** und **multiselect**](#combo-select-und-multiselect-typen)
-- [**color**](#color-typ)
-- [**text** und **textarea**](#text-und-textarea-typen)
-- [**progress**](#progress-typ)
-- [**files**](#files-typ)
-- [**date** und **dataRange**](#date-und-daterange-typen)
-- [**comments**](#comments-type)
-- [**links**](#links-type)
 
 ### Combo-, Select- und Multiselect-Typen {#combo-select-und-multiselect-typen}
 
-Die Editor-Felder der Typen **combo**, **select** und **multiselect** können wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert ein Dropdown zur Auswahl einer Kartenpriorität:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "combo", // oder "select" und "multiselect"
-            key: "priority", // Der "priority"-Schlüssel wird bei der Konfiguration der "cardShape"-Eigenschaft verwendet
+            key: "priority", // Den "priority"-Schlüssel in der "cardShape"-Eigenschaft verwenden
             label: "Priority",
             values: [
                 { id: 1, label: "high" },
@@ -165,13 +134,13 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::info
-Für Editor-Felder vom Typ **"multiselect"** und **"combo"** können Sie auch einen Pfad zum Vorschaubild über die Eigenschaft **avatar** angeben:
+Für Felder vom Typ `multiselect` und `combo` können Sie über die Eigenschaft `avatar` einen Pfad zum Vorschaubild angeben:
 
 ~~~jsx {3,9,13}
 editorShape: [
     {
         type: "multiselect", // oder "combo"
-        key: "users", // Der "users"-Schlüssel wird bei der Konfiguration der "cardShape"-Eigenschaft verwendet
+        key: "users", // Den "users"-Schlüssel in der "cardShape"-Eigenschaft verwenden
         label: "Users",
         values: [
             { 
@@ -193,14 +162,14 @@ editorShape: [
 
 ### Color-Typ
 
-Das Editor-Feld vom Typ **color** kann wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert das Editor-Feld zur Auswahl einer Kartenfarbe:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "color", 
-            key: "color", // Der "color"-Schlüssel wird bei der Konfiguration der "cardShape"-Eigenschaft verwendet
+            key: "color", // Den "color"-Schlüssel in der "cardShape"-Eigenschaft verwenden
             label: "Card color",
             values: ["#65D3B3", "#FFC975", "#58C3FE"],
             config: {
@@ -215,7 +184,7 @@ new kanban.Kanban("#root", {
 
 ### Text- und Textarea-Typen {#text-und-textarea-typen}
 
-Die Editor-Felder der Typen **text** und **textarea** können wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert das Editor-Feld zur Eingabe einer Kartenbezeichnung:
 
 ~~~jsx {3-14}
 new kanban.Kanban("#root", {
@@ -239,14 +208,14 @@ new kanban.Kanban("#root", {
 
 ### Progress-Typ
 
-Das Editor-Feld vom Typ **progress** kann wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert das Editor-Feld zur Festlegung des Kartenfortschritts:
 
 ~~~jsx {3-12}
 new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "progress", 
-            key: "progress", // Der "progress"-Schlüssel wird bei der Konfiguration der "cardShape"-Eigenschaft verwendet
+            key: "progress", // Den "progress"-Schlüssel in der "cardShape"-Eigenschaft verwenden
             label: "Progress",
             config: {
                 min: 10,
@@ -261,9 +230,11 @@ new kanban.Kanban("#root", {
 
 ### Files-Typ
 
-Das Editor-Feld vom Typ **files** kann wie folgt gesetzt werden:
+Setzen Sie den Parameter `uploadURL` auf einen String für einen einfachen Upload oder auf eine Funktion für eine benutzerdefinierte Anfrage.
 
 #### Upload-URL als String konfigurieren
+
+Das folgende Code-Beispiel verwendet eine String-URL für den Datei-Upload:
 
 ~~~jsx {4-15}
 const url = "https://docs.dhtmlx.com/kanban-backend";
@@ -271,7 +242,7 @@ new kanban.Kanban("#root", {
     editorShape: [
         {
             type: "files", 
-            key: "attached", // Der "attached"-Schlüssel wird bei der Konfiguration der "cardShape"-Eigenschaft verwendet
+            key: "attached", // Den "attached"-Schlüssel in der "cardShape"-Eigenschaft verwenden
             label: "Attachment",
             uploadURL: url + "/uploads", // URL als String angeben
             config: {
@@ -287,6 +258,8 @@ new kanban.Kanban("#root", {
 ~~~
 
 #### Upload-URL als Funktion konfigurieren
+
+Übergeben Sie eine Funktion an `uploadURL`, um benutzerdefinierte Header, Tokens oder eine eigene Antwortverarbeitung hinzuzufügen. Das folgende Code-Beispiel sendet jede Datei mit einem Bearer-Token:
 
 ~~~jsx {9-31}
 const url = "https://docs.dhtmlx.com/kanban-backend";
@@ -326,7 +299,7 @@ new kanban.Kanban("#root", {
 
 ### Date- und DateRange-Typen {#date-und-daterange-typen}
 
-Das Editor-Feld vom Typ **date** kann wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert das Editor-Feld für ein einzelnes Datum:
 
 ~~~jsx {3-8}
 new kanban.Kanban("#root", {
@@ -342,7 +315,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-Das Editor-Feld vom Typ **dateRange** kann wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert das Editor-Feld für einen Start-/Enddatumsbereich:
 
 ~~~jsx {3-11}
 new kanban.Kanban("#root", {
@@ -363,7 +336,7 @@ new kanban.Kanban("#root", {
 
 ### Comments-Typ {#comments-type}
 
-Das Editor-Feld vom Typ **comments** kann wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert das Kommentarfeld des Editors:
 
 ~~~jsx {3-13}
 new kanban.Kanban("#root", {
@@ -386,7 +359,7 @@ new kanban.Kanban("#root", {
 
 ### Links-Typ {#links-type}
 
-Das Editor-Feld vom Typ **links** kann wie folgt gesetzt werden:
+Das folgende Code-Beispiel konfiguriert das Verknüpfungsfeld des Editors:
 
 ~~~jsx {3-10}
 new kanban.Kanban("#root", {
@@ -406,8 +379,9 @@ new kanban.Kanban("#root", {
 
 ### Editor-Felder an Kartenfelder binden
 
-:::info
-Um das Editor-Feld mit dem entsprechenden Kartenfeld zu verbinden, müssen Sie einen speziellen **key** im Objekt der [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft angeben (`key: "editor_field_key"`). Der Wert dieses Schlüssels muss auf *true* in der [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft gesetzt werden (für eingebaute Kartenfelder) oder im **headerFields** Array angegeben werden (für benutzerdefinierte Kartenfelder). Sie können die Anfangsdaten jedes Feldes auch über diesen Schlüssel bereitstellen.
+Jedes Editor-Feld ist über einen gemeinsamen `key` mit einem Kartenfeld verknüpft. Setzen Sie denselben `key`-Wert im [`editorShape`](api/config/js_kanban_editorshape_config.md)-Eintrag und in der [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft. Bei integrierten Kartenfeldern setzen Sie den Schlüssel auf `true`. Bei benutzerdefinierten Feldern tragen Sie den Schlüssel im `headerFields`-Array ein. Derselbe Schlüssel liefert auch die Anfangsdaten der Karte.
+
+Das folgende Code-Beispiel bindet die Editor-Felder `label` und `note` an die entsprechenden Kartenfelder:
 
 ~~~jsx {5,13,22,25,33-34,38-39,45-47}
 // Editor-Einstellungen
@@ -434,7 +408,7 @@ const cardShape = {
     label: true, // Schlüssel eines eingebauten Feldes
     headerFields: [
         {
-            key: "note", // Schlüssel eines benutzerdefinierten Feldes 
+            key: "note", // Schlüssel eines benutzerdefinierten Feldes
             label: "Note"
         }
     ]
@@ -461,18 +435,21 @@ new kanban.Kanban("#root", {
     // andere Konfigurationsparameter
 });
 ~~~
-:::
 
 :::note
-Sofern Sie keine Editor-Einstellungen über die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft angeben, verwendet das Widget einen [**defaultEditorShape**](api/config/js_kanban_editorshape_config.md#default-config) Parametersatz. In diesem Fall werden die Standard-Steuerelemente und Eingaben im Editor erst angezeigt, nachdem die entsprechenden Felder der Karten über die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft aktiviert wurden.
+Sofern Sie keine Editor-Einstellungen über die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft angeben, greift das Widget auf [`defaultEditorShape`](api/config/js_kanban_editorshape_config.md#default-config) zurück. Die Standard-Steuerelemente und Eingaben werden im Editor erst angezeigt, nachdem Sie die entsprechenden Kartenfelder über die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft aktiviert haben.
 :::
 
-### Den Editor konfigurieren
+### Editor-Verhalten konfigurieren {#configure-editor-behavior}
 
-Mit der [`editor`](api/config/js_kanban_editor_config.md) Eigenschaft können Sie den Editor wie folgt konfigurieren:
+Die [`editor`](api/config/js_kanban_editor_config.md) Eigenschaft steuert Sichtbarkeit, Autosave und Platzierung des Editors:
 
-- Aktivieren/Deaktivieren des Autosave-Modus des Editors über die *`editor.autoSave`* Eigenschaft
-- Angabe einer Verzögerungszeit für das automatische Speichern der Daten über die Eigenschaft *`editor.debounce`* (funktioniert nur mit dem Parameter ***autoSave: true***)
+- [`editor.show`](api/config/js_kanban_editor_config.md) — Editor aktivieren oder deaktivieren
+- [`editor.placement`](api/config/js_kanban_editor_config.md) — Editor als `"sidebar"` oder `"modal"`-Fenster anzeigen
+- [`editor.autoSave`](api/config/js_kanban_editor_config.md) — Autosave-Modus aktivieren oder deaktivieren
+- [`editor.debounce`](api/config/js_kanban_editor_config.md) — Verzögerung vor dem automatischen Speichern (gilt nur mit `autoSave: true`)
+
+Das folgende Code-Beispiel aktiviert Autosave mit einer Verzögerung von 2 Sekunden:
 
 ~~~jsx {6-9}
 // Kanban erstellen
@@ -488,9 +465,53 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
+## Rendering und Scrollen
+
+Standardmäßig rendert das Kanban-Widget alle Karten und scrollt das gesamte Board. Bei Boards mit vielen Karten können Sie auf Lazy Rendering oder spaltenweises Scrollen umschalten:
+
+- [`renderType`](api/config/js_kanban_rendertype_config.md) — auf `"lazy"` setzen, um nur die auf dem Board sichtbaren Karten zu rendern
+- [`scrollType`](api/config/js_kanban_scrolltype_config.md) — auf `"column"` setzen, um jede Spalte unabhängig zu scrollen
+
+Das folgende Code-Beispiel aktiviert Lazy Rendering und spaltenweises Scrollen:
+
+~~~jsx {5-7}
+new kanban.Kanban("#root", {
+    columns,
+    cards,
+    rows,
+    renderType: "lazy",
+    scrollType: "column",
+    cardHeight: 150
+});
+~~~
+
+:::important
+Wenn Sie `renderType: "lazy"` mit einem beliebigen `scrollType` kombinieren, legen Sie über die [`cardHeight`](api/config/js_kanban_cardheight_config.md) Eigenschaft eine statische Höhe für Karten fest. Ohne `cardHeight` werden Karten beim Lazy Rendering nicht korrekt angezeigt.
+:::
+
+## Änderungsverlauf
+
+Kanban verfolgt Kartenoperationen und stellt Undo- und Redo-Steuerelemente in der Toolbar bereit. Verwenden Sie die [`history`](api/config/js_kanban_history_config.md) Eigenschaft, um dieses Verhalten zu deaktivieren.
+
+Das folgende Code-Beispiel deaktiviert die Verlaufsverfolgung:
+
+~~~jsx {4}
+new kanban.Kanban("#root", {
+    columns,
+    cards,
+    history: false
+});
+~~~
+
+:::tip
+Um einzelne Operationen aus dem Verlauf auszuschließen, übergeben Sie den [`$meta`](api/common/js_kanban_meta_parameter.md) Parameter an Methoden oder Events.
+:::
+
 ## Toolbar
 
-Die **Toolbar** von Kanban besteht aus einer Suchleiste zum *Suchen von Karten* sowie Steuerelementen zum *Sortieren von Karten* und zum *Hinzufügen neuer Spalten und Zeilen*. Um die Toolbar anzuzeigen, müssen Sie sie in einem separaten Container mit dem **kanban.Toolbar()** Konstruktor initialisieren.
+Die Kanban-Toolbar bietet eine Suchleiste, Sortiersteuerelemente sowie Steuerelemente zum Hinzufügen von Spalten und Zeilen. Initialisieren Sie die Toolbar in einem separaten Container mit dem Konstruktor `kanban.Toolbar()`.
+
+Das folgende Code-Beispiel erstellt eine Toolbar, die an die Kanban-Instanz gebunden ist:
 
 ~~~jsx {13}
 // Kanban erstellen
@@ -508,7 +529,7 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-Sie können die Steuerelemente der Toolbar (*ausblenden/anzeigen/anpassen*) mit der Eigenschaft **items** verwalten:
+Verwenden Sie die [`items`](api/config/toolbar_items_config.md) Eigenschaft, um Toolbar-Steuerelemente anzuzeigen, auszublenden oder anzupassen. Das folgende Code-Beispiel setzt eine benutzerdefinierte Suchleiste, Undo- und Redo-Steuerelemente, eine benutzerdefinierte Sortierung sowie Spalten- und Zeilensteuerelemente:
 
 ~~~jsx {6-51}
 // Kanban erstellen
@@ -541,8 +562,8 @@ new kanban.Toolbar("#toolbar", {
             })
         },
         "spacer", // Leerraum
-        "undo", // Steuerelement zum Rückgängigmachen von Kartenaktionen in der Historie
-        "redo", // Steuerelement zum Wiederherstellen von Kartenaktionen in der Historie
+        "undo", // Kartenaktionen in der Historie rückgängig machen
+        "redo", // Kartenaktionen in der Historie wiederherstellen
         { // benutzerdefiniertes Sortier-Steuerelement
             type: "sort",
             options: [
@@ -566,11 +587,11 @@ new kanban.Toolbar("#toolbar", {
 ~~~
 
 :::tip
-Um bestimmte Steuerelemente der Toolbar auszublenden, entfernen Sie die entsprechenden Zeichenfolgen aus dem **items** Array.
+Entfernen Sie ein Steuerelement aus dem `items`-Array, um es auszublenden.
 :::
 
 ## Beispiel
 
-In diesem Beispiel sehen Sie, wie Sie **Karten**, **Editor** und **Toolbar** von Kanban konfigurieren können:
+Das folgende Beispiel konfiguriert Karten, Editor und Toolbar von Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

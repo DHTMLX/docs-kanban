@@ -6,16 +6,12 @@ description: 您可以在文档中了解如何将 TypeScript 与 DHTMLX JavaScri
 
 # TypeScript 支持
 
-从 v1.1 版本开始，DHTMLX Kanban 库提供了 TypeScript 类型定义的支持。内置的 TypeScript 支持可以直接开箱即用。
+从 v1.1 版本开始，DHTMLX Kanban 内置了 TypeScript 类型定义。
 
 :::note
-您可以直接在我们的 <a href="https://snippet.dhtmlx.com/2blo6hx8?tag=kanban" target="_blank">Snippet Tool</a> 中体验该功能。
+请在 [Snippet Tool](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban) 中体验 TypeScript 示例。
 :::
 
-## 使用 TypeScript 的优势
+## TypeScript 的优势
 
-为什么要将 DHTMLX Kanban 与 TypeScript 一起使用？
-
-TypeScript 的主要优势在于它能显著提升开发效率。
-
-应用程序的构建方式更加健壮，因为类型检查和自动补全功能可以帮助您避免潜在的错误。此外，TypeScript 还会在您使用 DHTMLX Kanban 库 API 时，提供有关应使用数据类型的信息。
+TypeScript 通过静态类型检查和自动补全功能，能够在早期发现错误。内置的类型定义还会在您调用 Kanban API 时显示预期的数据结构。

@@ -6,9 +6,13 @@ description: Изучите, как работать с данными в док
 
 # Работа с данными
 
+Это руководство охватывает операции с данными в Kanban: загрузку начальных данных, чтение и экспорт данных, изменение cards, columns, rows и links, а также управление комментариями и выделением.
+
 ## Загрузка начальных данных
 
-При инициализации Kanban вы можете передать начальные данные для [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md), [**rows**](api/config/js_kanban_rows_config.md) и [**links**](api/config/js_kanban_links_config.md).
+При инициализации Kanban передайте начальные данные через свойства [`columns`](api/config/js_kanban_columns_config.md), [`cards`](api/config/js_kanban_cards_config.md), [`rows`](api/config/js_kanban_rows_config.md) и [`links`](api/config/js_kanban_links_config.md).
+
+Следующий пример кода передаёт данные columns, cards, rows и links в конструктор Kanban:
 
 ~~~jsx {1,17,81,94,106-109}
 const columns = [ // данные для columns
@@ -114,7 +118,7 @@ const links = [
     {...}
 ];
 
-// инициализация Kanban с начальными данными для columns, cards и rows
+// инициализация Kanban с начальными данными
 new kanban.Kanban("#root", {
     columns, 
     cards, 
@@ -123,9 +127,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## Загрузка данных из локального источника {#loading-data-from-local-source}
+## Загрузка данных из локального источника {#load-data-from-a-local-source}
 
-Чтобы загрузить данные для ***columns***, ***rows***, ***cards*** и ***links*** из локального источника, вы можете использовать метод [`setConfig()`](api/methods/js_kanban_setconfig_method.md) или [`parse()`](api/methods/js_kanban_parse_method.md).
+Используйте [`setConfig()`](api/methods/js_kanban_setconfig_method.md) или [`parse()`](api/methods/js_kanban_parse_method.md) для загрузки данных columns, rows, cards и links после инициализации:
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});
@@ -136,68 +140,71 @@ board.setConfig({ columns, cards, rows });
 // или board.parse({ columns, cards, rows });
 ~~~
 
-## Синхронизация данных Kanban с Gantt и Scheduler
+## Синхронизация данных с Gantt и Scheduler
 
-В этом примере показано, как синхронизировать данные Kanban с другими виджетами DHTMLX, а именно с [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) и [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/):
+Информацию об интеграции с несколькими виджетами см. в разделе [Интеграция с виджетами DHTMLX](guides/integration.md#gantt-and-scheduler).
 
-<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+## Получение данных
 
-## Получение данных Kanban
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — возвращает объекты данных всех cards в указанной column (и, опционально, row)
+- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — возвращает объекты данных всех cards в указанной column
+- [`getCard()`](api/methods/js_kanban_getcard_method.md) — возвращает объект данных card по ID
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) — возвращает данные Kanban в виде JSON-объекта
 
-Для получения данных Kanban вы можете использовать следующие методы:
+## Получение состояния
 
-- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) - возвращает массив с объектами данных всех cards указанной колонки (и строки)
-- [`getCard()`](api/methods/js_kanban_getcard_method.md) - возвращает объект данных card по заданному ID
-- [`serialize()`](api/methods/js_kanban_serialize_method.md) - сериализует данные Kanban в JSON
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — возвращает реактивные свойства *DataStore*
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — возвращает текущие свойства *DataStore*
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — возвращает `{ data: DataStore }`
 
-## Получение состояния Kanban
+## Экспорт данных
 
-Для получения состояния Kanban вы можете использовать следующие методы:
-
-- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) - возвращает объект с реактивными свойствами *StateStore*
-- [`api.getState()`](api/internal/js_kanban_getstate_method.md) - возвращает объект с текущими свойствами *StateStore*
-- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) - возвращает объект с *StateStore* и *DataStore*
-
-## Экспорт данных Kanban
-
-Для экспорта данных Kanban вы можете использовать следующий метод:
-
-- [`export.json()`](api/internal/js_kanban_json_method.md) - экспортирует данные Kanban в JSON-файл
+- [`export.json()`](api/internal/js_kanban_json_method.md) — скачивает данные Kanban в виде JSON-файла
 
 ## Добавление новых элементов
 
-Для добавления новых *cards*, *columns* и *rows* используйте следующие методы:
-
-- [`addCard()`](api/methods/js_kanban_addcard_method.md) - добавляет новую card в Kanban
-- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) - добавляет новую column в Kanban
-- [`addRow()`](api/methods/js_kanban_addrow_method.md) - добавляет новую row в Kanban
+- [`addCard()`](api/methods/js_kanban_addcard_method.md) — добавляет новую card
+- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) — добавляет новую column
+- [`addRow()`](api/methods/js_kanban_addrow_method.md) — добавляет новую row
+- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) — дублирует card по ID
 
 ## Обновление элементов
 
-Для обновления *cards*, *columns* и *rows* используйте следующие методы:
-
-- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) - обновляет данные card по заданному ID
-- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) - обновляет данные column по заданному ID
-- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) - обновляет данные row по заданному ID
+- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) — обновляет card по ID
+- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) — обновляет column по ID
+- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) — обновляет row по ID
 
 ## Удаление элементов
 
-Для удаления *cards*, *columns* и *rows* используйте следующие методы:
-
-- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) - удаляет card из Kanban по заданному ID
-- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) - удаляет column из Kanban по заданному ID
-- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) - удаляет row из Kanban по заданному ID
+- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) — удаляет card по ID
+- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) — удаляет column по ID
+- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) — удаляет row по ID
 
 ## Перемещение элементов
 
-Для перемещения *cards*, *columns* и *rows* используйте следующие методы:
+- [`moveCard()`](api/methods/js_kanban_movecard_method.md) — перемещает card в указанную column и row
+- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) — перемещает column на новую позицию
+- [`moveRow()`](api/methods/js_kanban_moverow_method.md) — перемещает row на новую позицию
 
-- [`moveCard()`](api/methods/js_kanban_movecard_method.md) - перемещает card в нужную column и row
-- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) - перемещает column в нужную позицию
-- [`moveRow()`](api/methods/js_kanban_moverow_method.md) - перемещает row в нужную позицию
+## Управление комментариями
+
+- [`addComment()`](api/methods/js_kanban_addcomment_method.md) — добавляет комментарий к card по ID
+- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) — обновляет комментарий по ID
+- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) — удаляет комментарий по ID
+
+## Управление links
+
+- [`addLink()`](api/methods/js_kanban_addlink_method.md) — добавляет новый link между cards
+- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) — удаляет link по ID
+
+## Управление выделением cards
+
+- [`getSelection()`](api/methods/js_kanban_getselection_method.md) — возвращает ID выбранных в данный момент cards
+- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) — выделяет card по ID
+- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) — снимает выделение с card по ID
 
 ## Пример
 
-В этом примере показано, как использовать API Kanban для работы с данными:
+Следующий пример использует API Kanban для работы с данными во время выполнения:
 
 <iframe src="https://snippet.dhtmlx.com/61crsls3?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

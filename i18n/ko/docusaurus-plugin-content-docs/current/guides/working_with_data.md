@@ -6,9 +6,13 @@ description: DHTMLX JavaScript Kanban 라이브러리 문서에서 데이터 작
 
 # 데이터 작업하기
 
+이 가이드에서는 Kanban의 데이터 작업을 다룹니다: 초기 데이터 로딩, 데이터 읽기 및 내보내기, 카드·컬럼·행·링크 수정, 댓글 및 선택 항목 관리.
+
 ## 초기 데이터 로딩
 
-Kanban을 초기화할 때, [**columns**](api/config/js_kanban_columns_config.md), [**cards**](api/config/js_kanban_cards_config.md), [**rows**](api/config/js_kanban_rows_config.md), [**links**](api/config/js_kanban_links_config.md)에 대한 초기 데이터를 제공할 수 있습니다.
+Kanban을 초기화할 때, [`columns`](api/config/js_kanban_columns_config.md), [`cards`](api/config/js_kanban_cards_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) 속성을 통해 초기 데이터를 전달합니다.
+
+다음 코드 스니펫은 컬럼, 카드, 행, 링크 데이터를 Kanban 생성자에 전달합니다:
 
 ~~~jsx {1,17,81,94,106-109}
 const columns = [ // 컬럼 데이터
@@ -114,7 +118,7 @@ const links = [
     {...}
 ];
 
-// 컬럼, 카드, 행의 초기 데이터로 Kanban 초기화
+// 초기 데이터로 Kanban 초기화
 new kanban.Kanban("#root", {
     columns, 
     cards, 
@@ -123,81 +127,84 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## 로컬 소스에서 데이터 로딩 {#loading-data-from-local-source}
+## 로컬 소스에서 데이터 로딩 {#load-data-from-a-local-source}
 
-***columns***, ***rows***, ***cards***, ***links***에 대한 데이터를 로컬 소스에서 불러오려면 [`setConfig()`](api/methods/js_kanban_setconfig_method.md) 또는 [`parse()`](api/methods/js_kanban_parse_method.md) 메서드를 사용할 수 있습니다.
+초기화 이후에 컬럼, 행, 카드, 링크 데이터를 불러오려면 [`setConfig()`](api/methods/js_kanban_setconfig_method.md) 또는 [`parse()`](api/methods/js_kanban_parse_method.md)를 사용합니다:
 
 ~~~js {4}
 const board = new kanban.Kanban("#root", {});
 
-// Kanban에 데이터 로딩
+// load data into Kanban
 board.setConfig({ columns, cards, rows });
 
-// 또는 board.parse({ columns, cards, rows });
+// or board.parse({ columns, cards, rows });
 ~~~
 
-## Kanban 데이터를 Gantt 및 Scheduler와 동기화
+## Gantt 및 Scheduler와 데이터 동기화
 
-아래 스니펫에서는 Kanban 데이터를 [**Gantt**](https://dhtmlx.com/docs/products/dhtmlxGantt/) 및 [**Scheduler**](https://dhtmlx.com/docs/products/dhtmlxScheduler/)와 같은 다른 DHTMLX 위젯과 동기화하는 방법을 볼 수 있습니다:
+멀티 위젯 통합에 대해서는 [DHTMLX 위젯과의 통합](guides/integration.md#gantt-and-scheduler)을 참고하세요.
 
-<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+## 데이터 가져오기
 
-## Kanban 데이터 가져오기
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — 지정한 컬럼(및 선택적으로 행)의 모든 카드 데이터 객체를 반환합니다
+- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — 지정한 컬럼의 모든 카드 데이터 객체를 반환합니다
+- [`getCard()`](api/methods/js_kanban_getcard_method.md) — ID로 카드 데이터 객체를 반환합니다
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) — Kanban 데이터를 JSON 객체로 반환합니다
 
-Kanban 데이터를 가져오려면 다음 메서드를 사용할 수 있습니다:
+## 상태 가져오기
 
-- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) - 지정한 컬럼(및 행)의 모든 카드 데이터 객체 배열을 반환합니다
-- [`getCard()`](api/methods/js_kanban_getcard_method.md) - 지정한 ID로 카드 데이터 객체를 반환합니다
-- [`serialize()`](api/methods/js_kanban_serialize_method.md) - Kanban 데이터를 JSON으로 직렬화합니다
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — *DataStore*의 반응형 속성을 반환합니다
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — *DataStore*의 현재 속성을 반환합니다
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — `{ data: DataStore }`를 반환합니다
 
-## Kanban 상태 가져오기
+## 데이터 내보내기
 
-Kanban 상태를 가져오려면 다음 메서드를 사용할 수 있습니다:
-
-- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) - *StateStore*의 반응형 속성이 담긴 객체를 반환합니다
-- [`api.getState()`](api/internal/js_kanban_getstate_method.md) - *StateStore*의 현재 속성이 담긴 객체를 반환합니다
-- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) - *StateStore*와 *DataStore* 객체를 반환합니다
-
-## Kanban 데이터 내보내기
-
-Kanban 데이터를 내보내려면 다음 메서드를 사용할 수 있습니다:
-
-- [`export.json()`](api/internal/js_kanban_json_method.md) - Kanban의 데이터를 JSON 파일로 내보냅니다
+- [`export.json()`](api/internal/js_kanban_json_method.md) — Kanban 데이터를 JSON 파일로 다운로드합니다
 
 ## 새 항목 추가
 
-새로운 *cards*, *columns*, *rows*를 추가하려면 다음 메서드를 사용할 수 있습니다:
-
-- [`addCard()`](api/methods/js_kanban_addcard_method.md) - Kanban에 새 카드를 추가합니다
-- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) - Kanban에 새 컬럼을 추가합니다
-- [`addRow()`](api/methods/js_kanban_addrow_method.md) - Kanban에 새 행을 추가합니다
+- [`addCard()`](api/methods/js_kanban_addcard_method.md) — 새 카드를 추가합니다
+- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) — 새 컬럼을 추가합니다
+- [`addRow()`](api/methods/js_kanban_addrow_method.md) — 새 행을 추가합니다
+- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) — ID로 카드를 복제합니다
 
 ## 항목 업데이트
 
-*cards*, *columns*, *rows*를 업데이트하려면 다음 메서드를 사용할 수 있습니다:
-
-- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) - 지정한 ID로 카드 데이터를 업데이트합니다
-- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) - 지정한 ID로 컬럼 데이터를 업데이트합니다
-- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) - 지정한 ID로 행 데이터를 업데이트합니다
+- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) — ID로 카드를 업데이트합니다
+- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) — ID로 컬럼을 업데이트합니다
+- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) — ID로 행을 업데이트합니다
 
 ## 항목 삭제
 
-*cards*, *columns*, *rows*를 삭제하려면 다음 메서드를 사용할 수 있습니다:
-
-- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) - 지정한 ID로 Kanban에서 카드를 삭제합니다
-- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) - 지정한 ID로 Kanban에서 컬럼을 삭제합니다
-- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) - 지정한 ID로 Kanban에서 행을 삭제합니다
+- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) — ID로 카드를 삭제합니다
+- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) — ID로 컬럼을 삭제합니다
+- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) — ID로 행을 삭제합니다
 
 ## 항목 이동
 
-*cards*, *columns*, *rows*를 이동하려면 다음 메서드를 사용할 수 있습니다:
+- [`moveCard()`](api/methods/js_kanban_movecard_method.md) — 카드를 대상 컬럼과 행으로 이동합니다
+- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) — 컬럼을 새 위치로 이동합니다
+- [`moveRow()`](api/methods/js_kanban_moverow_method.md) — 행을 새 위치로 이동합니다
 
-- [`moveCard()`](api/methods/js_kanban_movecard_method.md) - 카드를 원하는 컬럼과 행으로 이동합니다
-- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) - 컬럼을 원하는 위치로 이동합니다
-- [`moveRow()`](api/methods/js_kanban_moverow_method.md) - 행을 원하는 위치로 이동합니다
+## 댓글 관리
+
+- [`addComment()`](api/methods/js_kanban_addcomment_method.md) — ID로 카드에 댓글을 추가합니다
+- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) — ID로 댓글을 업데이트합니다
+- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) — ID로 댓글을 삭제합니다
+
+## 링크 관리
+
+- [`addLink()`](api/methods/js_kanban_addlink_method.md) — 카드 간에 새 링크를 추가합니다
+- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) — ID로 링크를 삭제합니다
+
+## 카드 선택 관리
+
+- [`getSelection()`](api/methods/js_kanban_getselection_method.md) — 현재 선택된 카드의 ID를 반환합니다
+- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) — ID로 카드를 선택합니다
+- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) — ID로 카드 선택을 해제합니다
 
 ## 예제
 
-아래 스니펫에서 Kanban API를 사용하여 데이터 작업을 수행하는 방법을 확인할 수 있습니다:
+다음 스니펫은 Kanban API를 사용하여 런타임에 데이터를 조작하는 방법을 보여줍니다:
 
 <iframe src="https://snippet.dhtmlx.com/61crsls3?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

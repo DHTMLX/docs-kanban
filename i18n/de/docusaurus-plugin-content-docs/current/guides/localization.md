@@ -6,19 +6,22 @@ description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahr
 
 # Lokalisierung
 
-Sie können alle Beschriftungen in der Oberfläche von JavaScript Kanban lokalisieren. Dazu müssen Sie entweder eine neue Sprachumgebung erstellen oder eine integrierte anpassen und sie auf Kanban und Toolbar (*separat*) anwenden.
+Sie können alle Beschriftungen in der Kanban-Oberfläche lokalisieren. Erstellen Sie eine neue Sprachumgebung oder passen Sie eine integrierte an, und wenden Sie sie dann auf Kanban und die Toolbar an.
 
 ## Standardmäßige Sprachumgebung {#default-locale}
 
-Die **englische** Sprachumgebung wird standardmäßig verwendet:
+Kanban verwendet standardmäßig die englische Sprachumgebung.
+
+<details>
+<summary>Vollständige englische Sprachumgebung</summary>
 
 ~~~jsx
 const en = {
+    lang: "en-US",
     kanban: {
         Save: "Save",
         Close: "Close",
         Delete: "Delete",
-        Name: "Name",
         Description: "Description",
         Type: "Type",
         "Start date": "Start date",
@@ -43,8 +46,11 @@ const en = {
         "Add new column": "Add new column",
         "Add new card...": "Add new card...",
         "Add new card": "Add new card",
+        "Add a comment...": "Add a comment...",
         "Edit card": "Edit card",
         Edit: "Edit",
+        Undo: "Undo",
+        Redo: "Redo",
 
         Everywhere: "Everywhere",
         Label: "Label",
@@ -119,7 +125,13 @@ const en = {
         am: ["am", "AM"],
         pm: ["pm", "PM"],
         weekStart: 7,
-        timeFormat: 24
+        clockFormat: 24
+    },
+    formats: { // Datums- und Uhrzeitformatmuster
+        timeFormat: "%H:%i",
+        dateFormat: "%m/%d/%Y",
+        monthYearFormat: "%F %Y",
+        yearFormat: "%Y"
     },
     core: { // Übersetzungen der Kernelemente
         ok: "OK",
@@ -128,46 +140,94 @@ const en = {
 };
 ~~~
 
+</details>
+
+Ein Locale-Objekt enthält fünf Abschnitte auf oberster Ebene:
+
+- `lang` — Sprachcode (z. B. `"en-US"`)
+- `kanban` — UI-Beschriftungen (Schaltflächen, Dialoge, Suche, Sortieroptionen, Verknüpfungsbeziehungen)
+- `calendar` — Beschriftungen und Einstellungen des Datumswählers (Monats- und Tagesnamen, Uhrzeitformat, Wochenbeginn, AM/PM-Markierungen)
+- `formats` — Datums- und Uhrzeitformatmuster (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
+- `core` — gemeinsam genutzte Dialog-Schaltflächen (`ok`, `cancel`)
+
+Ein Locale-Objekt muss Übersetzungen für alle Beschriftungen von Kanban und Toolbar enthalten.
+
 ## Integrierte Sprachumgebungen
 
-Kanban stellt die folgenden Sprachumgebungen bereit:
+Kanban stellt die folgenden integrierten Sprachumgebungen bereit:
 
-**"en"** - Englisch  
-**"de"** - Deutsch  
-**"cn"** - Chinesisch  
-**"es"** - Spanisch  
-**"fr"** - Französisch  
-**"it"** - Italienisch  
-**"jp"** - Japanisch  
-**"pt"** - Portugiesisch  
-**"ru"** - Russisch  
+- `"en"` — Englisch
+- `"de"` — Deutsch
+- `"cn"` — Chinesisch
+- `"es"` — Spanisch
+- `"fr"` — Französisch
+- `"it"` — Italienisch
+- `"jp"` — Japanisch
+- `"pt"` — Portugiesisch
+- `"ru"` — Russisch
 
-Sie können eine integrierte Sprachumgebung wie folgt exportieren und anwenden:
+Der Zugriff auf eine Sprachumgebung erfolgt über `kanban.locales["<key>"]`. Da die Toolbar eine separate Komponente ist, muss die Sprachumgebung unabhängig auf sie angewendet werden. Das folgende Code-Snippet wendet die Sprachumgebung `"cn"` bei der Initialisierung auf Kanban und die Toolbar an:
 
-```jsx {5}
+~~~jsx {3,8}
 // Kanban erstellen
 const board = new kanban.Kanban("#root", {
-    columns,
-    cards,
-    locale: kanban.locales["cn"] // die integrierte "cn"-Sprachumgebung wird initial gesetzt
-    // weitere Parameter
+    locale: kanban.locales["cn"] // die integrierte "cn"-Sprachumgebung initial verwenden
 });
+// Toolbar erstellen
+new kanban.Toolbar("#toolbar", {
+    api: board.api,
+    locale: kanban.locales["cn"]
+});
+~~~
 
-// die integrierte "de"-Sprachumgebung auf Kanban anwenden
+Um die Sprachumgebung zur Laufzeit zu wechseln, rufen Sie [`setLocale()`](api/methods/js_kanban_setlocale_method.md) auf der Kanban-Instanz oder [`setLocale()`](api/methods/toolbar_setlocale_method.md) auf der Toolbar auf. Übergeben Sie `null` oder keine Argumente, um zur standardmäßigen englischen Sprachumgebung zurückzukehren:
+
+~~~jsx
+// Kanban auf Deutsch umschalten
 board.setLocale(kanban.locales["de"]);
-```
+// zur standardmäßigen englischen Sprachumgebung zurücksetzen
+board.setLocale();
+~~~
 
 ## Eigene Sprachumgebung
 
-Um eine eigene Sprachumgebung zu verwenden, müssen Sie:
+Um eine eigene Sprachumgebung anzuwenden:
 
-- eine eigene Sprachumgebung erstellen (oder die Standardumgebung anpassen) und Übersetzungen für alle Textbeschriftungen bereitstellen (es kann jede gewünschte Sprache sein)
+- erstellen Sie eine eigene Sprachumgebung (oder passen Sie die englische Standardumgebung an) und stellen Sie Übersetzungen für alle Textbeschriftungen bereit
+- wenden Sie die neue Sprachumgebung für **Kanban** über [`locale`](api/config/js_kanban_locale_config.md) / [`setLocale()`](api/methods/js_kanban_setlocale_method.md) an
+- wenden Sie die neue Sprachumgebung für die **Toolbar** über [`locale`](api/config/toolbar_locale_config.md) / [`setLocale()`](api/methods/toolbar_setlocale_method.md) an
 
-- die neue Sprachumgebung für **Kanban** über die [`locale`](api/config/js_kanban_locale_config.md)-Eigenschaft oder mit der [`setLocale()`](api/methods/js_kanban_setlocale_method.md)-Methode anwenden
-- die neue Sprachumgebung für **Toolbar** über die [`locale`](api/config/toolbar_locale_config.md)-Eigenschaft oder mit der [`setLocale()`](api/methods/toolbar_setlocale_method.md)-Methode anwenden
+Das folgende Code-Snippet definiert eine eigene Sprachumgebung und wendet sie auf Kanban und die Toolbar an:
+
+~~~jsx
+const myLocale = {
+    lang: "en-US",
+    kanban: {
+        Save: "Save",
+        Close: "Close",
+        // andere Kanban-Beschriftungen mit Übersetzungen
+    },
+    calendar: {
+        monthFull: ["January", "February", /* ... */],
+        // andere Kalendereinstellungen
+    },
+    formats: {
+        timeFormat: "%H:%i",
+        dateFormat: "%m/%d/%Y",
+        // andere Datums- und Uhrzeitformatmuster
+    },
+    core: {
+        ok: "OK",
+        cancel: "Cancel"
+    }
+};
+
+const board = new kanban.Kanban("#root", { locale: myLocale });
+new kanban.Toolbar("#toolbar", { api: board.api, locale: myLocale });
+~~~
 
 ## Beispiel
 
-Im folgenden Beispiel sehen Sie, wie Sie zwischen mehreren Sprachumgebungen wechseln können:
+Das folgende Beispiel demonstriert den Wechsel zwischen Sprachumgebungen:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

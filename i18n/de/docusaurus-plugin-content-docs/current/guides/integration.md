@@ -6,12 +6,20 @@ description: Informationen zur Integration finden Sie in der Dokumentation der D
 
 # Integration mit DHTMLX-Widgets
 
-Sie können DHTMLX Kanban mit anderen DHTMLX-Widgets integrieren (zum Beispiel mit [Gantt](https://docs.dhtmlx.com/gantt/), [Scheduler](https://docs.dhtmlx.com/scheduler/), [To Do List](https://docs.dhtmlx.com/todolist/)). Sehen Sie sich die folgenden Beispiele an.
+Sie können DHTMLX Kanban mit anderen DHTMLX-Widgets integrieren, darunter:
 
-## Integration mit DHTMLX Gantt und Scheduler
+- [Gantt](https://docs.dhtmlx.com/gantt/)
+- [Scheduler](https://docs.dhtmlx.com/scheduler/)
+- [To Do List](https://docs.dhtmlx.com/todolist/)
+
+## Gantt und Scheduler {#gantt-and-scheduler}
+
+Die folgende Demo bettet ein Kanban-Board neben Gantt- und Scheduler-Ansichten ein:
 
 <iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
 
-## Integration mit DHTMLX To Do List
+## To Do List
+
+Die folgende Demo bettet ein Kanban-Board neben einer To Do List ein:
 
 <iframe src="https://snippet.dhtmlx.com/id05kedo?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="750"></iframe>
