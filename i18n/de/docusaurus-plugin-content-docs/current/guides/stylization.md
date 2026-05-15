@@ -6,19 +6,42 @@ description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahr
 
 # Stilierung
 
-Mit Kanban können Sie das Aussehen von **Spalten**, **Zeilen** und **Karten** über die Eigenschaften [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) und [`cardShape.css`](api/config/js_kanban_cardshape_config.md) anpassen. Diese Eigenschaften ermöglichen es Ihnen, Spalten, Zeilen und Karten bedingt zu gestalten.
+Sie können das Erscheinungsbild von Kanban über CSS-Klassen und CSS-Variablen anpassen. Die folgenden Eigenschaften akzeptieren CSS-Klassen für Spalten, Zeilen und Karten:
 
-Sie können außerdem einer einzelnen **Spalte**, **Zeile** oder **Karte** eine benutzerdefinierte CSS-Klasse zuweisen, indem Sie die Eigenschaften [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md) und [`cards.css`](api/config/js_kanban_cards_config.md) verwenden.
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — Funktionen, die eine CSS-Klasse bedingt basierend auf den Element-Daten zurückgeben
+- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — eine CSS-Klasse als Zeichenfolge, die einem einzelnen Element zugewiesen wird
 
-Darüber hinaus können Sie benutzerdefinierte Stile auf jeden Teil der Kanban-Oberfläche anwenden, um die Anforderungen Ihres Projekts zu erfüllen. Dafür stellt die Bibliothek eine Vielzahl von CSS-Variablen zur Verfügung. Beachten Sie, dass Kanban zwei Arten von Variablen enthält:
-- CSS-Variablen, die sich auf den **Kanban**-Stil beziehen
-- CSS-Variablen, die sich auf den Stil der **WX**-Bibliothek beziehen (*Steuerelemente, Kalender usw.*)
+Weitere Details und Codebeispiele zu den bedingten `css`-Funktionen finden Sie unter [Bedingte CSS-Klassen](guides/customization.md#conditional-css-classes).
+
+Das folgende Code-Snippet wendet eine CSS-Klasse auf eine bestimmte Spalte, Zeile und Karte an:
+
+~~~jsx
+const columns = [
+    { id: "backlog", label: "Backlog", css: "highlighted" },
+    // other columns
+];
+const rows = [
+    { id: "feature", label: "Feature", css: "row-feature" },
+    // other rows
+];
+const cards = [
+    { id: 1, label: "Task", column: "backlog", css: "urgent" },
+    // other cards
+];
+~~~
+
+Neben elementspezifischem CSS stellt Kanban CSS-Variablen für das Theming bereit. Die Variablen gliedern sich in zwei Gruppen:
+
+- Kanban-Variablen — definieren Kanban-spezifische Stile
+- WX-Bibliotheksvariablen — gestalten gemeinsam genutzte UI-Elemente (Steuerelemente, Kalender)
 
 :::info
-Beachten Sie, dass die **WX**-Bibliothek nur für interne Prozesse verwendet wird. Sie stellt einige kleine Elemente bereit, die in Kanban verwendet werden (*Steuerelemente, Kalender usw.*)
+Die WX-Bibliothek stellt interne Kanban-UI-Komponenten bereit. Behandeln Sie WX-Variablen als Teil der Kanban-Stilierung.
 :::
 
-## Standardstil
+## Theme-Variablen
+
+Überschreiben Sie diese CSS-Variablen in Ihrem Stylesheet, um das Material-Theme anzupassen:
 
 ~~~css
 .wx-material-theme {
@@ -43,7 +66,7 @@ Beachten Sie, dass die **WX**-Bibliothek nur für interne Prozesse verwendet wir
     --wx-kanban-toolbar-border: var(--wx-border);
 
     /* card styles */
-    --wx-kanban-card-field-padding: 12px;
+    --wx-kanban-card-field-padding: 10px;
     --wx-kanban-content-background: var(--wx-background);
     --wx-kanban-card-border: var(--wx-border);
     --wx-kanban-card-border-radius: 6px;
@@ -60,8 +83,11 @@ Beachten Sie, dass die **WX**-Bibliothek nur für interne Prozesse verwendet wir
     --wx-kanban-editor-width: 569px;
     --wx-kanban-editor-height: auto;
     --wx-kanban-editor-x-padding: 20px;
-    --wx-kanban-editor-background: var(--wx-kanban-content-background);
-    --wx-kanban-editor-top-border: none;
+    --wx-kanban-editor-background: var(--wx-background);
+    --wx-kanban-editor-top-border: var(--wx-border);
+    --wx-kanban-editor-modal-width: 1000px;
+    --wx-editor-right-background: rgba(0, 0, 0, 0.03);
+    --wx-editor-cancel-background: rgba(0, 0, 0, 0.04);
 
     /* column styles */
     --wx-kanban-over-limit-color: var(--wx-color-danger);
@@ -90,29 +116,29 @@ Beachten Sie, dass die **WX**-Bibliothek nur für interne Prozesse verwendet wir
 ~~~
 
 :::tip Hinweis
-In zukünftigen Versionen von Kanban können sich die Variablen und deren Namen ändern. Bitte überprüfen Sie nach einem Update die Namen und passen Sie sie in Ihrem Code an, um Darstellungsprobleme der Komponente zu vermeiden.
+Variablennamen können sich in zukünftigen Versionen ändern. Überprüfen Sie die Namen nach einem Update und passen Sie die Stile in Ihrem Projekt entsprechend an.
 :::
 
 ## Scroll-Stil
 
-Sie können auch einen benutzerdefinierten Stil für die Scrollbar von Kanban anwenden. Verwenden Sie dafür die CSS-Klasse `.wx-styled-scroll`. Prüfen Sie vor der Verwendung die Kompatibilität mit modernen Browsern [hier](https://caniuse.com/css-scrollbar).
+Wenden Sie die CSS-Klasse `.wx-styled-scroll` auf den Kanban-Container an, um einen benutzerdefinierten Scrollbar-Stil zu aktivieren. Prüfen Sie vor der Verwendung die [Browserkompatibilität](https://caniuse.com/css-scrollbar):
 
 ~~~html {4} title="index.html"
-<!--container für Toolbar-->
-<div id="toolbar"></div> //
-<!--container für Kanban-->
-<div id="root" class="wx-styled-scroll"></div> 
+<!-- container for Toolbar -->
+<div id="toolbar"></div>
+<!-- container for Kanban -->
+<div id="root" class="wx-styled-scroll"></div>
 ~~~
 
 ## Benutzerdefinierter Stil
 
-In diesem Beispiel sehen Sie, wie Sie einen benutzerdefinierten Stil auf Kanban anwenden können.
+Die folgende Demo wendet einen benutzerdefinierten Stil auf Kanban an:
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Adaptivität
+## Responsives Layout
 
-In diesem Beispiel sehen Sie, wie Sie mit benutzerdefinierten CSS-Stilen eine adaptive Version von Kanban erstellen.
+Die folgende Demo erstellt ein responsives Kanban-Layout mit benutzerdefiniertem CSS:
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
