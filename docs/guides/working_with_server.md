@@ -33,8 +33,8 @@ JavaScript Kanban includes the `RestDataProvider` service, which fully supports 
 - `"update-column"`
 - `"update-comment"`
 - `"update-row"`
-- `"add-vote"` (`{ cardId, userId }`)
-- `"delete-vote"` (`{ cardId, userId }`)
+- `"add-vote"`
+- `"delete-vote"`
 
 ## REST methods
 

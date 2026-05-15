@@ -38,11 +38,10 @@ Configure the context menu for cards, columns, and rows through the [`cardShape.
 
 ### `cardShape.menu`
 
-By default the card menu shows **Duplicate** and **Delete** options. The **Edit** option appears only when card editing is enabled and selection is disabled. Available built-in action IDs:
+By default the card menu shows **Duplicate** and **Delete** options. Available built-in action IDs:
 
 - `"duplicate-card"` — duplicate the card
 - `"delete-card"` — delete the card
-- `"set-edit"` — open the card editor (shown when editing is available)
 
 ### `columnShape.menu`
 

@@ -17,6 +17,7 @@ Kanban applies the English locale by default.
 
 ~~~jsx
 const en = {
+    lang: "en-US",
     kanban: {
         Save: "Save",
         Close: "Close",
@@ -133,7 +134,6 @@ const en = {
         yearFormat: "%Y"
     },
     core: { // translations of the core elements
-        lang: "en-US",
         ok: "OK",
         cancel: "Cancel"
     }
@@ -142,12 +142,13 @@ const en = {
 
 </details>
 
-A locale object contains four top-level sections:
+A locale object contains five top-level sections:
 
+- `lang` — language code (for example, `"en-US"`)
 - `kanban` — UI labels (buttons, dialogs, search, sort options, link relations)
 - `calendar` — date picker labels and settings (month and day names, clock format, week start, AM/PM markers)
 - `formats` — date and time format patterns (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
-- `core` — shared dialog buttons (`ok`, `cancel`) and language code (`lang`)
+- `core` — shared dialog buttons (`ok`, `cancel`)
 
 A locale object must include translations for every Kanban and Toolbar label.
 
@@ -200,6 +201,7 @@ The following code snippet defines and applies a custom locale to both Kanban an
 
 ~~~jsx
 const myLocale = {
+    lang: "en-US",
     kanban: {
         Save: "Save",
         Close: "Close",
@@ -208,6 +210,11 @@ const myLocale = {
     calendar: {
         monthFull: ["January", "February", /* ... */],
         // other calendar settings
+    },
+    formats: {
+        timeFormat: "%H:%i",
+        dateFormat: "%m/%d/%Y",
+        // other date/time format patterns
     },
     core: {
         ok: "OK",
