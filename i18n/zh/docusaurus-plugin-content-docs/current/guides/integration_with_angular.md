@@ -7,28 +7,28 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解与 Angu
 # 与 Angular 的集成
 
 :::tip
-在阅读本篇文档前，您应熟悉 **Angular** 的基本概念和模式。如需回顾相关知识，请参考 [**Angular documentation**](https://v17.angular.io/docs)。
+本指南假设您已熟悉 Angular 的概念和模式。如需了解背景知识，请参考 [Angular documentation](https://v17.angular.io/docs)。
 :::
 
-DHTMLX Kanban 与 **Angular** 兼容。我们已经准备了如何在 **Angular** 中使用 DHTMLX Kanban 的代码示例。更多信息请参阅对应的 [**GitHub 示例**](https://github.com/DHTMLX/angular-kanban-demo)。
+DHTMLX Kanban 与 Angular 兼容。完整代码示例可在 [GitHub](https://github.com/DHTMLX/angular-kanban-demo) 上查看。
 
 ## 创建项目
 
 :::info
-在开始创建新项目之前，请先安装 [**Angular CLI**](https://v17.angular.io/cli) 和 [**Node.js**](https://nodejs.org/en/)。
+在创建项目之前，请先安装 [Angular CLI](https://v17.angular.io/cli) 和 [Node.js](https://nodejs.org/en/)。
 :::
 
-使用 Angular CLI 创建一个新的 **my-angular-kanban-app** 项目。请运行以下命令：
+以下命令使用 Angular CLI 创建一个新的 *my-angular-kanban-app* 项目：
 
 ~~~json
 ng new my-angular-kanban-app
 ~~~
 
 :::note
-如果您希望按照本指南操作，请在创建新的 Angular 应用时禁用服务端渲染（SSR）和静态站点生成（SSG/Prerendering）！
+在出现提示时，禁用服务端渲染（SSR）和静态站点生成（SSG/Prerendering），以使项目与本指南保持一致。
 :::
 
-上述命令会安装所有必要工具，无需额外运行其他命令。
+该命令会安装所有必要工具，无需额外运行其他命令。
 
 ### 安装依赖
 
@@ -38,48 +38,48 @@ ng new my-angular-kanban-app
 cd my-angular-kanban-app
 ~~~
 
-安装依赖并启动开发服务器。为此，请使用 [**yarn**](https://yarnpkg.com/) 包管理器：
+使用 [yarn](https://yarnpkg.com/) 包管理器安装依赖并启动开发服务器：
 
 ~~~json
 yarn
 yarn start
 ~~~
 
-应用将会在本地（例如 `http://localhost:3000`）运行。
+应用将会在本地地址（例如 `http://localhost:3000`）运行。
 
 ## 创建 Kanban
 
-接下来需要获取 DHTMLX Kanban 的源代码。首先，停止当前应用并开始安装 Kanban 包。
+停止开发服务器并安装 Kanban 包。
 
 ### 步骤 1. 安装包
 
-下载 [**试用版 Kanban 包**](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤进行操作。请注意，试用版 Kanban 仅可使用 30 天。
+下载 [试用版 Kanban 包](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤进行操作。试用版可使用 30 天。
 
 ### 步骤 2. 创建组件
 
-现在需要创建一个 Angular 组件，将 Kanban 和 Toolbar 添加到应用中。在 **src/app/** 目录下创建 **kanban** 文件夹，并在其中新建一个名为 **kanban.component.ts** 的文件。
+创建一个用于挂载 Kanban 和 Toolbar 的 Angular 组件。创建 *src/app/kanban/* 文件夹，并在其中添加 *kanban.component.ts* 文件。
 
 #### 导入源文件
 
-打开 **kanban.component.ts** 文件并导入 Kanban 源文件。请注意：
+打开 *kanban.component.ts* 并导入 Kanban 源文件。导入路径取决于所使用的包版本：
 
-- 如果您使用 PRO 版本并从本地文件夹安装 Kanban 包，导入路径如下：
+- 对于从本地文件夹安装的 PRO 版本：
 
 ~~~jsx
 import { Kanban, Toolbar } from 'dhx-kanban-package';
 ~~~
 
-- 如果您使用 Kanban 的试用版，请指定如下路径：
+- 对于试用版：
 
 ~~~jsx
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
 ~~~
 
-本教程展示了如何配置 **trial** 版本的 Kanban。
+本教程使用 Kanban 的试用版。
 
-#### 设置容器并初始化带有 Toolbar 的 Kanban
+#### 设置容器并初始化 Kanban
 
-要在页面上显示带有 Toolbar 的 Kanban，需要为 Kanban 和 Toolbar 设置容器，并使用相应的构造函数初始化这些组件：
+要显示带有 Toolbar 的 Kanban，需要设置两个容器并调用构造函数。以下代码片段定义了组件模板、引用容器并创建实例：
 
 ~~~jsx {1,8-11,15-18,24-31} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -124,7 +124,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 
 #### 添加样式
 
-为了正确显示 Kanban，需要提供相应的样式。为此，您可以在 **src/app/kanban/** 目录下创建 **kanban.component.css** 文件，并为 Kanban 及其容器指定必要样式：
+为 Kanban 和容器添加样式。在 *src/app/kanban/* 目录下创建 *kanban.component.css* 文件：
 
 ~~~css title="kanban.component.css"
 /* 导入 Kanban 样式 */
@@ -152,7 +152,7 @@ body{
 
 #### 加载数据
 
-要向 Kanban 添加数据，需要提供一组数据。您可以在 **src/app/kanban/** 目录下创建 **data.ts** 文件，并在其中添加一些数据：
+要填充 Kanban，需要提供一组数据。在 *src/app/kanban/* 目录下创建 *data.ts* 文件：
 
 ~~~jsx {2,14,37,48} title="data.ts"
 export function getData() {
@@ -206,7 +206,7 @@ export function getData() {
 }
 ~~~
 
-然后打开 ***kanban.component.ts*** 文件。导入数据文件，并在 `ngOnInit()` 方法中将相应的数据属性指定到 Kanban 的配置对象，如下所示：
+打开 *kanban.component.ts*，导入数据集，并在 `ngOnInit()` 中将数据属性传入 Kanban 配置对象：
 
 ~~~jsx {2,23,25-27} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-您也可以在 Angular 的 `ngOnInit()` 方法中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban。`setConfig` 或 `parse()` 方法在每次应用更改时都能实现数据重新加载。
+也可以在创建实例后，通过 `ngOnInit()` 中的 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法加载数据：
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -307,13 +307,13 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-现在 Kanban 组件已经可以使用。当该元素被添加到页面时，会自动初始化带有数据的 Kanban。您还可以根据需要提供其他配置设置。请访问我们的 [Kanban API 文档](/api/overview/properties_overview/) 查看所有可用属性的完整列表。
+Kanban 组件现已可以使用。当该元素渲染时，Kanban 会初始化并加载数据。有关支持的配置属性的完整列表，请参阅 [Kanban API 参考](/api/overview/properties_overview/)。
 
 #### 事件处理
 
-当用户在 Kanban 上执行某些操作时，会触发事件。您可以利用这些事件检测操作并执行所需代码。参阅 [完整事件列表](/api/overview/events_overview/)。
+用户在 Kanban 中的操作会触发事件。通过监听事件可以响应特定操作。完整列表请参阅 [Kanban 事件参考](/api/overview/events_overview/)。
 
-打开 **kanban.component.ts** 文件，并按以下方式补充 `ngOnInit()` 方法：
+打开 *kanban.component.ts* 并扩展 `ngOnInit()` 方法：
 
 ~~~jsx {5-7} title="kanban.component.ts"
 // ...
@@ -332,7 +332,7 @@ ngOnDestroy(): void {
 
 ### 步骤 3. 将 Kanban 添加到应用中
 
-要将 ***KanbanComponent*** 组件添加到您的应用中，请打开 ***src/app/app.component.ts*** 文件，并用以下内容替换默认代码：
+要在应用中注册 `KanbanComponent`，请打开 *src/app/app.component.ts* 并替换默认代码：
 
 ~~~jsx {5} title="app.component.ts"
 import { Component } from "@angular/core";
@@ -346,7 +346,7 @@ export class AppComponent {
 }
 ~~~
 
-然后在 ***src/app/*** 目录下创建 ***app.module.ts*** 文件，并按如下方式指定 *KanbanComponent*：
+在 *src/app/* 目录下创建 *app.module.ts* 并声明 `KanbanComponent`：
 
 ~~~jsx {4-5,8} title="app.module.ts"
 import { NgModule } from "@angular/core";
@@ -363,7 +363,7 @@ import { KanbanComponent } from "./kanban/kanban.component";
 export class AppModule {}
 ~~~
 
-最后一步，打开 ***src/main.ts*** 文件，并用以下内容替换现有代码：
+打开 *src/main.ts* 并替换现有代码：
 
 ~~~jsx title="main.ts"
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
@@ -373,14 +373,14 @@ platformBrowserDynamic()
     .catch((err) => console.error(err));
 ~~~
 
-此后，您即可启动应用，在页面上看到加载了数据的 Kanban。
+运行应用，在页面上查看已填充数据的 Kanban 看板。
 
 import trial from '@site/static/img/trial_kanban.png';
 
 <img
-    src={trial}
-    alt="Kanban with Angular"
-    className="img_border"
+  src={trial}
+  alt="Kanban with Angular"
+  className="img_border"
 />
 
-现在您已经了解如何将 DHTMLX Kanban 集成到 Angular 中。您可以根据具体需求自定义代码。最终的高级示例可在 [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo) 查看。
+在 [GitHub](https://github.com/DHTMLX/angular-kanban-demo) 上查看完整项目。
