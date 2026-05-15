@@ -6,16 +6,12 @@ description: You can learn about using typescript with the DHTMLX JavaScript Kan
 
 # TypeScript support
 
-Starting from v1.1, the library of DHTMLX Kanban provides an ability to use TypeScript definitions. The built-in support of TypeScript works out of the box.
+Since v1.1, DHTMLX Kanban ships with built-in TypeScript definitions.
 
 :::note
-You can try out the functionality right in our <a href="https://snippet.dhtmlx.com/2blo6hx8?tag=kanban" target="_blank">Snippet Tool</a>.
+Try the [Snippet Tool](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban) for a working TypeScript example.
 :::
 
-## Advantages of using TypeScript
+## Benefits of TypeScript
 
-Why do you need to use DHTMLX Kanban with TypeScript?
-
-The main benefit of TypeScript is that it allows you to significantly increase the efficiency of the development process.
-
-The way of building an application becomes more robust as checking the types together with autocompletion allow you to avoid potential mistakes. Besides, TypeScript provides you with information about types of data you should use while working with the API of the DHTMLX Kanban library.
+TypeScript catches mistakes early through static type checking and autocompletion. The bundled definitions also show the expected data shapes when you call the Kanban API.

@@ -6,19 +6,22 @@ description: You can learn about the localization in the documentation of the DH
 
 # Localization
 
-You can localize all labels in the interface of JavaScript Kanban. For this you need to create a new locale or modify a built-in one and apply it to Kanban and Toolbar (*separately*).
+You can localize all labels in the Kanban interface. Create a new locale or modify a built-in one, then apply the locale to both Kanban and the Toolbar.
 
 ## Default locale
 
-The **English** locale is used by default:
+Kanban applies the English locale by default.
+
+<details>
+<summary>Full English locale</summary>
 
 ~~~jsx
 const en = {
+    lang: "en-US",
     kanban: {
         Save: "Save",
         Close: "Close",
         Delete: "Delete",
-        Name: "Name",
         Description: "Description",
         Type: "Type",
         "Start date": "Start date",
@@ -43,8 +46,11 @@ const en = {
         "Add new column": "Add new column",
         "Add new card...": "Add new card...",
         "Add new card": "Add new card",
+        "Add a comment...": "Add a comment...",
         "Edit card": "Edit card",
         Edit: "Edit",
+        Undo: "Undo",
+        Redo: "Redo",
 
         Everywhere: "Everywhere",
         Label: "Label",
@@ -119,7 +125,13 @@ const en = {
         am: ["am", "AM"],
         pm: ["pm", "PM"],
         weekStart: 7,
-        timeFormat: 24
+        clockFormat: 24
+    },
+    formats: { // date/time format patterns
+        timeFormat: "%H:%i",
+        dateFormat: "%m/%d/%Y",
+        monthYearFormat: "%F %Y",
+        yearFormat: "%Y"
     },
     core: { // translations of the core elements
         ok: "OK",
@@ -128,46 +140,94 @@ const en = {
 };
 ~~~
 
+</details>
+
+A locale object contains five top-level sections:
+
+- `lang` — language code (for example, `"en-US"`)
+- `kanban` — UI labels (buttons, dialogs, search, sort options, link relations)
+- `calendar` — date picker labels and settings (month and day names, clock format, week start, AM/PM markers)
+- `formats` — date and time format patterns (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
+- `core` — shared dialog buttons (`ok`, `cancel`)
+
+A locale object must include translations for every Kanban and Toolbar label.
+
 ## Built-in locales
 
-The Kanban exports the following locales:
+Kanban exports the following built-in locales:
 
-**"en"** - English
-**"de"** - German
-**"cn"** - Chinese
-**"es"** - Spanish
-**"fr"** - French
-**"it"** - Italian
-**"jp"** - Japanese
-**"pt"** - Portugese
-**"ru"** - Russian
+- `"en"` — English
+- `"de"` — German
+- `"cn"` — Chinese
+- `"es"` — Spanish
+- `"fr"` — French
+- `"it"` — Italian
+- `"jp"` — Japanese
+- `"pt"` — Portuguese
+- `"ru"` — Russian
 
-You can export and apply the built-in locale in the following way:
+Access a locale through `kanban.locales["<key>"]`. The Toolbar is a separate component, so apply the locale to the Toolbar independently. The following code snippet applies the `"cn"` locale to both Kanban and the Toolbar at initialization:
 
-```jsx {5}
+~~~jsx {3,8}
 // create Kanban
 const board = new kanban.Kanban("#root", {
-    columns,
-    cards,
-    locale: kanban.locales["cn"] // the built-it "cn" locale will be set initially
-    // other parameters
+    locale: kanban.locales["cn"] // use the built-in "cn" locale initially
 });
+// create Toolbar
+new kanban.Toolbar("#toolbar", {
+    api: board.api,
+    locale: kanban.locales["cn"]
+});
+~~~
 
-// apply the built-in "de" locale to Kanban
+To switch the locale at runtime, call [`setLocale()`](api/methods/js_kanban_setlocale_method.md) on the Kanban instance or [`setLocale()`](api/methods/toolbar_setlocale_method.md) on the Toolbar. Pass `null` or no arguments to reset to the default English locale:
+
+~~~jsx
+// switch Kanban to German
 board.setLocale(kanban.locales["de"]);
-```
+// reset to the default English locale
+board.setLocale();
+~~~
 
 ## Custom locale
 
-To apply a custom locale you need to:
+To apply a custom locale:
 
-- create a custom locale (or modify the default one) and provide translations for all text labels (it can be any language you need)
+- create a custom locale (or modify the default English one) and provide translations for all text labels
+- apply the new locale to **Kanban** through [`locale`](api/config/js_kanban_locale_config.md) / [`setLocale()`](api/methods/js_kanban_setlocale_method.md)
+- apply the new locale to the **Toolbar** through [`locale`](api/config/toolbar_locale_config.md) / [`setLocale()`](api/methods/toolbar_setlocale_method.md)
 
-- apply the new locale to **Kanban** via its [`locale`](api/config/js_kanban_locale_config.md) property or use the [`setLocale()`](api/methods/js_kanban_setlocale_method.md) method
-- apply the new locale to **Toolbar** via its [`locale`](api/config/toolbar_locale_config.md) property or use the [`setLocale()`](api/methods/toolbar_setlocale_method.md) method
+The following code snippet defines and applies a custom locale to both Kanban and the Toolbar:
+
+~~~jsx
+const myLocale = {
+    lang: "en-US",
+    kanban: {
+        Save: "Save",
+        Close: "Close",
+        // other Kanban labels with translations
+    },
+    calendar: {
+        monthFull: ["January", "February", /* ... */],
+        // other calendar settings
+    },
+    formats: {
+        timeFormat: "%H:%i",
+        dateFormat: "%m/%d/%Y",
+        // other date/time format patterns
+    },
+    core: {
+        ok: "OK",
+        cancel: "Cancel"
+    }
+};
+
+const board = new kanban.Kanban("#root", { locale: myLocale });
+new kanban.Toolbar("#toolbar", { api: board.api, locale: myLocale });
+~~~
 
 ## Example
 
-In this snippet you can see how to switch through several locales:
+The following snippet demonstrates locale switching:
 
 <iframe src="https://snippet.dhtmlx.com/hrblf1mm?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
