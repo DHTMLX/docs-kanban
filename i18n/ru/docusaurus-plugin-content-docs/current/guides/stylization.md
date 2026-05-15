@@ -6,19 +6,42 @@ description: Ознакомьтесь с возможностями стилиз
 
 # Стилизация
 
-В Kanban вы можете стилизовать внешний вид **колонок**, **строк** и **карточек** с помощью свойств [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) и [`cardShape.css`](api/config/js_kanban_cardshape_config.md). Эти свойства позволяют условно применять стили к колонкам, строкам и карточкам.
+Вы можете стилизовать внешний вид Kanban с помощью CSS-классов и CSS-переменных. Следующие свойства принимают CSS-классы для колонок, строк и карточек:
 
-Также вы можете применить собственный CSS-класс к отдельной **колонке**, **строке** или **карточке** с помощью свойств [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md) и [`cards.css`](api/config/js_kanban_cards_config.md).
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — функции, возвращающие CSS-класс условно на основе данных элемента
+- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — строковый CSS-класс, применяемый к отдельному элементу
 
-Кроме того, вы можете применять пользовательские стили к любой части интерфейса Kanban, чтобы соответствовать требованиям вашего проекта. Для этого библиотека предоставляет широкий набор CSS-переменных. Обратите внимание, что Kanban включает два типа переменных:
-- CSS-переменные, связанные со стилем **Kanban**
-- CSS-переменные, связанные со стилем библиотеки **WX** (*элементы управления, календари и т.д.*)
+Подробности и примеры кода для условных функций `css` см. в разделе [Условные CSS-классы](guides/customization.md#conditional-css-classes).
+
+Следующий фрагмент кода применяет CSS-класс к конкретной колонке, строке и карточке:
+
+~~~jsx
+const columns = [
+    { id: "backlog", label: "Backlog", css: "highlighted" },
+    // other columns
+];
+const rows = [
+    { id: "feature", label: "Feature", css: "row-feature" },
+    // other rows
+];
+const cards = [
+    { id: 1, label: "Task", column: "backlog", css: "urgent" },
+    // other cards
+];
+~~~
+
+Помимо CSS на уровне отдельных элементов, Kanban предоставляет CSS-переменные для тематизации. Переменные делятся на две группы:
+
+- Переменные Kanban — определяют стили, специфичные для Kanban
+- Переменные библиотеки WX — стилизуют общие элементы интерфейса (элементы управления, календари)
 
 :::info
-Обратите внимание, что библиотека **WX** используется только для внутренних процессов. Она предоставляет некоторые небольшие элементы, используемые в Kanban (*элементы управления, календари и т.д.*)
+Библиотека WX обеспечивает работу внутренних UI-компонентов Kanban. Рассматривайте переменные WX как часть стилизации Kanban.
 :::
 
-## Стиль по умолчанию
+## Переменные темы
+
+Переопределите эти CSS-переменные в своей таблице стилей, чтобы настроить тему Material:
 
 ~~~css
 .wx-material-theme {
@@ -43,7 +66,7 @@ description: Ознакомьтесь с возможностями стилиз
     --wx-kanban-toolbar-border: var(--wx-border);
 
     /* стили карточек */
-    --wx-kanban-card-field-padding: 12px;
+    --wx-kanban-card-field-padding: 10px;
     --wx-kanban-content-background: var(--wx-background);
     --wx-kanban-card-border: var(--wx-border);
     --wx-kanban-card-border-radius: 6px;
@@ -60,8 +83,11 @@ description: Ознакомьтесь с возможностями стилиз
     --wx-kanban-editor-width: 569px;
     --wx-kanban-editor-height: auto;
     --wx-kanban-editor-x-padding: 20px;
-    --wx-kanban-editor-background: var(--wx-kanban-content-background);
-    --wx-kanban-editor-top-border: none;
+    --wx-kanban-editor-background: var(--wx-background);
+    --wx-kanban-editor-top-border: var(--wx-border);
+    --wx-kanban-editor-modal-width: 1000px;
+    --wx-editor-right-background: rgba(0, 0, 0, 0.03);
+    --wx-editor-cancel-background: rgba(0, 0, 0, 0.04);
 
     /* стили колонок */
     --wx-kanban-over-limit-color: var(--wx-color-danger);
@@ -90,29 +116,29 @@ description: Ознакомьтесь с возможностями стилиз
 ~~~
 
 :::tip Примечание
-В будущих версиях Kanban могут быть изменены некоторые переменные и их имена. Пожалуйста, не забывайте проверять их после обновления на новую версию и вносить изменения в ваш код, чтобы избежать проблем с отображением компонента.
+Имена переменных могут измениться в будущих версиях. Проверяйте их после обновления и вносите необходимые изменения в стили вашего проекта.
 :::
 
 ## Стилизация скролла
 
-Вы также можете применить пользовательский стиль к полосе прокрутки Kanban. Для этого можно использовать CSS-класс `.wx-styled-scroll`. Перед использованием проверьте совместимость с современными браузерами [здесь](https://caniuse.com/css-scrollbar).
+Примените CSS-класс `.wx-styled-scroll` к контейнеру Kanban, чтобы включить пользовательский стиль полосы прокрутки. Перед использованием проверьте [совместимость с браузерами](https://caniuse.com/css-scrollbar):
 
 ~~~html {4} title="index.html"
-<!--контейнер для Toolbar-->
-<div id="toolbar"></div> //
-<!--контейнер для Kanban-->
-<div id="root" class="wx-styled-scroll"></div> 
+<!-- container for Toolbar -->
+<div id="toolbar"></div>
+<!-- container for Kanban -->
+<div id="root" class="wx-styled-scroll"></div>
 ~~~
 
 ## Пользовательский стиль
 
-В этом примере показано, как применить пользовательский стиль к Kanban
+В следующем демо показано, как применить пользовательский стиль к Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Адаптивность
+## Адаптивный макет
 
-В этом примере показано, как создать адаптивную версию Kanban с использованием пользовательских CSS-стилей
+В следующем демо показано, как создать адаптивный макет Kanban с помощью пользовательских CSS-стилей:
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 

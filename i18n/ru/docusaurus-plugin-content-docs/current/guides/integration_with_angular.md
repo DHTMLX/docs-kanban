@@ -7,38 +7,38 @@ description: Вы можете узнать об интеграции с Angular
 # Интеграция с Angular
 
 :::tip
-Перед прочтением данной документации рекомендуется ознакомиться с базовыми концепциями и паттернами **Angular**. Для обновления знаний обратитесь к [**Angular documentation**](https://v17.angular.io/docs).
+Данное руководство предполагает знакомство с концепциями и паттернами Angular. Для углубления знаний обратитесь к [Angular documentation](https://v17.angular.io/docs).
 :::
 
-DHTMLX Kanban совместим с **Angular**. Мы подготовили примеры кода по использованию DHTMLX Kanban с **Angular**. Для получения дополнительной информации обратитесь к соответствующему [**Example on GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
+DHTMLX Kanban совместим с Angular. Полный пример кода доступен на [GitHub](https://github.com/DHTMLX/angular-kanban-demo).
 
 ## Создание проекта
 
 :::info
-Перед началом создания нового проекта установите [**Angular CLI**](https://v17.angular.io/cli) и [**Node.js**](https://nodejs.org/en/).
+Перед созданием проекта установите [Angular CLI](https://v17.angular.io/cli) и [Node.js](https://nodejs.org/en/).
 :::
 
-Создайте новый проект **my-angular-kanban-app** с помощью Angular CLI. Для этого выполните следующую команду:
+Следующая команда создаёт новый проект *my-angular-kanban-app* с помощью Angular CLI:
 
 ~~~json
 ng new my-angular-kanban-app
 ~~~
 
 :::note
-Если вы хотите следовать этому руководству, отключите Server-Side Rendering (SSR) и Static Site Generation (SSG/Prerendering) при создании нового приложения Angular!
+При появлении соответствующего запроса отключите Server-Side Rendering (SSR) и Static Site Generation (SSG/Prerendering), чтобы проект соответствовал данному руководству.
 :::
 
-Команда выше установит все необходимые инструменты, поэтому дополнительные команды запускать не требуется.
+Команда установит все необходимые инструменты. Дополнительные команды не требуются.
 
 ### Установка зависимостей
 
-Перейдите в директорию только что созданного приложения:
+Перейдите в директорию нового приложения:
 
 ~~~json
 cd my-angular-kanban-app
 ~~~
 
-Установите зависимости и запустите dev-сервер. Для этого используйте менеджер пакетов [**yarn**](https://yarnpkg.com/):
+Установите зависимости и запустите dev-сервер с помощью менеджера пакетов [yarn](https://yarnpkg.com/):
 
 ~~~json
 yarn
@@ -49,37 +49,37 @@ yarn start
 
 ## Создание Kanban
 
-Теперь необходимо получить исходный код DHTMLX Kanban. Для начала остановите приложение и установите пакет Kanban.
+Остановите dev-сервер и установите пакет Kanban.
 
 ### Шаг 1. Установка пакета
 
-Скачайте [**trial Kanban package**](/how_to_start/#installing-kanban-via-npm-or-yarn) и следуйте инструкциям из файла README. Обратите внимание, что пробная версия Kanban доступна только 30 дней.
-  
+Скачайте [trial Kanban package](/how_to_start/#installing-kanban-via-npm-or-yarn) и следуйте инструкциям из файла README. Пробная версия доступна 30 дней.
+
 ### Шаг 2. Создание компонента
 
-Теперь нужно создать Angular-компонент, чтобы добавить Kanban с Toolbar в приложение. Создайте папку **kanban** в директории **src/app/**, добавьте в неё новый файл и назовите его **kanban.component.ts**.
+Создайте Angular-компонент, который монтирует Kanban и Toolbar. Создайте папку *src/app/kanban/* и добавьте в неё файл *kanban.component.ts*.
 
 #### Импорт исходных файлов
 
-Откройте файл **kanban.component.ts** и импортируйте исходные файлы Kanban. Обратите внимание:
+Откройте *kanban.component.ts* и импортируйте исходные файлы Kanban. Путь импорта зависит от версии пакета:
 
-- если вы используете PRO-версию и устанавливаете пакет Kanban из локальной папки, импорт будет выглядеть так:
+- Для PRO-версии, установленной из локальной папки:
 
 ~~~jsx
 import { Kanban, Toolbar } from 'dhx-kanban-package';
 ~~~
 
-- если вы используете пробную версию Kanban, укажите следующий путь:
+- Для пробной версии:
 
 ~~~jsx
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
 ~~~
 
-В этом руководстве показано, как настроить **trial** версию Kanban.
+В данном руководстве используется пробная версия Kanban.
 
-#### Задание контейнеров и инициализация Kanban с Toolbar
+#### Настройка контейнеров и инициализация Kanban
 
-Чтобы отобразить Kanban с Toolbar на странице, нужно задать контейнеры для Kanban и Toolbar, а также инициализировать эти компоненты с помощью соответствующих конструкторов:
+Чтобы отобразить Kanban с Toolbar, задайте два контейнера и вызовите конструкторы. Следующий фрагмент кода определяет шаблон компонента, ссылки на контейнеры и создаёт экземпляры:
 
 ~~~jsx {1,8-11,15-18,24-31} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -124,7 +124,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 
 #### Добавление стилей
 
-Для корректного отображения Kanban необходимо добавить соответствующие стили. Для этого создайте файл **kanban.component.css** в директории **src/app/kanban/** и пропишите в нём основные стили для Kanban и его контейнера:
+Добавьте стили для Kanban и контейнера. Создайте файл *kanban.component.css* в директории *src/app/kanban/*:
 
 ~~~css title="kanban.component.css"
 /* импорт стилей Kanban */
@@ -152,7 +152,7 @@ body{
 
 #### Загрузка данных
 
-Чтобы добавить данные в Kanban, необходимо предоставить набор данных. Вы можете создать файл **data.ts** в директории **src/app/kanban/** и добавить туда данные:
+Чтобы заполнить Kanban данными, предоставьте набор данных. Создайте файл *data.ts* в директории *src/app/kanban/*:
 
 ~~~jsx {2,14,37,48} title="data.ts"
 export function getData() {
@@ -206,7 +206,7 @@ export function getData() {
 }
 ~~~
 
-Далее откройте файл ***kanban.component.ts***. Импортируйте файл с данными и укажите соответствующие свойства данных в объекте конфигурации Kanban внутри метода `ngOnInit()`, как показано ниже:
+Откройте *kanban.component.ts*, импортируйте набор данных и передайте свойства данных в объект конфигурации Kanban внутри `ngOnInit()`:
 
 ~~~jsx {2,23,25-27} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -253,7 +253,7 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-Вы также можете использовать методы [`setConfig()`](/api/methods/js_kanban_setconfig_method/) или [`parse()`](/api/methods/js_kanban_parse_method/) внутри метода `ngOnInit()` компонента Angular для загрузки данных в Kanban. Метод `setConfig` или `parse()` обеспечивает перезагрузку данных при каждом применённом изменении.
+В качестве альтернативы загрузите данные после создания экземпляра с помощью [`setConfig()`](/api/methods/js_kanban_setconfig_method/) или [`parse()`](/api/methods/js_kanban_parse_method/) внутри `ngOnInit()`:
 
 ~~~jsx {2,23,37-42} title="kanban.component.ts"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
@@ -307,13 +307,13 @@ export class KanbanComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-Теперь компонент Kanban готов к использованию. После добавления элемента на страницу Kanban будет инициализирован с данными. Вы также можете задать необходимые параметры конфигурации. Посетите [Kanban API docs](/api/overview/properties_overview/), чтобы ознакомиться с полным списком доступных свойств.
+Компонент Kanban готов к работе. После отрисовки элемента Kanban инициализируется с данными. Полный список поддерживаемых параметров конфигурации см. в [справочнике Kanban API](/api/overview/properties_overview/).
 
 #### Обработка событий
 
-Когда пользователь выполняет какое-либо действие в Kanban, вызывается событие. Вы можете использовать эти события для отслеживания действий и запуска необходимого кода. Ознакомьтесь с [полным списком событий](/api/overview/events_overview/).
+Действия пользователя в Kanban вызывают события. Подписывайтесь на события, чтобы реагировать на конкретные действия. Полный список см. в [справочнике событий Kanban](/api/overview/events_overview/).
 
-Откройте файл **kanban.component.ts** и дополните метод `ngOnInit()` следующим образом:
+Откройте *kanban.component.ts* и расширьте метод `ngOnInit()`:
 
 ~~~jsx {5-7} title="kanban.component.ts"
 // ...
@@ -332,7 +332,7 @@ ngOnDestroy(): void {
 
 ### Шаг 3. Добавление Kanban в приложение
 
-Чтобы добавить компонент ***KanbanComponent*** в ваше приложение, откройте файл ***src/app/app.component.ts*** и замените стандартный код следующим образом:
+Чтобы зарегистрировать `KanbanComponent` в приложении, откройте *src/app/app.component.ts* и замените стандартный код:
 
 ~~~jsx {5} title="app.component.ts"
 import { Component } from "@angular/core";
@@ -346,7 +346,7 @@ export class AppComponent {
 }
 ~~~
 
-Затем создайте файл ***app.module.ts*** в директории ***src/app/*** и укажите компонент *KanbanComponent* следующим образом:
+Создайте *app.module.ts* в директории *src/app/* и объявите `KanbanComponent`:
 
 ~~~jsx {4-5,8} title="app.module.ts"
 import { NgModule } from "@angular/core";
@@ -363,7 +363,7 @@ import { KanbanComponent } from "./kanban/kanban.component";
 export class AppModule {}
 ~~~
 
-Последний шаг - откройте файл ***src/main.ts*** и замените существующий код следующим:
+Откройте *src/main.ts* и замените существующий код:
 
 ~~~jsx title="main.ts"
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
@@ -373,14 +373,14 @@ platformBrowserDynamic()
     .catch((err) => console.error(err));
 ~~~
 
-После этого вы можете запустить приложение и увидеть Kanban с загруженными данными на странице.
+Запустите приложение, чтобы увидеть заполненную доску Kanban на странице.
 
 import trial from '@site/static/img/trial_kanban.png';
 
 <img
-    src={trial}
-    alt="Kanban with Angular"
-    className="img_border"
+  src={trial}
+  alt="Kanban with Angular"
+  className="img_border"
 />
 
-Теперь вы знаете, как интегрировать DHTMLX Kanban с Angular. Вы можете доработать код под свои задачи. Финальный продвинутый пример доступен на [**GitHub**](https://github.com/DHTMLX/angular-kanban-demo).
+Полный проект доступен на [GitHub](https://github.com/DHTMLX/angular-kanban-demo).
