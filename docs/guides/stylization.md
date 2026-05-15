@@ -6,19 +6,42 @@ description: You can learn about the stylization in the documentation of the DHT
 
 # Stylization
 
-Using Kanban, you can stylize **columns**, **rows** and **cards** appearance via the [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) and [`cardShape.css`](api/config/js_kanban_cardshape_config.md) properties. These properties allow you to style columns, rows and cards conditionally.
+You can style the Kanban appearance through CSS classes and CSS variables. The following properties accept CSS classes for columns, rows, and cards:
 
-You can also apply a custom css class to a separate **column**, **row** and **card** via the [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md) and [`cards.css`](api/config/js_kanban_cards_config.md) properties.
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — functions that return a CSS class conditionally based on item data
+- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — string CSS class assigned to a single item
 
-Besides, you can apply custom styles to any part of the Kanban interface to meet your project requirements. For this, the library provides a wide range of CSS variables. Note, that Kanban includes two types of variables:
-- CSS variables related to **Kanban** style
-- CSS variables related to the **WX** library style (*controls, calendars etc*)
+For details and code examples of the conditional `css` functions, see [Conditional CSS classes](guides/customization.md#conditional-css-classes).
+
+The following code snippet applies a CSS class to a specific column, row, and card:
+
+~~~jsx
+const columns = [
+    { id: "backlog", label: "Backlog", css: "highlighted" },
+    // other columns
+];
+const rows = [
+    { id: "feature", label: "Feature", css: "row-feature" },
+    // other rows
+];
+const cards = [
+    { id: 1, label: "Task", column: "backlog", css: "urgent" },
+    // other cards
+];
+~~~
+
+Beyond per-item CSS, Kanban exposes CSS variables for theming. Variables fall into two groups:
+
+- Kanban variables — define Kanban-specific styles
+- WX library variables — style shared UI elements (controls, calendars)
 
 :::info
-Note, that **WX** library is used for inner processes only. It provides some small elements used in Kanban (*controls, calendars etc*)
+The WX library powers internal Kanban UI components. Treat WX variables as part of Kanban styling.
 :::
 
-## Default style
+## Theme variables
+
+Override these CSS variables in your stylesheet to customize the Material theme:
 
 ~~~css
 .wx-material-theme {
@@ -43,7 +66,7 @@ Note, that **WX** library is used for inner processes only. It provides some sma
     --wx-kanban-toolbar-border: var(--wx-border);
 
     /* card styles */
-    --wx-kanban-card-field-padding: 12px;
+    --wx-kanban-card-field-padding: 10px;
     --wx-kanban-content-background: var(--wx-background);
     --wx-kanban-card-border: var(--wx-border);
     --wx-kanban-card-border-radius: 6px;
@@ -60,8 +83,11 @@ Note, that **WX** library is used for inner processes only. It provides some sma
     --wx-kanban-editor-width: 569px;
     --wx-kanban-editor-height: auto;
     --wx-kanban-editor-x-padding: 20px;
-    --wx-kanban-editor-background: var(--wx-kanban-content-background);
-    --wx-kanban-editor-top-border: none;
+    --wx-kanban-editor-background: var(--wx-background);
+    --wx-kanban-editor-top-border: var(--wx-border);
+    --wx-kanban-editor-modal-width: 1000px;
+    --wx-editor-right-background: rgba(0, 0, 0, 0.03);
+    --wx-editor-cancel-background: rgba(0, 0, 0, 0.04);
 
     /* column styles */
     --wx-kanban-over-limit-color: var(--wx-color-danger);
@@ -90,29 +116,29 @@ Note, that **WX** library is used for inner processes only. It provides some sma
 ~~~
 
 :::tip Note
-Next versions of Kanban can bring some changes for the variables and their names. Please, do not forget to check the names after updating to the newer versions and modify them in your code to avoid problems with display of the component.
+Variable names may change in future versions. Check the names after upgrading and update the styles in your project.
 :::
 
 ## Scroll style
 
-You can also apply a custom style to a scroll bar of Kanban. For this, you can use the `.wx-styled-scroll` CSS class. Before using it, check compatibility with the modern browsers [here](https://caniuse.com/css-scrollbar).
+Apply the `.wx-styled-scroll` CSS class to the Kanban container to enable a custom scrollbar style. Check [browser compatibility](https://caniuse.com/css-scrollbar) before using the class:
 
 ~~~html {4} title="index.html"
-<!--container for Toolbar-->
-<div id="toolbar"></div> //
-<!--container for Kanban-->
-<div id="root" class="wx-styled-scroll"></div> 
+<!-- container for Toolbar -->
+<div id="toolbar"></div>
+<!-- container for Kanban -->
+<div id="root" class="wx-styled-scroll"></div>
 ~~~
 
 ## Custom style
 
-In this snippet you can see how to apply a custom style to Kanban
+The following demo applies a custom style to Kanban:
 
 <iframe src="https://snippet.dhtmlx.com/oj18xwb5?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-## Adaptivity
+## Responsive layout
 
-In this snippet you can see how to create adaptive version of Kanban using custom CSS styles
+The following demo creates a responsive Kanban layout with custom CSS:
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
