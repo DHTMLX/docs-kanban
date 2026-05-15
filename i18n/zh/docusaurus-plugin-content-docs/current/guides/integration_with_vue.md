@@ -7,26 +7,26 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解与 Vue 
 # 与 Vue 集成
 
 :::tip
-在阅读本篇文档之前，您应当熟悉 [**Vue**](https://vuejs.org/) 的基本概念和模式。如需复习相关知识，请参阅 [**Vue 3 文档**](https://vuejs.org/guide/introduction.html#getting-started)。
+本指南假定您已熟悉 [Vue](https://vuejs.org/) 的基本概念和模式。如需了解背景知识，请参阅 [Vue 3 文档](https://vuejs.org/guide/introduction.html#getting-started)。
 :::
 
-DHTMLX Kanban 与 **Vue** 兼容。我们已准备好如何在 **Vue 3** 中使用 DHTMLX Kanban 的代码示例。更多信息请参考对应的 [**GitHub 示例**](https://github.com/DHTMLX/vue-kanban-demo)。
+DHTMLX Kanban 与 Vue 兼容。Vue 3 的完整代码示例可在 [GitHub](https://github.com/DHTMLX/vue-kanban-demo) 上获取。
 
 ## 创建项目
 
 :::info
-在开始创建新项目之前，请先安装 [**Node.js**](https://nodejs.org/en/)。
+在创建项目之前，请先安装 [Node.js](https://nodejs.org/en/)。
 :::
 
-要创建一个 **Vue** 项目，请运行以下命令：
+以下命令将创建一个新的 Vue 项目：
 
 ~~~json
 npm create vue@latest
 ~~~
 
-该命令会安装并执行 `create-vue`，即官方的 **Vue** 项目脚手架工具。详细信息请参考 [Vue.js 快速开始](https://vuejs.org/guide/quick-start.html#creating-a-vue-application)。
+该命令会运行 `create-vue`，即官方的 Vue 项目脚手架工具。详细信息请参考 [Vue.js 快速开始](https://vuejs.org/guide/quick-start.html#creating-a-vue-application)。
 
-我们将项目命名为 **my-vue-kanban-app**。
+将项目命名为 *my-vue-kanban-app*。
 
 ### 安装依赖
 
@@ -36,41 +36,41 @@ npm create vue@latest
 cd my-vue-kanban-app
 ~~~
 
-安装依赖并启动开发服务器。您可以根据使用的包管理器选择以下命令：
+使用以下任一包管理器安装依赖并启动开发服务器：
 
-- 如果使用 [**yarn**](https://yarnpkg.com/)，请运行：
+- 使用 [yarn](https://yarnpkg.com/)：
 
 ~~~jsx
 yarn
 yarn start // 或 yarn dev
 ~~~
 
-- 如果使用 [**npm**](https://www.npmjs.com/)，请运行：
+- 使用 [npm](https://www.npmjs.com/)：
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-应用将会在本地服务器上运行（例如 `http://localhost:3000`）。
+应用将在本地服务器地址上运行（例如 `http://localhost:3000`）。
 
 ## 创建 Kanban
 
-现在您需要获取 DHTMLX Kanban 的源代码。首先停止应用的运行，然后安装 Kanban 包。
+停止开发服务器并安装 Kanban 包。
 
 ### 步骤 1. 安装包
 
-下载 [**试用版 Kanban 包**](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤操作。请注意，试用版 Kanban 仅可使用 30 天。
+下载 [试用版 Kanban 包](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤操作。试用版可使用 30 天。
 
 ### 步骤 2. 创建组件
 
-现在需要创建一个 Vue 组件，将 Kanban 和 Toolbar 添加到应用中。在 ***src/components/*** 目录下新建一个文件，命名为 ***Kanban.vue***。
+创建一个挂载 Kanban 和 Toolbar 的 Vue 组件。在 *src/components/* 目录下新建 *Kanban.vue* 文件。
 
 #### 导入源文件
 
-打开 ***Kanban.vue*** 文件并导入 Kanban 的源文件。注意：
+打开 *Kanban.vue* 并导入 Kanban 的源文件。导入路径取决于所用包的版本：
 
-- 如果您使用 PRO 版本并从本地文件夹安装 Kanban 包，导入路径如下：
+- 使用从本地文件夹安装的 PRO 版本：
 
 ~~~html title="Kanban.vue"
 <script>
@@ -79,9 +79,9 @@ import 'dhx-kanban-package/dist/kanban.css';
 </script>
 ~~~
 
-请注意，根据所用包的不同，源文件可能已被压缩。在这种情况下，请确保导入的 CSS 文件为 **kanban.min.css**。
+如果包附带压缩后的源文件，请将 CSS 文件导入为 *kanban.min.css*。
 
-- 如果您使用 Kanban 试用版，请指定如下路径：
+- 使用试用版：
 
 ~~~html title="Kanban.vue"
 <script>
@@ -90,11 +90,11 @@ import '@dhx/trial-kanban/dist/kanban.css';
 </script>
 ~~~
 
-本教程将演示如何配置 **试用版** Kanban。
+本教程使用 Kanban 的试用版。
 
-#### 设置容器并添加 Kanban 和 Toolbar
+#### 设置容器并初始化 Kanban
 
-要在页面上显示带有 Toolbar 的 Kanban，需要为 Kanban 和 Toolbar 创建容器，并使用相应的构造函数初始化这些组件：
+要显示带有 Toolbar 的 Kanban，需要创建两个容器并调用相应的构造函数。以下代码片段在 `mounted()` 中绑定 refs 并实例化组件：
 
 ~~~html {2,7-8,10-14} title="Kanban.vue"
 <script>
@@ -130,7 +130,7 @@ export default {
 
 #### 添加样式
 
-为正确显示 Kanban，需要在项目的主 css 文件中为 Kanban 及其容器指定重要样式：
+在项目的主 CSS 文件中为 Kanban 及其容器添加样式：
 
 ~~~css title="main.css"
 /* 设置初始页面样式 */
@@ -156,7 +156,7 @@ body,
 
 #### 加载数据
 
-要向 Kanban 添加数据，需要提供数据集。可以在 ***src/*** 目录下创建 ***data.js*** 文件，并添加一些数据：
+要向 Kanban 填充数据，需要提供数据集。在 *src/* 目录下创建 *data.js* 文件：
 
 ~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
@@ -184,7 +184,7 @@ export function getData() {
             type: "feature",
         },
         {
-            label: "Archive the cards/kanbans ",
+            label: "Archive the cards/boards",
             priority: 3,
             color: "#58C3FE",
             users: [4],
@@ -210,7 +210,7 @@ export function getData() {
 }
 ~~~
 
-然后打开 ***App.vue*** 文件，导入数据，并通过内部的 `data()` 方法进行初始化。之后可以将数据作为 **props** 传递给新创建的 `<Kanban/>` 组件：
+打开 *App.vue* 并导入数据集。通过内部的 `data()` 方法初始化数据，然后将数据作为 props 传递给新创建的 `<Kanban/>` 组件：
 
 ~~~html {3,8,10-12,19} title="App.vue"
 <script>
@@ -235,7 +235,7 @@ export default {
 </template>
 ~~~
 
-接下来进入 ***Kanban.vue*** 文件，将传递的 **props** 应用于 Kanban 的配置对象：
+打开 *Kanban.vue*，将 props 应用于 Kanban 的配置对象：
 
 ~~~html {6,10-12} title="Kanban.vue"
 <script>
@@ -275,7 +275,7 @@ export default {
 </template>
 ~~~
 
-您还可以在 Vue 的 `mounted()` 方法中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法向 Kanban 加载数据。`setConfig` 或 `parse()` 方法会在每次应用更改时重新加载数据。
+或者，在创建实例后通过 `mounted()` 中的 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 加载数据：
 
 ~~~html {6,22-26} title="Kanban.vue"
 <script>
@@ -304,7 +304,7 @@ export default {
             columns: this.columns,
             rows: this.rows
         });
-        
+
     },
 
     unmounted() {
@@ -322,13 +322,13 @@ export default {
 </template>
 ~~~
 
-现在 Kanban 组件已经可以使用。当元素被添加到页面时，将会初始化带有数据的 Kanban。您还可以根据需要提供配置项。访问我们的 [Kanban API 文档](/api/overview/properties_overview/) 查看所有可用属性列表。
+Kanban 组件现已就绪。当元素渲染时，Kanban 将使用数据完成初始化。有关支持的配置属性的完整列表，请参阅 [Kanban API 参考](/api/overview/properties_overview/)。
 
 #### 事件处理
 
-当用户在 Kanban 中执行某些操作时，会触发事件。您可以利用这些事件检测操作并运行相应的代码。查看 [全部事件列表](/api/overview/events_overview/)。
+用户在 Kanban 中的操作会触发事件。监听事件以响应特定操作。完整列表请参阅 [Kanban 事件参考](/api/overview/events_overview/)。
 
-打开 ***Kanban.vue*** 并完善 `mounted()` 方法：
+打开 *Kanban.vue* 并扩展 `mounted()` 方法：
 
 ~~~html {8-10} title="Kanban.vue"
 <script>
@@ -336,7 +336,7 @@ export default {
 export default {
     // ...
     mounted() {
-        this.kanban = new Kanban(this.$refs.cont, {});
+        this.kanban = new Kanban(this.$refs.kanban_container, {});
 
         this.kanban.api.on("add-card", (obj) => {
             console.log(obj.columnId);
@@ -352,14 +352,14 @@ export default {
 // ...
 ~~~
 
-之后，您可以启动应用，在页面上看到加载了数据的 Kanban。
+运行应用，在页面上查看加载了数据的 Kanban 看板。
 
 import trial from '@site/static/img/trial_kanban.png';
 
 <img
-    src={trial}
-    alt="Kanban with Vue"
-    className="img_border"
+  src={trial}
+  alt="Kanban with Vue"
+  className="img_border"
 />
 
-现在您已经了解如何将 DHTMLX Kanban 集成到 Vue 中。您可以根据自己的具体需求自定义代码。最终的高级示例可在 [**GitHub**](https://github.com/DHTMLX/vue-kanban-demo) 上查看。
+在 [GitHub](https://github.com/DHTMLX/vue-kanban-demo) 上查看完整项目。

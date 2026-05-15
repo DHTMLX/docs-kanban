@@ -46,4 +46,4 @@ board.parse({
 
 **Änderungsprotokoll:** Seit Version v1.1 müssen Sie die Startdaten nicht mehr im Konstruktor zurücksetzen, bevor Sie neue Daten parsen.
 
-**Verwandte Artikel:** [Arbeiten mit Daten](guides/working_with_data.md#loading-data-from-local-source)
+**Verwandte Artikel:** [Arbeiten mit Daten](guides/working_with_data.md#load-data-from-a-local-source)

@@ -7,49 +7,49 @@ description: Узнайте, как интегрировать DHTMLX Kanban в 
 # Интеграция с Salesforce
 
 :::tip
-Перед прочтением этой документации рекомендуется ознакомиться с базовыми концепциями и паттернами работы с [**Salesforce**](https://www.salesforce.com/). Для повторения материала воспользуйтесь [**официальной документацией Salesforce**](https://developer.salesforce.com/docs).
+Это руководство предполагает знакомство с концепциями и паттернами работы с [Salesforce](https://www.salesforce.com/). Для ознакомления с материалом воспользуйтесь [документацией Salesforce](https://developer.salesforce.com/docs).
 :::
 
-DHTMLX Kanban совместим с платформой [Salesforce](https://www.salesforce.com/). Мы подготовили примеры кода по добавлению DHTMLX Kanban в окружение Salesforce. Дополнительную информацию можно найти в соответствующем [примере на GitHub](https://github.com/DHTMLX/salesforce-lwc-demo).
+DHTMLX Kanban совместим с платформой [Salesforce](https://www.salesforce.com/). Полный пример кода доступен на [GitHub](https://github.com/DHTMLX/salesforce-lwc-demo).
 
 :::note
-Виджет Kanban на JavaScript автоматически определяет, что работает в окружении [**Salesforce**](https://www.salesforce.com/) и настраивает внутреннюю логику интеграции. В большинстве случаев вам не нужно вручную вызывать какие-либо [**специфические методы Salesforce**](#специфические-методы-salesforce).
+Виджет Kanban автоматически определяет окружение Salesforce и настраивает внутреннюю логику интеграции. В большинстве случаев вам не нужно вручную вызывать какие-либо [специфические методы Salesforce](#специфические-методы-salesforce).
 :::
 
 ## Подготовка окружения
 
-Если вы хотите добавить Kanban в свой проект Salesforce, необходимо пометить *корневой* контейнер HTML-атрибутом `data-wx-root="true"`. Этот атрибут позволяет библиотеке определить основной узел для монтирования виджетов **Kanban** и **Toolbar**.
+Чтобы добавить Kanban в проект Salesforce, пометьте *корневой* контейнер HTML-атрибутом `data-wx-root="true"`. Библиотека использует этот атрибут для определения основного узла монтирования Kanban и Toolbar:
 
-```html title="kanban.html"
+~~~html title="kanban.html"
 <template>
     <div id="wx-root" data-wx-root="true" class="kanban-wrapper" tabindex="0">
         <div class="sf_toolbar" lwc:dom="manual" data-wx-portal-root="1"></div>
         <div class="sf_kanban" lwc:dom="manual" data-wx-portal-root="1"></div>
     </div>
 </template>
-```
+~~~
 
-Вложенные элементы с атрибутом `data-wx-portal-root="1"` служат контейнерами для компонентов DHTMLX (например, **Toolbar** и **Kanban**).
+Вложенные элементы с атрибутом `data-wx-portal-root="1"` служат контейнерами для компонентов DHTMLX (Toolbar, Kanban).
 
 ## API окружения Salesforce
 
-DHTMLX Kanban включает вспомогательный класс `salesForceEnv`, который содержит методы для ручного управления окружением Salesforce. Вы можете импортировать класс `salesForceEnv` следующим образом:
+DHTMLX Kanban предоставляет вспомогательный класс `salesForceEnv` с методами для ручного управления окружением Salesforce. Импортируйте его следующим образом:
 
-```jsx {4}
+~~~jsx {4}
 import { 
     Kanban, 
     Toolbar, 
     salesForceEnv
 } from "@dhx/trial-kanban";
-```
+~~~
 
 :::note
-Обычно специфические для Salesforce методы не требуются, но они доступны как запасной вариант на случай, если автоматическое определение не сработает.
+Специфические для Salesforce методы, как правило, не требуются. Используйте их как запасной вариант, если автоматическое определение не сработает.
 :::
 
 ### Специфические методы Salesforce
 
-Вы можете использовать следующие методы вспомогательного класса `salesForceEnv`:
+Вспомогательный класс `salesForceEnv` предоставляет следующие методы:
 
 | Метод                                                          | Описание                                                                 |
 | :------------------------------------------------------------- | :----------------------------------------------------------------------- |
@@ -57,7 +57,9 @@ import {
 | `salesForceEnv.addGlobalEvent(eventName, handler, htmlElement)`| Подключает глобальное событие к первому доступному HTML-элементу         |
 | `salesForceEnv.getTopNode()`                                   | Возвращает первый доступный HTML-элемент в DOM-иерархии Salesforce       |
 
-```jsx {4,7}
+Следующий фрагмент кода импортирует класс и запускает проверку определения окружения:
+
+~~~jsx {4,7}
 import { 
     Kanban, 
     Toolbar, 
@@ -65,7 +67,7 @@ import {
 } from "@dhx/trial-kanban";
 
 salesForceEnv.detect();
-```
+~~~
 
 ### Дополнительная экспортируемая функция
 
@@ -73,7 +75,9 @@ salesForceEnv.detect();
 | :------------------- | :-------------------------------------------------------------------------------- |
 | `enableSalesForce()` | Ручная установка окружения Salesforce, если автоматическое определение недоступно  |
 
-```jsx {5,8}
+Следующий фрагмент кода импортирует `enableSalesForce()` и принудительно устанавливает окружение Salesforce:
+
+~~~jsx {5,8}
 import { 
     Kanban, 
     Toolbar, 
@@ -82,18 +86,20 @@ import {
 } from "@dhx/trial-kanban";
 
 enableSalesForce();
-```
+~~~
 
 ## Этапы работы
 
-1. Добавьте атрибут `data-wx-root="true"` в ваш LWC-контейнер
-2. Импортируйте и инициализируйте DHTMLX Kanban и Toolbar (опционально)
-3. Виджет Kanban на JavaScript автоматически определяет контекст Salesforce и применяет внутреннюю конфигурацию
-4. Нет необходимости вызывать функцию `enableSalesForce()` или использовать методы `salesForceEnv`, если ваше приложение не работает в нестандартном сценарии встраивания
+1. Добавьте атрибут `data-wx-root="true"` в ваш LWC-контейнер.
+2. Импортируйте и инициализируйте Kanban и Toolbar (Toolbar опционален).
+3. Kanban автоматически определяет контекст Salesforce и применяет внутреннюю конфигурацию.
+4. Не вызывайте `enableSalesForce()` и не используйте методы `salesForceEnv`, если приложение не работает в нестандартном сценарии встраивания.
 
 ### Пример
 
-```jsx title="kanban.js"
+Следующий фрагмент кода инициализирует Kanban и Toolbar внутри LWC-компонента:
+
+~~~jsx title="kanban.js"
 import { Kanban, Toolbar } from "@dhx/trial-kanban";
 import "@dhx/trial-kanban/dist/kanban.css";
 
@@ -105,6 +111,6 @@ export default class KanbanLWC {
         const toolbar = new Toolbar(toolbar_container, { api: kanban.api });
     }
 }
-```
+~~~
 
-Теперь компонент DHTMLX Kanban полностью интегрирован в ваше окружение **Salesforce Lightning**. Виджет автоматически обрабатывает DOM-иерархию и привязку событий внутри LWC. Вы можете продолжить настройку Kanban через его стандартный API, а также изменять внешний вид и логику Kanban в соответствии с требованиями вашего проекта. Финальный пример вы найдете на [**GitHub**](https://github.com/DHTMLX/salesforce-lwc-demo).
+DHTMLX Kanban теперь интегрирован в окружение Salesforce Lightning. Виджет обрабатывает DOM-иерархию и привязку событий внутри LWC. Продолжите настройку Kanban через его стандартный API для изменения внешнего вида и поведения. Полный пример доступен на [GitHub](https://github.com/DHTMLX/salesforce-lwc-demo).

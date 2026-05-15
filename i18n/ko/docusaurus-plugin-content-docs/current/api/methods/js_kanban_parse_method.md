@@ -46,4 +46,4 @@ board.parse({
 
 **변경 로그:** v1.1부터는 생성자에서 초기 데이터를 재설정할 필요 없이 새 데이터를 파싱할 수 있습니다.
 
-**관련 문서:** [데이터 작업하기](guides/working_with_data.md#loading-data-from-local-source)
+**관련 문서:** [데이터 작업하기](guides/working_with_data.md#load-data-from-a-local-source)

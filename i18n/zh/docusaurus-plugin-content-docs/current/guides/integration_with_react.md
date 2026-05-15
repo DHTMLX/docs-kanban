@@ -7,18 +7,18 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解与 Reac
 # 与 React 集成
 
 :::tip
-在阅读本篇文档之前，您应当熟悉 [**React**](https://react.dev) 的基本概念和模式。如需复习相关知识，请参考 [**React 官方文档**](https://react.dev/learn)。
+本指南假定您已熟悉 [React](https://react.dev) 的基本概念和模式。如需了解相关背景知识，请参考 [React 官方文档](https://react.dev/learn)。
 :::
 
-DHTMLX Kanban 支持与 **React** 集成。我们已准备了如何在 **React** 中使用 DHTMLX Kanban 的代码示例。更多信息请参考 [**GitHub 示例**](https://github.com/DHTMLX/react-kanban-demo)。
+DHTMLX Kanban 支持与 React 集成。完整代码示例可在 [GitHub](https://github.com/DHTMLX/react-kanban-demo) 查看。
 
 ## 创建项目
 
 :::info
-在开始创建新项目之前，请先安装 [**Vite**](https://vite.dev/)（可选）和 [**Node.js**](https://nodejs.org/en/)。
+在创建项目之前，请先安装 [Vite](https://vite.dev/)（可选）和 [Node.js](https://nodejs.org/en/)。
 :::
 
-您可以创建一个基础的 **React** 项目，或使用 **React + Vite**。我们将项目命名为 **my-react-kanban-app**：
+创建一个基础的 React 项目（或 React + Vite）。将项目命名为 *my-react-kanban-app*：
 
 ~~~json
 npx create-react-app my-react-kanban-app
@@ -32,61 +32,61 @@ npx create-react-app my-react-kanban-app
 cd my-react-kanban-app
 ~~~
 
-安装依赖并启动开发服务器。您可以根据使用的包管理器选择命令：
+使用以下任一包管理器安装依赖并启动开发服务器：
 
-- 如果使用 [**yarn**](https://yarnpkg.com/)，运行以下命令：
+- 使用 [yarn](https://yarnpkg.com/)：
 
 ~~~json
 yarn
 yarn start
 ~~~
 
-- 如果使用 [**npm**](https://www.npmjs.com/)，运行以下命令：
+- 使用 [npm](https://www.npmjs.com/)：
 
 ~~~json
 npm install
 npm run dev
 ~~~
 
-应用会在本地服务器上运行（例如 `http://localhost:3000`）。
+应用会在本地服务器地址上运行（例如 `http://localhost:3000`）。
 
 ## 创建 Kanban
 
-现在您需要获取 DHTMLX Kanban 的源代码。首先，停止应用并安装 Kanban 包。
+停止开发服务器并安装 Kanban 包。
 
 ### 步骤 1. 安装包
 
-下载 [**试用版 Kanban 包**](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤操作。请注意，试用版 Kanban 仅可使用 30 天。
+下载 [**试用版 Kanban 包**](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤操作。试用版可使用 30 天。
 
 ### 步骤 2. 创建组件
 
-现在需要创建一个 React 组件，将 Kanban 添加到应用中。在 ***src/*** 目录下新建一个文件，命名为 ***Kanban.jsx***。
+创建一个将 Kanban 添加到应用中的 React 组件。在 *src/* 目录下新建一个文件，命名为 *Kanban.jsx*。
 
 #### 导入源文件
 
-打开 ***Kanban.jsx*** 文件并导入 Kanban 源文件。注意：
+打开 *Kanban.jsx* 并导入 Kanban 源文件。导入路径取决于所用的包版本：
 
-- 如果您使用 PRO 版本并从本地文件夹安装 Kanban 包，导入路径如下：
+- 使用从本地文件夹安装的 PRO 版本：
 
 ~~~jsx title="Kanban.jsx"
 import { Kanban, Toolbar } from 'dhx-kanban-package';
 import 'dhx-kanban-package/dist/kanban.css';
 ~~~
 
-请注意，根据所用包的不同，源文件可能是压缩版。此时请确保导入的 CSS 文件为 ***kanban.min.css***。
+如果包附带压缩版源文件，请将 CSS 文件导入为 *kanban.min.css*。
 
-- 如果您使用 Kanban 试用版，请指定以下路径：
+- 使用试用版：
 
 ~~~jsx title="Kanban.jsx"
 import { Kanban, Toolbar } from '@dhx/trial-kanban';
 import "@dhx/trial-kanban/dist/kanban.css";
 ~~~
 
-本教程将展示如何配置 **试用版** Kanban。
+本教程使用 Kanban 的试用版。
 
-#### 设置容器并添加 Kanban 和 Toolbar
+#### 设置容器并初始化 Kanban
 
-要在页面上显示带有 Toolbar 的 Kanban，需要为 Kanban 和 Toolbar 创建容器，并使用相应的构造函数初始化这些组件：
+要在页面上显示带有 Toolbar 的 Kanban，需要创建两个容器并调用相应的构造函数。以下代码片段在 `useEffect()` 中绑定 ref 并实例化组件：
 
 ~~~jsx {2,6-7,10-11,13-17} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -122,10 +122,10 @@ export default function KanbanComponent(props) {
 
 #### 添加样式
 
-为了正确显示 Kanban，需要在项目的主 css 文件中为 Kanban 及其容器指定必要样式：
+在项目的主 CSS 文件中为 Kanban 及其容器添加样式：
 
 ~~~css title="index.css"
-/* 页面初始样式 */
+/* specify styles for initial page */
 html,
 body,
 #root {
@@ -134,13 +134,13 @@ body,
     margin: 0;
 }
 
-/* Kanban 和 Toolbar 容器样式 */
+/* specify styles for Kanban and Toolbar container */
 .component_container {
     height: 100%; 
     margin: 0 auto;
 }
 
-/* Kanban 容器样式 */
+/* specify styles for Kanban container */
 .widget {
     height: calc(100% - 56px);
 }
@@ -148,7 +148,7 @@ body,
 
 #### 加载数据
 
-要向 Kanban 添加数据，需要提供一个数据集。可以在 ***src/*** 目录下新建 ***data.js*** 文件，并添加一些数据：
+要向 Kanban 填充数据，需要提供一个数据集。在 *src/* 目录下新建 *data.js* 文件：
 
 ~~~jsx {2,14,37,48} title="data.js"
 export function getData() {
@@ -202,7 +202,7 @@ export function getData() {
 }
 ~~~
 
-然后打开 ***App.js*** 文件并导入数据。之后可以将数据作为 **props** 传递给新创建的 `<Kanban/>` 组件：
+打开 *App.js*，导入数据集，并将数据作为 props 传递给新创建的 `<Kanban/>` 组件：
 
 ~~~jsx {2,5-6} title="App.js"
 import Kanban from "./Kanban";
@@ -216,7 +216,7 @@ function App() {
 export default App;
 ~~~
 
-接着进入 ***Kanban.jsx*** 文件，将传递过来的 **props** 应用到 Kanban 配置对象中：
+打开 *Kanban.jsx*，将 props 应用到 Kanban 配置对象中：
 
 ~~~jsx {5,11-13} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -254,7 +254,7 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-您还可以在 React 的 `useEffect()` 方法中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 方法将数据加载到 Kanban 中。`setConfig` 或 `parse()` 方法可在每次更改时重新加载数据。
+另外，也可以在创建实例后，在 `useEffect()` 中使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method/) 或 [`parse()`](/api/methods/js_kanban_parse_method/) 加载数据：
 
 ~~~jsx {9-11,27} title="Kanban.jsx"
 import { useEffect, useRef } from "react";
@@ -265,9 +265,9 @@ export default function KanbanComponent(props) {
     let kanban_container = useRef();
     let toolbar_container = useRef();
 
-    let columns = props.columns; // 列数据
-    let cards = props.cards; // 卡片数据
-    let rows = props.rows; // 行数据
+    let columns = props.columns;
+    let cards = props.cards;
+    let rows = props.rows;
 
     useEffect(() => {
         const kanban = new Kanban(kanban_container.current, {
@@ -299,13 +299,13 @@ export default function KanbanComponent(props) {
 }
 ~~~
 
-现在 Kanban 组件已经准备就绪。当该元素被添加到页面时，会初始化并加载数据。您还可以根据需要提供配置项。请访问我们的 [Kanban API 文档](/api/overview/properties_overview/)，查看全部可用属性列表。
+Kanban 组件现已准备就绪。当元素渲染时，Kanban 会随数据一起初始化。完整的配置属性列表请参见 [Kanban API 参考](/api/overview/properties_overview/)。
 
 #### 事件处理
 
-当用户在 Kanban 中执行某些操作时，会触发事件。您可以利用这些事件检测操作并执行相应代码。完整事件列表请见 [事件文档](/api/overview/events_overview/)。
+用户在 Kanban 中的操作会触发事件。通过监听事件可以对特定操作作出响应。完整列表请参见 [Kanban 事件参考](/api/overview/events_overview/)。
 
-打开 ***Kanban.jsx***，按如下方式完善 `useEffect()` 方法：
+打开 *Kanban.jsx*，扩展 `useEffect()` 调用：
 
 ~~~jsx {5-7} title="Kanban.jsx"
 // ...
@@ -323,14 +323,14 @@ useEffect(() => {
 // ...
 ~~~
 
-完成后，即可启动应用，在页面上查看加载了数据的 Kanban。
+运行应用，即可在页面上查看填充了数据的 Kanban 看板。
 
 import trial from '@site/static/img/trial_kanban.png';
 
 <img
-    src={trial}
-    alt="Kanban with React"
-    className="img_border"
+  src={trial}
+  alt="Kanban with React"
+  className="img_border"
 />
 
-现在您已经了解了如何将 DHTMLX Kanban 集成到 React 中。您可以根据具体需求自定义代码。最终的高级示例可在 [**GitHub**](https://github.com/DHTMLX/react-kanban-demo) 查看。
+完整项目可在 [GitHub](https://github.com/DHTMLX/react-kanban-demo) 查看。

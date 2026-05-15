@@ -6,58 +6,59 @@ description: Вы можете узнать, как работать с серв
 
 # Работа с сервером
 
-JavaScript Kanban позволяет работать как с клиентскими, так и с серверными данными. Виджет не предъявляет особых требований к backend-части. Его можно легко подключить к любой серверной платформе, поддерживающей REST API (RESTful API).
+JavaScript Kanban поддерживает как клиентские, так и серверные данные. Виджет не предъявляет особых требований к backend и подключается к любой платформе, предоставляющей REST (RESTful) API.
 
 :::info
-По умолчанию виджет поставляется с встроенным backend на **Go** и **Node**. Однако вы также можете использовать свои собственные серверные скрипты.
+Виджет поставляется со встроенными backend-серверами на Go и Node. Вы также можете использовать собственные серверные скрипты.
 :::
 
 ## RestDataProvider
 
-В JavaScript Kanban имеется сервис **RestDataProvider**, который полностью поддерживает REST API для взаимодействия с backend. Он позволяет работать с сервером и выполнять следующие операции с данными:
+В JavaScript Kanban включён сервис `RestDataProvider`, который полностью поддерживает REST API для взаимодействия с backend. Провайдер отправляет и принимает следующие операции с данными:
 
-- ***"add-card"***
-- ***"add-column"***
-- ***"add-comment"***
-- ***"add-row"***
-- ***"add-link"***
-- ***"delete-card"***
-- ***"delete-column"***
-- ***"delete-comment"***
-- ***"delete-row"***
-- ***"delete-link"***
-- ***"move-card"***
-- ***"move-column"***
-- ***"move-row"***
-- ***"update-card"***
-- ***"update-column"***
-- ***"update-comment"***
-- ***"update-row"***
+- `"add-card"`
+- `"add-column"`
+- `"add-comment"`
+- `"add-row"`
+- `"add-link"`
+- `"delete-card"`
+- `"delete-column"`
+- `"delete-comment"`
+- `"delete-row"`
+- `"delete-link"`
+- `"move-card"`
+- `"move-column"`
+- `"move-row"`
+- `"update-card"`
+- `"update-column"`
+- `"update-comment"`
+- `"update-row"`
+- `"add-vote"`
+- `"delete-vote"`
 
 ## REST-методы
 
-Сервис **RestDataProvider** включает специальные REST-методы для динамической загрузки данных:
+Сервис `RestDataProvider` предоставляет следующие REST-методы для динамической загрузки данных:
 
-- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - возвращает promise с ***данными карточек***
-- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - возвращает promise с ***данными колонок***
-- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - возвращает promise с ***данными связей***
-- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - возвращает promise с ***данными строк***
-- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - возвращает promise с ***данными пользователей***
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) — возвращает promise с данными карточек
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) — возвращает promise с данными колонок
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) — возвращает promise с данными связей
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) — возвращает promise с данными строк
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) — возвращает promise с данными пользователей
+- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) — отправляет произвольный HTTP-запрос и возвращает promise
 
 ## Взаимодействие с backend
 
-Чтобы взаимодействовать с сервером, необходимо подключить **RestDataProvider** к соответствующим серверным скриптам. Если вы хотите использовать встроенный backend, необходимые скрипты можно найти в следующих репозиториях:
+Чтобы взаимодействовать с сервером, подключите `RestDataProvider` к серверным скриптам. Используйте один из встроенных backend-серверов или создайте свой:
 
-- backend на [**Go**](https://github.com/web-widgets/kanban-go)
-- backend на [**Node**](https://github.com/web-widgets/kanban-node)
-
-или создать свой собственный backend.
+- [Go](https://github.com/web-widgets/kanban-go)
+- [Node](https://github.com/web-widgets/kanban-node)
 
 :::tip
-Если вы используете собственный backend, обратитесь к разделу [**REST API routes**](api/overview/rest_routes_overview.md) для получения дополнительной информации!
+Для собственного backend обратитесь к справочнику [REST API routes](api/overview/rest_routes_overview.md).
 :::
 
-Для подключения **RestDataProvider** к backend необходимо вызвать конструктор **kanban.RestDataProvider**, передав соответствующий **URL** в качестве параметра.
+Для подключения `RestDataProvider` к backend вызовите конструктор `kanban.RestDataProvider`, передав URL backend. Следующий фрагмент кода создаёт провайдер, загружает начальные данные и привязывает провайдер к Event Bus Kanban:
 
 ~~~js {1-2,27}
 const url = "https://some_backend_url";
@@ -91,20 +92,20 @@ Promise.all([
 ~~~
 
 :::info
-Для выполнения операций с данными (*добавление*, *удаление* и др.) и отправки соответствующих запросов на сервер необходимо включить **RestDataProvider** в порядок **Event Bus** с помощью метода [**api.setNext()**](api/internal/js_kanban_setnext_method.md).
+Добавьте `RestDataProvider` в Event Bus через метод [`api.setNext()`](api/internal/js_kanban_setnext_method.md). Этот шаг позволяет операциям с данными (добавление, удаление и т. д.) инициировать соответствующие запросы на сервер.
 :::
 
 ### Пример
 
-В этом примере показано, как подключить **RestDataProvider** к backend на **Go** и загрузить данные с сервера:
+Следующее демо подключает `RestDataProvider` к backend на Go и загружает данные с сервера:
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
 ## Мультипользовательский backend
 
-Инструменты управления проектами, такие как наш Kanban, востребованы компаниями любого размера. Поэтому важно обеспечить удобную работу для нескольких пользователей. Новая функция позволяет пользователям эффективно управлять одними и теми же карточками на доске Kanban в реальном времени, без перезагрузки страницы. Благодаря этому конечные пользователи могут совместно работать и быть в курсе действий друг друга, что повышает продуктивность и удовлетворенность.
+Мультипользовательский backend позволяет нескольким пользователям редактировать одну и ту же доску Kanban в реальном времени без перезагрузки страницы. Виджет подключается к серверу через WebSocket, а пользовательские обработчики применяют входящие изменения к доске Kanban.
 
-Для реализации мультипользовательского backend необходимо пройти авторизацию на сервере до инициализации Kanban. Для этого можно создать функцию `login(url: string)`:
+Чтобы включить мультипользовательский backend, авторизуйте пользователя на сервере до инициализации Kanban. Следующая функция `login(url)` получает и кэширует токен сессии:
 
 ~~~js {}
 const login = (url) => {
@@ -122,14 +123,16 @@ const login = (url) => {
 };
 ~~~
 
-Эта функция только симулирует авторизацию, и все пользователи будут авторизованы с ID 1. После успешной авторизации сервер отправляет токен, который необходимо использовать в каждом последующем запросе к серверу. Для автоматической передачи токена используется функция `RestDataProvider.setHeaders()`. Она добавляет пользовательские заголовки к запросам. По умолчанию наш сервер сохраняет токен в заголовке `"Remote-Token":<value>`:
+Функция симулирует авторизацию (в демо URL входа жёстко задаёт `id=1`, поэтому каждая сессия использует ID `1`). После успешной авторизации сервер возвращает токен, который должен включаться в каждый последующий запрос.
+
+Чтобы прикрепить токен к каждому запросу, вызовите `RestDataProvider.setHeaders()`. По умолчанию сервер хранит токен в заголовке `"Remote-Token": <value>`:
 
 ~~~js {}
 login(url).then(token => {
     // инициализация rest provider
     const restProvider = new kanban.RestDataProvider(url);
     // установка токена в пользовательский заголовок
-    restProvder.setHeaders({
+    restProvider.setHeaders({
         "Remote-Token": "eyJpZCI6IjEzMzciLCJ1c2VybmFtZSI6ImJpem9uZSIsImlhdC...",
     });
     
@@ -137,7 +140,7 @@ login(url).then(token => {
 });
 ~~~
 
-После получения токена необходимо инициализировать виджет. Это можно сделать следующим образом:
+После получения токена инициализируйте виджет. Следующий фрагмент кода загружает данные и создаёт доску Kanban:
 
 ~~~js {}
 // инициализация виджета...
@@ -164,7 +167,7 @@ Promise.all([
 });
 ~~~
 
-После инициализации виджета необходимо добавить WebSocket для прослушивания событий от сервера. Это можно сделать так:
+После создания доски подключите WebSocket для прослушивания событий от сервера. Следующий фрагмент кода подключает обработчики `RemoteEvents`:
 
 ~~~js {}
 // инициализация мультипользовательского режима...
@@ -180,41 +183,46 @@ const events = new RemoteEvents(url + "/api/v1", token);
 events.on(handlers);
 ~~~
 
-- `handlers` - клиентские обработчики, реагирующие на события сервера
-- `events` - объект, который подключается к серверу и слушает все входящие события
-- `RemoteEvents.on(handlers)` - применяет клиентские обработчики к серверным событиям
+В фрагменте используются следующие идентификаторы:
 
-После интеграции мультипользовательского backend в ваше приложение вы сможете упростить совместную работу пользователей и позволить им отслеживать любые изменения через UI в реальном времени.
+- `handlers` — клиентские обработчики для серверных событий
+- `events` — экземпляр `RemoteEvents`, прослушивающий входящие события от сервера
+
+Вызов `events.on(handlers)` регистрирует клиентские обработчики для серверных событий. Теперь виджет отражает изменения на стороне сервера в реальном времени.
 
 ### Пример
 
-В этом примере показано, как настроить мультипользовательский backend для отслеживания изменений других пользователей в реальном времени:
+Следующее демо настраивает мультипользовательский backend для отслеживания изменений других пользователей в реальном времени:
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
 ## Кастомизация серверных событий
 
-Вы можете определить собственную логику обработки серверных событий. Для этого нужно передать объект **handlers** в метод `RemoteEvents.on(handlers)`. Объект **handlers** должен иметь следующую структуру:
+Чтобы определить пользовательскую логику обработки серверных событий, передайте объект `handlers` в метод `RemoteEvents.on(handlers)`. Объект имеет следующую структуру:
 
-~~~js {}
+~~~ts {}
 {
-    "cards": cardsHandler: function(obj: any),
-    "columns": columnsHandler: function(obj: any),
-    "links": linksHandler: function(obj: any),
-    "rows": rowsHandler: function(obj: any),
+    cards?: (obj: any) => void;
+    columns?: (obj: any) => void;
+    links?: (obj: any) => void;
+    rows?: (obj: any) => void;
+    comments?: (obj: any) => void;
+    votes?: (obj: any) => void;
 }
 ~~~
 
-Когда на сервере происходит какое-либо изменение, он возвращает имя измененного элемента. Эти имена могут различаться в зависимости от серверной логики.
+После изменения на сервере ответ содержит имя изменённого элемента. Имена зависят от серверной логики.
 
-Обновлённые на клиенте данные будут находиться в аргументе **obj** функции `function(obj: any)`. Для указания операции есть поле `type: string`. Оно может принимать следующие значения:
+Обновлённые данные на стороне клиента поступают в аргумент `obj` калбэка `function(obj: any)`. Поле `type: string` указывает операцию. Допустимые значения:
 
-- Для **cards**: `"add-card"`, `"update-card"`, `"delete-card"`, `"move-card"`
-- Для **columns**: `"add-column"`, `"update-column"`, `"delete-column"`, `"move-column"`
-- Для **links**: `"add-link"`, `"delete-link"`
-- Для **rows**: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
+- Для cards: `"add-card"`, `"update-card"`, `"delete-card"`, `"move-card"`
+- Для columns: `"add-column"`, `"update-column"`, `"delete-column"`, `"move-column"`
+- Для links: `"add-link"`, `"delete-link"`
+- Для rows: `"add-row"`, `"update-row"`, `"delete-row"`, `"move-row"`
+- Для comments: `"add-comment"`, `"update-comment"`, `"delete-comment"`
+- Для votes: `"add-vote"`, `"delete-vote"`
 
-В следующем примере кода показаны детали реализации:
+Следующий фрагмент кода показывает реализацию:
 
 ~~~js {}
 // инициализация kanban
@@ -228,16 +236,16 @@ const TypeCol = 3;
 const cardsHandler = (obj: any) => {
     obj.card.id = idResolver(obj.card.id, TypeCard);
     obj.card.row = idResolver(obj.card.row, TypeRow);
-    obj.card.column = idResolver(obj.card.column, TypeColumn);
+    obj.card.column = idResolver(obj.card.column, TypeCol);
     switch (obj.type) {
         case "add-card":
             board.api.exec("add-card", {
                 card: obj.card,
                 select: false,
-                skipProvider: true, // предотвращает отправку запроса на сервер с клиента
+                skipProvider: true, // prevent the client from sending the request to the server
             })
             break;
-        // другие операции
+        // other operations
     }
 }
 
@@ -250,41 +258,42 @@ const remoteEvents = new kanban.RemoteEvents(remoteEventsURL, token);
 remoteEvents.on(handlers);
 ~~~
 
-Метод `RestDataProvider.getIDResolver()` возвращает функцию, необходимую для синхронизации client ID с server ID. Когда на клиенте создаётся новый объект (*card/column/row/link*), у него будет временный ID и соответствующий server ID в хранилище. Функция `idResolver()` позволяет синхронизировать client ID с server ID. Формат функции: `idResolver(id: TID, type: number)`
+Метод `RestDataProvider.getIDResolver()` возвращает функцию, которая синхронизирует client ID с server ID. Когда клиент создаёт новый объект (карточку, колонку, строку или связь), объект получает временный ID вместе с server ID, хранящимся в хранилище данных. Функция `idResolver(id: TID, type: number)` разрешает временный ID в server ID.
 
-Аргумент `type` - это тип модели, который принимает следующие значения:
+Аргумент `type` определяет тип модели:
 
-- `CardID` - 1,
-- `RowID` - 2,
-- `ColumnID` - 3
-- `LinkID` - 4
+- `CardID` — `1`
+- `RowID` — `2`
+- `ColumnID` — `3`
+- `LinkID` — `4`
+- `CommentID` — `5`
 
-Чтобы предотвратить отправку запроса на сервер, при вызове метода `board.api.exec()` используйте флаг `skipProvider: true`.
+Чтобы предотвратить отправку запроса на сервер, передайте `skipProvider: true` при вызове `board.api.exec()`. Вызов `remoteEvents.on(handlers)` регистрирует пользовательские обработчики.
 
-И последний шаг - применить пользовательские обработчики к серверным событиям. Таким образом, вы можете создавать свои обработчики серверных событий.
+## Группировка статусов в одну колонку
 
-## Группировка двух и более статусов в одну колонку
+Отображайте карточки из разных колонок в одной колонке. Например, можно использовать единую колонку для карточек со статусами `todo` и `unassigned`.
 
-В этом разделе показано, как отобразить карточки из разных колонок в одной колонке (например, общая колонка для карточек со статусами *To do* и *Unassigned*).
+Для реализации группировки добавьте пользовательское поле (например, `status`), которое хранит текущий статус карточки. В поле `column` хранится общий статус.
 
-Для реализации такой группировки нужно добавить пользовательское поле (например, **status**). Это поле будет хранить текущий статус карточки. В поле **column** будет храниться общий статус.
+Определите правила группировки. В примере ниже используются следующие статусы:
 
-Далее необходимо создать определённые правила группировки карточек. В нашем случае карточки будут группироваться в определённые колонки по следующим статусам:
+- `todo`, `unassigned` — для колонки **Open**
+- `dev`, `testing` — для колонки **Inprogress**
+- `merged`, `released` — для колонки **Done**
 
-- *todo*, *unassigned* - статусы для колонки **Open**
-- *dev*, *testing* - статусы для колонки **Inprogress**
-- *merged*, *released* - статусы для колонки **Done**
+Доступны два варианта реализации:
 
-Есть два способа реализовать такую группировку карточек в одну колонку по двум и более статусам:
+- [Группировка на сервере](#group-on-the-server)
+- [Смешанная группировка на сервере и клиенте](#server-side-client-side-grouping)
 
-- [На стороне сервера](#группировка-на-стороне-сервера)
-- [На стороне сервера + клиента](#группировка-на-стороне-сервера-клиента)
+### Группировка на сервере {#group-on-the-server}
 
-### Группировка на стороне сервера
+Группировка на стороне сервера требует, чтобы сервер мог передавать данные на клиент через [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (см. раздел [Мультипользовательский backend](#мультипользовательский-backend)).
 
-Если вы хотите реализовать группировку на стороне сервера, ваш сервер должен иметь возможность отправлять данные на клиент через [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (см. раздел [Мультипользовательский backend](#мультипользовательский-backend)).
+При обработке запроса на обновление карточки проверьте поле `status`. Пример ниже использует [Go](https://go.dev/), но подходит любой backend.
 
-В месте, где сервер обрабатывает запрос на обновление карточки, необходимо проверить поле **status**. В нашем примере используется язык [Go](https://go.dev/), но вы можете применять любые backend-технологии.
+Следующий фрагмент кода сопоставляет поле `status` с целевой колонкой на сервере:
 
 ~~~go
 func Update(id int, c Card) error {
@@ -302,30 +311,32 @@ func Update(id int, c Card) error {
    db.Save(&c)
 
    if oldColumn != c.Column {
-      // если колонка была обновлена по полю status,
-      // клиенту нужно сообщить, что карточку надо переместить в соответствующую колонку
+      // if the column has been updated by the status field,
+      // notify the client to move the card to the corresponding column
 
-      // нужно обновить индекс карточки
+      // update the index of the card
       updateCardIndex(&c)
 
-      // уведомить клиента о необходимости обновления колонки
+      // notify the client to update the column
       ws.Publish("card-update", &c)
    }
    // ...
 }
 ~~~
 
-Таким образом, когда пользователь меняет значение поля status, серверная логика проверяет значение и помещает карточку в нужную колонку. После этого сервер через WebSocket уведомляет клиента, что карточку нужно переместить в другую колонку.
+Когда пользователь меняет поле status, сервер проверяет значение и помещает карточку в целевую колонку. Затем сервер через WebSocket уведомляет клиента о необходимости переместить карточку.
 
-### Группировка на стороне сервера + клиента {#группировка-на-стороне-сервера-клиента}
+### Смешанная группировка на сервере и клиенте {#server-side-client-side-grouping}
 
-Для смешанного подхода сервер + клиент необходимо получить правила группировки с сервера. Согласно этим правилам клиент сможет определить, в какую колонку переместить карточку в зависимости от значения поля status.
+Для смешанного подхода (сервер + клиент) загрузите правила группировки с сервера. Клиент использует эти правила для определения целевой колонки на основе поля `status`.
+
+Следующий фрагмент кода загружает правила:
 
 ~~~js
 const groupingRules = await fetch("http://server.com/rules");
 ~~~
 
-Например, можно задать такие правила:
+Объект правил имеет следующий формат:
 
 ~~~json
 {
@@ -335,7 +346,7 @@ const groupingRules = await fetch("http://server.com/rules");
 }
 ~~~
 
-Далее нужно реализовать логику, которая будет проверять изменения карточки и перемещать её в нужную колонку:
+Определите логику, которая проверяет изменения карточки и перемещает её в нужную колонку. Следующий фрагмент кода перехватывает события `move-card` и `update-card`:
 
 ~~~js
 const updateColumn = card => {
@@ -350,7 +361,7 @@ const updateColumn = card => {
 kanban.api.intercept("move-card", ev => {
    kanban.api.exec("update-card", {
       id: ev.id,
-      card: { status: groupingRules[ev.columnId][0],
+      card: { status: groupingRules[ev.columnId][0] },
    });
 });
 
@@ -359,10 +370,10 @@ kanban.api.intercept("update-card", ev => {
 });
 ~~~
 
-Таким образом, можно определить определённые колонки для карточек в зависимости от других полей.
+Этот подход назначает колонки на основе значений других полей.
 
 ### Пример
 
-В этом примере показано, как настроить серверную часть для группировки двух и более статусов в одну колонку в реальном времени:
+Следующее демо настраивает серверную часть для группировки двух и более статусов в одну колонку в реальном времени:
 
 <iframe src="https://snippet.dhtmlx.com/habbz6mf?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
