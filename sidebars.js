@@ -224,6 +224,8 @@ module.exports = {
                         "api/config/js_kanban_editor_config",
                         //"api/config/js_kanban_editorautosave_config", REMOVED
                         "api/config/js_kanban_editorshape_config",
+                        // G
+                        "api/config/js_kanban_getcardheight_config",
                         // H
                         "api/config/js_kanban_history_config",
                         // L
