@@ -40,7 +40,7 @@ columnShape?: {
 };
 ~~~
 
-### 参数
+### 参数 {#parameters}
 
 要配置列的外观，可以在 **columnShape** 对象中指定以下参数：
 

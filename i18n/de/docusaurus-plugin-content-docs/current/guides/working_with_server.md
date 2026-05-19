@@ -134,7 +134,7 @@ Das folgende Demo verbindet `RestDataProvider` mit einem Go-Backend und lädt Se
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## Multiuser-Backend
+## Multiuser-Backend {#multiuser-backend}
 
 Ein Multiuser-Backend ermöglicht es mehreren Nutzern, dasselbe Kanban-Board in Echtzeit zu bearbeiten, ohne die Seite neu zu laden. Das Widget verbindet sich über einen WebSocket mit dem Server, und benutzerdefinierte Handler wenden eingehende Änderungen auf das Kanban-Board an.
 
@@ -229,7 +229,7 @@ Das folgende Demo konfiguriert das Multiuser-Backend, um Änderungen anderer Nut
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## Server-Ereignisse anpassen
+## Server-Ereignisse anpassen {#customize-server-events}
 
 Um benutzerdefinierte Logik für Server-Ereignisse zu definieren, übergeben Sie ein `handlers`-Objekt an `RemoteEvents.on(handlers)`. Das Objekt hat folgende Struktur:
 

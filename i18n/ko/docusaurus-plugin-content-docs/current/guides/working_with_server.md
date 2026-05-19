@@ -134,7 +134,7 @@ Promise.all([
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## 다중 사용자 백엔드
+## 다중 사용자 백엔드 {#multiuser-backend}
 
 다중 사용자 백엔드를 사용하면 여러 사용자가 페이지를 새로 고침하지 않고도 동일한 Kanban 보드를 실시간으로 편집할 수 있습니다. 위젯은 WebSocket을 통해 서버에 연결하며, 커스텀 핸들러가 수신된 변경 사항을 Kanban 보드에 적용합니다.
 
@@ -229,7 +229,7 @@ events.on(handlers);
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## 서버 이벤트 커스터마이징
+## 서버 이벤트 커스터마이징 {#customize-server-events}
 
 서버 이벤트에 대한 커스텀 로직을 정의하려면, `handlers` 객체를 `RemoteEvents.on(handlers)`에 전달하세요. 객체의 구조는 다음과 같습니다:
 
@@ -322,7 +322,7 @@ remoteEvents.on(handlers);
 
 ### 서버에서 그룹화 {#group-on-the-server}
 
-서버 사이드 그룹화를 구현하려면, 서버가 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)를 통해 클라이언트에 데이터를 전송할 수 있어야 합니다([다중 사용자 백엔드](#다중-사용자-백엔드) 참고).
+서버 사이드 그룹화를 구현하려면, 서버가 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)를 통해 클라이언트에 데이터를 전송할 수 있어야 합니다([다중 사용자 백엔드](#multiuser-backend) 참고).
 
 서버에서 카드 업데이트 쿼리를 처리할 때 `status` 필드를 확인하세요. 아래 예제는 [Go](https://go.dev/)를 사용하지만, 다른 백엔드 기술도 사용할 수 있습니다.
 

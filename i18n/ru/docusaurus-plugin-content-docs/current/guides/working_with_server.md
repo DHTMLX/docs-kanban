@@ -134,7 +134,7 @@ Promise.all([
 
 <iframe src="https://snippet.dhtmlx.com/f25y0809?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## Мультипользовательский backend
+## Мультипользовательский backend {#multiuser-backend}
 
 Мультипользовательский backend позволяет нескольким пользователям редактировать одну и ту же доску Kanban в реальном времени без перезагрузки страницы. Виджет подключается к серверу через WebSocket, а пользовательские обработчики применяют входящие изменения к доске Kanban.
 
@@ -229,7 +229,7 @@ events.on(handlers);
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## Кастомизация серверных событий
+## Кастомизация серверных событий {#customize-server-events}
 
 Чтобы определить пользовательскую логику обработки серверных событий, передайте объект `handlers` в метод `RemoteEvents.on(handlers)`. Объект имеет следующую структуру:
 
@@ -322,7 +322,7 @@ remoteEvents.on(handlers);
 
 ### Группировка на сервере {#group-on-the-server}
 
-Группировка на стороне сервера требует, чтобы сервер мог передавать данные на клиент через [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (см. раздел [Мультипользовательский backend](#мультипользовательский-backend)).
+Группировка на стороне сервера требует, чтобы сервер мог передавать данные на клиент через [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (см. раздел [Мультипользовательский backend](#multiuser-backend)).
 
 При обработке запроса на обновление карточки проверьте поле `status`. Пример ниже использует [Go](https://go.dev/), но подходит любой backend.
 

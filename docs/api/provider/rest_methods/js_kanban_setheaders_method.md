@@ -39,4 +39,4 @@ restProvider.setHeaders({
 
 To set headers only for a particular request rather than for every request, pass them as the fourth argument to [`send()`](api/provider/rest_methods/js_kanban_send_method.md) instead.
 
-**Related articles:** [Working with server: Multiuser backend](guides/working_with_server.md/#multiuser-backend)
+**Related articles:** [Working with server: Multiuser backend](guides/working_with_server.md#multiuser-backend)

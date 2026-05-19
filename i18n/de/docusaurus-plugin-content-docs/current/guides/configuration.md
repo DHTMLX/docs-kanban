@@ -465,7 +465,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## Rendering und Scrollen
+## Rendering und Scrollen {#rendering-and-scrolling}
 
 Standardmäßig rendert das Kanban-Widget alle Karten und scrollt das gesamte Board. Bei Boards mit vielen Karten können Sie auf Lazy Rendering oder spaltenweises Scrollen umschalten:
 

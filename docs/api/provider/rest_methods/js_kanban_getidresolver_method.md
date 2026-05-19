@@ -53,6 +53,6 @@ const events = new kanban.RemoteEvents(url + "/api/v1", token);
 events.on(handlers);
 ~~~
 
-The same resolver function can be used inside custom handlers passed to `RemoteEvents.on()`. See [Customize server events](guides/working_with_server.md/#customize-server-events) for a complete example.
+The same resolver function can be used inside custom handlers passed to `RemoteEvents.on()`. See [Customize server events](guides/working_with_server.md#customize-server-events) for a complete example.
 
-**Related articles:** [Working with server: Multiuser backend](guides/working_with_server.md/#multiuser-backend)
+**Related articles:** [Working with server: Multiuser backend](guides/working_with_server.md#multiuser-backend)

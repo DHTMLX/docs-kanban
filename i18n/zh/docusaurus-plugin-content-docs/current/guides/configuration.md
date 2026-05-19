@@ -465,7 +465,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## 渲染与滚动
+## 渲染与滚动 {#rendering-and-scrolling}
 
 Kanban 控件默认渲染所有卡片并整体滚动看板。对于卡片数量较多的看板，可切换为懒加载渲染或按列独立滚动：
 

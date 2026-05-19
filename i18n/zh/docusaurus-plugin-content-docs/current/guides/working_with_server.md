@@ -229,7 +229,7 @@ events.on(handlers);
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## 自定义服务器事件
+## 自定义服务器事件 {#customize-server-events}
 
 要为服务器事件定义自定义逻辑，需将 `handlers` 对象传递给 `RemoteEvents.on(handlers)`。该对象的结构如下：
 
