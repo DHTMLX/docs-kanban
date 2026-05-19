@@ -324,10 +324,14 @@ module.exports = {
                                     items: [
                                         "api/provider/rest_methods/js_kanban_getcards_method",
                                         "api/provider/rest_methods/js_kanban_getcolumns_method",
+                                        "api/provider/rest_methods/js_kanban_gethandlers_method",
+                                        "api/provider/rest_methods/js_kanban_getidresolver_method",
                                         "api/provider/rest_methods/js_kanban_getlinks_method",
+                                        "api/provider/rest_methods/js_kanban_getqueue_method",
                                         "api/provider/rest_methods/js_kanban_getrows_method",
                                         "api/provider/rest_methods/js_kanban_getusers_method",
-                                        "api/provider/rest_methods/js_kanban_send_method"
+                                        "api/provider/rest_methods/js_kanban_send_method",
+                                        "api/provider/rest_methods/js_kanban_setheaders_method"
                                     ]
                                 }        
                             ]
