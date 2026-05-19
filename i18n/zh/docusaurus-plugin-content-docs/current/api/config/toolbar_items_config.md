@@ -26,8 +26,8 @@ items?: [
                 }
             }, {...}
         ],
-        resultTemplate?: template(searchResult => {
-            return "搜索结果的 HTML 模板";
+        resultTemplate?: template(({ result }) => {
+            return `HTML template using ${result.label}`;
         }) 
     },
     "sort" | {
@@ -66,7 +66,7 @@ items?: [
         - ***card*** - 卡片数据对象
         - ***value*** - 搜索栏中指定的搜索值
         - ***by*** - 用于搜索卡片的字段键
-- `searchResult` - （可选）用于显示自定义搜索结果的模板
+- `resultTemplate` - （可选）用于显示自定义搜索结果的模板
 
 ~~~jsx
 items: [
@@ -93,10 +93,10 @@ items: [
                 }
             }
         ],
-        resultTemplate: kanban.template(searchResult => {
+        resultTemplate: kanban.template(({ result }) => {
             return `<div class="list-item">
-                <div class="list-item-text">${searchResult.result.label}</div>
-                ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                <div class="list-item-text">${result.label}</div>
+                ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
             </div>`
         })
     },
@@ -161,10 +161,10 @@ new kanban.Toolbar("#toolbar", {
     items: [
         {
             type: "search",
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },
@@ -182,7 +182,7 @@ new kanban.Toolbar("#toolbar", {
 
 - 在 v1.3 版本中新增了 *"Undo"* 和 *"Redo"* 控件
 - 在 v1.4 版本中，**sort** 控件的 ***items.options[0].label*** 参数被替换为 ***items.options[0].text***
-- 在 v1.6 版本中，**"search"** 控件新增了 ***items.searchResult*** 参数
+- 在 v1.6 版本中，**"search"** 控件新增了 ***items.resultTemplate*** 参数
 
 **相关文档：** [配置](guides/configuration.md#toolbar) 和 [自定义](guides/customization.md#custom-toolbar)
 

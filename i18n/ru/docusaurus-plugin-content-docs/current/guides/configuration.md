@@ -104,8 +104,8 @@ new kanban.Kanban("#root", {
 - [`progress`](#тип-progress) — слайдер прогресса
 - [`files`](#тип-files) — загрузчик файлов
 - [`date`, `dateRange`](#типы-date-и-daterange) — одиночная дата или диапазон дат
-- [`comments`](#тип-comments) — комментарии к карточке
-- [`links`](#тип-links) — связи карточки
+- [`comments`](#comments-type) — комментарии к карточке
+- [`links`](#links-type) — связи карточки
 
 :::info
 Отображайте редактор как боковую панель или модальное окно с помощью свойства [`editor.placement`](api/config/js_kanban_editor_config.md).
@@ -334,7 +334,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Тип Comments
+### Тип Comments {#comments-type}
 
 Следующий пример настраивает поле комментариев редактора:
 
@@ -357,7 +357,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Тип Links
+### Тип Links {#links-type}
 
 Следующий пример настраивает поле связей редактора:
 
@@ -465,7 +465,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## Рендеринг и прокрутка
+## Рендеринг и прокрутка {#rendering-and-scrolling}
 
 По умолчанию виджет Kanban рендерит все карточки и прокручивает всю доску целиком. Для досок с большим количеством карточек переключитесь на ленивый рендеринг или прокрутку по колонкам:
 
@@ -487,6 +487,8 @@ new kanban.Kanban("#root", {
 
 :::important
 При совместном использовании `renderType: "lazy"` с любым `scrollType` задайте статическую высоту карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Без `cardHeight` ленивый рендеринг не отображает карточки корректно.
+
+Если `cardHeight` не указан при использовании `renderType: "lazy"` и `scrollType: "column"`, виджет применяет экспериментальное приближение высоты карточек на основе видимых полей в [`cardShape`](api/config/js_kanban_cardshape_config.md). Для досок с кастомным [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) виджет не может предсказать итоговую высоту — передайте кастомную функцию [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md), возвращающую ожидаемую высоту карточки.
 :::
 
 ## История изменений
@@ -554,10 +556,10 @@ new kanban.Toolbar("#toolbar", {
                     }
                 }
             ],
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },

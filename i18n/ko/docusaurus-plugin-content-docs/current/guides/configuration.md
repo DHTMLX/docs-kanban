@@ -465,7 +465,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## 렌더링 및 스크롤
+## 렌더링 및 스크롤 {#rendering-and-scrolling}
 
 Kanban 위젯은 기본적으로 모든 카드를 렌더링하고 전체 보드를 스크롤합니다. 카드가 많은 보드의 경우 지연 렌더링 또는 컬럼별 스크롤로 전환할 수 있습니다:
 
@@ -487,6 +487,8 @@ new kanban.Kanban("#root", {
 
 :::important
 `renderType: "lazy"`와 `scrollType`을 함께 사용하는 경우, [`cardHeight`](api/config/js_kanban_cardheight_config.md) 속성으로 카드의 고정 높이를 설정하세요. `cardHeight` 없이는 지연 렌더링이 카드를 올바르게 표시하지 않습니다.
+
+`renderType: "lazy"`와 `scrollType: "column"`을 함께 사용하면서 `cardHeight`를 생략하면, 위젯은 [`cardShape`](api/config/js_kanban_cardshape_config.md)의 표시 필드를 기반으로 카드 높이를 실험적으로 근사합니다. 커스텀 [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)을 사용하는 보드에서는 위젯이 렌더링 높이를 예측할 수 없으므로, 예상 카드 높이를 반환하는 커스텀 [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) 함수를 제공하세요.
 :::
 
 ## 변경 기록
@@ -554,10 +556,10 @@ new kanban.Toolbar("#toolbar", {
                     }
                 }
             ],
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },

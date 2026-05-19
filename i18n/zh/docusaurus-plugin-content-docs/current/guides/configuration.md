@@ -465,7 +465,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## 渲染与滚动
+## 渲染与滚动 {#rendering-and-scrolling}
 
 Kanban 控件默认渲染所有卡片并整体滚动看板。对于卡片数量较多的看板，可切换为懒加载渲染或按列独立滚动：
 
@@ -487,6 +487,8 @@ new kanban.Kanban("#root", {
 
 :::important
 当 `renderType: "lazy"` 与任意 `scrollType` 组合使用时，需通过 [`cardHeight`](api/config/js_kanban_cardheight_config.md) 属性为卡片设置固定高度。不设置 `cardHeight` 时，懒加载渲染将无法正确显示卡片。
+
+如果在 `renderType: "lazy"` 和 `scrollType: "column"` 同时启用时省略了 `cardHeight`，控件将根据 [`cardShape`](api/config/js_kanban_cardshape_config.md) 中可见字段对卡片高度进行实验性的近似估算。对于使用自定义 [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) 的看板，控件无法预测渲染高度——请提供一个自定义的 [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) 函数，返回卡片的预估高度。
 :::
 
 ## 变更历史
@@ -554,10 +556,10 @@ new kanban.Toolbar("#toolbar", {
                     }
                 }
             ],
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },

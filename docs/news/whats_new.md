@@ -158,7 +158,7 @@ Released on November 13, 2024
 
 - The ability to change how many assigned users are displayed on a card via the [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) property (see the [**example**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
 - The ability to change the content of column headers via the [`columnShape`](api/config/js_kanban_columnshape_config.md) property (see the [**example**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
-- The ability to change the view and content of search results via the [`items.searchResult`](api/config/toolbar_items_config.md) property of the Toolbar **search** control (see the [**example**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
+- The ability to change the view and content of search results via the [`items.resultTemplate`](api/config/toolbar_items_config.md) property of the Toolbar **search** control (see the [**example**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
 - The ability to display the editor as a modal window via the [`editor.placement`](api/config/js_kanban_editor_config.md) property (see the [**example**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
 - The ability to enable voting for a card (using the vote icon on the card) via the [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) property (see the [**example**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
 
@@ -169,7 +169,8 @@ Released on November 13, 2024
     - The [`cardShape`](api/config/js_kanban_cardshape_config.md) property is extended by the ***users.maxCount*** and ***votes.clickable*** parameters
     - The [`columnShape`](api/config/js_kanban_columnshape_config.md) property is extended by the ***headerTemplate*** and ***collapsedTemplate*** parameters
     - The [`editor`](api/config/js_kanban_editor_config.md) property is extended by the ***placement*** parameter
-    - The [`items`](api/config/toolbar_items_config.md) property of the Toolbar **search** control is extended by the ***searchResult*** parameter
+    - The [`editorShape`](api/config/js_kanban_editorshape_config.md) property is extended by the ***modalSection*** parameter
+    - The [`items`](api/config/toolbar_items_config.md) property of the Toolbar **search** control is extended by the ***resultTemplate*** parameter
 
 - #### Events
 

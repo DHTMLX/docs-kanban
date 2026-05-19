@@ -30,10 +30,10 @@ columnShape?: {
     },
     fixedHeaders?: boolean,
     css?: (column, cards) => string,
-    headerTemplate?: template(column => {
+    headerTemplate?: template(props => {
         return "Die HTML-Vorlage des Spaltenkopfs im erweiterten Zustand";
     }),
-    collapsedTemplate?: template(column => {
+    collapsedTemplate?: template(props => {
         return "Die HTML-Vorlage des Spaltenkopfs im eingeklappten Zustand";
     }),
     confirmDeletion?: boolean
@@ -94,8 +94,28 @@ Um das Erscheinungsbild der Spalten zu konfigurieren, können Sie im **columnSha
 
 - `fixedHeaders` - (optional) friert die Spaltenüberschriften beim vertikalen Scrollen ein (*true* standardmäßig). Scrollen muss im Kanban selbst aktiviert sein (Höhe muss begrenzt sein)
 - `css` - (optional) eine Funktion, die eine CSS-Klasse zurückgibt, die bedingt auf Spalten angewendet wird
-- `headerTemplate` - (optional) die HTML-Vorlage des Spaltenkopfs im erweiterten Zustand
-- `collapsedTemplate` - (optional) die HTML-Vorlage des Spaltenkopfs im eingeklappten Zustand
+- `headerTemplate` - (optional) die HTML-Vorlage des Spaltenkopfs im erweiterten Zustand. Die Funktion erhält ein `props`-Objekt mit den folgenden Eigenschaften:
+    - `column` - (object) die Spaltendaten (siehe [`columns`](api/config/js_kanban_columns_config.md) für die Struktur)
+    - `columnState` - (object) der aktuelle Zustand der Spalte. Er enthält immer:
+        - ***columnId*** - (string | number) die ID der Spalte
+        - ***column*** - (object) die Spaltendaten (entspricht `props.column`)
+        - ***cardsCount*** - (number) die Anzahl der Karten in der Spalte
+        - ***noFreeSpace*** - (boolean) ***true***, wenn die Spalte keine weiteren Karten annehmen kann
+
+        Wenn der Parameter [`columns[i].limit`](api/config/js_kanban_columns_config.md) aktiviert ist, enthält er zusätzlich:
+        - ***totalLimit*** - (number) das konfigurierte Kartenlimit
+        - ***isOverLimit*** - (boolean) ***true***, wenn die Anzahl der Karten das Limit überschreitet
+
+        Wenn die Spalte zu einer Swimlane (Zeile) gehört, enthält er zusätzlich:
+        - ***rowId*** - (string | number) die ID der Zeile
+        - ***row*** - (object) die Zeilendaten (siehe [`rows`](api/config/js_kanban_rows_config.md) für die Struktur)
+        - ***height*** - (number) die Höhe des Bereichs
+    - `isMenuVisible` - (boolean) ***true***, wenn das Menü für diesen Spaltenkopf angezeigt werden soll
+    - `renaming` - (boolean) ***true***, wenn das Eingabefeld zur Bearbeitung des Spaltennamens aktiv ist
+    - `readonly` - (boolean) ***true***, wenn die Bearbeitung der Spalte deaktiviert ist (entspricht `!readonly.edit`, siehe die Eigenschaft [`readonly`](api/config/js_kanban_readonly_config.md))
+- `collapsedTemplate` - (optional) die HTML-Vorlage des Spaltenkopfs im eingeklappten Zustand. Die Funktion erhält ein `props`-Objekt mit den folgenden Eigenschaften:
+    - `column` - (object) die Spaltendaten (siehe [`columns`](api/config/js_kanban_columns_config.md))
+    - `columnState` - (object) der aktuelle Zustand der Spalte. Die Struktur ist identisch mit `columnState` im Parameter [`headerTemplate`](#parameter) oben
 - `confirmDeletion` - (optional) zeigt/versteckt den **Bestätigungsdialog**, der es Benutzern erlaubt, das Löschen der Spalte zu bestätigen oder abzulehnen
 
 ### Standardkonfiguration
@@ -160,30 +180,30 @@ const columnShape = {
     },
     fixedHeaders: false,
     css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red",
-    headerTemplate: template(column => {
+    headerTemplate: template(props => {
         return `<div class="wx-collapse-icon" data-action=${"collapse"}>
-                    <i class=${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
+                    <i class=${props.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
                 </div>
                 ${
-                    !column.column.collapsed
+                    !props.column.collapsed
                         ?   `<div class="wx-label" data-action="rename">
-                                ${escapeHTML(column.column.label)}
-                                (${column.columnState.cardsCount})
+                                ${escapeHTML(props.column.label)}
+                                (${props.columnState.cardsCount})
                             </div>`
                         : ""
                 }
                 ${
-                    !column.column.collapsed
-                        ?   `<div class="wx-menu" data-menu-id=${column.id}>
+                    !props.column.collapsed
+                        ?   `<div class="wx-menu" data-menu-id=${props.column.id}>
                                 <i class="wxi-dots-h"></i>
                             </div>`
                         : ""
                 }`;
     }),
-    collapsedTemplate: template(column => {
+    collapsedTemplate: template(props => {
         return `<div class="wx-collapsed-label">
-                    <div class="wx-label-text">${escapeHTML(column.column.label)} (${
-                        column.columnState?.cardsCount
+                    <div class="wx-label-text">${escapeHTML(props.column.label)} (${
+                        props.columnState?.cardsCount
                     })</div>
                 </div>`;
     }),

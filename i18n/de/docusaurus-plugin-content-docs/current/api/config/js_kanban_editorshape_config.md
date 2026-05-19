@@ -19,6 +19,7 @@ editorShape?: [
         type: string, 
         key: string, 
         label?: string, 
+        modalSection?: "left" | "right",
         
         // nur für den Typ "dateRange"
         key: {
@@ -182,6 +183,9 @@ Im Kanban-Editor können Sie die folgenden Feldtypen verwenden: **dateRange**, *
 ~~~
 
 - `label` - (optional) eine Beschriftung für das Editor-Feld
+- `modalSection` - (optional) definiert, in welcher Spalte des modalen Editors das Feld platziert wird. Wird nur angewendet, wenn der Editor als modales Fenster über die Eigenschaft [`editor.placement: "modal"`](api/config/js_kanban_editor_config.md) angezeigt wird. Mögliche Werte:
+    - `"left"` - das Feld wird in der linken Spalte platziert
+    - `"right"` - das Feld wird in der rechten Spalte platziert (Standard)
 
 #### - Parameter für den Typ "dateRange"
 
@@ -466,6 +470,7 @@ new kanban.Kanban("#root", {
 
 - Der Typ ***dateRange*** wurde in Version 1.3 hinzugefügt
 - Die Typen ***comments*** und ***links*** für den Editor sowie der Parameter ***format*** wurden in Version 1.4 hinzugefügt
+- Der Parameter ***modalSection*** wurde in Version 1.6 hinzugefügt
 - Der Parameter ***clearButton*** wurde durch den Parameter ***clear*** ersetzt
 
 **Verwandte Artikel:** [Konfiguration](guides/configuration.md/#editor)

@@ -158,7 +158,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 - 可通过 [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) 属性设置卡片上显示的指派用户数量（参见 [**示例**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban)）
 - 可通过 [`columnShape`](api/config/js_kanban_columnshape_config.md) 属性自定义列标题内容（参见 [**示例**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban)）
-- 可通过工具栏 **搜索** 控件的 [`items.searchResult`](api/config/toolbar_items_config.md) 属性自定义搜索结果的视图和内容（参见 [**示例**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)）
+- 可通过工具栏 **搜索** 控件的 [`items.resultTemplate`](api/config/toolbar_items_config.md) 属性自定义搜索结果的视图和内容（参见 [**示例**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)）
 - 可通过 [`editor.placement`](api/config/js_kanban_editor_config.md) 属性将编辑器显示为模态窗口（参见 [**示例**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)）
 - 可通过 [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) 属性为卡片启用投票（在卡片上使用投票图标，参见 [**示例**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban)）
 
@@ -169,7 +169,8 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
     - [`cardShape`](api/config/js_kanban_cardshape_config.md) 属性新增 ***users.maxCount*** 和 ***votes.clickable*** 参数
     - [`columnShape`](api/config/js_kanban_columnshape_config.md) 属性新增 ***headerTemplate*** 和 ***collapsedTemplate*** 参数
     - [`editor`](api/config/js_kanban_editor_config.md) 属性新增 ***placement*** 参数
-    - 工具栏 **搜索** 控件的 [`items`](api/config/toolbar_items_config.md) 属性新增 ***searchResult*** 参数
+    - [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性新增 ***modalSection*** 参数
+    - 工具栏 **搜索** 控件的 [`items`](api/config/toolbar_items_config.md) 属性新增 ***resultTemplate*** 参数
 
 - #### 事件
 

@@ -38,14 +38,47 @@ JavaScript Kanban 提供了 `RestDataProvider` 服务，完全支持与后端通
 
 ## REST 方法
 
-`RestDataProvider` 服务提供以下用于动态数据加载的 REST 方法：
+`RestDataProvider` 服务提供以下 REST 方法：
 
 - [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) — 获取 cards 数据的 Promise
 - [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) — 获取 columns 数据的 Promise
+- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) — 返回 provider 使用的默认 action handler
+- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) — 返回一个将临时客户端 ID 解析为后端 ID 的函数
 - [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) — 获取 links 数据的 Promise
+- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) — 返回 provider 处理的内部 action 队列
 - [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) — 获取 rows 数据的 Promise
 - [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) — 获取 users 数据的 Promise
 - [`send()`](api/provider/rest_methods/js_kanban_send_method.md) — 发送自定义 HTTP 请求并返回 Promise
+- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) — 设置附加到每个请求的自定义 HTTP 请求头
+
+## 自定义 RestDataProvider
+
+要自定义 `RestDataProvider` 向服务器发送数据操作的方式，可以继承该类并覆盖其中的某个方法。最常见的自定义目标是默认 action handler——例如，为自定义事件添加 handler，或扩展现有操作的 payload。
+
+若要在不丢失默认 handler 的情况下添加自定义 handler，请覆盖 [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) 方法，并将自定义条目合并到 `super.getHandlers()` 的结果之上：
+
+~~~js {3-11}
+const url = "https://some_backend_url";
+
+class MyDataProvider extends kanban.RestDataProvider {
+    getHandlers() {
+        const handlers = super.getHandlers();
+        return {
+            ...handlers,
+            // custom or overridden handlers go here
+        };
+    }
+}
+
+const restProvider = new MyDataProvider(url);
+board.api.setNext(restProvider);
+~~~
+
+:::warning
+覆盖时务必调用 `super.getHandlers()` 并展开其结果。不要手动将默认 handler 复制到覆盖方法中——action 映射可能在不同版本间发生变化，硬编码的副本可能在不知不觉中与当前默认值脱节。
+:::
+
+另一个常见的自定义目标是 [`send()`](api/provider/rest_methods/js_kanban_send_method.md) 方法，每个默认 handler 都会调用该方法。覆盖 `send()` 可注入额外请求头、重写 URL，或为每个服务器请求添加自定义逻辑。
 
 ## 与后端交互
 
@@ -196,7 +229,7 @@ events.on(handlers);
 
 <iframe src="https://snippet.dhtmlx.com/xw6g6qd6?mode=js" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
 
-## 自定义服务器事件
+## 自定义服务器事件 {#customize-server-events}
 
 要为服务器事件定义自定义逻辑，需将 `handlers` 对象传递给 `RemoteEvents.on(handlers)`。该对象的结构如下：
 
