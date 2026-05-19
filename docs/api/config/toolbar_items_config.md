@@ -26,8 +26,8 @@ items?: [
                 }
             }, {...}
         ],
-        resultTemplate?: template(searchResult => {
-            return "The HTML template of the search result";
+        resultTemplate?: template(({ result }) => {
+            return `HTML template using ${result.label}`;
         }) 
     },
     "sort" | {
@@ -66,7 +66,7 @@ In the **items** array you can specify the following parameters:
         - ***card*** - an object of the card data
         - ***value*** - a searched value, specified in the search bar
         - ***by*** - a key of card field, by which the cards will be searched
-- `searchResult` - (optional) a template for displaying the custom search result
+- `resultTemplate` - (optional) a template for displaying the custom search result
 
 ~~~jsx
 items: [
@@ -93,10 +93,10 @@ items: [
                 }
             }
         ],
-        resultTemplate: kanban.template(searchResult => {
+        resultTemplate: kanban.template(({ result }) => {
             return `<div class="list-item">
-                <div class="list-item-text">${searchResult.result.label}</div>
-                ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                <div class="list-item-text">${result.label}</div>
+                ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
             </div>`
         })
     },
@@ -161,10 +161,10 @@ new kanban.Toolbar("#toolbar", {
     items: [
         {
             type: "search",
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },
@@ -182,7 +182,7 @@ new kanban.Toolbar("#toolbar", {
 
 - The *"Undo"* and *"Redo"* controls were added in v1.3
 - The ***items.options[0].label*** parameter of the **sort** control was replaced by the ***items.options[0].text*** parameter in v1.4
-- The ***items.searchResult*** parameter of the **"search"** control was added in v1.6
+- The ***items.resultTemplate*** parameter of the **"search"** control was added in v1.6
 
 **Related articles:** [Configuration](guides/configuration.md#toolbar) and [Customization](guides/customization.md#custom-toolbar)
 
