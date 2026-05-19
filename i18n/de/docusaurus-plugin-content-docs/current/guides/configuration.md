@@ -487,6 +487,8 @@ new kanban.Kanban("#root", {
 
 :::important
 Wenn Sie `renderType: "lazy"` mit einem beliebigen `scrollType` kombinieren, legen Sie über die [`cardHeight`](api/config/js_kanban_cardheight_config.md) Eigenschaft eine statische Höhe für Karten fest. Ohne `cardHeight` werden Karten beim Lazy Rendering nicht korrekt angezeigt.
+
+Wenn `cardHeight` bei `renderType: "lazy"` und `scrollType: "column"` weggelassen wird, greift das Widget auf eine experimentelle Näherung der Kartenhöhen auf Basis der sichtbaren Felder in [`cardShape`](api/config/js_kanban_cardshape_config.md) zurück. Bei Boards mit einem benutzerdefinierten [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) kann das Widget die gerenderte Höhe nicht vorhersagen — stellen Sie eine benutzerdefinierte Funktion [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) bereit, die die geschätzte Kartenhöhe zurückgibt.
 :::
 
 ## Änderungsverlauf
@@ -554,10 +556,10 @@ new kanban.Toolbar("#toolbar", {
                     }
                 }
             ],
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },

@@ -26,8 +26,8 @@ items?: [
                 }
             }, {...}
         ],
-        resultTemplate?: template(searchResult => {
-            return "Die HTML-Vorlage des Suchergebnisses";
+        resultTemplate?: template(({ result }) => {
+            return `HTML template using ${result.label}`;
         }) 
     },
     "sort" | {
@@ -93,10 +93,10 @@ items: [
                 }
             }
         ],
-        resultTemplate: kanban.template(searchResult => {
+        resultTemplate: kanban.template(({ result }) => {
             return `<div class="list-item">
-                <div class="list-item-text">${searchResult.result.label}</div>
-                ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                <div class="list-item-text">${result.label}</div>
+                ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
             </div>`
         })
     },
@@ -161,10 +161,10 @@ new kanban.Toolbar("#toolbar", {
     items: [
         {
             type: "search",
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },
@@ -182,7 +182,7 @@ new kanban.Toolbar("#toolbar", {
 
 - Die Steuerelemente *"Undo"* und *"Redo"* wurden in v1.3 hinzugefügt
 - Der Parameter ***items.options[0].label*** der **sort** Steuerung wurde in v1.4 durch den Parameter ***items.options[0].text*** ersetzt
-- Der Parameter ***items.searchResult*** der **"search"** Steuerung wurde in v1.6 hinzugefügt
+- Der Parameter ***items.resultTemplate*** der **"search"** Steuerung wurde in v1.6 hinzugefügt
 
 **Verwandte Artikel:** [Konfiguration](guides/configuration.md#toolbar) und [Anpassung](guides/customization.md#custom-toolbar)
 

@@ -20,6 +20,7 @@ Zur Konfiguration des **Kanban** siehe den Abschnitt [Configuration](guides/conf
 | [](api/config/js_kanban_currentuser_config.md)             | @getshort(api/config/js_kanban_currentuser_config.md)    |
 | [](api/config/js_kanban_editor_config.md)                  | @getshort(api/config/js_kanban_editor_config.md)         |
 | [](api/config/js_kanban_editorshape_config.md)             | @getshort(api/config/js_kanban_editorshape_config.md)    |
+| [](api/config/js_kanban_getcardheight_config.md)           | @getshort(api/config/js_kanban_getcardheight_config.md)  |
 | [](api/config/js_kanban_history_config.md)                 | @getshort(api/config/js_kanban_history_config.md)        |
 | [](api/config/js_kanban_links_config.md)                   | @getshort(api/config/js_kanban_links_config.md)          |
 | [](api/config/js_kanban_locale_config.md)                  | @getshort(api/config/js_kanban_locale_config.md)         |

@@ -158,7 +158,7 @@ Veröffentlicht am 13. November 2024
 
 - Möglichkeit, wie viele zugewiesene Benutzer auf einer Karte angezeigt werden, über die Eigenschaft [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) zu ändern (siehe [**Beispiel**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
 - Möglichkeit, den Inhalt von Spaltenköpfen über die Eigenschaft [`columnShape`](api/config/js_kanban_columnshape_config.md) zu ändern (siehe [**Beispiel**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
-- Möglichkeit, Ansicht und Inhalt der Suchergebnisse über die Eigenschaft [`items.searchResult`](api/config/toolbar_items_config.md) der Toolbar-**Suche**-Steuerung zu ändern (siehe [**Beispiel**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
+- Möglichkeit, Ansicht und Inhalt der Suchergebnisse über die Eigenschaft [`items.resultTemplate`](api/config/toolbar_items_config.md) der Toolbar-**Suche**-Steuerung zu ändern (siehe [**Beispiel**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban))
 - Möglichkeit, den Editor als modales Fenster über die Eigenschaft [`editor.placement`](api/config/js_kanban_editor_config.md) anzuzeigen (siehe [**Beispiel**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
 - Möglichkeit, das Voting für eine Karte (mit dem Abstimmungs-Icon auf der Karte) über die Eigenschaft [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) zu aktivieren (siehe [**Beispiel**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
 
@@ -169,7 +169,8 @@ Veröffentlicht am 13. November 2024
     - Die Eigenschaft [`cardShape`](api/config/js_kanban_cardshape_config.md) wurde um die Parameter ***users.maxCount*** und ***votes.clickable*** erweitert.
     - Die Eigenschaft [`columnShape`](api/config/js_kanban_columnshape_config.md) wurde um die Parameter ***headerTemplate*** und ***collapsedTemplate*** erweitert.
     - Die Eigenschaft [`editor`](api/config/js_kanban_editor_config.md) wurde um den Parameter ***placement*** erweitert.
-    - Die Eigenschaft [`items`](api/config/toolbar_items_config.md) der Toolbar-**Suche**-Steuerung wurde um den Parameter ***searchResult*** erweitert.
+    - Die Eigenschaft [`editorShape`](api/config/js_kanban_editorshape_config.md) wurde um den Parameter ***modalSection*** erweitert.
+    - Die Eigenschaft [`items`](api/config/toolbar_items_config.md) der Toolbar-**Suche**-Steuerung wurde um den Parameter ***resultTemplate*** erweitert.
 
 - #### Events
 
