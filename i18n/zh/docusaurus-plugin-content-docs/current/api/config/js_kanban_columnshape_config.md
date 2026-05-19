@@ -30,10 +30,10 @@ columnShape?: {
     },
     fixedHeaders?: boolean,
     css?: (column, cards) => string,
-    headerTemplate?: template(column => {
+    headerTemplate?: template(props => {
         return "展开状态下列头的 HTML 模板";
     }),
-    collapsedTemplate?: template(column => {
+    collapsedTemplate?: template(props => {
         return "折叠状态下列头的 HTML 模板";
     }),
     confirmDeletion?: boolean
@@ -94,8 +94,28 @@ columnShape?: {
 
 - `fixedHeaders` - （可选）在垂直滚动时固定列头（默认 *true*）。必须在看板本身启用滚动（限制高度）
 - `css` - （可选）一个函数，根据条件返回应用于列的 CSS 类名
-- `headerTemplate` - （可选）展开状态下列头的 HTML 模板
-- `collapsedTemplate` - （可选）折叠状态下列头的 HTML 模板
+- `headerTemplate` - （可选）展开状态下列头的 HTML 模板。该函数接收一个 `props` 对象，包含以下属性：
+    - `column` - （对象）列数据（结构参见 [`columns`](api/config/js_kanban_columns_config.md)）
+    - `columnState` - （对象）列的当前状态，始终包含以下属性：
+        - ***columnId*** - （string | number）列的 ID
+        - ***column*** - （对象）列数据（与 `props.column` 相同）
+        - ***cardsCount*** - （number）列中卡片数量
+        - ***noFreeSpace*** - （boolean）当列无法接受更多卡片时为 ***true***
+
+        当启用 [`columns[i].limit`](api/config/js_kanban_columns_config.md) 参数时，还包含：
+        - ***totalLimit*** - （number）配置的卡片数量限制
+        - ***isOverLimit*** - （boolean）当卡片数量超过限制时为 ***true***
+
+        当列属于泳道（行）时，还包含：
+        - ***rowId*** - （string | number）行的 ID
+        - ***row*** - （对象）行数据（结构参见 [`rows`](api/config/js_kanban_rows_config.md)）
+        - ***height*** - （number）区域高度
+    - `isMenuVisible` - （boolean）当该列头应显示菜单时为 ***true***
+    - `renaming` - （boolean）当列名编辑输入框处于激活状态时为 ***true***
+    - `readonly` - （boolean）当列编辑被禁用时为 ***true***（等同于 `!readonly.edit`，参见 [`readonly`](api/config/js_kanban_readonly_config.md) 属性）
+- `collapsedTemplate` - （可选）折叠状态下列头的 HTML 模板。该函数接收一个 `props` 对象，包含以下属性：
+    - `column` - （对象）列数据（参见 [`columns`](api/config/js_kanban_columns_config.md)）
+    - `columnState` - （对象）列的当前状态，结构与上方 [`headerTemplate`](#parameters) 参数中的 `columnState` 相同
 - `confirmDeletion` - （可选）显示/隐藏 **确认对话框**，允许用户确认或取消列的删除操作
 
 ### 默认配置
@@ -160,30 +180,30 @@ const columnShape = {
     },
     fixedHeaders: false,
     css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red",
-    headerTemplate: template(column => {
+    headerTemplate: template(props => {
         return `<div class="wx-collapse-icon" data-action=${"collapse"}>
-                    <i class=${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
+                    <i class=${props.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
                 </div>
                 ${
-                    !column.column.collapsed
+                    !props.column.collapsed
                         ?   `<div class="wx-label" data-action="rename">
-                                ${escapeHTML(column.column.label)}
-                                (${column.columnState.cardsCount})
+                                ${escapeHTML(props.column.label)}
+                                (${props.columnState.cardsCount})
                             </div>`
                         : ""
                 }
                 ${
-                    !column.column.collapsed
-                        ?   `<div class="wx-menu" data-menu-id=${column.id}>
+                    !props.column.collapsed
+                        ?   `<div class="wx-menu" data-menu-id=${props.column.id}>
                                 <i class="wxi-dots-h"></i>
                             </div>`
                         : ""
                 }`;
     }),
-    collapsedTemplate: template(column => {
+    collapsedTemplate: template(props => {
         return `<div class="wx-collapsed-label">
-                    <div class="wx-label-text">${escapeHTML(column.column.label)} (${
-                        column.columnState?.cardsCount
+                    <div class="wx-label-text">${escapeHTML(props.column.label)} (${
+                        props.columnState?.cardsCount
                     })</div>
                 </div>`;
     }),

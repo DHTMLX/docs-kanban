@@ -19,6 +19,7 @@ editorShape?: [
         type: string, 
         key: string, 
         label?: string, 
+        modalSection?: "left" | "right",
         
         // 仅针对 "dateRange" 类型
         key: {
@@ -182,6 +183,9 @@ editorShape?: [
 ~~~
 
 - `label` - （可选）编辑器字段标签
+- `modalSection` - （可选）定义字段在模态编辑器中的列位置。仅当编辑器通过 [`editor.placement: "modal"`](api/config/js_kanban_editor_config.md) 属性以模态窗口形式显示时生效。可设置为：
+    - `"left"` - 字段放置在左列
+    - `"right"` - 字段放置在右列（默认值）
 
 #### - "dateRange" 类型的参数
 
@@ -466,6 +470,7 @@ new kanban.Kanban("#root", {
 
 - v1.3 版本新增了 ***dateRange*** 类型
 - v1.4 版本新增了 ***comments*** 和 ***links*** 编辑器类型，以及 ***format*** 参数
+- v1.6 版本新增了 ***modalSection*** 参数
 - ***clearButton*** 参数被替换为 ***clear*** 参数
 
 **相关文档：** [配置](guides/configuration.md/#editor)
