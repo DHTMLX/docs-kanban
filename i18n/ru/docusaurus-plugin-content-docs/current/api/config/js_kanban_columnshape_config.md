@@ -30,10 +30,10 @@ columnShape?: {
     },
     fixedHeaders?: boolean,
     css?: (column, cards) => string,
-    headerTemplate?: template(column => {
+    headerTemplate?: template(props => {
         return "HTML-шаблон заголовка колонки в развернутом состоянии";
     }),
-    collapsedTemplate?: template(column => {
+    collapsedTemplate?: template(props => {
         return "HTML-шаблон заголовка колонки в свернутом состоянии";
     }),
     confirmDeletion?: boolean
@@ -94,8 +94,28 @@ columnShape?: {
 
 - `fixedHeaders` - (необязательно) фиксирует заголовки колонок при вертикальной прокрутке (*true* по умолчанию). Прокрутка должна быть включена в самом Kanban (высота должна быть ограничена)
 - `css` - (необязательно) функция, возвращающая CSS-класс, который применяется к колонкам условно
-- `headerTemplate` - (необязательно) HTML-шаблон заголовка колонки в развернутом состоянии
-- `collapsedTemplate` - (необязательно) HTML-шаблон заголовка колонки в свернутом состоянии
+- `headerTemplate` - (необязательно) HTML-шаблон заголовка колонки в развернутом состоянии. Функция получает объект `props` со следующими свойствами:
+    - `column` - (object) данные колонки (структуру см. в [`columns`](api/config/js_kanban_columns_config.md))
+    - `columnState` - (object) текущее состояние колонки. Всегда включает:
+        - ***columnId*** - (string | number) ID колонки
+        - ***column*** - (object) данные колонки (то же, что `props.column`)
+        - ***cardsCount*** - (number) количество карточек в колонке
+        - ***noFreeSpace*** - (boolean) ***true***, если колонка не может принять больше карточек
+
+        Если задан параметр [`columns[i].limit`](api/config/js_kanban_columns_config.md), также включает:
+        - ***totalLimit*** - (number) настроенный лимит карточек
+        - ***isOverLimit*** - (boolean) ***true***, если количество карточек превышает лимит
+
+        Если колонка принадлежит строке (swimlane), также включает:
+        - ***rowId*** - (string | number) ID строки
+        - ***row*** - (object) данные строки (структуру см. в [`rows`](api/config/js_kanban_rows_config.md))
+        - ***height*** - (number) высота области
+    - `isMenuVisible` - (boolean) ***true***, если меню должно отображаться для данного заголовка колонки
+    - `renaming` - (boolean) ***true***, если активен режим редактирования названия колонки
+    - `readonly` - (boolean) ***true***, если редактирование колонки отключено (эквивалент `!readonly.edit`, см. свойство [`readonly`](api/config/js_kanban_readonly_config.md))
+- `collapsedTemplate` - (необязательно) HTML-шаблон заголовка колонки в свернутом состоянии. Функция получает объект `props` со следующими свойствами:
+    - `column` - (object) данные колонки (структуру см. в [`columns`](api/config/js_kanban_columns_config.md))
+    - `columnState` - (object) текущее состояние колонки. Структура аналогична `columnState` в параметре [`headerTemplate`](#parameters) выше
 - `confirmDeletion` - (необязательно) отображает/скрывает **диалог подтверждения**, который позволяет пользователям подтвердить или отклонить удаление колонки
 
 ### Конфигурация по умолчанию
@@ -160,30 +180,30 @@ const columnShape = {
     },
     fixedHeaders: false,
     css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red",
-    headerTemplate: template(column => {
+    headerTemplate: template(props => {
         return `<div class="wx-collapse-icon" data-action=${"collapse"}>
-                    <i class=${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
+                    <i class=${props.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
                 </div>
                 ${
-                    !column.column.collapsed
+                    !props.column.collapsed
                         ?   `<div class="wx-label" data-action="rename">
-                                ${escapeHTML(column.column.label)}
-                                (${column.columnState.cardsCount})
+                                ${escapeHTML(props.column.label)}
+                                (${props.columnState.cardsCount})
                             </div>`
                         : ""
                 }
                 ${
-                    !column.column.collapsed
-                        ?   `<div class="wx-menu" data-menu-id=${column.id}>
+                    !props.column.collapsed
+                        ?   `<div class="wx-menu" data-menu-id=${props.column.id}>
                                 <i class="wxi-dots-h"></i>
                             </div>`
                         : ""
                 }`;
     }),
-    collapsedTemplate: template(column => {
+    collapsedTemplate: template(props => {
         return `<div class="wx-collapsed-label">
-                    <div class="wx-label-text">${escapeHTML(column.column.label)} (${
-                        column.columnState?.cardsCount
+                    <div class="wx-label-text">${escapeHTML(props.column.label)} (${
+                        props.columnState?.cardsCount
                     })</div>
                 </div>`;
     }),

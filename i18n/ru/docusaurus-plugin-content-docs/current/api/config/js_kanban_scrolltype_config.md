@@ -29,6 +29,8 @@ scrollType: "default"
 :::important
 Если вы комбинируете настройки [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и `scrollType: "default"`, не забудьте указать статическую высоту для карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Если не указать высоту, карточки не будут отображаться.
 Если вы используете [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и `scrollType: "column"`, мы советуем также фиксировать высоту карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Хотя для этого типа лейаута поддерживается переменная высота карточек, скролл может работать нестабильно с кастомным содержимым карточек.
+
+Если `cardHeight` не задан, виджет использует экспериментальное приближение высоты карточек на основе [`cardShape`](api/config/js_kanban_cardshape_config.md). Для досок с кастомным [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) вместо этого передайте кастомную функцию [`getCardHeight`](api/config/js_kanban_getcardheight_config.md).
 :::
 
 ### Пример

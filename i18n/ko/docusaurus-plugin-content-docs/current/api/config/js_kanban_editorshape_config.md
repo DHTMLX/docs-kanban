@@ -19,6 +19,7 @@ editorShape?: [
         type: string, 
         key: string, 
         label?: string, 
+        modalSection?: "left" | "right",
         
         // "dateRange" 유형에만 해당
         key: {
@@ -182,6 +183,9 @@ Kanban 편집기에서는 다음 필드 유형을 사용할 수 있습니다: **
 ~~~
 
 - `label` - (선택 사항) 편집기 필드 레이블
+- `modalSection` - (선택 사항) 모달 편집기에서 필드가 배치될 열을 정의합니다. [`editor.placement: "modal"`](api/config/js_kanban_editor_config.md) 속성을 통해 편집기가 모달 창으로 표시될 때만 적용됩니다. 가능한 값은 다음과 같습니다:
+    - `"left"` - 필드가 왼쪽 열에 배치됩니다
+    - `"right"` - 필드가 오른쪽 열에 배치됩니다 (기본값)
 
 #### - "dateRange" 유형 매개변수
 
@@ -466,6 +470,7 @@ new kanban.Kanban("#root", {
 
 - v1.3에서 ***dateRange*** 유형 추가
 - v1.4에서 ***comments*** 및 ***links*** 편집기 유형과 ***format*** 매개변수 추가
+- v1.6에서 ***modalSection*** 매개변수 추가
 - ***clearButton*** 매개변수가 ***clear*** 매개변수로 대체됨
 
 **관련 문서:** [구성](guides/configuration.md/#editor)

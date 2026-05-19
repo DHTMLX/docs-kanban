@@ -19,6 +19,7 @@ editorShape?: [
         type: string, 
         key: string, 
         label?: string, 
+        modalSection?: "left" | "right",
         
         // только для типа "dateRange"
         key: {
@@ -182,6 +183,9 @@ editorShape?: [
 ~~~
 
 - `label` - (необязательно) метка поля редактора
+- `modalSection` - (необязательно) определяет, в какой колонке модального редактора размещается поле. Применяется только когда редактор отображается как модальное окно через свойство [`editor.placement: "modal"`](api/config/js_kanban_editor_config.md). Возможные значения:
+    - `"left"` - поле размещается в левой колонке
+    - `"right"` - поле размещается в правой колонке (по умолчанию)
 
 #### - Параметры для типа "dateRange"
 
@@ -466,6 +470,7 @@ new kanban.Kanban("#root", {
 
 - Тип ***dateRange*** добавлен в версии v1.3
 - Типы редактора ***comments*** и ***links***, а также параметр ***format*** добавлены в версии v1.4
+- Параметр ***modalSection*** добавлен в версии v1.6
 - Параметр ***clearButton*** заменён на ***clear***
 
 **Связанные статьи:** [Конфигурация](guides/configuration.md/#editor)
