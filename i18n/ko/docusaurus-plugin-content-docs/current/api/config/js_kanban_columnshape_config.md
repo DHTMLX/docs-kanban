@@ -30,10 +30,10 @@ columnShape?: {
     },
     fixedHeaders?: boolean,
     css?: (column, cards) => string,
-    headerTemplate?: template(column => {
+    headerTemplate?: template(props => {
         return "확장된 상태의 컬럼 헤더 HTML 템플릿";
     }),
-    collapsedTemplate?: template(column => {
+    collapsedTemplate?: template(props => {
         return "축소된 상태의 컬럼 헤더 HTML 템플릿";
     }),
     confirmDeletion?: boolean
@@ -94,8 +94,28 @@ columnShape?: {
 
 - `fixedHeaders` - (선택 사항) 수직 스크롤 시 컬럼 헤더 고정 (기본값 *true*). Kanban 자체에서 스크롤이 활성화되어야 하며 (높이 제한 필요)
 - `css` - (선택 사항) 조건에 따라 컬럼에 적용할 CSS 클래스를 반환하는 함수
-- `headerTemplate` - (선택 사항) 확장된 상태의 컬럼 헤더 HTML 템플릿
-- `collapsedTemplate` - (선택 사항) 축소된 상태의 컬럼 헤더 HTML 템플릿
+- `headerTemplate` - (선택 사항) 확장된 상태의 컬럼 헤더 HTML 템플릿입니다. 이 함수는 다음 속성을 가진 `props` 객체를 받습니다:
+    - `column` - (object) 컬럼 데이터 (구조는 [`columns`](api/config/js_kanban_columns_config.md) 참조)
+    - `columnState` - (object) 컬럼의 현재 상태. 항상 다음을 포함합니다:
+        - ***columnId*** - (string | number) 컬럼 ID
+        - ***column*** - (object) 컬럼 데이터 (`props.column`과 동일)
+        - ***cardsCount*** - (number) 컬럼 내 카드 수
+        - ***noFreeSpace*** - (boolean) 컬럼이 더 이상 카드를 받을 수 없을 때 ***true***
+
+        [`columns[i].limit`](api/config/js_kanban_columns_config.md) 매개변수가 활성화된 경우 추가로 포함됩니다:
+        - ***totalLimit*** - (number) 설정된 카드 한도
+        - ***isOverLimit*** - (boolean) 카드 수가 한도를 초과할 때 ***true***
+
+        컬럼이 스윔레인(row)에 속하는 경우 추가로 포함됩니다:
+        - ***rowId*** - (string | number) row ID
+        - ***row*** - (object) row 데이터 (구조는 [`rows`](api/config/js_kanban_rows_config.md) 참조)
+        - ***height*** - (number) 영역 높이
+    - `isMenuVisible` - (boolean) 해당 컬럼 헤더에 메뉴를 표시해야 할 때 ***true***
+    - `renaming` - (boolean) 컬럼 이름 편집 입력이 활성화될 때 ***true***
+    - `readonly` - (boolean) 컬럼 편집이 비활성화될 때 ***true*** (`!readonly.edit`과 동일, [`readonly`](api/config/js_kanban_readonly_config.md) 속성 참조)
+- `collapsedTemplate` - (선택 사항) 축소된 상태의 컬럼 헤더 HTML 템플릿입니다. 이 함수는 다음 속성을 가진 `props` 객체를 받습니다:
+    - `column` - (object) 컬럼 데이터 ([`columns`](api/config/js_kanban_columns_config.md) 참조)
+    - `columnState` - (object) 컬럼의 현재 상태. 형태는 위의 [`headerTemplate`](#parameters) 매개변수의 `columnState`와 동일합니다
 - `confirmDeletion` - (선택 사항) 컬럼 삭제 확인 대화상자 표시 여부
 
 ### 기본 구성
@@ -160,30 +180,30 @@ const columnShape = {
     },
     fixedHeaders: false,
     css: (column, cards) => column.id == "inprogress" && cards.length < 5 ? "green" : "red",
-    headerTemplate: template(column => {
+    headerTemplate: template(props => {
         return `<div class="wx-collapse-icon" data-action=${"collapse"}>
-                    <i class=${column.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
+                    <i class=${props.column.collapsed ? "wxi-angle-right" : "wxi-angle-left"}></i>
                 </div>
                 ${
-                    !column.column.collapsed
+                    !props.column.collapsed
                         ?   `<div class="wx-label" data-action="rename">
-                                ${escapeHTML(column.column.label)}
-                                (${column.columnState.cardsCount})
+                                ${escapeHTML(props.column.label)}
+                                (${props.columnState.cardsCount})
                             </div>`
                         : ""
                 }
                 ${
-                    !column.column.collapsed
-                        ?   `<div class="wx-menu" data-menu-id=${column.id}>
+                    !props.column.collapsed
+                        ?   `<div class="wx-menu" data-menu-id=${props.column.id}>
                                 <i class="wxi-dots-h"></i>
                             </div>`
                         : ""
                 }`;
     }),
-    collapsedTemplate: template(column => {
+    collapsedTemplate: template(props => {
         return `<div class="wx-collapsed-label">
-                    <div class="wx-label-text">${escapeHTML(column.column.label)} (${
-                        column.columnState?.cardsCount
+                    <div class="wx-label-text">${escapeHTML(props.column.label)} (${
+                        props.columnState?.cardsCount
                     })</div>
                 </div>`;
     }),

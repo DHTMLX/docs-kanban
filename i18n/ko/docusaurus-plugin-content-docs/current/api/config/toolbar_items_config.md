@@ -26,8 +26,8 @@ items?: [
                 }
             }, {...}
         ],
-        resultTemplate?: template(searchResult => {
-            return "검색 결과의 HTML 템플릿";
+        resultTemplate?: template(({ result }) => {
+            return `HTML template using ${result.label}`;
         }) 
     },
     "sort" | {
@@ -66,7 +66,7 @@ items?: [
         - ***card*** - 카드 데이터 객체
         - ***value*** - 검색바에 입력된 검색 값
         - ***by*** - 카드가 검색될 카드 필드 키
-- `searchResult` - (선택) 사용자 정의 검색 결과를 표시하기 위한 템플릿
+- `resultTemplate` - (선택) 사용자 정의 검색 결과를 표시하기 위한 템플릿
 
 ~~~jsx
 items: [
@@ -93,10 +93,10 @@ items: [
                 }
             }
         ],
-        resultTemplate: kanban.template(searchResult => {
+        resultTemplate: kanban.template(({ result }) => {
             return `<div class="list-item">
-                <div class="list-item-text">${searchResult.result.label}</div>
-                ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                <div class="list-item-text">${result.label}</div>
+                ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
             </div>`
         })
     },
@@ -161,10 +161,10 @@ new kanban.Toolbar("#toolbar", {
     items: [
         {
             type: "search",
-            resultTemplate: kanban.template(searchResult => {
+            resultTemplate: kanban.template(({ result }) => {
                 return `<div class="list-item">
-                            <div class="list-item-text">${searchResult.result.label}</div>
-                            ${searchResult.result.description ? `<div class="list-item-text item-description">${searchResult.result.description}</div>` : ""}
+                            <div class="list-item-text">${result.label}</div>
+                            ${result.description ? `<div class="list-item-text item-description">${result.description}</div>` : ""}
                         </div>`
             })
         },
@@ -182,7 +182,7 @@ new kanban.Toolbar("#toolbar", {
 
 - *"Undo"* 및 *"Redo"* 컨트롤이 v1.3에 추가되었습니다.
 - **sort** 컨트롤의 ***items.options[0].label*** 매개변수가 v1.4에서 ***items.options[0].text*** 매개변수로 변경되었습니다.
-- **"search"** 컨트롤의 ***items.searchResult*** 매개변수가 v1.6에 추가되었습니다.
+- **"search"** 컨트롤의 ***items.resultTemplate*** 매개변수가 v1.6에 추가되었습니다.
 
 **관련 문서:** [구성](guides/configuration.md#toolbar) 및 [커스터마이징](guides/customization.md#custom-toolbar)
 
