@@ -19,6 +19,7 @@ editorShape?: [
         type: string, 
         key: string, 
         label?: string, 
+        modalSection?: "left" | "right",
         
         // for the "dateRange" type only
         key: {
@@ -182,6 +183,9 @@ In the Kanban editor you can use the following types of fields: **dateRange**, *
 ~~~
 
 - `label` - (optional) an editor field label
+- `modalSection` - (optional) defines in which column of the modal editor the field is placed. Applied only when the editor is shown as a modal window via the [`editor.placement: "modal"`](api/config/js_kanban_editor_config.md) property. The possible values are:
+    - `"left"` - the field is placed in the left column
+    - `"right"` - the field is placed in the right column (default)
 
 #### - Parameters for a "dateRange" type
 
@@ -466,6 +470,7 @@ new kanban.Kanban("#root", {
 
 - The ***dateRange*** type was added in v1.3
 - The ***comments*** and ***links*** types of editor, and ***format*** parameters were added in v1.4
+- The ***modalSection*** parameter was added in v1.6
 - The ***clearButton*** parameter was replaced with the ***clear*** parameter
 
 **Related articles:** [Configuration](guides/configuration.md/#editor)
