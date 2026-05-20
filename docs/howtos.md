@@ -61,7 +61,7 @@ In these sections you can find out how to perform operations with cards, work wi
 | [Getting cards state](api/internal/js_kanban_getstate_method.md) | Learn how to get the cards state                 |
 | [Getting cards reactive state](api/internal/js_kanban_getreactivestate_method.md) | Learn how to get the cards reactive state |
 | [Loading card data](api/config/js_kanban_cards_config.md)    | Learn how to load the initial card data             |
-| [Parsing card data](api/methods/js_kanban_parse_method.md)   | Learn how to parse the card data                    |
+| [Loading card data dynamically](api/methods/js_kanban_setconfig_method.md)   | Learn how to load card data at runtime via `setConfig()` (or its alias [`parse()`](api/methods/js_kanban_parse_method.md))|
 | [Serializing card data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the card data ([Example](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
 | [Updating card data](api/methods/js_kanban_updatecard_method.md)| Learn how to update the card data                |
 
@@ -117,7 +117,7 @@ In these sections you can find out how to perform operations with columns and wo
 | [Getting columns state](api/internal/js_kanban_getstate_method.md) | Learn how to get the columns state               |
 | [Getting columns reactive state](api/internal/js_kanban_getreactivestate_method.md) | Learn how to get the columns reactive state |
 | [Loading column data](api/config/js_kanban_columns_config.md)    | Learn how to load the initial column data          |
-| [Parsing column data](api/methods/js_kanban_parse_method.md)     | Learn how to parse the column data                 |
+| [Loading column data dynamically](api/methods/js_kanban_setconfig_method.md)     | Learn how to load column data at runtime via `setConfig()` (or its alias [`parse()`](api/methods/js_kanban_parse_method.md))|
 | [Serializing column data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the column data          |
 | [Updating column data](api/methods/js_kanban_updatecolumn_method.md)| Learn how to update the column data             |
 
@@ -143,7 +143,7 @@ In these sections you can find out how to perform operations with rows and work 
 | [Getting rows state](api/internal/js_kanban_getstate_method.md) | Learn how to get the rows state                     |
 | [Getting rows reactive state](api/internal/js_kanban_getreactivestate_method.md) | Learn how to get the rows reactive state |
 | [Loading row data](api/config/js_kanban_rows_config.md)         | Learn how to load the initial row data              |
-| [Parsing row data](api/methods/js_kanban_parse_method.md)       | Learn how to parse the row data                     |
+| [Loading row data dynamically](api/methods/js_kanban_setconfig_method.md)       | Learn how to load row data at runtime via `setConfig()` (or its alias [`parse()`](api/methods/js_kanban_parse_method.md))|
 | [Serializing row data](api/methods/js_kanban_serialize_method.md)| Learn how to serialize the row data                |
 | [Updating row data](api/methods/js_kanban_updaterow_method.md)  | Learn how to update the row data                    |
 
