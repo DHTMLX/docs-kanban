@@ -379,7 +379,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban with Angular"
+  alt="Доска DHTMLX Kanban, инициализированная в приложении Angular, с заполненными колонками и карточками"
   className="img_border"
 />
 

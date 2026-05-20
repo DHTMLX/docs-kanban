@@ -335,7 +335,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban with Svelte"
+  alt="DHTMLX Kanban board initialized inside a Svelte application with populated columns and cards"
   className="img_border"
 />
 

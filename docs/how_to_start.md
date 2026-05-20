@@ -12,7 +12,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
   src={editor}
-  alt="JS Kanban Main"
+  alt="DHTMLX JavaScript Kanban main view with toolbar, board, columns, swimlanes, and cards"
   className="img_border"
 />
 

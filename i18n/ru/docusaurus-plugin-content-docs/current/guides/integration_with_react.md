@@ -329,7 +329,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban with React"
+  alt="Доска DHTMLX Kanban, инициализированная в приложении React, с заполненными колонками и карточками"
   className="img_border"
 />
 

@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
   src={toolbar}
-  alt="Kanban Toolbar"
+  alt="DHTMLX Kanban toolbar with search field, sort control, undo/redo buttons, and controls for adding columns and rows"
   className="img_border"
 />
 
@@ -52,7 +52,7 @@ import board from '@site/static/img/js_kanban_board.png';
 
 <img
   src={board}
-  alt="Kanban Board"
+  alt="DHTMLX Kanban board with cards distributed across columns and swimlanes"
   className="img_border"
 />
 
@@ -64,7 +64,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
   src={editor}
-  alt="Kanban Editor"
+  alt="DHTMLX Kanban card editor modal with fields and controls for managing the selected card data"
   className="img_border"
 />
 

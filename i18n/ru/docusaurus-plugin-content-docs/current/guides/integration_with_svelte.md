@@ -335,7 +335,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban with Svelte"
+  alt="Доска DHTMLX Kanban, инициализированная в приложении Svelte, с заполненными колонками и карточками"
   className="img_border"
 />
 
