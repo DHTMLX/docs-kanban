@@ -379,7 +379,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban with Angular"
+  alt="DHTMLX Kanban board initialized inside an Angular application with populated columns and cards"
   className="img_border"
 />
 

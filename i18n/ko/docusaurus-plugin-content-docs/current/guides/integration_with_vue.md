@@ -358,7 +358,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban with Vue"
+  alt="Vue 애플리케이션에서 초기화되어 컬럼과 카드가 채워진 DHTMLX Kanban 보드"
   className="img_border"
 />
 

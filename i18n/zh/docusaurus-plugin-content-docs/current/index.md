@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
     src={toolbar}
-    alt="Kanban Toolbar"
+    alt="DHTMLX Kanban 工具栏，包含搜索栏、排序控件、撤销/重做按钮以及添加列和行的控件"
     className="img_border"
 />
 
@@ -52,7 +52,7 @@ import board from '@site/static/img/js_kanban_board.png';
 
 <img
     src={board}
-    alt="Kanban Board"
+    alt="DHTMLX Kanban 看板，卡片按列和泳道分布"
     className="img_border"
 />
 
@@ -64,7 +64,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="Kanban Editor"
+    alt="DHTMLX Kanban 卡片编辑器模态窗口，包含用于管理所选卡片数据的字段和控件"
     className="img_border"
 />
 

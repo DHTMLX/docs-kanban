@@ -12,7 +12,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="JS Kanban Main"
+    alt="Toolbar, Board, 컬럼, 스윔레인, 카드를 포함한 DHTMLX JavaScript Kanban 전체 화면"
     className="img_border"
 />
 

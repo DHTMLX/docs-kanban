@@ -358,7 +358,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban mit Vue"
+  alt="DHTMLX Kanban Board, das in einer Vue-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
   className="img_border"
 />
 

@@ -335,7 +335,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban with Svelte"
+  alt="在 Svelte 应用中初始化的 DHTMLX Kanban 看板，包含已填充的列和卡片"
   className="img_border"
 />
 
