@@ -12,7 +12,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="JS Kanban Main"
+    alt="DHTMLX JavaScript Kanban 总览，包含工具栏、看板、列、泳道和卡片"
     className="img_border"
 />
 

@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
     src={toolbar}
-    alt="Kanban Toolbar"
+    alt="DHTMLX Kanban Toolbar mit Suchleiste, Sortiersteuerung, Undo/Redo-Schaltflächen sowie Steuerelementen zum Hinzufügen von Spalten und Zeilen"
     className="img_border"
 />
 
@@ -52,7 +52,7 @@ import board from '@site/static/img/js_kanban_board.png';
 
 <img
     src={board}
-    alt="Kanban Board"
+    alt="DHTMLX Kanban Board mit Karten, die auf Spalten und Swimlanes verteilt sind"
     className="img_border"
 />
 
@@ -64,7 +64,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="Kanban Editor"
+    alt="Modaler Karten-Editor von DHTMLX Kanban mit Feldern und Steuerelementen zur Verwaltung der ausgewählten Kartendaten"
     className="img_border"
 />
 

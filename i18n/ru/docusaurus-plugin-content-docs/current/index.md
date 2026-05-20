@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
     src={toolbar}
-    alt="Kanban Toolbar"
+    alt="Панель инструментов DHTMLX Kanban с полем поиска, сортировкой, кнопками отмены/повтора и элементами для добавления колонок и строк"
     className="img_border"
 />
 
@@ -52,7 +52,7 @@ import board from '@site/static/img/js_kanban_board.png';
 
 <img
     src={board}
-    alt="Kanban Board"
+    alt="Доска DHTMLX Kanban с карточками, распределёнными по колонкам и дорожкам (swimlanes)"
     className="img_border"
 />
 
@@ -64,7 +64,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="Kanban Editor"
+    alt="Модальный редактор карточки DHTMLX Kanban с полями и элементами управления для редактирования данных выбранной карточки"
     className="img_border"
 />
 

@@ -329,7 +329,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="Kanban mit React"
+  alt="DHTMLX Kanban Board, das in einer React-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
   className="img_border"
 />
 

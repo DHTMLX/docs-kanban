@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
     src={toolbar}
-    alt="Kanban Toolbar"
+    alt="검색창, 정렬 컨트롤, undo/redo 버튼, 컬럼 및 행 추가 컨트롤이 포함된 DHTMLX Kanban Toolbar"
     className="img_border"
 />
 
@@ -52,7 +52,7 @@ import board from '@site/static/img/js_kanban_board.png';
 
 <img
     src={board}
-    alt="Kanban Board"
+    alt="컬럼과 스윔레인에 카드가 배치된 DHTMLX Kanban Board"
     className="img_border"
 />
 
@@ -64,7 +64,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="Kanban Editor"
+    alt="선택한 카드 데이터를 관리할 수 있는 필드와 컨트롤로 구성된 DHTMLX Kanban 카드 에디터 모달"
     className="img_border"
 />
 
