@@ -10,7 +10,23 @@ description: You can learn about the parse method in the documentation of the DH
 
 @short: Parses data into Kanban
 
-This method performs the same operation as [`setConfig`](/api/methods/js_kanban_setconfig_method) when used with data-related Kanban settings. It is therefore recommended to use `setConfig` for consistency with other configuration options, although `parse` remains supported as an alias for data parsing.
+The `parse()` method is an alias for [`setConfig()`](/api/methods/js_kanban_setconfig_method) restricted to data-related properties (`cards`, `columns`, `rows`, `links`). Both methods perform the same operation under the hood for these properties.
+
+:::tip Prefer setConfig()
+Use the [`setConfig()`](/api/methods/js_kanban_setconfig_method) method that accepts the same data properties **plus** other Kanban configuration option. Call `setConfig()` once for all props instead of calling `parse()` for data and `setConfig()` for the other props (such as [`columnKey`](api/config/js_kanban_columnkey_config.md), [`rowKey`](api/config/js_kanban_rowkey_config.md), [`cardShape`](api/config/js_kanban_cardshape_config.md)):
+
+~~~js
+// instead of two calls
+kanban.setConfig({ columnKey: "type" });
+kanban.parse({ columns });
+
+// use one
+kanban.setConfig({
+    columnKey: "type",
+    columns
+});
+~~~
+:::
 
 ### Usage
 
@@ -42,6 +58,9 @@ board.parse({
     rows,
     links
 });
+
+// equivalent call via setConfig()
+// board.setConfig({ columns, cards, rows, links });
 ~~~
 
 **Change log:** Starting from v1.1 you don't need to reset initial data in constructor before parsing new data
