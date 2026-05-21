@@ -264,6 +264,14 @@ const config = {
   	themeConfig:
 	/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 	({
+		image: 'img/og-default-kanban.png',
+		metadata: [
+			{ property: 'og:type', content: 'website' },
+			{ property: 'og:site_name', content: 'DHTMLX Kanban Docs' },
+			{ property: 'og:locale', content: 'en_US' },
+			{ name: 'twitter:card', content: 'summary_large_image' },
+			{ name: 'twitter:site', content: '@dhtmlx' }
+		],
 		navbar: {
 			title: 'JavaScript Kanban Documentation',
 			logo: {
