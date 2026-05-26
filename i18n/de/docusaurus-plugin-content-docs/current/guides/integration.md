@@ -16,7 +16,7 @@ Sie können DHTMLX Kanban mit anderen DHTMLX-Widgets integrieren, darunter:
 
 Die folgende Demo bettet ein Kanban-Board neben Gantt- und Scheduler-Ansichten ein:
 
-<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
+<iframe src="https://snippet.dhtmlx.com/i9i9icc6?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
 
 ## To Do List
 
