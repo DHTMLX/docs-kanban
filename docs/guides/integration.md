@@ -16,7 +16,7 @@ You can integrate DHTMLX Kanban with other DHTMLX widgets, including:
 
 The following demo embeds a Kanban board alongside Gantt and Scheduler views:
 
-<iframe src="https://snippet.dhtmlx.com/i7j5668s?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
+<iframe src="https://snippet.dhtmlx.com/i9i9icc6?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
 
 ## To Do List
 
