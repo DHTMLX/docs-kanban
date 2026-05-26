@@ -14,7 +14,7 @@ DHTMLX Kanban은 다음과 같은 다른 DHTMLX 위젯과 통합하여 사용할
 
 ## Gantt, Event Calendar 및 To Do List {#gantt-event-calendar-and-to-do-list}
 
-다음 데모는 Gantt, Event Calendar 및 To Do List 뷰와 함께 Kanban 보드를 임베드한 예제입니다:
+다음 데모는 Gantt, Event Calendar 및 To Do List 뷰와 함께 Kanban 보드를 임베드하며, 백엔드를 통해 데이터를 동기화하는 예제입니다:
 
 <iframe src="https://snippet.dhtmlx.com/i9i9icc6?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="700"></iframe>
 
