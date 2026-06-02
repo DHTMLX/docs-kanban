@@ -1,6 +1,6 @@
 ---
 sidebar_label: Kanban overview
-title: DHTMLX API & Guides
+title: JavaScript Kanban API & Guides
 slug: /
 description: Read DHTMLX JavaScript Kanban documentation with API reference, developer guides, configuration options, and examples for building Kanban boards.
 ---
