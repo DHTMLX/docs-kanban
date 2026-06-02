@@ -1,7 +1,7 @@
 ---
 sidebar_label: Initialization
-title: Initialization
-description: You can learn about the initialization in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Kanban Initialization Guide
+description: Follow the DHTMLX Kanban initialization guide. Learn constructor setup, required configuration, columns, cards, and board initialization.
 ---
 
 # Initialization

@@ -1,6 +1,6 @@
 ---
 sidebar_label: Integration with Salesforce
-title: Integration with Salesforce
+title: Salesforce Kanban Integration Guide
 description: Learn how to integrate DHTMLX Kanban into Salesforce. This guide explains the required HTML setup and environment configuration for smooth operation inside Salesforce Lightning components.
 ---
 

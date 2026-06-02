@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration with DHTMLX widgets
-title: Integration with DHTMLX widgets
-description: You can learn about the integration in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: DHTMLX Widgets - Kanban Integration Guide
+description: Follow the DHTMLX Kanban integration guide for DHTMLX Gantt, Event Calendar, and To Do List widgets. Learn how to combine Kanban with Gantt and other DHTMLX components in one app.
 ---
 
 # Integration with DHTMLX widgets

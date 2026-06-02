@@ -1,6 +1,6 @@
 ---
 sidebar_label: add-column
-title: add-column Event
+title: add-column Event API
 description: You can learn about the add-column event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
 ---
 

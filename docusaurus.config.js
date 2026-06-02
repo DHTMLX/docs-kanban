@@ -194,8 +194,8 @@ const onAfterDataTransformation = (data) => {
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	noIndex: false,
-	title: 'DHTMLX JavaScript Kanban Docs',
-	tagline: 'DHTMLX JavaScript Kanban Docs', 
+	title: 'DHTMLX Kanban Documentation',
+	tagline: 'DHTMLX Kanban Documentation',
 	url: 'https://docs.dhtmlx.com',
 	baseUrl: process.env.DOCUSAURUS_BASEURL || '/kanban/',
 	i18n: {

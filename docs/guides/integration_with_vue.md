@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration with Vue
-title: Integration with Vue
-description: You can learn about the integration with Vue in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Vue Kanban Integration Guide
+description: Follow the DHTMLX Kanban Vue integration guide. Learn component setup, configuration, API usage, and app integration.
 ---
 
 # Integration with Vue

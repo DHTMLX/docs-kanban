@@ -1,7 +1,7 @@
 ---
 sidebar_label: columns
-title: columns Config
-description: You can learn about the columns config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: columns Config API
+description: Read the columns configuration documentation for DHTMLX Kanban. Learn how to set column IDs, labels, layout, and workflow structure.
 ---
 
 # columns

@@ -1,7 +1,7 @@
 ---
 sidebar_label: items
-title: items Config
-description: You can learn about the (Toolbar) items config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Toolbar items Config API
+description: Read the Toolbar items configuration documentation for DHTMLX Kanban. Learn how to configure toolbar buttons, search, undo, and controls.
 ---
 
 # items

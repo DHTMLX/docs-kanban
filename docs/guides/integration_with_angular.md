@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration with Angular
-title: Integration with Angular
-description: You can learn about the integration with Angular in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Angular Kanban Integration Guide
+description: Follow the DHTMLX Kanban Angular integration guide. Learn component setup, configuration, API usage, and project structure.
 ---
 
 # Integration with Angular
