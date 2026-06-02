@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards/{id}/vote
 title: POST /cards/{cardId}/vote REST Route API
-description: You can learn about the POST /cards/{cardId}/vote REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the POST /cards/{cardId}/vote REST route API for DHTMLX Kanban. Learn how to add a vote to a card and return the voting user ID.
 ---
 
 # POST `/cards/{cardId}/vote`

@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/vote
 title: DELETE /cards/{cardId}/vote REST Route API
-description: You can learn about the DELETE /cards/{cardId}/vote REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the DELETE /cards/{cardId}/vote REST route API for DHTMLX Kanban. Learn how to remove a vote from a card.
 ---
 
 # DELETE `/cards/{cardId}/vote`

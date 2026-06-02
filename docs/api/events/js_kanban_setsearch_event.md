@@ -1,7 +1,7 @@
 ---
 sidebar_label: set-search
 title: set-search Event API
-description: You can learn about the set-search event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the set-search event API for DHTMLX Kanban. Learn how to handle the event triggered when searching for cards.
 ---
 
 # set-search

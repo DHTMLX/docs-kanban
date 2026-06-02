@@ -1,7 +1,7 @@
 ---
 sidebar_label: duplicate-card
 title: duplicate-card Event API
-description: You can learn about the duplicate-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the duplicate-card event API for DHTMLX Kanban. Learn how to handle the event triggered when duplicating a card.
 ---
 
 # duplicate-card

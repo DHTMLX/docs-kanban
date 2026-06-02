@@ -1,7 +1,7 @@
 ---
 sidebar_label: deleteCard()
 title: deleteCard Method API
-description: You can learn about the deleteCard method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the deleteCard method API for DHTMLX Kanban. Learn how to remove a card from the board by its ID.
 ---
 
 # deleteCard()

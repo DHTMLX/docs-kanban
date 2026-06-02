@@ -1,7 +1,7 @@
 ---
 sidebar_label: locale
 title: Toolbar locale Config API
-description: You can learn about the (Toolbar) locale config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the Toolbar locale configuration API for DHTMLX Kanban. Learn how to apply a custom locale to the Toolbar.
 ---
 
 # locale

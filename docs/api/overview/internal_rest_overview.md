@@ -1,7 +1,7 @@
 ---
 sidebar_label: RestDataProvider methods
 title: RestDataProvider Methods Overview
-description: You can have an Internal RestDataProvider methods overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Browse the RestDataProvider methods overview for DHTMLX Kanban. Find methods to load data, send requests, and manage the queue.
 ---
 
 # RestDataProvider methods

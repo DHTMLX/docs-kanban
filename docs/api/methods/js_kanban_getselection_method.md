@@ -1,7 +1,7 @@
 ---
 sidebar_label: getSelection()
 title: getSelection Method API
-description: You can learn about the getSelection method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the getSelection method API for DHTMLX Kanban. Learn how to get the IDs of the currently selected cards.
 ---
 
 # getSelection()

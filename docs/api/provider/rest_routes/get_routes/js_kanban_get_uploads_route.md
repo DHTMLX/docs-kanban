@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /uploads
 title: GET /uploads REST Route API
-description: You can learn about the GET /uploads REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the GET /uploads REST route API for DHTMLX Kanban. Learn how to get a requested binary file from the server.
 ---
 
 # GET `/uploads`

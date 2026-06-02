@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /rows
 title: DELETE /rows REST Route API
-description: You can learn about the DELETE /rows REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the DELETE /rows REST route API for DHTMLX Kanban. Learn how to delete a row (swimlane).
 ---
 
 # DELETE `/rows`

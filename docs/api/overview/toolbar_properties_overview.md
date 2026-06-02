@@ -1,7 +1,7 @@
 ---
 sidebar_label: Toolbar properties overview
 title: Toolbar Properties Overview
-description: You can have a Toolbar Properties overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Browse the Toolbar properties overview for DHTMLX Kanban. Find configuration properties for the Toolbar items and API.
 ---
 
 # Toolbar properties overview

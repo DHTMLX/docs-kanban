@@ -1,7 +1,7 @@
 ---
 sidebar_label: getColumns()
 title: getColumns REST Method API
-description: You can learn about the getColumns REST method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the getColumns REST method API for DHTMLX Kanban. Learn how to get a promise with columns data.
 ---
 
 # getColumns()

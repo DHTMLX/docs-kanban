@@ -1,7 +1,7 @@
 ---
 sidebar_label: $meta
 title: $meta Parameter API
-description: You can learn about the $meta parameter in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the $meta parameter API for DHTMLX Kanban. Learn how to pass extra settings for configuring methods and events.
 ---
 
 # $meta

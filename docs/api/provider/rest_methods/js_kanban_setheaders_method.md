@@ -1,7 +1,7 @@
 ---
 sidebar_label: setHeaders()
 title: setHeaders REST Method API
-description: You can learn about the setHeaders REST method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read the setHeaders REST method API for DHTMLX Kanban. Learn how to set custom HTTP headers attached to every request.
 ---
 
 # setHeaders()
