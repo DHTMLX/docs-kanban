@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.exec()
-title: exec Method
-description: You can learn about the exec method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: exec Method API
+description: Read the exec method API for DHTMLX Kanban. Learn how to trigger board actions and internal events programmatically.
 ---
 
 # api.exec()

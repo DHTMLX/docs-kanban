@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-card
-title: delete-card Event
-description: You can learn about the delete-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: delete-card Event API
+description: Read the delete-card event API for DHTMLX Kanban. Learn how to handle the event triggered when removing a card.
 ---
 
 # delete-card

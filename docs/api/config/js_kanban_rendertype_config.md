@@ -1,7 +1,7 @@
 ---
 sidebar_label: renderType
-title: renderType Config
-description: You can learn about the renderType config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: renderType Config API
+description: Read the renderType configuration API for DHTMLX Kanban. Learn how to enable lazy rendering and optimize large boards.
 ---
 
 # renderType

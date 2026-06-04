@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration with Svelte
-title: Integration with Svelte
-description: You can learn about the integration with Svelte in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Svelte Kanban Integration Guide
+description: Follow the DHTMLX Kanban Svelte integration guide. Learn setup, configuration, API usage, and component lifecycle patterns.
 ---
 
 # Integration with Svelte

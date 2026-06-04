@@ -1,7 +1,7 @@
 ---
 sidebar_label: deleteComment()
-title: deleteComment Method
-description: You can learn about the deleteComment method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: deleteComment Method API
+description: Read the deleteComment method API for DHTMLX Kanban. Learn how to delete a card comment by its ID.
 ---
 
 # deleteComment()

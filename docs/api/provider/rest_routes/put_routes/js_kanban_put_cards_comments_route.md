@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /cards/{id}/comments/{id}
-title: PUT /cards/{cardId}/comments/{commentId}
-description: You can learn about the PUT /cards/{cardId}/comments/{cardId} REST route in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: PUT /cards/{cardId}/comments/{commentId} REST Route API
+description: Read the PUT /cards/{cardId}/comments/{commentId} REST route API for DHTMLX Kanban. Learn how to update a card comment and return its ID.
 ---
 
 # PUT `/cards/{cardId}/comments/{commentId}`

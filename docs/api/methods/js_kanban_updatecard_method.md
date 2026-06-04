@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateCard()
-title: updateCard Method
-description: You can learn about the updateCard method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: updateCard Method API
+description: Read the updateCard method API for DHTMLX Kanban. Learn how to update card data by its ID.
 ---
 
 # updateCard()

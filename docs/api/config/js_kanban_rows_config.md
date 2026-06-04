@@ -1,7 +1,7 @@
 ---
 sidebar_label: rows
-title: rows Config
-description: You can learn about the rows config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: rows Config API
+description: Read the rows configuration API for DHTMLX Kanban. Learn how to define swimlanes, row labels, limits, and horizontal board grouping.
 ---
 
 # rows

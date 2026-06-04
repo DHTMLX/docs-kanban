@@ -1,7 +1,7 @@
 ---
 sidebar_label: Properties overview
 title: Properties Overview
-description: You can have a Properties overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Browse the properties overview for DHTMLX Kanban. Find all configuration properties for cards, columns, rows, and editor.
 ---
 
 # Kanban properties overview

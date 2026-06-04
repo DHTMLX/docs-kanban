@@ -1,7 +1,7 @@
 ---
 sidebar_label: scrollType
-title: scrollType Config
-description: You can learn about the scrollType config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: scrollType Config API
+description: Read the scrollType configuration API for DHTMLX Kanban. Learn how to configure board scrolling and column scroll behavior.
 ---
 
 # scrollType

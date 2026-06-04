@@ -1,7 +1,7 @@
 ---
 sidebar_label: Stylization
-title: Stylization
-description: You can learn about the stylization in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Kanban Stylization Guide
+description: Read the DHTMLX Kanban stylization guide. Learn how to style cards, columns, and rows with CSS classes and CSS variables.
 ---
 
 # Stylization

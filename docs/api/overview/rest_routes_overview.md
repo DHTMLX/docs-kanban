@@ -1,7 +1,7 @@
 ---
 sidebar_label: REST routes overview
-title: REST routes overview
-description: You can have an Internal RestDataProvider routes overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: REST Routes Overview
+description: Browse the REST routes overview for DHTMLX Kanban. Find all backend endpoints for cards, columns, rows, links, comments, and votes.
 ---
 
 # REST routes overview

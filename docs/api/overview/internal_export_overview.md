@@ -1,7 +1,7 @@
 ---
 sidebar_label: Export methods
-title: Export methods
-description: You can have an Internal Export methods overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Export Methods Overview
+description: Browse the export methods overview for DHTMLX Kanban. Find internal methods to export and serialize board data.
 ---
 
 # Export methods

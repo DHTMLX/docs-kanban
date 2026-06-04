@@ -1,7 +1,7 @@
 ---
 sidebar_label: links
-title: links Config
-description: You can learn about the links config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: links Config API
+description: Read the links configuration API for DHTMLX Kanban. Learn how to define task dependencies and link data between cards.
 ---
 
 # links

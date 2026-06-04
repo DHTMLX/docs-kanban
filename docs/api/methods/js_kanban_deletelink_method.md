@@ -1,7 +1,7 @@
 ---
 sidebar_label: deleteLink()
-title: deleteLink Method
-description: You can learn about the deleteLink method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: deleteLink Method API
+description: Read the deleteLink method API for DHTMLX Kanban. Learn how to remove a link from the board by its ID.
 ---
 
 # deleteLink()

@@ -1,8 +1,8 @@
 ---
 sidebar_label: Kanban overview
-title: JavaScript Kanban Overview
+title: JavaScript Kanban API & Guides
 slug: /
-description: You can have an overview of DHTMLX JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Read DHTMLX JavaScript Kanban documentation with API reference, developer guides, configuration options, and examples for building Kanban boards.
 ---
 
 # DHTMLX Kanban overview
