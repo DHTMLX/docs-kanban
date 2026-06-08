@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /links
-title: DELETE /links
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route DELETE /links. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: DELETE /links REST-Route API
+description: Lesen Sie die API-Referenz der REST-Route DELETE /links für DHTMLX Kanban. Erfahren Sie, wie Sie einen Link löschen.
 ---
 
 # DELETE `/links`
@@ -31,6 +31,7 @@ Es werden keine Daten zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfra
 ---
 
 **Verwandte Artikel**:
-- [Working with server](guides/working_with_server.md)
+
+- [Arbeiten mit dem Server](guides/working_with_server.md)
 - [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
 - [links](api/config/js_kanban_links_config.md)

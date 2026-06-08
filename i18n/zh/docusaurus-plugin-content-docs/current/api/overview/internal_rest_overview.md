@@ -1,7 +1,7 @@
 ---
 sidebar_label: RestDataProvider 方法
-title: RestDataProvider 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中查看 JavaScript 看板的内部 RestDataProvider 方法概述。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
+title: RestDataProvider 方法概览
+description: 浏览 DHTMLX Kanban 的 RestDataProvider 方法概览。查找用于加载数据、发送请求和管理队列的方法。
 ---
 
 # RestDataProvider 方法

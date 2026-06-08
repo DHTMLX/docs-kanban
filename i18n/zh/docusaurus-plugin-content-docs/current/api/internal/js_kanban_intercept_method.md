@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.intercept()
-title: intercept 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 intercept 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
+title: intercept 方法 API
+description: 阅读 DHTMLX Kanban 的 intercept 方法 API。了解如何在事件应用之前捕获、修改或阻止看板事件。
 ---
 
 # api.intercept()

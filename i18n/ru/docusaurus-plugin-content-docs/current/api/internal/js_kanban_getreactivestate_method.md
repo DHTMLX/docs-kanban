@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getReactiveState()
-title: Метод getReactiveState
-description: Вы можете узнать о методе getReactiveState в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода getReactiveState
+description: Ознакомьтесь с API метода getReactiveState для DHTMLX Kanban. Узнайте, как получить объект с реактивными свойствами доски.
 ---
 
 # api.getReactiveState()

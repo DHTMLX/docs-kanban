@@ -142,7 +142,7 @@ board.setConfig({ columns, cards, rows });
 
 ## Sync data with Gantt and Scheduler
 
-For multi-widget integration, see [Integration with DHTMLX widgets](guides/integration.md#gantt-and-scheduler).
+For multi-widget integration, see [Integration with DHTMLX widgets](guides/integration.md#gantt-event-calendar-and-to-do-list).
 
 ## Get data
 

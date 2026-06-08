@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /rows
-title: DELETE /rows
-description: Sie können mehr über die DELETE /rows REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: DELETE /rows REST-Route API
+description: Lesen Sie die API-Referenz der REST-Route DELETE /rows für DHTMLX Kanban. Erfahren Sie, wie Sie eine Zeile (Swimlane) löschen.
 ---
 
 # DELETE `/rows`
@@ -30,4 +30,4 @@ Es werden keine Daten zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfra
 
 ---
 
-**Verwandte Artikel**: [Working with server](guides/working_with_server.md)
+**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)

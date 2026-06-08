@@ -1,7 +1,7 @@
 ---
 sidebar_label: getAreaCards()
-title: getAreaCards Methode
-description: Sie können die getAreaCards-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getAreaCards Methode API
+description: Lesen Sie die API-Dokumentation der Methode getAreaCards für DHTMLX Kanban. Erfahren Sie, wie Sie alle Karten einer Spalte oder Zeile als Array von Datenobjekten abrufen.
 ---
 
 # getAreaCards()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: getColumns()
-title: getColumns REST-Methode
-description: Sie können die getColumns REST-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getColumns REST-Methode API
+description: Lesen Sie die API-Referenz der getColumns REST-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie ein Promise mit Spaltendaten abrufen.
 ---
 
 # getColumns()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateComment()
-title: Метод updateComment
-description: Ознакомьтесь с методом updateComment в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода updateComment
+description: Ознакомьтесь с API метода updateComment для DHTMLX Kanban. Узнайте, как обновить комментарий карточки по его ID.
 ---
 
 # updateComment()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /cards
-title: PUT /cards
-description: Sie können die PUT /cards REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: PUT /cards REST-Route API
+description: Lesen Sie die REST-Route-API PUT /cards für DHTMLX Kanban. Erfahren Sie, wie Sie Daten einer Karte aktualisieren.
 ---
 
 # PUT `/cards`

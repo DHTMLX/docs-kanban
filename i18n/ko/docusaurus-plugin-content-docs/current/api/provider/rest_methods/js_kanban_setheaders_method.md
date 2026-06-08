@@ -1,7 +1,7 @@
 ---
 sidebar_label: setHeaders()
-title: setHeaders REST 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 setHeaders REST 메서드에 대해 알아볼 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 직접 확인하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: setHeaders REST 메서드 API
+description: DHTMLX Kanban의 setHeaders REST 메서드 API를 확인하세요. 모든 요청에 첨부되는 사용자 정의 HTTP 헤더를 설정하는 방법을 알아보세요.
 ---
 
 # setHeaders()
@@ -39,4 +39,4 @@ restProvider.setHeaders({
 
 모든 요청이 아닌 특정 요청에만 헤더를 설정하려면, 대신 [`send()`](api/provider/rest_methods/js_kanban_send_method.md)의 네 번째 인수로 헤더를 전달하세요.
 
-**관련 문서:** [서버와 함께 작업하기: 멀티유저 백엔드](guides/working_with_server.md/#multiuser-backend)
+**관련 문서:** [서버와 함께 작업하기: 멀티유저 백엔드](guides/working_with_server.md#multiuser-backend)

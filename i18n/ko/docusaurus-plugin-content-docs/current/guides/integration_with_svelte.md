@@ -1,7 +1,7 @@
 ---
 sidebar_label: Svelte와의 통합
-title: Svelte와의 통합
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 Svelte와의 통합에 대해 알아보세요. 개발자 가이드와 API 레퍼런스를 둘러보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
+title: Svelte Kanban 통합 가이드
+description: DHTMLX Kanban Svelte 통합 가이드를 따라 진행하세요. 설정, 구성, API 사용법 및 컴포넌트 라이프사이클 패턴을 알아보세요.
 ---
 
 # Svelte와의 통합

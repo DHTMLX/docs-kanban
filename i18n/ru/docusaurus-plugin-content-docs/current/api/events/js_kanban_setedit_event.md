@@ -1,7 +1,7 @@
 ---
 sidebar_label: set-edit
-title: Событие set-edit
-description: Вы можете узнать о событии set-edit в документации по библиотеке DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события set-edit
+description: Прочитайте API события set-edit для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при переключении редактора.
 ---
 
 # set-edit

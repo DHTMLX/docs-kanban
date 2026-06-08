@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration mit Vue
-title: Integration mit Vue
-description: Erfahren Sie in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die Integration mit Vue. Durchstöbern Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: Vue Kanban Integrationsanleitung
+description: Folgen Sie der DHTMLX Kanban Vue-Integrationsanleitung. Erfahren Sie mehr über Komponenteneinrichtung, Konfiguration, API-Nutzung und App-Integration.
 ---
 
 # Integration mit Vue
@@ -358,7 +358,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="DHTMLX Kanban Board, das in einer Vue-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
+  alt="DHTMLX Kanban-Board, das in einer Vue-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
   className="img_border"
 />
 

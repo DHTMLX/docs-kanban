@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardHeight
-title: cardHeight 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 cardHeight 配置。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
+title: cardHeight 配置 API
+description: 阅读 DHTMLX Kanban 的 cardHeight 配置 API。了解固定卡片高度如何支持布局和懒加载渲染。
 ---
 
 # cardHeight

@@ -1,7 +1,7 @@
 ---
 sidebar_label: 状态方法
-title: 状态方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的内部状态方法概述。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: 状态方法概览
+description: 浏览 DHTMLX Kanban 的状态方法概览。查找用于访问响应式状态、存储和配置的内部方法。
 ---
 
 # 状态方法

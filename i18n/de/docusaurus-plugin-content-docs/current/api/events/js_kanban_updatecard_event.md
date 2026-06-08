@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-card
-title: update-card Event
-description: Sie können das update-card Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: update-card Ereignis API
+description: Lesen Sie die update-card Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Aktualisieren von Kartendaten ausgelöst wird.
 ---
 
 # update-card

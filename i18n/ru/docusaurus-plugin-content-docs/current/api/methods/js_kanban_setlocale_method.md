@@ -1,7 +1,7 @@
 ---
 sidebar_label: setLocale()
-title: Метод setLocale
-description: Вы можете узнать о методе setLocale в документации по JavaScript библиотеке DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демонстрации, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Метод setLocale API
+description: Изучите API метода setLocale для DHTMLX Kanban. Узнайте, как сменить язык интерфейса и настроить локализацию.
 ---
 
 # setLocale()

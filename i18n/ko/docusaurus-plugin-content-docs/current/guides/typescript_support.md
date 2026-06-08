@@ -1,7 +1,7 @@
 ---
 sidebar_label: TypeScript 지원
-title: TypeScript 지원
-description: DHTMLX JavaScript Kanban 라이브러리에서 TypeScript를 사용하는 방법에 대해 문서에서 확인할 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 직접 시도해 보며, DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
+title: Kanban TypeScript 지원 가이드
+description: DHTMLX Kanban TypeScript 지원 가이드를 따라 TypeScript 프로젝트에서 내장 타입 정의와 타입이 지정된 구성을 사용하는 방법을 알아보세요.
 ---
 
 # TypeScript 지원

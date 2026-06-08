@@ -1,7 +1,7 @@
 ---
 sidebar_label: Übersicht der Toolbar-Eigenschaften
 title: Übersicht der Toolbar-Eigenschaften
-description: Eine Übersicht der Toolbar-Eigenschaften von JavaScript Kanban finden Sie in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Durchsuchen Sie die Übersicht der Toolbar-Eigenschaften für DHTMLX Kanban. Finden Sie Konfigurationseigenschaften für die Toolbar-Elemente und die API.
 ---
 
 # Übersicht der Toolbar-Eigenschaften

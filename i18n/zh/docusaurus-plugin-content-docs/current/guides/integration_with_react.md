@@ -1,7 +1,7 @@
 ---
 sidebar_label: 与 React 集成
-title: 与 React 集成
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解与 React 的集成。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的 30 天免费评估版。
+title: React Kanban 集成指南
+description: 参阅 DHTMLX Kanban React 集成指南。了解组件设置、配置、API 使用及生命周期处理。
 ---
 
 # 与 React 集成
@@ -56,7 +56,7 @@ npm run dev
 
 ### 步骤 1. 安装包
 
-下载 [**试用版 Kanban 包**](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤操作。试用版可使用 30 天。
+下载 [**试用版 Kanban 包**](/how_to_start/#installing-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤操作。试用版可使用 30 天。
 
 ### 步骤 2. 创建组件
 

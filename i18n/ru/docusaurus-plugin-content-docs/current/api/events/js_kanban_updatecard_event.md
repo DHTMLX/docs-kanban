@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-card
-title: Событие update-card
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о событии update-card. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события update-card
+description: Прочитайте API события update-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при обновлении данных карточки.
 ---
 
 # update-card

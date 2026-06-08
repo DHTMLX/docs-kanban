@@ -1,7 +1,7 @@
 ---
 sidebar_label: set-edit
-title: set-edit Event
-description: Sie können mehr über das set-edit Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: set-edit Ereignis API
+description: Lesen Sie die set-edit Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Umschalten eines Editors ausgelöst wird.
 ---
 
 # set-edit

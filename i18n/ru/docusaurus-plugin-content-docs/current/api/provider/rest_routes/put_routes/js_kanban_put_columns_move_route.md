@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /columns/{id}/move
-title: PUT /columns/{id}/move
-description: Вы можете узнать о REST-маршруте PUT /columns/{id}/move в документации библиотеки DHTMLX JavaScript Kanban. Просматривайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута PUT /columns/{id}/move
+description: Ознакомьтесь с REST-маршрутом PUT /columns/{id}/move для DHTMLX Kanban. Узнайте, как переместить колонку на указанную позицию.
 ---
 
 # PUT `/columns/{id}/move`

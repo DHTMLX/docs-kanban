@@ -1,7 +1,7 @@
 ---
 sidebar_label: rowKey
-title: Конфигурация rowKey
-description: Вы можете ознакомиться с конфигурацией rowKey в документации JavaScript-библиотеки DHTMLX Kanban. Изучите руководства для разработчиков и справочник API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации rowKey
+description: Ознакомьтесь с документацией по конфигурации rowKey для DHTMLX Kanban. Узнайте, как привязывать карточки задач к строкам-swimlanes.
 ---
 
 # rowKey

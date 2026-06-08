@@ -1,7 +1,7 @@
 ---
 sidebar_label: getHandlers()
-title: getHandlers REST 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 getHandlers REST 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费 30 天评估版本的 DHTMLX Kanban。
+title: getHandlers REST 方法 API
+description: 阅读 DHTMLX Kanban 的 getHandlers REST 方法 API。了解如何获取向服务器发送操作的默认处理程序。
 ---
 
 # getHandlers()

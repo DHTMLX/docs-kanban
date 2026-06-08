@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getStores()
-title: Метод getStores
-description: Вы можете узнать о методе getStores в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода getStores
+description: Ознакомьтесь с API метода getStores для DHTMLX Kanban. Узнайте, как получить объект с параметрами DataStore доски.
 ---
 
 # api.getStores()

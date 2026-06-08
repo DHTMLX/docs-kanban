@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /uploads
-title: GET /uploads
-description: Вы можете узнать о REST-маршруте GET /uploads в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута GET /uploads
+description: Ознакомьтесь с REST-маршрутом GET /uploads для DHTMLX Kanban. Узнайте, как получить запрошенный бинарный файл с сервера.
 ---
 
 # GET `/uploads`

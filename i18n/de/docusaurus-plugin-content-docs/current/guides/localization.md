@@ -1,7 +1,7 @@
 ---
 sidebar_label: Lokalisierung
-title: Lokalisierung
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Lokalisierung. Stöbern Sie in Entwicklerhandbüchern und der API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Kanban-Lokalisierungsanleitung
+description: Lesen Sie die DHTMLX Kanban-Lokalisierungsanleitung. Erfahren Sie mehr über Locale-Konfiguration, Sprachpakete, setLocale-Verwendung und mehrsprachige UI-Einrichtung.
 ---
 
 # Lokalisierung

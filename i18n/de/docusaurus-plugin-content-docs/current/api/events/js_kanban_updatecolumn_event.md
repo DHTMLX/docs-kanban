@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-column
-title: update-column Event
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das update-column Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: update-column Ereignis API
+description: Lesen Sie die update-column Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Aktualisieren von Spaltendaten ausgelöst wird.
 ---
 
 # update-column

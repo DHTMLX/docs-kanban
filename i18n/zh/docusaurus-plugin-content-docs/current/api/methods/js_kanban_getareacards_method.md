@@ -1,7 +1,7 @@
 ---
 sidebar_label: getAreaCards()
-title: getAreaCards 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getAreaCards 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: getAreaCards 方法 API
+description: 阅读 DHTMLX Kanban 的 getAreaCards 方法 API。了解如何以数据对象数组的形式获取列或行中的所有卡片。
 ---
 
 # getAreaCards()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: 自定义
-title: 自定义
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解自定义相关内容。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的 30 天免费评估版本。
+title: Kanban 自定义指南
+description: 使用 DHTMLX Kanban 自定义指南，通过文档化的 API 模板修改模板、菜单、卡片、列及看板行为。
 ---
 
 # 自定义

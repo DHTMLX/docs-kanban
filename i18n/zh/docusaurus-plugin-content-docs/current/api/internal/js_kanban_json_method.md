@@ -1,7 +1,7 @@
 ---
 sidebar_label: export.json()
-title: json 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 json 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+title: json 方法 API
+description: 阅读 DHTMLX Kanban 的 json 方法 API。了解如何导出看板数据以及使用 JSON 任务结构。
 ---
 
 # export.json()

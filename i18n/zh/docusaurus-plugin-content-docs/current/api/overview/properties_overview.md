@@ -1,7 +1,7 @@
 ---
 sidebar_label: 属性概览
 title: 属性概览
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的属性概览。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+description: 浏览 DHTMLX Kanban 的属性概览。查找卡片、列、行和编辑器的所有配置属性。
 ---
 
 # Kanban 属性概览

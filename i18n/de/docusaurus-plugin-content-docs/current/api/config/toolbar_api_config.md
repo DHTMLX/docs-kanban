@@ -1,7 +1,7 @@
 ---
 sidebar_label: api
-title: api Konfiguration
-description: Sie können die (Toolbar) api Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Toolbar api Konfiguration API
+description: Lesen Sie die Toolbar api Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie die Toolbar mit der internen Kanban-API verbinden.
 ---
 
 # api

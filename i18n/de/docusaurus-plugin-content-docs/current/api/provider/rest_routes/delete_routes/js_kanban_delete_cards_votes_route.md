@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/vote
-title: DELETE /cards/{cardId}/vote
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route DELETE /cards/{cardId}/vote. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: DELETE /cards/{cardId}/vote REST-Route API
+description: Lesen Sie die API-Referenz der REST-Route DELETE /cards/{cardId}/vote für DHTMLX Kanban. Erfahren Sie, wie Sie eine Stimme von einer Karte entfernen.
 ---
 
 # DELETE `/cards/{cardId}/vote`
@@ -40,4 +40,4 @@ Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status ==
 
 ---
 
-**Verwandte Artikel**: [Working with server](guides/working_with_server.md)
+**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)

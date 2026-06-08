@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-column
-title: Событие move-column
-description: Вы можете узнать о событии move-column в документации JavaScript библиотеки DHTMLX Kanban. Просматривайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события move-column
+description: Ознакомьтесь с API события move-column для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при перемещении колонки.
 ---
 
 # move-column

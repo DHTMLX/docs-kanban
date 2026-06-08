@@ -61,7 +61,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | [Getting cards state](api/internal/js_kanban_getstate_method.md) | 学习如何获取卡片状态                  |
 | [Getting cards reactive state](api/internal/js_kanban_getreactivestate_method.md) | 学习如何获取卡片响应式状态 |
 | [Loading card data](api/config/js_kanban_cards_config.md)    | 学习如何加载初始卡片数据                 |
-| [Parsing card data](api/methods/js_kanban_parse_method.md)   | 学习如何解析卡片数据                     |
+| [动态加载卡片数据](api/methods/js_kanban_setconfig_method.md)   | 学习如何通过 `setConfig()` 在运行时加载卡片数据（或使用其别名 [`parse()`](api/methods/js_kanban_parse_method.md)）|
 | [Serializing card data](api/methods/js_kanban_serialize_method.md)| 学习如何序列化卡片数据 ([示例](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
 | [Updating card data](api/methods/js_kanban_updatecard_method.md)| 学习如何更新卡片数据                 |
 
@@ -117,7 +117,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | [Getting columns state](api/internal/js_kanban_getstate_method.md) | 学习如何获取列状态                       |
 | [Getting columns reactive state](api/internal/js_kanban_getreactivestate_method.md) | 学习如何获取列响应式状态         |
 | [Loading column data](api/config/js_kanban_columns_config.md)    | 学习如何加载初始列数据                     |
-| [Parsing column data](api/methods/js_kanban_parse_method.md)     | 学习如何解析列数据                         |
+| [动态加载列数据](api/methods/js_kanban_setconfig_method.md)     | 学习如何通过 `setConfig()` 在运行时加载列数据（或使用其别名 [`parse()`](api/methods/js_kanban_parse_method.md)）|
 | [Serializing column data](api/methods/js_kanban_serialize_method.md)| 学习如何序列化列数据                    |
 | [Updating column data](api/methods/js_kanban_updatecolumn_method.md)| 学习如何更新列数据                       |
 
@@ -143,7 +143,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | [Getting rows state](api/internal/js_kanban_getstate_method.md) | 学习如何获取行状态                          |
 | [Getting rows reactive state](api/internal/js_kanban_getreactivestate_method.md) | 学习如何获取行响应式状态           |
 | [Loading row data](api/config/js_kanban_rows_config.md)         | 学习如何加载初始行数据                      |
-| [Parsing row data](api/methods/js_kanban_parse_method.md)       | 学习如何解析行数据                          |
+| [动态加载行数据](api/methods/js_kanban_setconfig_method.md)       | 学习如何通过 `setConfig()` 在运行时加载行数据（或使用其别名 [`parse()`](api/methods/js_kanban_parse_method.md)）|
 | [Serializing row data](api/methods/js_kanban_serialize_method.md)| 学习如何序列化行数据                     |
 | [Updating row data](api/methods/js_kanban_updaterow_method.md)  | 学习如何更新行数据                          |
 

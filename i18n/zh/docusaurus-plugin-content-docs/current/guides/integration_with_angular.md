@@ -1,7 +1,7 @@
 ---
 sidebar_label: 与 Angular 的集成
-title: 与 Angular 的集成
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解与 Angular 的集成。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版。
+title: Angular Kanban 集成指南
+description: 参阅 DHTMLX Kanban Angular 集成指南。了解组件设置、配置、API 使用及项目结构。
 ---
 
 # 与 Angular 的集成
@@ -53,7 +53,7 @@ yarn start
 
 ### 步骤 1. 安装包
 
-下载 [试用版 Kanban 包](/how_to_start/#install-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤进行操作。试用版可使用 30 天。
+下载 [试用版 Kanban 包](/how_to_start/#installing-kanban-via-npm-or-yarn)，并按照 README 文件中的步骤进行操作。试用版可使用 30 天。
 
 ### 步骤 2. 创建组件
 

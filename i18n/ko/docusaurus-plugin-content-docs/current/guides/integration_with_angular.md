@@ -1,7 +1,7 @@
 ---
 sidebar_label: Angular와의 통합
-title: Angular와의 통합
-description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 Angular와의 통합에 대해 알아보세요. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 직접 시도해보고, DHTMLX Kanban의 무료 30일 평가판도 다운로드해보세요.
+title: Angular Kanban 통합 가이드
+description: DHTMLX Kanban Angular 통합 가이드를 따라 진행하세요. 컴포넌트 설정, 구성, API 사용법 및 프로젝트 구조를 알아보세요.
 ---
 
 # Angular와의 통합

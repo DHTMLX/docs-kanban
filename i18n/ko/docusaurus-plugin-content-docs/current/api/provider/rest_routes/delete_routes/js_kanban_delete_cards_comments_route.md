@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/comments/{id}
-title: DELETE /cards/{cardId}/comments/{commentId}
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 DELETE /cards/{cardId}/comments/{commentId} REST 경로에 대해 알아보세요. 개발자 가이드 및 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: DELETE /cards/{cardId}/comments/{commentId} REST 경로 API
+description: DHTMLX Kanban의 DELETE /cards/{cardId}/comments/{commentId} REST 경로 API를 확인하세요. 카드에서 댓글을 삭제하는 방법을 알아보세요.
 ---
 
 # DELETE `/cards/{cardId}/comments/{commentId}`

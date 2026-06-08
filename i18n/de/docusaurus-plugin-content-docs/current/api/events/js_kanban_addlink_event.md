@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-link
-title: add-link Event
-description: Sie können mehr über das add-link Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: add-link Ereignis API
+description: Lesen Sie die add-link Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Hinzufügen eines neuen Links ausgelöst wird.
 ---
 
 # add-link

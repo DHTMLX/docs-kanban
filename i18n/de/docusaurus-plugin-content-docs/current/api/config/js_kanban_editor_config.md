@@ -1,7 +1,7 @@
 ---
 sidebar_label: editor
-title: editor-Konfiguration
-description: Sie können mehr über die editor-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: editor Konfiguration API
+description: Lesen Sie die editor Konfigurationsdokumentation für DHTMLX Kanban. Erfahren Sie, wie Sie den Aufgabeneditor aktivieren, anpassen und steuern.
 ---
 
 # editor

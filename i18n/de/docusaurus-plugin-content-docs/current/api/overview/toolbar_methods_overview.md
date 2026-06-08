@@ -1,7 +1,7 @@
 ---
 sidebar_label: Übersicht der Toolbar-Methoden
 title: Übersicht der Toolbar-Methoden
-description: Sie können eine Übersicht der Toolbar-Methoden von JavaScript Kanban in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek finden. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Durchsuchen Sie die Übersicht der Toolbar-Methoden für DHTMLX Kanban. Finden Sie Methoden zur Konfiguration, Lokalisierung und zum Zerstören der Toolbar.
 ---
 
 # Übersicht der Toolbar-Methoden

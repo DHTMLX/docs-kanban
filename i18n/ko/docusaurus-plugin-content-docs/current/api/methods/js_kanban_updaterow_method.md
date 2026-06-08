@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateRow()
-title: updateRow 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 updateRow 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: updateRow Method API
+description: DHTMLX Kanban의 updateRow 메서드 API를 확인하세요. 스윔레인 행 속성, 스타일 및 메뉴를 업데이트하는 방법을 알아보세요.
 ---
 
 # updateRow()

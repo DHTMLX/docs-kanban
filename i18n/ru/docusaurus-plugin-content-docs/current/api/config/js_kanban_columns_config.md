@@ -1,7 +1,7 @@
 ---
 sidebar_label: columns
-title: columns Config
-description: Вы можете узнать о конфигурации columns в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации columns
+description: Ознакомьтесь с документацией по конфигурации columns для DHTMLX Kanban. Узнайте, как задавать ID колонок, метки, лейаут и структуру рабочего процесса.
 ---
 
 # columns

@@ -1,7 +1,7 @@
 ---
 sidebar_label: Initialisierung
-title: Initialisierung
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Initialisierung. Durchstöbern Sie Entwicklerhandbücher und API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: Kanban-Initialisierungshandbuch
+description: Folgen Sie dem DHTMLX-Kanban-Initialisierungshandbuch. Erfahren Sie mehr über Konstruktor-Einrichtung, erforderliche Konfiguration, Spalten, Karten und Board-Initialisierung.
 ---
 
 # Initialisierung

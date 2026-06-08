@@ -1,7 +1,7 @@
 ---
 sidebar_label: select-card
-title: Событие select-card
-description: Вы можете узнать о событии select-card в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события select-card
+description: Прочитайте API события select-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при выборе карточки.
 ---
 
 # select-card

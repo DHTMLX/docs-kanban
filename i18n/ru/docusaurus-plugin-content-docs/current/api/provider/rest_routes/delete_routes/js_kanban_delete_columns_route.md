@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /columns
-title: DELETE /columns
-description: Вы можете узнать о REST-маршруте DELETE /columns в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута DELETE /columns
+description: Ознакомьтесь с REST-маршрутом DELETE /columns для DHTMLX Kanban. Узнайте, как удалить колонку.
 ---
 
 # DELETE `/columns`

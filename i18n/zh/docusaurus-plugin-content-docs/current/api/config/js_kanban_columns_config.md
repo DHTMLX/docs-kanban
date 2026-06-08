@@ -1,7 +1,7 @@
 ---
 sidebar_label: columns
-title: columns 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 columns 配置。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
+title: columns 配置 API
+description: 阅读 DHTMLX Kanban 的 columns 配置文档。了解如何设置列 ID、标签、布局和工作流结构。
 ---
 
 # columns
@@ -116,7 +116,7 @@ new kanban.Kanban("#root", {
 **更新日志：** **css** 和 **overlay** 参数在 v1.4 中添加
 
 **相关文档：**
-- [处理数据](guides/working_with_data.md)
+- [数据操作](guides/working_with_data.md)
 - [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 
 **相关示例：**

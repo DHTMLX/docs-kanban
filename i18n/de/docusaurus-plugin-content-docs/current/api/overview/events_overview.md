@@ -1,7 +1,7 @@
 ---
 sidebar_label: Ereignisübersicht
-title: Ereignisübersicht
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek finden Sie eine Übersicht der Ereignisse von JavaScript Kanban. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Events Overview
+description: Durchsuchen Sie die Ereignisübersicht für DHTMLX Kanban. Finden Sie alle Board-Ereignisse für Karten, Spalten, Zeilen, Links, Abstimmungen und mehr.
 ---
 
 # Ereignisübersicht

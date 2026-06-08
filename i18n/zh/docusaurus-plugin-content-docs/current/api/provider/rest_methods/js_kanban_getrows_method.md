@@ -1,7 +1,7 @@
 ---
 sidebar_label: getRows()
-title: getRows REST 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getRows REST 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天试用版本。
+title: getRows REST 方法 API
+description: 阅读 DHTMLX Kanban 的 getRows REST 方法 API。了解如何获取包含行数据的 promise。
 ---
 
 # getRows()

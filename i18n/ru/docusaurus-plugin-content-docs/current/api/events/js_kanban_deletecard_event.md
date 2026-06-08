@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-card
-title: Событие delete-card
-description: Вы можете узнать о событии delete-card в документации по JavaScript библиотеке Kanban от DHTMLX. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события delete-card
+description: Ознакомьтесь с API события delete-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при удалении карточки.
 ---
 
 # delete-card

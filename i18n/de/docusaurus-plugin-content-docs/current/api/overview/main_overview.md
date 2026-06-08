@@ -1,7 +1,7 @@
 ---
 sidebar_label: API Übersicht
-title: API Übersicht
-description: Sie finden eine API Übersicht von JavaScript Kanban in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: Kanban API Übersicht
+description: Durchsuchen Sie die DHTMLX Kanban API Übersicht. Finden Sie Konfigurationsreferenzen, Methoden, Ereignisse, Toolbar-APIs und Entwicklerdokumentation.
 ---
 
 # API Übersicht

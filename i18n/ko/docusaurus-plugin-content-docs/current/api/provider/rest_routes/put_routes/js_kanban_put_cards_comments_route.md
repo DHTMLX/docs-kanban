@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /cards/{id}/comments/{id}
-title: PUT /cards/{cardId}/comments/{commentId}
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 PUT /cards/{cardId}/comments/{cardId} REST 경로에 대해 알아보실 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해 보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: PUT /cards/{cardId}/comments/{commentId} REST Route API
+description: DHTMLX Kanban의 PUT /cards/{cardId}/comments/{commentId} REST 경로 API를 확인하세요. 카드 댓글을 업데이트하고 해당 ID를 반환하는 방법을 알아보세요.
 ---
 
 # PUT `/cards/{cardId}/comments/{commentId}`

@@ -1,7 +1,7 @@
 ---
-sidebar_label: rückgängig
-title: undo Event
-description: Sie können mehr über das undo Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+sidebar_label: undo
+title: undo Ereignis API
+description: Lesen Sie die undo Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Rückgängigmachen der letzten Operation in Kanban ausgelöst wird.
 ---
 
 # undo

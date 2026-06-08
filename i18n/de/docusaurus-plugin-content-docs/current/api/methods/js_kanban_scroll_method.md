@@ -1,7 +1,7 @@
 ---
 sidebar_label: scroll()
-title: scroll Methode
-description: Sie können die scroll Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: scroll Methode API
+description: Lesen Sie die API-Dokumentation der scroll-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie das Board zu einem bestimmten Element scrollen.
 ---
 
 # scroll()

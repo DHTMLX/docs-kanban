@@ -1,7 +1,7 @@
 ---
 sidebar_label: DHTMLX 위젯과의 통합
-title: DHTMLX 위젯과의 통합
-description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 통합 방법을 확인할 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드해 보세요.
+title: DHTMLX 위젯 - Kanban 통합 가이드
+description: DHTMLX Gantt, Event Calendar, To Do List 위젯을 위한 DHTMLX Kanban 통합 가이드를 따라 진행하세요. Kanban을 Gantt 및 기타 DHTMLX 컴포넌트와 함께 하나의 앱에서 사용하는 방법을 알아보세요.
 ---
 
 # DHTMLX 위젯과의 통합

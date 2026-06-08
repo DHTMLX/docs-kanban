@@ -1,7 +1,7 @@
 ---
 sidebar_label: 서버와 함께 작업하기
-title: 서버와 함께 작업하기
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 서버와 함께 작업하는 방법을 알아보세요. 개발자 가이드와 API 레퍼런스를 확인하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
+title: Kanban 서버 연동 가이드
+description: DHTMLX Kanban 서버 연동 가이드를 읽어보세요. REST 데이터 provider, 백엔드 동기화, 원격 이벤트, API 구성 방법을 알아봅니다.
 ---
 
 # 서버와 함께 작업하기

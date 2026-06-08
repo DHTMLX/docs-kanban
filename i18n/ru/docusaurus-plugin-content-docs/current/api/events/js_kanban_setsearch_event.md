@@ -1,7 +1,7 @@
 ---
 sidebar_label: set-search
-title: Событие set-search
-description: Вы можете узнать о событии set-search в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события set-search
+description: Прочитайте API события set-search для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при поиске карточек.
 ---
 
 # set-search

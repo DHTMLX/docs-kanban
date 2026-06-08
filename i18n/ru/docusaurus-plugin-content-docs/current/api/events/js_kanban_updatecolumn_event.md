@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-column
-title: Событие update-column
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о событии update-column. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события update-column
+description: Прочитайте API события update-column для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при обновлении данных колонки.
 ---
 
 # update-column

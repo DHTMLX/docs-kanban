@@ -1,7 +1,7 @@
 ---
 sidebar_label: locale
-title: locale 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 locale 配置。浏览开发者指南和 API 参考，试用代码示例和实时演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: locale 配置 API
+description: 阅读 DHTMLX Kanban 的 locale 配置 API。了解如何为看板界面应用自定义语言环境。
 ---
 
 # locale

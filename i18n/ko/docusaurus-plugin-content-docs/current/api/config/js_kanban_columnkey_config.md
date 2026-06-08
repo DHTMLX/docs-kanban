@@ -1,7 +1,7 @@
 ---
 sidebar_label: columnKey
-title: columnKey 설정
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 columnKey 설정에 대해 알아보세요. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 시도하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: columnKey Config API
+description: DHTMLX Kanban의 columnKey 구성 API를 읽어보세요. 사용자 정의 데이터 키로 카드를 열에 바인딩하는 방법을 알아볼 수 있습니다.
 ---
 
 # columnKey

@@ -1,7 +1,7 @@
 ---
 sidebar_label: setConfig()
-title: Метод setConfig
-description: Вы можете ознакомиться с методом setConfig в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Метод setConfig API
+description: Изучите API метода setConfig для DHTMLX Kanban. Узнайте, как динамически обновлять конфигурацию доски во время выполнения.
 ---
 
 # setConfig()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: setSort()
-title: Метод setSort
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете ознакомиться с методом setSort. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Метод setSort API
+description: Изучите API метода setSort для DHTMLX Kanban. Узнайте, как сортировать карточки по заданным параметрам.
 ---
 
 # setSort()

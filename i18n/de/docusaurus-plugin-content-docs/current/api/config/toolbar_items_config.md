@@ -1,7 +1,7 @@
 ---
 sidebar_label: items
-title: items Konfiguration
-description: Sie können die Konfiguration der (Toolbar) items in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek nachlesen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: Toolbar items Konfiguration API
+description: Lesen Sie die Toolbar items Konfigurationsdokumentation für DHTMLX Kanban. Erfahren Sie, wie Sie Toolbar-Schaltflächen, Suche, Undo und Steuerelemente konfigurieren.
 ---
 
 # items

@@ -1,7 +1,7 @@
 ---
 sidebar_label: 常用设置
-title: 常用设置
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的常用设置概述。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: 常用设置概览
+description: 浏览 DHTMLX Kanban 的常用设置概览。查找跨 board API 使用的共享配置属性。
 ---
 
 # 常用设置

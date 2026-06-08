@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardTemplate
-title: cardTemplate 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 cardTemplate 구성에 대해 알아볼 수 있습니다. 개발자 가이드 및 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드하세요.
+title: cardTemplate Config API
+description: DHTMLX Kanban의 cardTemplate 구성 설명서를 읽어보세요. 작업 카드에 맞춤 HTML 템플릿을 만드는 방법을 알아볼 수 있습니다.
 ---
 
 # cardTemplate

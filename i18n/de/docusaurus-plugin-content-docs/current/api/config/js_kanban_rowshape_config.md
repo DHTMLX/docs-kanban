@@ -1,7 +1,7 @@
 ---
 sidebar_label: rowShape
-title: rowShape Konfiguration
-description: Sie können mehr über die rowShape-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Code-Beispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: rowShape Konfiguration API
+description: Lesen Sie die rowShape Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie Swimlane-Zeilenkopfzeilen und Menüs anpassen.
 ---
 
 # rowShape

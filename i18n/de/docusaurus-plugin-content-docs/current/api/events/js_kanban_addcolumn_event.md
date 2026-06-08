@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-column
-title: add-column Ereignis
-description: Sie können das add-column Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: add-column Ereignis API
+description: Lesen Sie die add-column Ereignis-API für DHTMLX Kanban. Erfahren Sie, wie Sie das Ereignis behandeln, das beim Hinzufügen einer neuen Spalte ausgelöst wird.
 ---
 
 # add-column

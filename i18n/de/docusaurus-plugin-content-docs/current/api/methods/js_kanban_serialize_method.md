@@ -1,7 +1,7 @@
 ---
 sidebar_label: serialize()
-title: serialize Methode
-description: Sie können mehr über die serialize Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: serialize Methode API
+description: Lesen Sie die API-Dokumentation der serialize-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie die Board-Daten in JSON serialisieren.
 ---
 
 # serialize()

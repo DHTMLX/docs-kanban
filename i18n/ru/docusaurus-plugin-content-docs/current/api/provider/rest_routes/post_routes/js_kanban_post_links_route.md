@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /links
-title: POST /links
-description: Вы можете ознакомиться с REST маршрутом POST /links в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута POST /links
+description: Ознакомьтесь с API REST-маршрута POST /links для DHTMLX Kanban. Узнайте, как создать новую связь и получить её новый ID.
 ---
 
 # POST `/links`

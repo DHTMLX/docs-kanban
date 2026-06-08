@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateRow()
-title: updateRow-Methode
-description: Erfahren Sie mehr über die updateRow-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: updateRow Methode API
+description: Lesen Sie die updateRow Method API für DHTMLX Kanban. Erfahren Sie, wie Sie Zeilen-Eigenschaften, Stile und Menüs von Swimlanes aktualisieren.
 ---
 
 # updateRow()

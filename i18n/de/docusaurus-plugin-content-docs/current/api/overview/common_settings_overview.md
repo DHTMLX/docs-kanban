@@ -1,7 +1,7 @@
 ---
 sidebar_label: Allgemeine Einstellungen
-title: Allgemeine Einstellungen
-description: Sie finden eine Übersicht der allgemeinen Einstellungen von JavaScript Kanban in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Common Settings Overview
+description: Durchsuchen Sie die Übersicht der allgemeinen Einstellungen für DHTMLX Kanban. Finden Sie gemeinsame Konfigurationseigenschaften, die in der Board-API verwendet werden.
 ---
 
 # Allgemeine Einstellungen

@@ -1,7 +1,7 @@
 ---
 sidebar_label: locale
-title: locale-Konfiguration
-description: Sie können die locale-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: locale Konfiguration API
+description: Lesen Sie die locale Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie eine benutzerdefinierte Lokalisierung auf die Board-Oberfläche anwenden.
 ---
 
 # locale

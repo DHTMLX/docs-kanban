@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards
-title: POST /cards
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 POST /cards REST 경로에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: POST /cards REST Route API
+description: DHTMLX Kanban의 POST /cards REST route API를 확인하세요. 새 카드를 생성하고 새 카드 ID를 반환하는 방법을 알아보세요.
 ---
 
 # POST `/cards`

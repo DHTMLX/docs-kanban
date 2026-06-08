@@ -1,7 +1,7 @@
 ---
 sidebar_label: moveCard()
-title: Метод moveCard
-description: Вы можете ознакомиться с методом moveCard в документации библиотеки DHTMLX JavaScript Kanban. Просматривайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода moveCard
+description: Ознакомьтесь с API метода moveCard для DHTMLX Kanban. Узнайте, как переместить карточку в определённый столбец или строку.
 ---
 
 # moveCard()

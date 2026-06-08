@@ -1,8 +1,8 @@
 ---
 sidebar_label: Kanban overview
-title: JavaScript Kanban Overview
+title: JavaScript Kanban API & Guides
 slug: /
-description: DHTMLX JavaScript Kanban 라이브러리에 대한 개요를 문서에서 확인하실 수 있습니다. 개발자 가이드와 API 레퍼런스를 둘러보고, 코드 예제와 라이브 데모를 체험해 보세요. DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
+description: DHTMLX JavaScript Kanban 문서에서 API 레퍼런스, 개발자 가이드, 구성 옵션, Kanban 보드 구축 예제를 확인하세요.
 ---
 
 # DHTMLX Kanban 개요
@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
     src={toolbar}
-    alt="검색창, 정렬 컨트롤, undo/redo 버튼, 컬럼 및 행 추가 컨트롤이 포함된 DHTMLX Kanban Toolbar"
+    alt="검색창, 정렬 컨트롤, undo/redo 버튼, 컬럼 및 행 추가 컨트롤이 있는 DHTMLX Kanban Toolbar"
     className="img_border"
 />
 

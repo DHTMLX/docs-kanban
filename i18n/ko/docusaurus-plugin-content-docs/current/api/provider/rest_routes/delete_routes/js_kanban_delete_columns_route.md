@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /columns
-title: DELETE /columns
-description: DHTMLX JavaScript Kanban 라이브러리의 DELETE /columns REST 경로에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: DELETE /columns REST Route API
+description: DHTMLX Kanban의 DELETE /columns REST route API를 확인하세요. 컬럼을 삭제하는 방법을 알아보세요.
 ---
 
 # DELETE `/columns`

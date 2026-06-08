@@ -1,7 +1,7 @@
 ---
 sidebar_label: editorAutoSave
-title: editorAutoSave Konfiguration
-description: Sie können die editorAutoSave-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: editorAutoSave Konfiguration API
+description: Lesen Sie die editorAutoSave Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie die automatische Speicherung im Karten-Editor aktivieren oder deaktivieren.
 ---
 
 # 

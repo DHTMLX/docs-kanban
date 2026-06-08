@@ -1,7 +1,7 @@
 ---
 sidebar_label: links
-title: links Konfiguration
-description: Sie können mehr über die links Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: links Konfiguration API
+description: Lesen Sie die links Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie Aufgabenabhängigkeiten und Link-Daten zwischen Karten definieren.
 ---
 
 # links

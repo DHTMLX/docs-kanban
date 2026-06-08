@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getState()
-title: getState 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getState 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: getState 方法 API
+description: 阅读 DHTMLX Kanban 的 getState 方法 API。了解如何访问当前看板状态、卡片、链接和配置。
 ---
 
 # api.getState()

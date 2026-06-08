@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/comments/{id}
-title: DELETE /cards/{cardId}/comments/{commentId}
-description: 您可以在DHTMLX JavaScript看板库的文档中了解DELETE /cards/{cardId}/comments/{commentId} REST路由。浏览开发者指南和API参考，尝试代码示例和在线演示，并下载DHTMLX Kanban的免费30天试用版。
+title: DELETE /cards/{cardId}/comments/{commentId} REST 路由 API
+description: 阅读 DHTMLX Kanban 的 DELETE /cards/{cardId}/comments/{commentId} REST 路由 API。了解如何从卡片中删除评论。
 ---
 
 # DELETE `/cards/{cardId}/comments/{commentId}`

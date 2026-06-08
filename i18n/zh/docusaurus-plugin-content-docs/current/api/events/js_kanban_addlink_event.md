@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-link
-title: add-link 事件
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 add-link 事件。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
+title: add-link 事件 API
+description: 阅读 DHTMLX Kanban 的 add-link 事件 API。了解如何处理添加新链接时触发的事件。
 ---
 
 # add-link

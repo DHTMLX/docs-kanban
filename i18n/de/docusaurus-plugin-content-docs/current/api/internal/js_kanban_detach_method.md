@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.detach()
-title: detach-Methode
-description: Sie können die detach-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: detach Methode API
+description: Lesen Sie die API der detach-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie einen Event-Listener entfernen oder abtrennen.
 ---
 
 # api.detach()

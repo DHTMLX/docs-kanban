@@ -1,7 +1,7 @@
 ---
 sidebar_label: history
-title: history Konfiguration
-description: Sie können die history-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: history Konfiguration API
+description: Lesen Sie die history Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie die Undo/Redo-Historie von Änderungen aktivieren oder deaktivieren.
 ---
 
 # history

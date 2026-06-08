@@ -1,7 +1,7 @@
 ---
 sidebar_label: getIDResolver()
-title: getIDResolver REST Method
-description: В документации по JavaScript-библиотеке DHTMLX Kanban вы можете узнать о REST-методе getIDResolver. Изучайте руководства для разработчиков и справочник АПИ, просматривайте примеры кода и живые демо, а также загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
+title: API REST-метода getIDResolver
+description: Ознакомьтесь с API REST-метода getIDResolver для DHTMLX Kanban. Узнайте, как преобразовывать временные клиентские ID в серверные.
 ---
 
 # getIDResolver()

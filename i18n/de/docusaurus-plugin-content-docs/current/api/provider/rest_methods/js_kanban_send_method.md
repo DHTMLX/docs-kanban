@@ -1,7 +1,7 @@
 ---
 sidebar_label: send()
-title: send() Methode
-description: Sie können die send() Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: send REST-Methode API
+description: Lesen Sie die send REST-Methoden-API für DHTMLX Kanban. Erfahren Sie, wie Sie eine HTTP-Anfrage an den Server senden und ein Promise mit der Antwort erhalten.
 ---
 
 # send()
@@ -110,4 +110,4 @@ board.api.setNext(new MyDataProvider(url));
 
 ---
 
-**Verwandte Artikel:** [Working with server](guides/working_with_server.md)
+**Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

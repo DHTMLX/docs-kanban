@@ -1,7 +1,7 @@
 ---
 sidebar_label: rows
-title: rows 설정
-description: DHTMLX JavaScript Kanban 라이브러리의 rows 설정에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: rows Config API
+description: DHTMLX Kanban의 rows 구성 API를 읽어보세요. 스윔레인, 행 레이블, 제한 및 수평 보드 그룹화를 정의하는 방법을 알아볼 수 있습니다.
 ---
 
 # rows

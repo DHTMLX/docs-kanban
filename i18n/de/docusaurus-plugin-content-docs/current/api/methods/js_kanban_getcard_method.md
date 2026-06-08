@@ -1,7 +1,7 @@
 ---
 sidebar_label: getCard()
-title: getCard Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getCard Methode. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: getCard Methode API
+description: Lesen Sie die API-Dokumentation der Methode getCard für DHTMLX Kanban. Erfahren Sie, wie Sie ein Kartendatenobjekt anhand seiner ID abrufen.
 ---
 
 # getCard()

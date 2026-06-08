@@ -1,7 +1,7 @@
 ---
 sidebar_label: editorAutoSave
-title: Конфигурация editorAutoSave
-description: Вы можете узнать о конфигурации editorAutoSave в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации editorAutoSave
+description: Ознакомьтесь с API конфигурации editorAutoSave для DHTMLX Kanban. Узнайте, как включить или отключить автосохранение в редакторе карточек.
 ---
 
 # 

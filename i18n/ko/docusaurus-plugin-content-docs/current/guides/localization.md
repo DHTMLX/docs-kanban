@@ -1,7 +1,7 @@
 ---
 sidebar_label: 로컬라이제이션
-title: 로컬라이제이션
-description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 로컬라이제이션에 대해 알아보세요. 개발자 가이드와 API 레퍼런스를 둘러보고, 코드 예제와 라이브 데모를 시도해보고, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
+title: Kanban 로컬라이제이션 가이드
+description: DHTMLX Kanban 로컬라이제이션 가이드를 확인하세요. 로케일 구성, 언어 팩, setLocale 사용법 및 다국어 UI 설정을 알아보세요.
 ---
 
 # 로컬라이제이션

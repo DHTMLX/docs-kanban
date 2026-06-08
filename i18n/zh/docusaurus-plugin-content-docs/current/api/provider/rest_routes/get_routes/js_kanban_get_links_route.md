@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /links
-title: GET /links
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 GET /links REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+title: GET /links REST 路由 API
+description: 阅读 DHTMLX Kanban 的 GET /links REST 路由 API。了解如何以 JSON 数组的形式获取所有链接的数据。
 ---
 
 # GET `/links`

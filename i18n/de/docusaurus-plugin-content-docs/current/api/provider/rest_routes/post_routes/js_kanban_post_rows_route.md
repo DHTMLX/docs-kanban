@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /rows
-title: POST /rows
-description: Sie können die REST-Route POST /rows in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: POST /rows REST-Route API
+description: Lesen Sie die REST-Route POST /rows API für DHTMLX Kanban. Erfahren Sie, wie Sie eine neue Zeile erstellen und deren ID zurückgeben.
 ---
 
 # POST /rows

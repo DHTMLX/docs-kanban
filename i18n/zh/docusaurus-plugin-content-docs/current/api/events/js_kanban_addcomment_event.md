@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-comment
-title: add-comment 事件
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 add-comment 事件。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 免费 30 天评估版本。
+title: add-comment 事件 API
+description: 阅读 DHTMLX Kanban 的 add-comment 事件 API。了解如何处理添加新评论时触发的事件。
 ---
 
 # add-comment

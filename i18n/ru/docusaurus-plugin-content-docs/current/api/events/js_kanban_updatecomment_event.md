@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-comment
-title: Событие update-comment
-description: Вы можете узнать о событии update-comment в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события update-comment
+description: Прочитайте API события update-comment для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при обновлении комментария.
 ---
 
 # update-comment

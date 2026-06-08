@@ -1,7 +1,7 @@
 ---
 sidebar_label: destructor()
-title: destructor 메서드
-description: DHTMLX JavaScript Kanban 라이브러리의 destructor 메서드에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: destructor Method API
+description: DHTMLX Kanban의 destructor 메서드 API를 확인하세요. 보드를 제거하고 관련된 모든 이벤트 리스너를 분리하는 방법을 알아봅니다.
 ---
 
 # destructor()

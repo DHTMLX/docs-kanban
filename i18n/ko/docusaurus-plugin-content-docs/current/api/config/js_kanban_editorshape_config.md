@@ -1,7 +1,7 @@
 ---
 sidebar_label: editorShape
-title: editorShape 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 editorShape 구성을 학습할 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제 및 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: editorShape Config API
+description: DHTMLX Kanban의 editorShape 구성 설명서를 읽어보세요. 편집기 필드, 컨트롤 및 작업 편집 동작을 정의하는 방법을 알아볼 수 있습니다.
 ---
 
 # editorShape

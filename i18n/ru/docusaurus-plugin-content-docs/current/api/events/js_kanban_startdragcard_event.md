@@ -1,7 +1,7 @@
 ---
 sidebar_label: start-drag-card
-title: Событие start-drag-card
-description: Вы можете узнать о событии start-drag-card в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события start-drag-card
+description: Прочитайте API события start-drag-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при начале перетаскивания карточки.
 ---
 
 # start-drag-card

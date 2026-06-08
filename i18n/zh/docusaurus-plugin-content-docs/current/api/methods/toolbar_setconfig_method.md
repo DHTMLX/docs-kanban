@@ -1,7 +1,7 @@
 ---
 sidebar_label: setConfig()
-title: setConfig 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 Toolbar 的 setConfig 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+title: Toolbar setConfig 方法 API
+description: 阅读 DHTMLX Kanban 的 Toolbar setConfig 方法 API。了解如何在运行时更新 Toolbar 配置。
 ---
 
 # setConfig()

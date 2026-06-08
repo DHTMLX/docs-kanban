@@ -1,7 +1,7 @@
 ---
 sidebar_label: items
-title: items 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 (Toolbar) items 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
+title: Toolbar items 配置 API
+description: 阅读 DHTMLX Kanban 的 Toolbar items 配置文档。了解如何配置工具栏按钮、搜索、撤销及各类控件。
 ---
 
 # items

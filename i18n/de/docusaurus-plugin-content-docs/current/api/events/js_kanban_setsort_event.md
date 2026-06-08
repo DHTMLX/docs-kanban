@@ -1,7 +1,7 @@
 ---
 sidebar_label: set-sort
-title: set-sort Ereignis
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das set-sort Ereignis erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: set-sort Ereignis API
+description: Lesen Sie die set-sort Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Sortieren von Karten ausgelöst wird.
 ---
 
 # set-sort

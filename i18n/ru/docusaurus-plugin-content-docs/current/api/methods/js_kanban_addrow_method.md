@@ -1,7 +1,7 @@
 ---
 sidebar_label: addRow()
-title: Метод addRow
-description: Вы можете узнать о методе addRow в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода addRow
+description: Ознакомьтесь с API метода addRow для DHTMLX Kanban. Узнайте, как добавить новую строку (swimlane) на доску.
 ---
 
 # addRow()

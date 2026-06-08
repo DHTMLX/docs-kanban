@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /rows
-title: DELETE /rows
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 DELETE /rows REST 경로에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: DELETE /rows REST Route API
+description: DHTMLX Kanban의 DELETE /rows REST route API를 확인하세요. 행(스윔레인)을 삭제하는 방법을 알아보세요.
 ---
 
 # DELETE `/rows`

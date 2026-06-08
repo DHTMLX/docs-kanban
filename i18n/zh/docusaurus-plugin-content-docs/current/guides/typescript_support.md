@@ -1,7 +1,7 @@
 ---
 sidebar_label: TypeScript 支持
-title: TypeScript 支持
-description: 您可以在文档中了解如何将 TypeScript 与 DHTMLX JavaScript Kanban 库一起使用。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的 30 天免费评估版本。
+title: Kanban TypeScript 支持指南
+description: 参阅 DHTMLX Kanban TypeScript 支持指南。了解如何在 TypeScript 项目中使用内置类型定义和类型化配置。
 ---
 
 # TypeScript 支持

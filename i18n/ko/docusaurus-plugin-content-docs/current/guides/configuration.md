@@ -1,7 +1,7 @@
 ---
 sidebar_label: 구성
-title: 구성
-description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 구성 방법을 확인할 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 직접 체험해보세요. DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
+title: Kanban 구성 가이드
+description: DHTMLX Kanban 구성 가이드를 확인하세요. 카드, 열, 행, 에디터, 툴바 및 기타 보드 요소를 설정하는 방법을 알아보세요.
 ---
 
 # 구성

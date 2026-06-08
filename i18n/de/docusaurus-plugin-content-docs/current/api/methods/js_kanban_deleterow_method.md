@@ -1,7 +1,7 @@
 ---
 sidebar_label: deleteRow()
-title: deleteRow Methode
-description: Sie können mehr über die deleteRow Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: deleteRow Methode API
+description: Lesen Sie die API-Dokumentation der Methode deleteRow für DHTMLX Kanban. Erfahren Sie, wie Sie eine Zeile anhand ihrer ID vom Board entfernen.
 ---
 
 # deleteRow()

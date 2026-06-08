@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardShape
-title: Конфигурация cardShape
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о конфигурации cardShape. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации cardShape
+description: Ознакомьтесь с API конфигурации cardShape для DHTMLX Kanban. Узнайте, как управлять полями карточек, лейаутом, меню и параметрами отображения карточек.
 ---
 
 # cardShape

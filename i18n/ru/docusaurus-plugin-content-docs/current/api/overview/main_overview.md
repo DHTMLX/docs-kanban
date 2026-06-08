@@ -1,7 +1,7 @@
 ---
 sidebar_label: Обзор API
-title: Обзор API
-description: Вы можете ознакомиться с обзором API JavaScript Kanban в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Обзор API Kanban
+description: Ознакомьтесь с обзором API DHTMLX Kanban. Найдите справочники по конфигурации, методы, события, API Toolbar и документацию для разработчиков.
 ---
 
 # Обзор API

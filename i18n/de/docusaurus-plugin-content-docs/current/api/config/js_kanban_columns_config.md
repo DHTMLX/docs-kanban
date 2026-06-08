@@ -1,10 +1,10 @@
 ---
-sidebar_label: spalten
-title: Spalten-Konfiguration
-description: Sie können die Spalten-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+sidebar_label: columns
+title: columns Konfiguration API
+description: Lesen Sie die columns Konfigurationsdokumentation für DHTMLX Kanban. Erfahren Sie, wie Sie Spalten-IDs, Beschriftungen, Layout und Workflow-Struktur festlegen.
 ---
 
-# Spalten
+# columns
 
 ### Beschreibung
 

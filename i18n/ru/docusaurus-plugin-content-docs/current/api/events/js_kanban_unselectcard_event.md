@@ -1,7 +1,7 @@
 ---
 sidebar_label: unselect-card
-title: Событие unselect-card
-description: Вы можете узнать о событии unselect-card в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события unselect-card
+description: Прочитайте API события unselect-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при снятии выделения с карточки.
 ---
 
 # unselect-card

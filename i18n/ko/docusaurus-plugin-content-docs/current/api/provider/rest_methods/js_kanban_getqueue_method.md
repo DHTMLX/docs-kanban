@@ -1,7 +1,7 @@
 ---
 sidebar_label: getQueue()
-title: getQueue REST 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getQueue REST 메서드에 대해 알아볼 수 있습니다. 개발자 가이드 및 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 확인하며, DHTMLX Kanban 30일 무료 평가판을 다운로드하세요.
+title: getQueue REST 메서드 API
+description: DHTMLX Kanban의 getQueue REST 메서드 API를 확인하세요. RestDataProvider가 처리하는 작업의 내부 큐를 가져오는 방법을 알아보세요.
 ---
 
 # getQueue()

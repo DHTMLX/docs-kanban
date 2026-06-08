@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /rows
-title: POST /rows
-description: Вы можете узнать о REST-маршруте POST /rows в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демонстрации, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута POST /rows
+description: Ознакомьтесь с API REST-маршрута POST /rows для DHTMLX Kanban. Узнайте, как создать новую строку и получить её ID.
 ---
 
 # POST /rows
