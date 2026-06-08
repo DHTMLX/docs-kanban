@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.intercept()
-title: intercept-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die intercept-Methode. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: intercept Methode API
+description: Lesen Sie die API der intercept-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie Board-Ereignisse abfangen, ändern oder blockieren, bevor sie angewendet werden.
 ---
 
 # api.intercept()

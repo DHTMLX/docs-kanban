@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-comment
-title: update-comment Ereignis
-description: Sie können mehr über das update-comment Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: update-comment Ereignis API
+description: Lesen Sie die update-comment Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Aktualisieren eines Kommentars ausgelöst wird.
 ---
 
 # update-comment

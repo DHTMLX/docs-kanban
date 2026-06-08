@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-row
-title: Событие move-row
-description: Вы можете узнать о событии move-row в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события move-row
+description: Прочитайте API события move-row для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при перемещении строки.
 ---
 
 # move-row

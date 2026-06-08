@@ -1,7 +1,7 @@
 ---
 sidebar_label: getUsers()
-title: REST-метод getUsers
-description: Вы можете ознакомиться с REST-методом getUsers в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-метода getUsers
+description: Ознакомьтесь с API REST-метода getUsers для DHTMLX Kanban. Узнайте, как получить промис с данными пользователей.
 ---
 
 # getUsers()

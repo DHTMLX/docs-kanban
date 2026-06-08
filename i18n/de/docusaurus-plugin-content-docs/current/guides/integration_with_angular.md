@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration mit Angular
-title: Integration mit Angular
-description: Erfahren Sie in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die Integration mit Angular. Durchstöbern Sie Entwicklerleitfäden und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Angular Kanban-Integrationsanleitung
+description: Folgen Sie der DHTMLX Kanban Angular-Integrationsanleitung. Erfahren Sie mehr über Komponenten-Setup, Konfiguration, API-Nutzung und Projektstruktur.
 ---
 
 # Integration mit Angular
@@ -379,7 +379,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="DHTMLX Kanban Board, das in einer Angular-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
+  alt="DHTMLX Kanban-Board, das in einer Angular-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
   className="img_border"
 />
 

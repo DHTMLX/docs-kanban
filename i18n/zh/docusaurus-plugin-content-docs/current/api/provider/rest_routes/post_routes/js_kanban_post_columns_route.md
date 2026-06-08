@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /columns
-title: POST /columns
-description: 您可以在DHTMLX JavaScript看板库的文档中了解POST /columns REST路由。浏览开发者指南和API参考，尝试代码示例和在线演示，并下载DHTMLX看板的免费30天试用版本。
+title: POST /columns REST 路由 API
+description: 阅读 DHTMLX Kanban 的 POST /columns REST 路由 API。了解如何创建新列并返回其 ID。
 ---
 
 # POST `/columns`
@@ -44,4 +44,4 @@ HTTP状态码表示请求是否成功（response.status == 200）或失败（res
 
 ---
 
-**相关文档**: [Working with server](guides/working_with_server.md)
+**相关文档**：[与服务器协作](guides/working_with_server.md)

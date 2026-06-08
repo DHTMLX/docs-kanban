@@ -1,7 +1,7 @@
 ---
 sidebar_label: moveCard()
-title: moveCard 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 moveCard 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해보며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
+title: moveCard Method API
+description: DHTMLX Kanban의 moveCard 메서드 API를 확인하세요. 카드를 특정 열 또는 행으로 이동하는 방법을 알아봅니다.
 ---
 
 # moveCard()

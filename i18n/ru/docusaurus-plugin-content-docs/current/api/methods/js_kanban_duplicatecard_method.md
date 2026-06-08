@@ -1,7 +1,7 @@
 ---
 sidebar_label: duplicateCard()
-title: Метод duplicateCard
-description: Вы можете узнать о методе duplicateCard в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода duplicateCard
+description: Ознакомьтесь с API метода duplicateCard для DHTMLX Kanban. Узнайте, как дублировать карточку по её ID.
 ---
 
 # duplicateCard()

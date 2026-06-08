@@ -1,7 +1,7 @@
 ---
 sidebar_label: 配置
-title: 配置
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解配置方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并免费下载 DHTMLX Kanban 30 天试用版。
+title: Kanban 配置指南
+description: 阅读 DHTMLX Kanban 配置指南。学习如何设置卡片、列、行、编辑器、工具栏及其他看板元素。
 ---
 
 # 配置

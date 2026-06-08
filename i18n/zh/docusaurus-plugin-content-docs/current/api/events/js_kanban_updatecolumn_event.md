@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-column
-title: update-column 事件
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 update-column 事件。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费的 30 天评估版本的 DHTMLX 看板。
+title: update-column 事件 API
+description: 阅读 DHTMLX Kanban 的 update-column 事件 API。了解如何处理更新列数据时触发的事件。
 ---
 
 # update-column

@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardTemplate
-title: cardTemplate Konfiguration
-description: Sie können mehr über die cardTemplate Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: cardTemplate Konfiguration API
+description: Lesen Sie die cardTemplate Konfigurationsdokumentation für DHTMLX Kanban. Erfahren Sie, wie Sie benutzerdefinierte HTML-Vorlagen für Aufgabenkarten erstellen.
 ---
 
 # cardTemplate

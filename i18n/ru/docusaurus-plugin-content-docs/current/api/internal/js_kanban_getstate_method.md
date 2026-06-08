@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getState()
-title: Метод getState
-description: Вы можете ознакомиться с методом getState в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода getState
+description: Ознакомьтесь с API метода getState для DHTMLX Kanban. Узнайте, как получить доступ к текущему состоянию доски, карточкам, ссылкам и конфигурации.
 ---
 
 # api.getState()

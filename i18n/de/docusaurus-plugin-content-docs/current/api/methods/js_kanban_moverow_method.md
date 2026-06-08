@@ -1,7 +1,7 @@
 ---
 sidebar_label: moveRow()
-title: moveRow Methode
-description: Sie können mehr über die moveRow Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: moveRow Methode API
+description: Lesen Sie die API-Dokumentation der Methode moveRow für DHTMLX Kanban. Erfahren Sie, wie Sie eine Zeile an eine neue Position verschieben.
 ---
 
 # moveRow()

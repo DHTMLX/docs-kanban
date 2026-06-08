@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getStores()
-title: getStores 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 getStores 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
+title: getStores 方法 API
+description: 阅读 DHTMLX Kanban 的 getStores 方法 API。了解如何获取包含看板 DataStore 属性的对象。
 ---
 
 # api.getStores()

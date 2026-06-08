@@ -1,8 +1,8 @@
 ---
 sidebar_label: Обзор Kanban
-title: Обзор JavaScript Kanban
+title: JavaScript Kanban API и руководства
 slug: /
-description: В данной документации представлен обзор библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
+description: Читайте документацию DHTMLX JavaScript Kanban со справочником API, руководствами для разработчиков, параметрами конфигурации и примерами для создания Kanban-досок.
 ---
 
 # Обзор DHTMLX Kanban
@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
     src={toolbar}
-    alt="Панель инструментов DHTMLX Kanban с полем поиска, сортировкой, кнопками отмены/повтора и элементами для добавления колонок и строк"
+    alt="Панель инструментов DHTMLX Kanban с полем поиска, элементом сортировки, кнопками отмены/повтора и элементами для добавления колонок и строк"
     className="img_border"
 />
 
@@ -53,6 +53,7 @@ import board from '@site/static/img/js_kanban_board.png';
 <img
     src={board}
     alt="Доска DHTMLX Kanban с карточками, распределёнными по колонкам и дорожкам (swimlanes)"
+
     className="img_border"
 />
 

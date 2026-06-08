@@ -1,7 +1,7 @@
 ---
 sidebar_label: getIDResolver()
-title: getIDResolver REST 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getIDResolver REST 메서드에 대해 알아볼 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 체험해 보세요. DHTMLX Kanban 무료 30일 평가판도 다운로드할 수 있습니다.
+title: getIDResolver REST 메서드 API
+description: DHTMLX Kanban의 getIDResolver REST 메서드 API를 확인하세요. 임시 클라이언트 측 ID를 백엔드 ID로 변환하는 방법을 알아보세요.
 ---
 
 # getIDResolver()
@@ -53,6 +53,6 @@ const events = new kanban.RemoteEvents(url + "/api/v1", token);
 events.on(handlers);
 ~~~
 
-동일한 resolver 함수를 `RemoteEvents.on()`에 전달하는 커스텀 핸들러 내부에서도 사용할 수 있습니다. 전체 예제는 [서버 이벤트 커스터마이즈](guides/working_with_server.md/#customize-server-events)를 참조하세요.
+동일한 resolver 함수를 `RemoteEvents.on()`에 전달하는 커스텀 핸들러 내부에서도 사용할 수 있습니다. 전체 예제는 [서버 이벤트 커스터마이즈](guides/working_with_server.md#customize-server-events)를 참조하세요.
 
-**관련 문서:** [서버와 연동하기: 멀티유저 백엔드](guides/working_with_server.md/#multiuser-backend)
+**관련 문서:** [서버와 연동하기: 멀티유저 백엔드](guides/working_with_server.md#multiuser-backend)

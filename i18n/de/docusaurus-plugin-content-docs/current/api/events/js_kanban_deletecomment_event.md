@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-comment
-title: delete-comment Ereignis
-description: Sie können mehr über das delete-comment Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: delete-comment Ereignis API
+description: Lesen Sie die delete-comment Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Löschen eines Kartenkommentars ausgelöst wird.
 ---
 
 # delete-comment

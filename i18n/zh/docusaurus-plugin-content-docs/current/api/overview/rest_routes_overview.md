@@ -1,7 +1,7 @@
 ---
 sidebar_label: REST 路由概览
 title: REST 路由概览
-description: 您可以在 DHTMLX JavaScript 看板库的文档中查看 JavaScript 看板的内部 RestDataProvider 路由概览。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
+description: 浏览 DHTMLX Kanban 的 REST 路由概览。查找卡片、列、行、链接、评论和投票的所有后端端点。
 ---
 
 # REST 路由概览

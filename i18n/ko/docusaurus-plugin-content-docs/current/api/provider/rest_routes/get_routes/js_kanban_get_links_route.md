@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /links
-title: GET /links
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 GET /links REST 경로에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: GET /links REST Route API
+description: DHTMLX Kanban의 GET /links REST route API를 확인하세요. 모든 링크 데이터를 JSON 배열로 가져오는 방법을 알아보세요.
 ---
 
 # GET `/links`

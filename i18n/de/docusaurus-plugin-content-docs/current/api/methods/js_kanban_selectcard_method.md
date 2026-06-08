@@ -1,7 +1,7 @@
 ---
 sidebar_label: selectCard()
-title: selectCard Methode
-description: Sie können die selectCard Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: selectCard Methode API
+description: Lesen Sie die API-Dokumentation der selectCard-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie eine Karte anhand ihrer ID auswählen.
 ---
 
 # selectCard()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getReactiveState()
-title: getReactiveState Methode
-description: Sie können die Methode getReactiveState in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getReactiveState Methode API
+description: Lesen Sie die API der getReactiveState-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie ein Objekt mit den reaktiven Eigenschaften des Boards abrufen.
 ---
 
 # api.getReactiveState()

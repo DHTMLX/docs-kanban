@@ -1,7 +1,7 @@
 ---
 sidebar_label: duplicate-card
-title: Событие duplicate-card
-description: Вы можете узнать о событии duplicate-card в документации к JavaScript библиотеке DHTMLX Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события duplicate-card
+description: Ознакомьтесь с API события duplicate-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при дублировании карточки.
 ---
 
 # duplicate-card

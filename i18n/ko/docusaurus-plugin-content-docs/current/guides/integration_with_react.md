@@ -1,7 +1,7 @@
 ---
 sidebar_label: React와의 통합
-title: React와의 통합
-description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 React와의 통합 방법을 확인할 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 체험해보며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
+title: React Kanban 통합 가이드
+description: DHTMLX Kanban React 통합 가이드를 따라 진행하세요. 컴포넌트 설정, 구성, API 사용법 및 라이프사이클 처리를 알아보세요.
 ---
 
 # React와의 통합

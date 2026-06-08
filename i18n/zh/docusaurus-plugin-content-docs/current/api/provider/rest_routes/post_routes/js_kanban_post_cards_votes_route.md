@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards/{id}/vote
-title: POST /cards/{cardId}/vote
-description: 您可以在DHTMLX JavaScript看板库的文档中了解POST /cards/{cardId}/vote REST路由。浏览开发者指南和API参考，尝试代码示例和实时演示，并下载DHTMLX看板的免费30天试用版。
+title: POST /cards/{cardId}/vote REST 路由 API
+description: 阅读 DHTMLX Kanban 的 POST /cards/{cardId}/vote REST 路由 API。了解如何为卡片添加投票并返回投票用户的 ID。
 ---
 
 # POST `/cards/{cardId}/vote`

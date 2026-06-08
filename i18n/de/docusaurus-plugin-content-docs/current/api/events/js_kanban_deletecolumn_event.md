@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-column
-title: delete-column Event
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das delete-column Event erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: delete-column Ereignis API
+description: Lesen Sie die delete-column Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Entfernen einer Spalte ausgelöst wird.
 ---
 
 # delete-column

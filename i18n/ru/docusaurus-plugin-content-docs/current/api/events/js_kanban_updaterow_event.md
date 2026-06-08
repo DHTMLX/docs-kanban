@@ -1,7 +1,7 @@
 ---
 sidebar_label: update-row
-title: Событие update-row
-description: Вы можете узнать о событии update-row в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события update-row
+description: Прочитайте API события update-row для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при обновлении данных строки.
 ---
 
 # update-row

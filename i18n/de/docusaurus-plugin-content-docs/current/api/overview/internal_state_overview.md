@@ -1,7 +1,7 @@
 ---
 sidebar_label: State-Methoden
-title: State-Methoden
-description: Sie finden eine Übersicht der internen State-Methoden von JavaScript Kanban in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Übersicht der State-Methoden
+description: Durchsuchen Sie die Übersicht der State-Methoden für DHTMLX Kanban. Finden Sie interne Methoden für den Zugriff auf den reaktiven Zustand, Stores und die Konfiguration.
 ---
 
 # State-Methoden

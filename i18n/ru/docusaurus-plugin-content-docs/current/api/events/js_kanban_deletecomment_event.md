@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-comment
-title: Событие delete-comment
-description: Вы можете узнать о событии delete-comment в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события delete-comment
+description: Ознакомьтесь с API события delete-comment для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при удалении комментария к карточке.
 ---
 
 # delete-comment

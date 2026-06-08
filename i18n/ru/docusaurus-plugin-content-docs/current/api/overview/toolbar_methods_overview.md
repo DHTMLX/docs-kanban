@@ -1,7 +1,7 @@
 ---
 sidebar_label: Обзор методов Toolbar
 title: Обзор методов Toolbar
-description: В документации библиотеки DHTMLX JavaScript Kanban доступен обзор методов Toolbar JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+description: Обзор методов Toolbar DHTMLX Kanban. Методы настройки, локализации и удаления Toolbar.
 ---
 
 # Обзор методов Toolbar

@@ -1,7 +1,7 @@
 ---
 sidebar_label: 与DHTMLX小部件集成
-title: 与DHTMLX小部件集成
-description: 您可以在DHTMLX JavaScript Kanban库的文档中了解集成方法。浏览开发者指南和API参考，试用代码示例和在线演示，并免费下载DHTMLX Kanban的30天试用版。
+title: DHTMLX 小部件——Kanban 集成指南
+description: 参阅 DHTMLX Kanban 与 Gantt、Event Calendar 和 To Do List 小部件的集成指南。了解如何在同一应用中将 Kanban 与 Gantt 及其他 DHTMLX 组件结合使用。
 ---
 
 # 与DHTMLX小部件集成

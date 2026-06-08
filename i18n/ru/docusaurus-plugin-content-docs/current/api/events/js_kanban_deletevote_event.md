@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-vote
-title: Событие delete-vote
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о событии delete-vote. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события delete-vote
+description: Ознакомьтесь с API события delete-vote для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее когда пользователь удаляет голос с карточки.
 ---
 
 # delete-vote

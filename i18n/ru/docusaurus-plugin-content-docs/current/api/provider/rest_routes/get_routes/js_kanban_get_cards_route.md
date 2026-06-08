@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /cards
-title: GET /cards
-description: Вы можете ознакомиться с REST-маршрутом GET /cards в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута GET /cards
+description: Ознакомьтесь с REST-маршрутом GET /cards для DHTMLX Kanban. Узнайте, как получить данные обо всех карточках в виде JSON-массива.
 ---
 
 # GET `/cards`

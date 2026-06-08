@@ -1,7 +1,7 @@
 ---
 sidebar_label: destructor()
-title: Метод destructor
-description: Вы можете узнать о методе destructor в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода destructor
+description: Ознакомьтесь с API метода destructor для DHTMLX Kanban. Узнайте, как уничтожить доску и отключить все связанные обработчики событий.
 ---
 
 # destructor()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: editorAutoSave
-title: editorAutoSave 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 editorAutoSave 구성에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: editorAutoSave Config API
+description: DHTMLX Kanban의 editorAutoSave 구성 API를 읽어보세요. 카드 편집기에서 자동 저장을 활성화하거나 비활성화하는 방법을 알아볼 수 있습니다.
 ---
 
 # 

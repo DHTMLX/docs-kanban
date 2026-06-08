@@ -1,7 +1,7 @@
 ---
 sidebar_label: Konfiguration
-title: Konfiguration
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Konfiguration. Stöbern Sie in Entwicklerhandbüchern und der API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: Kanban-Konfigurationshandbuch
+description: Lesen Sie das DHTMLX-Kanban-Konfigurationshandbuch. Erfahren Sie, wie Sie Karten, Spalten, Zeilen, Editor, Toolbar und andere Board-Elemente einrichten.
 ---
 
 # Konfiguration

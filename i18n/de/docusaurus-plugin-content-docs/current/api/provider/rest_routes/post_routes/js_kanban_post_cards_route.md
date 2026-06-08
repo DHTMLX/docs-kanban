@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards
-title: POST /cards
-description: Sie können die REST-Route POST /cards in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: POST /cards REST-Route API
+description: Lesen Sie die REST-Route POST /cards API für DHTMLX Kanban. Erfahren Sie, wie Sie eine neue Karte erstellen und deren neue ID zurückgeben.
 ---
 
 # POST `/cards`

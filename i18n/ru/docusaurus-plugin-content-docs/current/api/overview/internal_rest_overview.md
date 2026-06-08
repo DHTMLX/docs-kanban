@@ -1,7 +1,7 @@
 ---
 sidebar_label: Методы RestDataProvider
-title: Методы RestDataProvider
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете ознакомиться с внутренним обзором методов RestDataProvider. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Обзор методов RestDataProvider
+description: Ознакомьтесь с обзором методов RestDataProvider для DHTMLX Kanban. Найдите методы загрузки данных, отправки запросов и управления очередью.
 ---
 
 # Методы RestDataProvider

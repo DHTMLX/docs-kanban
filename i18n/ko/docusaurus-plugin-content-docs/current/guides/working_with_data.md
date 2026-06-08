@@ -1,7 +1,7 @@
 ---
 sidebar_label: 데이터 작업하기
-title: 데이터 작업하기
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 데이터 작업 방법을 확인할 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 직접 사용해보세요. DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
+title: Kanban 데이터 파싱 가이드
+description: DHTMLX Kanban 데이터 파싱 가이드를 읽어보세요. 보드에서 카드, 컬럼, 행, 링크, 댓글을 로드하고 읽고 내보내고 업데이트하는 방법을 알아봅니다.
 ---
 
 # 데이터 작업하기
@@ -142,7 +142,7 @@ board.setConfig({ columns, cards, rows });
 
 ## Gantt 및 Scheduler와 데이터 동기화
 
-멀티 위젯 통합에 대해서는 [DHTMLX 위젯과의 통합](guides/integration.md#gantt-and-scheduler)을 참고하세요.
+멀티 위젯 통합에 대해서는 [DHTMLX 위젯과의 통합](guides/integration.md#gantt-event-calendar-and-to-do-list)을 참고하세요.
 
 ## 데이터 가져오기
 

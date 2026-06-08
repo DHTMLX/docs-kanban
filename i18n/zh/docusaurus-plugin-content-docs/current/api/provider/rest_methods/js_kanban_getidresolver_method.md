@@ -1,7 +1,7 @@
 ---
 sidebar_label: getIDResolver()
-title: getIDResolver REST 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 getIDResolver REST 方法。浏览开发者指南和 API 参考，查看代码示例和在线演示，并下载 DHTMLX Kanban 的 30 天免费评估版本。
+title: getIDResolver REST 方法 API
+description: 阅读 DHTMLX Kanban 的 getIDResolver REST 方法 API。了解如何将临时客户端 ID 解析为后端 ID。
 ---
 
 # getIDResolver()
@@ -53,6 +53,6 @@ const events = new kanban.RemoteEvents(url + "/api/v1", token);
 events.on(handlers);
 ~~~
 
-同样的解析函数也可以在传递给 `RemoteEvents.on()` 的自定义处理程序中使用。完整示例请参阅[自定义服务器事件](guides/working_with_server.md/#customize-server-events)。
+同样的解析函数也可以在传递给 `RemoteEvents.on()` 的自定义处理程序中使用。完整示例请参阅[自定义服务器事件](guides/working_with_server.md#customize-server-events)。
 
-**相关文章：** [与服务器协作：多用户后端](guides/working_with_server.md/#multiuser-backend)
+**相关文章：** [与服务器协作：多用户后端](guides/working_with_server.md#multiuser-backend)

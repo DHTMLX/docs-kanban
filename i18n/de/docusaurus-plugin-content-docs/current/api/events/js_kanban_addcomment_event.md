@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-comment
-title: add-comment Ereignis
-description: Sie können das add-comment Ereignis in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: add-comment Ereignis API
+description: Lesen Sie die add-comment Ereignis-API für DHTMLX Kanban. Erfahren Sie, wie Sie das Ereignis behandeln, das beim Hinzufügen eines neuen Kommentars ausgelöst wird.
 ---
 
 # add-comment

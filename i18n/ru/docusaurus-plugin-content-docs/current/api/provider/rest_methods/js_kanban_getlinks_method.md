@@ -1,7 +1,7 @@
 ---
 sidebar_label: getLinks()
-title: REST-метод getLinks
-description: Вы можете ознакомиться с REST-методом getLinks в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-метода getLinks
+description: Ознакомьтесь с API REST-метода getLinks для DHTMLX Kanban. Узнайте, как получить промис с данными ссылок.
 ---
 
 # getLinks()

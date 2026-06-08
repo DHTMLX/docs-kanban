@@ -1,7 +1,7 @@
 ---
 sidebar_label: 数据操作
-title: 数据操作
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解如何处理数据。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的 30 天免费评估版。
+title: Kanban 数据解析指南
+description: 阅读 DHTMLX Kanban 数据解析指南。了解如何加载、读取、导出及更新看板上的卡片、列、行、链接和评论。
 ---
 
 # 数据操作
@@ -142,7 +142,7 @@ board.setConfig({ columns, cards, rows });
 
 ## 与 Gantt 和 Scheduler 同步数据
 
-有关多组件集成，请参阅[与 DHTMLX 组件集成](guides/integration.md#gantt-and-scheduler)。
+有关多组件集成，请参阅[与 DHTMLX 组件集成](guides/integration.md#gantt-event-calendar-and-to-do-list)。
 
 ## 获取数据
 

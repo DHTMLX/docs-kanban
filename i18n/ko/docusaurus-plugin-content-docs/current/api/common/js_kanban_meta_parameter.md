@@ -1,7 +1,7 @@
 ---
 sidebar_label: $meta
-title: $meta 매개변수
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 $meta 매개변수에 대해 알아보세요. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: $meta Parameter API
+description: DHTMLX Kanban의 $meta 매개변수 API를 읽어보세요. 메서드와 이벤트를 구성하기 위한 추가 설정 전달 방법을 알아볼 수 있습니다.
 ---
 
 # $meta

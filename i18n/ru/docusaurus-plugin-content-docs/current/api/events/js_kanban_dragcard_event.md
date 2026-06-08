@@ -1,7 +1,7 @@
 ---
 sidebar_label: drag-card
-title: Событие drag-card
-description: Вы можете узнать о событии drag-card в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события drag-card
+description: Ознакомьтесь с API события drag-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при перемещении карточки через dnd.
 ---
 
 # drag-card

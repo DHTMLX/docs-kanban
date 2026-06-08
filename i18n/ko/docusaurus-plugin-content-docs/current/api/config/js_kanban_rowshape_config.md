@@ -1,7 +1,7 @@
 ---
 sidebar_label: rowShape
-title: rowShape 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 rowShape 구성에 대해 알아보세요. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며 DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: rowShape Config API
+description: DHTMLX Kanban의 rowShape 구성 API를 읽어보세요. 스윔레인 행 헤더와 메뉴를 커스터마이징하는 방법을 알아볼 수 있습니다.
 ---
 
 # rowShape

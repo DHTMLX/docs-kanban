@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getState()
-title: getState 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getState 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: getState 메서드 API
+description: DHTMLX Kanban의 getState 메서드 API를 살펴보세요. 현재 보드 상태, 카드, 링크 및 구성에 접근하는 방법을 알아봅니다.
 ---
 
 # api.getState()

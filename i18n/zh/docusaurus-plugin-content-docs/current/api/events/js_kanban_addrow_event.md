@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-row
-title: add-row 事件
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 add-row 事件。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版本。
+title: add-row 事件 API
+description: 阅读 DHTMLX Kanban 的 add-row 事件 API。了解如何处理添加新行时触发的事件。
 ---
 
 # add-row

@@ -1,7 +1,7 @@
 ---
 sidebar_label: 方法概览
 title: 方法概览
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的 方法概览。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+description: 浏览 DHTMLX Kanban 的方法概览。查找用于添加、更新、移动和删除卡片、列和行的所有 board 方法。
 ---
 
 # 方法概览

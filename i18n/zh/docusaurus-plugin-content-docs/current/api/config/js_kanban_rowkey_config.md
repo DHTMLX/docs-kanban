@@ -1,7 +1,7 @@
 ---
 sidebar_label: rowKey
-title: rowKey 配置
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 rowKey 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: rowKey 配置 API
+description: 阅读 DHTMLX Kanban 的 rowKey 配置文档。了解如何将任务卡片分配到泳道行。
 ---
 
 # rowKey

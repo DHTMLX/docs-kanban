@@ -1,7 +1,7 @@
 ---
 sidebar_label: moveColumn()
-title: Метод moveColumn
-description: Вы можете узнать о методе moveColumn в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода moveColumn
+description: Ознакомьтесь с API метода moveColumn для DHTMLX Kanban. Узнайте, как переместить колонку на новую позицию.
 ---
 
 # moveColumn()

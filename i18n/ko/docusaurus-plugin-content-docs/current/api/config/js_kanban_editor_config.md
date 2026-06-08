@@ -1,7 +1,7 @@
 ---
 sidebar_label: editor
-title: editor 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 editor 구성에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제 및 라이브 데모를 시도해보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: editor Config API
+description: DHTMLX Kanban의 editor 구성 설명서를 읽어보세요. 작업 편집기의 활성화, 맞춤 설정 및 동작 제어 방법을 알아볼 수 있습니다.
 ---
 
 # editor

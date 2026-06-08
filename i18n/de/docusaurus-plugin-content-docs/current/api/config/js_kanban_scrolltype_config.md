@@ -1,7 +1,7 @@
 ---
 sidebar_label: scrollType
-title: scrollType Konfiguration
-description: Sie können die scrollType-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: scrollType Konfiguration API
+description: Lesen Sie die scrollType Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie das Board-Scrollen und das Spalten-Scroll-Verhalten konfigurieren.
 ---
 
 # scrollType

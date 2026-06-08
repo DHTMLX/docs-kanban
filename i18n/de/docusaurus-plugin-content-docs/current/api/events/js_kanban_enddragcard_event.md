@@ -1,7 +1,7 @@
 ---
 sidebar_label: end-drag-card
-title: end-drag-card Event
-description: Sie können mehr über das end-drag-card Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: end-drag-card Ereignis API
+description: Lesen Sie die end-drag-card Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Beenden des Ziehens einer Karte ausgelöst wird.
 ---
 
 # end-drag-card

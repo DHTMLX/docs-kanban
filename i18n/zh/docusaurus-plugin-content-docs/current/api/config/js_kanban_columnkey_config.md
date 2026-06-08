@@ -1,7 +1,7 @@
 ---
 sidebar_label: columnKey
-title: columnKey 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 columnKey 配置。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
+title: columnKey 配置 API
+description: 阅读 DHTMLX Kanban 的 columnKey 配置 API。了解如何通过自定义数据键将卡片绑定到列。
 ---
 
 # columnKey
@@ -40,11 +40,11 @@ const cards = [
 ~~~jsx {4,8,15}
 const cards = [
     {
-        label: "待办任务",
+        label: "Backlog task",
         column_custom_key: "backlog"
     },
     {
-        label: "进行中任务",
+        label: "In progress task",
         column_custom_key: "inprogress"
     }
 ];

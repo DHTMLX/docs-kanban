@@ -1,7 +1,7 @@
 ---
 sidebar_label: Methodenübersicht
 title: Methodenübersicht
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek finden Sie eine Methodenübersicht für JavaScript Kanban. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Durchsuchen Sie die Methodenübersicht für DHTMLX Kanban. Finden Sie alle Board-Methoden zum Hinzufügen, Aktualisieren, Verschieben und Löschen von Karten, Spalten und Zeilen.
 ---
 
 # Methodenübersicht

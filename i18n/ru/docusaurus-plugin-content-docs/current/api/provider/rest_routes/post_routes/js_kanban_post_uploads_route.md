@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /uploads
-title: POST /uploads
-description: Вы можете ознакомиться с REST маршрутом POST /uploads в документации JavaScript библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута POST /uploads
+description: Ознакомьтесь с API REST-маршрута POST /uploads для DHTMLX Kanban. Узнайте, как загрузить бинарный файл и получить его ID, имя и URL.
 ---
 
 # POST `/uploads`

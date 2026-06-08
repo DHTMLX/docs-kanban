@@ -1,7 +1,7 @@
 ---
 sidebar_label: 스타일링
-title: 스타일링
-description: DHTMLX JavaScript Kanban 라이브러리의 문서에서 스타일링에 대해 알아보세요. 개발자 가이드와 API 레퍼런스를 둘러보고, 코드 예제와 라이브 데모를 직접 시도해보며, DHTMLX Kanban의 30일 무료 평가판도 다운로드할 수 있습니다.
+title: Kanban 스타일링 가이드
+description: DHTMLX Kanban 스타일링 가이드를 확인하세요. CSS 클래스와 CSS 변수를 활용하여 카드, 열, 행을 스타일링하는 방법을 알아보세요.
 ---
 
 # 스타일링

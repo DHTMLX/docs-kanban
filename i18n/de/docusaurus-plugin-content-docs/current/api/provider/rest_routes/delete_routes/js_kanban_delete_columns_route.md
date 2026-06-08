@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /columns
-title: DELETE /columns
-description: Sie können mehr über die DELETE /columns REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: DELETE /columns REST-Route API
+description: Lesen Sie die API-Referenz der REST-Route DELETE /columns für DHTMLX Kanban. Erfahren Sie, wie Sie eine Spalte löschen.
 ---
 
 # DELETE `/columns`

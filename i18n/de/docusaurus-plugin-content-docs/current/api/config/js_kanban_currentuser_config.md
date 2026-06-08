@@ -1,7 +1,7 @@
 ---
 sidebar_label: currentUser
-title: currentUser Konfiguration
-description: Sie können mehr über die currentUser Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: currentUser Konfiguration API
+description: Lesen Sie die currentUser Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie aktive Benutzer für Kommentare, Abstimmungen und Zusammenarbeit festlegen.
 ---
 
 # currentUser

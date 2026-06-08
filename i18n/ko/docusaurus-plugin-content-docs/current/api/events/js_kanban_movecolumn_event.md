@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-column
-title: move-column 이벤트
-description: DHTMLX 자바스크립트 칸반 라이브러리 문서에서 move-column 이벤트에 대해 알아보세요. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: move-column Event API
+description: DHTMLX Kanban의 move-column 이벤트 API를 확인하세요. 열 이동 시 발생하는 이벤트를 처리하는 방법을 알아보세요.
 ---
 
 # move-column

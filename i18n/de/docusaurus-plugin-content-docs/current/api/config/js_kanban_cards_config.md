@@ -1,10 +1,10 @@
 ---
-sidebar_label: karten
-title: Karten-Konfiguration
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Karten-Konfiguration. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+sidebar_label: cards
+title: cards Konfiguration API
+description: Lesen Sie die cards Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie Kartenfelder, Aufgabendaten, Status und Board-Inhalte definieren.
 ---
 
-# karten
+# cards
 
 ### Beschreibung
 

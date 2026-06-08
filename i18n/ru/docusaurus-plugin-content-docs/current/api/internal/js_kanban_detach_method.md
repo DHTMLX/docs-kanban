@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.detach()
-title: Метод detach
-description: Вы можете узнать о методе detach в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода detach
+description: Ознакомьтесь с API метода detach для DHTMLX Kanban. Узнайте, как удалить или отсоединить обработчик событий.
 ---
 
 # api.detach()

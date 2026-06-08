@@ -61,7 +61,7 @@ In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Karten durchführen,
 | [Getting cards state](api/internal/js_kanban_getstate_method.md) | Lernen Sie, wie Sie den Kartenstatus abrufen      |
 | [Getting cards reactive state](api/internal/js_kanban_getreactivestate_method.md) | Lernen Sie, wie Sie den reaktiven Kartenstatus abrufen|
 | [Loading card data](api/config/js_kanban_cards_config.md)    | Lernen Sie, wie Sie die initialen Kartendaten laden             |
-| [Parsing card data](api/methods/js_kanban_parse_method.md)   | Lernen Sie, wie Sie Kartendaten parsen                    |
+| [Kartendaten dynamisch laden](api/methods/js_kanban_setconfig_method.md)   | Lernen Sie, wie Sie Kartendaten zur Laufzeit über `setConfig()` laden (oder dessen Alias [`parse()`](api/methods/js_kanban_parse_method.md))|
 | [Serializing card data](api/methods/js_kanban_serialize_method.md)| Lernen Sie, wie Sie Kartendaten serialisieren ([Beispiel](https://snippet.dhtmlx.com/61crsls3?tag=kanban))|
 | [Updating card data](api/methods/js_kanban_updatecard_method.md)| Lernen Sie, wie Sie Kartendaten aktualisieren         |
 
@@ -117,7 +117,7 @@ In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Spalten durchführen
 | [Getting columns state](api/internal/js_kanban_getstate_method.md) | Lernen Sie, wie Sie den Spaltenstatus abrufen      |
 | [Getting columns reactive state](api/internal/js_kanban_getreactivestate_method.md) | Lernen Sie, wie Sie den reaktiven Spaltenstatus abrufen|
 | [Loading column data](api/config/js_kanban_columns_config.md)    | Lernen Sie, wie Sie die initialen Spaltendaten laden          |
-| [Parsing column data](api/methods/js_kanban_parse_method.md)     | Lernen Sie, wie Sie Spaltendaten parsen                 |
+| [Spaltendaten dynamisch laden](api/methods/js_kanban_setconfig_method.md)     | Lernen Sie, wie Sie Spaltendaten zur Laufzeit über `setConfig()` laden (oder dessen Alias [`parse()`](api/methods/js_kanban_parse_method.md))|
 | [Serializing column data](api/methods/js_kanban_serialize_method.md)| Lernen Sie, wie Sie Spaltendaten serialisieren      |
 | [Updating column data](api/methods/js_kanban_updatecolumn_method.md)| Lernen Sie, wie Sie Spaltendaten aktualisieren         |
 
@@ -143,7 +143,7 @@ In diesen Abschnitten erfahren Sie, wie Sie Operationen mit Zeilen durchführen 
 | [Getting rows state](api/internal/js_kanban_getstate_method.md) | Lernen Sie, wie Sie den Zeilenstatus abrufen               |
 | [Getting rows reactive state](api/internal/js_kanban_getreactivestate_method.md) | Lernen Sie, wie Sie den reaktiven Zeilenstatus abrufen|
 | [Loading row data](api/config/js_kanban_rows_config.md)         | Lernen Sie, wie Sie die initialen Zeilendaten laden              |
-| [Parsing row data](api/methods/js_kanban_parse_method.md)       | Lernen Sie, wie Sie Zeilendaten parsen                     |
+| [Zeilendaten dynamisch laden](api/methods/js_kanban_setconfig_method.md)       | Lernen Sie, wie Sie Zeilendaten zur Laufzeit über `setConfig()` laden (oder dessen Alias [`parse()`](api/methods/js_kanban_parse_method.md))|
 | [Serializing row data](api/methods/js_kanban_serialize_method.md)| Lernen Sie, wie Sie Zeilendaten serialisieren                |
 | [Updating row data](api/methods/js_kanban_updaterow_method.md)  | Lernen Sie, wie Sie Zeilendaten aktualisieren                |
 

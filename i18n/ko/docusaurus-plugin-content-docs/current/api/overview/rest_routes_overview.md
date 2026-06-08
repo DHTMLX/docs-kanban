@@ -1,7 +1,7 @@
 ---
 sidebar_label: REST 경로 개요
 title: REST 경로 개요
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 JavaScript Kanban의 Internal RestDataProvider 경로 개요를 확인할 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드하세요.
+description: DHTMLX Kanban의 REST 경로 개요를 확인하세요. 카드, 열, 행, 링크, 댓글 및 투표에 대한 모든 백엔드 엔드포인트를 찾아보세요.
 ---
 
 # REST 경로 개요

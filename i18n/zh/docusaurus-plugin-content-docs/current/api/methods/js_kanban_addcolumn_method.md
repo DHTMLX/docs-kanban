@@ -1,7 +1,7 @@
 ---
 sidebar_label: addColumn()
-title: addColumn 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 addColumn 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版。
+title: addColumn 方法 API
+description: 阅读 DHTMLX Kanban 的 addColumn 方法 API。了解如何向看板添加新列。
 ---
 
 # addColumn()

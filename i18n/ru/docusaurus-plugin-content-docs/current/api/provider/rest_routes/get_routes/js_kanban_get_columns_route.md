@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /columns
-title: GET /columns
-description: Вы можете узнать о REST маршруте GET /columns в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута GET /columns
+description: Ознакомьтесь с REST-маршрутом GET /columns для DHTMLX Kanban. Узнайте, как получить данные обо всех колонках в виде JSON-массива.
 ---
 
 # GET `/columns`

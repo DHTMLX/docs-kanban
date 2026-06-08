@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /users
-title: GET /users
-description: Sie können die REST-Route GET /users in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: GET /users REST-Route API
+description: Lesen Sie die REST-Route GET /users API für DHTMLX Kanban. Erfahren Sie, wie Sie Daten aller Benutzer als JSON-Array abrufen.
 ---
 
 # GET `/users`

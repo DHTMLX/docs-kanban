@@ -1,7 +1,7 @@
 ---
 sidebar_label: Arbeiten mit dem Server
-title: Arbeiten mit dem Server
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie, wie Sie mit dem Server arbeiten. Stöbern Sie in Entwicklerhandbüchern und der API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Kanban Server-Integrationshandbuch
+description: Lesen Sie das DHTMLX Kanban Server-Integrationshandbuch. Erfahren Sie mehr über REST-Datenprovider, Backend-Synchronisierung, Remote Events und API-Konfiguration.
 ---
 
 # Arbeiten mit dem Server

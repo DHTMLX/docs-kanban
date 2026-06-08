@@ -1,7 +1,7 @@
 ---
 sidebar_label: 初始化
-title: 初始化
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解初始化相关内容。浏览开发者指南和 API 参考，试用代码示例和在线演示，并免费下载 DHTMLX Kanban 的 30 天评估版。
+title: Kanban 初始化指南
+description: 参阅 DHTMLX Kanban 初始化指南。了解构造函数设置、必需配置、列、卡片及看板初始化。
 ---
 
 # 初始化

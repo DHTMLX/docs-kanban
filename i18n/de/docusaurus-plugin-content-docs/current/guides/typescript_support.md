@@ -1,7 +1,7 @@
 ---
 sidebar_label: TypeScript-Unterstützung
-title: TypeScript-Unterstützung
-description: In der Dokumentation erfahren Sie, wie Sie TypeScript mit der DHTMLX JavaScript Kanban-Bibliothek verwenden. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Kanban TypeScript-Unterstützungsanleitung
+description: Folgen Sie der DHTMLX Kanban TypeScript-Unterstützungsanleitung. Erfahren Sie, wie Sie die integrierten Typdefinitionen und die typisierte Konfiguration in Ihrem TypeScript-Projekt verwenden.
 ---
 
 # TypeScript-Unterstützung

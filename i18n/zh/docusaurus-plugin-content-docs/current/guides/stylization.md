@@ -1,7 +1,7 @@
 ---
 sidebar_label: 样式化
-title: 样式化
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解样式化内容。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版。
+title: Kanban 样式化指南
+description: 阅读 DHTMLX Kanban 样式化指南。了解如何通过 CSS 类和 CSS 变量为卡片、列和行设置样式。
 ---
 
 # 样式化

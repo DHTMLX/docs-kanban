@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/comments/{id}
-title: DELETE /cards/{cardId}/comments/{commentId}
-description: Вы можете ознакомиться с REST маршрутом DELETE /cards/{cardId}/comments/{commentId} в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута DELETE /cards/{cardId}/comments/{commentId}
+description: Ознакомьтесь с API REST-маршрута DELETE /cards/{cardId}/comments/{commentId} для DHTMLX Kanban. Узнайте, как удалить комментарий с карточки.
 ---
 
 # DELETE `/cards/{cardId}/comments/{commentId}`

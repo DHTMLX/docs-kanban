@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /links
-title: DELETE /links
-description: 您可以在DHTMLX JavaScript看板库的文档中了解DELETE /links REST路由。浏览开发者指南和API参考，尝试代码示例和在线演示，并下载DHTMLX看板的免费30天试用版本。
+title: DELETE /links REST 路由 API
+description: 阅读 DHTMLX Kanban 的 DELETE /links REST 路由 API。了解如何删除链接。
 ---
 
 # DELETE `/links`

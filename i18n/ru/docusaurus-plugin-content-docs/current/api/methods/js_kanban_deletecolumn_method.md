@@ -1,7 +1,7 @@
 ---
 sidebar_label: deleteColumn()
-title: Метод deleteColumn
-description: Вы можете узнать о методе deleteColumn в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода deleteColumn
+description: Ознакомьтесь с API метода deleteColumn для DHTMLX Kanban. Узнайте, как удалить колонку с доски по её ID.
 ---
 
 # deleteColumn()

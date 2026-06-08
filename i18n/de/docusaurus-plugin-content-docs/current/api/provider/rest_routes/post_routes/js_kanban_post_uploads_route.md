@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /uploads
-title: POST /uploads
-description: Sie können die REST-Route POST /uploads in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: POST /uploads REST-Route API
+description: Lesen Sie die REST-Route POST /uploads API für DHTMLX Kanban. Erfahren Sie, wie Sie eine Binärdatei hochladen und deren ID, Namen und URL zurückgeben.
 ---
 
 # POST `/uploads`

@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /columns
-title: POST /columns
-description: Вы можете ознакомиться с маршрутом REST POST /columns в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута POST /columns
+description: Ознакомьтесь с API REST-маршрута POST /columns для DHTMLX Kanban. Узнайте, как создать новую колонку и получить её ID.
 ---
 
 # POST `/columns`

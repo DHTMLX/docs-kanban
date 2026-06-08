@@ -1,7 +1,7 @@
 ---
 sidebar_label: getCards()
-title: REST метод getCards
-description: Вы можете узнать о REST методе getCards в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-метода getCards
+description: Ознакомьтесь с API REST-метода getCards для DHTMLX Kanban. Узнайте, как получить промис с данными карточек.
 ---
 
 # getCards()

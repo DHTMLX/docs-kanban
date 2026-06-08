@@ -1,7 +1,7 @@
 ---
 sidebar_label: getIDResolver()
-title: getIDResolver REST-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Methode getIDResolver. Lesen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Evaluierungsversion von DHTMLX Kanban herunter.
+title: getIDResolver REST-Methode API
+description: Lesen Sie die API-Referenz der getIDResolver REST-Methode für DHTMLX Kanban. Erfahren Sie, wie temporäre clientseitige IDs in Backend-IDs aufgelöst werden.
 ---
 
 # getIDResolver()
@@ -53,6 +53,6 @@ const events = new kanban.RemoteEvents(url + "/api/v1", token);
 events.on(handlers);
 ~~~
 
-Dieselbe Resolver-Funktion kann in benutzerdefinierten Handlern verwendet werden, die an `RemoteEvents.on()` übergeben werden. Ein vollständiges Beispiel finden Sie unter [Serverevents anpassen](guides/working_with_server.md/#customize-server-events).
+Dieselbe Resolver-Funktion kann in benutzerdefinierten Handlern verwendet werden, die an `RemoteEvents.on()` übergeben werden. Ein vollständiges Beispiel finden Sie unter [Serverevents anpassen](guides/working_with_server.md#customize-server-events).
 
-**Verwandte Artikel:** [Mit dem Server arbeiten: Mehrbenutzer-Backend](guides/working_with_server.md/#multiuser-backend)
+**Verwandte Artikel:** [Mit dem Server arbeiten: Mehrbenutzer-Backend](guides/working_with_server.md#multiuser-backend)

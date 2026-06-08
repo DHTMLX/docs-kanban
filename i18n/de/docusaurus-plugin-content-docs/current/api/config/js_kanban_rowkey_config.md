@@ -1,7 +1,7 @@
 ---
 sidebar_label: rowKey
-title: rowKey Konfiguration
-description: Sie können mehr über die rowKey Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: rowKey Konfiguration API
+description: Lesen Sie die rowKey Konfigurationsdokumentation für DHTMLX Kanban. Erfahren Sie, wie Sie Aufgabenkarten Swimlane-Zeilen zuweisen.
 ---
 
 # rowKey

@@ -1,7 +1,7 @@
 ---
 sidebar_label: addRow()
-title: addRow 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 addRow 方法。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX Kanban 的免费 30 天试用版。
+title: addRow 方法 API
+description: 阅读 DHTMLX Kanban 的 addRow 方法 API。了解如何向看板添加新行（泳道）。
 ---
 
 # addRow()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/comments/{id}
-title: DELETE /cards/{cardId}/comments/{commentId}
-description: Sie können die REST-Route DELETE /cards/{cardId}/comments/{commentId} in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: DELETE /cards/{cardId}/comments/{commentId} REST-Route API
+description: Lesen Sie die REST-Routen-API DELETE /cards/{cardId}/comments/{commentId} für DHTMLX Kanban. Erfahren Sie, wie Sie einen Kommentar von einer Karte entfernen.
 ---
 
 # DELETE `/cards/{cardId}/comments/{commentId}`

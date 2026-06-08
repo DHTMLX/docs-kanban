@@ -1,7 +1,7 @@
 ---
 sidebar_label: api
-title: api 구성
-description: DHTMLX 자바스크립트 칸반 라이브러리의 (Toolbar) api 구성에 대해 문서에서 배울 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: Toolbar api Config API
+description: DHTMLX Kanban의 Toolbar api 구성 API를 읽어보세요. Toolbar를 Kanban 내부 API에 연결하는 방법을 알아볼 수 있습니다.
 ---
 
 # api

@@ -1,7 +1,7 @@
 ---
 sidebar_label: columnKey
-title: Конфигурация columnKey
-description: Вы можете узнать о конфигурации columnKey в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
+title: API конфигурации columnKey
+description: Ознакомьтесь с API конфигурации columnKey для DHTMLX Kanban. Узнайте, как привязывать карточки к колонкам по пользовательскому ключу данных.
 ---
 
 # columnKey

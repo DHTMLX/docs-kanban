@@ -1,7 +1,7 @@
 ---
 sidebar_label: getQueue()
-title: getQueue REST Method
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 getQueue REST 方法。浏览开发者指南和 API 参考，查看代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: getQueue REST 方法 API
+description: 阅读 DHTMLX Kanban 的 getQueue REST 方法 API。了解如何获取 RestDataProvider 处理的内部操作队列。
 ---
 
 # getQueue()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: Übersicht der REST-Routen
 title: Übersicht der REST-Routen
-description: Sie finden eine Übersicht der internen RestDataProvider-Routen von JavaScript Kanban in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Durchsuchen Sie die Übersicht der REST-Routen für DHTMLX Kanban. Finden Sie alle Backend-Endpunkte für Karten, Spalten, Zeilen, Links, Kommentare und Abstimmungen.
 ---
 
 # Übersicht der REST-Routen

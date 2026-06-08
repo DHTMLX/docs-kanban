@@ -1,10 +1,10 @@
 ---
-sidebar_label: zeilen
-title: Zeilen-Konfiguration
-description: Sie können mehr über die Zeilen-Konfiguration in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+sidebar_label: rows
+title: rows Konfiguration API
+description: Lesen Sie die rows Konfigurations-API für DHTMLX Kanban. Erfahren Sie, wie Sie Swimlanes, Zeilenbeschriftungen, Limits und horizontale Board-Gruppierung definieren.
 ---
 
-# zeilen
+# rows
 
 ### Beschreibung
 

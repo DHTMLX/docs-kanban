@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards/{id}/vote
-title: POST /cards/{cardId}/vote
-description: Вы можете узнать о REST-маршруте POST /cards/{cardId}/vote в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута POST /cards/{cardId}/vote
+description: Ознакомьтесь с REST-маршрутом POST /cards/{cardId}/vote для DHTMLX Kanban. Узнайте, как добавить голос к карточке и получить ID проголосовавшего пользователя.
 ---
 
 # POST `/cards/{cardId}/vote`

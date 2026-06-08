@@ -1,7 +1,7 @@
 ---
 sidebar_label: moveCard()
-title: moveCard Methode
-description: Erfahren Sie mehr über die moveCard Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: moveCard Methode API
+description: Lesen Sie die API-Dokumentation der Methode moveCard für DHTMLX Kanban. Erfahren Sie, wie Sie eine Karte in eine bestimmte Spalte oder Zeile verschieben.
 ---
 
 # moveCard()
