@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-vote
-title: add-vote Event
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das add-vote Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: add-vote Ereignis API
+description: Lesen Sie die add-vote Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das ausgelöst wird, wenn ein Nutzer eine neue Stimme hinzufügt.
 ---
 
 # add-vote

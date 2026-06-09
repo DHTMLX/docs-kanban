@@ -1,7 +1,7 @@
 ---
 sidebar_label: getHandlers()
-title: getHandlers REST-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die getHandlers REST-Methode. Lesen Sie Entwicklerhandbücher und API-Referenzen, testen Sie Codebeispiele und Live-Demos, und laden Sie eine kostenlose 30-Tage-Evaluierungsversion von DHTMLX Kanban herunter.
+title: getHandlers REST-Methode API
+description: Lesen Sie die API-Referenz der getHandlers REST-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie die Standard-Action-Handler abrufen, die zum Senden von Operationen an den Server verwendet werden.
 ---
 
 # getHandlers()

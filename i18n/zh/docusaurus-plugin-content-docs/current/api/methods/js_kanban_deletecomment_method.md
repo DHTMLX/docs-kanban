@@ -1,7 +1,7 @@
 ---
 sidebar_label: deleteComment()
-title: deleteComment 方法
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 deleteComment 方法。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天试用版。
+title: deleteComment 方法 API
+description: 阅读 DHTMLX Kanban 的 deleteComment 方法 API。了解如何通过 ID 删除卡片评论。
 ---
 
 # deleteComment()

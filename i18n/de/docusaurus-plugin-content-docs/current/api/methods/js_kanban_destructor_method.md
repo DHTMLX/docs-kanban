@@ -1,7 +1,7 @@
 ---
 sidebar_label: destructor()
-title: destructor Methode
-description: Sie können mehr über die destructor Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: destructor Methode API
+description: Lesen Sie die API-Dokumentation der Methode destructor für DHTMLX Kanban. Erfahren Sie, wie Sie das Board zerstören und alle zugehörigen Event-Listener trennen.
 ---
 
 # destructor()

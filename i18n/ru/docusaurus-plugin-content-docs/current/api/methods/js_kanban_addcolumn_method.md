@@ -1,7 +1,7 @@
 ---
 sidebar_label: addColumn()
-title: Метод addColumn
-description: Вы можете узнать о методе addColumn в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную оценочную версию DHTMLX Kanban.
+title: API метода addColumn
+description: Ознакомьтесь с API метода addColumn для DHTMLX Kanban. Узнайте, как добавить новую колонку на доску.
 ---
 
 # addColumn()

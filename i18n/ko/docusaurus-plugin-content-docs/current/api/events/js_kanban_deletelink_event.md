@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-link
-title: delete-link 이벤트
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 delete-link 이벤트에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드하세요.
+title: delete-link Event API
+description: DHTMLX Kanban의 delete-link 이벤트 API를 읽어보세요. 링크 삭제 시 발생하는 이벤트를 처리하는 방법을 알아볼 수 있습니다.
 ---
 
 # delete-link

@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateColumn()
-title: updateColumn Method
-description: You can learn about the updateColumn method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: updateColumn Method API
+description: Read the updateColumn method API for DHTMLX Kanban. Learn how to update column properties, styles, and menu settings.
 ---
 
 # updateColumn()

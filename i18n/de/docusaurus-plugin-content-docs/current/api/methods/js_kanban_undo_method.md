@@ -1,7 +1,7 @@
 ---
 sidebar_label: undo()
-title: undo Methode
-description: Sie können die undo-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek nachlesen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: undo Methode API
+description: Lesen Sie die API-Dokumentation der undo-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie die letzte Board-Aktion rückgängig machen.
 ---
 
 # undo()

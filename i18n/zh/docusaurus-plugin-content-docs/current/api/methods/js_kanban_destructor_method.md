@@ -1,7 +1,7 @@
 ---
 sidebar_label: destructor()
-title: destructor 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 destructor 方法。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载免费的 30 天试用版 DHTMLX Kanban。
+title: destructor 方法 API
+description: 阅读 DHTMLX Kanban 的 destructor 方法 API。了解如何销毁看板并解除所有相关事件监听器。
 ---
 
 # destructor()

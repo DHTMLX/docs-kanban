@@ -1,7 +1,7 @@
 ---
 sidebar_label: setHeaders()
-title: setHeaders REST 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 setHeaders REST 方法。浏览开发者指南和 API 参考，查看代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: setHeaders REST 方法 API
+description: 阅读 DHTMLX Kanban 的 setHeaders REST 方法 API。了解如何设置附加到每个请求的自定义 HTTP 请求头。
 ---
 
 # setHeaders()
@@ -39,4 +39,4 @@ restProvider.setHeaders({
 
 如果只需为某个特定请求设置请求头而非所有请求，请将其作为第四个参数传递给 [`send()`](api/provider/rest_methods/js_kanban_send_method.md)。
 
-**相关文章：** [与服务器协作：多用户后端](guides/working_with_server.md/#multiuser-backend)
+**相关文章：** [与服务器协作：多用户后端](guides/working_with_server.md#multiuser-backend)

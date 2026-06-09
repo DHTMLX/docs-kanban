@@ -1,7 +1,7 @@
 ---
 sidebar_label: editorAutoSave
-title: editorAutoSave 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 editorAutoSave 配置。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天试用版。
+title: editorAutoSave 配置 API
+description: 阅读 DHTMLX Kanban 的 editorAutoSave 配置 API。了解如何在卡片编辑器中启用或禁用自动保存。
 ---
 
 # 

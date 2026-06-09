@@ -1,7 +1,7 @@
 ---
 sidebar_label: editor
-title: editor 配置
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 editor 配置。浏览开发者指南和 API 参考，尝试代码示例和实时演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: editor 配置 API
+description: 阅读 DHTMLX Kanban 的 editor 配置文档。了解如何启用、自定义和控制任务编辑器的行为。
 ---
 
 # editor

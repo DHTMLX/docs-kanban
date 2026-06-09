@@ -1,7 +1,7 @@
 ---
 sidebar_label: parse()
-title: parse Methode
-description: Sie können sich über die parse-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek informieren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: parse Methode API
+description: Lesen Sie die API-Dokumentation der parse-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie Karten, Spalten, Zeilen und Board-Daten aus JSON laden.
 ---
 
 # parse()
@@ -10,7 +10,23 @@ description: Sie können sich über die parse-Methode in der Dokumentation der D
 
 @short: Parst Daten in Kanban
 
-Diese Methode führt denselben Vorgang aus wie [`setConfig`](/api/methods/js_kanban_setconfig_method), wenn sie mit datenbezogenen Kanban-Einstellungen verwendet wird. Es wird daher empfohlen, `setConfig` zu verwenden, um Konsistenz mit anderen Konfigurationsoptionen zu gewährleisten, obwohl `parse` weiterhin als Alias für das Parsen von Daten unterstützt wird.
+Die Methode `parse()` ist ein Alias für [`setConfig()`](/api/methods/js_kanban_setconfig_method), der auf datenbezogene Eigenschaften (`cards`, `columns`, `rows`, `links`) beschränkt ist. Beide Methoden führen für diese Eigenschaften intern denselben Vorgang aus.
+
+:::tip setConfig() bevorzugen
+Verwenden Sie die Methode [`setConfig()`](/api/methods/js_kanban_setconfig_method), die dieselben Dateneigenschaften **sowie** weitere Kanban-Konfigurationsoptionen akzeptiert. Rufen Sie `setConfig()` einmal für alle Props auf, anstatt `parse()` für Daten und `setConfig()` für die übrigen Props (wie [`columnKey`](api/config/js_kanban_columnkey_config.md), [`rowKey`](api/config/js_kanban_rowkey_config.md), [`cardShape`](api/config/js_kanban_cardshape_config.md)) aufzurufen:
+
+~~~js
+// statt zwei Aufrufen
+kanban.setConfig({ columnKey: "type" });
+kanban.parse({ columns });
+
+// einen verwenden
+kanban.setConfig({
+    columnKey: "type",
+    columns
+});
+~~~
+:::
 
 ### Verwendung
 
@@ -42,6 +58,9 @@ board.parse({
     rows,
     links
 });
+
+// äquivalenter Aufruf über setConfig()
+// board.setConfig({ columns, cards, rows, links });
 ~~~
 
 **Änderungsprotokoll:** Seit Version v1.1 müssen Sie die Startdaten nicht mehr im Konstruktor zurücksetzen, bevor Sie neue Daten parsen.

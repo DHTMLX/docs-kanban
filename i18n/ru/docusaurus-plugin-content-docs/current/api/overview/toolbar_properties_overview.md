@@ -1,7 +1,7 @@
 ---
 sidebar_label: Обзор свойств Toolbar
 title: Обзор свойств Toolbar
-description: Вы можете ознакомиться с обзором свойств Toolbar в JavaScript Kanban в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+description: Изучите обзор свойств Toolbar для DHTMLX Kanban. Найдите свойства конфигурации для элементов Toolbar и API.
 ---
 
 # Обзор свойств Toolbar

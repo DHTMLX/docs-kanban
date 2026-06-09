@@ -1,7 +1,7 @@
 ---
 sidebar_label: addComment()
-title: Метод addComment
-description: Вы можете узнать о методе addComment в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода addComment
+description: Ознакомьтесь с API метода addComment для DHTMLX Kanban. Узнайте, как добавить комментарий к карточке по её ID.
 ---
 
 # addComment()

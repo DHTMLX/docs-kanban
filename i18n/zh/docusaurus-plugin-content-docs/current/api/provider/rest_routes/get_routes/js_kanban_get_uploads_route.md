@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /uploads
-title: GET /uploads
-description: 您可以在DHTMLX JavaScript看板库的文档中了解GET /uploads REST路由。浏览开发者指南和API参考，试用代码示例和在线演示，并下载DHTMLX看板的免费30天试用版。
+title: GET /uploads REST 路由 API
+description: 阅读 DHTMLX Kanban 的 GET /uploads REST 路由 API。了解如何从服务器获取请求的二进制文件。
 ---
 
 # GET `/uploads`
@@ -33,4 +33,4 @@ HTTP状态码指示请求是否成功（response.status == 200）或失败（res
 
 ---
 
-**相关文档**: [Working with server](guides/working_with_server.md)
+**相关文档**：[与服务器协作](guides/working_with_server.md)

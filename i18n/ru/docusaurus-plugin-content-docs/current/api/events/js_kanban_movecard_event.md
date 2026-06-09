@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-card
-title: Событие move-card
-description: Вы можете узнать о событии move-card в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события move-card
+description: Ознакомьтесь с API события move-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при перемещении карточки.
 ---
 
 # move-card

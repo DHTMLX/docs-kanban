@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.setNext()
-title: setNext 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 setNext 方法。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: setNext 方法 API
+description: 阅读 DHTMLX Kanban 的 setNext 方法 API。了解如何将看板 API 连接到数据提供者和后端流程。
 ---
 
 # api.setNext()

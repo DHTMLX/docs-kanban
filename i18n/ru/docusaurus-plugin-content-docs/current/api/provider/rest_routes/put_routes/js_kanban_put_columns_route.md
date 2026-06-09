@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /columns
-title: PUT /columns
-description: Вы можете ознакомиться с REST маршрутом PUT /columns в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута PUT /columns
+description: Ознакомьтесь с REST-маршрутом PUT /columns для DHTMLX Kanban. Узнайте, как обновить данные колонки.
 ---
 
 # PUT `/columns`

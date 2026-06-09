@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration mit Svelte
-title: Integration mit Svelte
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Integration mit Svelte. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: Svelte Kanban Integrationsanleitung
+description: Folgen Sie der DHTMLX Kanban Svelte-Integrationsanleitung. Erfahren Sie mehr über Einrichtung, Konfiguration, API-Nutzung und Lifecycle-Muster der Komponente.
 ---
 
 # Integration mit Svelte
@@ -335,7 +335,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="DHTMLX Kanban Board, das in einer Svelte-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
+  alt="DHTMLX Kanban-Board, das in einer Svelte-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
   className="img_border"
 />
 

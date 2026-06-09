@@ -1,7 +1,7 @@
 ---
 sidebar_label: scroll
-title: scroll Event
-description: Sie können mehr über das scroll Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: scroll Ereignis API
+description: Lesen Sie die scroll Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Scrollen zu den angegebenen Elementen ausgelöst wird.
 ---
 
 # scroll

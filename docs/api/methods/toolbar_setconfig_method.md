@@ -1,7 +1,7 @@
 ---
 sidebar_label: setConfig()
-title: setConfig Method
-description: You can learn about the setConfig method of Toolbar in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Toolbar setConfig Method API
+description: Read the Toolbar setConfig method API for DHTMLX Kanban. Learn how to update Toolbar configuration at runtime.
 ---
 
 # setConfig()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: send()
-title: send() 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 send() 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
+title: send REST 메서드 API
+description: DHTMLX Kanban의 send REST 메서드 API를 확인하세요. 서버에 HTTP 요청을 보내고 응답이 포함된 프로미스를 가져오는 방법을 알아보세요.
 ---
 
 # send()

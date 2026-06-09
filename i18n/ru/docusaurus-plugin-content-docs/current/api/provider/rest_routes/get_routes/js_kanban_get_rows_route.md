@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /rows
-title: GET /rows
-description: Вы можете узнать о REST-маршруте GET /rows в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута GET /rows
+description: Ознакомьтесь с REST-маршрутом GET /rows для DHTMLX Kanban. Узнайте, как получить данные обо всех строках (swimlanes) в виде JSON-массива.
 ---
 
 # GET `/rows`

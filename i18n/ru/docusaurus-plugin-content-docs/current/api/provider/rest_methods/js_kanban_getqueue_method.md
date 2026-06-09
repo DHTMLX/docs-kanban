@@ -1,7 +1,7 @@
 ---
 sidebar_label: getQueue()
-title: REST-метод getQueue
-description: В документации библиотеки JavaScript Kanban от DHTMLX вы можете узнать о REST-методе getQueue. Изучайте руководства разработчика и справочник АПИ, просматривайте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
+title: API REST-метода getQueue
+description: Ознакомьтесь с API REST-метода getQueue для DHTMLX Kanban. Узнайте, как получить внутреннюю очередь действий, обрабатываемых RestDataProvider.
 ---
 
 # getQueue()

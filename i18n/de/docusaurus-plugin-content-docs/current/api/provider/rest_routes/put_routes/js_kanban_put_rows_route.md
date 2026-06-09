@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /rows
-title: PUT /rows
-description: Sie können mehr über die PUT /rows REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: PUT /rows REST-Route API
+description: Lesen Sie die REST-Route-API PUT /rows für DHTMLX Kanban. Erfahren Sie, wie Sie Daten einer Zeile (Swimlane) aktualisieren.
 ---
 
 # PUT `/rows`

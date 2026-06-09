@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/vote
-title: DELETE /cards/{cardId}/vote
-description: Вы можете ознакомиться с REST маршрутом DELETE /cards/{cardId}/vote в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута DELETE /cards/{cardId}/vote
+description: Ознакомьтесь с REST-маршрутом DELETE /cards/{cardId}/vote для DHTMLX Kanban. Узнайте, как удалить голос с карточки.
 ---
 
 # DELETE `/cards/{cardId}/vote`

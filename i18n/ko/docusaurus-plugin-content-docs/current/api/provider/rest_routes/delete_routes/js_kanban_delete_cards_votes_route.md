@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards/{id}/vote
-title: DELETE /cards/{cardId}/vote
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 DELETE /cards/{cardId}/vote REST 경로에 대해 알아보실 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제 및 라이브 데모를 시도해 보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: DELETE /cards/{cardId}/vote REST Route API
+description: DHTMLX Kanban의 DELETE /cards/{cardId}/vote REST route API를 확인하세요. 카드에서 투표를 제거하는 방법을 알아보세요.
 ---
 
 # DELETE `/cards/{cardId}/vote`

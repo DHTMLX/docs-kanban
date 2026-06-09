@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /uploads
-title: POST /uploads
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 POST /uploads REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天试用版。
+title: POST /uploads REST 路由 API
+description: 阅读 DHTMLX Kanban 的 POST /uploads REST 路由 API。了解如何上传二进制文件并返回其 ID、名称和 URL。
 ---
 
 # POST `/uploads`
@@ -56,4 +56,4 @@ HTTP 状态码表示请求是否成功（response.status == 200）或失败（re
 
 ---
 
-**相关文档**: [Working with server](guides/working_with_server.md)
+**相关文档**：[与服务器协作](guides/working_with_server.md)

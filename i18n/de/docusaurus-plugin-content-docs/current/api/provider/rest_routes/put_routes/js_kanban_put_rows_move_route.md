@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /rows/{id}/move
-title: PUT /rows/{id}/move
-description: Sie können mehr über die PUT /rows/{id}/move REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: PUT /rows/{id}/move REST-Route API
+description: Lesen Sie die REST-Route-API PUT /rows/{id}/move für DHTMLX Kanban. Erfahren Sie, wie Sie eine Zeile an eine bestimmte Position verschieben.
 ---
 
 # PUT `/rows/{id}/move`

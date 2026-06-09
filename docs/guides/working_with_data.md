@@ -1,7 +1,7 @@
 ---
 sidebar_label: Working with data
-title: Working with Data
-description: You can explore how to work with Data in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Kanban Data Parsing Guide
+description: Read the DHTMLX Kanban data parsing guide. Learn how to load, read, export, and update cards, columns, rows, links, and comments on the board.
 ---
 
 # Working with data
@@ -142,7 +142,7 @@ board.setConfig({ columns, cards, rows });
 
 ## Sync data with Gantt and Scheduler
 
-For multi-widget integration, see [Integration with DHTMLX widgets](guides/integration.md#gantt-and-scheduler).
+For multi-widget integration, see [Integration with DHTMLX widgets](guides/integration.md#gantt-event-calendar-and-to-do-list).
 
 ## Get data
 

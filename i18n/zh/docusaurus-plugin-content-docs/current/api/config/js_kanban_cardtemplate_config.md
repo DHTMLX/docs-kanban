@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardTemplate
-title: cardTemplate 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 cardTemplate 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载免费的 30 天试用版 DHTMLX 看板。
+title: cardTemplate 配置 API
+description: 阅读 DHTMLX Kanban 的 cardTemplate 配置文档。了解如何为任务卡片创建自定义 HTML 模板。
 ---
 
 # cardTemplate

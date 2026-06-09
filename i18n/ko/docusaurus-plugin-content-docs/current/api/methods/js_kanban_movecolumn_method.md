@@ -1,7 +1,7 @@
 ---
 sidebar_label: moveColumn()
-title: moveColumn 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 moveColumn 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: moveColumn Method API
+description: DHTMLX Kanban의 moveColumn 메서드 API를 확인하세요. 열을 새 위치로 이동하는 방법을 알아봅니다.
 ---
 
 # moveColumn()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: addCard()
-title: Метод addCard
-description: Вы можете узнать о методе addCard в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода addCard
+description: Ознакомьтесь с API метода addCard для DHTMLX Kanban. Узнайте, как добавить новую карточку на доску.
 ---
 
 # addCard()

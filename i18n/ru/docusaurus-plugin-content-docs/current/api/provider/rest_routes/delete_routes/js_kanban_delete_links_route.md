@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /links
-title: DELETE /links
-description: Вы можете узнать о REST-маршруте DELETE /links в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута DELETE /links
+description: Ознакомьтесь с REST-маршрутом DELETE /links для DHTMLX Kanban. Узнайте, как удалить связь.
 ---
 
 # DELETE `/links`

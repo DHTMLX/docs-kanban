@@ -1,7 +1,7 @@
 ---
 sidebar_label: getSelection()
-title: Метод getSelection
-description: Вы можете узнать о методе getSelection в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и интерактивные демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода getSelection
+description: Ознакомьтесь с API метода getSelection для DHTMLX Kanban. Узнайте, как получить ID выделенных в данный момент карточек.
 ---
 
 # getSelection()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /cards
-title: GET /cards
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route GET /cards. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: GET /cards REST-Route API
+description: Lesen Sie die API-Referenz der REST-Route GET /cards für DHTMLX Kanban. Erfahren Sie, wie Sie Daten aller Karten als JSON-Array abrufen.
 ---
 
 # GET `/cards`
@@ -77,5 +77,6 @@ Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status ==
 ---
 
 **Verwandte Artikel**:
-- [Working with server](guides/working_with_server.md)
+
+- [Arbeiten mit dem Server](guides/working_with_server.md)
 - [getCards()](api/provider/rest_methods/js_kanban_getcards_method.md)

@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.intercept()
-title: Метод intercept
-description: Вы можете узнать о методе intercept в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода intercept
+description: Ознакомьтесь с API метода intercept для DHTMLX Kanban. Узнайте, как перехватывать, изменять или блокировать события доски до их применения.
 ---
 
 # api.intercept()

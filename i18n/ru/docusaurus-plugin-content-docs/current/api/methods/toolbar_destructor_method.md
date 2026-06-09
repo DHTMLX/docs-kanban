@@ -1,7 +1,7 @@
 ---
 sidebar_label: destructor()
-title: Метод destructor
-description: Вы можете узнать о методе destructor в Toolbar в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демонстрации, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода destructor компонента Toolbar
+description: Ознакомьтесь с API метода destructor компонента Toolbar для DHTMLX Kanban. Узнайте, как уничтожить Toolbar и отключить все связанные обработчики событий.
 ---
 
 # destructor()

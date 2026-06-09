@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-vote
-title: delete-vote Event
-description: Sie können im Dokumentationsbereich der DHTMLX JavaScript Kanban-Bibliothek mehr über das delete-vote Event erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: delete-vote Ereignis API
+description: Lesen Sie die delete-vote Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das ausgelöst wird, wenn ein Benutzer eine Stimme von einer Karte löscht.
 ---
 
 # delete-vote

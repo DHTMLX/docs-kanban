@@ -1,7 +1,7 @@
 ---
 sidebar_label: Integration mit React
-title: Integration mit React
-description: Erfahren Sie in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die Integration mit React. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: React Kanban Integrationsanleitung
+description: Folgen Sie der DHTMLX Kanban React-Integrationsanleitung. Erfahren Sie mehr über die Komponenteneinrichtung, Konfiguration, API-Nutzung und Lifecycle-Behandlung.
 ---
 
 # Integration mit React
@@ -329,7 +329,7 @@ import trial from '@site/static/img/trial_kanban.png';
 
 <img
   src={trial}
-  alt="DHTMLX Kanban Board, das in einer React-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
+  alt="DHTMLX Kanban-Board, das in einer React-Anwendung initialisiert wurde, mit gefüllten Spalten und Karten"
   className="img_border"
 />
 

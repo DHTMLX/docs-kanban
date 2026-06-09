@@ -1,7 +1,7 @@
 ---
 sidebar_label: addLink()
-title: addLink Methode
-description: Sie können mehr über die addLink Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: addLink Methode API
+description: Lesen Sie die API der addLink-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie einen neuen Link zwischen Karten hinzufügen.
 ---
 
 # addLink()

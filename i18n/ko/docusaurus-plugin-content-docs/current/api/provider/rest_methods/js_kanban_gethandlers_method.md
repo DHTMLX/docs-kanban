@@ -1,7 +1,7 @@
 ---
 sidebar_label: getHandlers()
-title: getHandlers REST 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getHandlers REST 메서드에 대해 알아볼 수 있습니다. 개발자 가이드와 API 레퍼런스를 살펴보고, 코드 예제와 라이브 데모를 체험해 보세요. DHTMLX Kanban의 30일 무료 평가판을 다운로드하실 수도 있습니다.
+title: getHandlers REST 메서드 API
+description: DHTMLX Kanban의 getHandlers REST 메서드 API를 확인하세요. 서버로 작업을 전송하는 데 사용되는 기본 액션 핸들러를 가져오는 방법을 알아보세요.
 ---
 
 # getHandlers()

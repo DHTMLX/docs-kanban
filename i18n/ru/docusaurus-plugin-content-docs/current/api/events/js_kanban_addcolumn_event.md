@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-column
-title: Событие add-column
-description: Вы можете узнать о событии add-column в документации по библиотеке DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события add-column
+description: Ознакомьтесь с API события add-column для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при добавлении новой колонки.
 ---
 
 # add-column

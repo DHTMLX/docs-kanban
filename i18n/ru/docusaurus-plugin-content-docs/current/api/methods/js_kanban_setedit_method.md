@@ -1,7 +1,7 @@
 ---
 sidebar_label: setEdit()
-title: Метод setEdit
-description: Вы можете узнать о методе setEdit в документации по JavaScript библиотеке DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Метод setEdit API
+description: Изучите API метода setEdit для DHTMLX Kanban. Узнайте, как переключать редактор карточки.
 ---
 
 # setEdit()

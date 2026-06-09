@@ -1,7 +1,7 @@
 ---
 sidebar_label: currentUser
-title: currentUser 구성
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 currentUser 구성에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해 보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: currentUser Config API
+description: DHTMLX Kanban의 currentUser 구성 API를 읽어보세요. 댓글, 투표 및 협업을 위한 활성 사용자를 설정하는 방법을 알아볼 수 있습니다.
 ---
 
 # currentUser

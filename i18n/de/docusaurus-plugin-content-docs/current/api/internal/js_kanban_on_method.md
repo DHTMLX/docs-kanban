@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.on()
-title: on Methode
-description: Sie können mehr über die on Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: on Methode API
+description: Lesen Sie die API der on-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie Board-Ereignisse abonnieren und Benutzeraktionen in Ihrer Anwendung behandeln.
 ---
 
 # api.on()

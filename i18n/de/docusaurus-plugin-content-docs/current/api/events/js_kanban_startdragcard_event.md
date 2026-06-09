@@ -1,7 +1,7 @@
 ---
 sidebar_label: start-drag-card
-title: start-drag-card Event
-description: Sie können mehr über das start-drag-card Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: start-drag-card Ereignis API
+description: Lesen Sie die start-drag-card Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Starten des Ziehens einer Karte ausgelöst wird.
 ---
 
 # start-drag-card

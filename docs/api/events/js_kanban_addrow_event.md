@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-row
-title: add-row Event
-description: You can learn about the add-row event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: add-row Event API
+description: Read the add-row event API for DHTMLX Kanban. Learn how to handle the event triggered when adding a new row.
 ---
 
 # add-row

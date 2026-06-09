@@ -1,7 +1,7 @@
 ---
 sidebar_label: getAreaCards()
-title: getAreaCards Method
-description: You can learn about the getAreaCards method in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: getAreaCards Method API
+description: Read the getAreaCards method API for DHTMLX Kanban. Learn how to get all cards of a column or row as an array of data objects.
 ---
 
 # getAreaCards()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: setLocale()
-title: Метод setLocale
-description: В документации по библиотеке DHTMLX JavaScript Kanban вы можете узнать о методе setLocale компонента Toolbar. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода setLocale компонента Toolbar
+description: Ознакомьтесь с API метода setLocale компонента Toolbar для DHTMLX Kanban. Узнайте, как применить новую локализацию к Toolbar.
 ---
 
 # setLocale()

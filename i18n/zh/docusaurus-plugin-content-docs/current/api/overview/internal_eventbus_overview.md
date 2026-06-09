@@ -1,7 +1,7 @@
 ---
 sidebar_label: 事件总线方法
-title: 事件总线方法
-description: 您可以在DHTMLX JavaScript看板库的文档中查看JavaScript看板的内部事件总线方法概述。浏览开发者指南和API参考，试用代码示例和在线演示，并下载DHTMLX看板的免费30天评估版。
+title: 事件总线方法概览
+description: 浏览 DHTMLX Kanban 的事件总线方法概览。查找用于触发、拦截和处理 board 事件的内部方法。
 ---
 
 # 事件总线方法

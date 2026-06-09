@@ -1,7 +1,7 @@
 ---
 sidebar_label: select-card
-title: select-card Event
-description: Sie können mehr über das select-card Event in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: select-card Ereignis API
+description: Lesen Sie die select-card Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Auswählen einer Karte ausgelöst wird.
 ---
 
 # select-card

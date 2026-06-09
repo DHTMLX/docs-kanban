@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /cards/{id}/move
-title: PUT /cards/{id}/move
-description: Sie können mehr über die PUT /cards/{id}/move REST-Route in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: PUT /cards/{id}/move REST-Route API
+description: Lesen Sie die REST-Route-API PUT /cards/{id}/move für DHTMLX Kanban. Erfahren Sie, wie Sie Karten an eine bestimmte Position verschieben.
 ---
 
 # PUT `/cards/{id}/move`

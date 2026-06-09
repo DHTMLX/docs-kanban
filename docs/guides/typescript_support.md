@@ -1,7 +1,7 @@
 ---
 sidebar_label: TypeScript support
-title: TypeScript support
-description: You can learn about using typescript with the DHTMLX JavaScript Kanban library in the documentation. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Kanban TypeScript Support Guide
+description: Follow the DHTMLX Kanban TypeScript support guide. Learn how to use the built-in type definitions and typed configuration in your TypeScript project.
 ---
 
 # TypeScript support

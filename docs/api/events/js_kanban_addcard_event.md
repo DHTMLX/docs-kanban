@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-card
-title: add-card Event
-description: You can learn about the add-card event in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: add-card Event API
+description: Read the add-card event API for DHTMLX Kanban. Learn how to handle the event triggered when adding a new card.
 ---
 
 # add-card

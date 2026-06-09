@@ -1,7 +1,7 @@
 ---
 sidebar_label: readonly
-title: readonly 구성
-description: DHTMLX JavaScript Kanban 라이브러리의 readonly 구성에 대해 문서에서 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해 보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: readonly Config API
+description: DHTMLX Kanban의 readonly 구성 API를 읽어보세요. 편집을 비활성화하고 표시 전용 보드 뷰를 만드는 방법을 알아볼 수 있습니다.
 ---
 
 # readonly

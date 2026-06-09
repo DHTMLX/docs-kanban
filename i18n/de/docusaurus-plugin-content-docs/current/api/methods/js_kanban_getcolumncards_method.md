@@ -1,7 +1,7 @@
 ---
 sidebar_label: getColumnCards()
-title: getColumnCards Methode
-description: Sie können mehr über die getColumnCards Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getColumnCards Methode API
+description: Lesen Sie die API-Dokumentation der Methode getColumnCards für DHTMLX Kanban. Erfahren Sie, wie Sie alle Karten einer Spalte als Array von Datenobjekten abrufen.
 ---
 
 # getColumnCards()

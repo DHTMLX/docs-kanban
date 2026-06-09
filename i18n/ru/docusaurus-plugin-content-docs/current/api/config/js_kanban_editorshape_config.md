@@ -1,7 +1,7 @@
 ---
 sidebar_label: editorShape
-title: Конфигурация editorShape
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о конфигурации editorShape. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации editorShape
+description: Ознакомьтесь с документацией по конфигурации editorShape для DHTMLX Kanban. Узнайте, как задавать поля редактора, элементы управления и поведение при редактировании задач.
 ---
 
 # editorShape

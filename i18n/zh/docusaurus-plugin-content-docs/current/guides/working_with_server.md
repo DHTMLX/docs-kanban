@@ -1,7 +1,7 @@
 ---
 sidebar_label: 与服务器协作
-title: 与服务器协作
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解如何与服务器协作。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并免费下载 DHTMLX Kanban 30 天试用版。
+title: Kanban 服务器集成指南
+description: 阅读 DHTMLX Kanban 服务器集成指南。了解 REST 数据提供器、后端同步、远程事件及 API 配置。
 ---
 
 # 与服务器协作

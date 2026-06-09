@@ -1,7 +1,7 @@
 ---
 sidebar_label: setHeaders()
-title: setHeaders REST-Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die setHeaders-REST-Methode. Entdecken Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Evaluierungsversion von DHTMLX Kanban herunter.
+title: setHeaders REST-Methode API
+description: Lesen Sie die setHeaders REST-Methoden-API für DHTMLX Kanban. Erfahren Sie, wie Sie benutzerdefinierte HTTP-Header festlegen, die an jede Anfrage angehängt werden.
 ---
 
 # setHeaders()
@@ -39,4 +39,4 @@ restProvider.setHeaders({
 
 Um Header nur für eine bestimmte Anfrage und nicht für jede Anfrage festzulegen, übergeben Sie diese stattdessen als viertes Argument an [`send()`](api/provider/rest_methods/js_kanban_send_method.md).
 
-**Verwandte Artikel:** [Arbeiten mit dem Server: Multiuser-Backend](guides/working_with_server.md/#multiuser-backend)
+**Verwandte Artikel:** [Arbeiten mit dem Server: Multiuser-Backend](guides/working_with_server.md#multiuser-backend)

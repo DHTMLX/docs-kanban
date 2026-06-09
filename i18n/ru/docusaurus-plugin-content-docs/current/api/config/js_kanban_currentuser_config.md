@@ -1,7 +1,7 @@
 ---
 sidebar_label: currentUser
-title: currentUser Конфигурация
-description: Вы можете узнать о конфигурации currentUser в документации по библиотеке DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации currentUser
+description: Ознакомьтесь с API конфигурации currentUser для DHTMLX Kanban. Узнайте, как задавать активных пользователей для комментариев, голосований и совместной работы.
 ---
 
 # currentUser

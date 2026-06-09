@@ -1,7 +1,7 @@
 ---
 sidebar_label: Eigenschaften Übersicht
 title: Eigenschaften Übersicht
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek finden Sie eine Übersicht der Eigenschaften von JavaScript Kanban. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+description: Durchsuchen Sie die Eigenschaften-Übersicht für DHTMLX Kanban. Finden Sie alle Konfigurationseigenschaften für Karten, Spalten, Zeilen und den Editor.
 ---
 
 # Kanban Eigenschaften Übersicht

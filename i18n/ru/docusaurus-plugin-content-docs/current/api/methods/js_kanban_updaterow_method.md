@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateRow()
-title: Метод updateRow
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о методе updateRow. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода updateRow
+description: Ознакомьтесь с API метода updateRow для DHTMLX Kanban. Узнайте, как обновить свойства, стили и меню строк-плавательных дорожек.
 ---
 
 # updateRow()

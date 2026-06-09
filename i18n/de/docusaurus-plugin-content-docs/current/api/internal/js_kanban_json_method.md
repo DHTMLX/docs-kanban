@@ -1,7 +1,7 @@
 ---
 sidebar_label: export.json()
-title: json Methode
-description: Sie können mehr über die json Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: json Methode API
+description: Lesen Sie die API der json-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie Board-Daten exportieren und mit JSON-Aufgabenstrukturen arbeiten.
 ---
 
 # export.json()

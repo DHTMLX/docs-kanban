@@ -1,7 +1,7 @@
 ---
 sidebar_label: Methods overview
 title: Methods Overview
-description: You can have a Methods overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Browse the methods overview for DHTMLX Kanban. Find all board methods to add, update, move, and delete cards, columns, and rows.
 ---
 
 # Methods overview

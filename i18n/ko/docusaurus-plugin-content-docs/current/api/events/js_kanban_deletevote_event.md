@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-vote
-title: delete-vote 이벤트
-description: DHTMLX JavaScript Kanban 라이브러리의 delete-vote 이벤트에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: delete-vote Event API
+description: DHTMLX Kanban의 delete-vote 이벤트 API를 확인하세요. 사용자가 카드에서 투표를 삭제할 때 발생하는 이벤트를 처리하는 방법을 알아보세요.
 ---
 
 # delete-vote

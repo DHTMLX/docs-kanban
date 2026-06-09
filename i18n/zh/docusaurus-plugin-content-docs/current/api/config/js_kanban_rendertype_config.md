@@ -1,7 +1,7 @@
 ---
 sidebar_label: renderType
-title: renderType 配置
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 renderType 配置。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天试用版。
+title: renderType 配置 API
+description: 阅读 DHTMLX Kanban 的 renderType 配置 API。了解如何启用懒加载渲染并优化大型看板的性能。
 ---
 
 # renderType

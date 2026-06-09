@@ -1,7 +1,7 @@
 ---
 sidebar_label: undo()
-title: Метод undo
-description: Вы можете узнать о методе undo в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Метод undo API
+description: Изучите API метода undo для DHTMLX Kanban. Узнайте, как отменить последнее действие на доске.
 ---
 
 # undo()

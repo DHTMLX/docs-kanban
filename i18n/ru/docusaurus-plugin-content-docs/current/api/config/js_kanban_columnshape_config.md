@@ -1,7 +1,7 @@
 ---
 sidebar_label: columnShape
-title: Конфигурация columnShape
-description: Вы можете узнать о конфигурации columnShape в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации columnShape
+description: Ознакомьтесь с API конфигурации columnShape для DHTMLX Kanban. Узнайте, как настраивать заголовки колонок, меню и внешний вид.
 ---
 
 # columnShape

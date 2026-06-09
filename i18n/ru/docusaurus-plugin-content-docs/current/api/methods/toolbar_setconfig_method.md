@@ -1,7 +1,7 @@
 ---
 sidebar_label: setConfig()
-title: Метод setConfig
-description: Вы можете узнать о методе setConfig панели инструментов (Toolbar) в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода setConfig компонента Toolbar
+description: Ознакомьтесь с API метода setConfig компонента Toolbar для DHTMLX Kanban. Узнайте, как обновить конфигурацию Toolbar во время выполнения.
 ---
 
 # setConfig()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards
-title: DELETE /cards
-description: Вы можете узнать о REST-маршруте DELETE /cards в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута DELETE /cards
+description: Ознакомьтесь с REST-маршрутом DELETE /cards для DHTMLX Kanban. Узнайте, как удалить карточку.
 ---
 
 # DELETE `/cards`

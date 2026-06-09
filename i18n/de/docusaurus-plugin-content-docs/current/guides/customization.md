@@ -1,7 +1,7 @@
 ---
 sidebar_label: Anpassung
-title: Anpassung
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Anpassungsmöglichkeiten. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: Kanban-Anpassungshandbuch
+description: Nutzen Sie die DHTMLX-Kanban-Anpassungsanleitungen, um Vorlagen, Menüs, Karten, Spalten und das Board-Verhalten mit dokumentierten API-Vorlagen zu ändern.
 ---
 
 # Anpassung

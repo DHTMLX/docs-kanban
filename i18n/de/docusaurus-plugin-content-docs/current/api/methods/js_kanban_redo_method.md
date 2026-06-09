@@ -1,7 +1,7 @@
 ---
 sidebar_label: redo()
-title: redo-Methode
-description: Sie können die redo-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: redo Methode API
+description: Lesen Sie die API-Dokumentation der redo-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie eine durch Undo rückgängig gemachte Aktion wiederholen.
 ---
 
 # redo()

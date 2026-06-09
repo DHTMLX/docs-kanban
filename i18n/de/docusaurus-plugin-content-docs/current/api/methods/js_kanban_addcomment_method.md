@@ -1,7 +1,7 @@
 ---
 sidebar_label: addComment()
-title: addComment Methode
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Methode addComment. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: addComment Methode API
+description: Lesen Sie die API der addComment-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie einer Karte anhand ihrer ID einen Kommentar hinzufügen.
 ---
 
 # addComment()

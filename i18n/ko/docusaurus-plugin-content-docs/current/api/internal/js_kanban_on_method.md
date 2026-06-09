@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.on()
-title: on 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 on 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해보며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: on 메서드 API
+description: DHTMLX Kanban의 on 메서드 API를 살펴보세요. 보드 이벤트를 구독하고 앱에서 사용자 동작을 처리하는 방법을 알아봅니다.
 ---
 
 # api.on()

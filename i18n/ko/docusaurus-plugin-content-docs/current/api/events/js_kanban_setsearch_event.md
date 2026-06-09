@@ -1,7 +1,7 @@
 ---
 sidebar_label: set-search
-title: set-search 이벤트
-description: DHTMLX JavaScript Kanban 라이브러리의 set-search 이벤트에 대해 알아보세요. 개발자 가이드 및 API 참조를 살펴보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
+title: set-search Event API
+description: DHTMLX Kanban의 set-search 이벤트 API를 확인하세요. 카드 검색 시 발생하는 이벤트를 처리하는 방법을 알아보세요.
 ---
 
 # set-search

@@ -1,7 +1,7 @@
 ---
 sidebar_label: add-card
-title: Событие add-card
-description: Вы можете ознакомиться с событием add-card в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события add-card
+description: Ознакомьтесь с API события add-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при добавлении новой карточки.
 ---
 
 # add-card

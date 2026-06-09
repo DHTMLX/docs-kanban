@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardTemplate
-title: Конфигурация cardTemplate
-description: Вы можете узнать о конфигурации cardTemplate в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации cardTemplate
+description: Ознакомьтесь с документацией по конфигурации cardTemplate для DHTMLX Kanban. Узнайте, как создавать пользовательские HTML-шаблоны для карточек задач.
 ---
 
 # cardTemplate

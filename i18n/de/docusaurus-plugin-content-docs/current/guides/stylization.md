@@ -1,7 +1,7 @@
 ---
 sidebar_label: Stilierung
-title: Stilierung
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die Stilierung. Durchstöbern Sie Entwicklerhandbücher und API-Referenz, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: Kanban-Stilierungsanleitung
+description: Lesen Sie die DHTMLX Kanban-Stilierungsanleitung. Erfahren Sie, wie Sie Karten, Spalten und Zeilen mit CSS-Klassen und CSS-Variablen gestalten.
 ---
 
 # Stilierung

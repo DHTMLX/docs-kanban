@@ -1,7 +1,7 @@
 ---
 sidebar_label: getRows()
-title: getRows REST-Methode
-description: Sie können in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek mehr über die getRows REST-Methode erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getRows REST-Methode API
+description: Lesen Sie die getRows REST-Methoden-API für DHTMLX Kanban. Erfahren Sie, wie Sie ein Promise mit Zeilendaten abrufen.
 ---
 
 # getRows()

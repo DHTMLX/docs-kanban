@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-row
-title: move-row 事件
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 move-row 事件。浏览开发者指南和 API 参考，试用代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天评估版。
+title: move-row 事件 API
+description: 阅读 DHTMLX Kanban 的 move-row 事件 API。了解如何处理移动行时触发的事件。
 ---
 
 # move-row

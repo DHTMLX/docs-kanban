@@ -1,7 +1,7 @@
 ---
 sidebar_label: end-drag-card
-title: end-drag-card 事件
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 end-drag-card 事件。浏览开发者指南和 API 参考，试用代码示例和实时演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+title: end-drag-card 事件 API
+description: 阅读 DHTMLX Kanban 的 end-drag-card 事件 API。了解如何处理停止拖动卡片时触发的事件。
 ---
 
 # end-drag-card

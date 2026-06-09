@@ -1,7 +1,7 @@
 ---
 sidebar_label: 事件概览
 title: 事件概览
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的事件概览。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+description: 浏览 DHTMLX Kanban 的事件概览。查找卡片、列、行、链接、投票等所有 board 事件。
 ---
 
 # 事件概览

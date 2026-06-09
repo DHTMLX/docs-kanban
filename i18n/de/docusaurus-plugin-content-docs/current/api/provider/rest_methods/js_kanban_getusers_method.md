@@ -1,7 +1,7 @@
 ---
 sidebar_label: getUsers()
-title: getUsers REST-Methode
-description: Sie können mehr über die getUsers REST-Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: getUsers REST-Methode API
+description: Lesen Sie die getUsers REST-Methoden-API für DHTMLX Kanban. Erfahren Sie, wie Sie ein Promise mit Benutzerdaten abrufen.
 ---
 
 # getUsers()
@@ -57,4 +57,4 @@ Promise.all([
 
 **Änderungsprotokoll:** Die Methode wurde in Version v1.3 hinzugefügt
 
-**Verwandte Artikel:** [Working with server](guides/working_with_server.md)
+**Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

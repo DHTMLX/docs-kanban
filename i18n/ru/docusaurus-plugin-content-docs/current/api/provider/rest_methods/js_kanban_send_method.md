@@ -1,7 +1,7 @@
 ---
 sidebar_label: send()
-title: Метод send()
-description: Вы можете узнать о методе send() в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-метода send
+description: Ознакомьтесь с API REST-метода send для DHTMLX Kanban. Узнайте, как отправить HTTP-запрос на сервер и получить промис с ответом.
 ---
 
 # send()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /columns
-title: GET /columns
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren Sie mehr über die REST-Route GET /columns. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: GET /columns REST-Route API
+description: Lesen Sie die REST-Route GET /columns API für DHTMLX Kanban. Erfahren Sie, wie Sie Daten aller Spalten als JSON-Array abrufen.
 ---
 
 # GET `/columns`

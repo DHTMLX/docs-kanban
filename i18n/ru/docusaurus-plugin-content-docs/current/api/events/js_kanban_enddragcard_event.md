@@ -1,7 +1,7 @@
 ---
 sidebar_label: end-drag-card
-title: Событие end-drag-card
-description: Вы можете узнать о событии end-drag-card в документации по JavaScript библиотеке DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события end-drag-card
+description: Ознакомьтесь с API события end-drag-card для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при завершении перетаскивания карточки.
 ---
 
 # end-drag-card

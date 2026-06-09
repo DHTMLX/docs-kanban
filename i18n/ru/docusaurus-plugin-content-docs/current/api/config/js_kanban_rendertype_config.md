@@ -1,7 +1,7 @@
 ---
 sidebar_label: renderType
-title: renderType Конфигурация
-description: Вы можете узнать о конфигурации renderType в документации библиотеки DHTMLX JavaScript Kanban. Ознакомьтесь с руководствами для разработчиков и справочником по API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации renderType
+description: Ознакомьтесь с API конфигурации renderType для DHTMLX Kanban. Узнайте, как включить ленивый рендеринг и оптимизировать работу с большими досками.
 ---
 
 # renderType

@@ -1,8 +1,8 @@
 ---
 sidebar_label: Kanban-Übersicht
-title: JavaScript Kanban Übersicht
+title: JavaScript Kanban API & Handbücher
 slug: /
-description: In der Dokumentation erhalten Sie einen Überblick über die DHTMLX JavaScript Kanban-Bibliothek. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+description: Lesen Sie die DHTMLX JavaScript Kanban-Dokumentation mit API-Referenz, Entwicklerhandbüchern, Konfigurationsoptionen und Beispielen zum Erstellen von Kanban-Boards.
 ---
 
 # DHTMLX Kanban Übersicht
@@ -19,7 +19,7 @@ import toolbar from '@site/static/img/js_kanban_toolbar.png';
 
 <img
     src={toolbar}
-    alt="DHTMLX Kanban Toolbar mit Suchleiste, Sortiersteuerung, Undo/Redo-Schaltflächen sowie Steuerelementen zum Hinzufügen von Spalten und Zeilen"
+  alt="DHTMLX Kanban Toolbar mit Suchfeld, Sortiersteuerung, Undo/Redo-Schaltflächen sowie Steuerelementen zum Hinzufügen von Spalten und Zeilen"
     className="img_border"
 />
 
@@ -52,7 +52,7 @@ import board from '@site/static/img/js_kanban_board.png';
 
 <img
     src={board}
-    alt="DHTMLX Kanban Board mit Karten, die auf Spalten und Swimlanes verteilt sind"
+  alt="DHTMLX Kanban Board mit Karten, die auf Spalten und Swimlanes verteilt sind"
     className="img_border"
 />
 
@@ -64,7 +64,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="Modaler Karten-Editor von DHTMLX Kanban mit Feldern und Steuerelementen zur Verwaltung der ausgewählten Kartendaten"
+  alt="Modaler Karten-Editor von DHTMLX Kanban mit Feldern und Steuerelementen zur Verwaltung der ausgewählten Kartendaten"
     className="img_border"
 />
 

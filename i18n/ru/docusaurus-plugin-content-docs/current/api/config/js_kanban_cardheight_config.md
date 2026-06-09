@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardHeight
-title: Конфигурация cardHeight
-description: Вы можете узнать о конфигурации cardHeight в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации cardHeight
+description: Ознакомьтесь с API конфигурации cardHeight для DHTMLX Kanban. Узнайте, как фиксированная высота карточек поддерживает лейаут и ленивый рендеринг.
 ---
 
 # cardHeight

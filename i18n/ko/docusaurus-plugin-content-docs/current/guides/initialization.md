@@ -1,7 +1,7 @@
 ---
 sidebar_label: 초기화
-title: 초기화
-description: DHTMLX JavaScript Kanban 라이브러리의 초기화에 대해 알아보세요. 개발자 가이드와 API 레퍼런스를 둘러보고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 30일 무료 평가판을 다운로드할 수 있습니다.
+title: Kanban 초기화 가이드
+description: DHTMLX Kanban 초기화 가이드를 따라 진행하세요. 생성자 설정, 필수 구성, 열, 카드 및 보드 초기화 방법을 알아보세요.
 ---
 
 # 초기화

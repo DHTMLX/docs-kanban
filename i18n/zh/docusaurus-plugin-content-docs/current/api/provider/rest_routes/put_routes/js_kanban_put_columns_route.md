@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /columns
-title: PUT /columns
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 PUT /columns REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版本。
+title: PUT /columns REST 路由 API
+description: 阅读 DHTMLX Kanban 的 PUT /columns REST 路由 API。了解如何更新列数据。
 ---
 
 # PUT `/columns`
@@ -50,4 +50,4 @@ HTTP 状态码显示请求是否成功（response.status == 200）或失败（re
 
 ---
 
-**相关文档**: [与服务器交互](guides/working_with_server.md)
+**相关文档**：[与服务器协作](guides/working_with_server.md)

@@ -1,7 +1,7 @@
 ---
 sidebar_label: API 概览
-title: API 概览
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中查看 JavaScript 看板的 API 概览。浏览开发者指南和 API 参考，试用代码示例和实时演示，并免费下载 DHTMLX Kanban 的 30 天免费评估版本。
+title: Kanban API 概览
+description: 浏览 DHTMLX Kanban API 概览。查找配置参考、方法、事件、Toolbar API 及开发者文档。
 ---
 
 # API 概览

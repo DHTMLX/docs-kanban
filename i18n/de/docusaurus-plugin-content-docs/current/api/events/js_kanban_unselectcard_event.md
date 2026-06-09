@@ -1,7 +1,7 @@
 ---
 sidebar_label: unselect-card
-title: unselect-card Event
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das unselect-card Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Beispielcode und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: unselect-card Ereignis API
+description: Lesen Sie die unselect-card Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Aufheben der Auswahl einer Karte ausgelöst wird.
 ---
 
 # unselect-card

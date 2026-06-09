@@ -1,7 +1,7 @@
 ---
 sidebar_label: Toolbar methods overview
 title: Toolbar Methods Overview
-description: You can have a Toolbar methods overview of JavaScript Kanban in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+description: Browse the Toolbar methods overview for DHTMLX Kanban. Find methods to configure, localize, and destroy the Toolbar.
 ---
 
 # Toolbar methods overview

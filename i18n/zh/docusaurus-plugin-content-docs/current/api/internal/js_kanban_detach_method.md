@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.detach()
-title: detach 方法
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 detach 方法。浏览开发者指南和 API 参考，试用代码示例和实时演示，并下载 DHTMLX Kanban 的免费 30 天评估版本。
+title: detach 方法 API
+description: 阅读 DHTMLX Kanban 的 detach 方法 API。了解如何移除或分离事件监听器。
 ---
 
 # api.detach()

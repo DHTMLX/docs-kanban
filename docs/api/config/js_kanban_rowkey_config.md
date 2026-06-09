@@ -1,7 +1,7 @@
 ---
 sidebar_label: rowKey
-title: rowKey Config
-description: You can learn about the rowKey config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: rowKey Config API
+description: Read the rowKey configuration documentation for DHTMLX Kanban. Learn how to assign task cards to swimlane rows.
 ---
 
 # rowKey

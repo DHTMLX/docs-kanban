@@ -1,7 +1,7 @@
 ---
 sidebar_label: scrollType
-title: Конфигурация scrollType
-description: В документации библиотеки DHTMLX JavaScript Kanban вы можете узнать о конфигурации scrollType. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации scrollType
+description: Ознакомьтесь с API конфигурации scrollType для DHTMLX Kanban. Узнайте, как настроить прокрутку доски и поведение прокрутки колонок.
 ---
 
 # scrollType
@@ -20,7 +20,7 @@ scrollType?: "default" | "column";
 Если вы используете настройку `scrollType: "column"`, вы сможете прокручивать каждую колонку отдельно.
 :::
 
-### Значение по умолчанию
+### Конфигурация по умолчанию
 
 ~~~jsx {}
 scrollType: "default"

@@ -1,7 +1,7 @@
 ---
 sidebar_label: updateCard()
-title: updateCard Methode
-description: Sie können mehr über die updateCard Methode in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek erfahren. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: updateCard Methode API
+description: Lesen Sie die updateCard Method API für DHTMLX Kanban. Erfahren Sie, wie Sie Kartendaten anhand ihrer ID aktualisieren.
 ---
 
 # updateCard()

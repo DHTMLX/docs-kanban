@@ -1,7 +1,7 @@
 ---
 sidebar_label: 카드
-title: 카드 설정
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 카드 설정에 대해 알아볼 수 있습니다. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 시도해 보며 DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: cards Config API
+description: DHTMLX Kanban의 cards 구성 API를 읽어보세요. 작업 카드 데이터, 필드, 상태 및 보드 콘텐츠를 정의하는 방법을 알아볼 수 있습니다.
 ---
 
 # 카드

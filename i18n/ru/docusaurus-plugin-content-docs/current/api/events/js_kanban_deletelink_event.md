@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-link
-title: Событие delete-link
-description: Вы можете узнать о событии delete-link в документации JavaScript-библиотеки DHTMLX Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события delete-link
+description: Ознакомьтесь с API события delete-link для DHTMLX Kanban. Узнайте, как обрабатывать событие, срабатывающее при удалении ссылки.
 ---
 
 # delete-link

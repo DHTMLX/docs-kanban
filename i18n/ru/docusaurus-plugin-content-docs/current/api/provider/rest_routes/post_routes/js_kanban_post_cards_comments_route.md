@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards/{id}/comments
-title: POST /cards/{cardId}/comments
-description: Вы можете узнать о REST маршруте POST /cards/{cardId}/comments в документации JavaScript библиотеки DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута POST /cards/{cardId}/comments
+description: Ознакомьтесь с REST-маршрутом POST /cards/{cardId}/comments для DHTMLX Kanban. Узнайте, как добавить новый комментарий к карточке и получить ID нового комментария.
 ---
 
 # POST `/cards/{cardId}/comments`

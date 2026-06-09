@@ -1,7 +1,7 @@
 ---
 sidebar_label: deleteLink()
-title: Метод deleteLink
-description: Вы можете узнать о методе deleteLink в документации JavaScript библиотеки DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API метода deleteLink
+description: Ознакомьтесь с API метода deleteLink для DHTMLX Kanban. Узнайте, как удалить линк с доски по его ID.
 ---
 
 # deleteLink()

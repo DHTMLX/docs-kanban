@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /rows
-title: DELETE /rows
-description: Вы можете узнать о REST-маршруте DELETE /rows в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демонстрации, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API REST-маршрута DELETE /rows
+description: Ознакомьтесь с REST-маршрутом DELETE /rows для DHTMLX Kanban. Узнайте, как удалить строку (swimlane).
 ---
 
 # DELETE `/rows`

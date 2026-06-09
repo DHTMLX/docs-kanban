@@ -1,7 +1,7 @@
 ---
 sidebar_label: move-row
-title: move-row Event
-description: Sie können mehr über das move-row Event in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek erfahren. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: move-row Ereignis API
+description: Lesen Sie die move-row Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Verschieben einer Zeile ausgelöst wird.
 ---
 
 # move-row

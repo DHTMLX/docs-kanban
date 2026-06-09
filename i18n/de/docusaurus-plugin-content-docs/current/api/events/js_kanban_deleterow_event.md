@@ -1,7 +1,7 @@
 ---
 sidebar_label: delete-row
-title: delete-row Event
-description: Sie können im Handbuch der DHTMLX JavaScript Kanban-Bibliothek mehr über das delete-row Event erfahren. Durchsuchen Sie Entwickleranleitungen und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: delete-row Ereignis API
+description: Lesen Sie die delete-row Event API für DHTMLX Kanban. Erfahren Sie, wie Sie das Event behandeln, das beim Entfernen einer Zeile ausgelöst wird.
 ---
 
 # delete-row

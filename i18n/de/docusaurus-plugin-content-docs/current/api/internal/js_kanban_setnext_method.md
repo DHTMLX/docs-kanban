@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.setNext()
-title: setNext Methode
-description: Sie können die setNext Methode in der Dokumentation der DHTMLX JavaScript Kanban Bibliothek kennenlernen. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-tägige Testversion von DHTMLX Kanban herunter.
+title: setNext Methode API
+description: Lesen Sie die API der setNext-Methode für DHTMLX Kanban. Erfahren Sie, wie Sie die Board-API mit Datenanbietern und Backend-Abläufen verbinden.
 ---
 
 # api.setNext()

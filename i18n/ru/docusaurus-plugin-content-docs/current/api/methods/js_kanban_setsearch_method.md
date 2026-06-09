@@ -1,7 +1,7 @@
 ---
 sidebar_label: setSearch()
-title: Метод setSearch
-description: Вы можете узнать о методе setSearch в документации JavaScript-библиотеки DHTMLX Kanban. Ознакомьтесь с руководствами для разработчиков и справочником API, попробуйте примеры кода и живые демонстрации, а также скачайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Метод setSearch API
+description: Изучите API метода setSearch для DHTMLX Kanban. Узнайте, как выполнять поиск карточек по заданным параметрам.
 ---
 
 # setSearch()

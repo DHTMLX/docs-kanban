@@ -1,7 +1,7 @@
 ---
 sidebar_label: POST /cards/{id}/comments
-title: POST /cards/{cardId}/comments
-description: 您可以在 DHTMLX JavaScript 看板库的文档中了解 POST /cards/{cardId}/comments REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX 看板的免费 30 天评估版。
+title: POST /cards/{cardId}/comments REST 路由 API
+description: 阅读 DHTMLX Kanban 的 POST /cards/{cardId}/comments REST 路由 API。了解如何向卡片添加新评论并返回新评论的 ID。
 ---
 
 # POST `/cards/{cardId}/comments`
@@ -46,4 +46,4 @@ HTTP 状态码表示请求是否成功（response.status == 200）或失败（re
 
 ---
 
-**相关文档**：[Working with server](guides/working_with_server.md)
+**相关文档**：[与服务器协作](guides/working_with_server.md)

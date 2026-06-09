@@ -1,7 +1,7 @@
 ---
 sidebar_label: api
-title: api Config
-description: You can learn about the (Toolbar) api config in the documentation of the DHTMLX JavaScript Kanban library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Kanban.
+title: Toolbar api Config API
+description: Read the Toolbar api configuration API for DHTMLX Kanban. Learn how to connect the Toolbar to the internal Kanban API.
 ---
 
 # api

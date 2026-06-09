@@ -1,7 +1,7 @@
 ---
 sidebar_label: PUT /cards/{id}/comments/{id}
-title: PUT /cards/{cardId}/comments/{commentId}
-description: 你可以在DHTMLX JavaScript看板库的文档中了解PUT /cards/{cardId}/comments/{cardId} REST路由。浏览开发者指南和API参考，尝试代码示例和在线演示，并下载DHTMLX看板的免费30天试用版。
+title: PUT /cards/{cardId}/comments/{commentId} REST 路由 API
+description: 阅读 DHTMLX Kanban 的 PUT /cards/{cardId}/comments/{commentId} REST 路由 API。了解如何更新卡片评论并返回其 ID。
 ---
 
 # PUT `/cards/{cardId}/comments/{commentId}`
@@ -53,4 +53,4 @@ HTTP状态码用于指示请求是否成功（response.status == 200）或失败
 
 ---
 
-**相关文档**：[Working with server](guides/working_with_server.md)
+**相关文档**：[与服务器协作](guides/working_with_server.md)

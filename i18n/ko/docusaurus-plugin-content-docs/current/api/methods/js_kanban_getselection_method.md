@@ -1,7 +1,7 @@
 ---
 sidebar_label: getSelection()
-title: getSelection 메서드
-description: DHTMLX JavaScript Kanban 라이브러리 문서에서 getSelection 메서드에 대해 알아보세요. 개발자 가이드와 API 참조를 탐색하고, 코드 예제와 라이브 데모를 체험하며, DHTMLX Kanban의 무료 30일 평가판을 다운로드할 수 있습니다.
+title: getSelection Method API
+description: DHTMLX Kanban의 getSelection 메서드 API를 확인하세요. 현재 선택된 카드의 ID를 가져오는 방법을 알아봅니다.
 ---
 
 # getSelection()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: set-sort
-title: Событие set-sort
-description: Вы можете узнать о событии set-sort в документации библиотеки DHTMLX JavaScript Kanban. Просматривайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API события set-sort
+description: Прочитайте API события set-sort для DHTMLX Kanban. Узнайте, как обрабатывать событие, возникающее при сортировке карточек.
 ---
 
 # set-sort

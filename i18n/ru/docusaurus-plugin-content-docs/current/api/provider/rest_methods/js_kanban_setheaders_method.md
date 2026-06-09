@@ -1,7 +1,7 @@
 ---
 sidebar_label: setHeaders()
-title: setHeaders REST Method
-description: Вы можете узнать о методе setHeaders REST в документации библиотеки DHTMLX JavaScript Kanban. Просматривайте руководства разработчика и справочник АПИ, изучайте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Kanban.
+title: API REST-метода setHeaders
+description: Ознакомьтесь с API REST-метода setHeaders для DHTMLX Kanban. Узнайте, как задать пользовательские HTTP-заголовки, добавляемые к каждому запросу.
 ---
 
 # setHeaders()

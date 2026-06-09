@@ -1,7 +1,7 @@
 ---
 sidebar_label: unselectCard()
-title: Метод unselectCard
-description: Вы можете узнать о методе unselectCard в документации библиотеки DHTMLX JavaScript Kanban. Изучайте руководства для разработчиков и справочник по API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: Метод unselectCard API
+description: Изучите API метода unselectCard для DHTMLX Kanban. Узнайте, как снять выделение с карточек по их ID.
 ---
 
 # unselectCard()

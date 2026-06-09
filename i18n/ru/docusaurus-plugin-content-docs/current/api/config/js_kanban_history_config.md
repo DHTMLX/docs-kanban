@@ -1,7 +1,7 @@
 ---
 sidebar_label: history
-title: history Config
-description: Вы можете узнать о конфигурации history в документации библиотеки DHTMLX JavaScript Kanban. Просматривайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачивайте бесплатную 30-дневную пробную версию DHTMLX Kanban.
+title: API конфигурации history
+description: Ознакомьтесь с API конфигурации history для DHTMLX Kanban. Узнайте, как включить или отключить историю изменений с поддержкой отмены и повтора действий.
 ---
 
 # history

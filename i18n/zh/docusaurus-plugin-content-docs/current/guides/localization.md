@@ -1,7 +1,7 @@
 ---
 sidebar_label: 本地化
-title: 本地化
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解本地化。浏览开发者指南和 API 参考，尝试代码示例和在线演示，并下载 DHTMLX Kanban 的 30 天免费评估版。
+title: Kanban 本地化指南
+description: 阅读 DHTMLX Kanban 本地化指南。了解语言环境配置、语言包、setLocale 用法及多语言界面设置。
 ---
 
 # 本地化

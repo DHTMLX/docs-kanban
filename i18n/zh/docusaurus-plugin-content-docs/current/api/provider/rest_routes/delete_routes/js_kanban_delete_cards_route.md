@@ -1,7 +1,7 @@
 ---
 sidebar_label: DELETE /cards
-title: DELETE /cards
-description: 您可以在 DHTMLX JavaScript Kanban 库的文档中了解 DELETE /cards REST 路由。浏览开发者指南和 API 参考，试用代码示例和在线演示，并下载 DHTMLX Kanban 的免费 30 天试用版本。
+title: DELETE /cards REST 路由 API
+description: 阅读 DHTMLX Kanban 的 DELETE /cards REST 路由 API。了解如何删除卡片。
 ---
 
 # DELETE `/cards`

@@ -1,7 +1,7 @@
 ---
 sidebar_label: RestDataProvider-Methoden
-title: RestDataProvider-Methoden
-description: In der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek finden Sie eine Übersicht über die internen RestDataProvider-Methoden des JavaScript Kanban. Durchstöbern Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: RestDataProvider Methods Overview
+description: Durchsuchen Sie die Übersicht der RestDataProvider-Methoden für DHTMLX Kanban. Finden Sie Methoden zum Laden von Daten, Senden von Anfragen und Verwalten der Warteschlange.
 ---
 
 # RestDataProvider-Methoden

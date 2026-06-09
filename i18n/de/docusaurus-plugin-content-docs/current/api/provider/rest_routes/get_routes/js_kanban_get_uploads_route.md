@@ -1,7 +1,7 @@
 ---
 sidebar_label: GET /uploads
-title: GET /uploads
-description: Sie können die REST-Route GET /uploads in der Dokumentation der DHTMLX JavaScript Kanban-Bibliothek kennenlernen. Durchsuchen Sie Entwicklerhandbücher und API-Referenzen, probieren Sie Codebeispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Testversion von DHTMLX Kanban herunter.
+title: GET /uploads REST-Route API
+description: Lesen Sie die REST-Route GET /uploads API für DHTMLX Kanban. Erfahren Sie, wie Sie eine angeforderte Binärdatei vom Server abrufen.
 ---
 
 # GET `/uploads`
