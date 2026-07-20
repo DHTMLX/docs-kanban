@@ -10,7 +10,7 @@ A working [DHTMLX Kanban](/) board depends on several pieces fitting together co
 
 The DHTMLX MCP server closes that gap by handing the assistant a live line into the Kanban documentation itself. Ask about [binding editor fields to card fields](guides/configuration.md#bind-editor-fields-to-card-fields), [customizing the Toolbar](guides/customization.md#custom-toolbar), or [connecting a RestDataProvider backend](guides/working_with_server.md), and the assistant pulls the current reference before writing any code.
 
-#### MCP endpoint
+**MCP endpoint**
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
