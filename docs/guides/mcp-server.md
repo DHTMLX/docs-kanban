@@ -1,10 +1,10 @@
 ---
 sidebar_label: DHTMLX MCP server
-title: DHTMLX Kanban and the MCP server for AI tools
+title: DHTMLX Kanban and the MCP server for building with AI
 description: The MCP server gives AI tools access to current DHTMLX Kanban documentation, covering cards, columns, swimlanes, editor fields, and REST data sync.
 ---
 
-# DHTMLX Kanban and the MCP server: live docs for AI
+# DHTMLX Kanban and the MCP server: build with live docs
 
 A working [DHTMLX Kanban](/) board depends on several pieces fitting together correctly: card fields defined through `cardShape` must share a key with the matching `editorShape` entry, the Toolbar runs as its own widget bound to the board through the `api` parameter, and server sync relies on the exact action handlers exposed by `RestDataProvider`. An outdated training snapshot leaves an AI assistant merging card and editor fields into one config object, folding the Toolbar into the board's own constructor, or reaching for `RestDataProvider` methods that were renamed or removed since.
 
