@@ -41,6 +41,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Eigenschaft wurde in Version v1.3 hinzugefügt
+**Changelog:** Die Eigenschaft wurde in v1.3 hinzugefügt
 
 **Verwandte Artikel:** [`undo()`](api/methods/js_kanban_undo_method.md) und [`redo()`](api/methods/js_kanban_redo_method.md)

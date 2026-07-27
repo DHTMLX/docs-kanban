@@ -40,6 +40,6 @@ const board = new kanban.Kanban("#root", {
 });
 ~~~
 
-**Связанные статьи:** [Локализация](guides/localization.md)
+**Полезные статьи:** [Локализация](guides/localization.md)
 
 **Связанный пример:** [Kanban. Локализация](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

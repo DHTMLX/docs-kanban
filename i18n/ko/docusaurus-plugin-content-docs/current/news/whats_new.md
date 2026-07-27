@@ -12,7 +12,7 @@ description: DHTMLX JavaScript UI 라이브러리의 문서에서 DHTMLX Kanban�
 
 2026년 3월 9일 출시
 
-### 버그 수정
+### 수정 사항
 
 - `renderType:lazy` 사용 시 스크롤 도중 카드가 사라지는 문제
 - lazy 렌더 및 컬럼 렌더링: 스크롤바를 천천히 이동할 때 잘못된 end index 적용
@@ -22,14 +22,14 @@ description: DHTMLX JavaScript UI 라이브러리의 문서에서 DHTMLX Kanban�
 - 댓글 또는 투표 업데이트 시 저장되지 않은 데이터 손실
 - 뷰포트 오른쪽에 가까운 요소의 메뉴 위치가 올바르지 않음
 - 터치 기기에서 DND 시 드래그 노드 크기가 너무 큼
-- 툴바: 툴팁에 대한 2개 로케일 레이블 누락
+- Toolbar: 툴팁에 대한 2개 로케일 레이블 누락
 - Uploader의 `config` 파라미터가 적용되지 않는 문제
 
 ## 버전 1.7.1
 
 2025년 11월 20일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 에디터에서 `dateRange` 사용 시 스크립트 오류 발생
 - `setConfig()`를 호출한 후 `parse()`가 동작하지 않는 문제
@@ -84,7 +84,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 - [`start-drag-card`](api/events/js_kanban_startdragcard_event.md)에서 `dragItemsCoords` 및 `dropAreasCoords` 파라미터가 제거되었습니다.
 
-### 버그 수정
+### 수정 사항
 
 - 대용량 파일 또는 파일 여러 개를 업로드할 때, 모든 파일이 서버에 완전히 업로드되기 전에 폼이 업데이트되어 카드 데이터가 잘못 전송되는 문제
 - 파일 크기가 새로 업로드된 파일에만 표시되는 문제
@@ -96,7 +96,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2025년 7월 14일 출시
 
-### 버그 수정
+### 수정 사항
 
 - `disabled: true` 설정이 메뉴 항목에 적용되지 않는 문제
 - 사전 정의된 행 구조가 없는 Kanban에 행을 추가할 때 행 헤더가 나타나지 않는 문제
@@ -105,7 +105,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2025년 6월 12일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 삭제 후 복원된 컬럼/행에 카드를 추가하면 카드가 사라지는 문제
 - 업로더 리스트 버튼의 로케일 라벨 누락
@@ -115,12 +115,12 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2025년 4월 8일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 제한이 전체 컬럼에 잘못 적용되는 문제
 - 모달 에디터를 닫은 후 카드를 이동하면 오류 발생
 - 삭제 확인 창이 모달 에디터 아래에 표시되는 문제
-- 툴바 "더보기" 아이콘이 창 크기 조절 시 나타났다가 사라지는 문제
+- Toolbar "더보기" 아이콘이 창 크기 조절 시 나타났다가 사라지는 문제
 - `delete-card` 이벤트가 항상 에디터를 닫는 문제
 - 제공된 옵션 외의 ID로 우선순위가 설정된 경우 에디터를 열 수 없는 문제
 
@@ -128,7 +128,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2025년 2월 14일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 트라이얼 패키지의 만료일이 잘못된 문제
 - 터치 디바이스에서 드래그 앤 드롭 시 경고 발생
@@ -142,9 +142,9 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2024년 11월 29일 출시
 
-### 버그 수정
+### 수정 사항
 
-- 좁은 화면에서 툴바의 "더보기" 아이콘 정렬이 잘못됨
+- 좁은 화면에서 Toolbar의 "더보기" 아이콘 정렬이 잘못됨
 - `RestDataProvider`가 `setHeaders()`로 정의한 헤더를 무시하는 문제
 - `RestDataProvider.getIDResolver`가 함수가 아니라는 오류
 
@@ -158,7 +158,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 - [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) 속성을 통해 카드에 표시되는 할당 사용자 수를 변경할 수 있음 ([**예제**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban) 참고)
 - [`columnShape`](api/config/js_kanban_columnshape_config.md) 속성을 통해 컬럼 헤더의 내용을 변경할 수 있음 ([**예제**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban) 참고)
-- 툴바 **search** 컨트롤의 [`items.resultTemplate`](api/config/toolbar_items_config.md) 속성을 통해 검색 결과의 보기 및 내용을 변경할 수 있음 ([**예제**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban) 참고)
+- Toolbar **search** 컨트롤의 [`items.resultTemplate`](api/config/toolbar_items_config.md) 속성을 통해 검색 결과의 보기 및 내용을 변경할 수 있음 ([**예제**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban) 참고)
 - [`editor.placement`](api/config/js_kanban_editor_config.md) 속성을 통해 에디터를 모달 창으로 표시할 수 있음 ([**예제**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban) 참고)
 - [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) 속성을 통해 카드에 투표 기능을 활성화할 수 있음 ([**예제**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban) 참고)
 
@@ -170,7 +170,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
     - [`columnShape`](api/config/js_kanban_columnshape_config.md) 속성에 ***headerTemplate*** 및 ***collapsedTemplate*** 파라미터가 추가됨
     - [`editor`](api/config/js_kanban_editor_config.md) 속성에 ***placement*** 파라미터가 추가됨
     - [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성에 ***modalSection*** 파라미터가 추가됨
-    - 툴바 **search** 컨트롤의 [`items`](api/config/toolbar_items_config.md) 속성에 ***resultTemplate*** 파라미터가 추가됨
+    - Toolbar **search** 컨트롤의 [`items`](api/config/toolbar_items_config.md) 속성에 ***resultTemplate*** 파라미터가 추가됨
 
 - #### 이벤트
 
@@ -180,12 +180,12 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
     - [`setConfig()`](api/methods/js_kanban_setconfig_method.md) 메서드의 동작이 다음과 같이 변경됨:
         - 이 메서드는 히스토리를 변경하지 않음 (히스토리 자체를 변경할 수 없음)
-        - Kanban 데이터 저장소를 파괴하지 않음. 이벤트 리스너 재생성 및 툴바 재연결이 불필요함
+        - Kanban 데이터 저장소를 파괴하지 않음. 이벤트 리스너 재생성 및 Toolbar 재연결이 불필요함
 
-    - [`setLocale()`](api/methods/js_kanban_setlocale_method.md) 메서드는 Kanban 데이터 저장소를 파괴하지 않음. 이벤트 리스너 재생성 및 툴바 재연결이 불필요함
-    - 툴바 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 메서드의 `api` 파라미터가 deprecated됨
+    - [`setLocale()`](api/methods/js_kanban_setlocale_method.md) 메서드는 Kanban 데이터 저장소를 파괴하지 않음. 이벤트 리스너 재생성 및 Toolbar 재연결이 불필요함
+    - Toolbar [`setLocale()`](api/methods/toolbar_setlocale_method.md) 메서드의 `api` 파라미터가 deprecated됨
 
-### 버그 수정
+### 수정 사항
 
 - 편집 중인 댓글이 삭제되면 새 댓글 입력 영역이 사라지는 문제
 - 누락된 로케일 문자열 추가
@@ -197,7 +197,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2024년 9월 12일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 확장자가 대문자인 경우 "Make cover" 버튼이 나타나지 않는 문제
 - 비활성화된 Multiselect 컨트롤 클릭 시 오류 발생
@@ -209,7 +209,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2024년 5월 2일 출시
 
-### 버그 수정
+### 수정 사항
 
 - Intercept 회귀: `false`를 반환해도 내부 이벤트가 차단되지 않는 문제
 - 비활성화된 파일이 파일을 허용하는 문제
@@ -218,9 +218,9 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2024년 3월 25일 출시
 
-### 버그 수정
+### 수정 사항
 
-- *Dark willow* 스킨의 Kanban CSS 변수들이 툴바 및 포털에서 사라지는 문제
+- *Dark willow* 스킨의 Kanban CSS 변수들이 Toolbar 및 포털에서 사라지는 문제
 - autosave 비활성화 시 댓글 및 투표 변경이 폼 값에 반영되지 않는 문제
 - 커스텀 컬럼 서브메뉴의 **onClick** 함수 인자에 `null` 전달
 - 에디터에서 Datepickers를 편집 모드로 설정할 수 없는 문제
@@ -230,7 +230,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2024년 2월 29일 출시
 
-### 버그 수정
+### 수정 사항
 
 - npm 서버에서 빌드가 깨지는 문제
 - [`duplicate-card`](api/events/js_kanban_duplicatecard_event.md) 이벤트와 [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) 메서드에 `select` 파라미터 추가
@@ -240,7 +240,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2024년 2월 20일 출시
 
-### 버그 수정
+### 수정 사항
 
 - Kanban이 다른 위젯 스타일에 영향을 주는 문제
 - `disabled: true`가 지정된 커스텀 컬럼 서브메뉴 항목이 여전히 활성화되는 문제
@@ -250,7 +250,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2023년 11월 28일 출시
 
-### 버그 수정
+### 수정 사항
 
 - **IKanbanConfig** 타입의 **currentUser** TS 정의 누락
 
@@ -260,9 +260,9 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 ### 업데이트
 
-- 툴바의 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 메서드에 ***api*** 파라미터 추가
+- Toolbar의 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 메서드에 ***api*** 파라미터 추가
 
-### 버그 수정
+### 수정 사항
 
 - 카드 메뉴 항목에 `disabled: true` 설정이 적용되지 않는 문제
 - Kanban 예제에서 원하지 않는 콘솔 경고 발생
@@ -277,7 +277,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 - ES 모듈로 컴포넌트 import 가능
 
-### 버그 수정
+### 수정 사항
 
 - npm 패키지에서 회귀 현상
 
@@ -285,7 +285,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2023년 8월 9일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 다른 카드로 전환 시 이전에 업로드된 파일이 폼에 남아있는 문제
 - 드래그 앤 드롭으로 파일 업로드가 작동하지 않는 문제
@@ -295,7 +295,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 ## 버전 1.5.1
 
-### 버그 수정
+### 수정 사항
 
 - 올바른 TypeScript 정의 생성
 
@@ -331,7 +331,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
     - [`columnShape`](api/config/js_kanban_columnshape_config.md) 속성에 ***fixedHeaders*** 파라미터 추가
 
-### 버그 수정
+### 수정 사항
 
 - 런타임에서 링크를 파싱, 내보내기, 직렬화하지 못하는 문제
 - 사용자 섹션이 활성화되지 않은 경우 댓글 섹션 생성 실패
@@ -344,7 +344,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2023년 4월 13일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 추가 작업 후 로컬 카드/컬럼/행 데이터에 백엔드 ID가 저장되지 않는 문제
 - 누락된 TS 정의 추가
@@ -354,7 +354,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 2023년 3월 29일 출시
 
-### 버그 수정
+### 수정 사항
 
 - 정렬 유지 동작이 올바르지 않은 문제
 - **cardShape**, **columnShape** 또는 **rowShape** 속성으로 컨텍스트 메뉴를 비활성화할 때 동작이 올바르지 않은 문제
@@ -422,7 +422,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
     - `cardShape.menu.items`, `columnShape.menu.items`, `rowShape.menu.items`의 메뉴 항목 객체 내 label
 
-### 버그 수정
+### 수정 사항
 
 - Kanban이 마진이 있는 컨테이너 내부에 있을 때 메뉴 위치가 잘못됨
 - 커스텀 컬럼 폭 사용 시 접힌 컬럼의 위치가 잘못됨
@@ -441,7 +441,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 - API, 컨텍스트 메뉴(3점 아이콘), `Ctrl (Command)` + `D` 단축키로 카드 복제 (여러 카드 복제 가능)
 - Kanban 데이터를 JSON 파일로 내보내기
 - Kanban 히스토리 관리:
-    - 툴바의 *Undo*, *Redo* 컨트롤
+    - Toolbar의 *Undo*, *Redo* 컨트롤
     - 단축키:
         - `Ctrl (Command)`+`Z` - 실행 취소
         - `Ctrl (Command)`+`Y` 또는 `Ctrl (Command)`+`Shift`+`Z` - 다시 실행
@@ -487,22 +487,22 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 - #### 속성
 
-    - 툴바의 [`items`](api/config/toolbar_items_config.md) 속성에 ***"undo"***, ***"redo"*** 파라미터(컨트롤) 추가
+    - Toolbar의 [`items`](api/config/toolbar_items_config.md) 속성에 ***"undo"***, ***"redo"*** 파라미터(컨트롤) 추가
     - [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성에 ***dateRange*** 타입 추가
 
 ## 버전 1.2.2
 
 2022년 8월 30일 출시
 
-### 버그 수정
+### 수정 사항
 
-- 메뉴 및 툴바에 일부 아이콘이 중복 표시되는 문제
+- 메뉴 및 Toolbar에 일부 아이콘이 중복 표시되는 문제
 
 ## 버전 1.2.1
 
 2022년 7월 28일 출시
 
-### 버그 수정
+### 수정 사항
 
 - `cardHeight` 속성이 `scrollType:"column"` 설정과 함께 작동하지 않는 문제
 - 업로더가 카드 에디터에서 업로드된 파일을 표시하지 않는 문제
@@ -549,11 +549,11 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
     - [`api.getState()`](api/internal/js_kanban_getstate_method.md) 메서드 업데이트
     - [`api.getStores()`](api/internal/js_kanban_getstores_method.md) 메서드 업데이트
     - Kanban의 [`setLocale()`](api/methods/js_kanban_setlocale_method.md) 메서드 업데이트
-    - 툴바의 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 메서드 업데이트
+    - Toolbar의 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 메서드 업데이트
 
 - #### 속성
 
-    - 툴바의 [`items`](api/config/toolbar_items_config.md) 속성 업데이트
+    - Toolbar의 [`items`](api/config/toolbar_items_config.md) 속성 업데이트
     - [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성의 ***start_date***, ***end_date***, ***menu***, ***users*** 파라미터(필드) 업데이트
     - [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성의 ***multiselect*** 타입 업데이트
 
@@ -562,7 +562,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 - CSS 클래스 접두사 (*[Stylization](guides/stylization.md) 섹션 참고*)
 - 로케일 구조 (*[Localization](guides/localization.md) 섹션 참고*)
 
-### 버그 수정
+### 수정 사항
 
 - `rowKey` 설정을 통한 카드의 스윔레인 바인딩이 올바르지 않음
 - 카드 메뉴 클릭 시 에디터가 열림
@@ -577,7 +577,7 @@ v1.7부터 JavaScript Kanban을 Salesforce 환경에서 사용할 수 있습니�
 
 [블로그 릴리즈 리뷰](https://dhtmlx.com/blog/maintenance-release-kanban-1-1-1/)
 
-### 버그 수정
+### 수정 사항
 
 - cardShape 설정에 정의되지 않은 커스텀 에디터 필드가 작동하지 않는 문제
 - 검색 바 드롭다운 메뉴에서 원하는 카드 선택

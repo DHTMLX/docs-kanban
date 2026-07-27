@@ -30,7 +30,7 @@ description: DHTMLX Kanban의 DELETE /links REST route API를 확인하세요. �
 
 ---
 
-**관련 문서**:
+**관련 문서:**
 - [서버 작업하기](guides/working_with_server.md)
 - [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
 - [links](api/config/js_kanban_links_config.md)

@@ -30,7 +30,7 @@ Es werden keine Daten zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfra
 
 ---
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 
 - [Arbeiten mit dem Server](guides/working_with_server.md)
 - [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)

@@ -6,7 +6,7 @@ description: Folgen Sie der DHTMLX Kanban TypeScript-Unterstützungsanleitung. E
 
 # TypeScript-Unterstützung
 
-Ab Version v1.1 wird DHTMLX Kanban mit integrierten TypeScript-Definitionen ausgeliefert.
+Ab v1.1 wird DHTMLX Kanban mit integrierten TypeScript-Definitionen ausgeliefert.
 
 :::note
 Probieren Sie das [Snippet Tool](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban) für ein funktionierendes TypeScript-Beispiel aus.

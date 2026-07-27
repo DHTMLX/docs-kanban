@@ -57,6 +57,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** `placement` 参数在 v1.6 版本中添加
+**更新日志：** `placement` 参数在 v1.6 中新增
 
 **相关示例：** [Kanban. 在模态窗口中打开编辑器](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)

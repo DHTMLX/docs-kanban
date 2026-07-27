@@ -219,16 +219,16 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**История изменений:**
-- Параметр ***css*** добавлен в версии 1.4
-- Параметр ***menu.items[0].label*** устарел и заменён на ***menu.items[0].text*** в версии 1.4
-- Параметр ***menu.items[0].items*** устарел и заменён на ***menu.items[0].data*** в версии 1.4
-- Параметр ***fixedHeaders*** добавлен в версии 1.5
-- Параметры ***headerTemplate*** и ***collapsedTemplate*** добавлены в версии 1.6
-- Параметры ***menu.items[0].label*** и ***menu.items[0].items*** удалены в версии 1.7
-- Функция ***menu.items*** обновлена: параметр **store** заменён на **readonly** в версии 1.7
+**Журнал изменений:**
+- Параметр ***css*** добавлен в v1.4
+- Параметр ***menu.items[0].label*** устарел и заменён на ***menu.items[0].text*** в v1.4
+- Параметр ***menu.items[0].items*** устарел и заменён на ***menu.items[0].data*** в v1.4
+- Параметр ***fixedHeaders*** добавлен в v1.5
+- Параметры ***headerTemplate*** и ***collapsedTemplate*** добавлены в v1.6
+- Параметры ***menu.items[0].label*** и ***menu.items[0].items*** удалены в v1.7
+- Функция ***menu.items*** обновлена: параметр **store** заменён на **readonly** в v1.7
 
-**Связанные статьи:** [Конфигурация](guides/configuration.md)
+**Полезные статьи:** [Конфигурация](guides/configuration.md)
 
 **Связанные примеры:**
 - [Kanban. Изменение цвета колонки через кастомное меню](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)

@@ -46,4 +46,4 @@ board.api.on("scroll", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Das Event wurde in Version v1.2 hinzugefügt
+**Changelog:** Das Event wurde in v1.2 hinzugefügt

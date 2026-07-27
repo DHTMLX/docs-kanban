@@ -42,4 +42,4 @@ Promise.all([
 });
 ~~~
 
-**相关文档：** [与服务器交互](guides/working_with_server.md)
+**相关文章：** [与服务器交互](guides/working_with_server.md)

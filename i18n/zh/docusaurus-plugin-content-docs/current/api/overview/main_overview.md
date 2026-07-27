@@ -14,7 +14,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**参数**：
+**参数：**
 
 - 一个 HTML 容器（HTML 容器的 ID）
 - 一个配置参数对象（[查看此处](#kanban-properties)）
@@ -27,7 +27,7 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**参数**：
+**参数：**
 
 - 一个 HTML 容器（HTML 容器的 ID）
 - 一个配置参数对象（[查看此处](#toolbar-properties)）
@@ -74,7 +74,7 @@ new kanban.Toolbar("#toolbar", {
 
 ## Kanban 内部 API
 
-### 事件总线方法 {#event-bus-methods}
+### Event Bus 方法 {#event-bus-methods}
 
 | 名称                                                      | 描述                                                     |
 | --------------------------------------------------------- | --------------------------------------------------------- |

@@ -38,4 +38,4 @@ const board = new kanban.Kanban("#root", {
 board.setEdit({ cardId: 1 });
 ~~~
 
-**변경 로그:** 이 메서드는 v1.2에 추가되었습니다
+**변경 로그:** 이 메서드는 v1.2에서 추가되었습니다

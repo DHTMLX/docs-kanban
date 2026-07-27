@@ -50,6 +50,6 @@ board.updateRow({
 });
 ~~~
 
-**Änderungsprotokoll**:
-- Die Parameter **id** und **row** wurden in Version 1.1 hinzugefügt
-- Der Parameter **replace** wurde in Version 1.3 hinzugefügt
+**Changelog:**
+- Die Parameter **id** und **row** wurden in v1.1 hinzugefügt
+- Der Parameter **replace** wurde in v1.3 hinzugefügt

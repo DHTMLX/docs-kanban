@@ -178,7 +178,7 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Änderungsprotokoll:**
+**Changelog:**
 
 - Die Steuerelemente *"Undo"* und *"Redo"* wurden in v1.3 hinzugefügt
 - Der Parameter ***items.options[0].label*** der **sort** Steuerung wurde in v1.4 durch den Parameter ***items.options[0].text*** ersetzt
@@ -186,6 +186,6 @@ new kanban.Toolbar("#toolbar", {
 
 **Verwandte Artikel:** [Konfiguration](guides/configuration.md#toolbar) und [Anpassung](guides/customization.md#custom-toolbar)
 
-**Verwandte Beispiele:**
+**Verwandtes Beispiel:**
 - [Kanban. Benutzerdefinierte Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
 - [Kanban. Anpassung der Vorschläge in Suchergebnissen](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)

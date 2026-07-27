@@ -20,7 +20,7 @@ description: Ознакомьтесь с API REST-метода getRows для DH
 getRows(): promise;
 ~~~
 
-### Возвращает
+### Возвращаемое значение
 
 Метод **getRows()** отправляет запрос на сервер методом **GET** и возвращает **promise** с данными строк
 
@@ -45,4 +45,4 @@ Promise.all([
 });
 ~~~
 
-**Связанные статьи:** [Работа с сервером](guides/working_with_server.md)
+**Полезные статьи:** [Работа с сервером](guides/working_with_server.md)

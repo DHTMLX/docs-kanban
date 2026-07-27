@@ -12,7 +12,7 @@ description: DHTMLX Kanban 사용자 정의 가이드를 활용하여 문서화�
 - [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) — 카드, 컬럼, 행의 컨텍스트 메뉴를 수정합니다
 - [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — 컬럼 헤더 템플릿을 교체합니다
 - [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) — 조건부로 CSS 클래스를 적용합니다
-- [`items`](api/config/toolbar_items_config.md) — 툴바 구조를 재배치하고 사용자 정의 컨트롤을 추가합니다
+- [`items`](api/config/toolbar_items_config.md) — Toolbar 구조를 재배치하고 사용자 정의 컨트롤을 추가합니다
 - CSS 변수 — 시각적 스타일을 조정합니다([Stylization](guides/stylization.md) 섹션 참고)
 
 ## 사용자 정의 카드 {#custom-cards}
@@ -122,9 +122,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## 사용자 정의 툴바 {#custom-toolbar}
+## 사용자 정의 Toolbar {#custom-toolbar}
 
-[`items`](api/config/toolbar_items_config.md) 속성을 사용하여 툴바 구조를 사용자 정의합니다. 배열은 표시될 컨트롤, 순서 및 동작을 정의합니다. 각 항목은 다음과 같을 수 있습니다:
+[`items`](api/config/toolbar_items_config.md) 속성을 사용하여 Toolbar 구조를 사용자 정의합니다. 배열은 표시될 컨트롤, 순서 및 동작을 정의합니다. 각 항목은 다음과 같을 수 있습니다:
 
 - 기본 제공 컨트롤: `"search"`, `"sort"`, `"undo"`, `"redo"`, `"addColumn"`, `"addRow"`, `"spacer"`
 - 사용자 정의 옵션으로 검색바 또는 정렬 컨트롤을 재정의하는 객체

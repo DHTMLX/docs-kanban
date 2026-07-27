@@ -30,4 +30,4 @@ No data is returned back. The HTTP status code shows whether the request succeed
 
 ---
 
-**Related articles**: [Working with server](guides/working_with_server.md)
+**Related articles:** [Working with server](guides/working_with_server.md)

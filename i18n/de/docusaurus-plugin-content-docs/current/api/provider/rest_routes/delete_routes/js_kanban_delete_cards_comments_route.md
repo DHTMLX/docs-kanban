@@ -41,4 +41,4 @@ Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status ==
 
 ---
 
-**Verwandte Artikel**: [Working with server](guides/working_with_server.md)
+**Verwandte Artikel:** [Working with server](guides/working_with_server.md)

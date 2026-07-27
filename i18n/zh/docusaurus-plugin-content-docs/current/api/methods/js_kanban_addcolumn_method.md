@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 addColumn 方法 API。了解如何向看�
 
 ### 描述
 
-@short: 向看板中添加一个新列
+@short: 向 Kanban 中添加一个新列
 
 ### 用法
 
@@ -33,7 +33,7 @@ addColumn({
 ### 示例
 
 ~~~jsx {7-16}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -51,4 +51,4 @@ board.addColumn({
 });
 ~~~
 
-**更新日志**：从 v1.1 版本开始，新增了 **id**、**column** 和 **before** 参数
+**更新日志：**从 v1.1 起，新增了 **id**、**column** 和 **before** 参数

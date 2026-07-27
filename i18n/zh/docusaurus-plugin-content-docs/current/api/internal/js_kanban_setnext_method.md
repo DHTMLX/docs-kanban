@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 setNext 方法 API。了解如何将看板
 
 ### 描述
 
-@short: 允许将某个操作添加到事件总线（Event Bus）的执行顺序中
+@short: 允许将某个操作添加到 Event Bus 的执行顺序中
 
 ### 用法
 
@@ -18,7 +18,7 @@ api.setNext(next: any): void;
 
 ### 参数
 
-- `next` - （必需）要包含在**事件总线**执行顺序中的操作  
+- `next` - （必需）要包含在 **Event Bus** 执行顺序中的操作  
 
 ### 示例
 
@@ -42,5 +42,5 @@ Promise.all([
 ~~~
 
 :::info
-您需要将 **RestDataProvider** 包含到**事件总线**的执行顺序中，以便对数据执行操作（如**添加**、**删除**等）并向服务器发送相应请求
+您需要将 **RestDataProvider** 包含到 **Event Bus** 的执行顺序中，以便对数据执行操作（如**添加**、**删除**等）并向服务器发送相应请求
 :::

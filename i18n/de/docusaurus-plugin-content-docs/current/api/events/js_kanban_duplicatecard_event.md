@@ -46,4 +46,4 @@ board.api.on("duplicate-card", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Der Parameter `select` wurde in Version v1.5.10 hinzugefügt
+**Changelog:** Der Parameter `select` wurde in v1.5.10 hinzugefügt

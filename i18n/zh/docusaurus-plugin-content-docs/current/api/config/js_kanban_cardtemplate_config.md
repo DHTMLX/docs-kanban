@@ -66,8 +66,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** 在 v1.4 版本中新增了显示上下文菜单的功能
+**更新日志：** 在 v1.4 中新增了显示上下文菜单的功能
 
-**相关文档：** [自定义](guides/customization.md#custom-cards)
+**相关文章：** [自定义](guides/customization.md#custom-cards)
 
 **相关示例：** [Kanban. Custom card](https://snippet.dhtmlx.com/8rhdq81d?tag=kanban)

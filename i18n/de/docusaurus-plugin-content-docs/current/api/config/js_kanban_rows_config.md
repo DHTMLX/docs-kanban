@@ -56,10 +56,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Der Parameter ***css*** wurde in Version 1.4 hinzugefügt.
+**Changelog:** Der Parameter ***css*** wurde in v1.4 hinzugefügt.
 
 **Verwandte Artikel:**
 - [Arbeiten mit Daten](guides/working_with_data.md)
 - [updateRow()](api/methods/js_kanban_updaterow_method.md)
 
-**Verwandte Beispiel:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Swimlanes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

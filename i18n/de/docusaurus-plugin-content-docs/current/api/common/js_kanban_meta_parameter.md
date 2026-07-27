@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**Änderungsprotokoll:** Der `$meta` Parameter wurde in Version 1.3 hinzugefügt
+**Changelog:** Der `$meta` Parameter wurde in v1.3 hinzugefügt
 
 **Verwandter Artikel:** [`history`](api/config/js_kanban_history_config.md)

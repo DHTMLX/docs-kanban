@@ -39,7 +39,7 @@ description: 阅读 DHTMLX Kanban 的 end-drag-card 事件 API。了解如何处
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -50,6 +50,6 @@ board.api.on("end-drag-card", (obj) => {
 });
 ~~~
 
-**更新日志：** 该事件在 v1.4 版本中添加
+**更新日志：** 该事件在 v1.4 中新增
 
-**相关示例：** [看板。禁用特定列的拖放](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)
+**相关示例：** [Kanban。禁用特定列的拖放](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

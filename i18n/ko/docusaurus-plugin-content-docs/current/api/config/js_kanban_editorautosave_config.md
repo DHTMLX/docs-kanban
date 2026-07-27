@@ -9,7 +9,7 @@ description: DHTMLX Kanban의 editorAutoSave 구성 API를 읽어보세요. 카�
 <h1 style = {{color: "red"}}><s>editorAutoSave</s></h1>
 
 :::danger
-버전 1.3부터 `editorAutoSave` 속성은 **더 이상 사용되지 않습니다**. "autosave" 모드를 관리하려면 [`editor`](api/config/js_kanban_editor_config.md) 속성을 사용하세요!
+v1.3부터 `editorAutoSave` 속성은 **지원 중단되었습니다**. "autosave" 모드를 관리하려면 [`editor`](api/config/js_kanban_editor_config.md) 속성을 사용하세요!
 :::
 
 ### 설명
@@ -26,7 +26,7 @@ description: DHTMLX Kanban의 editorAutoSave 구성 API를 읽어보세요. 카�
 editorAutoSave?: boolean; // (기본값은 true)
 ~~~
 
-### 기본 구성
+### 기본 설정
 
 ~~~jsx {}
 editorAutoSave: true

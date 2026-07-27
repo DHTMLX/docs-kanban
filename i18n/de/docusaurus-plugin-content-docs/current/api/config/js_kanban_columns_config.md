@@ -113,9 +113,9 @@ Falls die Stile nicht angewendet werden, stellen Sie sicher, dass:
 - Ihr Selektor genügend Kontext enthält (z. B. Eltern- und interne DHTMLX-Klassen)
 - Falls die Eigenschaft durch einen Inline-Stil überschrieben wird, können Sie `!important` verwenden
 
-**Änderungsprotokoll:** Die Parameter **css** und **overlay** wurden in Version v1.4 hinzugefügt
+**Changelog:** Die Parameter **css** und **overlay** wurden in v1.4 hinzugefügt
 
-**Verwandte Artikel:**
+**Verwandter Artikel:**
 - [Arbeiten mit Daten](guides/working_with_data.md)
 - [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 

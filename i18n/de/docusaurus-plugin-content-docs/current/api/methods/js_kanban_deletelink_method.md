@@ -33,4 +33,4 @@ const board = new kanban.Kanban("#root", {
 board.deleteLink({ id: 5 });
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.5 hinzugefügt
+**Changelog:** Die Methode wurde in v1.5 hinzugefügt

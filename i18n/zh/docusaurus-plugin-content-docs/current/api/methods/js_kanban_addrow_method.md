@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 addRow 方法 API。了解如何向看板�
 
 ### 描述
 
-@short: 在看板中添加一行新行
+@short: 在 Kanban 中添加一行新行
 
 ### 用法
 
@@ -33,7 +33,7 @@ addRow({
 ### 示例
 
 ~~~jsx {8-15}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
@@ -50,4 +50,4 @@ board.addRow({
 });
 ~~~
 
-**更新日志**：参数 **id**、**row** 和 **before** 于 v1.1 版本新增
+**更新日志：**参数 **id**、**row** 和 **before** 于 v1.1新增

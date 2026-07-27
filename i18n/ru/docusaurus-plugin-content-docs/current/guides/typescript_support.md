@@ -6,7 +6,7 @@ description: Следуйте руководству по поддержке Typ
 
 # Поддержка TypeScript
 
-Начиная с версии v1.1, DHTMLX Kanban поставляется со встроенными определениями TypeScript.
+Начиная с v1.1, DHTMLX Kanban поставляется со встроенными определениями TypeScript.
 
 :::note
 Попробуйте [Snippet Tool](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban) для рабочего примера на TypeScript.

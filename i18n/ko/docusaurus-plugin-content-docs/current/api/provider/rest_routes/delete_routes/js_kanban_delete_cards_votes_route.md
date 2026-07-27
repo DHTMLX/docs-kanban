@@ -40,4 +40,4 @@ HTTP 상태 코드는 요청이 성공했는지(response.status == 200) 실패�
 
 ---
 
-**관련 문서**: [서버 작업하기](guides/working_with_server.md)
+**관련 문서:** [서버 작업하기](guides/working_with_server.md)

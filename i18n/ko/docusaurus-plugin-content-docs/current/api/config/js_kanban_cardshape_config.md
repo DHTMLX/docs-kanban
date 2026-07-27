@@ -212,7 +212,7 @@ cardShape?: {
 **cardShape** 속성으로 카드 설정을 지정하지 않으면 위젯은 **defaultCardShape** 기본 매개변수 집합을 적용합니다!
 :::
 
-### 기본 구성 {#default-config}
+### 기본 설정 {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [
@@ -324,16 +324,16 @@ new kanban.Kanban("#root", {
 ~~~
 
 **변경 로그:**
-- ***comments***, ***css*** 및 ***votes*** 매개변수가 v1.4에 추가됨
-- ***menu.items[0].label*** 매개변수가 v1.4에서 폐기되고 ***menu.items[0].text*** 매개변수로 대체됨
-- ***menu.items[0].items*** 매개변수가 v1.4에서 폐기되고 ***menu.items[0].data*** 매개변수로 대체됨
-- ***users.maxCount*** 및 ***votes.clickable*** 매개변수가 v1.6에 추가됨
+- ***comments***, ***css*** 및 ***votes*** 매개변수가 v1.4에서 추가됨
+- ***menu.items[0].label*** 매개변수가 v1.4에서 지원 중단되고 ***menu.items[0].text*** 매개변수로 대체됨
+- ***menu.items[0].items*** 매개변수가 v1.4에서 지원 중단되고 ***menu.items[0].data*** 매개변수로 대체됨
+- ***users.maxCount*** 및 ***votes.clickable*** 매개변수가 v1.6에서 추가됨
 - ***menu.items[0].label*** 및 ***menu.items[0].items*** 매개변수가 v1.7에서 제거됨
 - ***menu.items*** 함수가 업데이트되어 v1.7에서 **store** 매개변수가 **readonly**로 대체됨
 
 **관련 문서:** [구성](guides/configuration.md#cards)
 
-**관련 샘플:**
+**관련 예제:**
 - [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
 - [Kanban. Highlighting outdated and active tasks](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
 - [Kanban. Styling cards](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)

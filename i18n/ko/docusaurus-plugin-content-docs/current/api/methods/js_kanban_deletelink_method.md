@@ -33,4 +33,4 @@ const board = new kanban.Kanban("#root", {
 board.deleteLink({ id: 5 });
 ~~~
 
-**변경 로그:** 이 메서드는 v1.5에 추가되었습니다.
+**변경 로그:** 이 메서드는 v1.5에서 추가되었습니다.

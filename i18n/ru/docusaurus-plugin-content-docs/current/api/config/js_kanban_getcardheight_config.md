@@ -71,4 +71,4 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Связанные статьи:** [Конфигурация](guides/configuration.md#rendering-and-scrolling)
+**Полезные статьи:** [Конфигурация](guides/configuration.md#rendering-and-scrolling)

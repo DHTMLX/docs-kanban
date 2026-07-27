@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 setEdit 方法 API。了解如何切换卡
 
 ### 描述
 
-@short: 切换看板的编辑器
+@short: 切换 Kanban 的编辑器
 
 ### 用法
 
@@ -29,7 +29,7 @@ setEdit({ cardId: string | number } | null): void;
 ### 示例
 
 ~~~jsx {7}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -38,4 +38,4 @@ const board = new kanban.Kanban("#root", {
 board.setEdit({ cardId: 1 });
 ~~~
 
-**更新日志：** 该方法在 v1.2 版本中添加
+**更新日志：** 该方法在 v1.2 中新增

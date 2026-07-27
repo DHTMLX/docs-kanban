@@ -33,7 +33,7 @@ description: 阅读 DHTMLX Kanban 的 delete-card 事件 API。了解如何处�
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards

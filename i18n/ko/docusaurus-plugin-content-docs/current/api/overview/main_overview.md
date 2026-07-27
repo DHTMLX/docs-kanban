@@ -1,7 +1,7 @@
 ---
 sidebar_label: API 개요
 title: Kanban API 개요
-description: DHTMLX Kanban API 개요를 확인하세요. 구성 참조, 메서드, 이벤트, 툴바 API 및 개발자 문서를 찾아보세요.
+description: DHTMLX Kanban API 개요를 확인하세요. 구성 참조, 메서드, 이벤트, Toolbar API 및 개발자 문서를 찾아보세요.
 ---
 
 # API 개요
@@ -14,7 +14,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**매개변수**:
+**매개변수:**
 
 - HTML 컨테이너 (HTML 컨테이너의 ID)
 - 구성 매개변수 객체 ([여기서 확인](#kanban-properties))
@@ -27,7 +27,7 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**매개변수**:
+**매개변수:**
 
 - HTML 컨테이너 (HTML 컨테이너의 ID)
 - 구성 매개변수 객체 ([여기서 확인](#toolbar-properties))
@@ -74,7 +74,7 @@ new kanban.Toolbar("#toolbar", {
 
 ## Kanban 내부 API
 
-### 이벤트 버스 메서드 {#event-bus-methods}
+### Event Bus 메서드 {#event-bus-methods}
 
 | 이름                                                       | 설명                                                       |
 | ---------------------------------------------------------- | ---------------------------------------------------------- |

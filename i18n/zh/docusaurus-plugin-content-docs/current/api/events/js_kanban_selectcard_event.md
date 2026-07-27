@@ -27,13 +27,13 @@ description: 阅读 DHTMLX Kanban 的 select-card 事件 API。了解如何处�
 - `groupMode` - （可选）多选模式（默认值为 false）
 
 :::info
-处理内部事件时，您可以使用[**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+处理内部事件时，您可以使用[**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards

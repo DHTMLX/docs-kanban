@@ -27,7 +27,7 @@ setConfig(config: object): void;
 ### 示例
 
 ~~~jsx {6-8}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {});
 // 创建 Toolbar
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });

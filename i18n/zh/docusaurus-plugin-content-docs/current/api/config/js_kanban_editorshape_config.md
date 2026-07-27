@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 editorShape 配置文档。了解如何定
 
 ### 描述
 
-@short: 可选。一个包含对象的数组，用于管理看板编辑器的外观和功能设置
+@short: 可选。一个包含对象的数组，用于管理 Kanban 编辑器的外观和功能设置
 
 ### 用法
 
@@ -155,7 +155,7 @@ editorShape?: [
 - `type` - （必填）编辑器字段类型
 
 :::important
-在看板编辑器中，您可以使用以下字段类型：**dateRange**、**date**、**combo**、**select**、**multiselect**、**color**、**text**、**textarea**、**progress**、**files**、**comments** 和 **links**
+在 Kanban 编辑器中，您可以使用以下字段类型：**dateRange**、**date**、**combo**、**select**、**multiselect**、**color**、**text**、**textarea**、**progress**、**files**、**comments** 和 **links**
 :::
 
 - `key` - （必填）编辑器字段的键。这里需要使用 [`cardShape`](api/config/js_kanban_cardshape_config.md) 属性中指定的值。示例如下：
@@ -468,9 +468,9 @@ new kanban.Kanban("#root", {
 
 **更新日志：**
 
-- v1.3 版本新增了 ***dateRange*** 类型
-- v1.4 版本新增了 ***comments*** 和 ***links*** 编辑器类型，以及 ***format*** 参数
-- v1.6 版本新增了 ***modalSection*** 参数
+- v1.3新增了 ***dateRange*** 类型
+- v1.4新增了 ***comments*** 和 ***links*** 编辑器类型，以及 ***format*** 参数
+- v1.6新增了 ***modalSection*** 参数
 - ***clearButton*** 参数被替换为 ***clear*** 参数
 
-**相关文档：** [配置](guides/configuration.md/#editor)
+**相关文章：** [配置](guides/configuration.md/#editor)
