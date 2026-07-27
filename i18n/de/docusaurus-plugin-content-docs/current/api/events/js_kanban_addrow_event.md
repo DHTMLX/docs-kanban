@@ -48,4 +48,4 @@ board.api.on("add-row", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll**: Die Parameter **id**, **before** und **row** wurden in Version v1.1 hinzugefügt
+**Changelog:** Die Parameter **id**, **before** und **row** wurden in v1.1 hinzugefügt

@@ -30,4 +30,4 @@ description: DHTMLX Kanban의 DELETE /columns REST route API를 확인하세요.
 
 ---
 
-**관련 문서**: [서버 작업하기](guides/working_with_server.md)
+**관련 문서:** [서버 작업하기](guides/working_with_server.md)

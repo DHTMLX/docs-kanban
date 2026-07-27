@@ -31,6 +31,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** 该属性在 v1.4 中添加
+**更新日志：** 该属性在 v1.4 中新增
 
 **相关示例：** [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

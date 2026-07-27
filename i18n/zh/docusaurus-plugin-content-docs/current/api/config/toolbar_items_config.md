@@ -1,14 +1,14 @@
 ---
 sidebar_label: items
 title: Toolbar items 配置 API
-description: 阅读 DHTMLX Kanban 的 Toolbar items 配置文档。了解如何配置工具栏按钮、搜索、撤销及各类控件。
+description: 阅读 DHTMLX Kanban 的 Toolbar items 配置文档。了解如何配置 Toolbar 按钮、搜索、撤销及各类控件。
 ---
 
 # items
 
 ### 描述
 
-@short: 可选。一个数组，包含排列在看板工具栏上的控件
+@short: 可选。一个数组，包含排列在 Kanban Toolbar 上的控件
 
 ### 用法
 
@@ -180,12 +180,12 @@ new kanban.Toolbar("#toolbar", {
 
 **更新日志：**
 
-- 在 v1.3 版本中新增了 *"Undo"* 和 *"Redo"* 控件
-- 在 v1.4 版本中，**sort** 控件的 ***items.options[0].label*** 参数被替换为 ***items.options[0].text***
-- 在 v1.6 版本中，**"search"** 控件新增了 ***items.resultTemplate*** 参数
+- 在 v1.3 中新增了 *"Undo"* 和 *"Redo"* 控件
+- 在 v1.4 中，**sort** 控件的 ***items.options[0].label*** 参数被替换为 ***items.options[0].text***
+- 在 v1.6 中，**"search"** 控件新增了 ***items.resultTemplate*** 参数
 
-**相关文档：** [配置](guides/configuration.md#toolbar) 和 [自定义](guides/customization.md#custom-toolbar)
+**相关文章：** [配置](guides/configuration.md#toolbar) 和 [自定义](guides/customization.md#custom-toolbar)
 
 **相关示例：**
-- [看板. 自定义工具栏](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
-- [看板. 搜索结果中建议项的自定义](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)
+- [Kanban. 自定义 Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+- [Kanban. 搜索结果中建议项的自定义](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)

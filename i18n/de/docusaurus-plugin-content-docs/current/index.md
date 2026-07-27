@@ -68,6 +68,6 @@ import editor from '@site/static/img/js_kanban_editor.png';
     className="img_border"
 />
 
-## Wie geht es weiter?
+## Wie geht es weiter
 
 Jetzt können Sie Kanban in Ihrer Anwendung verwenden. Folgen Sie der Anleitung im Tutorial [How to start](how_to_start.md) für weitere Hinweise.

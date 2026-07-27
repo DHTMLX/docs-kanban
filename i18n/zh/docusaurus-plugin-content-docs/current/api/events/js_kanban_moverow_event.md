@@ -29,13 +29,13 @@ description: 阅读 DHTMLX Kanban 的 move-row 事件 API。了解如何处理�
 - `skipProvider` - （可选）启用/禁用阻止请求发送到服务器
 
 :::info
-处理内部事件时，您可以使用[**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+处理内部事件时，您可以使用[**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {8-10}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
@@ -47,4 +47,4 @@ board.api.on("move-row", (obj) => {
 });
 ~~~
 
-**更新日志：** 此事件在 v1.1 中添加
+**更新日志：** 此事件在 v1.1 中新增

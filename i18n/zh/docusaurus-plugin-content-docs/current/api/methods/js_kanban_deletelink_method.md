@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 deleteLink 方法 API。了解如何通过
 
 ### 描述
 
-@short: 从看板的数据存储中移除指定的链接
+@short: 从 Kanban 的数据存储中移除指定的链接
 
 ### 用法
 
@@ -23,7 +23,7 @@ deleteLink({ id: string | number }): void;
 ### 示例
 
 ~~~jsx {8}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
@@ -33,4 +33,4 @@ const board = new kanban.Kanban("#root", {
 board.deleteLink({ id: 5 });
 ~~~
 
-**更新日志：** 此方法自 v1.5 版本起添加
+**更新日志：** 此方法在 v1.5 中新增

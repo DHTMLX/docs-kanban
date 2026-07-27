@@ -16,7 +16,7 @@ description: Изучите API метода serialize для DHTMLX Kanban. У�
 serialize(): object;
 ~~~
 
-### Возвращает
+### Возвращаемое значение
 
 Метод возвращает объект с данными Kanban  
 

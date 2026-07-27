@@ -363,7 +363,7 @@ interface UploadEvent extends PointerEvent {
 `editorShape` 속성을 통해 편집기 설정을 지정하지 않으면, 위젯은 **defaultEditorShape** 기본 설정 매개변수 집합을 적용합니다!
 :::
 
-### 기본 구성 {#default-config}
+### 기본 설정 {#default-config}
 
 ~~~jsx {}
 const defaultPriorities = [
@@ -421,7 +421,7 @@ const defaultEditorShape = [
 ];
 ~~~
 
-### 예시
+### 예제
 
 ~~~jsx {6-33,38}
 const users = [ // 사용자 데이터
@@ -466,7 +466,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 이력:**
+**변경 로그:**
 
 - v1.3에서 ***dateRange*** 유형 추가
 - v1.4에서 ***comments*** 및 ***links*** 편집기 유형과 ***format*** 매개변수 추가

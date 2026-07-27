@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 addLink 方法 API。了解如何在卡片
 
 ### 描述
 
-@short: 在看板中添加一个新的链接
+@short: 在 Kanban 中添加一个新的链接
 
 ### 用法
 
@@ -27,7 +27,7 @@ addLink({
 ### 示例
 
 ~~~jsx {7-14}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -43,4 +43,4 @@ board.addLink({
 });
 ~~~
 
-**更新日志：** 该方法在 v1.5 版本中添加
+**更新日志：** 该方法在 v1.5 中新增

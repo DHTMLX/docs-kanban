@@ -31,13 +31,13 @@ description: 阅读 DHTMLX Kanban 的 add-row 事件 API。了解如何处理添
 - `skipProvider` - （可选）启用或禁用阻止请求发送到服务器
 
 :::info
-处理内部事件时，您可以使用[**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+处理内部事件时，您可以使用[**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -48,4 +48,4 @@ board.api.on("add-row", (obj) => {
 });
 ~~~
 
-**更新日志**：在 v1.1 版本中添加了 **id**、**before** 和 **row** 参数
+**更新日志：**在 v1.1 中新增了 **id**、**before** 和 **row** 参数

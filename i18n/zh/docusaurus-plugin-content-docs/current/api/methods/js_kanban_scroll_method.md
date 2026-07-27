@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 scroll 方法 API。了解如何将看板�
 
 ### 描述
 
-@short: 将看板滚动到指定元素
+@short: 将 Kanban 滚动到指定元素
 
 ### 用法
 
@@ -29,12 +29,12 @@ scroll({
 ### 示例
 
 ~~~jsx {7-15}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 将看板滚动到 ID 为 246 的卡片
+// 将 Kanban 滚动到 ID 为 246 的卡片
 board.scroll({
     id: 246,
     to: "card",
@@ -46,4 +46,4 @@ board.scroll({
 });
 ~~~
 
-**更新日志：** 此方法在 v1.2 版本中添加
+**更新日志：** 此方法在 v1.2 中新增

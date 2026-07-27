@@ -59,4 +59,4 @@ board.updateComment({
 });
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.4 hinzugefügt
+**Changelog:** Die Methode wurde in v1.4 hinzugefügt

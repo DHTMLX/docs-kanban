@@ -46,7 +46,7 @@ board.api.intercept("set-edit", (ev) => {
 ~~~
 
 **변경 로그:**
-    - 이벤트는 v1.2에 추가되었습니다.
-    - ***eventSource*** 매개변수는 v1.6에 추가되었습니다.
+    - 이벤트는 v1.2에서 추가되었습니다.
+    - ***eventSource*** 매개변수는 v1.6에서 추가되었습니다.
 
-**관련 샘플:** [Kanban. 작업을 더블 클릭하여 에디터 열기](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban)
+**관련 예제:** [Kanban. 작업을 더블 클릭하여 에디터 열기](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban)

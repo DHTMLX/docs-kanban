@@ -20,7 +20,7 @@ scrollType?: "default" | "column";
 `scrollType: "column"` 설정을 사용하면 각 열을 개별적으로 스크롤할 수 있습니다.
 :::
 
-### 기본 구성
+### 기본 설정
 
 ~~~jsx {}
 scrollType: "default"

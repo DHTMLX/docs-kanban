@@ -135,27 +135,27 @@
     "description": "Метка рядом со списком тегов"
   },
   "theme.admonition.caution": {
-    "message": "осторожно",
+    "message": "Осторожно",
     "description": "Метка по умолчанию для предупреждения Caution (:::caution)"
   },
   "theme.admonition.danger": {
-    "message": "опасность",
+    "message": "Опасно",
     "description": "Метка по умолчанию для предупреждения Danger (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "информация",
+    "message": "К сведению",
     "description": "Метка по умолчанию для предупреждения Info (:::info)"
   },
   "theme.admonition.note": {
-    "message": "заметка",
+    "message": "Примечание",
     "description": "Метка по умолчанию для предупреждения Note (:::note)"
   },
   "theme.admonition.tip": {
-    "message": "совет",
+    "message": "Подсказка",
     "description": "Метка по умолчанию для предупреждения Tip (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "предупреждение",
+    "message": "Предупреждение",
     "description": "Метка по умолчанию для предупреждения Warning (:::warning)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {

@@ -50,4 +50,4 @@ board.addRow({
 });
 ~~~
 
-**Änderungsprotokoll**: Die Parameter **id**, **row** und **before** wurden in Version v1.1 hinzugefügt
+**Changelog:** Die Parameter **id**, **row** und **before** wurden in v1.1 hinzugefügt

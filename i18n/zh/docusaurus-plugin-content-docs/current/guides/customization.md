@@ -12,7 +12,7 @@ description: 使用 DHTMLX Kanban 自定义指南，通过文档化的 API 模�
 - [`cardShape.menu`](api/config/js_kanban_cardshape_config.md)、[`columnShape.menu`](api/config/js_kanban_columnshape_config.md)、[`rowShape.menu`](api/config/js_kanban_rowshape_config.md) — 修改卡片、列和行的右键菜单
 - [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md)、[`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — 替换列标题模板
 - [`cardShape.css`](api/config/js_kanban_cardshape_config.md)、[`columnShape.css`](api/config/js_kanban_columnshape_config.md)、[`rowShape.css`](api/config/js_kanban_rowshape_config.md) — 按条件应用 CSS 类
-- [`items`](api/config/toolbar_items_config.md) — 重新排列工具栏结构并添加自定义控件
+- [`items`](api/config/toolbar_items_config.md) — 重新排列 Toolbar 结构并添加自定义控件
 - CSS 变量 — 调整视觉样式（请参阅 [样式化](guides/stylization.md) 部分）
 
 ## 自定义卡片 {#custom-cards}
@@ -122,9 +122,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-## 自定义工具栏 {#custom-toolbar}
+## 自定义 Toolbar {#custom-toolbar}
 
-使用 [`items`](api/config/toolbar_items_config.md) 属性自定义工具栏结构。该数组定义显示哪些控件、控件顺序及其行为。条目可以是：
+使用 [`items`](api/config/toolbar_items_config.md) 属性自定义 Toolbar 结构。该数组定义显示哪些控件、控件顺序及其行为。条目可以是：
 
 - 内置控件：`"search"`、`"sort"`、`"undo"`、`"redo"`、`"addColumn"`、`"addRow"`、`"spacer"`
 - 使用自定义选项覆盖搜索栏或排序控件的对象

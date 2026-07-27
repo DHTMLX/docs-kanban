@@ -31,6 +31,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**История изменений:** Свойство было добавлено в версии v1.4
+**Журнал изменений:** Свойство было добавлено в v1.4
 
 **Связанный пример:** [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

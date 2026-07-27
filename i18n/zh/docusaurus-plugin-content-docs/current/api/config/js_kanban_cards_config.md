@@ -147,10 +147,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** ***css***、***comments*** 和 ***votes*** 参数在 v1.4 版本中新增
+**更新日志：** ***css***、***comments*** 和 ***votes*** 参数在 v1.4 中新增
 
-**相关文档：**
+**相关文章：**
 - [数据操作](guides/working_with_data.md)
 - [updateCard()](api/methods/js_kanban_updatecard_method.md)
 
-**相关示例：** [看板. 卡片样式](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
+**相关示例：** [Kanban. 卡片样式](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)

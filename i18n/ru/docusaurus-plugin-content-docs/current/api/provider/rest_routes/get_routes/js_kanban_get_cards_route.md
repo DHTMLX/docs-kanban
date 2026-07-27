@@ -76,6 +76,6 @@ HTTP статус-код показывает, был ли запрос успе
 
 ---
 
-**Связанные статьи**:
+**Полезные статьи:**
 - [Работа с сервером](guides/working_with_server.md)
 - [getCards()](api/provider/rest_methods/js_kanban_getcards_method.md)

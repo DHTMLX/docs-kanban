@@ -110,4 +110,4 @@ board.api.setNext(new MyDataProvider(url));
 
 ---
 
-**Связанные статьи:** [Работа с сервером](guides/working_with_server.md)
+**Полезные статьи:** [Работа с сервером](guides/working_with_server.md)

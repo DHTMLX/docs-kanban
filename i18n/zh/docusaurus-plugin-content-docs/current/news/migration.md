@@ -251,7 +251,7 @@ kanban.api.exec("undo");
 
 #### 方法
 
-- Kanban 工具栏的 [`setLocale`](api/methods/toolbar_setlocale_method.md) 方法有如下更新：
+- Kanban Toolbar 的 [`setLocale`](api/methods/toolbar_setlocale_method.md) 方法有如下更新：
 
 ~~~jsx {6} title="v1.5.7 之前"
     // 创建 Kanban
@@ -578,7 +578,7 @@ kanban.api.exec("undo");
         });
     ~~~
 
-- Kanban 工具栏 [`items`](api/config/toolbar_items_config.md) 属性中的 **sort** 控件有如下变更：
+- Kanban Toolbar [`items`](api/config/toolbar_items_config.md) 属性中的 **sort** 控件有如下变更：
 
     ~~~jsx {} title="v1.4 之前"
         [
@@ -714,7 +714,7 @@ api.getState();
         // 其他参数
     ~~~
 
-- 工具栏的 [`items`](api/config/toolbar_items_config.md) 属性有如下变更：
+- Toolbar 的 [`items`](api/config/toolbar_items_config.md) 属性有如下变更：
 
 ~~~jsx {} title="v1.3 之前"
 items: [
@@ -935,7 +935,7 @@ updateColumn({
 // 其他字段设置
 ~~~
 
-- 工具栏的 [`items`](api/config/toolbar_items_config.md) 属性有如下变更：
+- Toolbar 的 [`items`](api/config/toolbar_items_config.md) 属性有如下变更：
 
 ~~~jsx {} title="v1.2 之前"
 items: [

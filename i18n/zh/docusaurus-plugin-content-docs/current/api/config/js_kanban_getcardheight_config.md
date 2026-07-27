@@ -71,4 +71,4 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**相关文档：** [配置](guides/configuration.md#rendering-and-scrolling)
+**相关文章：** [配置](guides/configuration.md#rendering-and-scrolling)

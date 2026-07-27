@@ -1,14 +1,14 @@
 ---
 sidebar_label: locale
 title: API конфигурации Toolbar locale
-description: Ознакомьтесь с API конфигурации locale панели инструментов для DHTMLX Kanban. Узнайте, как применить пользовательскую локаль к Toolbar.
+description: Ознакомьтесь с API конфигурации locale Toolbar для DHTMLX Kanban. Узнайте, как применить пользовательскую локаль к Toolbar.
 ---
 
 # locale
 
 ### Описание
 
-@short: Необязательно. Объект с пользовательской локализацией панели инструментов (Toolbar)
+@short: Необязательно. Объект с пользовательской локализацией Toolbar
 
 :::info
 Объект **locale** должен содержать все метки Kanban и Toolbar с соответствующими переводами.
@@ -25,7 +25,7 @@ locale?: object;
 По умолчанию Toolbar использует локаль [**английский**](guides/localization.md#default-locale). Вы также можете задать пользовательскую локаль.
 
 :::tip
-Чтобы динамически изменить текущую локаль, используйте метод [**setLocale()**](api/methods/toolbar_setlocale_method.md) панели инструментов (Toolbar).
+Чтобы динамически изменить текущую локаль, используйте метод [**setLocale()**](api/methods/toolbar_setlocale_method.md) Toolbar.
 :::
 
 ### Пример
@@ -42,6 +42,6 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Связанные статьи:** [Локализация](guides/localization.md)
+**Полезные статьи:** [Локализация](guides/localization.md)
 
 **Связанный пример:** [Kanban. Локализация](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

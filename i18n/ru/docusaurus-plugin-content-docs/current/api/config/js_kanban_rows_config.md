@@ -56,9 +56,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**История изменений:** Параметр ***css*** был добавлен в версии v1.4
+**Журнал изменений:** Параметр ***css*** был добавлен в v1.4
 
-**Связанные статьи:**
+**Полезные статьи:**
 - [Работа с данными](guides/working_with_data.md)
 - [updateRow()](api/methods/js_kanban_updaterow_method.md)
 

@@ -45,7 +45,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Eigenschaft wurde in Version v1.2 hinzugefügt
+**Changelog:** Die Eigenschaft wurde in v1.2 hinzugefügt
 
 **Verwandte Artikel:** [Konfiguration](guides/configuration.md#cards)
 

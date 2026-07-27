@@ -111,13 +111,13 @@ new kanban.Kanban("#root", {
 - 선택자가 충분한 컨텍스트(예: 상위 요소 및 내부 DHTMLX 클래스)를 포함하는지
 - 인라인 스타일에 의해 속성이 덮어씌워졌다면 `!important`를 사용할 수 있습니다.
 
-**변경 기록:** **css** 및 **overlay** 매개변수는 v1.4에 추가되었습니다.
+**변경 로그:** **css** 및 **overlay** 매개변수는 v1.4에서 추가되었습니다.
 
 **관련 문서:**
 - [데이터 작업하기](guides/working_with_data.md)
 - [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 
-**관련 샘플:**
+**관련 예제:**
 - [Kanban. 열 및 swimlane 제한](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban)
 - [Kanban. 사용자 정의 메뉴를 통한 열 색상 변경](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
 - [Kanban. 특정 열로의 드래그 앤 드롭 비활성화](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

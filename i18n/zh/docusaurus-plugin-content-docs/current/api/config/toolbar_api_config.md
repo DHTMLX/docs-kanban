@@ -1,7 +1,7 @@
 ---
 sidebar_label: api
 title: Toolbar api 配置 API
-description: 阅读 DHTMLX Kanban 的 Toolbar api 配置 API。了解如何将工具栏连接到 Kanban 内部 API。
+description: 阅读 DHTMLX Kanban 的 Toolbar api 配置 API。了解如何将 Toolbar 连接到 Kanban 内部 API。
 ---
 
 # api
@@ -33,6 +33,6 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**相关文档：** [配置](guides/configuration.md#toolbar)
+**相关文章：** [配置](guides/configuration.md#toolbar)
 
-**相关示例：** [Kanban. 自定义工具栏](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+**相关示例：** [Kanban. 自定义 Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

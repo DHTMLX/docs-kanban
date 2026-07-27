@@ -30,4 +30,4 @@ Es werden keine Daten zurückgegeben. Der HTTP-Statuscode zeigt an, ob die Anfra
 
 ---
 
-**Verwandte Artikel**: [Arbeiten mit dem Server](guides/working_with_server.md)
+**Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

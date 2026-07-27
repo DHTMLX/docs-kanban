@@ -147,7 +147,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Parameter ***css***, ***comments*** und ***votes*** wurden in Version 1.4 hinzugefügt
+**Changelog:** Die Parameter ***css***, ***comments*** und ***votes*** wurden in v1.4 hinzugefügt
 
 **Verwandte Artikel:**
 - [Arbeiten mit Daten](guides/working_with_data.md)

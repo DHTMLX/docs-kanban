@@ -23,13 +23,13 @@ redo(): void;
 ### 示例
 
 ~~~jsx {7}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 在看板的历史记录中前进一步
+// 在 Kanban 的历史记录中前进一步
 board.redo();
 ~~~
 
-**更新日志：** 此方法在 v1.3 版本中新增
+**更新日志：** 此方法在 v1.3 中新增

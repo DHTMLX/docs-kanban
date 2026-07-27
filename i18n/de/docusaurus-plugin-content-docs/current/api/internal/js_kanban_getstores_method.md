@@ -39,4 +39,4 @@ const store = board.api.getStores();
 console.log(store);
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.2 aktualisiert
+**Changelog:** Die Methode wurde in v1.2 aktualisiert

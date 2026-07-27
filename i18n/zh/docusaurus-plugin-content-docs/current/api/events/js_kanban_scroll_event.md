@@ -29,13 +29,13 @@ description: 阅读 DHTMLX Kanban 的 scroll 事件 API。了解如何处理滚�
 - `options` - （可选）滚动选项对象。完整的滚动参数列表请参见 [这里](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#parameters)
 
 :::info
-若需处理内部事件，可以使用 [**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+若需处理内部事件，可以使用 [**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -46,4 +46,4 @@ board.api.on("scroll", (obj) => {
 });
 ~~~
 
-**更新日志：** 该事件在 v1.2 版本中新增
+**更新日志：** 该事件在 v1.2 中新增

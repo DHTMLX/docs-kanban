@@ -1,7 +1,7 @@
 ---
 sidebar_label: api
 title: API конфигурации Toolbar api
-description: Ознакомьтесь с API конфигурации api панели инструментов для DHTMLX Kanban. Узнайте, как подключить Toolbar к внутреннему API Kanban.
+description: Ознакомьтесь с API конфигурации api Toolbar для DHTMLX Kanban. Узнайте, как подключить Toolbar к внутреннему API Kanban.
 ---
 
 # api
@@ -33,6 +33,6 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Связанные статьи:** [Конфигурация](guides/configuration.md#toolbar)
+**Полезные статьи:** [Конфигурация](guides/configuration.md#toolbar)
 
 **Связанный пример:** [Kanban. Пользовательский toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

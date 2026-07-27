@@ -466,11 +466,11 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:**
+**Changelog:**
 
-- Der Typ ***dateRange*** wurde in Version 1.3 hinzugefügt
-- Die Typen ***comments*** und ***links*** für den Editor sowie der Parameter ***format*** wurden in Version 1.4 hinzugefügt
-- Der Parameter ***modalSection*** wurde in Version 1.6 hinzugefügt
+- Der Typ ***dateRange*** wurde in v1.3 hinzugefügt
+- Die Typen ***comments*** und ***links*** für den Editor sowie der Parameter ***format*** wurden in v1.4 hinzugefügt
+- Der Parameter ***modalSection*** wurde in v1.6 hinzugefügt
 - Der Parameter ***clearButton*** wurde durch den Parameter ***clear*** ersetzt
 
 **Verwandte Artikel:** [Konfiguration](guides/configuration.md/#editor)

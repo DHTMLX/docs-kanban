@@ -33,7 +33,7 @@ updateColumn({
 ### 示例
 
 ~~~jsx {7-16}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -51,6 +51,6 @@ board.updateColumn({
 });
 ~~~
 
-**更新日志**：
-- **id** 和 **column** 参数在 v1.1 中添加
-- **replace** 参数在 v1.3 中添加
+**更新日志：**
+- **id** 和 **column** 参数在 v1.1 中新增
+- **replace** 参数在 v1.3 中新增

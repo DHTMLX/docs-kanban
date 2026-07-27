@@ -52,4 +52,4 @@ HTTP 状态码表示请求的结果:状态码 200 表示成功，500 表示发�
 
 ---
 
-**相关文档**：[与服务器协作](guides/working_with_server.md)
+**相关文章：**[与服务器协作](guides/working_with_server.md)

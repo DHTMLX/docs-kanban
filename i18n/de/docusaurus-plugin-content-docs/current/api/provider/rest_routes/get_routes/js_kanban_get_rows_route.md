@@ -43,6 +43,6 @@ Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status ==
 
 ---
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 - [Arbeiten mit dem Server](guides/working_with_server.md)
 - [getRows()](api/provider/rest_methods/js_kanban_getrows_method.md)

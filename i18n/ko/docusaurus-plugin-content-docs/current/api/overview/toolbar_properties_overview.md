@@ -1,10 +1,10 @@
 ---
-sidebar_label: 툴바 속성 개요
-title: 툴바 속성 개요
-description: DHTMLX Kanban의 툴바 속성 개요를 확인하세요. Toolbar items 및 API에 대한 구성 속성을 찾아보세요.
+sidebar_label: Toolbar 속성 개요
+title: Toolbar 속성 개요
+description: DHTMLX Kanban의 Toolbar 속성 개요를 확인하세요. Toolbar items 및 API에 대한 구성 속성을 찾아보세요.
 ---
 
-# 툴바 속성 개요
+# Toolbar 속성 개요
 
 **Toolbar**를 구성하려면 [설정](guides/configuration.md#toolbar) 섹션을 참조하세요.
 

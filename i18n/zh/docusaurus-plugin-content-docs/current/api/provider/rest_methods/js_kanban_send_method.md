@@ -32,7 +32,7 @@ send(
 | `data`      | object      | *可选*。发送到服务器的参数。默认情况下，发送触发事件的参数。但您可以用自定义对象添加额外参数。详见下方[示例](#示例)。 |
 | `headers`   | object      | *可选*。默认请求头为 **Content-Type**，值为 *application/json*。可以通过 **customHeaders** 参数添加更多自定义请求头。详见下方[示例](#示例)。 |
 
-### 返回值
+### 响应
 
 该方法返回一个带或不带数据的 promise，具体取决于请求。
 
@@ -110,4 +110,4 @@ board.api.setNext(new MyDataProvider(url));
 
 ---
 
-**相关文档：** [与服务器交互](guides/working_with_server.md)
+**相关文章：** [与服务器交互](guides/working_with_server.md)

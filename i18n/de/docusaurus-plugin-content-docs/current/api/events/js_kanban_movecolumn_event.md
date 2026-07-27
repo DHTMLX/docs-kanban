@@ -46,4 +46,4 @@ board.api.on("move-column", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Event wurde in Version v1.1 hinzugefügt
+**Changelog:** Dieses Event wurde in v1.1 hinzugefügt

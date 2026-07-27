@@ -33,7 +33,7 @@ const board = new kanban.Kanban("#root", {
     cards
 });
 
-// 툴바 생성
+// Toolbar 생성
 const toolbar = new kanban.Toolbar("#toolbar", { api: board.api });
 
 // Kanban의 새로운 구성 매개변수 지정
@@ -48,6 +48,6 @@ board.setConfig({
     /* 기타 매개변수 */
 });
                         
-// 툴바의 새로운 구성 매개변수 지정
+// Toolbar의 새로운 구성 매개변수 지정
 toolbar.setConfig({ items: ["search", "spacer", "sort"] });
 ~~~

@@ -43,6 +43,6 @@ HTTP статус-код показывает, успешно ли выполн�
 
 ---
 
-**Связанные статьи**:
+**Полезные статьи:**
 - [Работа с сервером](guides/working_with_server.md)
 - [getRows()](api/provider/rest_methods/js_kanban_getrows_method.md)

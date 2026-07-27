@@ -57,6 +57,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Изменения:** Параметр `placement` был добавлен в версии v1.6
+**Журнал изменений:** Параметр `placement` был добавлен в v1.6
 
 **Связанные примеры:** [Kanban. Открытие редактора в модальном окне](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)

@@ -57,7 +57,7 @@ Material 테마를 커스터마이징하려면 스타일시트에서 다음 CSS 
     --wx-kanban-column-width: 300px;
     --wx-kanban-column-height: 300px;
 
-    /* 툴바 스타일 */
+    /* Toolbar 스타일 */
     --wx-kanban-toolbar-height: 56px;
     --wx-kanban-toolbar-align: center;
     --wx-kanban-toolbar-justify: flex-start;

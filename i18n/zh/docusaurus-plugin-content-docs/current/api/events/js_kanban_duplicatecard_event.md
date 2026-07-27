@@ -29,13 +29,13 @@ description: 阅读 DHTMLX Kanban 的 duplicate-card 事件 API。了解如何�
 - `select` - （可选）启用或禁用新添加卡片的选中状态
 
 :::info
-要处理内部事件，您可以使用 [**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+要处理内部事件，您可以使用 [**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -46,4 +46,4 @@ board.api.on("duplicate-card", (obj) => {
 });
 ~~~
 
-**更新日志：** `select` 参数在 v1.5.10 版本中添加
+**更新日志：** `select` 参数在 v1.5.10 中新增

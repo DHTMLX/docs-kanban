@@ -43,7 +43,7 @@ Veröffentlicht am 14. Oktober 2025
 
 ### Salesforce-Integration
 
-Ab Version 1.7 können Sie das JavaScript Kanban innerhalb der Salesforce-Umgebung nutzen. Weitere Informationen finden Sie im folgenden Leitfaden: [**Integration mit Salesforce**](guides/integration_with_salesforce.md).
+Ab v1.7 können Sie das JavaScript Kanban innerhalb der Salesforce-Umgebung nutzen. Weitere Informationen finden Sie im folgenden Leitfaden: [**Integration mit Salesforce**](guides/integration_with_salesforce.md).
 
 Sie können auch unser [**GitHub-Beispiel**](https://github.com/DHTMLX/salesforce-lwc-demo) erkunden oder die [**Online-Demo**](https://dhtmlx-dev-ed.develop.lightning.force.com/) ausführen (*Login*: ***user***, *Passwort*: ***demo***).
 
@@ -59,7 +59,7 @@ Sie können auch unser [**GitHub-Beispiel**](https://github.com/DHTMLX/salesforc
     - [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md)
     - [`detach()`](api/internal/js_kanban_detach_method.md)
 
-### Updates
+### Aktualisierungen
 
 - #### Methoden
 
@@ -162,7 +162,7 @@ Veröffentlicht am 13. November 2024
 - Möglichkeit, den Editor als modales Fenster über die Eigenschaft [`editor.placement`](api/config/js_kanban_editor_config.md) anzuzeigen (siehe [**Beispiel**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban))
 - Möglichkeit, das Voting für eine Karte (mit dem Abstimmungs-Icon auf der Karte) über die Eigenschaft [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) zu aktivieren (siehe [**Beispiel**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban))
 
-### Updates
+### Aktualisierungen
 
 - #### Eigenschaften
 
@@ -259,7 +259,7 @@ Veröffentlicht am 28. November 2023
 
 Veröffentlicht am 14. November 2023
 
-### Updates
+### Aktualisierungen
 
 - Die Methode [`setLocale()`](api/methods/toolbar_setlocale_method.md) der Toolbar wurde um den Parameter ***api*** erweitert.
 
@@ -274,7 +274,7 @@ Veröffentlicht am 14. November 2023
 
 Veröffentlicht am 13. September 2023
 
-### Updates
+### Aktualisierungen
 
 - Möglichkeit, die Komponente als ES-Modul zu importieren.
 
@@ -326,7 +326,7 @@ Veröffentlicht am 15. Juni 2023
     - [`GET /links`](api/provider/rest_routes/get_routes/js_kanban_get_links_route.md)
     - [`POST /links`](api/provider/rest_routes/post_routes/js_kanban_post_links_route.md)
 
-### Updates
+### Aktualisierungen
 
 - #### Eigenschaften
 
@@ -400,7 +400,7 @@ Veröffentlicht am 21. März 2023
     - [`currentUser`](api/config/js_kanban_currentuser_config.md)
     - [`links`](api/config/js_kanban_links_config.md)
 
-### Updates
+### Aktualisierungen
 
 - #### Methoden
 
@@ -472,7 +472,7 @@ Veröffentlicht am 29. September 2022
 - **Eigenschaften:**
     [`editorAutoSave`](api/config/js_kanban_editorautosave_config.md)
 
-### Updates
+### Aktualisierungen
 
 - #### Events
 
@@ -542,7 +542,7 @@ Veröffentlicht am 29. Juni 2022
     [`renderType`](api/config/js_kanban_rendertype_config.md) und
     [`scrollType`](api/config/js_kanban_scrolltype_config.md)
 
-### Updates
+### Aktualisierungen
 
 - #### Methoden
 
@@ -609,7 +609,7 @@ Veröffentlicht am 15. Februar 2022
     und
     [`moveRow()`](api/methods/js_kanban_moverow_method.md)
 
-### Updates
+### Aktualisierungen
 
 #### Eigenschaften
 

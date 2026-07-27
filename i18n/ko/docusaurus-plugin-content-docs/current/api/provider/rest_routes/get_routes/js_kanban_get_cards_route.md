@@ -76,6 +76,6 @@ HTTP 상태 코드는 요청 성공 여부를 나타내며, 성공 시 (response
 
 ---
 
-**관련 문서**:
+**관련 문서:**
 - [서버와 작업하기](guides/working_with_server.md)
 - [getCards()](api/provider/rest_methods/js_kanban_getcards_method.md)
