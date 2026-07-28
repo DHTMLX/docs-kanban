@@ -50,6 +50,6 @@ board.api.on("end-drag-card", (obj) => {
 });
 ~~~
 
-**변경 내역:** 이 이벤트는 v1.4에서 추가되었습니다.
+**변경 로그:** 이 이벤트는 v1.4에서 추가되었습니다.
 
 **관련 샘플:** [Kanban. 특정 열에 드래그 앤 드롭 비활성화](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

@@ -48,4 +48,4 @@ board.api.on("add-column", (obj) => {
 });
 ~~~
 
-**변경 로그**: v1.1 버전에서 **id**, **before**, **column** 매개변수가 추가되었습니다.
+**변경 로그:** v1.1에서 **id**, **before**, **column** 매개변수가 추가되었습니다.

@@ -90,7 +90,7 @@ rowShape?: {
 - `css` - 조건에 따라 행에 적용할 CSS 클래스를 반환하는 함수
 - `confirmDeletion` - (선택 사항) 행 삭제를 사용자에게 확인 또는 취소할 수 있는 **확인 대화상자** 표시 여부
 
-### 기본 구성
+### 기본 설정
 
 ~~~jsx {}
 const getDefaultRowMenuItems = ({ row, rowIndex, rows, readonly }) => [
@@ -176,10 +176,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 사항:**
-- ***css*** 매개변수가 v1.4에 추가되었습니다.
-- ***menu.items[0].label*** 매개변수는 v1.4에서 폐지되고 ***menu.items[0].text*** 매개변수로 대체되었습니다.
-- ***menu.items[0].items*** 매개변수는 v1.4에서 폐지되고 ***menu.items[0].data*** 매개변수로 대체되었습니다.
+**변경 로그:**
+- ***css*** 매개변수가 v1.4에서 추가되었습니다.
+- ***menu.items[0].label*** 매개변수는 v1.4에서 지원 중단되고 ***menu.items[0].text*** 매개변수로 대체되었습니다.
+- ***menu.items[0].items*** 매개변수는 v1.4에서 지원 중단되고 ***menu.items[0].data*** 매개변수로 대체되었습니다.
 - ***menu.items[0].label***과 ***menu.items[0].items*** 매개변수는 v1.7에서 제거되었습니다.
 - ***menu.items*** 함수가 업데이트되어 v1.7에서 **store** 매개변수가 **readonly**로 대체되었습니다.
 

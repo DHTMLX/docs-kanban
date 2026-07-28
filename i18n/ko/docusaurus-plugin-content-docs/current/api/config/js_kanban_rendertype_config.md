@@ -27,7 +27,7 @@ renderType?: "default" | "lazy";
 `cardHeight`가 설정되지 않은 경우, 위젯은 [`cardShape`](api/config/js_kanban_cardshape_config.md)를 기반으로 카드 높이를 실험적으로 추정합니다. 커스텀 [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)을 사용하는 보드의 경우, 대신 커스텀 [`getCardHeight`](api/config/js_kanban_getcardheight_config.md) 함수를 제공하세요.
 :::
 
-### 기본 구성
+### 기본 설정
 
 ~~~jsx {}
 renderType: "default"

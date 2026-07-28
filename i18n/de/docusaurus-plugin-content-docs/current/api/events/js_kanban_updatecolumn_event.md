@@ -53,6 +53,6 @@ board.api.on("update-column", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll**:
-- Die Parameter **id** und **column** wurden in Version v1.1 hinzugefügt
-- Der Parameter **replace** wurde in Version v1.3 hinzugefügt
+**Changelog:**
+- Die Parameter **id** und **column** wurden in v1.1 hinzugefügt
+- Der Parameter **replace** wurde in v1.3 hinzugefügt

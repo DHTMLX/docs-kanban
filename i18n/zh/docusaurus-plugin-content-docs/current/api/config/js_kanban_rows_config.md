@@ -56,9 +56,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** ***css*** 参数在 v1.4 中添加
+**更新日志：** ***css*** 参数在 v1.4 中新增
 
-**相关文档：**
+**相关文章：**
 - [数据操作](guides/working_with_data.md)
 - [updateRow()](api/methods/js_kanban_updaterow_method.md)
 

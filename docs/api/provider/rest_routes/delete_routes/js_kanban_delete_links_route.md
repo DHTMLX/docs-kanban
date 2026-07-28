@@ -30,7 +30,7 @@ No data is returned back. The HTTP status code shows whether the request succeed
 
 ---
 
-**Related articles**:
+**Related articles:**
 - [Working with server](guides/working_with_server.md)
 - [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
 - [links](api/config/js_kanban_links_config.md)

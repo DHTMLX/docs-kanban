@@ -76,7 +76,7 @@ Der HTTP-Statuscode zeigt an, ob die Anfrage erfolgreich war (response.status ==
 
 ---
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 
 - [Arbeiten mit dem Server](guides/working_with_server.md)
 - [getCards()](api/provider/rest_methods/js_kanban_getcards_method.md)

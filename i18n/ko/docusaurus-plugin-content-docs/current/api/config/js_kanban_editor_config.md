@@ -30,7 +30,7 @@ editor?: {
     - `"sidebar"` - 편집기를 사이드바로 표시
     - `"modal"` - 편집기를 모달 창으로 표시
 
-### 기본 구성
+### 기본 설정
 
 ~~~jsx {}
 editor: {
@@ -57,6 +57,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 기록:** `placement` 매개변수는 v1.6에서 추가되었습니다.
+**변경 로그:** `placement` 매개변수는 v1.6에서 추가되었습니다.
 
-**관련 샘플:** [Kanban. 모달 창에서 편집기 열기](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)
+**관련 예제:** [Kanban. 모달 창에서 편집기 열기](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)

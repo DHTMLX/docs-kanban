@@ -9,7 +9,7 @@ description: Ознакомьтесь с API конфигурации editorAuto
 <h1 style = {{color: "red"}}><s>editorAutoSave</s></h1>
 
 :::danger
-Начиная с версии 1.3, свойство `editorAutoSave` **устарело**. Для управления режимом "автосохранения" используйте свойство [`editor`](api/config/js_kanban_editor_config.md)!
+Начиная с v1.3, свойство `editorAutoSave` **устарело**. Для управления режимом "автосохранения" используйте свойство [`editor`](api/config/js_kanban_editor_config.md)!
 :::
 
 ### Описание

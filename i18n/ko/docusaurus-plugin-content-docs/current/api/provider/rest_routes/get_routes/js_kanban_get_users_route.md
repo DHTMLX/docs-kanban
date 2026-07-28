@@ -48,6 +48,6 @@ HTTP 상태 코드는 요청 성공 시 (response.status == 200), 실패 시 (re
 
 ---
 
-**관련 문서**:
+**관련 문서:**
 - [서버와 작업하기](guides/working_with_server.md)
 - [getUsers()](api/provider/rest_methods/js_kanban_getusers_method.md)

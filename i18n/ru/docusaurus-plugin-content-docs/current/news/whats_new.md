@@ -47,7 +47,7 @@ description: Ознакомьтесь с новыми возможностями
 
 Также доступны [**пример на GitHub**](https://github.com/DHTMLX/salesforce-lwc-demo) и [**онлайн-демо**](https://dhtmlx-dev-ed.develop.lightning.force.com/) (*Логин*: ***user***, *Пароль*: ***demo***).
 
-### Новый АПИ
+### Новый API
 
 - #### События
 
@@ -78,7 +78,7 @@ description: Ознакомьтесь с новыми возможностями
 
     - Свойство [`cards[i].attached[i]`](api/config/js_kanban_cards_config.md) расширено параметром `size`
 
-### Удалённый АПИ
+### Удалённый API
 
 - Свойство `editorAutoSave` удалено. Используйте свойство [`editor.autoSave`](api/config/js_kanban_editor_config.md)
 
@@ -154,7 +154,7 @@ description: Ознакомьтесь с новыми возможностями
 
 [Обзор релиза в блоге](https://dhtmlx.com/blog/dhtmlx-kanban-1-6/)
 
-### Новая функциональность
+### Новый функционал
 
 - Возможность изменять количество отображаемых на карточке назначенных пользователей через свойство [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) (см. [**пример**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban))
 - Возможность изменять содержимое заголовков колонок через свойство [`columnShape`](api/config/js_kanban_columnshape_config.md) (см. [**пример**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban))
@@ -306,13 +306,13 @@ description: Ознакомьтесь с новыми возможностями
 
 [Обзор релиза в блоге](https://dhtmlx.com/blog/dhtmlx-kanban-1-5/)
 
-### Новая функциональность
+### Новый функционал
 
 - Возможность устанавливать и удалять связи между карточками в режиме реального времени
 - Возможность управлять связями между карточками на стороне сервера
 - Возможность фиксировать заголовки колонок (см. [**пример**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
 
-### Новый АПИ
+### Новый API
 
 - #### Методы
 
@@ -369,14 +369,14 @@ description: Ознакомьтесь с новыми возможностями
 
 [Обзор релиза в блоге](https://dhtmlx.com/blog/dhtmlx-kanban-1-4/)
 
-### Новая функциональность
+### Новый функционал
 
 - Возможность добавлять комментарии (см. [**пример**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
 - Возможность ограничивать количество пользователей (см. [**пример**](https://snippet.dhtmlx.com/2rlg4qvk?tag=kanban))
 - Возможность устанавливать связи между карточками (см. [**пример**](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban))
 - Возможность голосовать за карточку (см. [**пример**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
 
-### Новый АПИ
+### Новый API
 
 - #### События
 
@@ -417,7 +417,7 @@ description: Ознакомьтесь с новыми возможностями
     - Свойство [`rows`](api/config/js_kanban_rows_config.md) расширено параметром ***css*** (см. [**пример**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
     - Свойство [`rowShape`](api/config/js_kanban_rowshape_config.md) расширено параметром ***css*** (см. [**пример**](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban))
 
-### Устаревший АПИ
+### Устаревший API
 
 - #### Свойства
 
@@ -437,18 +437,18 @@ description: Ознакомьтесь с новыми возможностями
 
 [Обзор релиза в блоге](https://dhtmlx.com/blog/dhtmlx-kanban-1-3/)
 
-### Новая функциональность
+### Новый функционал
 
-- Дублирование карточек через АПИ, контекстное меню (иконка с тремя точками) или сочетание клавиш `Ctrl (Command)` + `D` (позволяет дублировать несколько карточек)
+- Дублирование карточек через API, контекстное меню (иконка с тремя точками) или сочетание клавиш `Ctrl (Command)` + `D` (позволяет дублировать несколько карточек)
 - Экспорт данных Kanban в файл JSON
 - Управление историей Kanban:
     - через элементы управления *Undo* и *Redo* на тулбаре
     - через сочетания клавиш:
         - `Ctrl (Command)`+`Z` — отменить действие
         - `Ctrl (Command)`+`Y` или `Ctrl (Command)`+`Shift`+`Z` — повторить действие
-    - через АПИ
+    - через API
 
-### Новый АПИ
+### Новый API
 
 - **События:**
     [`duplicate-card`](api/events/js_kanban_duplicatecard_event.md)
@@ -467,7 +467,7 @@ description: Ознакомьтесь с новыми возможностями
 - **Общие настройки:**
     [`$meta`](api/common/js_kanban_meta_parameter.md)
 
-### Устаревший АПИ
+### Устаревший API
 
 - **Свойства:**
     [`editorAutoSave`](api/config/js_kanban_editorautosave_config.md)
@@ -515,15 +515,15 @@ description: Ознакомьтесь с новыми возможностями
 
 [Обзор релиза в блоге](https://dhtmlx.com/blog/dhtmlx-kanban-1-2/)
 
-### Новая функциональность
+### Новый функционал
 
 - Добавление новых карточек через меню колонки (см. [**пример**](https://snippet.dhtmlx.com/8eo65gr5?tag=kanban))
 - Динамическая отрисовка (см. [**пример**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
 - Прокрутка отдельных колонок (см. [**пример**](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban))
-- Прокрутка Kanban до вновь созданных карточек, колонок и строк (АПИ и интерфейс) (см. [**пример**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
-- Сортировка карточек (АПИ и интерфейс) (см. [**пример**](https://snippet.dhtmlx.com/74nyuv14?tag=kanban))
+- Прокрутка Kanban до вновь созданных карточек, колонок и строк (API и UI) (см. [**пример**](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban))
+- Сортировка карточек (API и UI) (см. [**пример**](https://snippet.dhtmlx.com/74nyuv14?tag=kanban))
 
-### Новый АПИ
+### Новый API
 
 - **События:**
     [`scroll`](api/events/js_kanban_scroll_event.md),
@@ -589,7 +589,7 @@ description: Ознакомьтесь с новыми возможностями
 
 [Обзор релиза в блоге](https://dhtmlx.com/blog/dhtmlx-kanban-1-1-wip-validation-new-operations-columns-rows-typescript-support/)
 
-### Новая функциональность
+### Новый функционал
 
 - Возможность *сворачивать/разворачивать* колонки с помощью стрелки слева от метки колонки
 - Возможность *ограничивать* количество карточек для колонок и swimlane
@@ -598,7 +598,7 @@ description: Ознакомьтесь с новыми возможностями
 - Возможность *выбирать несколько карточек* в одной колонке с помощью привычного сочетания **Shift** + **клик**
 - Возможность использовать [определения TypeScript](guides/typescript_support.md) Kanban
 
-### Новый АПИ
+### Новый API
 
 - Новые **события** для перемещения колонок и строк: 
     [`move-column`](api/events/js_kanban_movecolumn_event.md)

@@ -92,7 +92,7 @@ columnShape?: {
     ~~~
     :::
 
-- `fixedHeaders` - （可选）在垂直滚动时固定列头（默认 *true*）。必须在看板本身启用滚动（限制高度）
+- `fixedHeaders` - （可选）在垂直滚动时固定列头（默认 *true*）。必须在 Kanban 本身启用滚动（限制高度）
 - `css` - （可选）一个函数，根据条件返回应用于列的 CSS 类名
 - `headerTemplate` - （可选）展开状态下列头的 HTML 模板。该函数接收一个 `props` 对象，包含以下属性：
     - `column` - （对象）列数据（结构参见 [`columns`](api/config/js_kanban_columns_config.md)）
@@ -220,13 +220,13 @@ new kanban.Kanban("#root", {
 ~~~
 
 **更新日志：**
-- ***css*** 参数在 v1.4 版本新增
-- ***menu.items[0].label*** 参数在 v1.4 版本被废弃，替换为 ***menu.items[0].text***
-- ***menu.items[0].items*** 参数在 v1.4 版本被废弃，替换为 ***menu.items[0].data***
-- ***fixedHeaders*** 参数在 v1.5 版本新增
-- ***headerTemplate*** 和 ***collapsedTemplate*** 参数在 v1.6 版本新增
-- ***menu.items[0].label*** 和 ***menu.items[0].items*** 参数在 v1.7 版本移除
-- ***menu.items*** 函数更新，v1.7 版本中 **store** 参数替换为 **readonly**
+- ***css*** 参数在 v1.4新增
+- ***menu.items[0].label*** 参数在 v1.4 中弃用，替换为 ***menu.items[0].text***
+- ***menu.items[0].items*** 参数在 v1.4 中弃用，替换为 ***menu.items[0].data***
+- ***fixedHeaders*** 参数在 v1.5新增
+- ***headerTemplate*** 和 ***collapsedTemplate*** 参数在 v1.6新增
+- ***menu.items[0].label*** 和 ***menu.items[0].items*** 参数在 v1.7移除
+- ***menu.items*** 函数更新，v1.7 中 **store** 参数替换为 **readonly**
 
 **相关文章：** [配置](guides/configuration.md)
 

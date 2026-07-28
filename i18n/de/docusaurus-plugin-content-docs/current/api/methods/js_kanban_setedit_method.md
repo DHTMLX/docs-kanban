@@ -38,4 +38,4 @@ const board = new kanban.Kanban("#root", {
 board.setEdit({ cardId: 1 });
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.2 hinzugefügt
+**Changelog:** Die Methode wurde in v1.2 hinzugefügt

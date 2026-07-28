@@ -48,4 +48,4 @@ board.api.on("add-column", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll**: Die Parameter **id**, **before** und **column** wurden in Version v1.1 hinzugefügt
+**Changelog:** Die Parameter **id**, **before** und **column** wurden in v1.1 hinzugefügt

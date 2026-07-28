@@ -20,7 +20,7 @@ description: Ознакомьтесь с API REST-метода getColumns для
 getColumns(): promise;
 ~~~
 
-### Возвращает
+### Возвращаемое значение
 
 Метод **getColumns()** отправляет запрос на сервер методом **GET** и возвращает **promise** с данными колонок
 
@@ -42,4 +42,4 @@ Promise.all([
 });
 ~~~
 
-**Связанные статьи:** [Работа с сервером](guides/working_with_server.md)
+**Полезные статьи:** [Работа с сервером](guides/working_with_server.md)

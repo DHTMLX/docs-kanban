@@ -36,13 +36,13 @@ description: 阅读 DHTMLX Kanban 的 update-column 事件 API。了解如何处
 - `skipProvider` - （可选）启用/禁用阻止请求发送到服务器
 
 :::info
-处理内部事件时，您可以使用[**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+处理内部事件时，您可以使用[**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -53,6 +53,6 @@ board.api.on("update-column", (obj) => {
 });
 ~~~
 
-**更新日志**：
-- **id** 和 **column** 参数在 v1.1 版本中添加
-- **replace** 参数在 v1.3 版本中添加
+**更新日志：**
+- **id** 和 **column** 参数在 v1.1 中新增
+- **replace** 参数在 v1.3 中新增

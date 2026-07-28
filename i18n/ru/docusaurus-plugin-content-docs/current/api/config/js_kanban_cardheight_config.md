@@ -34,8 +34,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**История изменений:** Свойство добавлено в версии v1.2
+**Журнал изменений:** Свойство добавлено в v1.2
 
-**Связанные статьи:** [Конфигурация](guides/configuration.md#cards)
+**Полезные статьи:** [Конфигурация](guides/configuration.md#cards)
 
 **Связанный пример:** [Kanban. Ленивый рендеринг и прокрутка колонок](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

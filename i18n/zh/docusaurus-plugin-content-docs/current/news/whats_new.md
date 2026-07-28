@@ -22,7 +22,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 - 更新评论或投票时未保存数据丢失
 - 视口右侧附近元素的菜单位置不正确
 - 触摸设备拖拽时拖拽节点尺寸过大
-- 工具栏：2 个缺失的本地化提示标签
+- Toolbar：2 个缺失的本地化提示标签
 - Uploader `config` 参数无效
 
 ## 版本 1.7.1
@@ -43,7 +43,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 ### Salesforce 集成
 
-从 v1.7 开始，您可以在 Salesforce 环境中使用 JavaScript Kanban。更多信息请参考：[**与 Salesforce 集成**](guides/integration_with_salesforce.md)。
+从 v1.7 起，您可以在 Salesforce 环境中使用 JavaScript Kanban。更多信息请参考：[**与 Salesforce 集成**](guides/integration_with_salesforce.md)。
 
 您还可以参考我们的 [**GitHub 示例**](https://github.com/DHTMLX/salesforce-lwc-demo) 或运行 [**在线演示**](https://dhtmlx-dev-ed.develop.lightning.force.com/)（*登录名*：***user***，*密码*：***demo***）。
 
@@ -120,7 +120,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 - 限制错误地应用于整个列
 - 关闭模态编辑器后移动卡片时报错
 - 删除确认框显示在模态编辑器下方
-- 工具栏 "更多" 图标在窗口慢速调整大小时出现又消失
+- Toolbar "更多" 图标在窗口慢速调整大小时出现又消失
 - `delete-card` 事件总是关闭编辑器
 - 如果优先级设置为未提供选项之外的 ID，则无法打开编辑器
 
@@ -144,7 +144,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 ### 修复
 
-- 窄屏下工具栏 "更多" 图标未对齐
+- 窄屏下 Toolbar "更多" 图标未对齐
 - `RestDataProvider` 忽略通过 `setHeaders()` 设置的 header
 - `RestDataProvider.getIDResolver` 不是函数错误
 
@@ -158,7 +158,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 - 可通过 [`cardShape.users.maxCount`](api/config/js_kanban_cardshape_config.md) 属性设置卡片上显示的指派用户数量（参见 [**示例**](https://snippet.dhtmlx.com/w205dvzg?tag=kanban)）
 - 可通过 [`columnShape`](api/config/js_kanban_columnshape_config.md) 属性自定义列标题内容（参见 [**示例**](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban)）
-- 可通过工具栏 **搜索** 控件的 [`items.resultTemplate`](api/config/toolbar_items_config.md) 属性自定义搜索结果的视图和内容（参见 [**示例**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)）
+- 可通过 Toolbar **搜索** 控件的 [`items.resultTemplate`](api/config/toolbar_items_config.md) 属性自定义搜索结果的视图和内容（参见 [**示例**](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)）
 - 可通过 [`editor.placement`](api/config/js_kanban_editor_config.md) 属性将编辑器显示为模态窗口（参见 [**示例**](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)）
 - 可通过 [`cardShape.votes.clickable`](api/config/js_kanban_cardshape_config.md) 属性为卡片启用投票（在卡片上使用投票图标，参见 [**示例**](https://snippet.dhtmlx.com/en76xvi4?tag=kanban)）
 
@@ -170,7 +170,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
     - [`columnShape`](api/config/js_kanban_columnshape_config.md) 属性新增 ***headerTemplate*** 和 ***collapsedTemplate*** 参数
     - [`editor`](api/config/js_kanban_editor_config.md) 属性新增 ***placement*** 参数
     - [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性新增 ***modalSection*** 参数
-    - 工具栏 **搜索** 控件的 [`items`](api/config/toolbar_items_config.md) 属性新增 ***resultTemplate*** 参数
+    - Toolbar **搜索** 控件的 [`items`](api/config/toolbar_items_config.md) 属性新增 ***resultTemplate*** 参数
 
 - #### 事件
 
@@ -181,10 +181,10 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
     - [`setConfig()`](api/methods/js_kanban_setconfig_method.md) 方法功能更新如下：
 
         - 该方法不会更改历史记录（您无法更改历史记录）
-        - 该方法不会销毁 Kanban 数据存储。无需重新创建事件监听器或重新绑定工具栏
+        - 该方法不会销毁 Kanban 数据存储。无需重新创建事件监听器或重新绑定 Toolbar
 
-    - [`setLocale()`](api/methods/js_kanban_setlocale_method.md) 方法不会销毁 Kanban 数据存储。无需重新创建事件监听器或重新绑定工具栏
-    - 工具栏 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 方法的 `api` 参数已弃用
+    - [`setLocale()`](api/methods/js_kanban_setlocale_method.md) 方法不会销毁 Kanban 数据存储。无需重新创建事件监听器或重新绑定 Toolbar
+    - Toolbar [`setLocale()`](api/methods/toolbar_setlocale_method.md) 方法的 `api` 参数已弃用
 
 ### 修复
 
@@ -221,7 +221,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 ### 修复
 
-- *Dark willow* 皮肤下 Kanban 的 CSS 变量在工具栏和门户中丢失
+- *Dark willow* 皮肤下 Kanban 的 CSS 变量在 Toolbar 和门户中丢失
 - 禁用自动保存时，评论和投票的更改未应用到表单值
 - 自定义列子菜单在 **onClick** 函数参数中接收 `null`
 - 无法为编辑器中的日期选择器设置可编辑模式
@@ -261,7 +261,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 ### 更新
 
-- 工具栏 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 方法新增 ***api*** 参数
+- Toolbar [`setLocale()`](api/methods/toolbar_setlocale_method.md) 方法新增 ***api*** 参数
 
 ### 修复
 
@@ -442,7 +442,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 - 通过 API、右键菜单（三点图标）或 `Ctrl (Command)` + `D` 快捷键（支持多卡片）复制卡片
 - 导出 Kanban 数据为 JSON 文件
 - 管理 Kanban 历史记录：
-    - 通过工具栏上的 *撤销* 和 *重做* 控件
+    - 通过 Toolbar 上的 *撤销* 和 *重做* 控件
     - 通过快捷键：
         - `Ctrl (Command)`+`Z` - 撤销操作
         - `Ctrl (Command)`+`Y` 或 `Ctrl (Command)`+`Shift`+`Z` - 重做操作
@@ -488,7 +488,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 - #### 属性
 
-    - 工具栏 [`items`](api/config/toolbar_items_config.md) 属性新增 ***"undo"*** 和 ***"redo"*** 参数（控件）
+    - Toolbar [`items`](api/config/toolbar_items_config.md) 属性新增 ***"undo"*** 和 ***"redo"*** 参数（控件）
     - [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性新增 ***dateRange*** 类型
 
 ## 版本 1.2.2
@@ -497,7 +497,7 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
 
 ### 修复
 
-- 菜单和工具栏中部分图标重复
+- 菜单和 Toolbar 中部分图标重复
 
 ## 版本 1.2.1
 
@@ -550,11 +550,11 @@ description: 您可以在 DHTMLX JavaScript UI 库的文档中了解 DHTMLX Kanb
     - [`api.getState()`](api/internal/js_kanban_getstate_method.md) 方法已更新
     - [`api.getStores()`](api/internal/js_kanban_getstores_method.md) 方法已更新
     - Kanban 的 [`setLocale()`](api/methods/js_kanban_setlocale_method.md) 方法已更新
-    - 工具栏的 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 方法已更新
+    - Toolbar 的 [`setLocale()`](api/methods/toolbar_setlocale_method.md) 方法已更新
 
 - #### 属性
 
-    - 工具栏 [`items`](api/config/toolbar_items_config.md) 属性已更新
+    - Toolbar [`items`](api/config/toolbar_items_config.md) 属性已更新
     - [`cardShape`](api/config/js_kanban_cardshape_config.md) 属性的 ***start_date***、***end_date***、***menu*** 和 ***users*** 参数已更新
     - [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性的 ***multiselect*** 类型已更新
 

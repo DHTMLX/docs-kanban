@@ -27,7 +27,7 @@ moveRow({
 ### 示例
 
 ~~~jsx {8-11}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
@@ -40,4 +40,4 @@ board.moveRow({
 });
 ~~~
 
-**更新日志：** 该方法在 v1.1 版本中添加
+**更新日志：** 该方法在 v1.1 中新增

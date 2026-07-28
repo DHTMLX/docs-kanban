@@ -48,4 +48,4 @@ board.api.on("move-card", ({ id, columnId }) => {
 }, {tag: "move"});
 ~~~
 
-**변경 로그**: **config.tag** 및 **config.intercept** 매개변수는 v1.7에 추가되었습니다.
+**변경 로그:** **config.tag** 및 **config.intercept** 매개변수는 v1.7에서 추가되었습니다.

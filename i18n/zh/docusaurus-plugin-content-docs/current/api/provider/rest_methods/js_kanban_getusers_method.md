@@ -55,6 +55,6 @@ Promise.all([
 });
 ~~~
 
-**更新日志：** 该方法在 v1.3 版本中添加
+**更新日志：** 该方法在 v1.3 中新增
 
-**相关文档：** [与服务器交互](guides/working_with_server.md)
+**相关文章：** [与服务器交互](guides/working_with_server.md)

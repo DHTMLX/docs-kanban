@@ -66,7 +66,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Möglichkeit, ein Kontextmenü anzuzeigen, wurde in Version v1.4 hinzugefügt.
+**Changelog:** Die Möglichkeit, ein Kontextmenü anzuzeigen, wurde in v1.4 hinzugefügt.
 
 **Verwandte Artikel:** [Anpassung](guides/customization.md#custom-cards)
 

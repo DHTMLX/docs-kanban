@@ -43,4 +43,4 @@ board.addLink({
 });
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.5 hinzugefügt
+**Changelog:** Die Methode wurde in v1.5 hinzugefügt

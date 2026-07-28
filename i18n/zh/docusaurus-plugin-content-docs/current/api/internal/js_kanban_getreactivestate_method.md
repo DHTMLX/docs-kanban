@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 getReactiveState 方法 API。了解如何
 
 ### 描述
 
-@short: 获取包含看板响应式属性的对象
+@short: 获取包含 Kanban 响应式属性的对象
 
 ### 用法
 
@@ -71,13 +71,13 @@ api.getReactiveState(): object;
 ### 示例
 
 ~~~jsx {7-37}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
     rows
 });
-// 获取看板的响应式状态
+// 获取 Kanban 的响应式状态
 const state = board.api.getReactiveState();
 
 // 订阅 columns 变化并输出 columns 数组
@@ -101,4 +101,4 @@ state.selected.subscribe((data) => {
 });
 ~~~
 
-**更新日志：** 此方法在 v1.7 版本中进行了更新
+**更新日志：** 此方法在 v1.7 中更新

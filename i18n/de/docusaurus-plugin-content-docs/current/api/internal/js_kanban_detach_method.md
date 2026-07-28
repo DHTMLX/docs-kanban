@@ -36,4 +36,4 @@ board.api.on("move-card", ({ id, columnId }) => {
 board.api.detach("move");
 ~~~
 
-**Änderungsprotokoll**: Die interne Methode wurde in Version v1.7 hinzugefügt
+**Changelog:** Die interne Methode wurde in v1.7 hinzugefügt

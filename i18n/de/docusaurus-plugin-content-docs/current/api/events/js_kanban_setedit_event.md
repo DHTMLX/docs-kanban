@@ -45,8 +45,8 @@ board.api.intercept("set-edit", (ev) => {
 });
 ~~~
 
-**Änderungsprotokoll:**
-    - Das Event wurde in Version 1.2 hinzugefügt
-    - Der Parameter ***eventSource*** wurde in Version 1.6 hinzugefügt
+**Changelog:**
+    - Das Event wurde in v1.2 hinzugefügt
+    - Der Parameter ***eventSource*** wurde in v1.6 hinzugefügt
 
 **Verwandte Beispiele:** [Kanban. Öffnen des Editors durch Doppelklick auf die Aufgabe](https://snippet.dhtmlx.com/zh4d9pdb?tag=kanban)

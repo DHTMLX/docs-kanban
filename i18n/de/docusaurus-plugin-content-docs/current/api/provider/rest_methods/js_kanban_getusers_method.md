@@ -20,7 +20,7 @@ Die **getUsers()** Methode ist Teil des **RestDataProvider**-Dienstes, der für 
 getUsers(): promise;
 ~~~
 
-### Rückgabe
+### Rückgabewert
 
 Die **getUsers()** Methode sendet eine Anfrage an den Server mit der **GET**-Methode und gibt ein **Promise** mit den Benutzerdaten zurück.
 
@@ -55,6 +55,6 @@ Promise.all([
 });
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.3 hinzugefügt
+**Changelog:** Die Methode wurde in v1.3 hinzugefügt
 
 **Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

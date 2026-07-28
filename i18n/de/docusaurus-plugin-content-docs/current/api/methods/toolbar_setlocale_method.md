@@ -38,6 +38,6 @@ board.setLocale(de);
 toolbar.setLocale(de);
 ~~~
 
-**Änderungsprotokoll:** Der Parameter **api** wurde in Version 1.6 veraltet
+**Changelog:** Der Parameter **api** wurde in v1.6 veraltet
 
 **Verwandte Artikel:** [Lokalisierung](guides/localization.md)

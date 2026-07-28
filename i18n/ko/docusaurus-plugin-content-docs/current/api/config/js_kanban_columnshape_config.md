@@ -118,7 +118,7 @@ columnShape?: {
     - `columnState` - (object) 컬럼의 현재 상태. 형태는 위의 [`headerTemplate`](#parameters) 매개변수의 `columnState`와 동일합니다
 - `confirmDeletion` - (선택 사항) 컬럼 삭제 확인 대화상자 표시 여부
 
-### 기본 구성
+### 기본 설정
 
 ~~~jsx {}
 const getDefaultColumnMenuItems = ({ column, columnIndex, columns, readonly }) => [
@@ -219,18 +219,18 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 기록:**
-- ***css*** 매개변수가 v1.4에 추가됨
+**변경 로그:**
+- ***css*** 매개변수가 v1.4에서 추가됨
 - ***menu.items[0].label*** 매개변수가 v1.4에 ***menu.items[0].text*** 매개변수로 대체됨
 - ***menu.items[0].items*** 매개변수가 v1.4에 ***menu.items[0].data*** 매개변수로 대체됨
-- ***fixedHeaders*** 매개변수가 v1.5에 추가됨
-- ***headerTemplate*** 및 ***collapsedTemplate*** 매개변수가 v1.6에 추가됨
-- ***menu.items[0].label*** 및 ***menu.items[0].items*** 매개변수가 v1.7에 제거됨
+- ***fixedHeaders*** 매개변수가 v1.5에서 추가됨
+- ***headerTemplate*** 및 ***collapsedTemplate*** 매개변수가 v1.6에서 추가됨
+- ***menu.items[0].label*** 및 ***menu.items[0].items*** 매개변수가 v1.7에서 제거됨
 - ***menu.items*** 함수가 업데이트되어 v1.7에서 **store** 매개변수가 **readonly**로 대체됨
 
 **관련 문서:** [구성](guides/configuration.md)
 
-**관련 샘플:**
+**관련 예제:**
 - [Kanban. 사용자 정의 메뉴를 통한 컬럼 색상 변경](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
 - [Kanban. 고정 헤더, 지연 렌더링 및 컬럼 스크롤](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)
 - [Kanban. 컬럼 헤더 템플릿](https://snippet.dhtmlx.com/gq2saz9c?tag=kanban)

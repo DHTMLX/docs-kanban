@@ -27,13 +27,13 @@ description: 阅读 DHTMLX Kanban 的 delete-column 事件 API。了解如何处
 - `skipProvider` - （可选）启用或禁用阻止请求发送到服务器
 
 :::info
-处理内部事件时，您可以使用 [**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+处理内部事件时，您可以使用 [**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards

@@ -44,6 +44,6 @@ Promise.all([
 });
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.5 hinzugefügt
+**Changelog:** Die Methode wurde in v1.5 hinzugefügt
 
 **Verwandte Artikel:** [Arbeiten mit dem Server](guides/working_with_server.md)

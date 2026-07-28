@@ -39,4 +39,4 @@ restProvider.setHeaders({
 
 Чтобы задать заголовки только для конкретного запроса, а не для каждого, передайте их в качестве четвёртого аргумента в [`send()`](api/provider/rest_methods/js_kanban_send_method.md).
 
-**Связанные статьи:** [Работа с сервером: Многопользовательский бэкенд](guides/working_with_server.md/#multiuser-backend)
+**Полезные статьи:** [Работа с сервером: Многопользовательский бэкенд](guides/working_with_server.md/#multiuser-backend)

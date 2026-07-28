@@ -34,4 +34,4 @@ board.api.on("undo", () => {
 });
 ~~~
 
-**Änderungsprotokoll**: Das Event wurde in Version v1.7 hinzugefügt
+**Changelog:** Das Event wurde in v1.7 hinzugefügt

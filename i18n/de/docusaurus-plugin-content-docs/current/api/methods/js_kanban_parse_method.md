@@ -63,6 +63,6 @@ board.parse({
 // board.setConfig({ columns, cards, rows, links });
 ~~~
 
-**Änderungsprotokoll:** Seit Version v1.1 müssen Sie die Startdaten nicht mehr im Konstruktor zurücksetzen, bevor Sie neue Daten parsen.
+**Changelog:** Ab v1.1 müssen Sie die Startdaten nicht mehr im Konstruktor zurücksetzen, bevor Sie neue Daten parsen.
 
 **Verwandte Artikel:** [Arbeiten mit Daten](guides/working_with_data.md#load-data-from-a-local-source)

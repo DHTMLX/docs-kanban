@@ -30,4 +30,4 @@ description: 阅读 DHTMLX Kanban 的 DELETE /cards REST 路由 API。了解如�
 
 ---
 
-**相关文档**: [与服务器交互](guides/working_with_server.md)
+**相关文章：** [与服务器交互](guides/working_with_server.md)

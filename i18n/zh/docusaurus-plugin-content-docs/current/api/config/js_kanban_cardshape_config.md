@@ -324,17 +324,17 @@ new kanban.Kanban("#root", {
 ~~~
 
 **更新日志：**
-- v1.4 版本新增了 ***comments***、***css*** 和 ***votes*** 参数
-- v1.4 版本废弃了 ***menu.items[0].label*** 参数，改用 ***menu.items[0].text*** 参数
-- v1.4 版本废弃了 ***menu.items[0].items*** 参数，改用 ***menu.items[0].data*** 参数
-- v1.6 版本新增了 ***users.maxCount*** 和 ***votes.clickable*** 参数
-- v1.7 版本移除了 ***menu.items[0].label*** 和 ***menu.items[0].items*** 参数
-- v1.7 版本更新了 ***menu.items*** 函数，**store** 参数被替换为 **readonly**
+- v1.4新增了 ***comments***、***css*** 和 ***votes*** 参数
+- v1.4 中弃用了 ***menu.items[0].label*** 参数，改用 ***menu.items[0].text*** 参数
+- v1.4 中弃用了 ***menu.items[0].items*** 参数，改用 ***menu.items[0].data*** 参数
+- v1.6新增了 ***users.maxCount*** 和 ***votes.clickable*** 参数
+- v1.7移除了 ***menu.items[0].label*** 和 ***menu.items[0].items*** 参数
+- v1.7更新了 ***menu.items*** 函数，**store** 参数被替换为 **readonly**
 
-**相关文档：** [配置](guides/configuration.md#cards)
+**相关文章：** [配置](guides/configuration.md#cards)
 
 **相关示例：**
-- [看板. 泳道、评论、投票](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
-- [看板. 突出显示过期和激活任务](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
-- [看板. 卡片样式](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
-- [看板. 每个任务无限制用户分配](https://snippet.dhtmlx.com/w205dvzg?tag=kanban)
+- [Kanban. 泳道、评论、投票](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)
+- [Kanban. 突出显示过期和激活任务](https://snippet.dhtmlx.com/7fvc3rr1?tag=kanban)
+- [Kanban. 卡片样式](https://snippet.dhtmlx.com/qu6rpktk?tag=kanban)
+- [Kanban. 每个任务无限制用户分配](https://snippet.dhtmlx.com/w205dvzg?tag=kanban)

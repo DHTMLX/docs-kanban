@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 json 方法 API。了解如何导出看板
 
 ### 描述
 
-@short: 将看板数据导出为 JSON 文件
+@short: 将 Kanban 数据导出为 JSON 文件
 
 ### 用法
 
@@ -17,7 +17,7 @@ export.json(): void;
 ~~~
 
 :::info
-该方法将看板的数据导出为具有以下结构的 JSON 文件：
+该方法将 Kanban 的数据导出为具有以下结构的 JSON 文件：
 ~~~jsx {}
 {
     "cards": [],
@@ -30,13 +30,13 @@ export.json(): void;
 ### 示例
 
 ~~~jsx {7}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 导出看板数据为 JSON
+// 导出 Kanban 数据为 JSON
 board.export.json(); // => { "cards": [...], "columns": [...], "rows": [] }
 ~~~
 
-**更新日志：** 该方法在 v1.3 版本中添加
+**更新日志：** 该方法在 v1.3 中新增

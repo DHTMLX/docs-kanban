@@ -124,6 +124,6 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-## Wie geht es weiter?
+## Wie geht es weiter
 
 Das war's! Nur drei einfache Schritte und Sie verfügen über ein praktisches Tool zur Visualisierung und Verwaltung Ihres Workflows. Jetzt können Sie mit Ihren Aufgaben arbeiten oder die Möglichkeiten von JavaScript Kanban weiter erkunden.

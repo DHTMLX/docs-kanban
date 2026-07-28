@@ -11,7 +11,7 @@ description: 阅读 DHTMLX Kanban 的 history 配置 API。了解如何启用或
 @short: 可选。启用或禁用变更历史的管理
 
 :::info
-通过使用 `history` 属性，您可以启用或禁用 Kanban 的历史管理。如果将其设置为 **false**，则无法通过 API 和工具栏控件管理历史。
+通过使用 `history` 属性，您可以启用或禁用 Kanban 的历史管理。如果将其设置为 **false**，则无法通过 API 和 Toolbar 控件管理历史。
 :::
 
 :::tip
@@ -41,6 +41,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** 此属性在 v1.3 版本中新增
+**更新日志：** 此属性在 v1.3 中新增
 
-**相关文档：** [`undo()`](api/methods/js_kanban_undo_method.md) 和 [`redo()`](api/methods/js_kanban_redo_method.md)
+**相关文章：** [`undo()`](api/methods/js_kanban_undo_method.md) 和 [`redo()`](api/methods/js_kanban_redo_method.md)

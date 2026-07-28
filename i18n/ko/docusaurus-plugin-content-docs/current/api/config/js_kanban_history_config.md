@@ -11,7 +11,7 @@ description: DHTMLX Kanban의 history 구성 API를 읽어보세요. 변경 이�
 @short: 선택 사항입니다. 변경 이력 관리를 활성화/비활성화합니다.
 
 :::info
-`history` 속성을 사용하여 Kanban의 변경 이력 관리를 활성화하거나 비활성화할 수 있습니다. 이를 **false**로 설정하면 API 및 툴바 컨트롤을 통해 이력 관리를 할 수 없습니다.
+`history` 속성을 사용하여 Kanban의 변경 이력 관리를 활성화하거나 비활성화할 수 있습니다. 이를 **false**로 설정하면 API 및 Toolbar 컨트롤을 통해 이력 관리를 할 수 없습니다.
 :::
 
 :::tip
@@ -24,7 +24,7 @@ description: DHTMLX Kanban의 history 구성 API를 읽어보세요. 변경 이�
 history?: boolean; 
 ~~~
 
-### 기본 구성
+### 기본 설정
 
 ~~~jsx {}
 history: true
@@ -41,6 +41,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 로그:** 이 속성은 v1.3에 추가되었습니다.
+**변경 로그:** 이 속성은 v1.3에서 추가되었습니다.
 
 **관련 문서:** [`undo()`](api/methods/js_kanban_undo_method.md) 및 [`redo()`](api/methods/js_kanban_redo_method.md)

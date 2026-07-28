@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 addCard 方法 API。了解如何向看板
 
 ### 描述
 
-@short: 向看板中添加一个新卡片
+@short: 向 Kanban 中添加一个新卡片
 
 ### 用法
 
@@ -39,7 +39,7 @@ addCard({
 ### 示例
 
 ~~~jsx {7-12}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards

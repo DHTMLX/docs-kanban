@@ -71,7 +71,7 @@ api.getState(): object;
 ### 示例
 
 ~~~jsx {7-12}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards,
@@ -86,4 +86,4 @@ console.log(state.cardShape); // 输出卡片配置
 //...
 ~~~
 
-**更新日志：** 该方法在 v1.7 版本中进行了更新
+**更新日志：** 该方法在 v1.7 中更新

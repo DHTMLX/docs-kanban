@@ -35,4 +35,4 @@ new kanban.Toolbar("#toolbar", {
 
 **Verwandte Artikel:** [Konfiguration](guides/configuration.md#toolbar)
 
-**Verwandte Beispiel:** [Kanban. Benutzerdefinierte Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Benutzerdefinierte Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

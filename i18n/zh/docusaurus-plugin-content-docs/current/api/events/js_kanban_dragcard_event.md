@@ -33,13 +33,13 @@ description: 阅读 DHTMLX Kanban 的 drag-card 事件 API。了解如何处理�
 - `source` - （可选）被移动卡片 ID 的数组
 
 :::info
-处理内部事件时，您可以使用[**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+处理内部事件时，您可以使用[**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -50,6 +50,6 @@ board.api.on("drag-card", (obj) => {
 });
 ~~~
 
-**更新日志：** 该事件自 v1.4 版本起添加
+**更新日志：** 该事件在 v1.4 中新增
 
-**相关示例：** [看板。禁用特定列的拖放功能](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)
+**相关示例：** [Kanban。禁用特定列的拖放功能](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**Журнал изменений:** Параметр `$meta` был добавлен в версии v1.3
+**Журнал изменений:** Параметр `$meta` был добавлен в v1.3
 
-**Связанный материал:** [`history`](api/config/js_kanban_history_config.md)
+**Полезная статья:** [`history`](api/config/js_kanban_history_config.md)

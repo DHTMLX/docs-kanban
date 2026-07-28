@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 deleteColumn 方法 API。了解如何通�
 
 ### 描述
 
-@short: 从看板的数据存储中移除指定的列
+@short: 从 Kanban 的数据存储中移除指定的列
 
 ### 用法
 
@@ -23,7 +23,7 @@ deleteColumn({ id: string | number }): void;
 ### 示例
 
 ~~~jsx {7}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards

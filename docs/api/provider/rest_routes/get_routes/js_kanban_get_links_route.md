@@ -45,6 +45,6 @@ The HTTP status code shows whether the request succeeds (response.status == 200)
 
 ---
 
-**Related articles**:
+**Related articles:**
 - [Working with server](guides/working_with_server.md)
 - [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)

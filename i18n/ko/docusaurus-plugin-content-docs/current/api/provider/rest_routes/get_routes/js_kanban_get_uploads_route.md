@@ -33,4 +33,4 @@ HTTP 상태 코드는 요청 성공 여부를 나타냅니다 (response.status =
 
 ---
 
-**관련 문서**: [서버 작업하기](guides/working_with_server.md)
+**관련 문서:** [서버 작업하기](guides/working_with_server.md)

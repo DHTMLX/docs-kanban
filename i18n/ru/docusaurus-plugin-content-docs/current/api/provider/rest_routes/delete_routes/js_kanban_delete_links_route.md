@@ -30,7 +30,7 @@ description: Ознакомьтесь с REST-маршрутом DELETE /links �
 
 ---
 
-**Связанные статьи**:
+**Полезные статьи:**
 - [Работа с сервером](guides/working_with_server.md)
 - [getLinks()](api/provider/rest_methods/js_kanban_getlinks_method.md)
 - [links](api/config/js_kanban_links_config.md)

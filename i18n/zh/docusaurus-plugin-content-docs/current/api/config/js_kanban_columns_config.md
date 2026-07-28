@@ -113,13 +113,13 @@ new kanban.Kanban("#root", {
 - 您的选择器包含足够的上下文（例如父元素及内部 DHTMLX 类）
 - 如果属性被内联样式覆盖，您可以使用 `!important`
 
-**更新日志：** **css** 和 **overlay** 参数在 v1.4 中添加
+**更新日志：** **css** 和 **overlay** 参数在 v1.4 中新增
 
-**相关文档：**
+**相关文章：**
 - [数据操作](guides/working_with_data.md)
 - [updateColumn()](api/methods/js_kanban_updatecolumn_method.md)
 
 **相关示例：**
-- [看板。列和泳道的限制](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban)
-- [看板。通过自定义菜单更改列颜色](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
-- [看板。禁用拖放到特定列](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)
+- [Kanban。列和泳道的限制](https://snippet.dhtmlx.com/2blo6hx8?tag=kanban)
+- [Kanban。通过自定义菜单更改列颜色](https://snippet.dhtmlx.com/fnlvd2g5?tag=kanban)
+- [Kanban。禁用拖放到特定列](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

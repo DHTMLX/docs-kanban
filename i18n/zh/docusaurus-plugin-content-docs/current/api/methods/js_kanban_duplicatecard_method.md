@@ -29,7 +29,7 @@ duplicateCard({
 ### 示例
 
 ~~~jsx {7-10}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -42,4 +42,4 @@ board.duplicateCard({
 });
 ~~~
 
-**更新日志：** `select` 参数在 v1.5.10 版本中新增
+**更新日志：** `select` 参数在 v1.5.10 中新增

@@ -44,4 +44,4 @@ board.api.on("add-vote", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Das Event wurde in v1.4 hinzugefügt
+**Changelog:** Das Event wurde in v1.4 hinzugefügt

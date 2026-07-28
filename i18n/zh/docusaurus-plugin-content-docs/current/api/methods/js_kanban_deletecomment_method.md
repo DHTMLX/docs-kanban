@@ -27,7 +27,7 @@ deleteComment({
 ### 示例
 
 ~~~jsx {7-10}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -39,4 +39,4 @@ board.deleteComment({
 });
 ~~~
 
-**更新日志：** 该方法在 v1.4 版本中新增
+**更新日志：** 该方法在 v1.4 中新增

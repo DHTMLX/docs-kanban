@@ -14,7 +14,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Parameters**:
+**Parameters:**
 
 - an HTML container (the ID of the HTML container)
 - an object of the configuration parameters ([check here](#kanban-properties))
@@ -27,7 +27,7 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**Parameters**:
+**Parameters:**
 
 - an HTML container (the ID of the HTML container)
 - an object of the configuration parameters ([check here](#toolbar-properties))

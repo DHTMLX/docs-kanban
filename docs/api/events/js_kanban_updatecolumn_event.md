@@ -53,6 +53,6 @@ board.api.on("update-column", (obj) => {
 });
 ~~~
 
-**Change log**:
+**Change log:**
 - The **id** and **column** parameters were added in v1.1
 - The **replace** parameter was added in v1.3

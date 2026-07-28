@@ -32,7 +32,7 @@ getCardHeight?: (cardShape: object, card: object, cardWidth: number) => number;
 
 함수는 카드의 예상 높이(픽셀 단위)를 나타내는 숫자를 반환해야 합니다.
 
-### 기본 구성 {#default-config}
+### 기본 설정 {#default-config}
 
 기본적으로 위젯은 [`cardShape`](api/config/js_kanban_cardshape_config.md)에 선언된 표시 필드와 카드에 저장된 데이터를 기반으로 카드 높이를 추정하는 내장 함수를 사용합니다. 이 기본값은 내장 카드 레이아웃을 사용하는 보드에서 작동합니다.
 

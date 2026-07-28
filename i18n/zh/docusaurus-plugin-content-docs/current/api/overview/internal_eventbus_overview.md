@@ -1,10 +1,10 @@
 ---
-sidebar_label: 事件总线方法
-title: 事件总线方法概览
-description: 浏览 DHTMLX Kanban 的事件总线方法概览。查找用于触发、拦截和处理 board 事件的内部方法。
+sidebar_label: Event Bus 方法
+title: Event Bus 方法概览
+description: 浏览 DHTMLX Kanban 的 Event Bus 方法概览。查找用于触发、拦截和处理 board 事件的内部方法。
 ---
 
-# 事件总线方法
+# Event Bus 方法
 
 | 名称                                                     | 描述                                                         |
 | -------------------------------------------------------- | ------------------------------------------------------------ |

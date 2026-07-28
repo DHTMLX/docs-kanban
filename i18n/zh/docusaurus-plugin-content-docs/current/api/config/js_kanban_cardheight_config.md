@@ -34,8 +34,8 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** 该属性在 v1.2 版本中添加
+**更新日志：** 该属性在 v1.2 中新增
 
-**相关文档：** [配置](guides/configuration.md#cards)
+**相关文章：** [配置](guides/configuration.md#cards)
 
 **相关示例：** [Kanban. Lazy rendering and column scroll](https://snippet.dhtmlx.com/xez9ghqq?tag=kanban)

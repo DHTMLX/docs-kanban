@@ -37,4 +37,4 @@ const cards_data = board.getColumnCards(1);
 console.log(cards_data);
 ~~~
 
-**변경 로그**: 이 메서드는 v1.7에 추가되었습니다.
+**변경 로그:** 이 메서드는 v1.7에서 추가되었습니다.

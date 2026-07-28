@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**更新日志：** `$meta` 参数自 v1.3 版本起添加
+**更新日志：** `$meta` 参数在 v1.3 中新增
 
 **相关文章：** [`history`](api/config/js_kanban_history_config.md)

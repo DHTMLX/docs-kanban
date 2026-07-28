@@ -20,7 +20,7 @@ description: На этой странице документации библи�
 | [Стилизация](guides/stylization.md)                     | Узнайте, как стилизовать Kanban                       |
 | [Локализация](guides/localization.md)                    | Узнайте, как локализовать Kanban ([Пример](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
-## Справочник по API
+## Справочник API
 
 В этом разделе вы найдете соответствующие справочники по API Kanban
 

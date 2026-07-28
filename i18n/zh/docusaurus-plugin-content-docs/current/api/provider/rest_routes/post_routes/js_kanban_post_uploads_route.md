@@ -56,4 +56,4 @@ HTTP 状态码表示请求是否成功（response.status == 200）或失败（re
 
 ---
 
-**相关文档**：[与服务器协作](guides/working_with_server.md)
+**相关文章：**[与服务器协作](guides/working_with_server.md)

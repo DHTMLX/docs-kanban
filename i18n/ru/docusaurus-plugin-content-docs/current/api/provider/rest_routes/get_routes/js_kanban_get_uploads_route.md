@@ -33,4 +33,4 @@ HTTP статус код указывает, успешен ли запрос (r
 
 ---
 
-**Связанные статьи**: [Working with server](guides/working_with_server.md)
+**Полезные статьи:** [Working with server](guides/working_with_server.md)

@@ -12,7 +12,7 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 <img
     src={editor}
-    alt="DHTMLX JavaScript Kanban 总览，包含工具栏、看板、列、泳道和卡片"
+    alt="DHTMLX JavaScript Kanban 总览，包含 Toolbar、看板、列、泳道和卡片"
     className="img_border"
 />
 
@@ -59,16 +59,16 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 ## 第二步：创建 Kanban
 
-现在您可以将 Kanban 添加到页面中了。首先，需要为 Kanban 及其工具栏创建 DIV 容器。请按照以下步骤操作：
+现在您可以将 Kanban 添加到页面中了。首先，需要为 Kanban 及其 Toolbar 创建 DIV 容器。请按照以下步骤操作：
 
 - 在 *index.html* 文件中指定两个 DIV 容器
-- 使用 **kanban.Kanban** 和 **kanban.Toolbar** 构造函数初始化 Kanban 及其工具栏
+- 使用 **kanban.Kanban** 和 **kanban.Toolbar** 构造函数初始化 Kanban 及其 Toolbar
 
 :::info
-工具栏是 Kanban 界面的可选部分。如果只需创建不带工具栏的 Kanban，可以只指定一个 DIV 容器，并通过 **kanban.Kanban** 构造函数初始化该组件。
+Toolbar 是 Kanban 界面的可选部分。如果只需创建不带 Toolbar 的 Kanban，可以只指定一个 DIV 容器，并通过 **kanban.Kanban** 构造函数初始化该组件。
 :::
 
-构造函数的参数为 Kanban 和工具栏所在的 HTML 容器的 ID 以及相应的配置对象。
+构造函数的参数为 Kanban 和 Toolbar 所在的 HTML 容器的 ID 以及相应的配置对象。
 
 ~~~html {9-10,13-15,17-19} title="index.html"
 <!DOCTYPE html>

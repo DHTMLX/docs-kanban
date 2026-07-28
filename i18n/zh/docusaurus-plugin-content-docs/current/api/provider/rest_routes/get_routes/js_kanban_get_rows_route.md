@@ -43,6 +43,6 @@ HTTP 状态码表示请求是否成功（response.status == 200）或失败（re
 
 ---
 
-**相关文档**：
+**相关文章：**
 - [与服务器交互](guides/working_with_server.md)
 - [getRows()](api/provider/rest_methods/js_kanban_getrows_method.md)

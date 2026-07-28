@@ -31,6 +31,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Eigenschaft wurde in Version v1.4 hinzugefügt
+**Changelog:** Die Eigenschaft wurde in v1.4 hinzugefügt
 
 **Verwandtes Beispiel:** [Kanban. Swimlanes, Kommentare, Stimmen](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

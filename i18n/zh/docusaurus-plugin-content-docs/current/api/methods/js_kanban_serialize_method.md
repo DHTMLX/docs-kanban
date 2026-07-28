@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 serialize 方法 API。了解如何将看�
 
 ### 描述
 
-@short: 将看板数据序列化为 JSON
+@short: 将 Kanban 数据序列化为 JSON
 
 ### 用法
 
@@ -18,7 +18,7 @@ serialize(): object;
 
 ### 返回值
 
-该方法返回看板数据的对象  
+该方法返回 Kanban 数据的对象  
 
 ~~~jsx {}
 {
@@ -32,11 +32,11 @@ serialize(): object;
 ### 示例
 
 ~~~jsx {7}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 获取看板数据对象
+// 获取 Kanban 数据对象
 board.serialize();
 ~~~

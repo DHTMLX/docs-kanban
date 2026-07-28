@@ -39,6 +39,6 @@ board.setLocale(kanban.locales["de"]);
 board.setLocale(); // oder board.setLocale(null);
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.2 aktualisiert
+**Changelog:** Die Methode wurde in v1.2 aktualisiert
 
 **Verwandte Artikel:** [Lokalisierung](guides/localization.md)

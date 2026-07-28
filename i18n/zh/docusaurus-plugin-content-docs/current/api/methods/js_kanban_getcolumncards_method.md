@@ -27,7 +27,7 @@ getColumnCards(id: string | number): array;
 ### 示例
 
 ~~~jsx {7}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -37,4 +37,4 @@ const cards_data = board.getColumnCards(1);
 console.log(cards_data);
 ~~~
 
-**更新日志**：该方法自 v1.7 版本起新增
+**更新日志：**该方法从 v1.7 起新增
