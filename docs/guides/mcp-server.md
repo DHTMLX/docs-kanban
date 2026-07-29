@@ -48,7 +48,7 @@ Prefer the terminal or a config file? Either path registers the same MCP endpoin
 https://docs.dhtmlx.com/mcp
 ~~~
 
-Below are setup instructions for commonly used tools.
+Setup steps for the most common tools follow below.
 
 ### Claude Code
 
