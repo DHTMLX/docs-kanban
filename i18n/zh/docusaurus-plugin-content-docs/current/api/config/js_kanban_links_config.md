@@ -60,10 +60,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**更新日志：** 该属性在 v1.7 中进行了更新：
+**更新日志：** 该属性在 v1.7 中更新：
     - **masterId** 参数被替换为 **source** 参数
     - **slaveId** 参数被替换为 **target** 参数
 
-**相关文档：** [数据操作](guides/working_with_data.md)
+**相关文章：** [数据操作](guides/working_with_data.md)
 
-**相关示例：** [看板任务之间的链接](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)
+**相关示例：** [Kanban 任务之间的链接](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)

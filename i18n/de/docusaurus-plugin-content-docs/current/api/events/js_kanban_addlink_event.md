@@ -47,4 +47,4 @@ board.api.on("add-link", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Das Event wurde in Version v1.4 hinzugefügt
+**Changelog:** Das Event wurde in v1.4 hinzugefügt

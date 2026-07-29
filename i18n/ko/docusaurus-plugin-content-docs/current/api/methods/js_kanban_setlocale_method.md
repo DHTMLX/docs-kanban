@@ -39,6 +39,6 @@ board.setLocale(kanban.locales["de"]);
 board.setLocale(); // 또는 board.setLocale(null);
 ~~~
 
-**변경 내역:** 이 메서드는 v1.2에서 업데이트되었습니다.
+**변경 로그:** 이 메서드는 v1.2에서 업데이트되었습니다.
 
 **관련 문서:** [Localization](guides/localization.md)

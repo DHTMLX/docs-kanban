@@ -54,4 +54,4 @@ HTTP статус код показывает, успешно ли выполн�
 
 ---
 
-**Связанные статьи**: [Working with server](guides/working_with_server.md)
+**Полезные статьи:** [Working with server](guides/working_with_server.md)

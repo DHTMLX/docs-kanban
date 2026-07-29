@@ -57,6 +57,6 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Der Parameter `placement` wurde in Version 1.6 hinzugefügt
+**Changelog:** Der Parameter `placement` wurde in v1.6 hinzugefügt
 
 **Verwandte Beispiele:** [Kanban. Öffnen des Editors in einem modalen Fenster](https://snippet.dhtmlx.com/vt6pe7qz?tag=kanban)

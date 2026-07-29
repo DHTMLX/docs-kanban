@@ -147,7 +147,7 @@
     "description": "Info 提示框的默认标签（:::info）"
   },
   "theme.admonition.note": {
-    "message": "注释",
+    "message": "备注",
     "description": "Note 提示框的默认标签（:::note）"
   },
   "theme.admonition.tip": {

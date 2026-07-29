@@ -50,4 +50,4 @@ board.api.on("set-sort", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Das Ereignis wurde in Version v1.2 hinzugefügt
+**Changelog:** Das Ereignis wurde in v1.2 hinzugefügt

@@ -147,9 +147,9 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**История изменений:** Параметры ***css***, ***comments*** и ***votes*** были добавлены в версии v1.4
+**Журнал изменений:** Параметры ***css***, ***comments*** и ***votes*** были добавлены в v1.4
 
-**Связанные статьи:**
+**Полезные статьи:**
 - [Работа с данными](guides/working_with_data.md)
 - [updateCard()](api/methods/js_kanban_updatecard_method.md)
 

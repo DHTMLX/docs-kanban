@@ -27,13 +27,13 @@ api.exec(
 ### 事件
 
 :::info
-完整的看板内部事件列表可在[**这里**](api/overview/main_overview.md/#kanban-events)查看
+完整的 Kanban 内部事件列表可在[**这里**](api/overview/main_overview.md/#kanban-events)查看
 :::
 
 ### 示例
 
 ~~~jsx {7,9-12}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards

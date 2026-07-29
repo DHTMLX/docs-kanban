@@ -27,13 +27,13 @@ description: 阅读 DHTMLX Kanban 的 set-search 事件 API。了解如何处理
 - `by` - （可选）用于搜索的卡片字段
 
 :::info
-如需处理内部事件，可以使用[**事件总线方法**](api/overview/main_overview.md/#event-bus-methods)
+如需处理内部事件，可以使用[**Event Bus 方法**](api/overview/main_overview.md/#event-bus-methods)
 :::
 
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards

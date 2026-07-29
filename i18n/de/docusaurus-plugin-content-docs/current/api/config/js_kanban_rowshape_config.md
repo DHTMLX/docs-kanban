@@ -176,12 +176,12 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:**
-- Der Parameter ***css*** wurde in Version 1.4 hinzugefügt
-- Der Parameter ***menu.items[0].label*** wurde in Version 1.4 durch ***menu.items[0].text*** ersetzt und als veraltet markiert
-- Der Parameter ***menu.items[0].items*** wurde in Version 1.4 durch ***menu.items[0].data*** ersetzt und als veraltet markiert
-- Die Parameter ***menu.items[0].label*** und ***menu.items[0].items*** wurden in Version 1.7 entfernt
-- Die Funktion ***menu.items*** wurde aktualisiert. Der **store**-Parameter wurde in Version 1.7 durch den **readonly**-Parameter ersetzt
+**Changelog:**
+- Der Parameter ***css*** wurde in v1.4 hinzugefügt
+- Der Parameter ***menu.items[0].label*** wurde in v1.4 durch ***menu.items[0].text*** ersetzt und als veraltet markiert
+- Der Parameter ***menu.items[0].items*** wurde in v1.4 durch ***menu.items[0].data*** ersetzt und als veraltet markiert
+- Die Parameter ***menu.items[0].label*** und ***menu.items[0].items*** wurden in v1.7 entfernt
+- Die Funktion ***menu.items*** wurde aktualisiert. Der **store**-Parameter wurde in v1.7 durch den **readonly**-Parameter ersetzt
 
 **Verwandte Artikel:** [Konfiguration](guides/configuration.md)
 

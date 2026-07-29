@@ -48,6 +48,6 @@ HTTP статус код показывает, успешен ли запрос 
 
 ---
 
-**Связанные статьи**:
+**Полезные статьи:**
 - [Работа с сервером](guides/working_with_server.md)
 - [getUsers()](api/provider/rest_methods/js_kanban_getusers_method.md)

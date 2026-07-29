@@ -44,4 +44,4 @@ new kanban.Toolbar("#toolbar", {
 
 **Verwandte Artikel:** [Lokalisierung](guides/localization.md)
 
-**Verwandte Beispiel:** [Kanban. Lokalisierung](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Lokalisierung](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban)

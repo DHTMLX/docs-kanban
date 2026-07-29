@@ -51,6 +51,6 @@ board.updateCard({
 });
 ~~~
 
-**Change log**:
+**Change log:**
 - The **id** and **card** parameters were added in v1.1
 - The **replace** parameter was added in v1.3

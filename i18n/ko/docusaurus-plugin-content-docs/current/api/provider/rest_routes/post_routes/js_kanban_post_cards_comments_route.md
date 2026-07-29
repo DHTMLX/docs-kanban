@@ -30,7 +30,7 @@ description: DHTMLX Kanban의 POST /cards/{cardId}/comments REST route API를 �
 }
 ~~~
 
-### 응답 (Response)
+### 응답
 
 이 경로는 새로 추가된 댓글의 ID가 포함된 json 객체를 반환합니다.
 
@@ -46,4 +46,4 @@ HTTP 상태 코드는 요청 성공 여부를 나타냅니다 (response.status =
 
 ---
 
-**관련 문서**: [서버 작업하기](guides/working_with_server.md)
+**관련 문서:** [서버 작업하기](guides/working_with_server.md)

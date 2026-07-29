@@ -1,7 +1,7 @@
 ---
 sidebar_label: items
 title: Toolbar items Config API
-description: DHTMLX Kanban의 Toolbar items 구성 문서를 읽어보세요. 툴바 버튼, 검색, 실행 취소 및 컨트롤을 구성하는 방법을 알아볼 수 있습니다.
+description: DHTMLX Kanban의 Toolbar items 구성 문서를 읽어보세요. Toolbar 버튼, 검색, 실행 취소 및 컨트롤을 구성하는 방법을 알아볼 수 있습니다.
 ---
 
 # items
@@ -178,11 +178,11 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**변경 내역:**
+**변경 로그:**
 
-- *"Undo"* 및 *"Redo"* 컨트롤이 v1.3에 추가되었습니다.
+- *"Undo"* 및 *"Redo"* 컨트롤이 v1.3에서 추가되었습니다.
 - **sort** 컨트롤의 ***items.options[0].label*** 매개변수가 v1.4에서 ***items.options[0].text*** 매개변수로 변경되었습니다.
-- **"search"** 컨트롤의 ***items.resultTemplate*** 매개변수가 v1.6에 추가되었습니다.
+- **"search"** 컨트롤의 ***items.resultTemplate*** 매개변수가 v1.6에서 추가되었습니다.
 
 **관련 문서:** [구성](guides/configuration.md#toolbar) 및 [커스터마이징](guides/customization.md#custom-toolbar)
 

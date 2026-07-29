@@ -55,4 +55,4 @@ events.on(handlers);
 
 Та же функция-резолвер может использоваться внутри пользовательских обработчиков, передаваемых в `RemoteEvents.on()`. См. [Настройка серверных событий](guides/working_with_server.md/#customize-server-events) для полного примера.
 
-**Связанные статьи:** [Работа с сервером: многопользовательский бэкенд](guides/working_with_server.md/#multiuser-backend)
+**Полезные статьи:** [Работа с сервером: многопользовательский бэкенд](guides/working_with_server.md/#multiuser-backend)

@@ -38,6 +38,6 @@ board.setLocale(de);
 toolbar.setLocale(de);
 ~~~
 
-**변경 내역:** **api** 매개변수는 v1.6에서 더 이상 권장되지 않습니다.
+**변경 로그:** **api** 매개변수는 v1.6에서 지원 중단되었습니다.
 
 **관련 문서:** [Localization](guides/localization.md)

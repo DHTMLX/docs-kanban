@@ -8,12 +8,12 @@ description: 阅读 DHTMLX Kanban 的 parse 方法 API。了解如何从 JSON �
 
 ### 描述
 
-@short: 将数据解析到看板中
+@short: 将数据解析到 Kanban 中
 
 `parse()` 方法是 [`setConfig()`](/api/methods/js_kanban_setconfig_method) 的别名，仅限于数据相关属性（`cards`、`columns`、`rows`、`links`）。对于这些属性，两个方法在底层执行相同的操作。
 
 :::tip 推荐使用 setConfig()
-使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method) 方法，它接受相同的数据属性**以及**其他看板配置选项。建议用一次 `setConfig()` 调用设置所有属性，而不是分别调用 `parse()` 传入数据、再调用 `setConfig()` 传入其他属性（如 [`columnKey`](api/config/js_kanban_columnkey_config.md)、[`rowKey`](api/config/js_kanban_rowkey_config.md)、[`cardShape`](api/config/js_kanban_cardshape_config.md)）：
+使用 [`setConfig()`](/api/methods/js_kanban_setconfig_method) 方法，它接受相同的数据属性**以及**其他 Kanban 配置选项。建议用一次 `setConfig()` 调用设置所有属性，而不是分别调用 `parse()` 传入数据、再调用 `setConfig()` 传入其他属性（如 [`columnKey`](api/config/js_kanban_columnkey_config.md)、[`rowKey`](api/config/js_kanban_rowkey_config.md)、[`cardShape`](api/config/js_kanban_cardshape_config.md)）：
 
 ~~~js
 // 不推荐：两次调用
@@ -49,9 +49,9 @@ parse({
 ### 示例
 
 ~~~jsx {4-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {});
-// 将数据解析到看板中
+// 将数据解析到 Kanban 中
 board.parse({
     columns,
     cards,
@@ -63,6 +63,6 @@ board.parse({
 // board.setConfig({ columns, cards, rows, links });
 ~~~
 
-**更新日志**：自 v1.1 版本起，在解析新数据前无需在构造函数中重置初始数据。
+**更新日志：**从 v1.1 起，在解析新数据前无需在构造函数中重置初始数据。
 
-**相关文章**：[数据操作](guides/working_with_data.md#load-data-from-a-local-source)
+**相关文章：**[数据操作](guides/working_with_data.md#load-data-from-a-local-source)

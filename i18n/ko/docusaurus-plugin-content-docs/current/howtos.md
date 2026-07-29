@@ -20,7 +20,7 @@ description: DHTMLX JavaScript Kanban 라이브러리의 How-tos 페이지를 �
 | [스타일링](guides/stylization.md)                     | Kanban을 스타일링하는 방법을 알아보세요            |
 | [로컬라이제이션](guides/localization.md)                    | Kanban을 현지화하는 방법을 알아보세요 ([예제](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
 
-## API 레퍼런스
+## API 참조
 
 이 섹션에서는 Kanban API에 대한 관련 레퍼런스를 확인할 수 있습니다.
 

@@ -47,6 +47,6 @@ board.addCard({
 });
 ~~~
 
-**변경 로그:** `$meta` 매개변수는 v1.3에 추가되었습니다
+**변경 로그:** `$meta` 매개변수는 v1.3에서 추가되었습니다
 
 **관련 문서:** [`history`](api/config/js_kanban_history_config.md)

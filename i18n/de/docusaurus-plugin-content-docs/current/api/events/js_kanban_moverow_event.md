@@ -47,4 +47,4 @@ board.api.on("move-row", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Dieses Event wurde in Version v1.1 hinzugefügt
+**Changelog:** Dieses Event wurde in v1.1 hinzugefügt

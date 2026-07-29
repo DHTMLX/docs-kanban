@@ -59,4 +59,4 @@ board.api.on("update-comment", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Das Ereignis wurde in Version v1.4 hinzugefügt
+**Changelog:** Das Ereignis wurde in v1.4 hinzugefügt

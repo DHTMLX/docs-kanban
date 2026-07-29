@@ -51,4 +51,4 @@ board.addColumn({
 });
 ~~~
 
-**Change log**: The **id**, **column** and **before** parameters were added in v1.1
+**Change log:** The **id**, **column** and **before** parameters were added in v1.1

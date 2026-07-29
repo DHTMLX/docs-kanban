@@ -1,14 +1,14 @@
 ---
 sidebar_label: undo
 title: undo 事件 API
-description: 阅读 DHTMLX Kanban 的 undo 事件 API。了解如何处理撤销看板中最后一次操作时触发的事件。
+description: 阅读 DHTMLX Kanban 的 undo 事件 API。了解如何处理撤销 Kanban 中最后一次操作时触发的事件。
 ---
 
 # undo
 
 ### 描述
 
-@short: 当撤销看板中的最后一次操作时触发
+@short: 当撤销 Kanban 中的最后一次操作时触发
 
 ### 用法
 
@@ -23,7 +23,7 @@ description: 阅读 DHTMLX Kanban 的 undo 事件 API。了解如何处理撤销
 ### 示例
 
 ~~~jsx {7-9}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -34,4 +34,4 @@ board.api.on("undo", () => {
 });
 ~~~
 
-**更新日志**：该事件在 v1.7 中新增
+**更新日志：**该事件在 v1.7 中新增

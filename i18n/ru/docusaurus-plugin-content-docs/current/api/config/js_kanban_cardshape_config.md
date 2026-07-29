@@ -322,15 +322,15 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**История изменений:**
-- Параметры ***comments***, ***css*** и ***votes*** добавлены в версии 1.4
-- Параметр ***menu.items[0].label*** устарел и заменён на ***menu.items[0].text*** в версии 1.4
-- Параметр ***menu.items[0].items*** устарел и заменён на ***menu.items[0].data*** в версии 1.4
-- Параметры ***users.maxCount*** и ***votes.clickable*** добавлены в версии 1.6
-- Параметры ***menu.items[0].label*** и ***menu.items[0].items*** удалены в версии 1.7
-- Функция ***menu.items*** обновлена. Параметр **store** заменён на **readonly** в версии 1.7
+**Журнал изменений:**
+- Параметры ***comments***, ***css*** и ***votes*** добавлены в v1.4
+- Параметр ***menu.items[0].label*** устарел и заменён на ***menu.items[0].text*** в v1.4
+- Параметр ***menu.items[0].items*** устарел и заменён на ***menu.items[0].data*** в v1.4
+- Параметры ***users.maxCount*** и ***votes.clickable*** добавлены в v1.6
+- Параметры ***menu.items[0].label*** и ***menu.items[0].items*** удалены в v1.7
+- Функция ***menu.items*** обновлена. Параметр **store** заменён на **readonly** в v1.7
 
-**Связанные статьи:** [Конфигурация](guides/configuration.md#cards)
+**Полезные статьи:** [Конфигурация](guides/configuration.md#cards)
 
 **Связанные примеры:**
 - [Kanban. Swimlanes, comments, votes](https://snippet.dhtmlx.com/5hcx01h4?tag=kanban)

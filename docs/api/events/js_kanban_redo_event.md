@@ -34,4 +34,4 @@ board.api.on("redo", () => {
 });
 ~~~
 
-**Change log**: The event was added in v1.7
+**Change log:** The event was added in v1.7

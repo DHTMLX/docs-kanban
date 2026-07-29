@@ -50,6 +50,6 @@ board.api.on("drag-card", (obj) => {
 });
 ~~~
 
-**Änderungsprotokoll:** Das Ereignis wurde in Version v1.4 hinzugefügt
+**Changelog:** Das Ereignis wurde in v1.4 hinzugefügt
 
 **Verwandtes Beispiel:** [Kanban. Drag & Drop für bestimmte Spalten deaktivieren](https://snippet.dhtmlx.com/nfv59yif?tag=kanban)

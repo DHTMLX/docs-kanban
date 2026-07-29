@@ -31,13 +31,13 @@ api.intercept(
 ### 事件
 
 :::info
-完整的看板内部事件列表请见[**这里**](api/overview/main_overview.md/#kanban-events)
+完整的 Kanban 内部事件列表请见[**这里**](api/overview/main_overview.md/#kanban-events)
 :::
 
 ### 示例
 
 ~~~jsx {7-11}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
@@ -50,4 +50,4 @@ board.api.intercept("move-card", ({ id, columnId }) => {
 }, {tag: "move"});
 ~~~
 
-**更新日志**：**config.tag** 和 **config.intercept** 参数于 v1.7 版本中新增
+**更新日志：****config.tag** 和 **config.intercept** 参数于 v1.7 中新增

@@ -34,7 +34,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**변경 내역:** 이 속성은 v1.2에 추가되었습니다.
+**변경 로그:** 이 속성은 v1.2에서 추가되었습니다.
 
 **관련 문서:** [설정](guides/configuration.md#cards)
 

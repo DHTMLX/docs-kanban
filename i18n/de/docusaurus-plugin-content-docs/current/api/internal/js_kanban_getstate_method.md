@@ -86,4 +86,4 @@ console.log(state.cardShape); // gibt die Kartenkonfiguration aus
 //...
 ~~~
 
-**Änderungsprotokoll:** Die Methode wurde in Version v1.7 aktualisiert
+**Changelog:** Die Methode wurde in v1.7 aktualisiert

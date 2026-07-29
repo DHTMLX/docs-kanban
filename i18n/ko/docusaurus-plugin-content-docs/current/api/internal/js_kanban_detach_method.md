@@ -36,4 +36,4 @@ board.api.on("move-card", ({ id, columnId }) => {
 board.api.detach("move");
 ~~~
 
-**변경 로그**: 내부 메서드는 v1.7에 추가되었습니다.
+**변경 로그:** 내부 메서드는 v1.7에서 추가되었습니다.

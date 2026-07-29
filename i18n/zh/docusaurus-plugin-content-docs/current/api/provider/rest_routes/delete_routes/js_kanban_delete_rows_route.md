@@ -30,4 +30,4 @@ description: 阅读 DHTMLX Kanban 的 DELETE /rows REST 路由 API。了解如�
 
 ---
 
-**相关文档**: [Working with server](guides/working_with_server.md)
+**相关文章：** [Working with server](guides/working_with_server.md)

@@ -37,4 +37,4 @@ const cards_data = board.getColumnCards(1);
 console.log(cards_data);
 ~~~
 
-**История изменений**: Метод был добавлен в версии v1.7
+**Журнал изменений:** Метод был добавлен в v1.7

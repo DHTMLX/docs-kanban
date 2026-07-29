@@ -57,7 +57,7 @@ const cards = [
     --wx-kanban-column-width: 300px;
     --wx-kanban-column-height: 300px;
 
-    /* стили панели инструментов */
+    /* стили Toolbar */
     --wx-kanban-toolbar-height: 56px;
     --wx-kanban-toolbar-align: center;
     --wx-kanban-toolbar-justify: flex-start;
@@ -142,4 +142,4 @@ const cards = [
 
 <iframe src="https://snippet.dhtmlx.com/807qbp9v?mode=result&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Связанные статьи:** [Кастомизация](guides/customization.md)
+**Полезные статьи:** [Кастомизация](guides/customization.md)

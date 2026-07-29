@@ -60,10 +60,10 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-**Änderungsprotokoll:** Die Eigenschaft wurde in Version 1.7 aktualisiert:
+**Changelog:** Die Eigenschaft wurde in v1.7 aktualisiert:
     - Der Parameter **masterId** wurde durch den Parameter **source** ersetzt
     - Der Parameter **slaveId** wurde durch den Parameter **target** ersetzt
 
 **Verwandte Artikel:** [Arbeiten mit Daten](guides/working_with_data.md)
 
-**Verwandte Beispiel:** [Kanban. Links zwischen Aufgaben](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)
+**Verwandtes Beispiel:** [Kanban. Links zwischen Aufgaben](https://snippet.dhtmlx.com/81qu7qh0?tag=kanban)

@@ -1,7 +1,7 @@
 ---
 sidebar_label: items
 title: API конфигурации Toolbar items
-description: Ознакомьтесь с документацией по конфигурации элементов Toolbar для DHTMLX Kanban. Узнайте, как настраивать кнопки панели инструментов, поиск, отмену действий и другие элементы управления.
+description: Ознакомьтесь с документацией по конфигурации элементов Toolbar для DHTMLX Kanban. Узнайте, как настраивать кнопки Toolbar, поиск, отмену действий и другие элементы управления.
 ---
 
 # items
@@ -178,14 +178,14 @@ new kanban.Toolbar("#toolbar", {
 });
 ~~~
 
-**История изменений:**
+**Журнал изменений:**
 
-- Элементы *"Undo"* и *"Redo"* были добавлены в версии v1.3
-- Параметр ***items.options[0].label*** элемента **sort** был заменён на ***items.options[0].text*** в версии v1.4
-- Параметр ***items.resultTemplate*** элемента **"search"** был добавлен в версии v1.6
+- Элементы *"Undo"* и *"Redo"* были добавлены в v1.3
+- Параметр ***items.options[0].label*** элемента **sort** был заменён на ***items.options[0].text*** в v1.4
+- Параметр ***items.resultTemplate*** элемента **"search"** был добавлен в v1.6
 
-**Связанные статьи:** [Конфигурация](guides/configuration.md#toolbar) и [Настройка](guides/customization.md#custom-toolbar)
+**Полезные статьи:** [Конфигурация](guides/configuration.md#toolbar) и [Настройка](guides/customization.md#custom-toolbar)
 
-**Связанные примеры:**
+**Связанный пример:**
 - [Kanban. Пользовательский Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
 - [Kanban. Настройка подсказок в результатах поиска](https://snippet.dhtmlx.com/2uo2f5mf?tag=kanban)

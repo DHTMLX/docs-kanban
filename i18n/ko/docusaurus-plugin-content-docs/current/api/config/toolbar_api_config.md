@@ -35,4 +35,4 @@ new kanban.Toolbar("#toolbar", {
 
 **관련 문서:** [구성](guides/configuration.md#toolbar)
 
-**관련 샘플:** [Kanban. 사용자 정의 툴바](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)
+**관련 샘플:** [Kanban. 사용자 정의 Toolbar](https://snippet.dhtmlx.com/s5r5h4ju?tag=kanban)

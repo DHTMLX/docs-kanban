@@ -1,7 +1,7 @@
 ---
 sidebar_label: 配置
 title: Kanban 配置指南
-description: 阅读 DHTMLX Kanban 配置指南。学习如何设置卡片、列、行、编辑器、工具栏及其他看板元素。
+description: 阅读 DHTMLX Kanban 配置指南。学习如何设置卡片、列、行、编辑器、Toolbar 及其他看板元素。
 ---
 
 # 配置
@@ -493,7 +493,7 @@ new kanban.Kanban("#root", {
 
 ## 变更历史
 
-Kanban 记录卡片操作，并在工具栏上提供撤销和重做控件。使用 [`history`](api/config/js_kanban_history_config.md) 属性可禁用此功能。
+Kanban 记录卡片操作，并在 Toolbar 上提供撤销和重做控件。使用 [`history`](api/config/js_kanban_history_config.md) 属性可禁用此功能。
 
 以下代码片段禁用历史记录跟踪：
 
@@ -509,11 +509,11 @@ new kanban.Kanban("#root", {
 若要跳过历史记录中的个别操作，请向方法或事件传递 [`$meta`](api/common/js_kanban_meta_parameter.md) 参数。
 :::
 
-## 工具栏 {#toolbar}
+## Toolbar {#toolbar}
 
-Kanban 的**工具栏**提供搜索框、排序控件以及添加列和行的控件。使用 `kanban.Toolbar()` 构造函数在独立容器中初始化工具栏。
+Kanban 的 **Toolbar** 提供搜索框、排序控件以及添加列和行的控件。使用 `kanban.Toolbar()` 构造函数在独立容器中初始化 Toolbar。
 
-以下代码片段创建绑定到 Kanban 实例的工具栏：
+以下代码片段创建绑定到 Kanban 实例的 Toolbar：
 
 ~~~jsx {13}
 // 创建 Kanban
@@ -531,7 +531,7 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-使用 [`items`](api/config/toolbar_items_config.md) 属性显示、隐藏或自定义工具栏控件。以下代码片段设置了自定义搜索栏、撤销和重做控件、自定义排序控件以及列和行控件：
+使用 [`items`](api/config/toolbar_items_config.md) 属性显示、隐藏或自定义 Toolbar 控件。以下代码片段设置了自定义搜索栏、撤销和重做控件、自定义排序控件以及列和行控件：
 
 ~~~jsx {6-51}
 // 创建 Kanban
@@ -594,6 +594,6 @@ new kanban.Toolbar("#toolbar", {
 
 ## 示例
 
-以下代码片段配置了 Kanban 的卡片、编辑器和工具栏：
+以下代码片段配置了 Kanban 的卡片、编辑器和 Toolbar：
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

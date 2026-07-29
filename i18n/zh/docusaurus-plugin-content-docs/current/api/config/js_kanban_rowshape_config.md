@@ -183,6 +183,6 @@ new kanban.Kanban("#root", {
 - ***menu.items[0].label*** 和 ***menu.items[0].items*** 参数在 v1.7 中移除
 - ***menu.items*** 函数更新，v1.7 中用 **readonly** 参数替换了 **store**
 
-**相关文档：** [配置](guides/configuration.md)
+**相关文章：** [配置](guides/configuration.md)
 
 **相关示例：** [Kanban. 通过自定义菜单更改行颜色](https://snippet.dhtmlx.com/tev4ej9c?tag=kanban)

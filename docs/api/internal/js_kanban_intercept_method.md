@@ -50,4 +50,4 @@ board.api.intercept("move-card", ({ id, columnId }) => {
 }, {tag: "move"});
 ~~~
 
-**Change log**: The **config.tag** and **config.intercept** parameters were added in v1.7
+**Change log:** The **config.tag** and **config.intercept** parameters were added in v1.7

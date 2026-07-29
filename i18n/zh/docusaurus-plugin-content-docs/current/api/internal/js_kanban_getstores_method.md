@@ -8,7 +8,7 @@ description: 阅读 DHTMLX Kanban 的 getStores 方法 API。了解如何获取�
 
 ### 描述
 
-@short: 获取包含看板 DataStore 属性的对象
+@short: 获取包含 Kanban DataStore 属性的对象
 
 ### 用法
 
@@ -29,14 +29,14 @@ api.getStores(): object;
 ### 示例
 
 ~~~jsx {7}
-// 创建看板
+// 创建 Kanban
 const board = new kanban.Kanban("#root", {
     columns,
     cards
 });
-// 获取看板的 DataStore 对象
+// 获取 Kanban 的 DataStore 对象
 const store = board.api.getStores();
 console.log(store);
 ~~~
 
-**更新日志：** 该方法在 v1.2 版本中进行了更新
+**更新日志：** 该方法在 v1.2 中更新

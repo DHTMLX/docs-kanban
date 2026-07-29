@@ -1,7 +1,7 @@
 ---
 sidebar_label: 구성
 title: Kanban 구성 가이드
-description: DHTMLX Kanban 구성 가이드를 확인하세요. 카드, 열, 행, 에디터, 툴바 및 기타 보드 요소를 설정하는 방법을 알아보세요.
+description: DHTMLX Kanban 구성 가이드를 확인하세요. 카드, 열, 행, 에디터, Toolbar 및 기타 보드 요소를 설정하는 방법을 알아보세요.
 ---
 
 # 구성
@@ -493,7 +493,7 @@ new kanban.Kanban("#root", {
 
 ## 변경 기록
 
-Kanban은 카드 작업을 추적하고 툴바에 실행 취소 및 다시 실행 컨트롤을 제공합니다. [`history`](api/config/js_kanban_history_config.md) 속성으로 이 동작을 비활성화할 수 있습니다.
+Kanban은 카드 작업을 추적하고 Toolbar에 실행 취소 및 다시 실행 컨트롤을 제공합니다. [`history`](api/config/js_kanban_history_config.md) 속성으로 이 동작을 비활성화할 수 있습니다.
 
 다음 코드 스니펫은 기록 추적을 비활성화합니다:
 
@@ -509,11 +509,11 @@ new kanban.Kanban("#root", {
 개별 작업을 기록에서 제외하려면 메서드나 이벤트에 [`$meta`](api/common/js_kanban_meta_parameter.md) 파라미터를 전달하세요.
 :::
 
-## 툴바 {#toolbar}
+## Toolbar {#toolbar}
 
-Kanban 툴바는 검색창, 정렬 컨트롤, 컬럼 및 행 추가 컨트롤을 제공합니다. `kanban.Toolbar()` 생성자를 사용해 별도의 컨테이너에서 툴바를 초기화하세요.
+Kanban Toolbar는 검색창, 정렬 컨트롤, 컬럼 및 행 추가 컨트롤을 제공합니다. `kanban.Toolbar()` 생성자를 사용해 별도의 컨테이너에서 Toolbar를 초기화하세요.
 
-다음 코드 스니펫은 Kanban 인스턴스에 바인딩된 툴바를 생성합니다:
+다음 코드 스니펫은 Kanban 인스턴스에 바인딩된 Toolbar를 생성합니다:
 
 ~~~jsx {13}
 // Kanban 생성
@@ -531,7 +531,7 @@ const board = new kanban.Kanban("#root", {
 new kanban.Toolbar("#toolbar", { api: board.api });
 ~~~
 
-[`items`](api/config/toolbar_items_config.md) 속성으로 툴바 컨트롤을 표시, 숨김 또는 커스터마이즈할 수 있습니다. 다음 코드 스니펫은 커스텀 검색바, 실행 취소/다시 실행 컨트롤, 커스텀 정렬, 컬럼 및 행 컨트롤을 설정합니다:
+[`items`](api/config/toolbar_items_config.md) 속성으로 Toolbar 컨트롤을 표시, 숨김 또는 커스터마이즈할 수 있습니다. 다음 코드 스니펫은 커스텀 검색바, 실행 취소/다시 실행 컨트롤, 커스텀 정렬, 컬럼 및 행 컨트롤을 설정합니다:
 
 ~~~jsx {6-51}
 // Kanban 생성
@@ -594,6 +594,6 @@ new kanban.Toolbar("#toolbar", {
 
 ## 예제
 
-다음 스니펫에서는 Kanban의 카드, 에디터, 툴바를 구성하는 방법을 확인할 수 있습니다:
+다음 스니펫에서는 Kanban의 카드, 에디터, Toolbar를 구성하는 방법을 확인할 수 있습니다:
 
 <iframe src="https://snippet.dhtmlx.com/5hcx01h4?mode=js&tag=kanban" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

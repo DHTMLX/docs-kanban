@@ -251,7 +251,7 @@ kanban.api.exec("undo");
 
 #### Methods
 
-- Kanban 툴바의 [`setLocale`](api/methods/toolbar_setlocale_method.md) 메서드가 다음과 같이 변경되었습니다:
+- Kanban Toolbar의 [`setLocale`](api/methods/toolbar_setlocale_method.md) 메서드가 다음과 같이 변경되었습니다:
 
 ~~~jsx {6} title="v1.5.7 이전"
     // Kanban 생성

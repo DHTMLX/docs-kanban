@@ -37,4 +37,4 @@ const cards_data = board.getColumnCards(1);
 console.log(cards_data);
 ~~~
 
-**Change log**: The method was added in v1.7
+**Change log:** The method was added in v1.7

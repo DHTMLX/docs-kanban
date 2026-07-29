@@ -48,6 +48,6 @@ HTTP 状态码指示请求是成功（response.status == 200）还是失败（re
 
 ---
 
-**相关文章**：
+**相关文章：**
 - [与服务器交互](guides/working_with_server.md)
 - [getUsers()](api/provider/rest_methods/js_kanban_getusers_method.md)

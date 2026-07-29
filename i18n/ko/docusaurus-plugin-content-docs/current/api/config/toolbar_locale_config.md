@@ -20,7 +20,7 @@ description: DHTMLX Kanban의 Toolbar locale 구성 API를 읽어보세요. Tool
 locale?: object;
 ~~~
 
-### 기본 구성
+### 기본 설정
 
 기본적으로 Toolbar는 [**영어**](guides/localization.md#default-locale) locale을 사용합니다. 사용자 지정 locale로 설정할 수도 있습니다.
 
