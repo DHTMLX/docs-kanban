@@ -377,7 +377,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Bind editor fields to card fields
+### Bind editor fields to card fields {#bind-editor-fields-to-card-fields}
 
 Each editor field links to a card field through a shared `key`. Set the same `key` value in the [`editorShape`](api/config/js_kanban_editorshape_config.md) entry and in the [`cardShape`](api/config/js_kanban_cardshape_config.md) property. For built-in card fields, set the key to `true`. For custom fields, list the key in the `headerFields` array. The same key supplies initial card data.
 

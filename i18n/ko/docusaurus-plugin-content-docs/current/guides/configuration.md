@@ -377,7 +377,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### 에디터 필드와 카드 필드 바인딩
+### 에디터 필드와 카드 필드 바인딩 {#bind-editor-fields-to-card-fields}
 
 각 에디터 필드는 공유 `key`를 통해 카드 필드에 연결됩니다. [`editorShape`](api/config/js_kanban_editorshape_config.md) 항목과 [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성에 동일한 `key` 값을 설정하세요. 내장 카드 필드의 경우 키를 `true`로 설정하고, 커스텀 필드의 경우 `headerFields` 배열에 키를 나열하세요. 동일한 키로 카드의 초기 데이터도 제공할 수 있습니다.
 
