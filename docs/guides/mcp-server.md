@@ -30,7 +30,7 @@ Under the hood, the server keeps a full index of the DHTMLX Kanban documentation
 - [Customizing](guides/customization.md) card templates, context menus, and column headers with the documented template callbacks.
 - [Styling](guides/stylization.md) columns, rows, and cards with CSS variables and conditional CSS classes.
 - [Localizing](guides/localization.md) the Kanban and Toolbar interfaces with built-in or custom locale objects.
-- [Loading, exporting, and mutating](guides/working_with_data.md) cards, columns, rows, links, and comments through the data API.
+- [Loading, exporting, and modifying](guides/working_with_data.md) cards, columns, rows, links, and comments through the data API.
 - Connecting a [REST backend](guides/working_with_server.md) through `RestDataProvider`, or setting up a multiuser board that syncs changes over WebSocket.
 - [Integrating](guides/integration.md) Kanban with other DHTMLX widgets such as Gantt and Scheduler, or with [React](guides/integration_with_react.md), [Vue](guides/integration_with_vue.md), [Angular](guides/integration_with_angular.md), and [Svelte](guides/integration_with_svelte.md).
 
@@ -38,11 +38,11 @@ Under the hood, the server keeps a full index of the DHTMLX Kanban documentation
 
 Ask the MCP server the same question twice and you can get two different kinds of response, because the calling agent picks between two workflows depending on the request. *Search* pulls the matching Kanban reference pages and hands them to the assistant, which writes the answer itself; *Inference* reads those same pages and writes the answer for the assistant instead. Both draw on a Retrieval-Augmented Generation (RAG) index built from the current documentation, reached through the Model Context Protocol (MCP) endpoint.
 
-For example, when you ask *"How do I bind a custom `editorShape` field to a `cardShape` field so the value shows up both on the card and in the editor in DHTMLX Kanban?"*, the assistant sends the prompt through the MCP endpoint. For a code-generation request like this one, it typically calls *Search*: the workflow finds the matching field-binding documentation, returns the relevant reference pages as context, and the assistant turns them into code using whatever the current API actually looks like, not what it looked like at training time. For a question with a single correct answer, the assistant can call *Inference* instead: the workflow reads the reference pages itself and returns a ready-made answer directly, so the assistant relays that answer rather than composing one from raw pages.
+For example, when you ask *"How do I bind a custom `editorShape` field to a `cardShape` field so the value shows up both on the card and in the editor in DHTMLX Kanban?"*, the assistant sends the prompt through the MCP endpoint. For a code-generation request like this one, it typically calls *Search*: the workflow finds the matching field-binding documentation, returns the relevant reference pages as context, and the assistant turns them into code that reflects the current API, not what it looked like at training time. For a question with a single correct answer, the assistant can call *Inference* instead: the workflow reads the reference pages itself and returns a ready-made answer directly, so the assistant relays that answer rather than composing one from raw pages.
 
 ## Adding the MCP endpoint to your AI tool
 
-Prefer the terminal or a config file? Either path registers the same MCP endpoint, and once it's set for a tool, every Kanban board you build in that tool can reach it.
+Prefer the terminal or a config file? Either path points your tool at the URL below, and once it's registered, every Kanban board you build in that tool can reach it.
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
