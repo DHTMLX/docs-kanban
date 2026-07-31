@@ -62,7 +62,7 @@ To register the server from the command line, run:
 claude mcp add --transport http dhtmlx-mcp https://docs.dhtmlx.com/mcp
 ~~~
 
-For manual setup, add the following to your `mcp.json`:
+Setting it up by hand? Add this entry to your `mcp.json`:
 
 ~~~jsx
 {
