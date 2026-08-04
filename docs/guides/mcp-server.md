@@ -1,16 +1,16 @@
 ---
 sidebar_label: DHTMLX MCP server
-title: DHTMLX Kanban and the MCP server for building with AI
+title: DHTMLX Kanban MCP integration for boards and REST sync
 description: The MCP server gives AI tools access to current DHTMLX Kanban documentation, covering cards, columns, swimlanes, editor fields, and REST data sync.
 ---
 
-# DHTMLX Kanban and the MCP server: build with live docs
+# DHTMLX Kanban MCP server: cards, editor, and REST sync
 
 A working [DHTMLX Kanban](/) board depends on several pieces fitting together correctly: card and editor fields need to [share a matching key](guides/configuration.md#bind-editor-fields-to-card-fields), the [Toolbar](guides/customization.md#custom-toolbar) runs as its own widget bound to the board, and [server sync](guides/working_with_server.md) relies on a specific set of action handlers. Generated code holds up when it uses a matching key between card and editor fields, the Toolbar wired up on its own, and server sync built on today's action handlers, not a snapshot from training time.
 
 The DHTMLX MCP server closes that gap by handing the assistant a live line into the Kanban documentation itself. Ask about [binding editor fields to card fields](guides/configuration.md#bind-editor-fields-to-card-fields), [customizing the Toolbar](guides/customization.md#custom-toolbar), or [connecting a RestDataProvider backend](guides/working_with_server.md), and the assistant pulls the current reference before writing any code.
 
-**MCP endpoint**
+### MCP endpoint
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
@@ -36,9 +36,16 @@ Under the hood, the server keeps a full index of the DHTMLX Kanban documentation
 
 ## Under the hood: how the MCP server responds
 
-Ask the MCP server the same question twice and you can get two different kinds of response, because the calling agent picks between two workflows depending on the request. *Search* pulls the matching Kanban reference pages and hands them to the assistant, which writes the answer itself; *Inference* reads those same pages and writes the answer for the assistant instead. Both draw on a Retrieval-Augmented Generation (RAG) index built from the current documentation, reached through the Model Context Protocol (MCP) endpoint.
+The DHTMLX MCP server answers Kanban questions through a Retrieval-Augmented Generation (RAG) pipeline layered on the Model Context Protocol (MCP), splitting each request between two workflows: *Search*, which pulls matching reference pages for the assistant to draw on, and *Inference*, which reads those pages itself and delivers a ready answer. Take the prompt *"How do I bind a custom `editorShape` field to a `cardShape` field so the value shows up both on the card and in the editor in DHTMLX Kanban?"* as a walkthrough:
 
-For example, when you ask *"How do I bind a custom `editorShape` field to a `cardShape` field so the value shows up both on the card and in the editor in DHTMLX Kanban?"*, the assistant sends the prompt through the MCP endpoint. For a code-generation request like this one, it typically calls *Search*: the workflow finds the matching field-binding documentation, returns the relevant reference pages as context, and the assistant turns them into code that reflects the current API, not what it looked like at training time. For a question with a single correct answer, the assistant can call *Inference* instead: the workflow reads the reference pages itself and returns a ready-made answer directly, so the assistant relays that answer rather than composing one from raw pages.
+1. The assistant fires the query off through MCP.
+2. The server traces it to the field-binding documentation.
+3. Since writing this binding means generating code, *Search* takes the request (a question with one correct answer would go to *Inference* instead).
+4. *Search* draws the matching pages from a vector index built on current Kanban documentation.
+5. The assistant receives those pages back as context.
+6. From that context, the assistant writes the field-binding configuration instead of relying on memory.
+
+Kanban code suggestions stay matched to the API as it works today because of that split.
 
 ## Adding the MCP endpoint to your AI tool
 
