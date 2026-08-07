@@ -51,7 +51,7 @@ Kanban code suggestions stay matched to the API as it works today.
 
 ## Adding the MCP endpoint to your AI tool
 
-Prefer the terminal or a config file? Either path points your tool at the URL below, and once it's registered, every Kanban board you build in that tool can reach it.
+Whether you prefer the terminal or a config file, either path points your tool at the URL below, and once it's registered, every Kanban board you build in that tool can reach it.
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
