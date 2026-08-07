@@ -36,16 +36,18 @@ Under the hood, the server keeps a full index of the DHTMLX Kanban documentation
 
 ## Under the hood: how the MCP server responds
 
-The DHTMLX MCP server answers Kanban questions through a Retrieval-Augmented Generation (RAG) pipeline layered on the Model Context Protocol (MCP), splitting each request between two workflows: *Search*, which pulls matching reference pages for the assistant to draw on, and *Inference*, which reads those pages itself and delivers a ready answer. Take the prompt *"How do I bind a custom `editorShape` field to a `cardShape` field so the value shows up both on the card and in the editor in DHTMLX Kanban?"* as a walkthrough:
+The DHTMLX MCP server answers Kanban questions through a Retrieval-Augmented Generation (RAG) pipeline layered on the Model Context Protocol (MCP), splitting each request between two workflows: *Search*, which pulls matching reference pages for the assistant to draw on, and *Inference*, which reads those pages itself and delivers a ready answer. Before any of that, the assistant first isolates which part of the request actually needs a documentation lookup and handles the rest from its own knowledge.
 
-1. The assistant fires the query off through MCP.
-2. The server traces it to the field-binding documentation.
-3. Since writing this binding means generating code, *Search* takes the request (a question with one correct answer would go to *Inference* instead).
+Take the prompt *"How do I connect DHTMLX Kanban so that when a user adds a new card, it syncs automatically with my backend database?"* as a walkthrough:
+
+1. The assistant identifies the part that needs documentation: how `RestDataProvider` syncs a new card to a server.
+2. The server matches this to the server-integration documentation.
+3. Since answering means generating code, *Search* takes the request (a question with one correct answer would go to *Inference* instead).
 4. *Search* draws the matching pages from a vector index built on current Kanban documentation.
 5. The assistant receives those pages back as context.
-6. From that context, the assistant writes the field-binding configuration instead of relying on memory.
+6. From that context, the assistant wires up `RestDataProvider` for the `add-card` operation, then fills in the backend-specific request details from its own knowledge instead of guessing at the Kanban API.
 
-Kanban code suggestions stay matched to the API as it works today because of that split.
+Kanban code suggestions stay matched to the API as it works today.
 
 ## Adding the MCP endpoint to your AI tool
 
