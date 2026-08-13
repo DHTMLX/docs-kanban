@@ -49,7 +49,7 @@ Take the prompt *"How do I connect DHTMLX Kanban so that when a user adds a new 
 
 Kanban code suggestions stay matched to the API as it works today.
 
-## Adding the MCP endpoint to your AI tool
+## Registering the MCP server per tool
 
 Whether you prefer the terminal or a config file, either path points your tool at the URL below, and once it's registered, every Kanban board you build in that tool can reach it.
 
@@ -197,9 +197,9 @@ Debugging and service-improvement work may involve logging queries.
 
 For stricter privacy requirements, organizations can request a commercial deployment with query logging turned off. Reach out to `info@dhtmlx.com` for details.
 
-## Prompts to try for Kanban boards
+## Kanban board prompts to borrow
 
-The API surface DHTMLX Kanban exposes is large, so tell the assistant exactly which piece you mean: a card, a column, the Toolbar, or the REST layer. The prompts below are grouped that way; borrow one and adjust the specifics.
+The prompts below are grouped by the part of the API they target. Borrow one and adjust the specifics to your board.
 
 **Cards, columns, and swimlanes**
 
