@@ -477,7 +477,8 @@ module.exports = {
                 //"guides/integration",
                 "guides/working_with_data",
                 //"guides/working_with_server",
-                "guides/typescript_support"
+                "guides/typescript_support",
+                "guides/mcp-server"
             ]
         },
         {

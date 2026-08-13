@@ -377,7 +377,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### 绑定编辑器字段与卡片字段
+### 绑定编辑器字段与卡片字段 {#bind-editor-fields-to-card-fields}
 
 每个编辑器字段通过共享的 `key` 与卡片字段关联。在 [`editorShape`](api/config/js_kanban_editorshape_config.md) 条目和 [`cardShape`](api/config/js_kanban_cardshape_config.md) 属性中设置相同的 `key` 值。对于内置卡片字段，将 key 设为 `true`；对于自定义字段，在 `headerFields` 数组中列出该 key。同一 key 也用于提供卡片的初始数据。
 
