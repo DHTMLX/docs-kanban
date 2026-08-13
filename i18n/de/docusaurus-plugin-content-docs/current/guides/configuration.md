@@ -377,7 +377,7 @@ new kanban.Kanban("#root", {
 });
 ~~~
 
-### Editor-Felder an Kartenfelder binden
+### Editor-Felder an Kartenfelder binden {#bind-editor-fields-to-card-fields}
 
 Jedes Editor-Feld ist über einen gemeinsamen `key` mit einem Kartenfeld verknüpft. Setzen Sie denselben `key`-Wert im [`editorShape`](api/config/js_kanban_editorshape_config.md)-Eintrag und in der [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft. Bei integrierten Kartenfeldern setzen Sie den Schlüssel auf `true`. Bei benutzerdefinierten Feldern tragen Sie den Schlüssel im `headerFields`-Array ein. Derselbe Schlüssel liefert auch die Anfangsdaten der Karte.
 

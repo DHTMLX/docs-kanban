@@ -19,6 +19,7 @@ In this section you can find out basic principles of work with Kanban
 | [Customization](guides/customization.md)                   | Learn how to customize Kanban                            |
 | [Stylization](guides/stylization.md)                     | Learn how to stylize Kanban                              |
 | [Localization](guides/localization.md)                    | Learn how to localize Kanban ([Example](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [DHTMLX MCP server](guides/mcp-server.md)                   | Connect an AI coding assistant to live Kanban documentation |
 
 ## API reference
 

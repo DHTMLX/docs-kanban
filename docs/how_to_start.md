@@ -126,4 +126,4 @@ new kanban.Toolbar("#toolbar", {
 
 ## What's next
 
-That's all. Just three simple steps and you have a handy tool for visualizing and managing the workflow. Now you can start working with your tasks or keep exploring the inner world of JavaScript Kanban.
+That's all. Just three simple steps and you have a handy tool for visualizing and managing the workflow. Now you can start working with your tasks or keep exploring the inner world of JavaScript Kanban. Building with an AI coding assistant? Point it at the live docs through the [DHTMLX MCP server](guides/mcp-server.md).

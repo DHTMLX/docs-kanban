@@ -70,4 +70,4 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 ## What's next
 
-Now you can get down to using Kanban in your application. Follow the directions of the [How to start](how_to_start.md) tutorial for guidance.
+Now you can get down to using Kanban in your application. Follow the directions of the [How to start](how_to_start.md) tutorial for guidance. If you build with an AI coding assistant, connect it to the live documentation through the [DHTMLX MCP server](guides/mcp-server.md).
