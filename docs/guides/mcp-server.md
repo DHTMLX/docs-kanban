@@ -8,7 +8,7 @@ description: The MCP server gives AI tools access to current DHTMLX Kanban docum
 
 A working [DHTMLX Kanban](/) board depends on several pieces fitting together correctly: card and editor fields need to [share a matching key](guides/configuration.md#bind-editor-fields-to-card-fields), the [Toolbar](guides/customization.md#custom-toolbar) runs as its own widget bound to the board, and [server sync](guides/working_with_server.md) relies on a specific set of action handlers. Generated code holds up when it uses a matching key between card and editor fields, the Toolbar wired up on its own, and server sync built on today's action handlers, not a snapshot from training time.
 
-The DHTMLX MCP server closes that gap by handing the assistant a live line into the Kanban documentation itself. Ask about [binding editor fields to card fields](guides/configuration.md#bind-editor-fields-to-card-fields), [customizing the Toolbar](guides/customization.md#custom-toolbar), or [connecting a RestDataProvider backend](guides/working_with_server.md), and the assistant pulls the current reference before writing any code.
+The DHTMLX MCP server keeps the assistant working from current Kanban documentation instead of guesswork. Ask about [binding editor fields to card fields](guides/configuration.md#bind-editor-fields-to-card-fields), [customizing the Toolbar](guides/customization.md#custom-toolbar), or [connecting a RestDataProvider backend](guides/working_with_server.md), and the assistant pulls the current reference before writing any code.
 
 ### MCP endpoint
 
@@ -216,7 +216,7 @@ How do I duplicate a card and move the copy to a different row using the Kanban 
 **Editor and field types**
 
 ~~~
-How do I bind a custom editorShape field to a cardShape field so it appears on the card and in the editor?
+How do I bind a custom editor field to a card field so it appears on the card and in the editor?
 ~~~
 ~~~
 How do I configure a multiselect field with user avatars in the DHTMLX Kanban editor?
@@ -237,10 +237,10 @@ How do I remove the undo and redo controls from the DHTMLX Kanban Toolbar?
 **REST and multiuser sync**
 
 ~~~
-How do I connect RestDataProvider to a Go backend and load the initial Kanban data?
+How do I connect DHTMLX Kanban to a Go backend and load the initial data?
 ~~~
 ~~~
-How do I override getHandlers() in RestDataProvider to add a custom action handler?
+How do I customize how DHTMLX Kanban syncs a specific action to my backend?
 ~~~
 ~~~
 How do I set up a multiuser DHTMLX Kanban board that syncs changes in real time over WebSocket?
