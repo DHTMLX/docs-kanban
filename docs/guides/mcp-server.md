@@ -20,7 +20,7 @@ https://docs.dhtmlx.com/mcp
 The DHTMLX MCP server covers all major DHTMLX products, not only DHTMLX Kanban. The same endpoint and configuration instructions work regardless of which DHTMLX component you are building with.
 :::
 
-## What the MCP server unlocks for Kanban
+## Kanban documentation via the MCP server
 
 Under the hood, the server keeps a full index of the DHTMLX Kanban documentation, ready to serve requests like these:
 
@@ -34,7 +34,7 @@ Under the hood, the server keeps a full index of the DHTMLX Kanban documentation
 - Connecting a [REST backend](guides/working_with_server.md) through `RestDataProvider`, or setting up a multiuser board that syncs changes over WebSocket.
 - [Integrating](guides/integration.md) Kanban with other DHTMLX widgets such as Gantt and Scheduler, or with [React](guides/integration_with_react.md), [Vue](guides/integration_with_vue.md), [Angular](guides/integration_with_angular.md), and [Svelte](guides/integration_with_svelte.md).
 
-## Under the hood: how the MCP server responds
+## What a Kanban prompt triggers in MCP
 
 The DHTMLX MCP server answers Kanban questions through a Retrieval-Augmented Generation (RAG) pipeline layered on the Model Context Protocol (MCP), splitting each request between two workflows: *Search*, which pulls matching reference pages for the assistant to draw on, and *Inference*, which reads those pages itself and delivers a ready answer. Before any of that, the assistant first isolates which part of the request actually needs a documentation lookup and handles the rest from its own knowledge.
 
@@ -246,7 +246,7 @@ How do I customize how DHTMLX Kanban syncs a specific action to my backend?
 How do I set up a multiuser DHTMLX Kanban board that syncs changes in real time over WebSocket?
 ~~~
 
-## Getting sharper results from Kanban prompts
+## Better results from Kanban prompts
 
 - **Name the target element.** Distinguish between the board, a column, a row (swimlane), and a card (for example, "on the Kanban board" vs. "for a specific row" vs. "on a card in the Testing column"). A precise target helps the server retrieve the right reference pages.
 - **Specify the field type.** `cardShape` and `editorShape` support many field types (combo, multiselect, color, date, files). Name the type explicitly (for example, "a multiselect field with avatars") instead of "a field" so the assistant pulls the matching configuration reference.
