@@ -19,6 +19,7 @@ description: DHTMLX JavaScript Kanban 라이브러리의 How-tos 페이지를 �
 | [사용자 정의](guides/customization.md)                   | Kanban을 커스터마이즈하는 방법을 알아보세요        |
 | [스타일링](guides/stylization.md)                     | Kanban을 스타일링하는 방법을 알아보세요            |
 | [로컬라이제이션](guides/localization.md)                    | Kanban을 현지화하는 방법을 알아보세요 ([예제](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [DHTMLX MCP 서버](guides/mcp-server.md)                   | AI 코딩 어시스턴트를 최신 Kanban 문서에 연결하세요 |
 
 ## API 참조
 

@@ -70,4 +70,4 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 ## Wie geht es weiter
 
-Jetzt können Sie Kanban in Ihrer Anwendung verwenden. Folgen Sie der Anleitung im Tutorial [How to start](how_to_start.md) für weitere Hinweise.
+Jetzt können Sie Kanban in Ihrer Anwendung verwenden. Folgen Sie der Anleitung im Tutorial [How to start](how_to_start.md) für weitere Hinweise. Wenn Sie mit einem KI-Coding-Assistenten arbeiten, verbinden Sie ihn über den [DHTMLX MCP-Server](guides/mcp-server.md) mit der aktuellen Dokumentation.

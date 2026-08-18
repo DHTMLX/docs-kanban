@@ -19,6 +19,7 @@ description: 您可以在 DHTMLX JavaScript Kanban 库的文档中浏览 How-tos
 | [自定义](guides/customization.md)                   | 学习如何自定义 Kanban                             |
 | [样式化](guides/stylization.md)                     | 学习如何美化 Kanban                               |
 | [本地化](guides/localization.md)                    | 学习如何本地化 Kanban ([示例](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [DHTMLX MCP 服务器](guides/mcp-server.md)                   | 将 AI 编码助手连接到最新的 Kanban 文档 |
 
 ## API 参考
 

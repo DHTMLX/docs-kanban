@@ -70,4 +70,4 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 ## 다음 단계
 
-이제 Kanban을 애플리케이션에 적용할 준비가 되었습니다. 자세한 안내는 [How to start](how_to_start.md) 튜토리얼을 참고하세요.
+이제 Kanban을 애플리케이션에 적용할 준비가 되었습니다. 자세한 안내는 [How to start](how_to_start.md) 튜토리얼을 참고하세요. AI 코딩 어시스턴트로 개발한다면 [DHTMLX MCP 서버](guides/mcp-server.md)를 통해 최신 문서에 연결하세요.

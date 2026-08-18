@@ -70,4 +70,4 @@ import editor from '@site/static/img/js_kanban_editor.png';
 
 ## 下一步
 
-现在，您可以在应用程序中开始使用 Kanban 了。请参考[快速开始](how_to_start.md)教程获取指导。
+现在，您可以在应用程序中开始使用 Kanban 了。请参考[快速开始](how_to_start.md)教程获取指导。如果您使用 AI 编码助手进行开发，可以通过 [DHTMLX MCP 服务器](guides/mcp-server.md)将其连接到最新文档。

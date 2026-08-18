@@ -126,4 +126,4 @@ new kanban.Toolbar("#toolbar", {
 
 ## 下一步
 
-就这么简单。只需三个简单的步骤，您就拥有了一个可视化和管理工作流程的便捷工具。现在，您可以开始管理任务，或继续深入探索 JavaScript Kanban 的更多功能。
+就这么简单。只需三个简单的步骤，您就拥有了一个可视化和管理工作流程的便捷工具。现在，您可以开始管理任务，或继续深入探索 JavaScript Kanban 的更多功能。使用 AI 编码助手开发？通过 [DHTMLX MCP 服务器](guides/mcp-server.md)让它随时查阅最新文档。
