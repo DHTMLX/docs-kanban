@@ -19,6 +19,7 @@ In diesem Abschnitt erfahren Sie die grundlegenden Prinzipien der Arbeit mit Kan
 | [Anpassung](guides/customization.md)                   | Lernen Sie, wie Sie Kanban anpassen                       |
 | [Stilierung](guides/stylization.md)                     | Lernen Sie, wie Sie Kanban gestalten                      |
 | [Lokalisierung](guides/localization.md)                    | Lernen Sie, wie Sie Kanban lokalisieren ([Beispiel](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [DHTMLX MCP-Server](guides/mcp-server.md)                   | Verbinden Sie einen KI-Coding-Assistenten mit der aktuellen Kanban-Dokumentation |
 
 ## API-Referenz
 
