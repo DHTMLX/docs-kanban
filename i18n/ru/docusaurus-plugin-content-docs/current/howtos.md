@@ -19,6 +19,7 @@ description: На этой странице документации библи�
 | [Кастомизация](guides/customization.md)                   | Узнайте, как кастомизировать Kanban                   |
 | [Стилизация](guides/stylization.md)                     | Узнайте, как стилизовать Kanban                       |
 | [Локализация](guides/localization.md)                    | Узнайте, как локализовать Kanban ([Пример](https://snippet.dhtmlx.com/hrblf1mm?tag=kanban))|
+| [MCP-сервер DHTMLX](guides/mcp-server.md)                   | Подключите AI-ассистента к актуальной документации Kanban |
 
 ## Справочник API
 
