@@ -81,8 +81,8 @@ For details on configuring the Toolbar, read the [Configuration](guides/configur
 
 For the full configuration reference:
 
-- [Kanban properties overview](api/overview/properties_overview.md) — all Kanban configuration properties
-- [Toolbar properties overview](api/overview/toolbar_properties_overview.md) — all Toolbar configuration properties
+- [Kanban properties overview](api/overview/properties_overview.md) - all Kanban configuration properties
+- [Toolbar properties overview](api/overview/toolbar_properties_overview.md) - all Toolbar configuration properties
 
 ## Example
 

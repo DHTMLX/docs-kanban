@@ -146,62 +146,62 @@ board.setConfig({ columns, cards, rows });
 
 ## 获取数据
 
-- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — 获取指定列（及可选行）中所有卡片的数据对象
-- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — 获取指定列中所有卡片的数据对象
-- [`getCard()`](api/methods/js_kanban_getcard_method.md) — 通过 ID 获取某个卡片的数据对象
-- [`serialize()`](api/methods/js_kanban_serialize_method.md) — 以 JSON 对象形式返回 Kanban 数据
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) - 获取指定列（及可选行）中所有卡片的数据对象
+- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) - 获取指定列中所有卡片的数据对象
+- [`getCard()`](api/methods/js_kanban_getcard_method.md) - 通过 ID 获取某个卡片的数据对象
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) - 以 JSON 对象形式返回 Kanban 数据
 
 ## 获取状态
 
-- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — 获取 *DataStore* 的响应式属性
-- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — 获取 *DataStore* 的当前属性
-- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — 返回 `{ data: DataStore }`
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) - 获取 *DataStore* 的响应式属性
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) - 获取 *DataStore* 的当前属性
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) - 返回 `{ data: DataStore }`
 
 ## 导出数据
 
-- [`export.json()`](api/internal/js_kanban_json_method.md) — 将 Kanban 数据下载为 JSON 文件
+- [`export.json()`](api/internal/js_kanban_json_method.md) - 将 Kanban 数据下载为 JSON 文件
 
 ## 添加新项
 
-- [`addCard()`](api/methods/js_kanban_addcard_method.md) — 添加新卡片
-- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) — 添加新列
-- [`addRow()`](api/methods/js_kanban_addrow_method.md) — 添加新行
-- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) — 通过 ID 复制卡片
+- [`addCard()`](api/methods/js_kanban_addcard_method.md) - 添加新卡片
+- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) - 添加新列
+- [`addRow()`](api/methods/js_kanban_addrow_method.md) - 添加新行
+- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) - 通过 ID 复制卡片
 
 ## 更新项
 
-- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) — 通过 ID 更新卡片
-- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) — 通过 ID 更新列
-- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) — 通过 ID 更新行
+- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) - 通过 ID 更新卡片
+- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) - 通过 ID 更新列
+- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) - 通过 ID 更新行
 
 ## 删除项
 
-- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) — 通过 ID 移除卡片
-- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) — 通过 ID 移除列
-- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) — 通过 ID 移除行
+- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) - 通过 ID 移除卡片
+- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) - 通过 ID 移除列
+- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) - 通过 ID 移除行
 
 ## 移动项
 
-- [`moveCard()`](api/methods/js_kanban_movecard_method.md) — 将卡片移动到目标列和行
-- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) — 将列移动到新位置
-- [`moveRow()`](api/methods/js_kanban_moverow_method.md) — 将行移动到新位置
+- [`moveCard()`](api/methods/js_kanban_movecard_method.md) - 将卡片移动到目标列和行
+- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) - 将列移动到新位置
+- [`moveRow()`](api/methods/js_kanban_moverow_method.md) - 将行移动到新位置
 
 ## 管理评论
 
-- [`addComment()`](api/methods/js_kanban_addcomment_method.md) — 通过 ID 向卡片添加评论
-- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) — 通过 ID 更新评论
-- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) — 通过 ID 删除评论
+- [`addComment()`](api/methods/js_kanban_addcomment_method.md) - 通过 ID 向卡片添加评论
+- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) - 通过 ID 更新评论
+- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) - 通过 ID 删除评论
 
 ## 管理链接
 
-- [`addLink()`](api/methods/js_kanban_addlink_method.md) — 在卡片之间添加新链接
-- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) — 通过 ID 删除链接
+- [`addLink()`](api/methods/js_kanban_addlink_method.md) - 在卡片之间添加新链接
+- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) - 通过 ID 删除链接
 
 ## 管理卡片选择
 
-- [`getSelection()`](api/methods/js_kanban_getselection_method.md) — 获取当前选中卡片的 ID
-- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) — 通过 ID 选中卡片
-- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) — 通过 ID 取消选中卡片
+- [`getSelection()`](api/methods/js_kanban_getselection_method.md) - 获取当前选中卡片的 ID
+- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) - 通过 ID 选中卡片
+- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) - 通过 ID 取消选中卡片
 
 ## 示例
 

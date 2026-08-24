@@ -8,38 +8,38 @@ description: Читайте руководство по конфигурации
 
 Вы можете настраивать внешний вид и функциональность Kanban с помощью следующих свойств:
 
-- [`cardShape`](api/config/js_kanban_cardshape_config.md) — настройка внешнего вида карточек и встроенных полей
-- [`editorShape`](api/config/js_kanban_editorshape_config.md) — определение полей редактора
-- [`editor`](api/config/js_kanban_editor_config.md) — управление видимостью редактора, автосохранением и расположением
-- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) — настройка рендеринга карточек и прокрутки доски
-- [`history`](api/config/js_kanban_history_config.md) — управление историей операций с карточками
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — кастомизация внешнего вида карточек (см. раздел [Кастомизация](guides/customization.md))
-- [`locale`](api/config/js_kanban_locale_config.md) — применение локализации (см. раздел [Локализация](guides/localization.md))
-- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) — загрузка данных для карточек, колонок, строк и связей (см. раздел [Работа с данными](guides/working_with_data.md))
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) - настройка внешнего вида карточек и встроенных полей
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) - определение полей редактора
+- [`editor`](api/config/js_kanban_editor_config.md) - управление видимостью редактора, автосохранением и расположением
+- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) - настройка рендеринга карточек и прокрутки доски
+- [`history`](api/config/js_kanban_history_config.md) - управление историей операций с карточками
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - кастомизация внешнего вида карточек (см. раздел [Кастомизация](guides/customization.md))
+- [`locale`](api/config/js_kanban_locale_config.md) - применение локализации (см. раздел [Локализация](guides/localization.md))
+- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) - загрузка данных для карточек, колонок, строк и связей (см. раздел [Работа с данными](guides/working_with_data.md))
 
 ## Карточки {#cards}
 
 Доска Kanban состоит из карточек, распределённых по колонкам и строкам. Используйте свойство [`cardShape`](api/config/js_kanban_cardshape_config.md) для настройки внешнего вида карточек и встроенных полей:
 
-- `label: boolean | { show }` — метка карточки, редактируется с помощью типа [`text`](#типы-text-и-textarea)
-- `description: boolean | { show }` — описание карточки, редактируется с помощью типа [`textarea`](#типы-text-и-textarea)
-- `progress: boolean | { show }` — прогресс карточки, редактируется с помощью типа [`progress`](#тип-progress)
-- `start_date: boolean | { show, format }` — дата начала карточки, редактируется с помощью типа [`date`](#типы-date-и-daterange)
-- `end_date: boolean | { show, format }` — дата окончания карточки, редактируется с помощью типа [`date`](#типы-date-и-daterange)
-- `menu: boolean | { show, items }` — контекстное меню карточки
-- `attached: boolean | { show }` — вложения карточки, редактируются с помощью типа [`files`](#тип-files)
-- `color: boolean | { show, values }` — верхняя цветная полоска карточки, редактируется с помощью типа [`color`](#тип-color)
-- `cover: boolean | { show }` — превью-изображение карточки
-- `comments: boolean | { show }` — комментарии к карточке
-- `confirmDeletion: boolean | { show }` — диалог подтверждения удаления карточки
-- `votes: boolean | { show, clickable }` — голосование по карточке
-- `users: boolean | { show, values, maxCount }` — пользователи, назначенные на карточку, редактируются с помощью типов [`combo`, `select` или `multiselect`](#типы-combo-select-и-multiselect)
-- `priority: boolean | { show, values }` — приоритет карточки, редактируется с помощью типа [`combo` или `select`](#типы-combo-select-и-multiselect)
-- `css: (card) => string` — функция, возвращающая CSS-класс, применяемый к карточке по условию
-- `headerFields: [{ key, label, css }]` — кастомные поля карточки
+- `label: boolean | { show }` - метка карточки, редактируется с помощью типа [`text`](#типы-text-и-textarea)
+- `description: boolean | { show }` - описание карточки, редактируется с помощью типа [`textarea`](#типы-text-и-textarea)
+- `progress: boolean | { show }` - прогресс карточки, редактируется с помощью типа [`progress`](#тип-progress)
+- `start_date: boolean | { show, format }` - дата начала карточки, редактируется с помощью типа [`date`](#типы-date-и-daterange)
+- `end_date: boolean | { show, format }` - дата окончания карточки, редактируется с помощью типа [`date`](#типы-date-и-daterange)
+- `menu: boolean | { show, items }` - контекстное меню карточки
+- `attached: boolean | { show }` - вложения карточки, редактируются с помощью типа [`files`](#тип-files)
+- `color: boolean | { show, values }` - верхняя цветная полоска карточки, редактируется с помощью типа [`color`](#тип-color)
+- `cover: boolean | { show }` - превью-изображение карточки
+- `comments: boolean | { show }` - комментарии к карточке
+- `confirmDeletion: boolean | { show }` - диалог подтверждения удаления карточки
+- `votes: boolean | { show, clickable }` - голосование по карточке
+- `users: boolean | { show, values, maxCount }` - пользователи, назначенные на карточку, редактируются с помощью типов [`combo`, `select` или `multiselect`](#типы-combo-select-и-multiselect)
+- `priority: boolean | { show, values }` - приоритет карточки, редактируется с помощью типа [`combo` или `select`](#типы-combo-select-и-multiselect)
+- `css: (card) => string` - функция, возвращающая CSS-класс, применяемый к карточке по условию
+- `headerFields: [{ key, label, css }]` - кастомные поля карточки
 
 :::tip
-При активации поля в `cardShape` редактор автоматически отображает соответствующий контрол. Настройте каждый контрол через свойство [`editorShape`](api/config/js_kanban_editorshape_config.md) — доступные типы описаны в разделе [Редактор](#editor).
+При активации поля в `cardShape` редактор автоматически отображает соответствующий контрол. Настройте каждый контрол через свойство [`editorShape`](api/config/js_kanban_editorshape_config.md). Доступные типы описаны в разделе [Редактор](#editor).
 :::
 
 Следующий пример настраивает карточки с кастомными пользователями, приоритетами и кастомным полем заголовка:
@@ -98,14 +98,14 @@ new kanban.Kanban("#root", {
 
 Редактор Kanban содержит поля для управления данными карточек. Используйте свойство [`editorShape`](api/config/js_kanban_editorshape_config.md) для настройки полей редактора. Доступны следующие типы полей:
 
-- [`combo`, `select`, `multiselect`](#типы-combo-select-и-multiselect) — выпадающие списки
-- [`color`](#тип-color) — выбор цвета
-- [`text`, `textarea`](#типы-text-и-textarea) — текстовые поля
-- [`progress`](#тип-progress) — слайдер прогресса
-- [`files`](#тип-files) — загрузчик файлов
-- [`date`, `dateRange`](#типы-date-и-daterange) — одиночная дата или диапазон дат
-- [`comments`](#comments-type) — комментарии к карточке
-- [`links`](#links-type) — связи карточки
+- [`combo`, `select`, `multiselect`](#типы-combo-select-и-multiselect) - выпадающие списки
+- [`color`](#тип-color) - выбор цвета
+- [`text`, `textarea`](#типы-text-и-textarea) - текстовые поля
+- [`progress`](#тип-progress) - слайдер прогресса
+- [`files`](#тип-files) - загрузчик файлов
+- [`date`, `dateRange`](#типы-date-и-daterange) - одиночная дата или диапазон дат
+- [`comments`](#comments-type) - комментарии к карточке
+- [`links`](#links-type) - связи карточки
 
 :::info
 Отображайте редактор как боковую панель или модальное окно с помощью свойства [`editor.placement`](api/config/js_kanban_editor_config.md).
@@ -444,10 +444,10 @@ new kanban.Kanban("#root", {
 
 Свойство [`editor`](api/config/js_kanban_editor_config.md) управляет видимостью редактора, автосохранением и расположением:
 
-- [`editor.show`](api/config/js_kanban_editor_config.md) — включить или отключить редактор
-- [`editor.placement`](api/config/js_kanban_editor_config.md) — отображать редактор как `"sidebar"` или `"modal"` окно
-- [`editor.autoSave`](api/config/js_kanban_editor_config.md) — включить или отключить режим автосохранения
-- [`editor.debounce`](api/config/js_kanban_editor_config.md) — задержка перед автосохранением (применяется только с `autoSave: true`)
+- [`editor.show`](api/config/js_kanban_editor_config.md) - включить или отключить редактор
+- [`editor.placement`](api/config/js_kanban_editor_config.md) - отображать редактор как `"sidebar"` или `"modal"` окно
+- [`editor.autoSave`](api/config/js_kanban_editor_config.md) - включить или отключить режим автосохранения
+- [`editor.debounce`](api/config/js_kanban_editor_config.md) - задержка перед автосохранением (применяется только с `autoSave: true`)
 
 Следующий пример включает автосохранение с задержкой 2 секунды:
 
@@ -469,8 +469,8 @@ new kanban.Kanban("#root", {
 
 По умолчанию виджет Kanban рендерит все карточки и прокручивает всю доску целиком. Для досок с большим количеством карточек переключитесь на ленивый рендеринг или прокрутку по колонкам:
 
-- [`renderType`](api/config/js_kanban_rendertype_config.md) — установите значение `"lazy"` для рендеринга только видимых на доске карточек
-- [`scrollType`](api/config/js_kanban_scrolltype_config.md) — установите значение `"column"` для независимой прокрутки каждой колонки
+- [`renderType`](api/config/js_kanban_rendertype_config.md) - установите значение `"lazy"` для рендеринга только видимых на доске карточек
+- [`scrollType`](api/config/js_kanban_scrolltype_config.md) - установите значение `"column"` для независимой прокрутки каждой колонки
 
 Следующий пример включает ленивый рендеринг и прокрутку по колонкам:
 
@@ -488,7 +488,7 @@ new kanban.Kanban("#root", {
 :::important
 При совместном использовании `renderType: "lazy"` с любым `scrollType` задайте статическую высоту карточек через свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md). Без `cardHeight` ленивый рендеринг не отображает карточки корректно.
 
-Если `cardHeight` не указан при использовании `renderType: "lazy"` и `scrollType: "column"`, виджет применяет экспериментальное приближение высоты карточек на основе видимых полей в [`cardShape`](api/config/js_kanban_cardshape_config.md). Для досок с кастомным [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) виджет не может предсказать итоговую высоту — передайте кастомную функцию [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md), возвращающую ожидаемую высоту карточки.
+Если `cardHeight` не указан при использовании `renderType: "lazy"` и `scrollType: "column"`, виджет применяет экспериментальное приближение высоты карточек на основе видимых полей в [`cardShape`](api/config/js_kanban_cardshape_config.md). Для досок с кастомным [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) виджет не может предсказать итоговую высоту. Передайте кастомную функцию [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md), возвращающую ожидаемую высоту карточки.
 :::
 
 ## История изменений

@@ -8,38 +8,38 @@ description: 阅读 DHTMLX Kanban 配置指南。学习如何设置卡片、列�
 
 您可以通过以下属性配置 Kanban 的外观和功能：
 
-- [`cardShape`](api/config/js_kanban_cardshape_config.md) — 设置卡片外观和内置字段
-- [`editorShape`](api/config/js_kanban_editorshape_config.md) — 定义编辑器字段
-- [`editor`](api/config/js_kanban_editor_config.md) — 控制编辑器的可见性、自动保存和位置
-- [`renderType`](api/config/js_kanban_rendertype_config.md)、[`scrollType`](api/config/js_kanban_scrolltype_config.md) — 调整卡片渲染和看板滚动
-- [`history`](api/config/js_kanban_history_config.md) — 管理卡片操作历史记录
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — 自定义卡片外观（参见[自定义](guides/customization.md)章节）
-- [`locale`](api/config/js_kanban_locale_config.md) — 应用本地化（参见[本地化](guides/localization.md)章节）
-- [`cards`](api/config/js_kanban_cards_config.md)、[`columns`](api/config/js_kanban_columns_config.md)、[`rows`](api/config/js_kanban_rows_config.md)、[`links`](api/config/js_kanban_links_config.md) — 加载卡片、列、行和链接数据（参见[数据操作](guides/working_with_data.md)章节）
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) - 设置卡片外观和内置字段
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) - 定义编辑器字段
+- [`editor`](api/config/js_kanban_editor_config.md) - 控制编辑器的可见性、自动保存和位置
+- [`renderType`](api/config/js_kanban_rendertype_config.md)、[`scrollType`](api/config/js_kanban_scrolltype_config.md) - 调整卡片渲染和看板滚动
+- [`history`](api/config/js_kanban_history_config.md) - 管理卡片操作历史记录
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - 自定义卡片外观（参见[自定义](guides/customization.md)章节）
+- [`locale`](api/config/js_kanban_locale_config.md) - 应用本地化（参见[本地化](guides/localization.md)章节）
+- [`cards`](api/config/js_kanban_cards_config.md)、[`columns`](api/config/js_kanban_columns_config.md)、[`rows`](api/config/js_kanban_rows_config.md)、[`links`](api/config/js_kanban_links_config.md) - 加载卡片、列、行和链接数据（参见[数据操作](guides/working_with_data.md)章节）
 
 ## 卡片 {#cards}
 
 Kanban 看板由分布在列和行中的卡片组成。使用 [`cardShape`](api/config/js_kanban_cardshape_config.md) 属性配置卡片外观和内置字段：
 
-- `label: boolean | { show }` — 卡片标题，通过 [`text`](#text-和-textarea-类型) 类型编辑
-- `description: boolean | { show }` — 卡片描述，通过 [`textarea`](#text-和-textarea-类型) 类型编辑
-- `progress: boolean | { show }` — 卡片进度，通过 [`progress`](#progress-类型) 类型编辑
-- `start_date: boolean | { show, format }` — 卡片开始日期，通过 [`date`](#date-和-daterange-类型) 类型编辑
-- `end_date: boolean | { show, format }` — 卡片结束日期，通过 [`date`](#date-和-daterange-类型) 类型编辑
-- `menu: boolean | { show, items }` — 卡片右键菜单
-- `attached: boolean | { show }` — 卡片附件，通过 [`files`](#files-类型) 类型编辑
-- `color: boolean | { show, values }` — 卡片顶部颜色线，通过 [`color`](#color-类型) 类型编辑
-- `cover: boolean | { show }` — 卡片预览图片
-- `comments: boolean | { show }` — 卡片评论
-- `confirmDeletion: boolean | { show }` — 删除卡片的确认对话框
-- `votes: boolean | { show, clickable }` — 卡片投票
-- `users: boolean | { show, values, maxCount }` — 分配给卡片的用户，通过 [`combo`、`select` 或 `multiselect`](#comboselect-和-multiselect-类型) 类型编辑
-- `priority: boolean | { show, values }` — 卡片优先级，通过 [`combo` 或 `select`](#comboselect-和-multiselect-类型) 类型编辑
-- `css: (card) => string` — 返回有条件应用于卡片的 CSS 类的函数
-- `headerFields: [{ key, label, css }]` — 自定义卡片字段
+- `label: boolean | { show }` - 卡片标题，通过 [`text`](#text-和-textarea-类型) 类型编辑
+- `description: boolean | { show }` - 卡片描述，通过 [`textarea`](#text-和-textarea-类型) 类型编辑
+- `progress: boolean | { show }` - 卡片进度，通过 [`progress`](#progress-类型) 类型编辑
+- `start_date: boolean | { show, format }` - 卡片开始日期，通过 [`date`](#date-和-daterange-类型) 类型编辑
+- `end_date: boolean | { show, format }` - 卡片结束日期，通过 [`date`](#date-和-daterange-类型) 类型编辑
+- `menu: boolean | { show, items }` - 卡片右键菜单
+- `attached: boolean | { show }` - 卡片附件，通过 [`files`](#files-类型) 类型编辑
+- `color: boolean | { show, values }` - 卡片顶部颜色线，通过 [`color`](#color-类型) 类型编辑
+- `cover: boolean | { show }` - 卡片预览图片
+- `comments: boolean | { show }` - 卡片评论
+- `confirmDeletion: boolean | { show }` - 删除卡片的确认对话框
+- `votes: boolean | { show, clickable }` - 卡片投票
+- `users: boolean | { show, values, maxCount }` - 分配给卡片的用户，通过 [`combo`、`select` 或 `multiselect`](#comboselect-和-multiselect-类型) 类型编辑
+- `priority: boolean | { show, values }` - 卡片优先级，通过 [`combo` 或 `select`](#comboselect-和-multiselect-类型) 类型编辑
+- `css: (card) => string` - 返回有条件应用于卡片的 CSS 类的函数
+- `headerFields: [{ key, label, css }]` - 自定义卡片字段
 
 :::tip
-在 `cardShape` 中激活某个字段后，编辑器会自动显示对应的控件。通过 [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性配置各个控件——可用类型详见[编辑器](#editor)章节。
+在 `cardShape` 中激活某个字段后，编辑器会自动显示对应的控件。通过 [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性配置各个控件。可用类型详见[编辑器](#editor)章节。
 :::
 
 以下代码片段配置了带有自定义用户、优先级和自定义标题字段的卡片：
@@ -98,14 +98,14 @@ new kanban.Kanban("#root", {
 
 Kanban 编辑器包含用于管理卡片数据的字段。使用 [`editorShape`](api/config/js_kanban_editorshape_config.md) 属性配置编辑器字段。可用的字段类型如下：
 
-- [`combo`、`select`、`multiselect`](#comboselect-和-multiselect-类型) — 下拉选项
-- [`color`](#color-类型) — 颜色选择器
-- [`text`、`textarea`](#text-和-textarea-类型) — 文本输入框
-- [`progress`](#progress-类型) — 进度滑块
-- [`files`](#files-类型) — 文件上传
-- [`date`、`dateRange`](#date-和-daterange-类型) — 单个日期或日期范围
-- [`comments`](#comments-type) — 卡片评论
-- [`links`](#links-type) — 卡片链接
+- [`combo`、`select`、`multiselect`](#comboselect-和-multiselect-类型) - 下拉选项
+- [`color`](#color-类型) - 颜色选择器
+- [`text`、`textarea`](#text-和-textarea-类型) - 文本输入框
+- [`progress`](#progress-类型) - 进度滑块
+- [`files`](#files-类型) - 文件上传
+- [`date`、`dateRange`](#date-和-daterange-类型) - 单个日期或日期范围
+- [`comments`](#comments-type) - 卡片评论
+- [`links`](#links-type) - 卡片链接
 
 :::info
 通过 [`editor.placement`](api/config/js_kanban_editor_config.md) 属性将编辑器显示为侧边栏或模态窗口。
@@ -444,10 +444,10 @@ new kanban.Kanban("#root", {
 
 [`editor`](api/config/js_kanban_editor_config.md) 属性控制编辑器的可见性、自动保存和位置：
 
-- [`editor.show`](api/config/js_kanban_editor_config.md) — 启用或禁用编辑器
-- [`editor.placement`](api/config/js_kanban_editor_config.md) — 将编辑器显示为 `"sidebar"` 或 `"modal"` 窗口
-- [`editor.autoSave`](api/config/js_kanban_editor_config.md) — 启用或禁用自动保存模式
-- [`editor.debounce`](api/config/js_kanban_editor_config.md) — 自动保存前的延迟时间（仅在 `autoSave: true` 时生效）
+- [`editor.show`](api/config/js_kanban_editor_config.md) - 启用或禁用编辑器
+- [`editor.placement`](api/config/js_kanban_editor_config.md) - 将编辑器显示为 `"sidebar"` 或 `"modal"` 窗口
+- [`editor.autoSave`](api/config/js_kanban_editor_config.md) - 启用或禁用自动保存模式
+- [`editor.debounce`](api/config/js_kanban_editor_config.md) - 自动保存前的延迟时间（仅在 `autoSave: true` 时生效）
 
 以下代码片段启用自动保存并设置 2 秒延迟：
 
@@ -469,8 +469,8 @@ new kanban.Kanban("#root", {
 
 Kanban 控件默认渲染所有卡片并整体滚动看板。对于卡片数量较多的看板，可切换为懒加载渲染或按列独立滚动：
 
-- [`renderType`](api/config/js_kanban_rendertype_config.md) — 设为 `"lazy"` 仅渲染看板上可见的卡片
-- [`scrollType`](api/config/js_kanban_scrolltype_config.md) — 设为 `"column"` 使每列独立滚动
+- [`renderType`](api/config/js_kanban_rendertype_config.md) - 设为 `"lazy"` 仅渲染看板上可见的卡片
+- [`scrollType`](api/config/js_kanban_scrolltype_config.md) - 设为 `"column"` 使每列独立滚动
 
 以下代码片段启用懒加载渲染和按列独立滚动：
 
@@ -488,7 +488,7 @@ new kanban.Kanban("#root", {
 :::important
 当 `renderType: "lazy"` 与任意 `scrollType` 组合使用时，需通过 [`cardHeight`](api/config/js_kanban_cardheight_config.md) 属性为卡片设置固定高度。不设置 `cardHeight` 时，懒加载渲染将无法正确显示卡片。
 
-如果在 `renderType: "lazy"` 和 `scrollType: "column"` 同时启用时省略了 `cardHeight`，控件将根据 [`cardShape`](api/config/js_kanban_cardshape_config.md) 中可见字段对卡片高度进行实验性的近似估算。对于使用自定义 [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) 的看板，控件无法预测渲染高度——请提供一个自定义的 [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) 函数，返回卡片的预估高度。
+如果在 `renderType: "lazy"` 和 `scrollType: "column"` 同时启用时省略了 `cardHeight`，控件将根据 [`cardShape`](api/config/js_kanban_cardshape_config.md) 中可见字段对卡片高度进行实验性的近似估算。对于使用自定义 [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) 的看板，控件无法预测渲染高度。请提供一个自定义的 [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) 函数，返回卡片的预估高度。
 :::
 
 ## 变更历史

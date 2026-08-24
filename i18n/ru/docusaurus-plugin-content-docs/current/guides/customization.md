@@ -8,12 +8,12 @@ description: Используйте руководства по кастомиз
 
 Вы можете кастомизировать внешний вид и поведение Kanban с помощью следующих свойств:
 
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — отображение карточек с помощью кастомного HTML-шаблона
-- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) — изменение контекстного меню карточек, колонок и строк
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — замена шаблонов заголовков колонок
-- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) — условное применение CSS-классов
-- [`items`](api/config/toolbar_items_config.md) — изменение структуры Toolbar и добавление кастомных элементов управления
-- CSS-переменные — настройка визуальных стилей (см. раздел [Стилизация](guides/stylization.md))
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - отображение карточек с помощью кастомного HTML-шаблона
+- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) - изменение контекстного меню карточек, колонок и строк
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - замена шаблонов заголовков колонок
+- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) - условное применение CSS-классов
+- [`items`](api/config/toolbar_items_config.md) - изменение структуры Toolbar и добавление кастомных элементов управления
+- CSS-переменные - настройка визуальных стилей (см. раздел [Стилизация](guides/stylization.md))
 
 ## Кастомные карточки {#custom-cards}
 
@@ -21,10 +21,10 @@ description: Используйте руководства по кастомиз
 
 Колбэк принимает объект со следующими параметрами:
 
-- `cardFields` — данные карточки
-- `selected` — выбрана ли карточка
-- `dragging` — перетаскивается ли карточка в данный момент
-- `cardShape` — конфигурация карточки
+- `cardFields` - данные карточки
+- `selected` - выбрана ли карточка
+- `dragging` - перетаскивается ли карточка в данный момент
+- `cardShape` - конфигурация карточки
 
 Чтобы встроить элемент вызова контекстного меню в кастомный шаблон карточки, оберните иконку меню в `<div>` с атрибутом `data-menu-id=${cardFields.id}` (аналогично встроенной карточке). Виджет привязывает меню к обёртке через этот атрибут.
 
@@ -40,21 +40,21 @@ description: Используйте руководства по кастомиз
 
 По умолчанию меню карточки содержит опции **Дублировать** и **Удалить**. Доступные встроенные идентификаторы действий:
 
-- `"duplicate-card"` — дублировать карточку
-- `"delete-card"` — удалить карточку
+- `"duplicate-card"` - дублировать карточку
+- `"delete-card"` - удалить карточку
 
 ### `columnShape.menu`
 
-- `"add-card"` — добавить новую карточку в колонку
-- `"set-edit"` — переименовать колонку
-- `"move-column:left"`, `"move-column:right"` — переместить колонку влево или вправо
-- `"delete-column"` — удалить колонку
+- `"add-card"` - добавить новую карточку в колонку
+- `"set-edit"` - переименовать колонку
+- `"move-column:left"`, `"move-column:right"` - переместить колонку влево или вправо
+- `"delete-column"` - удалить колонку
 
 ### `rowShape.menu`
 
-- `"set-edit"` — переименовать строку
-- `"move-row:up"`, `"move-row:down"` — переместить строку вверх или вниз
-- `"delete-row"` — удалить строку
+- `"set-edit"` - переименовать строку
+- `"move-row:up"`, `"move-row:down"` - переместить строку вверх или вниз
+- `"delete-row"` - удалить строку
 
 Задайте `menu.items` как функцию, чтобы отображать разное меню для каждой карточки, колонки или строки. Верните `null` или `false` из функции, чтобы скрыть меню для конкретного элемента.
 
@@ -66,9 +66,9 @@ description: Используйте руководства по кастомиз
 
 Свойство [`columnShape`](api/config/js_kanban_columnshape_config.md) предоставляет шаблоны и настройки поведения заголовков колонок:
 
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) — HTML-шаблон заголовка колонки в развёрнутом состоянии
-- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — HTML-шаблон заголовка колонки в свёрнутом состоянии
-- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) — фиксация заголовков колонок при вертикальной прокрутке (по умолчанию: `true`)
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) - HTML-шаблон заголовка колонки в развёрнутом состоянии
+- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - HTML-шаблон заголовка колонки в свёрнутом состоянии
+- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) - фиксация заголовков колонок при вертикальной прокрутке (по умолчанию: `true`)
 
 Следующий фрагмент кода задаёт кастомный шаблон заголовка с иконкой сворачивания, подписью с количеством карточек и элементом вызова меню:
 
@@ -96,16 +96,16 @@ new kanban.Kanban("#root", {
 ~~~
 
 :::tip
-Чтобы `fixedHeaders` вступил в силу, задайте фиксированную высоту контейнера Kanban — тогда доска будет прокручиваться по вертикали.
+Чтобы `fixedHeaders` вступил в силу, задайте фиксированную высоту контейнера Kanban, тогда доска будет прокручиваться по вертикали.
 :::
 
 ## Условные CSS-классы {#conditional-css-classes}
 
 Чтобы применять CSS-класс условно, передайте функцию в параметр `css` свойства [`cardShape`](api/config/js_kanban_cardshape_config.md), [`columnShape`](api/config/js_kanban_columnshape_config.md) или [`rowShape`](api/config/js_kanban_rowshape_config.md). Функция возвращает имя класса на основе текущих данных:
 
-- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) — класс, применяемый к карточке
-- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) — класс, применяемый к колонке
-- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) — класс, применяемый к строке
+- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) - класс, применяемый к карточке
+- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) - класс, применяемый к колонке
+- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) - класс, применяемый к строке
 
 Следующий фрагмент кода выделяет просроченные карточки и недозагруженные колонки:
 

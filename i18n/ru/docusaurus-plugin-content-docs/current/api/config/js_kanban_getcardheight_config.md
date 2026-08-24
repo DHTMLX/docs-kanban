@@ -13,7 +13,7 @@ description: Изучите API конфигурации getCardHeight для DH
 Функция `getCardHeight` используется виджетом для оценки высоты карточек, когда свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md) не задано, а доска настроена с [`renderType: "lazy"`](api/config/js_kanban_rendertype_config.md) и [`scrollType: "column"`](api/config/js_kanban_scrolltype_config.md). Расчётные высоты позволяют виджету корректно отрисовывать скроллбар до того, как фактические карточки измерены в DOM.
 
 :::info
-Если вы задаёте свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md), виджет использует фиксированную высоту и функция `getCardHeight` не вызывается. Задание `cardHeight` — рекомендуемый способ сочетания `renderType: "lazy"` с `scrollType: "column"`.
+Если вы задаёте свойство [`cardHeight`](api/config/js_kanban_cardheight_config.md), виджет использует фиксированную высоту и функция `getCardHeight` не вызывается. Задавать `cardHeight` рекомендуется, если вы сочетаете `renderType: "lazy"` с `scrollType: "column"`.
 :::
 
 ### Использование
@@ -30,7 +30,7 @@ getCardHeight?: (cardShape: object, card: object, cardWidth: number) => number;
 - `card` - объект данных карточки
 - `cardWidth` - текущая ширина карточки в пикселях
 
-Функция должна возвращать число — расчётную высоту карточки в пикселях.
+Функция должна возвращать расчётную высоту карточки в пикселях.
 
 ### Конфигурация по умолчанию
 

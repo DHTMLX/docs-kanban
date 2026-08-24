@@ -20,8 +20,8 @@ DHTMLX Kanban 与 Svelte 兼容。完整的代码示例可在 [GitHub](https://g
 
 通过以下两种方式之一创建 Svelte 项目：
 
-- 使用 [SvelteKit](https://kit.svelte.dev/) — 推荐
-- 使用 Svelte 和 Vite（不使用 SvelteKit）— 运行：
+- 使用 [SvelteKit](https://kit.svelte.dev/) - 推荐
+- 使用 Svelte 和 Vite（不使用 SvelteKit）- 运行：
 
 ~~~json
 npm create vite@latest

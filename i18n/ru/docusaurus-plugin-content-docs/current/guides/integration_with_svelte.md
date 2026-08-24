@@ -20,8 +20,8 @@ DHTMLX Kanban совместим с Svelte. Полный пример кода �
 
 Проект на Svelte можно настроить одним из двух способов:
 
-- с помощью [SvelteKit](https://kit.svelte.dev/) — рекомендуется
-- с помощью Svelte и Vite (без SvelteKit) — выполните:
+- с помощью [SvelteKit](https://kit.svelte.dev/) - рекомендуется
+- с помощью Svelte и Vite (без SvelteKit) - выполните:
 
 ~~~json
 npm create vite@latest

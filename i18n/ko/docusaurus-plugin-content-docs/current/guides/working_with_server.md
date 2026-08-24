@@ -40,20 +40,20 @@ JavaScript Kanban에는 백엔드와의 통신을 위한 REST API를 완벽하�
 
 `RestDataProvider` 서비스는 다음과 같은 REST 메서드를 제공합니다:
 
-- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) — ***카드 데이터***에 대한 promise를 반환합니다
-- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) — ***컬럼 데이터***에 대한 promise를 반환합니다
-- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) — provider가 사용하는 기본 액션 핸들러를 반환합니다
-- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) — 임시 클라이언트 ID를 백엔드 ID로 변환하는 함수를 반환합니다
-- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) — ***링크 데이터***에 대한 promise를 반환합니다
-- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) — provider가 처리하는 액션의 내부 큐를 반환합니다
-- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) — ***행 데이터***에 대한 promise를 반환합니다
-- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) — ***사용자 데이터***에 대한 promise를 반환합니다
-- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) — 커스텀 HTTP 요청을 전송하고 promise를 반환합니다
-- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) — 모든 요청에 첨부할 커스텀 HTTP 헤더를 설정합니다
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - ***카드 데이터***에 대한 promise를 반환합니다
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - ***컬럼 데이터***에 대한 promise를 반환합니다
+- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) - provider가 사용하는 기본 액션 핸들러를 반환합니다
+- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) - 임시 클라이언트 ID를 백엔드 ID로 변환하는 함수를 반환합니다
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - ***링크 데이터***에 대한 promise를 반환합니다
+- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) - provider가 처리하는 액션의 내부 큐를 반환합니다
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - ***행 데이터***에 대한 promise를 반환합니다
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - ***사용자 데이터***에 대한 promise를 반환합니다
+- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) - 커스텀 HTTP 요청을 전송하고 promise를 반환합니다
+- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) - 모든 요청에 첨부할 커스텀 HTTP 헤더를 설정합니다
 
 ## RestDataProvider 커스터마이징
 
-`RestDataProvider`가 서버에 데이터 작업을 전송하는 방식을 커스터마이징하려면, 클래스를 확장하고 메서드를 오버라이드하세요. 대부분의 경우, 커스터마이징은 기본 액션 핸들러를 대상으로 합니다 — 예를 들어, 커스텀 이벤트에 대한 핸들러를 추가하거나 기존 작업의 payload를 확장하는 경우입니다.
+`RestDataProvider`가 서버에 데이터 작업을 전송하는 방식을 커스터마이징하려면, 클래스를 확장하고 메서드를 오버라이드하세요. 대부분의 경우, 커스터마이징은 기본 액션 핸들러를 대상으로 합니다. 예를 들어, 커스텀 이벤트에 대한 핸들러를 추가하거나 기존 작업의 payload를 확장하는 경우입니다.
 
 기본 핸들러를 유지하면서 커스텀 핸들러를 추가하려면, [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md)를 오버라이드하고 `super.getHandlers()`의 결과 위에 커스텀 항목을 병합하세요:
 
@@ -75,7 +75,7 @@ board.api.setNext(restProvider);
 ~~~
 
 :::warning
-오버라이드에서는 항상 `super.getHandlers()`를 호출하고 그 결과를 spread하세요. 기본 핸들러를 오버라이드에 직접 복사하지 마세요 — 액션 맵은 버전마다 변경될 수 있으므로, 하드코딩된 복사본은 현재 기본값과 조용히 동기화가 깨질 수 있습니다.
+오버라이드에서는 항상 `super.getHandlers()`를 호출하고 그 결과를 spread하세요. 기본 핸들러를 오버라이드에 직접 복사하지 마세요. 액션 맵은 버전마다 변경될 수 있으므로, 하드코딩된 복사본은 현재 기본값과 조용히 동기화가 깨질 수 있습니다.
 :::
 
 또 다른 일반적인 커스터마이징 대상은 [`send()`](api/provider/rest_methods/js_kanban_send_method.md) 메서드입니다. 이 메서드는 모든 기본 핸들러에서 호출됩니다. `send()`를 오버라이드하면 추가 헤더를 주입하거나, URL을 재작성하거나, 모든 서버 요청에 커스텀 로직을 적용할 수 있습니다.
@@ -218,8 +218,8 @@ events.on(handlers);
 
 스니펫에서 사용된 식별자:
 
-- `handlers` — 서버 이벤트를 처리하는 클라이언트 핸들러
-- `events` — 서버에서 수신되는 이벤트를 수신하는 `RemoteEvents` 인스턴스
+- `handlers` - 서버 이벤트를 처리하는 클라이언트 핸들러
+- `events` - 서버에서 수신되는 이벤트를 수신하는 `RemoteEvents` 인스턴스
 
 `events.on(handlers)` 호출은 서버 사이드 이벤트에 클라이언트 핸들러를 등록합니다. 이제 위젯은 서버 사이드 변경 사항을 실시간으로 반영합니다.
 
@@ -295,11 +295,11 @@ remoteEvents.on(handlers);
 
 `type` 인자는 모델 유형을 식별합니다:
 
-- `CardID` — `1`
-- `RowID` — `2`
-- `ColumnID` — `3`
-- `LinkID` — `4`
-- `CommentID` — `5`
+- `CardID` - `1`
+- `RowID` - `2`
+- `ColumnID` - `3`
+- `LinkID` - `4`
+- `CommentID` - `5`
 
 `board.api.exec()`를 호출할 때 `skipProvider: true`를 전달하면 서버로의 요청 전송을 방지할 수 있습니다. `remoteEvents.on(handlers)` 호출로 커스텀 핸들러를 등록합니다.
 
@@ -311,9 +311,9 @@ remoteEvents.on(handlers);
 
 그룹화 규칙을 정의하세요. 아래 예제에서는 다음 상태를 사용합니다:
 
-- `todo`, `unassigned` — **Open** 컬럼
-- `dev`, `testing` — **Inprogress** 컬럼
-- `merged`, `released` — **Done** 컬럼
+- `todo`, `unassigned` - **Open** 컬럼
+- `dev`, `testing` - **Inprogress** 컬럼
+- `merged`, `released` - **Done** 컬럼
 
 구현 방법은 두 가지가 있습니다:
 

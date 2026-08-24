@@ -40,20 +40,20 @@ JavaScript Kanban includes the `RestDataProvider` service, which fully supports 
 
 The `RestDataProvider` service exposes the following REST methods:
 
-- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) — gets a promise with cards data
-- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) — gets a promise with columns data
-- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) — returns the default action handlers used by the provider
-- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) — returns a function that resolves temporary client IDs to backend IDs
-- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) — gets a promise with links data
-- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) — returns the internal queue of actions processed by the provider
-- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) — gets a promise with rows data
-- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) — gets a promise with users data
-- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) — sends a custom HTTP request and returns a promise
-- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) — sets custom HTTP headers attached to every request
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - gets a promise with cards data
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - gets a promise with columns data
+- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) - returns the default action handlers used by the provider
+- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) - returns a function that resolves temporary client IDs to backend IDs
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - gets a promise with links data
+- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) - returns the internal queue of actions processed by the provider
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - gets a promise with rows data
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - gets a promise with users data
+- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) - sends a custom HTTP request and returns a promise
+- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) - sets custom HTTP headers attached to every request
 
 ## Customize RestDataProvider
 
-To customize how `RestDataProvider` sends data operations to the server, extend the class and override one of its methods. Most often, customization targets the default action handlers — for example, to add a handler for a custom event or to extend the payload of an existing operation.
+To customize how `RestDataProvider` sends data operations to the server, extend the class and override one of its methods. Most often, customization targets the default action handlers, for example to add a handler for a custom event or to extend the payload of an existing operation.
 
 To add custom handlers without losing the default ones, override [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) and merge custom entries on top of `super.getHandlers()`:
 
@@ -75,7 +75,7 @@ board.api.setNext(restProvider);
 ~~~
 
 :::warning
-Always call `super.getHandlers()` from the override and spread its result. Do not copy the default handlers into the override manually — the actions map may change between versions, so a hard-coded copy can silently get out of sync with the current defaults.
+Always call `super.getHandlers()` from the override and spread its result. Do not copy the default handlers into the override manually. The actions map may change between versions, so a hard-coded copy can silently get out of sync with the current defaults.
 :::
 
 Another common customization target is the [`send()`](api/provider/rest_methods/js_kanban_send_method.md) method, which is called by every default handler. Override `send()` to inject extra headers, rewrite URLs, or wrap every server request with custom logic.
@@ -218,8 +218,8 @@ events.on(handlers);
 
 The snippet uses the following identifiers:
 
-- `handlers` — client handlers for server events
-- `events` — `RemoteEvents` instance that listens for incoming events from the server
+- `handlers` - client handlers for server events
+- `events` - `RemoteEvents` instance that listens for incoming events from the server
 
 The `events.on(handlers)` call registers the client handlers for the server-side events. The widget now reflects server-side changes in real time.
 
@@ -295,11 +295,11 @@ The `RestDataProvider.getIDResolver()` method returns a function that synchroniz
 
 The `type` argument identifies the model type:
 
-- `CardID` — `1`
-- `RowID` — `2`
-- `ColumnID` — `3`
-- `LinkID` — `4`
-- `CommentID` — `5`
+- `CardID` - `1`
+- `RowID` - `2`
+- `ColumnID` - `3`
+- `LinkID` - `4`
+- `CommentID` - `5`
 
 To prevent the request from going to the server, pass `skipProvider: true` when you call `board.api.exec()`. The `remoteEvents.on(handlers)` call registers the custom handlers.
 
@@ -311,9 +311,9 @@ To implement grouping, add a custom field (for example, `status`) that stores th
 
 Define grouping rules. In the example below, the grouping uses these statuses:
 
-- `todo`, `unassigned` — for the **Open** column
-- `dev`, `testing` — for the **Inprogress** column
-- `merged`, `released` — for the **Done** column
+- `todo`, `unassigned` - for the **Open** column
+- `dev`, `testing` - for the **Inprogress** column
+- `merged`, `released` - for the **Done** column
 
 Two implementation paths are available:
 

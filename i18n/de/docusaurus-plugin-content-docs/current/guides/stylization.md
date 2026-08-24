@@ -8,8 +8,8 @@ description: Lesen Sie die DHTMLX Kanban-Stilierungsanleitung. Erfahren Sie, wie
 
 Sie können das Erscheinungsbild von Kanban über CSS-Klassen und CSS-Variablen anpassen. Die folgenden Eigenschaften akzeptieren CSS-Klassen für Spalten, Zeilen und Karten:
 
-- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — Funktionen, die eine CSS-Klasse bedingt basierend auf den Element-Daten zurückgeben
-- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — eine CSS-Klasse als Zeichenfolge, die einem einzelnen Element zugewiesen wird
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) - Funktionen, die eine CSS-Klasse bedingt basierend auf den Element-Daten zurückgeben
+- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) - eine CSS-Klasse als Zeichenfolge, die einem einzelnen Element zugewiesen wird
 
 Weitere Details und Codebeispiele zu den bedingten `css`-Funktionen finden Sie unter [Bedingte CSS-Klassen](guides/customization.md#conditional-css-classes).
 
@@ -32,8 +32,8 @@ const cards = [
 
 Neben elementspezifischem CSS stellt Kanban CSS-Variablen für das Theming bereit. Die Variablen gliedern sich in zwei Gruppen:
 
-- Kanban-Variablen — definieren Kanban-spezifische Stile
-- WX-Bibliotheksvariablen — gestalten gemeinsam genutzte UI-Elemente (Steuerelemente, Kalender)
+- Kanban-Variablen - definieren Kanban-spezifische Stile
+- WX-Bibliotheksvariablen - gestalten gemeinsam genutzte UI-Elemente (Steuerelemente, Kalender)
 
 :::info
 Die WX-Bibliothek stellt interne Kanban-UI-Komponenten bereit. Behandeln Sie WX-Variablen als Teil der Kanban-Stilierung.

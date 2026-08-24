@@ -24,13 +24,13 @@ getIDResolver(): (id: string | number, type: number) => string | number;
 
 이 메서드는 `idResolver(id, type)` 함수를 반환합니다:
 
-- `id` — 변환할 엔티티 ID (임시 클라이언트 측 ID 또는 일반 ID)
-- `type` — ID가 속한 모델 타입:
-    - `1` — 카드 (`CardID`)
-    - `2` — 행 (`RowID`)
-    - `3` — 열 (`ColumnID`)
-    - `4` — 링크 (`LinkID`)
-    - `5` — 댓글 (`CommentID`)
+- `id` - 변환할 엔티티 ID (임시 클라이언트 측 ID 또는 일반 ID)
+- `type` - ID가 속한 모델 타입:
+    - `1` - 카드 (`CardID`)
+    - `2` - 행 (`RowID`)
+    - `3` - 열 (`ColumnID`)
+    - `4` - 링크 (`LinkID`)
+    - `5` - 댓글 (`CommentID`)
 
 클라이언트에서 새 엔티티(카드, 열, 행, 링크, 댓글)를 생성할 때, `RestDataProvider`는 임시 클라이언트 측 ID를 할당하고 서버에서 반환한 백엔드 ID를 기억합니다. `idResolver(id, type)` 함수는 보유 중인 임시 ID에 대해 백엔드 ID를 반환합니다. 이미 백엔드 ID와 일치하는 ID의 경우 변환 없이 그대로 반환합니다.
 

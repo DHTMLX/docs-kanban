@@ -24,13 +24,13 @@ getIDResolver(): (id: string | number, type: number) => string | number;
 
 Die Methode gibt eine `idResolver(id, type)`-Funktion zurück:
 
-- `id` — die aufzulösende Entitäts-ID (eine temporäre clientseitige ID oder eine reguläre ID)
-- `type` — der Modelltyp, zu dem die ID gehört:
-    - `1` — Karte (`CardID`)
-    - `2` — Zeile (`RowID`)
-    - `3` — Spalte (`ColumnID`)
-    - `4` — Verknüpfung (`LinkID`)
-    - `5` — Kommentar (`CommentID`)
+- `id` - die aufzulösende Entitäts-ID (eine temporäre clientseitige ID oder eine reguläre ID)
+- `type` - der Modelltyp, zu dem die ID gehört:
+    - `1` - Karte (`CardID`)
+    - `2` - Zeile (`RowID`)
+    - `3` - Spalte (`ColumnID`)
+    - `4` - Verknüpfung (`LinkID`)
+    - `5` - Kommentar (`CommentID`)
 
 Wenn der Client eine neue Entität (Karte, Spalte, Zeile, Verknüpfung, Kommentar) erstellt, weist `RestDataProvider` ihr eine temporäre clientseitige ID zu und speichert die vom Server zurückgegebene Backend-ID. Die Funktion `idResolver(id, type)` gibt die Backend-ID für jede temporäre ID zurück, die sie noch enthält. Für IDs, die bereits mit der Backend-ID übereinstimmen, gibt die Funktion sie unverändert zurück.
 

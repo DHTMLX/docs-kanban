@@ -144,11 +144,11 @@ const en = {
 
 语言环境对象包含五个顶级部分：
 
-- `lang` — 语言代码（例如 `"en-US"`）
-- `kanban` — 界面标签（按钮、对话框、搜索、排序选项、链接关系）
-- `calendar` — 日期选择器标签和设置（月份和星期名称、时钟格式、周起始日、AM/PM 标记）
-- `formats` — 日期和时间格式模式（`timeFormat`、`dateFormat`、`monthYearFormat`、`yearFormat`）
-- `core` — 共享对话框按钮（`ok`、`cancel`）
+- `lang` - 语言代码（例如 `"en-US"`）
+- `kanban` - 界面标签（按钮、对话框、搜索、排序选项、链接关系）
+- `calendar` - 日期选择器标签和设置（月份和星期名称、时钟格式、周起始日、AM/PM 标记）
+- `formats` - 日期和时间格式模式（`timeFormat`、`dateFormat`、`monthYearFormat`、`yearFormat`）
+- `core` - 共享对话框按钮（`ok`、`cancel`）
 
 语言环境对象必须包含所有 Kanban 和 Toolbar 标签的翻译。
 
@@ -156,15 +156,15 @@ const en = {
 
 Kanban 导出了以下内置语言环境：
 
-- `"en"` — 英语
-- `"de"` — 德语
-- `"cn"` — 中文
-- `"es"` — 西班牙语
-- `"fr"` — 法语
-- `"it"` — 意大利语
-- `"jp"` — 日语
-- `"pt"` — 葡萄牙语
-- `"ru"` — 俄语
+- `"en"` - 英语
+- `"de"` - 德语
+- `"cn"` - 中文
+- `"es"` - 西班牙语
+- `"fr"` - 法语
+- `"it"` - 意大利语
+- `"jp"` - 日语
+- `"pt"` - 葡萄牙语
+- `"ru"` - 俄语
 
 通过 `kanban.locales["<key>"]` 访问语言环境。Toolbar 是一个独立的组件，因此需要单独为其应用语言环境。以下代码片段在初始化时将 `"cn"` 语言环境同时应用到 Kanban 和 Toolbar：
 

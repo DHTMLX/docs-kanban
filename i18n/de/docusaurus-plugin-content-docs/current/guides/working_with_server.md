@@ -40,20 +40,20 @@ JavaScript Kanban enthält den `RestDataProvider`-Service, der die REST API voll
 
 Der `RestDataProvider`-Service stellt folgende REST-Methoden bereit:
 
-- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) — gibt ein Promise mit den Kartendaten zurück
-- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) — gibt ein Promise mit den Spaltendaten zurück
-- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) — gibt die Standard-Aktions-Handler zurück, die vom Provider verwendet werden
-- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) — gibt eine Funktion zurück, die temporäre Client-IDs in Backend-IDs auflöst
-- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) — gibt ein Promise mit den Verbindungsdaten zurück
-- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) — gibt die interne Warteschlange der vom Provider verarbeiteten Aktionen zurück
-- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) — gibt ein Promise mit den Zeilendaten zurück
-- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) — gibt ein Promise mit den Benutzerdaten zurück
-- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) — sendet eine benutzerdefinierte HTTP-Anfrage und gibt ein Promise zurück
-- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) — setzt benutzerdefinierte HTTP-Header, die an jede Anfrage angehängt werden
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - gibt ein Promise mit den Kartendaten zurück
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - gibt ein Promise mit den Spaltendaten zurück
+- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) - gibt die Standard-Aktions-Handler zurück, die vom Provider verwendet werden
+- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) - gibt eine Funktion zurück, die temporäre Client-IDs in Backend-IDs auflöst
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - gibt ein Promise mit den Verbindungsdaten zurück
+- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) - gibt die interne Warteschlange der vom Provider verarbeiteten Aktionen zurück
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - gibt ein Promise mit den Zeilendaten zurück
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - gibt ein Promise mit den Benutzerdaten zurück
+- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) - sendet eine benutzerdefinierte HTTP-Anfrage und gibt ein Promise zurück
+- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) - setzt benutzerdefinierte HTTP-Header, die an jede Anfrage angehängt werden
 
 ## RestDataProvider anpassen
 
-Um anzupassen, wie `RestDataProvider` Datenoperationen an den Server sendet, erweitern Sie die Klasse und überschreiben Sie eine ihrer Methoden. Meist zielt die Anpassung auf die Standard-Aktions-Handler — zum Beispiel um einen Handler für ein benutzerdefiniertes Ereignis hinzuzufügen oder den Payload einer vorhandenen Operation zu erweitern.
+Um anzupassen, wie `RestDataProvider` Datenoperationen an den Server sendet, erweitern Sie die Klasse und überschreiben Sie eine ihrer Methoden. Meist zielt die Anpassung auf die Standard-Aktions-Handler, zum Beispiel um einen Handler für ein benutzerdefiniertes Ereignis hinzuzufügen oder den Payload einer vorhandenen Operation zu erweitern.
 
 Um eigene Handler hinzuzufügen, ohne die Standardhandler zu verlieren, überschreiben Sie [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) und führen Sie benutzerdefinierte Einträge mit `super.getHandlers()` zusammen:
 
@@ -75,7 +75,7 @@ board.api.setNext(restProvider);
 ~~~
 
 :::warning
-Rufen Sie in der Überschreibung immer `super.getHandlers()` auf und spreaden Sie das Ergebnis. Kopieren Sie die Standard-Handler nicht manuell in die Überschreibung — die Aktionszuordnung kann sich zwischen Versionen ändern, sodass eine fest kodierte Kopie stillschweigend nicht mehr mit den aktuellen Standards übereinstimmt.
+Rufen Sie in der Überschreibung immer `super.getHandlers()` auf und spreaden Sie das Ergebnis. Kopieren Sie die Standard-Handler nicht manuell in die Überschreibung. Die Aktionszuordnung kann sich zwischen Versionen ändern, sodass eine fest kodierte Kopie stillschweigend nicht mehr mit den aktuellen Standards übereinstimmt.
 :::
 
 Ein weiteres häufiges Anpassungsziel ist die Methode [`send()`](api/provider/rest_methods/js_kanban_send_method.md), die von jedem Standard-Handler aufgerufen wird. Überschreiben Sie `send()`, um zusätzliche Header einzufügen, URLs umzuschreiben oder jede Serveranfrage mit eigener Logik zu umhüllen.
@@ -218,8 +218,8 @@ events.on(handlers);
 
 Der Ausschnitt verwendet folgende Bezeichner:
 
-- `handlers` — Client-Handler für Server-Ereignisse
-- `events` — `RemoteEvents`-Instanz, die eingehende Ereignisse vom Server abhört
+- `handlers` - Client-Handler für Server-Ereignisse
+- `events` - `RemoteEvents`-Instanz, die eingehende Ereignisse vom Server abhört
 
 Der Aufruf `events.on(handlers)` registriert die Client-Handler für die serverseitigen Ereignisse. Das Widget spiegelt nun serverseitige Änderungen in Echtzeit wider.
 
@@ -295,11 +295,11 @@ Die Methode `RestDataProvider.getIDResolver()` gibt eine Funktion zurück, die C
 
 Das Argument `type` gibt den Modelltyp an:
 
-- `CardID` — `1`
-- `RowID` — `2`
-- `ColumnID` — `3`
-- `LinkID` — `4`
-- `CommentID` — `5`
+- `CardID` - `1`
+- `RowID` - `2`
+- `ColumnID` - `3`
+- `LinkID` - `4`
+- `CommentID` - `5`
 
 Um zu verhindern, dass die Anfrage an den Server gesendet wird, übergeben Sie `skipProvider: true` beim Aufruf von `board.api.exec()`. Der Aufruf `remoteEvents.on(handlers)` registriert die eigenen Handler.
 
@@ -311,9 +311,9 @@ Um die Gruppierung zu implementieren, fügen Sie ein benutzerdefiniertes Feld (z
 
 Definieren Sie Gruppierungsregeln. Im folgenden Beispiel verwendet die Gruppierung diese Status:
 
-- `todo`, `unassigned` — für die Spalte **Open**
-- `dev`, `testing` — für die Spalte **Inprogress**
-- `merged`, `released` — für die Spalte **Done**
+- `todo`, `unassigned` - für die Spalte **Open**
+- `dev`, `testing` - für die Spalte **Inprogress**
+- `merged`, `released` - für die Spalte **Done**
 
 Es stehen zwei Implementierungswege zur Verfügung:
 

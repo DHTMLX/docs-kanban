@@ -146,62 +146,62 @@ For multi-widget integration, see [Integration with DHTMLX widgets](guides/integ
 
 ## Get data
 
-- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — gets data objects of all cards in the specified column (and optionally row)
-- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — gets data objects of all cards in the specified column
-- [`getCard()`](api/methods/js_kanban_getcard_method.md) — gets a card data object by ID
-- [`serialize()`](api/methods/js_kanban_serialize_method.md) — returns Kanban data as a JSON object
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) - gets data objects of all cards in the specified column (and optionally row)
+- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) - gets data objects of all cards in the specified column
+- [`getCard()`](api/methods/js_kanban_getcard_method.md) - gets a card data object by ID
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) - returns Kanban data as a JSON object
 
 ## Get state
 
-- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — gets reactive properties of the *DataStore*
-- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — gets current properties of the *DataStore*
-- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — returns `{ data: DataStore }`
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) - gets reactive properties of the *DataStore*
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) - gets current properties of the *DataStore*
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) - returns `{ data: DataStore }`
 
 ## Export data
 
-- [`export.json()`](api/internal/js_kanban_json_method.md) — downloads Kanban data as a JSON file
+- [`export.json()`](api/internal/js_kanban_json_method.md) - downloads Kanban data as a JSON file
 
 ## Add new items
 
-- [`addCard()`](api/methods/js_kanban_addcard_method.md) — adds a new card
-- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) — adds a new column
-- [`addRow()`](api/methods/js_kanban_addrow_method.md) — adds a new row
-- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) — duplicates a card by ID
+- [`addCard()`](api/methods/js_kanban_addcard_method.md) - adds a new card
+- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) - adds a new column
+- [`addRow()`](api/methods/js_kanban_addrow_method.md) - adds a new row
+- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) - duplicates a card by ID
 
 ## Update items
 
-- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) — updates a card by ID
-- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) — updates a column by ID
-- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) — updates a row by ID
+- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) - updates a card by ID
+- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) - updates a column by ID
+- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) - updates a row by ID
 
 ## Delete items
 
-- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) — removes a card by ID
-- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) — removes a column by ID
-- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) — removes a row by ID
+- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) - removes a card by ID
+- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) - removes a column by ID
+- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) - removes a row by ID
 
 ## Move items
 
-- [`moveCard()`](api/methods/js_kanban_movecard_method.md) — moves a card to the target column and row
-- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) — moves a column to a new position
-- [`moveRow()`](api/methods/js_kanban_moverow_method.md) — moves a row to a new position
+- [`moveCard()`](api/methods/js_kanban_movecard_method.md) - moves a card to the target column and row
+- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) - moves a column to a new position
+- [`moveRow()`](api/methods/js_kanban_moverow_method.md) - moves a row to a new position
 
 ## Manage comments
 
-- [`addComment()`](api/methods/js_kanban_addcomment_method.md) — adds a comment to a card by ID
-- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) — updates a comment by ID
-- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) — deletes a comment by ID
+- [`addComment()`](api/methods/js_kanban_addcomment_method.md) - adds a comment to a card by ID
+- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) - updates a comment by ID
+- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) - deletes a comment by ID
 
 ## Manage links
 
-- [`addLink()`](api/methods/js_kanban_addlink_method.md) — adds a new link between cards
-- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) — deletes a link by ID
+- [`addLink()`](api/methods/js_kanban_addlink_method.md) - adds a new link between cards
+- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) - deletes a link by ID
 
 ## Manage card selection
 
-- [`getSelection()`](api/methods/js_kanban_getselection_method.md) — gets IDs of the currently selected cards
-- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) — selects a card by ID
-- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) — unselects a card by ID
+- [`getSelection()`](api/methods/js_kanban_getselection_method.md) - gets IDs of the currently selected cards
+- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) - selects a card by ID
+- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) - unselects a card by ID
 
 ## Example
 

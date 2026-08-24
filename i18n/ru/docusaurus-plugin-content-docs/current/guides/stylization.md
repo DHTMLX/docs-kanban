@@ -8,8 +8,8 @@ description: Ознакомьтесь с руководством по стил�
 
 Вы можете стилизовать внешний вид Kanban с помощью CSS-классов и CSS-переменных. Следующие свойства принимают CSS-классы для колонок, строк и карточек:
 
-- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — функции, возвращающие CSS-класс условно на основе данных элемента
-- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — строковый CSS-класс, применяемый к отдельному элементу
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) - функции, возвращающие CSS-класс условно на основе данных элемента
+- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) - строковый CSS-класс, применяемый к отдельному элементу
 
 Подробности и примеры кода для условных функций `css` см. в разделе [Условные CSS-классы](guides/customization.md#conditional-css-classes).
 
@@ -32,8 +32,8 @@ const cards = [
 
 Помимо CSS на уровне отдельных элементов, Kanban предоставляет CSS-переменные для тематизации. Переменные делятся на две группы:
 
-- Переменные Kanban — определяют стили, специфичные для Kanban
-- Переменные библиотеки WX — стилизуют общие элементы интерфейса (элементы управления, календари)
+- Переменные Kanban - определяют стили, специфичные для Kanban
+- Переменные библиотеки WX - стилизуют общие элементы интерфейса (элементы управления, календари)
 
 :::info
 Библиотека WX обеспечивает работу внутренних UI-компонентов Kanban. Рассматривайте переменные WX как часть стилизации Kanban.

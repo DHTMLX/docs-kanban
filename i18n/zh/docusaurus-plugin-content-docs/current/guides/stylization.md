@@ -8,8 +8,8 @@ description: 阅读 DHTMLX Kanban 样式化指南。了解如何通过 CSS 类�
 
 您可以通过 CSS 类和 CSS 变量来设置 Kanban 的外观样式。以下属性可接受针对列、行和卡片的 CSS 类：
 
-- [`columnShape.css`](api/config/js_kanban_columnshape_config.md)、[`rowShape.css`](api/config/js_kanban_rowshape_config.md)、[`cardShape.css`](api/config/js_kanban_cardshape_config.md) — 根据条目数据有条件地返回 CSS 类的函数
-- [`columns.css`](api/config/js_kanban_columns_config.md)、[`rows.css`](api/config/js_kanban_rows_config.md)、[`cards.css`](api/config/js_kanban_cards_config.md) — 分配给单个条目的字符串 CSS 类
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md)、[`rowShape.css`](api/config/js_kanban_rowshape_config.md)、[`cardShape.css`](api/config/js_kanban_cardshape_config.md) - 根据条目数据有条件地返回 CSS 类的函数
+- [`columns.css`](api/config/js_kanban_columns_config.md)、[`rows.css`](api/config/js_kanban_rows_config.md)、[`cards.css`](api/config/js_kanban_cards_config.md) - 分配给单个条目的字符串 CSS 类
 
 有关条件 `css` 函数的详细信息和代码示例，请参阅[条件 CSS 类](guides/customization.md#conditional-css-classes)。
 
@@ -32,8 +32,8 @@ const cards = [
 
 除了按条目设置 CSS 外，Kanban 还提供用于主题化的 CSS 变量。变量分为两组：
 
-- Kanban 变量 — 定义 Kanban 特有的样式
-- WX 库变量 — 设置共享 UI 元素（控件、日历）的样式
+- Kanban 变量 - 定义 Kanban 特有的样式
+- WX 库变量 - 设置共享 UI 元素（控件、日历）的样式
 
 :::info
 WX 库驱动 Kanban 内部 UI 组件。请将 WX 变量视为 Kanban 样式的一部分。
