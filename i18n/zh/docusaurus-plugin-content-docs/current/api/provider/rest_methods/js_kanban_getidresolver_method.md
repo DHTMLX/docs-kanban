@@ -24,13 +24,13 @@ getIDResolver(): (id: string | number, type: number) => string | number;
 
 该方法返回一个 `idResolver(id, type)` 函数：
 
-- `id` — 需要解析的实体 ID（临时客户端 ID 或常规 ID）
-- `type` — 该 ID 所属的模型类型：
-    - `1` — 卡片（`CardID`）
-    - `2` — 行（`RowID`）
-    - `3` — 列（`ColumnID`）
-    - `4` — 链接（`LinkID`）
-    - `5` — 评论（`CommentID`）
+- `id` - 需要解析的实体 ID（临时客户端 ID 或常规 ID）
+- `type` - 该 ID 所属的模型类型：
+    - `1` - 卡片（`CardID`）
+    - `2` - 行（`RowID`）
+    - `3` - 列（`ColumnID`）
+    - `4` - 链接（`LinkID`）
+    - `5` - 评论（`CommentID`）
 
 当客户端创建新实体（卡片、列、行、链接、评论）时，`RestDataProvider` 会为其分配一个临时客户端 ID，并记录服务器返回的后端 ID。`idResolver(id, type)` 函数会为其持有的任何临时 ID 返回对应的后端 ID。对于已与后端匹配的 ID，该函数将原样返回。
 

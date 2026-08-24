@@ -8,12 +8,12 @@ description: DHTMLX Kanban 사용자 정의 가이드를 활용하여 문서화�
 
 다음 속성을 사용하여 Kanban의 외관과 동작을 사용자 정의할 수 있습니다:
 
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — 사용자 정의 HTML 템플릿으로 카드를 렌더링합니다
-- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) — 카드, 컬럼, 행의 컨텍스트 메뉴를 수정합니다
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — 컬럼 헤더 템플릿을 교체합니다
-- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) — 조건부로 CSS 클래스를 적용합니다
-- [`items`](api/config/toolbar_items_config.md) — Toolbar 구조를 재배치하고 사용자 정의 컨트롤을 추가합니다
-- CSS 변수 — 시각적 스타일을 조정합니다([Stylization](guides/stylization.md) 섹션 참고)
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - 사용자 정의 HTML 템플릿으로 카드를 렌더링합니다
+- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) - 카드, 컬럼, 행의 컨텍스트 메뉴를 수정합니다
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - 컬럼 헤더 템플릿을 교체합니다
+- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) - 조건부로 CSS 클래스를 적용합니다
+- [`items`](api/config/toolbar_items_config.md) - Toolbar 구조를 재배치하고 사용자 정의 컨트롤을 추가합니다
+- CSS 변수 - 시각적 스타일을 조정합니다([Stylization](guides/stylization.md) 섹션 참고)
 
 ## 사용자 정의 카드 {#custom-cards}
 
@@ -21,10 +21,10 @@ description: DHTMLX Kanban 사용자 정의 가이드를 활용하여 문서화�
 
 콜백 함수는 다음 매개변수를 가진 객체를 받습니다:
 
-- `cardFields` — 카드 데이터
-- `selected` — 카드 선택 여부
-- `dragging` — 카드 드래그 중 여부
-- `cardShape` — 카드 설정
+- `cardFields` - 카드 데이터
+- `selected` - 카드 선택 여부
+- `dragging` - 카드 드래그 중 여부
+- `cardShape` - 카드 설정
 
 사용자 정의 카드 템플릿에 컨텍스트 메뉴 트리거를 포함하려면, 메뉴 아이콘을 `data-menu-id=${cardFields.id}` 속성을 가진 `<div>`로 감싸세요(기본 제공 카드와 동일한 구조). 위젯은 이 속성을 통해 래퍼에 메뉴를 바인딩합니다.
 
@@ -40,21 +40,21 @@ description: DHTMLX Kanban 사용자 정의 가이드를 활용하여 문서화�
 
 기본적으로 카드 메뉴에는 **복제** 및 **삭제** 옵션이 표시됩니다. 사용 가능한 기본 제공 액션 ID:
 
-- `"duplicate-card"` — 카드 복제
-- `"delete-card"` — 카드 삭제
+- `"duplicate-card"` - 카드 복제
+- `"delete-card"` - 카드 삭제
 
 ### `columnShape.menu`
 
-- `"add-card"` — 컬럼에 새 카드 추가
-- `"set-edit"` — 컬럼 이름 변경
-- `"move-column:left"`, `"move-column:right"` — 컬럼을 왼쪽 또는 오른쪽으로 이동
-- `"delete-column"` — 컬럼 삭제
+- `"add-card"` - 컬럼에 새 카드 추가
+- `"set-edit"` - 컬럼 이름 변경
+- `"move-column:left"`, `"move-column:right"` - 컬럼을 왼쪽 또는 오른쪽으로 이동
+- `"delete-column"` - 컬럼 삭제
 
 ### `rowShape.menu`
 
-- `"set-edit"` — 행 이름 변경
-- `"move-row:up"`, `"move-row:down"` — 행을 위 또는 아래로 이동
-- `"delete-row"` — 행 삭제
+- `"set-edit"` - 행 이름 변경
+- `"move-row:up"`, `"move-row:down"` - 행을 위 또는 아래로 이동
+- `"delete-row"` - 행 삭제
 
 `menu.items`에 함수를 설정하면 카드, 컬럼, 행별로 다른 메뉴를 렌더링할 수 있습니다. 특정 항목에서 메뉴를 숨기려면 함수에서 `null` 또는 `false`를 반환하세요.
 
@@ -66,9 +66,9 @@ description: DHTMLX Kanban 사용자 정의 가이드를 활용하여 문서화�
 
 [`columnShape`](api/config/js_kanban_columnshape_config.md) 속성은 컬럼 헤더에 대한 템플릿과 동작을 제공합니다:
 
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) — 확장 상태의 컬럼 헤더 HTML 템플릿
-- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — 축소 상태의 컬럼 헤더 HTML 템플릿
-- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) — 세로 스크롤 시 컬럼 헤더 고정(기본값: `true`)
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) - 확장 상태의 컬럼 헤더 HTML 템플릿
+- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - 축소 상태의 컬럼 헤더 HTML 템플릿
+- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) - 세로 스크롤 시 컬럼 헤더 고정(기본값: `true`)
 
 다음 코드 예제는 접기 아이콘, 카드 수가 포함된 레이블, 메뉴 트리거를 가진 사용자 정의 헤더 템플릿을 설정합니다:
 
@@ -103,9 +103,9 @@ new kanban.Kanban("#root", {
 
 CSS 클래스를 조건부로 적용하려면 [`cardShape`](api/config/js_kanban_cardshape_config.md), [`columnShape`](api/config/js_kanban_columnshape_config.md), [`rowShape`](api/config/js_kanban_rowshape_config.md)의 `css` 매개변수에 함수를 전달하세요. 함수는 현재 데이터를 기반으로 클래스 이름을 반환합니다:
 
-- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) — 카드에 적용할 클래스
-- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) — 컬럼에 적용할 클래스
-- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) — 행에 적용할 클래스
+- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) - 카드에 적용할 클래스
+- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) - 컬럼에 적용할 클래스
+- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) - 행에 적용할 클래스
 
 다음 코드 예제는 기한이 지난 카드와 카드 수가 적은 컬럼을 강조 표시합니다:
 

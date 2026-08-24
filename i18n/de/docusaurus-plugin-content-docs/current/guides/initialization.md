@@ -81,8 +81,8 @@ Weitere Informationen zur Konfiguration der Toolbar finden Sie im Abschnitt [Kon
 
 Die vollständige Konfigurationsreferenz:
 
-- [Übersicht der Kanban-Eigenschaften](api/overview/properties_overview.md) — alle Kanban-Konfigurationseigenschaften
-- [Übersicht der Toolbar-Eigenschaften](api/overview/toolbar_properties_overview.md) — alle Toolbar-Konfigurationseigenschaften
+- [Übersicht der Kanban-Eigenschaften](api/overview/properties_overview.md) - alle Kanban-Konfigurationseigenschaften
+- [Übersicht der Toolbar-Eigenschaften](api/overview/toolbar_properties_overview.md) - alle Toolbar-Konfigurationseigenschaften
 
 ## Beispiel
 

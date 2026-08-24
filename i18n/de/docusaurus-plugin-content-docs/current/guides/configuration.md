@@ -8,38 +8,38 @@ description: Lesen Sie das DHTMLX-Kanban-Konfigurationshandbuch. Erfahren Sie, w
 
 Das Aussehen und die Funktionalität von Kanban können Sie mit den folgenden Eigenschaften konfigurieren:
 
-- [`cardShape`](api/config/js_kanban_cardshape_config.md) — Erscheinungsbild und integrierte Felder der Karten festlegen
-- [`editorShape`](api/config/js_kanban_editorshape_config.md) — Editor-Felder definieren
-- [`editor`](api/config/js_kanban_editor_config.md) — Sichtbarkeit, Autosave und Platzierung des Editors steuern
-- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) — Karten-Rendering und Board-Scrollen anpassen
-- [`history`](api/config/js_kanban_history_config.md) — Historie der Kartenoperationen verwalten
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — Erscheinungsbild der Karten anpassen (siehe Abschnitt [Customization](guides/customization.md))
-- [`locale`](api/config/js_kanban_locale_config.md) — eine Sprache anwenden (siehe Abschnitt [Localization](guides/localization.md))
-- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) — Daten für Karten, Spalten, Zeilen und Verknüpfungen laden (siehe Abschnitt [Working with data](guides/working_with_data.md))
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) - Erscheinungsbild und integrierte Felder der Karten festlegen
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) - Editor-Felder definieren
+- [`editor`](api/config/js_kanban_editor_config.md) - Sichtbarkeit, Autosave und Platzierung des Editors steuern
+- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) - Karten-Rendering und Board-Scrollen anpassen
+- [`history`](api/config/js_kanban_history_config.md) - Historie der Kartenoperationen verwalten
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - Erscheinungsbild der Karten anpassen (siehe Abschnitt [Customization](guides/customization.md))
+- [`locale`](api/config/js_kanban_locale_config.md) - eine Sprache anwenden (siehe Abschnitt [Localization](guides/localization.md))
+- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) - Daten für Karten, Spalten, Zeilen und Verknüpfungen laden (siehe Abschnitt [Working with data](guides/working_with_data.md))
 
 ## Karten {#cards}
 
 Das Kanban-Board besteht aus Karten, die auf Spalten und Zeilen verteilt sind. Verwenden Sie die [`cardShape`](api/config/js_kanban_cardshape_config.md) Eigenschaft, um das Erscheinungsbild und die integrierten Felder der Karten zu konfigurieren:
 
-- `label: boolean | { show }` — Kartenbezeichnung, bearbeitet mit dem Typ [`text`](#text-und-textarea-typen)
-- `description: boolean | { show }` — Kartenbeschreibung, bearbeitet mit dem Typ [`textarea`](#text-und-textarea-typen)
-- `progress: boolean | { show }` — Kartenfortschritt, bearbeitet mit dem Typ [`progress`](#progress-typ)
-- `start_date: boolean | { show, format }` — Startdatum der Karte, bearbeitet mit dem Typ [`date`](#date-und-daterange-typen)
-- `end_date: boolean | { show, format }` — Enddatum der Karte, bearbeitet mit dem Typ [`date`](#date-und-daterange-typen)
-- `menu: boolean | { show, items }` — Kontextmenü der Karte
-- `attached: boolean | { show }` — Dateianhang der Karte, bearbeitet mit dem Typ [`files`](#files-typ)
-- `color: boolean | { show, values }` — obere Farblinie der Karte, bearbeitet mit dem Typ [`color`](#color-typ)
-- `cover: boolean | { show }` — Vorschaubild der Karte
-- `comments: boolean | { show }` — Kommentare zur Karte
-- `confirmDeletion: boolean | { show }` — Bestätigungsdialog zum Löschen der Karte
-- `votes: boolean | { show, clickable }` — Abstimmungsmöglichkeit bei der Karte
-- `users: boolean | { show, values, maxCount }` — der Karte zugewiesene Benutzer, bearbeitet mit den Typen [`combo`, `select` oder `multiselect`](#combo-select-und-multiselect-typen)
-- `priority: boolean | { show, values }` — Kartenpriorität, bearbeitet mit dem Typ [`combo` oder `select`](#combo-select-und-multiselect-typen)
-- `css: (card) => string` — Funktion, die eine CSS-Klasse zurückgibt, die bedingt auf eine Karte angewendet wird
-- `headerFields: [{ key, label, css }]` — benutzerdefinierte Kartenfelder
+- `label: boolean | { show }` - Kartenbezeichnung, bearbeitet mit dem Typ [`text`](#text-und-textarea-typen)
+- `description: boolean | { show }` - Kartenbeschreibung, bearbeitet mit dem Typ [`textarea`](#text-und-textarea-typen)
+- `progress: boolean | { show }` - Kartenfortschritt, bearbeitet mit dem Typ [`progress`](#progress-typ)
+- `start_date: boolean | { show, format }` - Startdatum der Karte, bearbeitet mit dem Typ [`date`](#date-und-daterange-typen)
+- `end_date: boolean | { show, format }` - Enddatum der Karte, bearbeitet mit dem Typ [`date`](#date-und-daterange-typen)
+- `menu: boolean | { show, items }` - Kontextmenü der Karte
+- `attached: boolean | { show }` - Dateianhang der Karte, bearbeitet mit dem Typ [`files`](#files-typ)
+- `color: boolean | { show, values }` - obere Farblinie der Karte, bearbeitet mit dem Typ [`color`](#color-typ)
+- `cover: boolean | { show }` - Vorschaubild der Karte
+- `comments: boolean | { show }` - Kommentare zur Karte
+- `confirmDeletion: boolean | { show }` - Bestätigungsdialog zum Löschen der Karte
+- `votes: boolean | { show, clickable }` - Abstimmungsmöglichkeit bei der Karte
+- `users: boolean | { show, values, maxCount }` - der Karte zugewiesene Benutzer, bearbeitet mit den Typen [`combo`, `select` oder `multiselect`](#combo-select-und-multiselect-typen)
+- `priority: boolean | { show, values }` - Kartenpriorität, bearbeitet mit dem Typ [`combo` oder `select`](#combo-select-und-multiselect-typen)
+- `css: (card) => string` - Funktion, die eine CSS-Klasse zurückgibt, die bedingt auf eine Karte angewendet wird
+- `headerFields: [{ key, label, css }]` - benutzerdefinierte Kartenfelder
 
 :::tip
-Wenn Sie ein Feld in `cardShape` aktivieren, zeigt der Editor das entsprechende Steuerelement automatisch an. Konfigurieren Sie jedes Steuerelement über die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft — verfügbare Typen finden Sie unter [Editor](#editor).
+Wenn Sie ein Feld in `cardShape` aktivieren, zeigt der Editor das entsprechende Steuerelement automatisch an. Konfigurieren Sie jedes Steuerelement über die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft. Verfügbare Typen finden Sie unter [Editor](#editor).
 :::
 
 Das folgende Code-Beispiel konfiguriert Karten mit benutzerdefinierten Benutzern, Prioritäten und einem benutzerdefinierten Header-Feld:
@@ -98,14 +98,14 @@ Sofern Sie keine Karteneinstellungen über die [`cardShape`](api/config/js_kanba
 
 Der Kanban-Editor enthält Felder zur Verwaltung der Kartendaten. Verwenden Sie die [`editorShape`](api/config/js_kanban_editorshape_config.md) Eigenschaft, um Editor-Felder zu konfigurieren. Folgende Feldtypen stehen zur Verfügung:
 
-- [`combo`, `select`, `multiselect`](#combo-select-und-multiselect-typen) — Dropdown-Optionen
-- [`color`](#color-typ) — Farbauswahl
-- [`text`, `textarea`](#text-und-textarea-typen) — Texteingaben
-- [`progress`](#progress-typ) — Fortschrittsregler
-- [`files`](#files-typ) — Datei-Upload
-- [`date`, `dateRange`](#date-und-daterange-typen) — einzelnes Datum oder Datumsbereich
-- [`comments`](#comments-type) — Kartenkommentare
-- [`links`](#links-type) — Kartenverknüpfungen
+- [`combo`, `select`, `multiselect`](#combo-select-und-multiselect-typen) - Dropdown-Optionen
+- [`color`](#color-typ) - Farbauswahl
+- [`text`, `textarea`](#text-und-textarea-typen) - Texteingaben
+- [`progress`](#progress-typ) - Fortschrittsregler
+- [`files`](#files-typ) - Datei-Upload
+- [`date`, `dateRange`](#date-und-daterange-typen) - einzelnes Datum oder Datumsbereich
+- [`comments`](#comments-type) - Kartenkommentare
+- [`links`](#links-type) - Kartenverknüpfungen
 
 :::info
 Zeigen Sie den Editor als Seitenleiste oder modales Fenster an, indem Sie die [`editor.placement`](api/config/js_kanban_editor_config.md) Eigenschaft verwenden.
@@ -444,10 +444,10 @@ Sofern Sie keine Editor-Einstellungen über die [`editorShape`](api/config/js_ka
 
 Die [`editor`](api/config/js_kanban_editor_config.md) Eigenschaft steuert Sichtbarkeit, Autosave und Platzierung des Editors:
 
-- [`editor.show`](api/config/js_kanban_editor_config.md) — Editor aktivieren oder deaktivieren
-- [`editor.placement`](api/config/js_kanban_editor_config.md) — Editor als `"sidebar"` oder `"modal"`-Fenster anzeigen
-- [`editor.autoSave`](api/config/js_kanban_editor_config.md) — Autosave-Modus aktivieren oder deaktivieren
-- [`editor.debounce`](api/config/js_kanban_editor_config.md) — Verzögerung vor dem automatischen Speichern (gilt nur mit `autoSave: true`)
+- [`editor.show`](api/config/js_kanban_editor_config.md) - Editor aktivieren oder deaktivieren
+- [`editor.placement`](api/config/js_kanban_editor_config.md) - Editor als `"sidebar"` oder `"modal"`-Fenster anzeigen
+- [`editor.autoSave`](api/config/js_kanban_editor_config.md) - Autosave-Modus aktivieren oder deaktivieren
+- [`editor.debounce`](api/config/js_kanban_editor_config.md) - Verzögerung vor dem automatischen Speichern (gilt nur mit `autoSave: true`)
 
 Das folgende Code-Beispiel aktiviert Autosave mit einer Verzögerung von 2 Sekunden:
 
@@ -469,8 +469,8 @@ new kanban.Kanban("#root", {
 
 Standardmäßig rendert das Kanban-Widget alle Karten und scrollt das gesamte Board. Bei Boards mit vielen Karten können Sie auf Lazy Rendering oder spaltenweises Scrollen umschalten:
 
-- [`renderType`](api/config/js_kanban_rendertype_config.md) — auf `"lazy"` setzen, um nur die auf dem Board sichtbaren Karten zu rendern
-- [`scrollType`](api/config/js_kanban_scrolltype_config.md) — auf `"column"` setzen, um jede Spalte unabhängig zu scrollen
+- [`renderType`](api/config/js_kanban_rendertype_config.md) - auf `"lazy"` setzen, um nur die auf dem Board sichtbaren Karten zu rendern
+- [`scrollType`](api/config/js_kanban_scrolltype_config.md) - auf `"column"` setzen, um jede Spalte unabhängig zu scrollen
 
 Das folgende Code-Beispiel aktiviert Lazy Rendering und spaltenweises Scrollen:
 
@@ -488,7 +488,7 @@ new kanban.Kanban("#root", {
 :::important
 Wenn Sie `renderType: "lazy"` mit einem beliebigen `scrollType` kombinieren, legen Sie über die [`cardHeight`](api/config/js_kanban_cardheight_config.md) Eigenschaft eine statische Höhe für Karten fest. Ohne `cardHeight` werden Karten beim Lazy Rendering nicht korrekt angezeigt.
 
-Wenn `cardHeight` bei `renderType: "lazy"` und `scrollType: "column"` weggelassen wird, greift das Widget auf eine experimentelle Näherung der Kartenhöhen auf Basis der sichtbaren Felder in [`cardShape`](api/config/js_kanban_cardshape_config.md) zurück. Bei Boards mit einem benutzerdefinierten [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) kann das Widget die gerenderte Höhe nicht vorhersagen — stellen Sie eine benutzerdefinierte Funktion [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) bereit, die die geschätzte Kartenhöhe zurückgibt.
+Wenn `cardHeight` bei `renderType: "lazy"` und `scrollType: "column"` weggelassen wird, greift das Widget auf eine experimentelle Näherung der Kartenhöhen auf Basis der sichtbaren Felder in [`cardShape`](api/config/js_kanban_cardshape_config.md) zurück. Bei Boards mit einem benutzerdefinierten [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) kann das Widget die gerenderte Höhe nicht vorhersagen. Stellen Sie eine benutzerdefinierte Funktion [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) bereit, die die geschätzte Kartenhöhe zurückgibt.
 :::
 
 ## Änderungsverlauf

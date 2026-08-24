@@ -8,12 +8,12 @@ description: Nutzen Sie die DHTMLX-Kanban-Anpassungsanleitungen, um Vorlagen, Me
 
 Das Erscheinungsbild und Verhalten von Kanban können Sie mit folgenden Eigenschaften anpassen:
 
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — Karten mit einer eigenen HTML-Vorlage rendern
-- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) — das Kontextmenü für Karten, Spalten und Zeilen anpassen
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — Spaltenheader-Vorlagen ersetzen
-- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) — CSS-Klassen bedingt anwenden
-- [`items`](api/config/toolbar_items_config.md) — Toolbar-Struktur neu anordnen und eigene Steuerelemente hinzufügen
-- CSS-Variablen — visuelle Stile anpassen (siehe den Abschnitt [Stilisierung](guides/stylization.md))
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - Karten mit einer eigenen HTML-Vorlage rendern
+- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) - das Kontextmenü für Karten, Spalten und Zeilen anpassen
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - Spaltenheader-Vorlagen ersetzen
+- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) - CSS-Klassen bedingt anwenden
+- [`items`](api/config/toolbar_items_config.md) - Toolbar-Struktur neu anordnen und eigene Steuerelemente hinzufügen
+- CSS-Variablen - visuelle Stile anpassen (siehe den Abschnitt [Stilisierung](guides/stylization.md))
 
 ## Eigene Karten {#custom-cards}
 
@@ -21,10 +21,10 @@ Verwenden Sie die [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md)-
 
 Der Callback erhält ein Objekt mit folgenden Parametern:
 
-- `cardFields` — Kartendaten
-- `selected` — ob die Karte ausgewählt ist
-- `dragging` — ob die Karte gerade verschoben wird
-- `cardShape` — Kartenkonfiguration
+- `cardFields` - Kartendaten
+- `selected` - ob die Karte ausgewählt ist
+- `dragging` - ob die Karte gerade verschoben wird
+- `cardShape` - Kartenkonfiguration
 
 Um in einer eigenen Kartenvorlage einen Kontextmenü-Auslöser einzubetten, umschließen Sie das Menüsymbol mit einem `<div>` mit dem Attribut `data-menu-id=${cardFields.id}` (dieselbe Struktur wie bei der eingebauten Karte). Das Widget bindet das Menü über dieses Attribut an den Container.
 
@@ -40,21 +40,21 @@ Konfigurieren Sie das Kontextmenü für Karten, Spalten und Zeilen über die Eig
 
 Standardmäßig zeigt das Kartenmenü die Optionen **Duplizieren** und **Löschen**. Verfügbare eingebaute Aktions-IDs:
 
-- `"duplicate-card"` — die Karte duplizieren
-- `"delete-card"` — die Karte löschen
+- `"duplicate-card"` - die Karte duplizieren
+- `"delete-card"` - die Karte löschen
 
 ### `columnShape.menu`
 
-- `"add-card"` — eine neue Karte zur Spalte hinzufügen
-- `"set-edit"` — die Spalte umbenennen
-- `"move-column:left"`, `"move-column:right"` — die Spalte nach links oder rechts verschieben
-- `"delete-column"` — die Spalte löschen
+- `"add-card"` - eine neue Karte zur Spalte hinzufügen
+- `"set-edit"` - die Spalte umbenennen
+- `"move-column:left"`, `"move-column:right"` - die Spalte nach links oder rechts verschieben
+- `"delete-column"` - die Spalte löschen
 
 ### `rowShape.menu`
 
-- `"set-edit"` — die Zeile umbenennen
-- `"move-row:up"`, `"move-row:down"` — die Zeile nach oben oder unten verschieben
-- `"delete-row"` — die Zeile löschen
+- `"set-edit"` - die Zeile umbenennen
+- `"move-row:up"`, `"move-row:down"` - die Zeile nach oben oder unten verschieben
+- `"delete-row"` - die Zeile löschen
 
 Setzen Sie `menu.items` auf eine Funktion, um pro Karte, Spalte oder Zeile ein unterschiedliches Menü anzuzeigen. Geben Sie `null` oder `false` aus der Funktion zurück, um das Menü für ein bestimmtes Element auszublenden.
 
@@ -66,9 +66,9 @@ Das folgende Demo wendet ein eigenes Kontextmenü an:
 
 Die [`columnShape`](api/config/js_kanban_columnshape_config.md)-Eigenschaft stellt Vorlagen und Verhalten für Spaltenheader bereit:
 
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) — HTML-Vorlage des Spaltenheaders im ausgeklappten Zustand
-- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — HTML-Vorlage des Spaltenheaders im eingeklappten Zustand
-- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) — Spaltenheader beim vertikalen Scrollen einfrieren (Standard: `true`)
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) - HTML-Vorlage des Spaltenheaders im ausgeklappten Zustand
+- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - HTML-Vorlage des Spaltenheaders im eingeklappten Zustand
+- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) - Spaltenheader beim vertikalen Scrollen einfrieren (Standard: `true`)
 
 Der folgende Codeausschnitt setzt eine eigene Headervorlage mit einem Einklapp-Symbol, einem Label mit Kartenanzahl und einem Menüauslöser:
 
@@ -103,9 +103,9 @@ Damit `fixedHeaders` wirksam wird, legen Sie eine feste Höhe am Kanban-Containe
 
 Um eine CSS-Klasse bedingt anzuwenden, übergeben Sie eine Funktion an den `css`-Parameter von [`cardShape`](api/config/js_kanban_cardshape_config.md), [`columnShape`](api/config/js_kanban_columnshape_config.md) oder [`rowShape`](api/config/js_kanban_rowshape_config.md). Die Funktion gibt einen Klassennamen basierend auf den aktuellen Daten zurück:
 
-- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) — Klasse, die auf eine Karte angewendet wird
-- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) — Klasse, die auf eine Spalte angewendet wird
-- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) — Klasse, die auf eine Zeile angewendet wird
+- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) - Klasse, die auf eine Karte angewendet wird
+- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) - Klasse, die auf eine Spalte angewendet wird
+- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) - Klasse, die auf eine Zeile angewendet wird
 
 Der folgende Codeausschnitt hebt überfällige Karten und gering ausgelastete Spalten hervor:
 

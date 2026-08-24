@@ -144,11 +144,11 @@ const en = {
 
 로케일 객체는 다섯 개의 최상위 섹션으로 구성됩니다:
 
-- `lang` — 언어 코드 (예: `"en-US"`)
-- `kanban` — UI 라벨 (버튼, 다이얼로그, 검색, 정렬 옵션, 링크 관계)
-- `calendar` — 날짜 선택기 라벨 및 설정 (월·요일 이름, 시계 형식, 주 시작일, AM/PM 마커)
-- `formats` — 날짜 및 시간 형식 패턴 (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
-- `core` — 공유 다이얼로그 버튼 (`ok`, `cancel`)
+- `lang` - 언어 코드 (예: `"en-US"`)
+- `kanban` - UI 라벨 (버튼, 다이얼로그, 검색, 정렬 옵션, 링크 관계)
+- `calendar` - 날짜 선택기 라벨 및 설정 (월·요일 이름, 시계 형식, 주 시작일, AM/PM 마커)
+- `formats` - 날짜 및 시간 형식 패턴 (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
+- `core` - 공유 다이얼로그 버튼 (`ok`, `cancel`)
 
 로케일 객체에는 Kanban과 Toolbar의 모든 라벨에 대한 번역이 포함되어야 합니다.
 
@@ -156,15 +156,15 @@ const en = {
 
 Kanban은 다음과 같은 내장 로케일을 내보냅니다:
 
-- `"en"` — 영어
-- `"de"` — 독일어
-- `"cn"` — 중국어
-- `"es"` — 스페인어
-- `"fr"` — 프랑스어
-- `"it"` — 이탈리아어
-- `"jp"` — 일본어
-- `"pt"` — 포르투갈어
-- `"ru"` — 러시아어
+- `"en"` - 영어
+- `"de"` - 독일어
+- `"cn"` - 중국어
+- `"es"` - 스페인어
+- `"fr"` - 프랑스어
+- `"it"` - 이탈리아어
+- `"jp"` - 일본어
+- `"pt"` - 포르투갈어
+- `"ru"` - 러시아어
 
 로케일은 `kanban.locales["<key>"]`를 통해 접근할 수 있습니다. Toolbar는 별도의 컴포넌트이므로 로케일을 Toolbar에 독립적으로 적용해야 합니다. 다음 코드 스니펫은 초기화 시 Kanban과 Toolbar 모두에 `"cn"` 로케일을 적용합니다:
 

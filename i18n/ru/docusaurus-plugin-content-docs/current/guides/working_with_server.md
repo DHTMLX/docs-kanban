@@ -40,20 +40,20 @@ JavaScript Kanban поддерживает как клиентские, так �
 
 Сервис `RestDataProvider` предоставляет следующие REST-методы:
 
-- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) — возвращает promise с данными карточек
-- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) — возвращает promise с данными колонок
-- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) — возвращает стандартные обработчики действий, используемые провайдером
-- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) — возвращает функцию, которая разрешает временные client ID в server ID
-- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) — возвращает promise с данными связей
-- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) — возвращает внутреннюю очередь действий, обрабатываемых провайдером
-- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) — возвращает promise с данными строк
-- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) — возвращает promise с данными пользователей
-- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) — отправляет произвольный HTTP-запрос и возвращает promise
-- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) — устанавливает пользовательские HTTP-заголовки, прикрепляемые к каждому запросу
+- [`getCards()`](api/provider/rest_methods/js_kanban_getcards_method.md) - возвращает promise с данными карточек
+- [`getColumns()`](api/provider/rest_methods/js_kanban_getcolumns_method.md) - возвращает promise с данными колонок
+- [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) - возвращает стандартные обработчики действий, используемые провайдером
+- [`getIDResolver()`](api/provider/rest_methods/js_kanban_getidresolver_method.md) - возвращает функцию, которая разрешает временные client ID в server ID
+- [`getLinks()`](api/provider/rest_methods/js_kanban_getlinks_method.md) - возвращает promise с данными связей
+- [`getQueue()`](api/provider/rest_methods/js_kanban_getqueue_method.md) - возвращает внутреннюю очередь действий, обрабатываемых провайдером
+- [`getRows()`](api/provider/rest_methods/js_kanban_getrows_method.md) - возвращает promise с данными строк
+- [`getUsers()`](api/provider/rest_methods/js_kanban_getusers_method.md) - возвращает promise с данными пользователей
+- [`send()`](api/provider/rest_methods/js_kanban_send_method.md) - отправляет произвольный HTTP-запрос и возвращает promise
+- [`setHeaders()`](api/provider/rest_methods/js_kanban_setheaders_method.md) - устанавливает пользовательские HTTP-заголовки, прикрепляемые к каждому запросу
 
 ## Кастомизация RestDataProvider
 
-Чтобы изменить порядок отправки операций с данными на сервер, расширьте класс `RestDataProvider` и переопределите один из его методов. Чаще всего кастомизация направлена на стандартные обработчики действий — например, чтобы добавить обработчик для пользовательского события или расширить payload существующей операции.
+Чтобы изменить порядок отправки операций с данными на сервер, расширьте класс `RestDataProvider` и переопределите один из его методов. Чаще всего кастомизация направлена на стандартные обработчики действий, например чтобы добавить обработчик для пользовательского события или расширить payload существующей операции.
 
 Чтобы добавить пользовательские обработчики без потери стандартных, переопределите [`getHandlers()`](api/provider/rest_methods/js_kanban_gethandlers_method.md) и объедините пользовательские записи поверх `super.getHandlers()`:
 
@@ -75,10 +75,10 @@ board.api.setNext(restProvider);
 ~~~
 
 :::warning
-Всегда вызывайте `super.getHandlers()` в переопределении и разворачивайте его результат. Не копируйте стандартные обработчики вручную — карта действий может меняться между версиями, и жёстко заданная копия может незаметно рассинхронизироваться с актуальными значениями по умолчанию.
+Всегда вызывайте `super.getHandlers()` в переопределении и разворачивайте его результат. Не копируйте стандартные обработчики вручную. Карта действий может меняться между версиями, и жёстко заданная копия может незаметно рассинхронизироваться с актуальными значениями по умолчанию.
 :::
 
-Ещё одна распространённая цель кастомизации — метод [`send()`](api/provider/rest_methods/js_kanban_send_method.md), который вызывается каждым стандартным обработчиком. Переопределите `send()`, чтобы добавить дополнительные заголовки, изменить URL или обернуть каждый запрос к серверу пользовательской логикой.
+Часто кастомизируют и метод [`send()`](api/provider/rest_methods/js_kanban_send_method.md), который вызывается каждым стандартным обработчиком. Переопределите `send()`, чтобы добавить дополнительные заголовки, изменить URL или обернуть каждый запрос к серверу пользовательской логикой.
 
 ## Взаимодействие с backend
 
@@ -218,8 +218,8 @@ events.on(handlers);
 
 В фрагменте используются следующие идентификаторы:
 
-- `handlers` — клиентские обработчики для серверных событий
-- `events` — экземпляр `RemoteEvents`, прослушивающий входящие события от сервера
+- `handlers` - клиентские обработчики для серверных событий
+- `events` - экземпляр `RemoteEvents`, прослушивающий входящие события от сервера
 
 Вызов `events.on(handlers)` регистрирует клиентские обработчики для серверных событий. Теперь виджет отражает изменения на стороне сервера в реальном времени.
 
@@ -295,11 +295,11 @@ remoteEvents.on(handlers);
 
 Аргумент `type` определяет тип модели:
 
-- `CardID` — `1`
-- `RowID` — `2`
-- `ColumnID` — `3`
-- `LinkID` — `4`
-- `CommentID` — `5`
+- `CardID` - `1`
+- `RowID` - `2`
+- `ColumnID` - `3`
+- `LinkID` - `4`
+- `CommentID` - `5`
 
 Чтобы предотвратить отправку запроса на сервер, передайте `skipProvider: true` при вызове `board.api.exec()`. Вызов `remoteEvents.on(handlers)` регистрирует пользовательские обработчики.
 
@@ -311,9 +311,9 @@ remoteEvents.on(handlers);
 
 Определите правила группировки. В примере ниже используются следующие статусы:
 
-- `todo`, `unassigned` — для колонки **Open**
-- `dev`, `testing` — для колонки **Inprogress**
-- `merged`, `released` — для колонки **Done**
+- `todo`, `unassigned` - для колонки **Open**
+- `dev`, `testing` - для колонки **Inprogress**
+- `merged`, `released` - для колонки **Done**
 
 Доступны два варианта реализации:
 

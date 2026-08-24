@@ -8,35 +8,35 @@ description: DHTMLX Kanban 구성 가이드를 확인하세요. 카드, 열, 행
 
 Kanban의 외관과 기능은 다음 속성으로 구성할 수 있습니다:
 
-- [`cardShape`](api/config/js_kanban_cardshape_config.md) — 카드 외관 및 내장 필드 설정
-- [`editorShape`](api/config/js_kanban_editorshape_config.md) — 에디터 필드 정의
-- [`editor`](api/config/js_kanban_editor_config.md) — 에디터 표시 여부, 자동 저장, 배치 제어
-- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) — 카드 렌더링 및 보드 스크롤 조정
-- [`history`](api/config/js_kanban_history_config.md) — 카드 작업 기록 관리
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — 카드 외관 커스터마이즈([커스터마이징](guides/customization.md) 섹션 참고)
-- [`locale`](api/config/js_kanban_locale_config.md) — 로케일 적용([로컬라이제이션](guides/localization.md) 섹션 참고)
-- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) — 카드, 컬럼, 행, 링크 데이터 로드([데이터 작업](guides/working_with_data.md) 섹션 참고)
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) - 카드 외관 및 내장 필드 설정
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) - 에디터 필드 정의
+- [`editor`](api/config/js_kanban_editor_config.md) - 에디터 표시 여부, 자동 저장, 배치 제어
+- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) - 카드 렌더링 및 보드 스크롤 조정
+- [`history`](api/config/js_kanban_history_config.md) - 카드 작업 기록 관리
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - 카드 외관 커스터마이즈([커스터마이징](guides/customization.md) 섹션 참고)
+- [`locale`](api/config/js_kanban_locale_config.md) - 로케일 적용([로컬라이제이션](guides/localization.md) 섹션 참고)
+- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) - 카드, 컬럼, 행, 링크 데이터 로드([데이터 작업](guides/working_with_data.md) 섹션 참고)
 
 ## 카드 {#cards}
 
 Kanban 보드는 컬럼과 행에 분배된 카드로 구성됩니다. [`cardShape`](api/config/js_kanban_cardshape_config.md) 속성으로 카드 외관과 내장 필드를 설정할 수 있습니다:
 
-- `label: boolean | { show }` — 카드 레이블, [`text`](#text-and-textarea-types) 타입으로 편집
-- `description: boolean | { show }` — 카드 설명, [`textarea`](#text-and-textarea-types) 타입으로 편집
-- `progress: boolean | { show }` — 카드 진행률, [`progress`](#progress-type) 타입으로 편집
-- `start_date: boolean | { show, format }` — 카드 시작일, [`date`](#date-and-daterange-types) 타입으로 편집
-- `end_date: boolean | { show, format }` — 카드 종료일, [`date`](#date-and-daterange-types) 타입으로 편집
-- `menu: boolean | { show, items }` — 카드 컨텍스트 메뉴
-- `attached: boolean | { show }` — 카드 첨부파일, [`files`](#files-type) 타입으로 편집
-- `color: boolean | { show, values }` — 카드 상단 색상 라인, [`color`](#color-type) 타입으로 편집
-- `cover: boolean | { show }` — 카드 미리보기 이미지
-- `comments: boolean | { show }` — 카드 댓글
-- `confirmDeletion: boolean | { show }` — 카드 삭제 확인 다이얼로그
-- `votes: boolean | { show, clickable }` — 카드 투표
-- `users: boolean | { show, values, maxCount }` — 카드에 할당된 사용자, [`combo`, `select`, 또는 `multiselect`](#combo-select-and-multiselect-types) 타입으로 편집
-- `priority: boolean | { show, values }` — 카드 우선순위, [`combo` 또는 `select`](#combo-select-and-multiselect-types) 타입으로 편집
-- `css: (card) => string` — 카드에 조건부로 적용할 CSS 클래스를 반환하는 함수
-- `headerFields: [{ key, label, css }]` — 커스텀 카드 필드
+- `label: boolean | { show }` - 카드 레이블, [`text`](#text-and-textarea-types) 타입으로 편집
+- `description: boolean | { show }` - 카드 설명, [`textarea`](#text-and-textarea-types) 타입으로 편집
+- `progress: boolean | { show }` - 카드 진행률, [`progress`](#progress-type) 타입으로 편집
+- `start_date: boolean | { show, format }` - 카드 시작일, [`date`](#date-and-daterange-types) 타입으로 편집
+- `end_date: boolean | { show, format }` - 카드 종료일, [`date`](#date-and-daterange-types) 타입으로 편집
+- `menu: boolean | { show, items }` - 카드 컨텍스트 메뉴
+- `attached: boolean | { show }` - 카드 첨부파일, [`files`](#files-type) 타입으로 편집
+- `color: boolean | { show, values }` - 카드 상단 색상 라인, [`color`](#color-type) 타입으로 편집
+- `cover: boolean | { show }` - 카드 미리보기 이미지
+- `comments: boolean | { show }` - 카드 댓글
+- `confirmDeletion: boolean | { show }` - 카드 삭제 확인 다이얼로그
+- `votes: boolean | { show, clickable }` - 카드 투표
+- `users: boolean | { show, values, maxCount }` - 카드에 할당된 사용자, [`combo`, `select`, 또는 `multiselect`](#combo-select-and-multiselect-types) 타입으로 편집
+- `priority: boolean | { show, values }` - 카드 우선순위, [`combo` 또는 `select`](#combo-select-and-multiselect-types) 타입으로 편집
+- `css: (card) => string` - 카드에 조건부로 적용할 CSS 클래스를 반환하는 함수
+- `headerFields: [{ key, label, css }]` - 커스텀 카드 필드
 
 :::tip
 `cardShape`에서 필드를 활성화하면 에디터에 해당 컨트롤이 자동으로 표시됩니다. 각 컨트롤은 [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성으로 설정할 수 있습니다. 사용 가능한 타입은 [에디터](#editor) 섹션을 참고하세요.
@@ -98,14 +98,14 @@ new kanban.Kanban("#root", {
 
 Kanban 에디터는 카드 데이터 관리를 위한 필드로 구성됩니다. [`editorShape`](api/config/js_kanban_editorshape_config.md) 속성으로 에디터 필드를 설정할 수 있습니다. 사용 가능한 필드 타입은 다음과 같습니다:
 
-- [`combo`, `select`, `multiselect`](#combo-select-and-multiselect-types) — 드롭다운 옵션
-- [`color`](#color-type) — 색상 선택기
-- [`text`, `textarea`](#text-and-textarea-types) — 텍스트 입력
-- [`progress`](#progress-type) — 진행률 슬라이더
-- [`files`](#files-type) — 파일 업로더
-- [`date`, `dateRange`](#date-and-daterange-types) — 단일 날짜 또는 날짜 범위
-- [`comments`](#comments-type) — 카드 댓글
-- [`links`](#links-type) — 카드 링크
+- [`combo`, `select`, `multiselect`](#combo-select-and-multiselect-types) - 드롭다운 옵션
+- [`color`](#color-type) - 색상 선택기
+- [`text`, `textarea`](#text-and-textarea-types) - 텍스트 입력
+- [`progress`](#progress-type) - 진행률 슬라이더
+- [`files`](#files-type) - 파일 업로더
+- [`date`, `dateRange`](#date-and-daterange-types) - 단일 날짜 또는 날짜 범위
+- [`comments`](#comments-type) - 카드 댓글
+- [`links`](#links-type) - 카드 링크
 
 :::info
 [`editor.placement`](api/config/js_kanban_editor_config.md) 속성으로 에디터를 사이드바 또는 모달 창으로 표시할 수 있습니다.
@@ -444,10 +444,10 @@ new kanban.Kanban("#root", {
 
 [`editor`](api/config/js_kanban_editor_config.md) 속성으로 에디터 표시 여부, 자동 저장, 배치를 제어할 수 있습니다:
 
-- [`editor.show`](api/config/js_kanban_editor_config.md) — 에디터 활성화 또는 비활성화
-- [`editor.placement`](api/config/js_kanban_editor_config.md) — 에디터를 `"sidebar"` 또는 `"modal"` 창으로 표시
-- [`editor.autoSave`](api/config/js_kanban_editor_config.md) — 자동 저장 모드 활성화 또는 비활성화
-- [`editor.debounce`](api/config/js_kanban_editor_config.md) — 자동 저장 전 지연 시간(`autoSave: true`에서만 적용)
+- [`editor.show`](api/config/js_kanban_editor_config.md) - 에디터 활성화 또는 비활성화
+- [`editor.placement`](api/config/js_kanban_editor_config.md) - 에디터를 `"sidebar"` 또는 `"modal"` 창으로 표시
+- [`editor.autoSave`](api/config/js_kanban_editor_config.md) - 자동 저장 모드 활성화 또는 비활성화
+- [`editor.debounce`](api/config/js_kanban_editor_config.md) - 자동 저장 전 지연 시간(`autoSave: true`에서만 적용)
 
 다음 코드 스니펫은 2초 지연 자동 저장을 활성화합니다:
 
@@ -469,8 +469,8 @@ new kanban.Kanban("#root", {
 
 Kanban 위젯은 기본적으로 모든 카드를 렌더링하고 전체 보드를 스크롤합니다. 카드가 많은 보드의 경우 지연 렌더링 또는 컬럼별 스크롤로 전환할 수 있습니다:
 
-- [`renderType`](api/config/js_kanban_rendertype_config.md) — `"lazy"`로 설정하면 보드에 보이는 카드만 렌더링
-- [`scrollType`](api/config/js_kanban_scrolltype_config.md) — `"column"`으로 설정하면 각 컬럼을 독립적으로 스크롤
+- [`renderType`](api/config/js_kanban_rendertype_config.md) - `"lazy"`로 설정하면 보드에 보이는 카드만 렌더링
+- [`scrollType`](api/config/js_kanban_scrolltype_config.md) - `"column"`으로 설정하면 각 컬럼을 독립적으로 스크롤
 
 다음 코드 스니펫은 지연 렌더링과 컬럼별 스크롤을 활성화합니다:
 

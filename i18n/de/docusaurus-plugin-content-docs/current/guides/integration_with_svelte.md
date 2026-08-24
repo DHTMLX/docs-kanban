@@ -20,8 +20,8 @@ Installieren Sie [Vite](https://vite.dev/) (optional) und [Node.js](https://node
 
 Richten Sie ein Svelte-Projekt auf eine der folgenden Arten ein:
 
-- mit [SvelteKit](https://kit.svelte.dev/) — empfohlen
-- mit Svelte und Vite (ohne SvelteKit) — führen Sie aus:
+- mit [SvelteKit](https://kit.svelte.dev/) - empfohlen
+- mit Svelte und Vite (ohne SvelteKit) - führen Sie aus:
 
 ~~~json
 npm create vite@latest

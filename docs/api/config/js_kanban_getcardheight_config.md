@@ -30,7 +30,7 @@ The callback function takes the following arguments:
 - `card` - the data object of the card
 - `cardWidth` - the current width of the card in pixels
 
-The function must return a number — the estimated height of the card in pixels.
+The function must return the estimated height of the card in pixels.
 
 ### Default config
 

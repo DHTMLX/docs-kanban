@@ -146,62 +146,62 @@ Für die Integration mit mehreren Widgets siehe [Integration mit DHTMLX-Widgets]
 
 ## Daten abrufen
 
-- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — gibt Datenobjekte aller Karten der angegebenen Spalte (und optional Zeile) zurück
-- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — gibt Datenobjekte aller Karten der angegebenen Spalte zurück
-- [`getCard()`](api/methods/js_kanban_getcard_method.md) — gibt ein Datenobjekt einer Karte anhand der ID zurück
-- [`serialize()`](api/methods/js_kanban_serialize_method.md) — gibt die Kanban-Daten als JSON-Objekt zurück
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) - gibt Datenobjekte aller Karten der angegebenen Spalte (und optional Zeile) zurück
+- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) - gibt Datenobjekte aller Karten der angegebenen Spalte zurück
+- [`getCard()`](api/methods/js_kanban_getcard_method.md) - gibt ein Datenobjekt einer Karte anhand der ID zurück
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) - gibt die Kanban-Daten als JSON-Objekt zurück
 
 ## Status abrufen
 
-- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — gibt die reaktiven Eigenschaften des *DataStore* zurück
-- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — gibt die aktuellen Eigenschaften des *DataStore* zurück
-- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — gibt `{ data: DataStore }` zurück
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) - gibt die reaktiven Eigenschaften des *DataStore* zurück
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) - gibt die aktuellen Eigenschaften des *DataStore* zurück
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) - gibt `{ data: DataStore }` zurück
 
 ## Daten exportieren
 
-- [`export.json()`](api/internal/js_kanban_json_method.md) — lädt die Kanban-Daten als JSON-Datei herunter
+- [`export.json()`](api/internal/js_kanban_json_method.md) - lädt die Kanban-Daten als JSON-Datei herunter
 
 ## Neue Elemente hinzufügen
 
-- [`addCard()`](api/methods/js_kanban_addcard_method.md) — fügt eine neue Karte hinzu
-- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) — fügt eine neue Spalte hinzu
-- [`addRow()`](api/methods/js_kanban_addrow_method.md) — fügt eine neue Zeile hinzu
-- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) — dupliziert eine Karte anhand der ID
+- [`addCard()`](api/methods/js_kanban_addcard_method.md) - fügt eine neue Karte hinzu
+- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) - fügt eine neue Spalte hinzu
+- [`addRow()`](api/methods/js_kanban_addrow_method.md) - fügt eine neue Zeile hinzu
+- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) - dupliziert eine Karte anhand der ID
 
 ## Elemente aktualisieren
 
-- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) — aktualisiert eine Karte anhand der ID
-- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) — aktualisiert eine Spalte anhand der ID
-- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) — aktualisiert eine Zeile anhand der ID
+- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) - aktualisiert eine Karte anhand der ID
+- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) - aktualisiert eine Spalte anhand der ID
+- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) - aktualisiert eine Zeile anhand der ID
 
 ## Elemente löschen
 
-- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) — entfernt eine Karte anhand der ID
-- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) — entfernt eine Spalte anhand der ID
-- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) — entfernt eine Zeile anhand der ID
+- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) - entfernt eine Karte anhand der ID
+- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) - entfernt eine Spalte anhand der ID
+- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) - entfernt eine Zeile anhand der ID
 
 ## Elemente verschieben
 
-- [`moveCard()`](api/methods/js_kanban_movecard_method.md) — verschiebt eine Karte in die Zielspalte und -zeile
-- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) — verschiebt eine Spalte an eine neue Position
-- [`moveRow()`](api/methods/js_kanban_moverow_method.md) — verschiebt eine Zeile an eine neue Position
+- [`moveCard()`](api/methods/js_kanban_movecard_method.md) - verschiebt eine Karte in die Zielspalte und -zeile
+- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) - verschiebt eine Spalte an eine neue Position
+- [`moveRow()`](api/methods/js_kanban_moverow_method.md) - verschiebt eine Zeile an eine neue Position
 
 ## Kommentare verwalten
 
-- [`addComment()`](api/methods/js_kanban_addcomment_method.md) — fügt einer Karte anhand der ID einen Kommentar hinzu
-- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) — aktualisiert einen Kommentar anhand der ID
-- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) — löscht einen Kommentar anhand der ID
+- [`addComment()`](api/methods/js_kanban_addcomment_method.md) - fügt einer Karte anhand der ID einen Kommentar hinzu
+- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) - aktualisiert einen Kommentar anhand der ID
+- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) - löscht einen Kommentar anhand der ID
 
 ## Links verwalten
 
-- [`addLink()`](api/methods/js_kanban_addlink_method.md) — fügt einen neuen Link zwischen Karten hinzu
-- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) — löscht einen Link anhand der ID
+- [`addLink()`](api/methods/js_kanban_addlink_method.md) - fügt einen neuen Link zwischen Karten hinzu
+- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) - löscht einen Link anhand der ID
 
 ## Kartenauswahl verwalten
 
-- [`getSelection()`](api/methods/js_kanban_getselection_method.md) — gibt die IDs der aktuell ausgewählten Karten zurück
-- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) — wählt eine Karte anhand der ID aus
-- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) — hebt die Auswahl einer Karte anhand der ID auf
+- [`getSelection()`](api/methods/js_kanban_getselection_method.md) - gibt die IDs der aktuell ausgewählten Karten zurück
+- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) - wählt eine Karte anhand der ID aus
+- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) - hebt die Auswahl einer Karte anhand der ID auf
 
 ## Beispiel
 
