@@ -8,38 +8,38 @@ description: Read the DHTMLX Kanban configuration guide. Learn how to set up car
 
 You can configure the Kanban appearance and functionality with the following properties:
 
-- [`cardShape`](api/config/js_kanban_cardshape_config.md) — set up card appearance and built-in fields
-- [`editorShape`](api/config/js_kanban_editorshape_config.md) — define editor fields
-- [`editor`](api/config/js_kanban_editor_config.md) — control editor visibility, autosave, and placement
-- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) — adjust card rendering and board scrolling
-- [`history`](api/config/js_kanban_history_config.md) — manage history of card operations
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — customize card appearance (see the [Customization](guides/customization.md) section)
-- [`locale`](api/config/js_kanban_locale_config.md) — apply a locale (see the [Localization](guides/localization.md) section)
-- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) — load data for cards, columns, rows, and links (see the [Working with data](guides/working_with_data.md) section)
+- [`cardShape`](api/config/js_kanban_cardshape_config.md) - set up card appearance and built-in fields
+- [`editorShape`](api/config/js_kanban_editorshape_config.md) - define editor fields
+- [`editor`](api/config/js_kanban_editor_config.md) - control editor visibility, autosave, and placement
+- [`renderType`](api/config/js_kanban_rendertype_config.md), [`scrollType`](api/config/js_kanban_scrolltype_config.md) - adjust card rendering and board scrolling
+- [`history`](api/config/js_kanban_history_config.md) - manage history of card operations
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - customize card appearance (see the [Customization](guides/customization.md) section)
+- [`locale`](api/config/js_kanban_locale_config.md) - apply a locale (see the [Localization](guides/localization.md) section)
+- [`cards`](api/config/js_kanban_cards_config.md), [`columns`](api/config/js_kanban_columns_config.md), [`rows`](api/config/js_kanban_rows_config.md), [`links`](api/config/js_kanban_links_config.md) - load data for cards, columns, rows, and links (see the [Working with data](guides/working_with_data.md) section)
 
 ## Cards
 
 The Kanban board consists of cards distributed into columns and rows. Use the [`cardShape`](api/config/js_kanban_cardshape_config.md) property to configure card appearance and built-in fields:
 
-- `label: boolean | { show }` — card label, edited with the [`text`](#text-and-textarea-types) type
-- `description: boolean | { show }` — card description, edited with the [`textarea`](#text-and-textarea-types) type
-- `progress: boolean | { show }` — card progress, edited with the [`progress`](#progress-type) type
-- `start_date: boolean | { show, format }` — card start date, edited with the [`date`](#date-and-daterange-types) type
-- `end_date: boolean | { show, format }` — card end date, edited with the [`date`](#date-and-daterange-types) type
-- `menu: boolean | { show, items }` — card context menu
-- `attached: boolean | { show }` — card attachment, edited with the [`files`](#files-type) type
-- `color: boolean | { show, values }` — top color line of the card, edited with the [`color`](#color-type) type
-- `cover: boolean | { show }` — card preview image
-- `comments: boolean | { show }` — card comments
-- `confirmDeletion: boolean | { show }` — confirmation dialog for card deletion
-- `votes: boolean | { show, clickable }` — card votes
-- `users: boolean | { show, values, maxCount }` — users assigned to the card, edited with the [`combo`, `select`, or `multiselect`](#combo-select-and-multiselect-types) types
-- `priority: boolean | { show, values }` — card priority, edited with the [`combo` or `select`](#combo-select-and-multiselect-types) type
-- `css: (card) => string` — function that returns a CSS class applied to a card conditionally
-- `headerFields: [{ key, label, css }]` — custom card fields
+- `label: boolean | { show }` - card label, edited with the [`text`](#text-and-textarea-types) type
+- `description: boolean | { show }` - card description, edited with the [`textarea`](#text-and-textarea-types) type
+- `progress: boolean | { show }` - card progress, edited with the [`progress`](#progress-type) type
+- `start_date: boolean | { show, format }` - card start date, edited with the [`date`](#date-and-daterange-types) type
+- `end_date: boolean | { show, format }` - card end date, edited with the [`date`](#date-and-daterange-types) type
+- `menu: boolean | { show, items }` - card context menu
+- `attached: boolean | { show }` - card attachment, edited with the [`files`](#files-type) type
+- `color: boolean | { show, values }` - top color line of the card, edited with the [`color`](#color-type) type
+- `cover: boolean | { show }` - card preview image
+- `comments: boolean | { show }` - card comments
+- `confirmDeletion: boolean | { show }` - confirmation dialog for card deletion
+- `votes: boolean | { show, clickable }` - card votes
+- `users: boolean | { show, values, maxCount }` - users assigned to the card, edited with the [`combo`, `select`, or `multiselect`](#combo-select-and-multiselect-types) types
+- `priority: boolean | { show, values }` - card priority, edited with the [`combo` or `select`](#combo-select-and-multiselect-types) type
+- `css: (card) => string` - function that returns a CSS class applied to a card conditionally
+- `headerFields: [{ key, label, css }]` - custom card fields
 
 :::tip
-When you activate a field in `cardShape`, the editor displays the matching control automatically. Configure each control through the [`editorShape`](api/config/js_kanban_editorshape_config.md) property — see [Editor](#editor) for the available types.
+When you activate a field in `cardShape`, the editor displays the matching control automatically. Configure each control through the [`editorShape`](api/config/js_kanban_editorshape_config.md) property. See [Editor](#editor) for the available types.
 :::
 
 The following code snippet configures cards with custom users, priorities, and a custom header field:
@@ -98,14 +98,14 @@ If you do not specify card settings through the [`cardShape`](api/config/js_kanb
 
 The Kanban editor contains fields for managing card data. Use the [`editorShape`](api/config/js_kanban_editorshape_config.md) property to configure editor fields. The following field types are available:
 
-- [`combo`, `select`, `multiselect`](#combo-select-and-multiselect-types) — dropdown options
-- [`color`](#color-type) — color picker
-- [`text`, `textarea`](#text-and-textarea-types) — text inputs
-- [`progress`](#progress-type) — progress slider
-- [`files`](#files-type) — file uploader
-- [`date`, `dateRange`](#date-and-daterange-types) — single date or date range
-- [`comments`](#comments-type) — card comments
-- [`links`](#links-type) — card links
+- [`combo`, `select`, `multiselect`](#combo-select-and-multiselect-types) - dropdown options
+- [`color`](#color-type) - color picker
+- [`text`, `textarea`](#text-and-textarea-types) - text inputs
+- [`progress`](#progress-type) - progress slider
+- [`files`](#files-type) - file uploader
+- [`date`, `dateRange`](#date-and-daterange-types) - single date or date range
+- [`comments`](#comments-type) - card comments
+- [`links`](#links-type) - card links
 
 :::info
 Display the editor as a sidebar or modal window with the [`editor.placement`](api/config/js_kanban_editor_config.md) property.
@@ -444,10 +444,10 @@ If you do not specify editor settings through the [`editorShape`](api/config/js_
 
 The [`editor`](api/config/js_kanban_editor_config.md) property controls editor visibility, autosave, and placement:
 
-- [`editor.show`](api/config/js_kanban_editor_config.md) — enable or disable the editor
-- [`editor.placement`](api/config/js_kanban_editor_config.md) — display the editor as a `"sidebar"` or `"modal"` window
-- [`editor.autoSave`](api/config/js_kanban_editor_config.md) — enable or disable autosave mode
-- [`editor.debounce`](api/config/js_kanban_editor_config.md) — delay before autosaving (applies only with `autoSave: true`)
+- [`editor.show`](api/config/js_kanban_editor_config.md) - enable or disable the editor
+- [`editor.placement`](api/config/js_kanban_editor_config.md) - display the editor as a `"sidebar"` or `"modal"` window
+- [`editor.autoSave`](api/config/js_kanban_editor_config.md) - enable or disable autosave mode
+- [`editor.debounce`](api/config/js_kanban_editor_config.md) - delay before autosaving (applies only with `autoSave: true`)
 
 The following code snippet enables autosave with a 2-second delay:
 
@@ -469,8 +469,8 @@ new kanban.Kanban("#root", {
 
 The Kanban widget renders all cards and scrolls the entire board by default. For boards with many cards, switch to lazy rendering or per-column scrolling:
 
-- [`renderType`](api/config/js_kanban_rendertype_config.md) — set to `"lazy"` to render only the cards visible on the board
-- [`scrollType`](api/config/js_kanban_scrolltype_config.md) — set to `"column"` to scroll each column independently
+- [`renderType`](api/config/js_kanban_rendertype_config.md) - set to `"lazy"` to render only the cards visible on the board
+- [`scrollType`](api/config/js_kanban_scrolltype_config.md) - set to `"column"` to scroll each column independently
 
 The following code snippet enables lazy rendering and per-column scrolling:
 
@@ -488,7 +488,7 @@ new kanban.Kanban("#root", {
 :::important
 When you combine `renderType: "lazy"` with any `scrollType`, set a static height for cards through the [`cardHeight`](api/config/js_kanban_cardheight_config.md) property. Without `cardHeight`, lazy rendering does not display cards correctly.
 
-If `cardHeight` is omitted with `renderType: "lazy"` and `scrollType: "column"`, the widget falls back to an experimental approximation of card heights based on the visible fields in [`cardShape`](api/config/js_kanban_cardshape_config.md). For boards that use a custom [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md), the widget cannot predict the rendered height — supply a custom [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) function that returns the estimated card height.
+If `cardHeight` is omitted with `renderType: "lazy"` and `scrollType: "column"`, the widget falls back to an experimental approximation of card heights based on the visible fields in [`cardShape`](api/config/js_kanban_cardshape_config.md). For boards that use a custom [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md), the widget cannot predict the rendered height. Supply a custom [`getCardHeight(cardShape, card, cardWidth)`](api/config/js_kanban_getcardheight_config.md) function that returns the estimated card height.
 :::
 
 ## History of changes

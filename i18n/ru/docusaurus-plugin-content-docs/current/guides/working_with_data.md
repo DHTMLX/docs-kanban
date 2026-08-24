@@ -146,62 +146,62 @@ board.setConfig({ columns, cards, rows });
 
 ## Получение данных
 
-- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) — возвращает объекты данных всех cards в указанной column (и, опционально, row)
-- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) — возвращает объекты данных всех cards в указанной column
-- [`getCard()`](api/methods/js_kanban_getcard_method.md) — возвращает объект данных card по ID
-- [`serialize()`](api/methods/js_kanban_serialize_method.md) — возвращает данные Kanban в виде JSON-объекта
+- [`getAreaCards()`](api/methods/js_kanban_getareacards_method.md) - возвращает объекты данных всех cards в указанной column (и, опционально, row)
+- [`getColumnCards()`](api/methods/js_kanban_getcolumncards_method.md) - возвращает объекты данных всех cards в указанной column
+- [`getCard()`](api/methods/js_kanban_getcard_method.md) - возвращает объект данных card по ID
+- [`serialize()`](api/methods/js_kanban_serialize_method.md) - возвращает данные Kanban в виде JSON-объекта
 
 ## Получение состояния
 
-- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) — возвращает реактивные свойства *DataStore*
-- [`api.getState()`](api/internal/js_kanban_getstate_method.md) — возвращает текущие свойства *DataStore*
-- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) — возвращает `{ data: DataStore }`
+- [`api.getReactiveState()`](api/internal/js_kanban_getreactivestate_method.md) - возвращает реактивные свойства *DataStore*
+- [`api.getState()`](api/internal/js_kanban_getstate_method.md) - возвращает текущие свойства *DataStore*
+- [`api.getStores()`](api/internal/js_kanban_getstores_method.md) - возвращает `{ data: DataStore }`
 
 ## Экспорт данных
 
-- [`export.json()`](api/internal/js_kanban_json_method.md) — скачивает данные Kanban в виде JSON-файла
+- [`export.json()`](api/internal/js_kanban_json_method.md) - скачивает данные Kanban в виде JSON-файла
 
 ## Добавление новых элементов
 
-- [`addCard()`](api/methods/js_kanban_addcard_method.md) — добавляет новую card
-- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) — добавляет новую column
-- [`addRow()`](api/methods/js_kanban_addrow_method.md) — добавляет новую row
-- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) — дублирует card по ID
+- [`addCard()`](api/methods/js_kanban_addcard_method.md) - добавляет новую card
+- [`addColumn()`](api/methods/js_kanban_addcolumn_method.md) - добавляет новую column
+- [`addRow()`](api/methods/js_kanban_addrow_method.md) - добавляет новую row
+- [`duplicateCard()`](api/methods/js_kanban_duplicatecard_method.md) - дублирует card по ID
 
 ## Обновление элементов
 
-- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) — обновляет card по ID
-- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) — обновляет column по ID
-- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) — обновляет row по ID
+- [`updateCard()`](api/methods/js_kanban_updatecard_method.md) - обновляет card по ID
+- [`updateColumn()`](api/methods/js_kanban_updatecolumn_method.md) - обновляет column по ID
+- [`updateRow()`](api/methods/js_kanban_updaterow_method.md) - обновляет row по ID
 
 ## Удаление элементов
 
-- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) — удаляет card по ID
-- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) — удаляет column по ID
-- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) — удаляет row по ID
+- [`deleteCard()`](api/methods/js_kanban_deletecard_method.md) - удаляет card по ID
+- [`deleteColumn()`](api/methods/js_kanban_deletecolumn_method.md) - удаляет column по ID
+- [`deleteRow()`](api/methods/js_kanban_deleterow_method.md) - удаляет row по ID
 
 ## Перемещение элементов
 
-- [`moveCard()`](api/methods/js_kanban_movecard_method.md) — перемещает card в указанную column и row
-- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) — перемещает column на новую позицию
-- [`moveRow()`](api/methods/js_kanban_moverow_method.md) — перемещает row на новую позицию
+- [`moveCard()`](api/methods/js_kanban_movecard_method.md) - перемещает card в указанную column и row
+- [`moveColumn()`](api/methods/js_kanban_movecolumn_method.md) - перемещает column на новую позицию
+- [`moveRow()`](api/methods/js_kanban_moverow_method.md) - перемещает row на новую позицию
 
 ## Управление комментариями
 
-- [`addComment()`](api/methods/js_kanban_addcomment_method.md) — добавляет комментарий к card по ID
-- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) — обновляет комментарий по ID
-- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) — удаляет комментарий по ID
+- [`addComment()`](api/methods/js_kanban_addcomment_method.md) - добавляет комментарий к card по ID
+- [`updateComment()`](api/methods/js_kanban_updatecomment_method.md) - обновляет комментарий по ID
+- [`deleteComment()`](api/methods/js_kanban_deletecomment_method.md) - удаляет комментарий по ID
 
 ## Управление links
 
-- [`addLink()`](api/methods/js_kanban_addlink_method.md) — добавляет новый link между cards
-- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) — удаляет link по ID
+- [`addLink()`](api/methods/js_kanban_addlink_method.md) - добавляет новый link между cards
+- [`deleteLink()`](api/methods/js_kanban_deletelink_method.md) - удаляет link по ID
 
 ## Управление выделением cards
 
-- [`getSelection()`](api/methods/js_kanban_getselection_method.md) — возвращает ID выбранных в данный момент cards
-- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) — выделяет card по ID
-- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) — снимает выделение с card по ID
+- [`getSelection()`](api/methods/js_kanban_getselection_method.md) - возвращает ID выбранных в данный момент cards
+- [`selectCard()`](api/methods/js_kanban_selectcard_method.md) - выделяет card по ID
+- [`unselectCard()`](api/methods/js_kanban_unselectcard_method.md) - снимает выделение с card по ID
 
 ## Пример
 

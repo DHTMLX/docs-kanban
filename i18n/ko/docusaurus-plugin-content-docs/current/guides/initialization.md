@@ -81,8 +81,8 @@ Toolbar 구성에 대한 자세한 내용은 [Configuration](guides/configuratio
 
 전체 설정 레퍼런스는 다음을 참고하세요.
 
-- [Kanban properties overview](api/overview/properties_overview.md) — 전체 Kanban 설정 속성
-- [Toolbar properties overview](api/overview/toolbar_properties_overview.md) — 전체 Toolbar 설정 속성
+- [Kanban properties overview](api/overview/properties_overview.md) - 전체 Kanban 설정 속성
+- [Toolbar properties overview](api/overview/toolbar_properties_overview.md) - 전체 Toolbar 설정 속성
 
 ## 예제
 

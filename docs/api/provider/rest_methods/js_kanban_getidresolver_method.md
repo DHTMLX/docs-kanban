@@ -24,13 +24,13 @@ getIDResolver(): (id: string | number, type: number) => string | number;
 
 The method returns an `idResolver(id, type)` function:
 
-- `id` — the entity ID to resolve (a temporary client-side ID or a regular ID)
-- `type` — the model type the ID belongs to:
-    - `1` — card (`CardID`)
-    - `2` — row (`RowID`)
-    - `3` — column (`ColumnID`)
-    - `4` — link (`LinkID`)
-    - `5` — comment (`CommentID`)
+- `id` - the entity ID to resolve (a temporary client-side ID or a regular ID)
+- `type` - the model type the ID belongs to:
+    - `1` - card (`CardID`)
+    - `2` - row (`RowID`)
+    - `3` - column (`ColumnID`)
+    - `4` - link (`LinkID`)
+    - `5` - comment (`CommentID`)
 
 When the client creates a new entity (card, column, row, link, comment), `RestDataProvider` assigns it a temporary client-side ID and remembers the backend ID returned by the server. The `idResolver(id, type)` function returns the backend ID for any temporary ID it still holds. For IDs that already match the backend, the function returns them unchanged.
 

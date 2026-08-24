@@ -30,7 +30,7 @@ getCardHeight?: (cardShape: object, card: object, cardWidth: number) => number;
 - `card` - 卡片的数据对象
 - `cardWidth` - 卡片当前宽度（像素）
 
-该函数必须返回一个数字——卡片的估算高度（像素）。
+该函数必须返回卡片的估算高度（像素）。
 
 ### 默认配置
 

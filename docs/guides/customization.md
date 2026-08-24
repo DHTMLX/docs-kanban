@@ -8,12 +8,12 @@ description: Use DHTMLX Kanban customization guides to modify templates, menus, 
 
 You can customize the Kanban appearance and behavior with the following properties:
 
-- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) — render cards with a custom HTML template
-- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) — modify the context menu for cards, columns, and rows
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — replace column header templates
-- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) — apply CSS classes conditionally
-- [`items`](api/config/toolbar_items_config.md) — rearrange Toolbar structure and add custom controls
-- CSS variables — adjust visual styles (see the [Stylization](guides/stylization.md) section)
+- [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) - render cards with a custom HTML template
+- [`cardShape.menu`](api/config/js_kanban_cardshape_config.md), [`columnShape.menu`](api/config/js_kanban_columnshape_config.md), [`rowShape.menu`](api/config/js_kanban_rowshape_config.md) - modify the context menu for cards, columns, and rows
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md), [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - replace column header templates
+- [`cardShape.css`](api/config/js_kanban_cardshape_config.md), [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md) - apply CSS classes conditionally
+- [`items`](api/config/toolbar_items_config.md) - rearrange Toolbar structure and add custom controls
+- CSS variables - adjust visual styles (see the [Stylization](guides/stylization.md) section)
 
 ## Custom cards
 
@@ -21,10 +21,10 @@ Use the [`cardTemplate`](api/config/js_kanban_cardtemplate_config.md) property t
 
 The callback receives an object with the following parameters:
 
-- `cardFields` — card data
-- `selected` — whether the card is selected
-- `dragging` — whether the card is being dragged
-- `cardShape` — card configuration
+- `cardFields` - card data
+- `selected` - whether the card is selected
+- `dragging` - whether the card is being dragged
+- `cardShape` - card configuration
 
 To embed a context menu trigger in a custom card template, wrap the menu icon in a `<div>` with the `data-menu-id=${cardFields.id}` attribute (the same structure as the built-in card). The widget binds the menu to the wrapper through this attribute.
 
@@ -40,21 +40,21 @@ Configure the context menu for cards, columns, and rows through the [`cardShape.
 
 By default the card menu shows **Duplicate** and **Delete** options. Available built-in action IDs:
 
-- `"duplicate-card"` — duplicate the card
-- `"delete-card"` — delete the card
+- `"duplicate-card"` - duplicate the card
+- `"delete-card"` - delete the card
 
 ### `columnShape.menu`
 
-- `"add-card"` — add a new card to the column
-- `"set-edit"` — rename the column
-- `"move-column:left"`, `"move-column:right"` — move the column left or right
-- `"delete-column"` — delete the column
+- `"add-card"` - add a new card to the column
+- `"set-edit"` - rename the column
+- `"move-column:left"`, `"move-column:right"` - move the column left or right
+- `"delete-column"` - delete the column
 
 ### `rowShape.menu`
 
-- `"set-edit"` — rename the row
-- `"move-row:up"`, `"move-row:down"` — move the row up or down
-- `"delete-row"` — delete the row
+- `"set-edit"` - rename the row
+- `"move-row:up"`, `"move-row:down"` - move the row up or down
+- `"delete-row"` - delete the row
 
 Set `menu.items` to a function to render a different menu per card, column, or row. Return `null` or `false` from the function to hide the menu for a specific item.
 
@@ -66,9 +66,9 @@ The following demo applies a custom context menu:
 
 The [`columnShape`](api/config/js_kanban_columnshape_config.md) property provides templates and behavior for column headers:
 
-- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) — HTML template of the column header in the expanded state
-- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) — HTML template of the column header in the collapsed state
-- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) — freeze column headers during vertical scroll (default: `true`)
+- [`columnShape.headerTemplate`](api/config/js_kanban_columnshape_config.md) - HTML template of the column header in the expanded state
+- [`columnShape.collapsedTemplate`](api/config/js_kanban_columnshape_config.md) - HTML template of the column header in the collapsed state
+- [`columnShape.fixedHeaders`](api/config/js_kanban_columnshape_config.md) - freeze column headers during vertical scroll (default: `true`)
 
 The following code snippet sets a custom header template with a collapse icon, label with card count, and menu trigger:
 
@@ -103,9 +103,9 @@ For `fixedHeaders` to take effect, set a fixed height on the Kanban container so
 
 To apply a CSS class conditionally, pass a function to the `css` parameter of [`cardShape`](api/config/js_kanban_cardshape_config.md), [`columnShape`](api/config/js_kanban_columnshape_config.md), or [`rowShape`](api/config/js_kanban_rowshape_config.md). The function returns a class name based on the current data:
 
-- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) — class applied to a card
-- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) — class applied to a column
-- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) — class applied to a row
+- [`cardShape.css: (card) => string`](api/config/js_kanban_cardshape_config.md) - class applied to a card
+- [`columnShape.css: (column, cards) => string`](api/config/js_kanban_columnshape_config.md) - class applied to a column
+- [`rowShape.css: (row, cards) => string`](api/config/js_kanban_rowshape_config.md) - class applied to a row
 
 The following code snippet highlights overdue cards and underloaded columns:
 

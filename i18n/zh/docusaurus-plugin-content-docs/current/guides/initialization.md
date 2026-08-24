@@ -81,8 +81,8 @@ new kanban.Toolbar("#toolbar", {
 
 完整配置参考：
 
-- [Kanban 属性概览](api/overview/properties_overview.md) — 所有 Kanban 配置属性
-- [Toolbar 属性概览](api/overview/toolbar_properties_overview.md) — 所有 Toolbar 配置属性
+- [Kanban 属性概览](api/overview/properties_overview.md) - 所有 Kanban 配置属性
+- [Toolbar 属性概览](api/overview/toolbar_properties_overview.md) - 所有 Toolbar 配置属性
 
 ## 示例
 

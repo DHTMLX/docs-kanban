@@ -81,8 +81,8 @@ new kanban.Toolbar("#toolbar", {
 
 Полный справочник конфигурации:
 
-- [Обзор свойств Kanban](api/overview/properties_overview.md) — все конфигурационные свойства Kanban
-- [Обзор свойств Toolbar](api/overview/toolbar_properties_overview.md) — все конфигурационные свойства Toolbar
+- [Обзор свойств Kanban](api/overview/properties_overview.md) - все конфигурационные свойства Kanban
+- [Обзор свойств Toolbar](api/overview/toolbar_properties_overview.md) - все конфигурационные свойства Toolbar
 
 ## Пример
 

@@ -8,8 +8,8 @@ description: DHTMLX Kanban 스타일링 가이드를 확인하세요. CSS 클래
 
 CSS 클래스와 CSS 변수를 통해 Kanban의 외관을 스타일링할 수 있습니다. 다음 속성들은 컬럼, 행, 카드에 대한 CSS 클래스를 허용합니다:
 
-- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — 아이템 데이터를 기반으로 조건부로 CSS 클래스를 반환하는 함수
-- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — 단일 아이템에 할당되는 문자열 CSS 클래스
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) - 아이템 데이터를 기반으로 조건부로 CSS 클래스를 반환하는 함수
+- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) - 단일 아이템에 할당되는 문자열 CSS 클래스
 
 조건부 `css` 함수의 자세한 내용과 코드 예제는 [조건부 CSS 클래스](guides/customization.md#conditional-css-classes)를 참조하세요.
 
@@ -32,8 +32,8 @@ const cards = [
 
 아이템별 CSS 외에도 Kanban은 테마 설정을 위한 CSS 변수를 제공합니다. 변수는 두 그룹으로 나뉩니다:
 
-- Kanban 변수 — Kanban 전용 스타일 정의
-- WX 라이브러리 변수 — 공유 UI 요소 스타일 (*컨트롤, 캘린더 등*)
+- Kanban 변수 - Kanban 전용 스타일 정의
+- WX 라이브러리 변수 - 공유 UI 요소 스타일 (*컨트롤, 캘린더 등*)
 
 :::info
 WX 라이브러리는 Kanban 내부 UI 컴포넌트를 구동합니다. WX 변수는 Kanban 스타일링의 일부로 취급하세요.

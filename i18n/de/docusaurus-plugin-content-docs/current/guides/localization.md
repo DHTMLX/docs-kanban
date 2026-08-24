@@ -144,11 +144,11 @@ const en = {
 
 Ein Locale-Objekt enthält fünf Abschnitte auf oberster Ebene:
 
-- `lang` — Sprachcode (z. B. `"en-US"`)
-- `kanban` — UI-Beschriftungen (Schaltflächen, Dialoge, Suche, Sortieroptionen, Verknüpfungsbeziehungen)
-- `calendar` — Beschriftungen und Einstellungen des Datumswählers (Monats- und Tagesnamen, Uhrzeitformat, Wochenbeginn, AM/PM-Markierungen)
-- `formats` — Datums- und Uhrzeitformatmuster (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
-- `core` — gemeinsam genutzte Dialog-Schaltflächen (`ok`, `cancel`)
+- `lang` - Sprachcode (z. B. `"en-US"`)
+- `kanban` - UI-Beschriftungen (Schaltflächen, Dialoge, Suche, Sortieroptionen, Verknüpfungsbeziehungen)
+- `calendar` - Beschriftungen und Einstellungen des Datumswählers (Monats- und Tagesnamen, Uhrzeitformat, Wochenbeginn, AM/PM-Markierungen)
+- `formats` - Datums- und Uhrzeitformatmuster (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
+- `core` - gemeinsam genutzte Dialog-Schaltflächen (`ok`, `cancel`)
 
 Ein Locale-Objekt muss Übersetzungen für alle Beschriftungen von Kanban und Toolbar enthalten.
 
@@ -156,15 +156,15 @@ Ein Locale-Objekt muss Übersetzungen für alle Beschriftungen von Kanban und To
 
 Kanban stellt die folgenden integrierten Sprachumgebungen bereit:
 
-- `"en"` — Englisch
-- `"de"` — Deutsch
-- `"cn"` — Chinesisch
-- `"es"` — Spanisch
-- `"fr"` — Französisch
-- `"it"` — Italienisch
-- `"jp"` — Japanisch
-- `"pt"` — Portugiesisch
-- `"ru"` — Russisch
+- `"en"` - Englisch
+- `"de"` - Deutsch
+- `"cn"` - Chinesisch
+- `"es"` - Spanisch
+- `"fr"` - Französisch
+- `"it"` - Italienisch
+- `"jp"` - Japanisch
+- `"pt"` - Portugiesisch
+- `"ru"` - Russisch
 
 Der Zugriff auf eine Sprachumgebung erfolgt über `kanban.locales["<key>"]`. Da die Toolbar eine separate Komponente ist, muss die Sprachumgebung unabhängig auf sie angewendet werden. Das folgende Code-Snippet wendet die Sprachumgebung `"cn"` bei der Initialisierung auf Kanban und die Toolbar an:
 

@@ -8,8 +8,8 @@ description: Read the DHTMLX Kanban stylization guide. Learn how to style cards,
 
 You can style the Kanban appearance through CSS classes and CSS variables. The following properties accept CSS classes for columns, rows, and cards:
 
-- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) — functions that return a CSS class conditionally based on item data
-- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) — string CSS class assigned to a single item
+- [`columnShape.css`](api/config/js_kanban_columnshape_config.md), [`rowShape.css`](api/config/js_kanban_rowshape_config.md), [`cardShape.css`](api/config/js_kanban_cardshape_config.md) - functions that return a CSS class conditionally based on item data
+- [`columns.css`](api/config/js_kanban_columns_config.md), [`rows.css`](api/config/js_kanban_rows_config.md), [`cards.css`](api/config/js_kanban_cards_config.md) - string CSS class assigned to a single item
 
 For details and code examples of the conditional `css` functions, see [Conditional CSS classes](guides/customization.md#conditional-css-classes).
 
@@ -32,8 +32,8 @@ const cards = [
 
 Beyond per-item CSS, Kanban exposes CSS variables for theming. Variables fall into two groups:
 
-- Kanban variables — define Kanban-specific styles
-- WX library variables — style shared UI elements (controls, calendars)
+- Kanban variables - define Kanban-specific styles
+- WX library variables - style shared UI elements (controls, calendars)
 
 :::info
 The WX library powers internal Kanban UI components. Treat WX variables as part of Kanban styling.

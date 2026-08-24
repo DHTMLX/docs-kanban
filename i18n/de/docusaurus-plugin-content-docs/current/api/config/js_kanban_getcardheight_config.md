@@ -30,7 +30,7 @@ Die Callback-Funktion erhält folgende Argumente:
 - `card` - das Datenobjekt der Karte
 - `cardWidth` - die aktuelle Breite der Karte in Pixeln
 
-Die Funktion muss eine Zahl zurückgeben — die geschätzte Höhe der Karte in Pixeln.
+Die Funktion muss die geschätzte Höhe der Karte in Pixeln zurückgeben.
 
 ### Standardkonfiguration
 

@@ -1,12 +1,12 @@
 ---
 sidebar_label: DHTMLX MCP-Server
 title: DHTMLX Kanban MCP-Integration für Boards und REST-Synchronisierung
-description: Der MCP-Server gibt KI-Tools Zugriff auf die aktuelle DHTMLX Kanban-Dokumentation — zu Karten, Spalten, Zeilen, Editor-Feldern und der REST-Datensynchronisierung.
+description: Der MCP-Server gibt KI-Tools Zugriff auf die aktuelle DHTMLX Kanban-Dokumentation zu Karten, Spalten, Zeilen, Editor-Feldern und der REST-Datensynchronisierung.
 ---
 
 # DHTMLX Kanban MCP-Server: Karten, Editor und REST-Synchronisierung
 
-Ein funktionierendes [DHTMLX Kanban](/)-Board setzt voraus, dass mehrere Teile korrekt zusammenspielen: Karten- und Editor-Felder müssen sich [denselben Key teilen](guides/configuration.md#bind-editor-fields-to-card-fields), die [Toolbar](guides/customization.md#custom-toolbar) läuft als eigenes Widget, das an das Board gebunden ist, und die [Server-Synchronisierung](guides/working_with_server.md) stützt sich auf einen bestimmten Satz von Action-Handlern. Generierter Code hält stand, wenn Karten- und Editor-Felder denselben Key verwenden, die Toolbar separat eingebunden ist und die Server-Synchronisierung auf den heutigen Action-Handlern beruht — nicht auf einem Stand aus den Trainingsdaten.
+Ein funktionierendes [DHTMLX Kanban](/)-Board setzt voraus, dass mehrere Teile korrekt zusammenspielen: Karten- und Editor-Felder müssen sich [denselben Key teilen](guides/configuration.md#bind-editor-fields-to-card-fields), die [Toolbar](guides/customization.md#custom-toolbar) läuft als eigenes Widget, das an das Board gebunden ist, und die [Server-Synchronisierung](guides/working_with_server.md) stützt sich auf einen bestimmten Satz von Action-Handlern. Generierter Code hält stand, wenn Karten- und Editor-Felder denselben Key verwenden, die Toolbar separat eingebunden ist und die Server-Synchronisierung auf den heutigen Action-Handlern beruht und nicht auf einem Stand aus den Trainingsdaten.
 
 Der DHTMLX MCP-Server sorgt dafür, dass der Assistent mit der aktuellen Kanban-Dokumentation arbeitet statt zu raten. Fragen Sie nach dem [Binden von Editor-Feldern an Karten-Felder](guides/configuration.md#bind-editor-fields-to-card-fields), nach dem [Anpassen der Toolbar](guides/customization.md#custom-toolbar) oder nach dem [Anbinden eines RestDataProvider-Backends](guides/working_with_server.md), und der Assistent ruft die aktuelle Referenz ab, bevor er Code schreibt.
 
@@ -51,7 +51,7 @@ So bleiben Kanban-Codevorschläge auf dem Stand der API, wie sie heute funktioni
 
 ## Den MCP-Server pro Tool registrieren
 
-Ob über das Terminal oder über eine Konfigurationsdatei — in beiden Fällen verweisen Sie Ihr Tool auf die untenstehende URL. Nach der Registrierung erreicht jedes Kanban-Board, das Sie in diesem Tool bauen, den Server.
+Ob über das Terminal oder über eine Konfigurationsdatei: In beiden Fällen verweisen Sie Ihr Tool auf die untenstehende URL. Nach der Registrierung erreicht jedes Kanban-Board, das Sie in diesem Tool bauen, den Server.
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
@@ -187,7 +187,7 @@ Für intensive Coding-Workflows sind andere MCP-fähige Tools womöglich besser 
 
 ### Weitere Tools
 
-Tools ohne eigenen Abschnitt hier unterstützen MCP in der Regel trotzdem — in den Einstellungen meist als "Model Context Protocol" oder "Context Sources" bezeichnet. Tragen Sie dort `https://docs.dhtmlx.com/mcp` als eigene Quelle ein.
+Tools ohne eigenen Abschnitt hier unterstützen MCP in der Regel trotzdem, in den Einstellungen meist als "Model Context Protocol" oder "Context Sources" bezeichnet. Tragen Sie dort `https://docs.dhtmlx.com/mcp` als eigene Quelle ein.
 
 ## Was der MCP-Server mit Ihren Daten macht
 

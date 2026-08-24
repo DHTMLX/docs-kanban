@@ -144,11 +144,11 @@ const en = {
 
 A locale object contains five top-level sections:
 
-- `lang` — language code (for example, `"en-US"`)
-- `kanban` — UI labels (buttons, dialogs, search, sort options, link relations)
-- `calendar` — date picker labels and settings (month and day names, clock format, week start, AM/PM markers)
-- `formats` — date and time format patterns (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
-- `core` — shared dialog buttons (`ok`, `cancel`)
+- `lang` - language code (for example, `"en-US"`)
+- `kanban` - UI labels (buttons, dialogs, search, sort options, link relations)
+- `calendar` - date picker labels and settings (month and day names, clock format, week start, AM/PM markers)
+- `formats` - date and time format patterns (`timeFormat`, `dateFormat`, `monthYearFormat`, `yearFormat`)
+- `core` - shared dialog buttons (`ok`, `cancel`)
 
 A locale object must include translations for every Kanban and Toolbar label.
 
@@ -156,15 +156,15 @@ A locale object must include translations for every Kanban and Toolbar label.
 
 Kanban exports the following built-in locales:
 
-- `"en"` — English
-- `"de"` — German
-- `"cn"` — Chinese
-- `"es"` — Spanish
-- `"fr"` — French
-- `"it"` — Italian
-- `"jp"` — Japanese
-- `"pt"` — Portuguese
-- `"ru"` — Russian
+- `"en"` - English
+- `"de"` - German
+- `"cn"` - Chinese
+- `"es"` - Spanish
+- `"fr"` - French
+- `"it"` - Italian
+- `"jp"` - Japanese
+- `"pt"` - Portuguese
+- `"ru"` - Russian
 
 Access a locale through `kanban.locales["<key>"]`. The Toolbar is a separate component, so apply the locale to the Toolbar independently. The following code snippet applies the `"cn"` locale to both Kanban and the Toolbar at initialization:
 
