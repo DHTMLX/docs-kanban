@@ -318,6 +318,11 @@ const config = {
 							"position": "right"
 						},
 						{
+							"label": "Product page",
+							"href": "https://dhtmlx.com/docs/products/dhtmlxKanban/",
+							"position": "right"
+						},
+						{
 							"label": "Examples",
 							"href": "https://snippet.dhtmlx.com/5hcx01h4?tag=kanban",
 							"position": "right"

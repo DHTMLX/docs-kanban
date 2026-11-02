@@ -15,6 +15,10 @@
     "message": "Скачать JS Kanban",
     "description": "Метка ссылки в футере с label=Download JS Kanban, ведущей на https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml"
   },
+  "link.item.label.Product page": {
+    "message": "Страница продукта",
+    "description": "The label of footer link with label=Product page linking to https://dhtmlx.com/docs/products/dhtmlxKanban/"
+  },
   "link.item.label.Examples": {
     "message": "Примеры",
     "description": "Метка ссылки в футере с label=Examples, ведущей на https://snippet.dhtmlx.com/5hcx01h4?tag=kanban"

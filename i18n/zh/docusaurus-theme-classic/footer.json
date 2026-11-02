@@ -15,6 +15,10 @@
     "message": "下载 JS 看板",
     "description": "页脚中标签为下载 JS 看板的链接，链接到 https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml"
   },
+  "link.item.label.Product page": {
+    "message": "产品页面",
+    "description": "The label of footer link with label=Product page linking to https://dhtmlx.com/docs/products/dhtmlxKanban/"
+  },
   "link.item.label.Examples": {
     "message": "示例",
     "description": "页脚中标签为示例的链接，链接到 https://snippet.dhtmlx.com/5hcx01h4?tag=kanban"

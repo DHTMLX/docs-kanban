@@ -15,6 +15,10 @@
     "message": "JS Kanban herunterladen",
     "description": "Das Label des Fußzeilen-Links mit dem Label=JS Kanban herunterladen, der auf https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml verweist"
   },
+  "link.item.label.Product page": {
+    "message": "Produktseite",
+    "description": "The label of footer link with label=Product page linking to https://dhtmlx.com/docs/products/dhtmlxKanban/"
+  },
   "link.item.label.Examples": {
     "message": "Beispiele",
     "description": "Das Label des Fußzeilen-Links mit dem Label=Beispiele, der auf https://snippet.dhtmlx.com/5hcx01h4?tag=kanban verweist"
