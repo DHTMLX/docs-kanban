@@ -15,6 +15,10 @@
     "message": "JS 칸반 다운로드",
     "description": "https://dhtmlx.com/docs/products/dhtmlxKanban/download.shtml 로 연결되는 'Download JS Kanban' 라벨의 푸터 링크"
   },
+  "link.item.label.Product page": {
+    "message": "제품 페이지",
+    "description": "The label of footer link with label=Product page linking to https://dhtmlx.com/docs/products/dhtmlxKanban/"
+  },
   "link.item.label.Examples": {
     "message": "예제",
     "description": "https://snippet.dhtmlx.com/5hcx01h4?tag=kanban 로 연결되는 'Examples' 라벨의 푸터 링크"
